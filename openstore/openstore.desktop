@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Open App Store
+Exec=openstore
+Icon=openstore/openstore.svg
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+

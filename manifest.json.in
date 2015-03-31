@@ -1,0 +1,17 @@
+{
+    "name": "openstore.mzanetti",
+    "description": "description of openstore",
+    "architecture": "@CLICK_ARCH@",
+    "title": "openstore",
+    "hooks": {
+        "openstore": {
+            "apparmor": "openstore/openstore.apparmor",
+            "desktop":  "openstore/openstore.desktop"
+        }
+    },
+    "version": "0.1",
+    "maintainer": "Michael Zanetti <michael.zanetti@canonical.com>",
+    "framework" : "ubuntu-sdk-14.10"
+}
+
+

@@ -93,6 +93,7 @@ ClickInstaller *AppModel::installer()
 void AppModel::loadAppList()
 {
     QNetworkRequest request(QUrl("http://notyetthere.org/openstore/v1/repolist.json"));
+//    QNetworkRequest request(QUrl("http://notyetthere.org/openstore/testing/repolist.json"));
     QNetworkReply *reply = m_nam->get(request);
     connect(reply, &QNetworkReply::finished, this, &AppModel::repoListFetched);
 }
@@ -109,7 +110,7 @@ void AppModel::repoListFetched()
     QJsonDocument jsonDoc = QJsonDocument::fromJson(data, &error);
 
     if (error.error != QJsonParseError::NoError) {
-        qDebug() << "Error parsing json";
+//        qDebug() << "Error parsing json";
         return;
     }
 
@@ -137,7 +138,7 @@ void AppModel::repoListFetched()
         item->setDescription(packageMap.value("description").toString());
         item->setVersion(packageMap.value("version").toString());
         item->setFileSize(packageMap.value("filesize").toInt());
-        item->setInstalled(m_installedAppIds.contains(item->appId()));
+        item->setInstalledVersion(m_installedAppIds.value(item->appId()));
         m_list.append(item);
     }
     endResetModel();
@@ -186,12 +187,13 @@ void AppModel::buildInstalledClickList()
          QVariantMap appMap = appJson.toMap();
 
          QString appId = appMap.value("name").toString();
-         m_installedAppIds.append(appId);
+         QString version = appMap.value("version").toString();
+         m_installedAppIds.insert(appId, version);
      }
 
      Q_FOREACH(ApplicationItem *app, m_list) {
-         if (app->installed() != m_installedAppIds.contains(app->appId())) {
-             app->setInstalled(m_installedAppIds.contains(app->appId()));
+         if (m_installedAppIds.contains(app->appId())) {
+             app->setInstalledVersion(m_installedAppIds.value(app->appId()));
              int idx = m_list.indexOf(app);
              Q_EMIT dataChanged(index(idx), index(idx));
          }

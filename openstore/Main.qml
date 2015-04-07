@@ -113,7 +113,7 @@ MainView {
             id: warningDialog
             title: "Warning"
             text: "Open App Store allows installing unconfined applications. Please make sure that you know about the implications of that. " +
-                  "An unconfined application has the ability to break the system, reduce it's performance and/or spy on you. " +
+                  "An unconfined application has the ability to break the system, reduce its performance and/or spy on you. " +
                   "While we are doing our best to prevent that by reviewing applications, we don't take any responsibility if something bad slips through. " +
                   "Use this at your own risk."
 

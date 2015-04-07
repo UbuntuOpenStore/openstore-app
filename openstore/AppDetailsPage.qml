@@ -56,8 +56,8 @@ Page {
                 }
                 Button {
                     Layout.fillWidth: true
-                    text: "Install"
-                    visible: !appModel.installer.busy && !app.installed
+                    text: app.installed ? "Upgrade" : "Install"
+                    visible: !appModel.installer.busy && (!app.installed || app.installedVersion < app.version)
                     onClicked: {
                         appModel.installer.installPackage(app.packageUrl)
                     }
@@ -72,7 +72,7 @@ Page {
                 RowLayout {
                     Layout.fillWidth: true
                     spacing: units.gu(1)
-                    visible: !appModel.installer.busy && app.installed
+                    visible: !appModel.installer.busy && app.installed && app.installedVersion >= app.version
                     Icon {
                         Layout.preferredHeight: units.gu(4)
                         Layout.preferredWidth: units.gu(4)
@@ -80,7 +80,7 @@ Page {
                         color: UbuntuColors.green
                     }
                     Label {
-                        text: "installed"
+                        text: "Installed"
                         Layout.fillWidth: true
                     }
                 }
@@ -102,6 +102,18 @@ Page {
         }
 
         ThinDivider { }
+
+        Label {
+            anchors { left: parent.left; right: parent.right }
+            text: "Installed version: " + (app.installedVersion ? app.installedVersion : "None")
+            wrapMode: Text.WordWrap
+        }
+
+        Label {
+            anchors { left: parent.left; right: parent.right }
+            text: "Latest available version: " + app.version
+            wrapMode: Text.WordWrap
+        }
 
         Label {
             anchors { left: parent.left; right: parent.right }

@@ -66,7 +66,7 @@ void ClickInstaller::fetchPackage(const QString &packageUrl)
 
     m_file.setFileName("/tmp/" + url.fileName());
     if (!m_file.open(QFile::WriteOnly | QFile::Truncate)) {
-        qDebug() << "Cannot open temp file" << m_file.fileName();
+//        qDebug() << "Cannot open temp file" << m_file.fileName();
         return;
     }
 
@@ -98,8 +98,8 @@ void ClickInstaller::installLocalPackage(const QString &packageFilePath)
 
 void ClickInstaller::installerFinished(int exitCode, QProcess::ExitStatus exitStatus)
 {
-    qDebug() << "installing finished" << exitCode << exitStatus;
-    qDebug() << "stdout:" << m_installerProcess->readAll();
+//    qDebug() << "installing finished" << exitCode << exitStatus;
+//    qDebug() << "stdout:" << m_installerProcess->readAll();
     m_installerProcess->deleteLater();
     m_installerProcess = 0;
     Q_EMIT busyChanged();
@@ -119,7 +119,7 @@ void ClickInstaller::slotDownloadProgress()
 
 void ClickInstaller::downloadFinished()
 {
-    qDebug() << "finished" << m_download->error() << m_download->errorString();
+//    qDebug() << "finished" << m_download->error() << m_download->errorString();
     m_file.write(m_download->readAll());
     m_file.close();
 

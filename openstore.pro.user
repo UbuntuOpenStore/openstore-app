@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 3.1.1, 2015-03-31T19:53:11. -->
+<!-- Written by QtCreator 3.1.1, 2015-04-07T21:03:30. -->
 <qtcreator>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
-  <value type="int">2</value>
+  <value type="int">3</value>
  </data>
  <data>
   <variable>ProjectExplorer.Project.EditorSettings</variable>
@@ -641,8 +641,8 @@
        <value type="QString">/var/lib/schroot/chroots/click-ubuntu-sdk-15.04-armhf</value>
       </valuelist>
       <valuelist type="QVariantList" key="Qt4ProjectManager.MaemoRunConfiguration.LastDeployedTimes">
-       <value type="QDateTime">2015-03-29T03:56:51</value>
-       <value type="QDateTime">2015-03-29T03:56:51</value>
+       <value type="QDateTime">2015-03-31T19:54:36</value>
+       <value type="QDateTime">2015-03-31T19:54:36</value>
       </valuelist>
      </valuemap>
      <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">2</value>
@@ -854,22 +854,27 @@
       <valuelist type="QVariantList" key="Qt4ProjectManager.MaemoRunConfiguration.LastDeployedFiles">
        <value type="QString">/home/mzanetti/Develop/build-openstore-krillin_GCC_ubuntu_sdk_15_04_vivid-Debug/openstore.mzanetti_0.1_armhf.click</value>
        <value type="QString">/usr/share/qtcreator/ubuntu/scripts/qtc_device_applaunch.py</value>
+       <value type="QString">/home/mzanetti/Develop/build-openstore-krillin_GCC_ubuntu_sdk_15_04_vivid-Debug/openstore.mzanetti_0.2_armhf.click</value>
       </valuelist>
       <valuelist type="QVariantList" key="Qt4ProjectManager.MaemoRunConfiguration.LastDeployedHosts">
+       <value type="QString">127.0.0.1</value>
        <value type="QString">127.0.0.1</value>
        <value type="QString">127.0.0.1</value>
       </valuelist>
       <valuelist type="QVariantList" key="Qt4ProjectManager.MaemoRunConfiguration.LastDeployedRemotePaths">
        <value type="QString">/tmp</value>
        <value type="QString">/tmp</value>
+       <value type="QString">/tmp</value>
       </valuelist>
       <valuelist type="QVariantList" key="Qt4ProjectManager.MaemoRunConfiguration.LastDeployedSysroots">
        <value type="QString">/var/lib/schroot/chroots/click-ubuntu-sdk-15.04-armhf</value>
        <value type="QString">/var/lib/schroot/chroots/click-ubuntu-sdk-15.04-armhf</value>
+       <value type="QString">/var/lib/schroot/chroots/click-ubuntu-sdk-15.04-armhf</value>
       </valuelist>
       <valuelist type="QVariantList" key="Qt4ProjectManager.MaemoRunConfiguration.LastDeployedTimes">
-       <value type="QDateTime">2015-03-31T17:59:59</value>
-       <value type="QDateTime">2015-03-31T17:59:59</value>
+       <value type="QDateTime">2015-04-05T16:57:43</value>
+       <value type="QDateTime">2015-04-05T16:57:43</value>
+       <value type="QDateTime">2015-04-05T16:56:58</value>
       </valuelist>
      </valuemap>
      <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">2</value>
@@ -930,8 +935,8 @@
     <value type="bool" key="RunConfiguration.UseMultiProcess">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="bool" key="UbuntuRemoteRunConfiguration.ForceInstall">false</value>
-    <value type="bool" key="UbuntuRemoteRunConfiguration.Uninstall">true</value>
+    <value type="bool" key="UbuntuRemoteRunConfiguration.ForceInstall">true</value>
+    <value type="bool" key="UbuntuRemoteRunConfiguration.Uninstall">false</value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>

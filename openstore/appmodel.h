@@ -16,6 +16,7 @@ class ApplicationItem: public QObject
     Q_PROPERTY(QString tagline READ tagline CONSTANT)
     Q_PROPERTY(QString description READ description CONSTANT)
     Q_PROPERTY(QString version READ version CONSTANT)
+    Q_PROPERTY(QString installedVersion READ installedVersion NOTIFY installedChanged)
     Q_PROPERTY(QString packageUrl READ packageUrl CONSTANT)
     Q_PROPERTY(QString source READ source CONSTANT)
     Q_PROPERTY(QString license READ license CONSTANT)
@@ -45,6 +46,9 @@ public:
     QString version() const { return m_version; }
     void setVersion(const QString &version) { m_version = version; }
 
+    QString installedVersion() const { return m_installedVersion; }
+    void setInstalledVersion(const QString &version) { m_installedVersion = version; Q_EMIT installedChanged(); }
+
     QString packageUrl() const { return m_packageUrl; }
     void setPackageUrl(const QString &packageUrl) { m_packageUrl = packageUrl; }
 
@@ -57,8 +61,7 @@ public:
     int fileSize() const { return m_fileSize; }
     void setFileSize(int fileSize) { m_fileSize = fileSize; }
 
-    bool installed() const { return m_installed; }
-    void setInstalled(bool installed) { m_installed = installed; Q_EMIT installedChanged(); }
+    bool installed() const { return !m_installedVersion.isEmpty(); }
 
 Q_SIGNALS:
     void installedChanged();
@@ -74,7 +77,7 @@ private:
     QString m_source;
     QString m_license;
     int m_fileSize;
-    bool m_installed;
+    QString m_installedVersion;
 };
 
 class AppModel : public QAbstractListModel
@@ -114,7 +117,7 @@ private Q_SLOTS:
 
 private:
     QList<ApplicationItem*> m_list;
-    QStringList m_installedAppIds;
+    QHash<QString, QString> m_installedAppIds; // appid, version
 
     QNetworkAccessManager *m_nam;
     ClickInstaller *m_installer;

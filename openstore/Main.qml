@@ -84,11 +84,22 @@ MainView {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         spacing: units.gu(1)
-                        Label {
+                        RowLayout {
                             Layout.fillWidth: true
-                            text: model.name
-                            fontSize: "large"
-                            elide: Text.ElideRight
+                            Icon {
+                                Layout.preferredHeight: units.gu(3)
+                                Layout.preferredWidth: height
+                                visible: model.installed
+                                name: "tick"
+                                color: model.installedVersion >= model.version ? UbuntuColors.green : UbuntuColors.orange
+                            }
+
+                            Label {
+                                Layout.fillWidth: true
+                                text: model.name
+                                fontSize: "large"
+                                elide: Text.ElideRight
+                            }
                         }
                         Label {
                             Layout.fillWidth: true

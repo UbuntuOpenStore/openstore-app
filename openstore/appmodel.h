@@ -92,6 +92,9 @@ public:
         RoleTagline,
         RoleDescription,
         RolePackageUrl,
+        RoleVersion,
+        RoleInstalled,
+        RoleInstalledVersion
     };
 
     explicit AppModel(QObject *parent = 0);

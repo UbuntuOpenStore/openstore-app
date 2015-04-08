@@ -74,8 +74,8 @@ Page {
                     spacing: units.gu(1)
                     visible: !appModel.installer.busy && app.installed && app.installedVersion >= app.version
                     Icon {
-                        Layout.preferredHeight: units.gu(4)
-                        Layout.preferredWidth: units.gu(4)
+                        Layout.preferredHeight: units.gu(3)
+                        Layout.preferredWidth: units.gu(3)
                         name: "tick"
                         color: UbuntuColors.green
                     }

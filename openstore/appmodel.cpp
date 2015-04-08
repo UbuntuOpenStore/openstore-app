@@ -56,6 +56,12 @@ QVariant AppModel::data(const QModelIndex &index, int role) const
         return m_list.at(index.row())->description();
     case RolePackageUrl:
         return m_list.at(index.row())->packageUrl();
+    case RoleVersion:
+        return m_list.at(index.row())->version();
+    case RoleInstalled:
+        return m_list.at(index.row())->installed();
+    case RoleInstalledVersion:
+        return m_list.at(index.row())->installedVersion();
     }
     return QVariant();
 }
@@ -68,6 +74,9 @@ QHash<int, QByteArray> AppModel::roleNames() const
     roles.insert(RoleTagline, "tagline");
     roles.insert(RoleDescription, "description");
     roles.insert(RolePackageUrl, "packageUrl");
+    roles.insert(RoleVersion, "version");
+    roles.insert(RoleInstalled, "installed");
+    roles.insert(RoleInstalledVersion, "installedVersion");
     return roles;
 }
 

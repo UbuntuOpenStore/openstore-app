@@ -83,7 +83,7 @@ private:
 class AppModel : public QAbstractListModel
 {
     Q_OBJECT
-    Q_PROPERTY(ClickInstaller* installer READ installer CONSTANT)
+    Q_PROPERTY(ClickInstaller* installer READ installer  WRITE setInstaller NOTIFY installerChanged)
 
 public:
     enum Roles {
@@ -108,6 +108,7 @@ public:
     Q_INVOKABLE void install(int index);
 
     ClickInstaller* installer();
+    void setInstaller(ClickInstaller* installer);
 
 private Q_SLOTS:
     void loadAppList();
@@ -117,6 +118,9 @@ private Q_SLOTS:
     void buildInstalledClickList();
 
     void installerBusyChanged();
+
+Q_SIGNALS:
+    void installerChanged();
 
 private:
     QList<ApplicationItem*> m_list;

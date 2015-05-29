@@ -22,6 +22,7 @@
 #include <QNetworkReply>
 #include <QUrl>
 #include <QFile>
+#include <QFileSystemWatcher>
 
 ClickInstaller::ClickInstaller(QObject *parent) :
     QObject(parent),
@@ -29,6 +30,7 @@ ClickInstaller::ClickInstaller(QObject *parent) :
     m_download(0)
 {
     m_nam = new QNetworkAccessManager(this);
+
 }
 
 bool ClickInstaller::busy() const
@@ -46,11 +48,12 @@ int ClickInstaller::downloadProgress() const
 
 void ClickInstaller::installPackage(const QString &packageUrl)
 {
+    qDebug() << "should install package" << packageUrl;
     if (busy()) {
         //qDebug() << "already busy. won't install" << packageUrl;
         return;
     }
-    if (packageUrl.startsWith("http://")) {
+    if (packageUrl.startsWith("http://") || packageUrl.startsWith("https://")) {
         fetchPackage(packageUrl);
         return;
     }
@@ -62,11 +65,11 @@ void ClickInstaller::installPackage(const QString &packageUrl)
 void ClickInstaller::fetchPackage(const QString &packageUrl)
 {
     QUrl url(packageUrl);
-    //qDebug() << "fetching package" << url.url();
+    qDebug() << "fetching package" << url.url();
 
     m_file.setFileName("/tmp/" + url.fileName());
     if (!m_file.open(QFile::WriteOnly | QFile::Truncate)) {
-//        qDebug() << "Cannot open temp file" << m_file.fileName();
+        qDebug() << "Cannot open temp file" << m_file.fileName();
         return;
     }
 
@@ -103,6 +106,7 @@ void ClickInstaller::installerFinished(int exitCode, QProcess::ExitStatus exitSt
     m_installerProcess->deleteLater();
     m_installerProcess = 0;
     Q_EMIT busyChanged();
+    Q_EMIT packageInstalled();
 }
 
 void ClickInstaller::processStatusChanged(QProcess::ProcessState state)

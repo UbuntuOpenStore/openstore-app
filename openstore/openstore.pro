@@ -8,6 +8,9 @@ QT += qml quick
 CONFIG += c++11
 
 DEFINES += QT_NO_KEYWORDS
+testing {
+    DEFINES += TESTING
+}
 
 INCLUDEPATH += /usr/include/click-0.4/ \
     /usr/include/glib-2.0/ \
@@ -19,7 +22,8 @@ LIBS += -lglib-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lclick-0.4
 
 SOURCES += main.cpp \
     clickinstaller.cpp \
-    appmodel.cpp
+    appmodel.cpp \
+    serviceregistry.cpp
 
 RESOURCES += openstore.qrc
 
@@ -39,5 +43,6 @@ INSTALLS+=target
 
 HEADERS += \
     clickinstaller.h \
-    appmodel.h
+    appmodel.h \
+    serviceregistry.h
 

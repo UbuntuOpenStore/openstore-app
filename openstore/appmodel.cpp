@@ -28,11 +28,10 @@
 #include <QJsonDocument>
 
 AppModel::AppModel(QObject *parent) :
-    QAbstractListModel(parent)
+    QAbstractListModel(parent),
+    m_installer(0)
 {
     m_nam = new QNetworkAccessManager(this);
-    m_installer = new ClickInstaller(this);
-    connect(m_installer, &ClickInstaller::busyChanged, this, &AppModel::installerBusyChanged);
 
     buildInstalledClickList();
     loadAppList();
@@ -99,10 +98,27 @@ ClickInstaller *AppModel::installer()
     return m_installer;
 }
 
+void AppModel::setInstaller(ClickInstaller *installer)
+{
+    if (m_installer != installer) {
+
+        if (m_installer) {
+            disconnect(m_installer, &ClickInstaller::busyChanged, this, &AppModel::installerBusyChanged);
+        }
+
+        m_installer = installer;
+        Q_EMIT installerChanged();
+        connect(m_installer, &ClickInstaller::busyChanged, this, &AppModel::installerBusyChanged);
+    }
+}
+
 void AppModel::loadAppList()
 {
-    QNetworkRequest request(QUrl("http://notyetthere.org/openstore/v1/repolist.json"));
-//    QNetworkRequest request(QUrl("http://notyetthere.org/openstore/testing/repolist.json"));
+#ifdef TESTING
+    QNetworkRequest request(QUrl("http://notyetthere.org/openstore/testing/repolist.json"));
+#else
+    QNetworkRequest request(QUrl("https://open.uappexplorer.com/repo/repolist.json"));
+#endif
     QNetworkReply *reply = m_nam->get(request);
     connect(reply, &QNetworkReply::finished, this, &AppModel::repoListFetched);
 }

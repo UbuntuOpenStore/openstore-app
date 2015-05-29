@@ -53,8 +53,18 @@ MainView {
         property bool firstStart: true
     }
 
+    ClickInstaller {
+        id: installer
+    }
+
     AppModel {
         id: appModel
+        installer: installer
+    }
+
+    ServiceRegistry {
+        id: serviceRegistry
+        clickInstaller: installer
     }
 
     Page {

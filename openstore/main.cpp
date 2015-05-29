@@ -20,6 +20,7 @@
 
 #include "clickinstaller.h"
 #include "appmodel.h"
+#include "serviceregistry.h"
 
 int main(int argc, char *argv[])
 {
@@ -27,6 +28,7 @@ int main(int argc, char *argv[])
 
     qmlRegisterType<ClickInstaller>("OpenStore", 1, 0, "ClickInstaller");
     qmlRegisterType<AppModel>("OpenStore", 1, 0, "AppModel");
+    qmlRegisterType<ServiceRegistry>("OpenStore", 1, 0, "ServiceRegistry");
     qmlRegisterUncreatableType<ApplicationItem>("OpenStore", 1, 0, "ApplicationItem", "Don't!");
 
     QQuickView view;

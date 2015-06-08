@@ -48,7 +48,7 @@ int ClickInstaller::downloadProgress() const
 
 void ClickInstaller::installPackage(const QString &packageUrl)
 {
-    qDebug() << "should install package" << packageUrl;
+//    qDebug() << "should install package" << packageUrl;
     if (busy()) {
         //qDebug() << "already busy. won't install" << packageUrl;
         return;
@@ -65,11 +65,11 @@ void ClickInstaller::installPackage(const QString &packageUrl)
 void ClickInstaller::fetchPackage(const QString &packageUrl)
 {
     QUrl url(packageUrl);
-    qDebug() << "fetching package" << url.url();
+//    qDebug() << "fetching package" << url.url();
 
     m_file.setFileName("/tmp/" + url.fileName());
     if (!m_file.open(QFile::WriteOnly | QFile::Truncate)) {
-        qDebug() << "Cannot open temp file" << m_file.fileName();
+//        qDebug() << "Cannot open temp file" << m_file.fileName();
         return;
     }
 

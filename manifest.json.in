@@ -9,7 +9,7 @@
             "desktop": "openstore/openstore.desktop"
         }
     },
-    "version": "0.5",
+    "version": "0.6",
     "maintainer": "Michael Zanetti <michael.zanetti@canonical.com>",
-    "framework": "ubuntu-sdk-14.10"
+    "framework": "ubuntu-sdk-15.04"
 }

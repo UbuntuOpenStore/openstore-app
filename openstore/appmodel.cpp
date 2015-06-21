@@ -26,6 +26,8 @@
 #include <QNetworkReply>
 #include <QNetworkRequest>
 #include <QJsonDocument>
+#include <QUrl>
+#include <QUrlQuery>
 
 AppModel::AppModel(QObject *parent) :
     QAbstractListModel(parent),
@@ -114,11 +116,23 @@ void AppModel::setInstaller(ClickInstaller *installer)
 
 void AppModel::loadAppList()
 {
-#ifdef TESTING
-    QNetworkRequest request(QUrl("http://notyetthere.org/openstore/testing/repolist.json"));
-#else
-    QNetworkRequest request(QUrl("https://open.uappexplorer.com/repo/repolist.json"));
-#endif
+    GList *gframeworks = click_framework_get_frameworks();
+    QStringList frameworks;
+    while (gframeworks) {
+        QString frameworkName = QString::fromUtf8(click_framework_get_name((ClickFramework*)gframeworks->data));
+        qDebug() << "have framework" << frameworkName;
+        frameworks << frameworkName;
+        gframeworks = gframeworks->next;
+    }
+
+    QUrlQuery query;
+    query.addQueryItem("frameworks", frameworks.join(','));
+    // FIXME: So far we only support armhf
+    query.addQueryItem("architecture", "armhf");
+    QUrl url("https://open.uappexplorer.com/api/apps");
+    url.setQuery(query);
+    QNetworkRequest request(url);
+
     QNetworkReply *reply = m_nam->get(request);
     connect(reply, &QNetworkReply::finished, this, &AppModel::repoListFetched);
 }
@@ -141,12 +155,12 @@ void AppModel::repoListFetched()
 
     QVariantMap replyMap = jsonDoc.toVariant().toMap();
 
-    if (!replyMap.contains("packages")) {
+    if (!replyMap.value("success").toBool() || !replyMap.contains("data")) {
 //        qDebug() << "Repolist doesn't contain a package list";
         return;
     }
 
-    QVariantList packageVariantList = replyMap.value("packages").toList();
+    QVariantList packageVariantList = replyMap.value("data").toList();
 
     beginResetModel();
     Q_FOREACH (const QVariant &packageVariant, packageVariantList) {

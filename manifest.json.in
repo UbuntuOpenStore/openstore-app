@@ -6,7 +6,8 @@
     "hooks": {
         "openstore": {
             "apparmor": "openstore/openstore.apparmor",
-            "desktop": "openstore/openstore.desktop"
+            "desktop": "openstore/openstore.desktop",
+            "urls": "openstore/openstore.url-dispatcher"
         }
     },
     "version": "0.6",

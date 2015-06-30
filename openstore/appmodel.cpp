@@ -81,6 +81,16 @@ QHash<int, QByteArray> AppModel::roleNames() const
     return roles;
 }
 
+int AppModel::findApp(const QString &appId) const
+{
+    for (int i = 0; i < m_list.count(); i++) {
+        if (m_list.at(i)->appId() == appId) {
+            return i;
+        }
+    }
+    return -1;
+}
+
 ApplicationItem *AppModel::app(int index) const
 {
     return m_list.at(index);
@@ -245,3 +255,4 @@ void AppModel::installerBusyChanged()
         buildInstalledClickList();
     }
 }
+

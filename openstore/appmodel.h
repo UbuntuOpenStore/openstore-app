@@ -103,6 +103,7 @@ public:
     QVariant data(const QModelIndex &index, int role) const override;
     QHash<int, QByteArray> roleNames() const override;
 
+    Q_INVOKABLE int findApp(const QString &appId) const;
     Q_INVOKABLE ApplicationItem *app(int index) const;
 
     Q_INVOKABLE void install(int index);

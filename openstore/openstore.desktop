@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Open App Store
-Exec=openstore
+Exec=openstore %u
 Icon=openstore/openstore.svg
 Terminal=false
 Type=Application

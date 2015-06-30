@@ -17,6 +17,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQuickView>
+#include <QQmlContext>
 
 #include "clickinstaller.h"
 #include "appmodel.h"
@@ -34,6 +35,8 @@ int main(int argc, char *argv[])
     QQuickView view;
 
     QObject::connect(view.engine(), &QQmlEngine::quit, &app, &QGuiApplication::quit);
+
+    view.engine()->rootContext()->setContextProperty("cmdArgs", app.arguments());
 
     view.setSource(QUrl(QStringLiteral("qrc:///Main.qml")));
     view.setResizeMode(QQuickView::SizeRootObjectToView);

@@ -22,12 +22,15 @@ import QtQuick.Layouts 1.1
 import Qt.labs.settings 1.0
 
 MainView {
+    id: root
     applicationName: "openstore.mzanetti"
 
     useDeprecatedToolbar: false
 
     width: units.gu(100)
     height: units.gu(75)
+
+    property string appIdToOpen
 
     Component.onCompleted: {
         if (settings.firstStart) {
@@ -40,12 +43,28 @@ MainView {
                 Qt.quit();
             })
         }
+
+        if (cmdArgs[1].length) {
+            root.appIdToOpen = cmdArgs[1].split("://")[1];
+        }
+    }
+
+    Connections {
+        target: UriHandler
+        onOpened: {
+            var index = appModel.findApp(uris[0].split("://")[1])
+            if (index >= 0) {
+                pageStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), {app: appModel.app(index)})
+            }
+        }
     }
 
     PageStack {
         id: pageStack
 
-        Component.onCompleted: pageStack.push(mainPage)
+        Component.onCompleted: {
+            pageStack.push(mainPage)
+        }
     }
 
     Settings {
@@ -74,6 +93,16 @@ MainView {
         ListView {
             anchors.fill: parent
             model: appModel
+
+            onCountChanged: {
+                if (count > 0 && root.appIdToOpen != "") {
+                    var index = appModel.findApp(root.appIdToOpen)
+                    if (index >= 0) {
+                        pageStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), {app: appModel.app(index)})
+                        root.appIdToOpen = "";
+                    }
+                }
+            }
 
             delegate: Empty {
                 height: units.gu(10)

@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Open App Store
+Name=Open Store
 Exec=openstore %u
 Icon=openstore/openstore.svg
 Terminal=false

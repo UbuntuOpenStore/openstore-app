@@ -82,7 +82,7 @@ Page {
                     RowLayout {
                         Layout.fillWidth: true
                         spacing: units.gu(1)
-                        visible: !appModel.installer.busy && app.installed && app.installedVersion >= app.version
+                        visible: !appModel.installer.busy && app.installed
                         Icon {
                             Layout.preferredHeight: units.gu(3)
                             Layout.preferredWidth: units.gu(3)

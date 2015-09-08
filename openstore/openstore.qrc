@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>Main.qml</file>
         <file>AppDetailsPage.qml</file>
+        <file>HookIcon.qml</file>
     </qresource>
 </RCC>

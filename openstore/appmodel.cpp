@@ -130,7 +130,7 @@ void AppModel::loadAppList()
     QStringList frameworks;
     while (gframeworks) {
         QString frameworkName = QString::fromUtf8(click_framework_get_name((ClickFramework*)gframeworks->data));
-        qDebug() << "have framework" << frameworkName;
+//        qDebug() << "have framework" << frameworkName;
         frameworks << frameworkName;
         gframeworks = gframeworks->next;
     }
@@ -188,6 +188,56 @@ void AppModel::repoListFetched()
         item->setVersion(packageMap.value("version").toString());
         item->setFileSize(packageMap.value("filesize").toInt());
         item->setInstalledVersion(m_installedAppIds.value(item->appId()));
+
+        QList<ApplicationItem::HookStruct> hooksList;
+        if (packageMap.contains("manifest") && packageMap.value("manifest").toMap().contains("hooks")) {
+            QVariantMap hookMap = packageMap.value("manifest").toMap().value("hooks").toMap();
+            Q_FOREACH (const QString & hook, hookMap.keys()) {
+                ApplicationItem::HookStruct hookStruct;
+                hookStruct.name = hook;
+                hookStruct.hooks = ApplicationItem::HookNone;
+                QStringList permissions;
+                QStringList readPaths;
+                QStringList writePaths;
+                QVariantMap apparmorMap = hookMap.value(hook).toMap().value("apparmor").toMap();
+                qDebug() << "have apparmor for" << hook << apparmorMap;
+                Q_FOREACH (const QVariant &perm, apparmorMap.value("policy_groups").toList()) {
+                    permissions.append(perm.toString());
+                }
+                Q_FOREACH (const QVariant &perm, apparmorMap.value("read_path").toList()) {
+                    readPaths.append(perm.toString());
+                }
+                Q_FOREACH (const QVariant &perm, apparmorMap.value("write_paths").toList()) {
+                    writePaths.append(perm.toString());
+                }
+                hookStruct.apparmorTemplate = apparmorMap.value("template").toString();
+                hookStruct.readPaths = readPaths;
+                hookStruct.writePaths = writePaths;
+                hookStruct.permissions = permissions;
+
+                if (hookMap.value(hook).toMap().contains("desktop")) {
+                    hookStruct.hooks |= ApplicationItem::HookDesktop;
+                }
+                if (hookMap.value(hook).toMap().contains("scope")) {
+                    hookStruct.hooks |= ApplicationItem::HookScope;
+                }
+                if (hookMap.value(hook).toMap().contains("content-hub")) {
+                    hookStruct.hooks |= ApplicationItem::HookContentHub;
+                }
+                if (hookMap.value(hook).toMap().contains("urls")) {
+                    hookStruct.hooks |= ApplicationItem::HookUrls;
+                }
+                if (hookMap.value(hook).toMap().contains("push-helper")) {
+                    hookStruct.hooks |= ApplicationItem::HookPushHelper;
+                }
+                if (hookMap.value(hook).toMap().contains("account-provider")) {
+                    hookStruct.hooks |= ApplicationItem::HookAccountService;
+                }
+                hooksList.append(hookStruct);
+            }
+            item->setHooks(hooksList);
+        }
+        
         m_list.append(item);
     }
     endResetModel();
@@ -232,20 +282,24 @@ void AppModel::buildInstalledClickList()
      QVariantList appListJson = jsond.toVariant().toList();
 
      m_installedAppIds.clear();
+     qDebug() << "building click list:";
      Q_FOREACH(const QVariant &appJson, appListJson) {
          QVariantMap appMap = appJson.toMap();
 
          QString appId = appMap.value("name").toString();
          QString version = appMap.value("version").toString();
+         qDebug() << "have installed app:" << appId << version;
          m_installedAppIds.insert(appId, version);
      }
 
      Q_FOREACH(ApplicationItem *app, m_list) {
          if (m_installedAppIds.contains(app->appId())) {
              app->setInstalledVersion(m_installedAppIds.value(app->appId()));
-             int idx = m_list.indexOf(app);
-             Q_EMIT dataChanged(index(idx), index(idx));
+         } else {
+             app->setInstalledVersion("");
          }
+         int idx = m_list.indexOf(app);
+         Q_EMIT dataChanged(index(idx), index(idx));
      }
 }
 

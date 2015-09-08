@@ -22,8 +22,32 @@ class ApplicationItem: public QObject
     Q_PROPERTY(QString license READ license CONSTANT)
     Q_PROPERTY(int fileSize READ fileSize CONSTANT)
     Q_PROPERTY(bool installed READ installed NOTIFY installedChanged)
+    Q_PROPERTY(int hooksCount READ hooksCount CONSTANT)
 
+
+    Q_ENUMS(Hook)
+    Q_FLAGS(Hooks)
 public:
+    enum Hook {
+        HookNone = 0,
+        HookDesktop = 1,
+        HookScope = 2,
+        HookAccountService = 4,
+        HookUrls = 8,
+        HookContentHub = 16,
+        HookPushHelper = 32
+    };
+    Q_DECLARE_FLAGS(Hooks, Hook)
+
+    struct HookStruct {
+        QString name;
+        Hooks hooks;
+        QStringList permissions;
+        QString apparmorTemplate;
+        QStringList readPaths;
+        QStringList writePaths;
+    };
+
     explicit ApplicationItem(const QString &appId, QObject *parent = 0):
         QObject(parent),
         m_appId(appId)
@@ -63,6 +87,16 @@ public:
 
     bool installed() const { return !m_installedVersion.isEmpty(); }
 
+    Q_INVOKABLE QString permissions(int index) const { return m_hooks.at(index).permissions.join(", "); }
+    Q_INVOKABLE Hooks hooks(int index) const { return m_hooks.at(index).hooks; }
+    Q_INVOKABLE QString hookName(int index) { return m_hooks.at(index).name; }
+    Q_INVOKABLE QString apparmorTemplate(int index) { return m_hooks.at(index).apparmorTemplate; }
+    Q_INVOKABLE QString readPaths(int index) { return m_hooks.at(index).readPaths.join(", "); }
+    Q_INVOKABLE QString writePaths(int index) { return m_hooks.at(index).writePaths.join(", "); }
+    int hooksCount() const { return m_hooks.count(); }
+
+    void setHooks(QList<HookStruct> hooksStruct) { m_hooks = hooksStruct; }
+
 Q_SIGNALS:
     void installedChanged();
 
@@ -78,6 +112,8 @@ private:
     QString m_license;
     int m_fileSize;
     QString m_installedVersion;
+    QList<HookStruct> m_hooks;
+
 };
 
 class AppModel : public QAbstractListModel

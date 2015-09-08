@@ -30,7 +30,8 @@ RESOURCES += openstore.qrc
 OTHER_FILES += openstore.apparmor \
                openstore.desktop \
                openstore.svg \
-               openstore.url-dispatcher
+               openstore.url-dispatcher \
+    bla.txt
 
 #specify where the config files are installed to
 config_files.path = /openstore

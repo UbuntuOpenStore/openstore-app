@@ -62,14 +62,28 @@ void ClickInstaller::installPackage(const QString &packageUrl)
     installLocalPackage(localPath);
 }
 
+void ClickInstaller::removePackage(const QString &appId, const QString &version)
+{
+    if (m_installerProcess) {
+        return;
+    }
+    qDebug() << "starting package removal:" << appId << version;
+
+    m_installerProcess = new QProcess(this);
+    connect(m_installerProcess, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(installerFinished(int,QProcess::ExitStatus)));
+    connect(m_installerProcess, SIGNAL(stateChanged(QProcess::ProcessState)), this, SLOT(processStatusChanged(QProcess::ProcessState)));
+    m_installerProcess->start("pkcon", QStringList() << "remove" << appId + ";" + version + ";all;local:click");
+    Q_EMIT busyChanged();
+}
+
 void ClickInstaller::fetchPackage(const QString &packageUrl)
 {
     QUrl url(packageUrl);
-//    qDebug() << "fetching package" << url.url();
+    qDebug() << "fetching package" << url.url();
 
     m_file.setFileName("/tmp/" + url.fileName());
     if (!m_file.open(QFile::WriteOnly | QFile::Truncate)) {
-//        qDebug() << "Cannot open temp file" << m_file.fileName();
+        qDebug() << "Cannot open temp file" << m_file.fileName();
         return;
     }
 
@@ -90,7 +104,7 @@ void ClickInstaller::installLocalPackage(const QString &packageFilePath)
     if (m_installerProcess) {
         return;
     }
-    //qDebug() << "starting installer:" << packageFilePath;
+    qDebug() << "starting installer:" << packageFilePath;
 
     m_installerProcess = new QProcess(this);
     connect(m_installerProcess, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(installerFinished(int,QProcess::ExitStatus)));
@@ -101,8 +115,8 @@ void ClickInstaller::installLocalPackage(const QString &packageFilePath)
 
 void ClickInstaller::installerFinished(int exitCode, QProcess::ExitStatus exitStatus)
 {
-//    qDebug() << "installing finished" << exitCode << exitStatus;
-//    qDebug() << "stdout:" << m_installerProcess->readAll();
+    qDebug() << "installing finished" << exitCode << exitStatus;
+    qDebug() << "stdout:" << m_installerProcess->readAll();
     m_installerProcess->deleteLater();
     m_installerProcess = 0;
     Q_EMIT busyChanged();

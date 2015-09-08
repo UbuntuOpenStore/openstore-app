@@ -28,6 +28,7 @@ Q_SIGNALS:
 
 public Q_SLOTS:
     void installPackage(const QString &packageUrl);
+    void removePackage(const QString &appId, const QString &version);
 
 private:
     void fetchPackage(const QString &packageUrl);

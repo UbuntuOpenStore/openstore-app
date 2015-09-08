@@ -121,6 +121,8 @@ void ClickInstaller::installerFinished(int exitCode, QProcess::ExitStatus exitSt
     m_installerProcess = 0;
     Q_EMIT busyChanged();
     Q_EMIT packageInstalled();
+
+    QProcess::execute("dbus-send", QStringList() << "/com/canonical/unity/scopes" << "com.canonical.unity.scopes.InvalidateResults" << "string:clickscope");
 }
 
 void ClickInstaller::processStatusChanged(QProcess::ProcessState state)
@@ -137,16 +139,23 @@ void ClickInstaller::slotDownloadProgress()
 
 void ClickInstaller::downloadFinished()
 {
-//    qDebug() << "finished" << m_download->error() << m_download->errorString();
+    qDebug() << "finished" << m_download->error() << m_download->errorString() << m_download->attribute(QNetworkRequest::RedirectionTargetAttribute);
+
     m_file.write(m_download->readAll());
     m_file.close();
 
     m_download->deleteLater();
-    m_download = 0;
-    Q_EMIT downloadProgressChanged();
-    Q_EMIT busyChanged();
 
     //QByteArray data = reply->readAll();
 
-    installLocalPackage(m_file.fileName());
+    if (!m_download->attribute(QNetworkRequest::RedirectionTargetAttribute).toString().isEmpty()) {
+        qDebug() << "fetching new url:" << m_download->attribute(QNetworkRequest::RedirectionTargetAttribute).toString();
+        fetchPackage(m_download->attribute(QNetworkRequest::RedirectionTargetAttribute).toUrl().toString());
+    } else {
+        qDebug() << "Package fetched. Starting installation";
+        installLocalPackage(m_file.fileName());
+        Q_EMIT downloadProgressChanged();
+        m_download = 0;
+        Q_EMIT busyChanged();
+    }
 }

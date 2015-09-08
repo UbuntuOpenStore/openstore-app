@@ -51,6 +51,8 @@ QVariant AppModel::data(const QModelIndex &index, int role) const
         return m_list.at(index.row())->name();
     case RoleIcon:
         return m_list.at(index.row())->icon();
+    case RoleAuthor:
+        return m_list.at(index.row())->author();
     case RoleTagline:
         return m_list.at(index.row())->tagline();
     case RoleDescription:
@@ -72,6 +74,7 @@ QHash<int, QByteArray> AppModel::roleNames() const
     QHash<int, QByteArray> roles;
     roles.insert(RoleName, "name");
     roles.insert(RoleIcon, "icon");
+    roles.insert(RoleAuthor, "author");
     roles.insert(RoleTagline, "tagline");
     roles.insert(RoleDescription, "description");
     roles.insert(RolePackageUrl, "packageUrl");
@@ -180,7 +183,8 @@ void AppModel::repoListFetched()
         ApplicationItem *item = new ApplicationItem(appId, this);
         item->setIcon(packageMap.value("icon").toString());
         item->setName(packageMap.value("name").toString());
-        item->setPackageUrl(packageMap.value("package").toString());
+        item->setAuthor(packageMap.value("author").toString());
+        item->setPackageUrl(packageMap.value("download").toString());
         item->setSource(packageMap.value("source").toString());
         item->setLicense(packageMap.value("license").toString());
         item->setTagline(packageMap.value("tagline").toString());
@@ -282,13 +286,13 @@ void AppModel::buildInstalledClickList()
      QVariantList appListJson = jsond.toVariant().toList();
 
      m_installedAppIds.clear();
-     qDebug() << "building click list:";
+//     qDebug() << "building click list:";
      Q_FOREACH(const QVariant &appJson, appListJson) {
          QVariantMap appMap = appJson.toMap();
 
          QString appId = appMap.value("name").toString();
          QString version = appMap.value("version").toString();
-         qDebug() << "have installed app:" << appId << version;
+//         qDebug() << "have installed app:" << appId << version;
          m_installedAppIds.insert(appId, version);
      }
 

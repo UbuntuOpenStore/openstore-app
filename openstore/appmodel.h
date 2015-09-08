@@ -13,6 +13,7 @@ class ApplicationItem: public QObject
     Q_PROPERTY(QString name READ name CONSTANT)
     Q_PROPERTY(QString icon READ icon CONSTANT)
     Q_PROPERTY(QString appId READ appId CONSTANT)
+    Q_PROPERTY(QString author READ author CONSTANT)
     Q_PROPERTY(QString tagline READ tagline CONSTANT)
     Q_PROPERTY(QString description READ description CONSTANT)
     Q_PROPERTY(QString version READ version CONSTANT)
@@ -57,6 +58,9 @@ public:
 
     QString name() const { return m_name; }
     void setName(const QString &name) { m_name = name; }
+
+    QString author() const { return m_author; }
+    void setAuthor(const QString &author) { m_author = author; }
 
     QString icon() const { return m_icon; }
     void setIcon(const QString &icon) { m_icon = icon; }
@@ -104,6 +108,7 @@ private:
     QString m_appId;
     QString m_name;
     QString m_icon;
+    QString m_author;
     QString m_tagline;
     QString m_description;
     QString m_packageUrl;
@@ -125,6 +130,7 @@ public:
     enum Roles {
         RoleName,
         RoleIcon,
+        RoleAuthor,
         RoleTagline,
         RoleDescription,
         RolePackageUrl,

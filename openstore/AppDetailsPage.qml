@@ -64,51 +64,9 @@ Page {
                         Layout.fillWidth: true
                         fontSize: "large"
                     }
-                    Button {
+                    Label {
+                        text: app.author
                         Layout.fillWidth: true
-                        text: "Install"
-                        visible: !appModel.installer.busy && !app.installed
-                        onClicked: {
-                            appModel.installer.installPackage(app.packageUrl)
-                        }
-                    }
-                    ProgressBar {
-                        Layout.fillWidth: true
-                        maximumValue: app ? app.fileSize : 0
-                        value: appModel.installer.downloadProgress
-                        visible: appModel.installer.busy
-                        indeterminate: appModel.installer.downloadProgress == 0
-                    }
-                    RowLayout {
-                        Layout.fillWidth: true
-                        spacing: units.gu(1)
-                        visible: !appModel.installer.busy && app.installed
-                        Icon {
-                            Layout.preferredHeight: units.gu(3)
-                            Layout.preferredWidth: units.gu(3)
-                            name: "tick"
-                            color: UbuntuColors.green
-                        }
-                        Label {
-                            text: "Installed"
-                            Layout.fillWidth: true
-                        }
-                        Button {
-                            Layout.fillWidth: true
-                            text: "Upgrade"
-                            visible: app.installed && app.installedVersion < app.version
-                            onClicked: {
-                                appModel.installer.installPackage(app.packageUrl)
-                            }
-                        }
-                        Button {
-                            Layout.fillWidth: true
-                            text: "Remove"
-                            visible: app.installed
-                            onClicked: {
-                                appModel.installer.removePackage(app.appId, app.version)
-                            }
-                        }
                     }
                 }
             }
@@ -138,6 +96,42 @@ Page {
                 text: "Latest available version: " + app.version
                 wrapMode: Text.WordWrap
             }
+            ThinDivider {}
+
+            ProgressBar {
+                Layout.fillWidth: true
+                maximumValue: app ? app.fileSize : 0
+                value: appModel.installer.downloadProgress
+                visible: appModel.installer.busy
+                indeterminate: appModel.installer.downloadProgress == 0
+            }
+
+            RowLayout {
+                width: parent.width
+                spacing: units.gu(1)
+                visible: !appModel.installer.busy
+
+                Button {
+                    Layout.fillWidth: true
+                    text: app.installed ? "Upgrade" : "Install"
+                    visible: !app.installed || (app.installed && app.installedVersion < app.version)
+                    color: "#DD4814"
+                    onClicked: {
+                        appModel.installer.installPackage(app.packageUrl)
+                    }
+                }
+
+                Button {
+                    Layout.fillWidth: true
+                    text: "Remove"
+                    visible: app.installed
+                    color: UbuntuColors.red
+                    onClicked: {
+                        appModel.installer.removePackage(app.appId, app.version)
+                    }
+                }
+            }
+
             ThinDivider {}
 
             Label {
@@ -277,6 +271,14 @@ Page {
                             wrapMode: Text.WordWrap
                             anchors.verticalCenter: parent.verticalCenter
                         }
+                    }
+
+                    Button {
+                        anchors { left: parent.left; right: parent.right }
+                        text: "Open"
+                        color: UbuntuColors.green
+                        visible: app.installed &&  (hooks & ApplicationItem.HookDesktop)
+                        onClicked: Qt.openUrlExternally("appid://" + app.appId + "/" + hookName + "/" + app.installedVersion)
                     }
                 }
             }

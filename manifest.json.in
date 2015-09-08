@@ -2,7 +2,7 @@
     "name": "openstore.mzanetti",
     "description": "description of openstore",
     "architecture": "@CLICK_ARCH@",
-    "title": "openstore",
+    "title": "OpenStore",
     "hooks": {
         "openstore": {
             "apparmor": "openstore/openstore.apparmor",
@@ -10,7 +10,7 @@
             "urls": "openstore/openstore.url-dispatcher"
         }
     },
-    "version": "0.9",
+    "version": "0.93",
     "maintainer": "Michael Zanetti <michael.zanetti@canonical.com>",
     "framework": "ubuntu-sdk-15.04"
 }

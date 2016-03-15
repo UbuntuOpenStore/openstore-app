@@ -292,8 +292,10 @@ void AppModel::buildInstalledClickList()
 
          QString appId = appMap.value("name").toString();
          QString version = appMap.value("version").toString();
-//         qDebug() << "have installed app:" << appId << version;
-         m_installedAppIds.insert(appId, version);
+         qDebug() << "have installed app:" << appId << version;
+         if (!m_installedAppIds.contains(appId) || m_installedAppIds.value(appId) < version) {
+             m_installedAppIds[appId] = version;
+         }
      }
 
      Q_FOREACH(ApplicationItem *app, m_list) {

@@ -13,10 +13,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-import QtQuick 2.0
-import Ubuntu.Components 1.1
-import Ubuntu.Components.Popups 1.0
-import Ubuntu.Components.ListItems 1.0
+import QtQuick 2.4
+import Ubuntu.Components 1.3
+import Ubuntu.Components.Popups 1.3
 import OpenStore 1.0
 import QtQuick.Layouts 1.1
 import Qt.labs.settings 1.0
@@ -25,9 +24,7 @@ MainView {
     id: root
     applicationName: "openstore.mzanetti"
 
-    useDeprecatedToolbar: false
-
-    width: units.gu(100)
+    width: units.gu(40)
     height: units.gu(75)
 
     property string appIdToOpen
@@ -104,7 +101,7 @@ MainView {
                 }
             }
 
-            delegate: Empty {
+            delegate: ListItem {
                 height: units.gu(10)
                 RowLayout {
                     anchors.fill: parent
@@ -128,6 +125,8 @@ MainView {
                             Icon {
                                 Layout.preferredHeight: units.gu(3)
                                 Layout.preferredWidth: height
+                                implicitHeight: height
+                                implicitWidth: width
                                 visible: model.installed
                                 name: "tick"
                                 color: model.installedVersion >= model.version ? UbuntuColors.green : UbuntuColors.orange

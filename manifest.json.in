@@ -10,7 +10,7 @@
             "urls": "openstore/openstore.url-dispatcher"
         }
     },
-    "version": "0.93",
+    "version": "0.94",
     "maintainer": "Michael Zanetti <michael.zanetti@canonical.com>",
-    "framework": "ubuntu-sdk-15.04"
+    "framework": "ubuntu-sdk-15.04.2"
 }

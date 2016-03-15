@@ -14,9 +14,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.2
-import Ubuntu.Components 1.1
-import Ubuntu.Components.ListItems 1.0
+import QtQuick 2.4
+import Ubuntu.Components 1.3
+import Ubuntu.Components.ListItems 1.3
 import QtQuick.Layouts 1.1
 import OpenStore 1.0
 
@@ -202,8 +202,10 @@ Page {
                         anchors { left: parent.left; right: parent.right }
                         spacing: units.gu(1)
                         Icon {
-                            height: units.gu(3)
-                            width: units.gu(3)
+                            Layout.preferredHeight: units.gu(3)
+                            Layout.preferredWidth: units.gu(3)
+                            implicitHeight: height
+                            implicitWidth: width
                             name: "security-alert"
                             visible: apparmorTemplate.indexOf("unconfined") >= 0
                         }
@@ -225,8 +227,10 @@ Page {
                         visible: permissions.length > 0
 
                         Icon {
-                            height: units.gu(3)
-                            width: units.gu(3)
+                            Layout.preferredHeight: units.gu(3)
+                            Layout.preferredWidth: units.gu(3)
+                            implicitHeight: height
+                            implicitWidth: width
                             name: "security-alert"
                         }
 
@@ -244,8 +248,10 @@ Page {
                         spacing: units.gu(1)
                         visible: readpaths.length > 0
                         Icon {
-                            height: units.gu(3)
-                            width: units.gu(3)
+                            Layout.preferredHeight: units.gu(3)
+                            Layout.preferredWidth: units.gu(3)
+                            implicitHeight: height
+                            implicitWidth: width
                             name: "security-alert"
                         }
                         Label {
@@ -260,8 +266,10 @@ Page {
                         spacing: units.gu(1)
                         visible: writepaths.length > 0
                         Icon {
-                            height: units.gu(3)
-                            width: units.gu(3)
+                            Layout.preferredHeight: units.gu(3)
+                            Layout.preferredWidth: units.gu(3)
+                            implicitHeight: height
+                            implicitWidth: width
                             name: "security-alert"
                         }
 

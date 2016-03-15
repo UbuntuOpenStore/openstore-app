@@ -262,8 +262,16 @@ void AppModel::buildInstalledClickList()
          return;
      }
 
-     clickmanifest = click_db_get_manifests_as_string(clickdb, TRUE, &err);
+     ClickUser *clickUser = click_user_new_for_user(clickdb, "phablet", &err);
+     if (err != nullptr) {
+         g_error_free(err);
+         g_object_unref(clickdb);
+         g_object_unref(clickUser);
+         return;
+     }
+     clickmanifest = click_user_get_manifests_as_string(clickUser, &err);
      g_object_unref(clickdb);
+     g_object_unref(clickUser);
 
      if (err != nullptr) {
          g_warning("Unable to get the manifests: %s", err->message);
@@ -286,13 +294,13 @@ void AppModel::buildInstalledClickList()
      QVariantList appListJson = jsond.toVariant().toList();
 
      m_installedAppIds.clear();
-//     qDebug() << "building click list:";
+     qDebug() << "building click list:";
      Q_FOREACH(const QVariant &appJson, appListJson) {
          QVariantMap appMap = appJson.toMap();
 
          QString appId = appMap.value("name").toString();
          QString version = appMap.value("version").toString();
-         qDebug() << "have installed app:" << appId << version;
+         qDebug() << "have installed app:" << appId << version << appMap;
          if (!m_installedAppIds.contains(appId) || m_installedAppIds.value(appId) < version) {
              m_installedAppIds[appId] = version;
          }

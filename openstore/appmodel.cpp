@@ -57,6 +57,8 @@ QVariant AppModel::data(const QModelIndex &index, int role) const
         return m_list.at(index.row())->tagline();
     case RoleDescription:
         return m_list.at(index.row())->description();
+    case RoleChangelog:
+        return m_list.at(index.row())->changelog();
     case RolePackageUrl:
         return m_list.at(index.row())->packageUrl();
     case RoleVersion:
@@ -77,6 +79,7 @@ QHash<int, QByteArray> AppModel::roleNames() const
     roles.insert(RoleAuthor, "author");
     roles.insert(RoleTagline, "tagline");
     roles.insert(RoleDescription, "description");
+    roles.insert(RoleChangelog, "changelog");
     roles.insert(RolePackageUrl, "packageUrl");
     roles.insert(RoleVersion, "version");
     roles.insert(RoleInstalled, "installed");
@@ -189,6 +192,7 @@ void AppModel::repoListFetched()
         item->setLicense(packageMap.value("license").toString());
         item->setTagline(packageMap.value("tagline").toString());
         item->setDescription(packageMap.value("description").toString());
+        item->setChangelog(packageMap.value("changelog").toString());
         item->setVersion(packageMap.value("version").toString());
         item->setFileSize(packageMap.value("filesize").toInt());
         item->setInstalledVersion(m_installedAppIds.value(item->appId()));

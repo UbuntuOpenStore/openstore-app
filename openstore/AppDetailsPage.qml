@@ -96,6 +96,21 @@ Page {
                 text: "Latest available version: " + app.version
                 wrapMode: Text.WordWrap
             }
+
+            Label {
+                anchors { left: parent.left; right: parent.right }
+                text: "Changelog"
+                wrapMode: Text.WordWrap
+                visible: app.changelog
+            }
+
+            Label {
+                anchors { left: parent.left; right: parent.right }
+                text: app.changelog
+                wrapMode: Text.WordWrap
+                visible: app.changelog
+            }
+
             ThinDivider {}
 
             ProgressBar {

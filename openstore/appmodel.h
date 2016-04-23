@@ -16,6 +16,7 @@ class ApplicationItem: public QObject
     Q_PROPERTY(QString author READ author CONSTANT)
     Q_PROPERTY(QString tagline READ tagline CONSTANT)
     Q_PROPERTY(QString description READ description CONSTANT)
+    Q_PROPERTY(QString changelog READ changelog CONSTANT)
     Q_PROPERTY(QString version READ version CONSTANT)
     Q_PROPERTY(QString installedVersion READ installedVersion NOTIFY installedChanged)
     Q_PROPERTY(QString packageUrl READ packageUrl CONSTANT)
@@ -71,6 +72,9 @@ public:
     QString description() const { return m_description; }
     void setDescription(const QString &description) { m_description = description; }
 
+    QString changelog() const { return m_changelog; }
+    void setChangelog(const QString &changelog) { m_changelog = changelog; }
+
     QString version() const { return m_version; }
     void setVersion(const QString &version) { m_version = version; }
 
@@ -111,6 +115,7 @@ private:
     QString m_author;
     QString m_tagline;
     QString m_description;
+    QString m_changelog;
     QString m_packageUrl;
     QString m_version;
     QString m_source;
@@ -133,6 +138,7 @@ public:
         RoleAuthor,
         RoleTagline,
         RoleDescription,
+        RoleChangelog,
         RolePackageUrl,
         RoleVersion,
         RoleInstalled,

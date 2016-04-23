@@ -23,7 +23,7 @@ import Ubuntu.Content 1.3
 
 MainView {
     id: root
-    applicationName: "openstore.mzanetti"
+    applicationName: "openstore.openstore-team"
 
     width: units.gu(40)
     height: units.gu(75)

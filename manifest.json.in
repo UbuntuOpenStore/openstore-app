@@ -1,5 +1,5 @@
 {
-    "name": "openstore.mzanetti",
+    "name": "openstore.openstore-team",
     "description": "Alternative app store for hacks, developer tools and app previews.",
     "architecture": "@CLICK_ARCH@",
     "title": "OpenStore",
@@ -12,6 +12,6 @@
         }
     },
     "version": "0.97",
-    "maintainer": "Michael Zanetti <michael.zanetti@canonical.com>",
+    "maintainer": "OpenStore Team <openstore-team@lists.launchpad.net>",
     "framework": "ubuntu-sdk-15.04.2"
 }

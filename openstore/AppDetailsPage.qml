@@ -99,7 +99,7 @@ Page {
 
             Label {
                 anchors { left: parent.left; right: parent.right }
-                text: "Changelog"
+                text: "Changelog:"
                 wrapMode: Text.WordWrap
                 visible: app.changelog
             }

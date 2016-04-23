@@ -1,16 +1,17 @@
 {
     "name": "openstore.mzanetti",
-    "description": "description of openstore",
+    "description": "Alternative app store for hacks, developer tools and app previews.",
     "architecture": "@CLICK_ARCH@",
     "title": "OpenStore",
     "hooks": {
         "openstore": {
             "apparmor": "openstore/openstore.apparmor",
             "desktop": "openstore/openstore.desktop",
-            "urls": "openstore/openstore.url-dispatcher"
+            "urls": "openstore/openstore.url-dispatcher",
+            "content-hub": "openstore/openstore-contenthub.json"
         }
     },
-    "version": "0.95",
+    "version": "0.96",
     "maintainer": "Michael Zanetti <michael.zanetti@canonical.com>",
     "framework": "ubuntu-sdk-15.04.2"
 }

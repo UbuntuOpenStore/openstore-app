@@ -25,6 +25,7 @@ Q_SIGNALS:
     void busyChanged();
     void downloadProgressChanged();
     void packageInstalled();
+    void packageInstallationFailed();
 
 public Q_SLOTS:
     void installPackage(const QString &packageUrl);

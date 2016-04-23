@@ -19,6 +19,7 @@ import Ubuntu.Components.Popups 1.3
 import OpenStore 1.0
 import QtQuick.Layouts 1.1
 import Qt.labs.settings 1.0
+import Ubuntu.Content 1.3
 
 MainView {
     id: root
@@ -71,6 +72,19 @@ MainView {
 
     ClickInstaller {
         id: installer
+        onPackageInstalled: {
+            print("******* package installed")
+            if (contentHubInstallInProgress) {
+                PopupUtils.open(installedConfirmation, root)
+                contentHubInstallInProgress = false;
+            }
+        }
+        onPackageInstallationFailed: {
+            if (contentHubInstallInProgress) {
+                PopupUtils.open(installationError, root)
+                contentHubInstallInProgress = false;
+            }
+        }
     }
 
     AppModel {
@@ -83,6 +97,21 @@ MainView {
         clickInstaller: installer
     }
 
+    property bool contentHubInstallInProgress: false
+    Connections {
+        target: ContentHub
+
+        onImportRequested: {
+            var filePath = String(transfer.items[0].url).replace('file://', '')
+            print("Should import file", filePath)
+            var fileName = filePath.split("/").pop();
+            var popup = PopupUtils.open(installQuestion, root, {fileName: fileName});
+            popup.accepted.connect(function() {
+                contentHubInstallInProgress = true;
+                installer.installPackage(filePath)
+            })
+        }
+    }
     Page {
         id: mainPage
         title: i18n.tr("Open Store")
@@ -182,6 +211,64 @@ MainView {
                 onClicked: {
                     warningDialog.rejected();
                 }
+            }
+        }
+    }
+
+    Component {
+        id: installQuestion
+        Dialog {
+            id: installQuestionDialog
+            title: "Install package?"
+            text: i18n.tr("Do you want to install %1?").arg(fileName)
+
+            property string fileName
+            signal accepted();
+            signal rejected();
+
+            Button {
+                text: "Yes"
+                color: UbuntuColors.green
+                onClicked: {
+                    installQuestionDialog.accepted();
+                    PopupUtils.close(installQuestionDialog)
+                }
+
+            }
+            Button {
+                text: "No"
+                color: UbuntuColors.red
+                onClicked: {
+                    installQuestionDialog.rejected();
+                    PopupUtils.close(installQuestionDialog)
+                }
+            }
+        }
+    }
+
+    Component {
+        id: installedConfirmation
+        Dialog {
+            id: installedConfirmationDialog
+            title: "Package installed"
+            text: "The package has been installed successfully."
+            Button {
+                color: UbuntuColors.blue
+                text: "OK"
+                onClicked: PopupUtils.close(installedConfirmationDialog)
+            }
+        }
+    }
+    Component {
+        id: installationError
+        Dialog {
+            id: installationErrorDialog
+            title: "Installation failed"
+            text: "The package could not be installed. Make sure it is a valid click package."
+            Button {
+                color: UbuntuColors.orange
+                text: "OK"
+                onClicked: PopupUtils.close(installationErrorDialog)
             }
         }
     }

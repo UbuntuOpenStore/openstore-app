@@ -31,7 +31,7 @@ OTHER_FILES += openstore.apparmor \
                openstore.desktop \
                openstore.svg \
                openstore.url-dispatcher \
-    bla.txt
+               openstore-contenthub.json
 
 #specify where the config files are installed to
 config_files.path = /openstore

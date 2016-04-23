@@ -120,7 +120,11 @@ void ClickInstaller::installerFinished(int exitCode, QProcess::ExitStatus exitSt
     m_installerProcess->deleteLater();
     m_installerProcess = 0;
     Q_EMIT busyChanged();
-    Q_EMIT packageInstalled();
+    if (exitCode == 0 && exitStatus == 0) {
+        Q_EMIT packageInstalled();
+    } else {
+        Q_EMIT packageInstallationFailed();
+    }
 
     QProcess::execute("dbus-send", QStringList() << "/com/canonical/unity/scopes" << "com.canonical.unity.scopes.InvalidateResults" << "string:clickscope");
 }

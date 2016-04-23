@@ -52,16 +52,8 @@ MainView {
         onOpened: {
             var index = appModel.findApp(uris[0].split("://")[1])
             if (index >= 0) {
-                pageStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), {app: appModel.app(index)})
+                pageStack.addPageToNextColumn(mainPage, Qt.resolvedUrl("AppDetailsPage.qml"), {app: appModel.app(index)})
             }
-        }
-    }
-
-    PageStack {
-        id: pageStack
-
-        Component.onCompleted: {
-            pageStack.push(mainPage)
         }
     }
 
@@ -112,77 +104,64 @@ MainView {
             })
         }
     }
-    Page {
-        id: mainPage
-        title: i18n.tr("Open Store")
+    AdaptivePageLayout {
+        id: pageStack
+        anchors.fill: parent
+        primaryPage: mainPage
 
-        ListView {
-            anchors.fill: parent
-            model: appModel
+        Page {
+            id: mainPage
+            title: i18n.tr("Open Store")
 
-            onCountChanged: {
-                if (count > 0 && root.appIdToOpen != "") {
-                    var index = appModel.findApp(root.appIdToOpen)
-                    if (index >= 0) {
-                        pageStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), {app: appModel.app(index)})
-                        root.appIdToOpen = "";
-                    }
-                }
-            }
+            ListView {
+                anchors.fill: parent
+                model: appModel
 
-            delegate: ListItem {
-                height: units.gu(10)
-                RowLayout {
-                    anchors.fill: parent
-                    anchors.margins: units.gu(1)
-                    spacing: units.gu(1)
-                    UbuntuShape {
-                        Layout.fillHeight: true
-                        Layout.preferredWidth: height
-                        image: Image {
-                            source: model.icon
-                            height: parent.height
-                            width: parent.width
-                        }
-                    }
-                    ColumnLayout {
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                        spacing: units.gu(1)
-                        RowLayout {
-                            Layout.fillWidth: true
-                            Icon {
-                                Layout.preferredHeight: units.gu(3)
-                                Layout.preferredWidth: height
-                                implicitHeight: height
-                                implicitWidth: width
-                                visible: model.installed
-                                name: "tick"
-                                color: model.installedVersion >= model.version ? UbuntuColors.green : UbuntuColors.orange
-                            }
-
-                            Label {
-                                Layout.fillWidth: true
-                                text: model.name
-                                fontSize: "large"
-                                elide: Text.ElideRight
-                            }
-                        }
-                        Label {
-                            Layout.fillWidth: true
-                            Layout.fillHeight: true
-                            text: model.tagline
-                            fontSize: "medium"
-                            wrapMode: Text.WordWrap
+                onCountChanged: {
+                    if (count > 0 && root.appIdToOpen != "") {
+                        var index = appModel.findApp(root.appIdToOpen)
+                        if (index >= 0) {
+                            pageStack.addPageToNextColumn(mainPage, Qt.resolvedUrl("AppDetailsPage.qml"), {app: appModel.app(index)})
+                            root.appIdToOpen = "";
                         }
                     }
                 }
-                onClicked: {
-                    pageStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), {app: appModel.app(index)})
+
+                delegate: ListItem {
+                    height: layout.height + divider.height
+
+                    ListItemLayout {
+                        id: layout
+                        title.text: model.name
+                        summary.text: model.tagline
+
+                        UbuntuShape {
+                            SlotsLayout.position: SlotsLayout.Leading
+                            image: Image {
+                                source: model.icon
+                                height: parent.height
+                                width: parent.width
+                            }
+                        }
+                        Icon {
+                            SlotsLayout.position: SlotsLayout.Trailing
+                            height: units.gu(2)
+                            width: height
+                            implicitHeight: height
+                            implicitWidth: width
+                            visible: model.installed
+                            name: "tick"
+                            color: model.installedVersion >= model.version ? UbuntuColors.green : UbuntuColors.orange
+                        }
+                    }
+                    onClicked: {
+                        pageStack.addPageToNextColumn(mainPage, Qt.resolvedUrl("AppDetailsPage.qml"), {app: appModel.app(index)})
+                    }
                 }
             }
         }
     }
+
 
     Component {
         id: warningComponent

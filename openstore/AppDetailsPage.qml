@@ -35,7 +35,7 @@ Page {
         Column {
             id: mainColumn
             anchors { left: parent.left; top: parent.top; right: parent.right }
-            anchors.margins: units.gu(1)
+            anchors.margins: units.gu(2)
             spacing: units.gu(1)
             height: childrenRect.height
 
@@ -127,7 +127,6 @@ Page {
                 visible: !appModel.installer.busy
 
                 Button {
-                    Layout.fillWidth: true
                     text: app.installed ? "Upgrade" : "Install"
                     visible: !app.installed || (app.installed && app.installedVersion < app.version)
                     color: "#DD4814"
@@ -137,7 +136,6 @@ Page {
                 }
 
                 Button {
-                    Layout.fillWidth: true
                     text: "Remove"
                     visible: app.installed
                     color: UbuntuColors.red
@@ -297,7 +295,7 @@ Page {
                     }
 
                     Button {
-                        anchors { left: parent.left; right: parent.right }
+                        anchors { left: parent.left }
                         text: "Open"
                         color: UbuntuColors.green
                         visible: app.installed &&  (hooks & ApplicationItem.HookDesktop)

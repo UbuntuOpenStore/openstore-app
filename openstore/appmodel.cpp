@@ -208,7 +208,7 @@ void AppModel::repoListFetched()
                 QStringList readPaths;
                 QStringList writePaths;
                 QVariantMap apparmorMap = hookMap.value(hook).toMap().value("apparmor").toMap();
-                qDebug() << "have apparmor for" << hook << apparmorMap;
+//                qDebug() << "have apparmor for" << hook << apparmorMap;
                 Q_FOREACH (const QVariant &perm, apparmorMap.value("policy_groups").toList()) {
                     permissions.append(perm.toString());
                 }

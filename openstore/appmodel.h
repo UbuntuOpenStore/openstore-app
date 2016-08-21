@@ -16,12 +16,14 @@ class ApplicationItem: public QObject
     Q_PROPERTY(QString author READ author CONSTANT)
     Q_PROPERTY(QString tagline READ tagline CONSTANT)
     Q_PROPERTY(QString description READ description CONSTANT)
+    Q_PROPERTY(QStringList screenshots READ screenshots CONSTANT)
     Q_PROPERTY(QString changelog READ changelog CONSTANT)
     Q_PROPERTY(QString version READ version CONSTANT)
     Q_PROPERTY(QString installedVersion READ installedVersion NOTIFY installedChanged)
     Q_PROPERTY(QString packageUrl READ packageUrl CONSTANT)
     Q_PROPERTY(QString source READ source CONSTANT)
     Q_PROPERTY(QString license READ license CONSTANT)
+    Q_PROPERTY(QString maintainer READ maintainer CONSTANT)
     Q_PROPERTY(int fileSize READ fileSize CONSTANT)
     Q_PROPERTY(bool installed READ installed NOTIFY installedChanged)
     Q_PROPERTY(int hooksCount READ hooksCount CONSTANT)
@@ -72,6 +74,9 @@ public:
     QString description() const { return m_description; }
     void setDescription(const QString &description) { m_description = description; }
 
+    QStringList screenshots() const { return m_screenshots; }
+    void setScreenshots(const QStringList &screenshots) { m_screenshots = screenshots; }
+
     QString changelog() const { return m_changelog; }
     void setChangelog(const QString &changelog) { m_changelog = changelog; }
 
@@ -89,6 +94,9 @@ public:
 
     QString license() const { return m_license; }
     void setLicense(const QString &license) { m_license = license; }
+
+    QString maintainer() const { return m_maintainer; }
+    void setMaintainer(const QString &maintainer) { m_maintainer = maintainer; }
 
     int fileSize() const { return m_fileSize; }
     void setFileSize(int fileSize) { m_fileSize = fileSize; }
@@ -115,11 +123,13 @@ private:
     QString m_author;
     QString m_tagline;
     QString m_description;
+    QStringList m_screenshots;
     QString m_changelog;
     QString m_packageUrl;
     QString m_version;
     QString m_source;
     QString m_license;
+    QString m_maintainer;
     int m_fileSize;
     QString m_installedVersion;
     QList<HookStruct> m_hooks;
@@ -138,11 +148,13 @@ public:
         RoleAuthor,
         RoleTagline,
         RoleDescription,
+        RoleScreenshots,
         RoleChangelog,
         RolePackageUrl,
         RoleVersion,
         RoleInstalled,
-        RoleInstalledVersion
+        RoleInstalledVersion,
+        RoleMaintainer
     };
 
     explicit AppModel(QObject *parent = 0);

@@ -111,10 +111,14 @@ MainView {
 
         Page {
             id: mainPage
-            title: i18n.tr("Open Store")
+            header: PageHeader {
+                title: i18n.tr("Open Store")
+            }
+
 
             ListView {
                 anchors.fill: parent
+                anchors.topMargin: mainPage.header.height
                 model: appModel
 
                 onCountChanged: {

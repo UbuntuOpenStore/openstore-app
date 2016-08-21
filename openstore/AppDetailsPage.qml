@@ -22,13 +22,16 @@ import OpenStore 1.0
 
 
 Page {
-    title: app ? app.name : "App details"
+    header: PageHeader {
+        title: app ? app.name : "App details"
+    }
 
     property var app: null
 
 
     Flickable {
         anchors.fill: parent
+        anchors.topMargin: parent.header.height
         contentHeight: mainColumn.height + units.gu(2)
         interactive: contentHeight > height - topMargin
 
@@ -77,6 +80,100 @@ Page {
                 wrapMode: Text.WordWrap
             }
 
+            ListView {
+                anchors { left: parent.left; right: parent.right }
+                height: count > 0 ? units.gu(20) : 0
+                visible: count > 0
+                spacing: units.gu(1)
+                orientation: ListView.Horizontal
+                model: app.screenshots
+                delegate: UbuntuShape {
+                    height: parent.height
+                    // sh : lv.h = sw : x
+                    width: screenshot.sourceSize.width * height / screenshot.sourceSize.height
+                    sourceFillMode: UbuntuShape.PreserveAspectFit
+                    source: Image {
+                        id: screenshot
+                        source: modelData
+                    }
+
+                    AbstractButton {
+                        id: screenShotButton
+                        anchors.fill: parent
+                        onClicked: {
+                            print("opening at:", screenShotButton.mapToItem(root, 0, 0).x)
+                            zoomIn.createObject(root, {x: screenShotButton.mapToItem(root, 0, 0).x, y: screenShotButton.mapToItem(root, 0, 0).y, itemScale: screenShotButton.height / root.height, imageSource: modelData});
+//                            zoomIn.createObject(root, {x: 100, y: 100});
+                        }
+                    }
+
+                    Component {
+                        id: zoomIn
+                        Rectangle {
+                            id: zI
+                            width: parent.width
+                            height: parent.height
+                            color: "black"
+
+                            property real itemScale: 1
+                            property string imageSource
+                            transform: Scale {
+                                origin.x: 0
+                                origin.y: 0
+                                xScale: zI.itemScale
+                                yScale: zI.itemScale
+                            }
+
+                            ParallelAnimation {
+                                id: scaleInAnimation
+                                onStarted: {
+                                    hideAnimation.initialScale = itemScale;
+                                    hideAnimation.initialX = x;
+                                    hideAnimation.initialY = y;
+                                }
+
+                                UbuntuNumberAnimation { target: zI; property: "itemScale"; to: 1 }
+                                UbuntuNumberAnimation { target: zI; properties: "x,y"; to: 0 }
+                            }
+
+
+                            Component.onCompleted: {
+                                scaleInAnimation.start();
+                            }
+
+                            Image {
+                                anchors.fill: parent
+                                source: zI.imageSource
+                                fillMode: Image.PreserveAspectFit
+                            }
+
+                            AbstractButton {
+                                anchors.fill: parent
+                                onClicked: {
+                                    hideAnimation.start()
+                                }
+                            }
+
+                            ParallelAnimation {
+                                id: hideAnimation
+                                property real initialScale: 1
+                                property int initialX: 0
+                                property int initialY: 0
+
+
+                                UbuntuNumberAnimation { target: zI; property: "itemScale"; to: hideAnimation.initialScale }
+                                UbuntuNumberAnimation { target: zI; property: "x"; to: hideAnimation.initialX }
+                                UbuntuNumberAnimation { target: zI; property: "y"; to: hideAnimation.initialY }
+                                onStopped: {
+                                    script: zI.destroy()
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+
             Label {
                 anchors { left: parent.left; right: parent.right }
                 text: app.description
@@ -84,6 +181,10 @@ Page {
             }
 
             ThinDivider { }
+
+            Label {
+                text: "<b>Packager/Publisher:</b> " + (app.maintainer ? app.maintainer : "Openstore team")
+            }
 
             Label {
                 anchors { left: parent.left; right: parent.right }

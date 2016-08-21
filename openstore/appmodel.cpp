@@ -57,6 +57,8 @@ QVariant AppModel::data(const QModelIndex &index, int role) const
         return m_list.at(index.row())->tagline();
     case RoleDescription:
         return m_list.at(index.row())->description();
+    case RoleScreenshots:
+        return m_list.at(index.row())->screenshots();
     case RoleChangelog:
         return m_list.at(index.row())->changelog();
     case RolePackageUrl:
@@ -67,6 +69,8 @@ QVariant AppModel::data(const QModelIndex &index, int role) const
         return m_list.at(index.row())->installed();
     case RoleInstalledVersion:
         return m_list.at(index.row())->installedVersion();
+    case RoleMaintainer:
+        return m_list.at(index.row())->maintainer();
     }
     return QVariant();
 }
@@ -79,11 +83,13 @@ QHash<int, QByteArray> AppModel::roleNames() const
     roles.insert(RoleAuthor, "author");
     roles.insert(RoleTagline, "tagline");
     roles.insert(RoleDescription, "description");
+    roles.insert(RoleScreenshots, "screenshots");
     roles.insert(RoleChangelog, "changelog");
     roles.insert(RolePackageUrl, "packageUrl");
     roles.insert(RoleVersion, "version");
     roles.insert(RoleInstalled, "installed");
     roles.insert(RoleInstalledVersion, "installedVersion");
+    roles.insert(RoleMaintainer, "maintainer");
     return roles;
 }
 
@@ -190,8 +196,10 @@ void AppModel::repoListFetched()
         item->setPackageUrl(packageMap.value("download").toString());
         item->setSource(packageMap.value("source").toString());
         item->setLicense(packageMap.value("license").toString());
+        item->setMaintainer(packageMap.value("maintainer_name").toString());
         item->setTagline(packageMap.value("tagline").toString());
         item->setDescription(packageMap.value("description").toString());
+        item->setScreenshots(packageMap.value("screenshots").toStringList());
         item->setChangelog(packageMap.value("changelog").toString());
         item->setVersion(packageMap.value("version").toString());
         item->setFileSize(packageMap.value("filesize").toInt());
@@ -215,7 +223,7 @@ void AppModel::repoListFetched()
                 Q_FOREACH (const QVariant &perm, apparmorMap.value("read_path").toList()) {
                     readPaths.append(perm.toString());
                 }
-                Q_FOREACH (const QVariant &perm, apparmorMap.value("write_paths").toList()) {
+                Q_FOREACH (const QVariant &perm, apparmorMap.value("write_path").toList()) {
                     writePaths.append(perm.toString());
                 }
                 hookStruct.apparmorTemplate = apparmorMap.value("template").toString();

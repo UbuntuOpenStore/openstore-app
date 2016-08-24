@@ -81,7 +81,10 @@ Page {
             }
 
             ListView {
-                anchors { left: parent.left; right: parent.right }
+                anchors { left: parent.left; right: parent.right; margins: -units.gu(2) }
+                leftMargin: units.gu(2)
+                rightMargin: units.gu(2)
+                clip: true
                 height: count > 0 ? units.gu(20) : 0
                 visible: count > 0
                 spacing: units.gu(1)

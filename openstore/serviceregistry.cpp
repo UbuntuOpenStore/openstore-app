@@ -110,6 +110,9 @@ void ServiceRegistry::createServiceFile(const QString &appId, const QString &des
     }
     serviceFile.write("#openstore\n");
     serviceFile.write("start on started unity8\n");
+    serviceFile.write("pre-start script\n");
+    serviceFile.write(QString("  initctl set-env LD_LIBRARY_PATH=%1\n").arg(clickRoot + appId + "/current/lib/arm-linux-gnueabihf").toLatin1());
+    serviceFile.write("end script\n");
     serviceFile.write("task\n");
     serviceFile.write(QString("exec %1\n").arg(clickRoot + appId + "/current/lib/arm-linux-gnueabihf/bin/" + exec).toLatin1());
     serviceFile.close();

@@ -20,6 +20,7 @@ import OpenStore 1.0
 import QtQuick.Layouts 1.1
 import Qt.labs.settings 1.0
 import Ubuntu.Content 1.3
+import QtQml.Models 2.1
 
 MainView {
     id: root
@@ -113,59 +114,108 @@ MainView {
             id: mainPage
             header: PageHeader {
                 title: i18n.tr("Open Store")
-                sections.model: [ i18n.tr("All"), i18n.tr("Installed") ]
+
+                leadingActionBar.actions: Action {
+                    iconName: checked ? "close" : "navigation-menu"
+                    checkable: true
+                }
+
+                trailingActionBar.actions: Action {
+                    iconName: "search"
+                    text: i18n.tr("Search")
+                }
+
+                sections {
+                    model: [ i18n.tr("Discover"), i18n.tr("Installed"), i18n.tr("Categories") ]
+                    selectedIndex: 0   // Should always match "Discover"
+                    onSelectedIndexChanged: {
+                        // Current section has changed, if there was an opened page
+                        // in the second column, it is not anymore related to the
+                        // new current section. Remove it.
+                        mainPage.pageStack.removePages(mainPage)
+                    }
+                }
             }
 
-
             ListView {
-                anchors.fill: parent
-                anchors.topMargin: mainPage.header.height
-                model: SortFilterModel {
-                    model: appModel
-                    filter.property: mainPage.header.sections.selectedIndex == 0 ? "" : "installed"
-                    filter.pattern: mainPage.header.sections.selectedIndex == 0 ? new RegExp() : new RegExp("true")
+                id: view
+                anchors {
+                    top: mainPage.header.bottom
+                    bottom: parent.bottom
+                    left: parent.left
+                    right: parent.right
                 }
 
-                onCountChanged: {
-                    if (count > 0 && root.appIdToOpen != "") {
-                        var index = appModel.findApp(root.appIdToOpen)
-                        if (index >= 0) {
-                            pageStack.addPageToNextColumn(mainPage, Qt.resolvedUrl("AppDetailsPage.qml"), {app: appModel.app(index)})
-                            root.appIdToOpen = "";
+                clip: true
+                orientation: ListView.Horizontal
+                interactive: false
+                snapMode: ListView.SnapOneItem
+                highlightMoveDuration: 0
+                currentIndex: mainPage.header.sections.selectedIndex
+
+                model: ObjectModel {
+                    Loader {
+                        width: view.width
+                        height: view.height
+                        asynchronous: true
+                        source: Qt.resolvedUrl("DiscoverTab.qml")
+                    }
+                    Loader {
+                        width: view.width
+                        height: view.height
+                        asynchronous: true
+                        source: Qt.resolvedUrl("FilteredAppView.qml")
+
+                        onLoaded: {
+                            item.model = appModel
+                            item.filterProperty = "installed"
+                            item.filterPattern = new RegExp("true")
+
+                            item.appDetailsRequired.connect(function(appId) {
+                                var pageProps = {
+                                    app: appModel.app(appModel.findApp(appId))
+                                }
+                                mainPage.pageStack.addPageToNextColumn(mainPage, Qt.resolvedUrl("AppDetailsPage.qml"), pageProps)
+                            })
+                        }
+                    }
+                    Loader {
+                        width: view.width
+                        height: view.height
+                        asynchronous: true
+                        source: Qt.resolvedUrl("CategoriesTab.qml")
+
+                        onLoaded: {
+                            item.categoryClicked.connect(function(name, code) {
+                                var pageProps = {
+                                    title: name,
+                                    filterPattern: new RegExp(code.toString()),
+                                    filterProperty: "category"
+                                }
+
+                                mainPage.pageStack.removePages(mainPage)
+                                mainPage.pageStack.addPageToCurrentColumn(mainPage, filteredAppPageComponent, pageProps)
+                            })
                         }
                     }
                 }
+            }
+        }
+    }
 
-                delegate: ListItem {
-                    height: layout.height + divider.height
-
-                    ListItemLayout {
-                        id: layout
-                        title.text: model.name
-                        summary.text: model.tagline
-
-                        UbuntuShape {
-                            SlotsLayout.position: SlotsLayout.Leading
-                            image: Image {
-                                source: model.icon
-                                height: parent.height
-                                width: parent.width
-                            }
-                        }
-                        Icon {
-                            SlotsLayout.position: SlotsLayout.Trailing
-                            height: units.gu(2)
-                            width: height
-                            implicitHeight: height
-                            implicitWidth: width
-                            visible: model.installed
-                            name: "tick"
-                            color: model.installedVersion >= model.version ? UbuntuColors.green : UbuntuColors.orange
-                        }
-                    }
-                    onClicked: {
-                        pageStack.addPageToNextColumn(mainPage, Qt.resolvedUrl("AppDetailsPage.qml"), {app: appModel.app(appModel.findApp(model.appId))})
-                    }
+    Component {
+        id: filteredAppPageComponent
+        Page {
+            id: filteredAppPage
+            property alias filterPattern: filteredAppView.filterPattern
+            property alias filterProperty: filteredAppView.filterProperty
+            header: PageHeader { title: filteredAppPage.title }
+            FilteredAppView {
+                id: filteredAppView
+                model: appModel
+                onAppDetailsRequired: {
+                    var pageProps = { app: appModel.app(appModel.findApp(appId)) }
+                    filteredAppPage.pageStack.addPageToNextColumn(filteredAppPage, Qt.resolvedUrl("AppDetailsPage.qml"), pageProps)
                 }
             }
         }

@@ -3,5 +3,11 @@
         <file>Main.qml</file>
         <file>AppDetailsPage.qml</file>
         <file>HookIcon.qml</file>
+        <file>CategoriesModel.qml</file>
+        <file>DiscoverTab.qml</file>
+        <file>CategoriesTab.qml</file>
+        <file>NoMatchEmptyState.qml</file>
+        <file>FilteredAppView.qml</file>
+        <file>EmptyState.qml</file>
     </qresource>
 </RCC>

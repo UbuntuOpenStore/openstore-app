@@ -57,6 +57,8 @@ QVariant AppModel::data(const QModelIndex &index, int role) const
         return m_list.at(index.row())->tagline();
     case RoleDescription:
         return m_list.at(index.row())->description();
+    case RoleCategory:
+        return m_list.at(index.row())->category();
     case RoleScreenshots:
         return m_list.at(index.row())->screenshots();
     case RoleChangelog:
@@ -83,6 +85,7 @@ QHash<int, QByteArray> AppModel::roleNames() const
     roles.insert(RoleAuthor, "author");
     roles.insert(RoleTagline, "tagline");
     roles.insert(RoleDescription, "description");
+    roles.insert(RoleCategory, "category");
     roles.insert(RoleScreenshots, "screenshots");
     roles.insert(RoleChangelog, "changelog");
     roles.insert(RolePackageUrl, "packageUrl");
@@ -199,6 +202,7 @@ void AppModel::repoListFetched()
         item->setMaintainer(packageMap.value("maintainer_name").toString());
         item->setTagline(packageMap.value("tagline").toString());
         item->setDescription(packageMap.value("description").toString());
+        item->setCategory(packageMap.value("category").toString());
         item->setScreenshots(packageMap.value("screenshots").toStringList());
         item->setChangelog(packageMap.value("changelog").toString());
         item->setVersion(packageMap.value("version").toString());

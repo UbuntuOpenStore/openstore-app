@@ -49,6 +49,8 @@ QVariant AppModel::data(const QModelIndex &index, int role) const
     switch (role) {
     case RoleName:
         return m_list.at(index.row())->name();
+    case RoleAppId:
+        return m_list.at(index.row())->appId();
     case RoleIcon:
         return m_list.at(index.row())->icon();
     case RoleAuthor:
@@ -81,6 +83,7 @@ QHash<int, QByteArray> AppModel::roleNames() const
 {
     QHash<int, QByteArray> roles;
     roles.insert(RoleName, "name");
+    roles.insert(RoleAppId, "appId");
     roles.insert(RoleIcon, "icon");
     roles.insert(RoleAuthor, "author");
     roles.insert(RoleTagline, "tagline");
@@ -261,6 +264,9 @@ void AppModel::repoListFetched()
         m_list.append(item);
     }
     endResetModel();
+
+    // TODO: Is this really necessary?
+    // buildInstalledClickList();
 }
 
 void AppModel::buildInstalledClickList()

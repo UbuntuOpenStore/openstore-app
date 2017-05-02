@@ -149,6 +149,7 @@ class AppModel : public QAbstractListModel
 public:
     enum Roles {
         RoleName,
+        RoleAppId,
         RoleIcon,
         RoleAuthor,
         RoleTagline,

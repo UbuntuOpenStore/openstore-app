@@ -113,13 +113,18 @@ MainView {
             id: mainPage
             header: PageHeader {
                 title: i18n.tr("Open Store")
+                sections.model: [ i18n.tr("All"), i18n.tr("Installed") ]
             }
 
 
             ListView {
                 anchors.fill: parent
                 anchors.topMargin: mainPage.header.height
-                model: appModel
+                model: SortFilterModel {
+                    model: appModel
+                    filter.property: mainPage.header.sections.selectedIndex == 0 ? "" : "installed"
+                    filter.pattern: mainPage.header.sections.selectedIndex == 0 ? new RegExp() : new RegExp("true")
+                }
 
                 onCountChanged: {
                     if (count > 0 && root.appIdToOpen != "") {
@@ -159,7 +164,7 @@ MainView {
                         }
                     }
                     onClicked: {
-                        pageStack.addPageToNextColumn(mainPage, Qt.resolvedUrl("AppDetailsPage.qml"), {app: appModel.app(index)})
+                        pageStack.addPageToNextColumn(mainPage, Qt.resolvedUrl("AppDetailsPage.qml"), {app: appModel.app(appModel.findApp(model.appId))})
                     }
                 }
             }

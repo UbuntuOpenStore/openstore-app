@@ -20,6 +20,28 @@ import Ubuntu.Components 1.3
 Page {
     id: categoryPage
 
+    property string categoriesApiEndPoint: "https://open.uappexplorer.com/api/v1/categories"
+
+    Component.onCompleted: {
+        var doc = new XMLHttpRequest();
+        doc.onreadystatechange = function() {
+            if (doc.readyState == 4 && doc.status == 200) {
+                var reply = JSON.parse(doc.responseText)
+
+                if (reply.success) {
+                    categoryView.model = reply.data
+                } else {
+                    console.log("Unable to fetch categories from server (success = false).")
+                }
+            } else {
+                console.log("Unable to fetch categories from server. (generic error)")
+            }
+        }
+
+        doc.open("GET", categoriesApiEndPoint, true);
+        doc.send();
+    }
+
     header: PageHeader {
         title: i18n.tr("Categories")
         leadingActionBar.actions: Action {
@@ -46,30 +68,15 @@ Page {
         ListView {
             id: categoryView
             anchors.fill: parent
-            model: CategoriesModel {}
 
             delegate: ListItem {
-                onClicked: categoryPage.categoryClicked(model.name, model.code)
+                onClicked: categoryPage.categoryClicked(modelData, modelData)
                 ListItemLayout {
                     anchors.centerIn: parent
-                    title.text: model.name
+                    title.text: modelData
                     ProgressionSlot {}
                 }
             }
-            /*section.property: "section"
-            section.delegate: Label {
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                    leftMargin: units.gu(1)
-                }
-
-                height: units.gu(4)
-                verticalAlignment: Text.AlignBottom
-                textSize: Label.Small
-                text: section == "mainCategories" ? i18n.tr("General") : i18n.tr("Categories")
-            }*/
         }
     }
-
 }

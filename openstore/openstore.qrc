@@ -3,7 +3,6 @@
         <file>Main.qml</file>
         <file>AppDetailsPage.qml</file>
         <file>HookIcon.qml</file>
-        <file>CategoriesModel.qml</file>
         <file>DiscoverTab.qml</file>
         <file>CategoriesPage.qml</file>
         <file>FilteredAppView.qml</file>

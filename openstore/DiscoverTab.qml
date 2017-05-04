@@ -34,8 +34,15 @@ ScrollView {
         var doc = new XMLHttpRequest();
         doc.onreadystatechange = function() {
             if (doc.readyState == 4 && doc.status == 200) {
-                rootItem.discoverData = JSON.parse(doc.responseText).data
-                console.log(JSON.stringify(rootItem.discoverData))
+                var reply = JSON.parse(doc.responseText)
+
+                if (reply.success) {
+                    rootItem.discoverData = reply.data
+                } else {
+                    console.log("Unable to fetch discover data from server (success = false).")
+                }
+            } else {
+                console.log("Unable to fetch discover data from server. (generic error)")
             }
         }
 

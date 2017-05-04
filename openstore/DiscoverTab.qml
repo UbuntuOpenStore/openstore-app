@@ -113,7 +113,7 @@ ScrollView {
                     id: appDel
                     property var appItem: storeModel.app(storeModel.findApp(modelData))
                     height: parent.height
-                    width: units.gu(12)
+                    width: units.gu(16)
 
                     onClicked: rootItem.appDetailsRequired(modelData)
 

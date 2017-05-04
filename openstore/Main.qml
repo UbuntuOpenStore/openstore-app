@@ -91,6 +91,31 @@ MainView {
         clickInstaller: installer
     }
 
+    QtObject {
+        id: categories
+
+        property string categoriesApiEndPoint: "https://open.uappexplorer.com/api/v1/categories"
+        property var list
+
+        Component.onCompleted: {
+            var doc = new XMLHttpRequest();
+            doc.onreadystatechange = function() {
+                if (doc.readyState == 4 && doc.status == 200) {
+                    var reply = JSON.parse(doc.responseText)
+                    if (reply.success) {
+                        list = reply.data
+                    } else {
+                        console.log("Unable to fetch categories from server (success = false).")
+                    }
+                }
+            }
+
+            doc.open("GET", categoriesApiEndPoint, true);
+            doc.send();
+        }
+
+    }
+
     property bool contentHubInstallInProgress: false
     Connections {
         target: ContentHub

@@ -41,8 +41,6 @@ ScrollView {
                 } else {
                     console.log("Unable to fetch discover data from server (success = false).")
                 }
-            } else {
-                console.log("Unable to fetch discover data from server. (generic error)")
             }
         }
 

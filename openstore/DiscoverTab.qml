@@ -148,6 +148,9 @@ ScrollView {
                                 text: appDel.appItem.author
                                 textSize: Label.XSmall
                             }
+
+                            summary.text: appDel.appItem.installed ? appDel.appItem.updateAvailable ? i18n.tr("Update available") : i18n.tr("Installed") : ""
+                            summary.textSize: Label.XSmall
                         }
                     }
                 }

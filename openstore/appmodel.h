@@ -161,7 +161,9 @@ public:
         RoleVersion,
         RoleInstalled,
         RoleInstalledVersion,
-        RoleMaintainer
+        RoleUpdateAvailable,
+        RoleMaintainer,
+        RoleSearchHackishString
     };
 
     explicit AppModel(QObject *parent = 0);
@@ -189,6 +191,7 @@ private Q_SLOTS:
 
 Q_SIGNALS:
     void installerChanged();
+    void repositoryListFetched();
 
 private:
     QList<ApplicationItem*> m_list;

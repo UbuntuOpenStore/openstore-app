@@ -5,9 +5,11 @@
         <file>HookIcon.qml</file>
         <file>CategoriesModel.qml</file>
         <file>DiscoverTab.qml</file>
-        <file>CategoriesTab.qml</file>
-        <file>NoMatchEmptyState.qml</file>
+        <file>CategoriesPage.qml</file>
         <file>FilteredAppView.qml</file>
         <file>EmptyState.qml</file>
+        <file>SectionDivider.qml</file>
+        <file>SearchPage.qml</file>
+        <file>TextualButtonStyle.qml</file>
     </qresource>
 </RCC>

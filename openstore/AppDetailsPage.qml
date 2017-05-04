@@ -22,417 +22,550 @@ import OpenStore 1.0
 
 
 Page {
+    id: appDetailsPage
     header: PageHeader {
         title: app ? app.name : "App details"
+        automaticHeight: false
     }
 
     property var app: null
 
 
-    Flickable {
+    ScrollView {
+        id: scrollView
         anchors.fill: parent
         anchors.topMargin: parent.header.height
-        contentHeight: mainColumn.height + units.gu(2)
-        interactive: contentHeight > height - topMargin
 
         Column {
             id: mainColumn
-            anchors { left: parent.left; top: parent.top; right: parent.right }
-            anchors.margins: units.gu(2)
-            spacing: units.gu(1)
-            height: childrenRect.height
+            width: scrollView.width
+            //spacing: units.gu(1)
 
-            RowLayout {
-                anchors { left: parent.left; right: parent.right }
-                height: units.gu(10)
-                spacing: units.gu(1)
+            ListItem {
+                height: units.gu(16)
 
-                UbuntuShape {
-                    Layout.fillHeight: true
-                    Layout.preferredWidth: height
+                ListItemLayout {
+                    anchors.fill: parent
+                    title.text: app.name
+                    subtitle.text: app.author
+                    summary.text: printSize(i18n, app.fileSize)
 
-                    image: Image {
-                        height: parent.height
-                        width: parent.width
-                        source: app ? app.icon : ""
-                    }
-                }
+                    UbuntuShape {
+                        SlotsLayout.position: SlotsLayout.Leading
+                        width: units.gu(12); height: width
+                        aspect: UbuntuShape.Flat
 
-                ColumnLayout {
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    spacing: units.gu(1)
-                    Label {
-                        text: app.name
-                        Layout.fillWidth: true
-                        fontSize: "large"
-                    }
-                    Label {
-                        text: app.author
-                        Layout.fillWidth: true
-                    }
-                }
-            }
-            ThinDivider { }
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                text: app.tagline
-                wrapMode: Text.WordWrap
-            }
-
-            ListView {
-                anchors { left: parent.left; right: parent.right; margins: -units.gu(2) }
-                leftMargin: units.gu(2)
-                rightMargin: units.gu(2)
-                clip: true
-                height: count > 0 ? units.gu(20) : 0
-                visible: count > 0
-                spacing: units.gu(1)
-                orientation: ListView.Horizontal
-                model: app.screenshots
-                delegate: UbuntuShape {
-                    height: parent.height
-                    // sh : lv.h = sw : x
-                    width: screenshot.sourceSize.width * height / screenshot.sourceSize.height
-                    sourceFillMode: UbuntuShape.PreserveAspectFit
-                    source: Image {
-                        id: screenshot
-                        source: modelData
-                    }
-
-                    AbstractButton {
-                        id: screenShotButton
-                        anchors.fill: parent
-                        onClicked: {
-                            print("opening at:", screenShotButton.mapToItem(root, 0, 0).x)
-                            zoomIn.createObject(root, {x: screenShotButton.mapToItem(root, 0, 0).x, y: screenShotButton.mapToItem(root, 0, 0).y, itemScale: screenShotButton.height / root.height, imageSource: modelData});
-//                            zoomIn.createObject(root, {x: 100, y: 100});
-                        }
-                    }
-
-                    Component {
-                        id: zoomIn
-                        Rectangle {
-                            id: zI
-                            width: parent.width
+                        image: Image {
                             height: parent.height
-                            color: "black"
+                            width: parent.width
+                            source: app ? app.icon : ""
+                        }
+                    }
+                }
+            }
 
-                            property real itemScale: 1
-                            property string imageSource
-                            transform: Scale {
-                                origin.x: 0
-                                origin.y: 0
-                                xScale: zI.itemScale
-                                yScale: zI.itemScale
+            ListItem {
+                height: units.gu(8)
+
+                RowLayout {
+                    id: buttonsRow
+                    anchors.fill: parent
+                    anchors.margins: units.gu(2)
+                    spacing: units.gu(2)
+                    visible: !appModel.installer.busy
+
+                    Button {
+                        Layout.fillWidth: true
+                        text: app.installed ? i18n.tr("Upgrade") : i18n.tr("Install")
+                        visible: !app.installed || (app.installed && app.installedVersion < app.version)
+                        color: UbuntuColors.green
+                        onClicked: {
+                            appModel.installer.installPackage(app.packageUrl)
+                        }
+                    }
+
+                    Button {
+                        Layout.fillWidth: true
+                        text: i18n.tr("Remove")
+                        visible: app.installed
+                        color: UbuntuColors.red
+                        onClicked: {
+                            appModel.installer.removePackage(app.appId, app.version)
+                        }
+                    }
+                }
+
+                ProgressBar {
+                    id: installerProgressBar
+                    anchors {
+                        left: parent.left; leftMargin: units.gu(2)
+                        right: parent.right; rightMargin: units.gu(2)
+                        verticalCenter: parent.verticalCenter
+                    }
+                    maximumValue: app ? app.fileSize : 0
+                    value: appModel.installer.downloadProgress
+                    visible: appModel.installer.busy
+                    indeterminate: appModel.installer.downloadProgress == 0
+                }
+            }
+
+            ListItem {
+                visible: {
+                    for (var i=0; i<app.hooksCount; ++i) {
+                        if (app.readPaths(i).length)
+                            return true
+                        if (app.writePaths(i).length)
+                            return true
+                        if (app.apparmorTemplate(i).indexOf("unconfined") >= 0)
+                            return true
+                    }
+                    return false
+                }
+                ListItemLayout {
+                    anchors.centerIn: parent
+                    subtitle.text: i18n.tr("This software requires extra privileges. See below for details.")
+                    subtitle.color: UbuntuColors.red
+                    subtitle.maximumLineCount: 2
+                    subtitle.wrapMode: Text.WordWrap
+
+                    Icon {
+                        SlotsLayout.position: SlotsLayout.Leading
+                        width: units.gu(4); height: width
+                        name: "security-alert"
+                    }
+                }
+            }
+
+            ListItem {
+                height: units.gu(32)
+                visible: screenshotsView.count
+
+                ListView {
+                    id: screenshotsView
+                    anchors { left: parent.left; right: parent.right; verticalCenter: parent.verticalCenter }
+                    leftMargin: units.gu(2)
+                    rightMargin: units.gu(2)
+                    clip: true
+                    height: count > 0 ? units.gu(24) : 0
+                    visible: count > 0
+                    spacing: units.gu(1)
+                    orientation: ListView.Horizontal
+                    model: app.screenshots
+                    delegate: UbuntuShape {
+                        height: parent.height
+                        // sh : lv.h = sw : x
+                        width: screenshot.sourceSize.width * height / screenshot.sourceSize.height
+                        aspect: UbuntuShape.Flat
+                        sourceFillMode: UbuntuShape.PreserveAspectFit
+                        source: Image {
+                            id: screenshot
+                            source: modelData
+                            smooth: true
+                            antialiasing: true
+                        }
+
+                        AbstractButton {
+                            id: screenShotButton
+                            anchors.fill: parent
+                            onClicked: {
+                                print("opening at:", screenShotButton.mapToItem(root, 0, 0).x)
+                                zoomIn.createObject(root, {x: screenShotButton.mapToItem(root, 0, 0).x, y: screenShotButton.mapToItem(root, 0, 0).y, itemScale: screenShotButton.height / root.height, imageSource: modelData});
+                                //                            zoomIn.createObject(root, {x: 100, y: 100});
                             }
+                        }
 
-                            ParallelAnimation {
-                                id: scaleInAnimation
-                                onStarted: {
-                                    hideAnimation.initialScale = itemScale;
-                                    hideAnimation.initialX = x;
-                                    hideAnimation.initialY = y;
+                        Component {
+                            id: zoomIn
+                            Rectangle {
+                                id: zI
+                                width: parent.width
+                                height: parent.height
+                                color: "black"
+
+                                property real itemScale: 1
+                                property string imageSource
+                                transform: Scale {
+                                    origin.x: 0
+                                    origin.y: 0
+                                    xScale: zI.itemScale
+                                    yScale: zI.itemScale
                                 }
 
-                                UbuntuNumberAnimation { target: zI; property: "itemScale"; to: 1 }
-                                UbuntuNumberAnimation { target: zI; properties: "x,y"; to: 0 }
-                            }
+                                ParallelAnimation {
+                                    id: scaleInAnimation
+                                    onStarted: {
+                                        hideAnimation.initialScale = itemScale;
+                                        hideAnimation.initialX = x;
+                                        hideAnimation.initialY = y;
+                                    }
 
-
-                            Component.onCompleted: {
-                                scaleInAnimation.start();
-                            }
-
-                            Image {
-                                anchors.fill: parent
-                                source: zI.imageSource
-                                fillMode: Image.PreserveAspectFit
-                            }
-
-                            AbstractButton {
-                                anchors.fill: parent
-                                onClicked: {
-                                    hideAnimation.start()
-                                }
-                            }
-
-                            ParallelAnimation {
-                                id: hideAnimation
-                                property real initialScale: 1
-                                property int initialX: 0
-                                property int initialY: 0
-
-
-                                UbuntuNumberAnimation { target: zI; property: "itemScale"; to: hideAnimation.initialScale }
-                                UbuntuNumberAnimation { target: zI; property: "x"; to: hideAnimation.initialX }
-                                UbuntuNumberAnimation { target: zI; property: "y"; to: hideAnimation.initialY }
-                                onStopped: {
-                                    script: zI.destroy()
+                                    UbuntuNumberAnimation { target: zI; property: "itemScale"; to: 1 }
+                                    UbuntuNumberAnimation { target: zI; properties: "x,y"; to: 0 }
                                 }
 
+
+                                Component.onCompleted: {
+                                    scaleInAnimation.start();
+                                }
+
+                                Image {
+                                    anchors.fill: parent
+                                    source: zI.imageSource
+                                    fillMode: Image.PreserveAspectFit
+                                }
+
+                                AbstractButton {
+                                    anchors.fill: parent
+                                    onClicked: {
+                                        hideAnimation.start()
+                                    }
+                                }
+
+                                ParallelAnimation {
+                                    id: hideAnimation
+                                    property real initialScale: 1
+                                    property int initialX: 0
+                                    property int initialY: 0
+
+
+                                    UbuntuNumberAnimation { target: zI; property: "itemScale"; to: hideAnimation.initialScale }
+                                    UbuntuNumberAnimation { target: zI; property: "x"; to: hideAnimation.initialX }
+                                    UbuntuNumberAnimation { target: zI; property: "y"; to: hideAnimation.initialY }
+                                    onStopped: {
+                                        script: zI.destroy()
+                                    }
+
+                                }
                             }
                         }
                     }
                 }
             }
 
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                text: app.description
-                wrapMode: Text.WordWrap
-            }
+            ListItem {
+                height: descLayout.height
+                onClicked: descLayout.showAll = !descLayout.showAll
+                ListItemLayout {
+                    id: descLayout
+                    property bool showAll: false
+                    title.text: app.tagline || i18n.tr("Description")
+                    subtitle.text: app.description
+                    subtitle.textSize: Label.Small
+                    subtitle.wrapMode: Text.WordWrap
+                    subtitle.maximumLineCount: showAll ? Number.MAX_VALUE : 5
 
-            ThinDivider { }
-
-            Label {
-                text: "<b>Packager/Publisher:</b> " + (app.maintainer ? app.maintainer : "Openstore team")
-            }
-
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                text: "Installed version: " + (app.installedVersion ? app.installedVersion : "None")
-                wrapMode: Text.WordWrap
-            }
-
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                text: "Latest available version: " + app.version
-                wrapMode: Text.WordWrap
-            }
-
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                text: "Changelog:"
-                wrapMode: Text.WordWrap
-                visible: app.changelog
-            }
-
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                text: app.changelog
-                wrapMode: Text.WordWrap
-                visible: app.changelog
-            }
-
-            ThinDivider {}
-
-            ProgressBar {
-                Layout.fillWidth: true
-                maximumValue: app ? app.fileSize : 0
-                value: appModel.installer.downloadProgress
-                visible: appModel.installer.busy
-                indeterminate: appModel.installer.downloadProgress == 0
-            }
-
-            RowLayout {
-                width: parent.width
-                spacing: units.gu(1)
-                visible: !appModel.installer.busy
-
-                Button {
-                    text: app.installed ? "Upgrade" : "Install"
-                    visible: !app.installed || (app.installed && app.installedVersion < app.version)
-                    color: "#DD4814"
-                    onClicked: {
-                        appModel.installer.installPackage(app.packageUrl)
-                    }
-                }
-
-                Button {
-                    text: "Remove"
-                    visible: app.installed
-                    color: UbuntuColors.red
-                    onClicked: {
-                        appModel.installer.removePackage(app.appId, app.version)
+                    Icon {
+                        width: units.gu(2); height: width
+                        SlotsLayout.position: SlotsLayout.Last
+                        name: descLayout.showAll ? "go-up" : "go-down"
                     }
                 }
             }
 
-            ThinDivider {}
+            ListItem {
+                height: changelogLayout.height
+                visible: app.changelog
+                onClicked: changelogLayout.showAll = !changelogLayout.showAll
+                ListItemLayout {
+                    id: changelogLayout
+                    property bool showAll: false
+                    title.text: i18n.tr("What's New")
+                    subtitle.text: app.changelog
+                    subtitle.textSize: Label.Small
+                    subtitle.wrapMode: Text.WordWrap
+                    subtitle.maximumLineCount: showAll ? Number.MAX_VALUE : 5
+                    
+                    Icon {
+                        width: units.gu(2); height: width
+                        SlotsLayout.position: SlotsLayout.Last
+                        name: changelogLayout.showAll ? "go-up" : "go-down"
+                    }
+                }
+            }
+            
+            ListItem {
+                divider.visible: false
+                ListItemLayout {
+                    anchors.centerIn: parent
+                    title.text: i18n.tr("Packager/Publisher")
+                    subtitle.text: app.maintainer || "Openstore team"
+                }
+            }
 
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                text: "Package contents:"
-                font.bold: true
+            ListItem {
+                divider.visible: false
+                ListItemLayout {
+                    anchors.centerIn: parent
+                    title.text: i18n.tr("Installed version")
+                    subtitle.text: app.installedVersion || "None"
+                }
+            }
+            
+            ListItem {
+                divider.visible: false
+                ListItemLayout {
+                    anchors.centerIn: parent
+
+                    title.text: i18n.tr("Latest available version")
+                    subtitle.text: app.version
+                }
+            }
+            
+            ListItem {
+                divider.visible: false
+                ListItemLayout {
+                    anchors.centerIn: parent
+                    title.text: i18n.tr("License") || i18n.tr("<i>N/A</i>")
+                    subtitle.text: app.license
+                }
+            }
+
+            ListItem {
+                onClicked: Qt.openUrlExternally(app.source)
+                ListItemLayout {
+                    anchors.centerIn: parent
+                    title.text: i18n.tr("Source Code") || i18n.tr("<i>N/A</i>")
+                    subtitle.text: app.source
+                    ProgressionSlot { visible: app.source }
+                }
+            }
+
+            ListItem {
+                onClicked: {
+                    // FIXME: I don't like this heuristic, but there's no other way to get a reference
+                    // to the page that pushed 'appDetailsPage' into the stack.
+                    // The parent node is actually the PageWrapper that created this page, 'parentPage' is one of its properties.
+                    //var realParentPage = appDetailsPage.parentNode.parentPage
+
+                    var pageProps = {
+                        title: app.author,
+                        filterPattern: new RegExp(app.author),
+                        filterProperty: "author"
+                    }
+
+                    appDetailsPage.pageStack.addPageToCurrentColumn(/*realParentPage*/ appDetailsPage, filteredAppPageComponent, pageProps)
+                }
+                ListItemLayout {
+                    anchors.centerIn: parent
+                    title.text: i18n.tr("More from %1").arg(app.author)
+                    ProgressionSlot {}
+                }
+            }
+
+            ListItem {
+                onClicked: {
+                    // FIXME: I don't like this heuristic, but there's no other way to get a reference
+                    // to the page that pushed 'appDetailsPage' into the stack.
+                    // The parent node is actually the PageWrapper that created this page, 'parentPage' is one of its properties.
+                    //var realParentPage = appDetailsPage.parentNode.parentPage
+
+                    var pageProps = {
+                        title: app.category,
+                        filterPattern: new RegExp(app.category),
+                        filterProperty: "category"
+                    }
+
+                    appDetailsPage.pageStack.addPageToCurrentColumn(/*realParentPage*/ appDetailsPage, filteredAppPageComponent, pageProps)
+                }
+                ListItemLayout {
+                    anchors.centerIn: parent
+                    // FIXME: app.category is not localized.
+                    title.text: i18n.tr("Other apps in %1").arg(app.category)
+                    ProgressionSlot {}
+                }
+            }
+
+            SectionDivider {
+                text: i18n.tr("Package contents")
             }
 
             Repeater {
                 model: app.hooksCount
 
-                delegate: Column {
-                    width: parent.width
+                delegate: ListItem {
+                    height: hookDelLayout.height + units.gu(3)
+
                     property var hooks: app.hooks(index)
                     property string permissions: app.permissions(index)
                     property string readpaths: app.readPaths(index)
                     property string writepaths: app.writePaths(index)
                     property string hookName: app.hookName(index)
                     property string apparmorTemplate: app.apparmorTemplate(index)
-                    spacing: units.gu(1)
 
-                    RowLayout {
-                        width: parent.width
-
-                        Label {
-                            text: hookName
-                            Layout.fillWidth: true
-                            font.bold: true
-                        }
-                        HookIcon {
-                            Layout.preferredHeight: units.gu(4)
-                            Layout.preferredWidth: units.gu(4)
-                            name: "stock_application"
-                            visible: (hooks & ApplicationItem.HookDesktop)
-                        }
-                        HookIcon {
-                            Layout.preferredHeight: units.gu(4)
-                            Layout.preferredWidth: units.gu(4)
-                            name: "search"
-                            visible: (hooks & ApplicationItem.HookScope)
-                        }
-                        HookIcon {
-                            Layout.preferredHeight: units.gu(4)
-                            Layout.preferredWidth: units.gu(4)
-                            name: "stock_website"
-                            visible: (hooks & ApplicationItem.HookUrls)
-                        }
-                        HookIcon {
-                            Layout.preferredHeight: units.gu(4)
-                            Layout.preferredWidth: units.gu(4)
-                            name: "share"
-                            visible: (hooks & ApplicationItem.HookContentHub)
-                        }
-                        HookIcon {
-                            Layout.preferredHeight: units.gu(4)
-                            Layout.preferredWidth: units.gu(4)
-                            name: "notification"
-                            visible: (hooks & ApplicationItem.HookPushHelper)
-                        }
-                        HookIcon {
-                            Layout.preferredHeight: units.gu(4)
-                            Layout.preferredWidth: units.gu(4)
-                            name: "contact-group"
-                            visible: (hooks & ApplicationItem.HookAccountService)
-                        }
-                    }
-                    RowLayout {
-                        anchors { left: parent.left; right: parent.right }
+                    Column {
+                        id: hookDelLayout
+                        anchors { left: parent.left; right: parent.right; margins: units.gu(2) }
+                        y: units.gu(1)
                         spacing: units.gu(1)
-                        Icon {
-                            Layout.preferredHeight: units.gu(3)
-                            Layout.preferredWidth: units.gu(3)
-                            implicitHeight: height
-                            implicitWidth: width
-                            name: "security-alert"
-                            visible: apparmorTemplate.indexOf("unconfined") >= 0
-                        }
 
-                        Label {
-                            id: templateLabel
-                            Layout.fillWidth: true
-                            text: "Apparmor profile: " + apparmorTemplate
-                            visible: apparmorTemplate
-                            color: apparmorTemplate.indexOf("unconfined") >= 0 ? UbuntuColors.red : permissionLabel.color
-                            anchors.verticalCenter: parent.verticalCenter
-                        }
-                    }
-
-
-                    Row {
-                        anchors { left: parent.left; right: parent.right }
-                        spacing: units.gu(1)
-                        visible: permissions.length > 0
-
-                        Icon {
-                            Layout.preferredHeight: units.gu(3)
-                            Layout.preferredWidth: units.gu(3)
-                            implicitHeight: height
-                            implicitWidth: width
-                            name: "security-alert"
-                        }
-
-                        Label {
-                            id: permissionLabel
-                            text: "Permissions: " + (permissions ? permissions : "<i>none</i>")
+                        RowLayout {
                             width: parent.width
-                            wrapMode: Text.WordWrap
-                            anchors.verticalCenter: parent.verticalCenter
+                            height: units.gu(4)
+
+                            Label {
+                                text: hookName
+                                Layout.fillWidth: true
+                            }
+
+                            HookIcon {
+                                Layout.preferredHeight: units.gu(4)
+                                Layout.preferredWidth: units.gu(4)
+                                name: "stock_application"
+                                visible: (hooks & ApplicationItem.HookDesktop)
+                            }
+                            HookIcon {
+                                Layout.preferredHeight: units.gu(4)
+                                Layout.preferredWidth: units.gu(4)
+                                name: "search"
+                                visible: (hooks & ApplicationItem.HookScope)
+                            }
+                            HookIcon {
+                                Layout.preferredHeight: units.gu(4)
+                                Layout.preferredWidth: units.gu(4)
+                                name: "stock_website"
+                                visible: (hooks & ApplicationItem.HookUrls)
+                            }
+                            HookIcon {
+                                Layout.preferredHeight: units.gu(4)
+                                Layout.preferredWidth: units.gu(4)
+                                name: "share"
+                                visible: (hooks & ApplicationItem.HookContentHub)
+                            }
+                            HookIcon {
+                                Layout.preferredHeight: units.gu(4)
+                                Layout.preferredWidth: units.gu(4)
+                                name: "notification"
+                                visible: (hooks & ApplicationItem.HookPushHelper)
+                            }
+                            HookIcon {
+                                Layout.preferredHeight: units.gu(4)
+                                Layout.preferredWidth: units.gu(4)
+                                name: "contact-group"
+                                visible: (hooks & ApplicationItem.HookAccountService)
+                            }
+                        }
+
+                        ListItemLayout {
+                            anchors { left: parent.left; right: parent.right }
+                            height: units.gu(6)
+                            Icon {
+                                SlotsLayout.position: SlotsLayout.Leading
+                                width: units.gu(4); height: width
+                                name: "security-alert"
+                                visible: apparmorTemplate.indexOf("unconfined") >= 0
+                            }
+
+                            title.text: i18n.tr("AppArmor profile")
+                            subtitle.text: apparmorTemplate || "Ubuntu confined app"
+                            subtitle.color: apparmorTemplate.indexOf("unconfined") >= 0 ? UbuntuColors.red : theme.palette.normal.backgroundSecondaryText
+                        }
+
+
+                        ListItemLayout {
+                            anchors { left: parent.left; right: parent.right }
+                            height: units.gu(6)
+                            visible: permissions.length > 0
+
+                            Icon {
+                                property var restrictedPerms: ["bluetooth", "calendar", "contacts", "debug", "history", "music_files", "picture_files", "video_files"]
+                                SlotsLayout.position: SlotsLayout.Leading
+                                width: units.gu(4); height: width
+                                name: "security-alert"
+                                visible: {
+                                    var length = restrictedPerms.length;
+                                    while(length--) {
+                                       if (permissions.indexOf(restrictedPerms[length]) > -1)
+                                           return true
+                                    }
+                                    return false
+                                }
+                            }
+
+                            title.text: i18n.tr("Permissions")
+                            subtitle.text: {
+                                if (permissions) {
+                                    return permissions.replace("bluetooth", "<font color=\"#ED3146\">bluetooth</font>")
+                                                      .replace("calendar", "<font color=\"#ED3146\">calendar</font>")
+                                                      .replace("contacts", "<font color=\"#ED3146\">contacts</font>")
+                                                      .replace("debug", "<font color=\"#ED3146\">debug</font>")
+                                                      .replace("history", "<font color=\"#ED3146\">history</font>")
+                                                      .replace("music_files_read", "<font color=\"#ED3146\">music_files_read</font>")
+                                                      .replace("picture_files_read", "<font color=\"#ED3146\">music_files_read</font>")
+                                                      .replace("video_files_read", "<font color=\"#ED3146\">music_files_read</font>")
+                                                      .replace("music_files", "<font color=\"#ED3146\">music_files_read</font>")
+                                                      .replace("picture_files", "<font color=\"#ED3146\">music_files_read</font>")
+                                                      .replace("video_files", "<font color=\"#ED3146\">music_files_read</font>")
+                                }
+
+                                return i18n.tr("<i>none required</i>")
+                            }
+                        }
+
+                        ListItemLayout {
+                            anchors { left: parent.left; right: parent.right }
+                            height: units.gu(6)
+                            visible: readpaths.length > 0
+
+                            Icon {
+                                SlotsLayout.position: SlotsLayout.Leading
+                                width: units.gu(4); height: width
+                                name: "security-alert"
+                                // FIXME: It should be visible only when the hook really extended read permissions
+                                visible: readpaths
+                            }
+
+                            title.text: i18n.tr("Read paths")
+                            subtitle.text: readpaths || i18n.tr("<i>none</i>")
+                        }
+
+                        ListItemLayout {
+                            anchors { left: parent.left; right: parent.right }
+                            height: units.gu(6)
+                            visible: writepaths.length > 0
+                            Icon {
+                                SlotsLayout.position: SlotsLayout.Leading
+                                width: units.gu(4); height: width
+                                name: "security-alert"
+                                // FIXME: It should be visible only when the hook really extended write permissions
+                                visible: writepaths
+                            }
+
+                            title.text: i18n.tr("Write paths")
+                            subtitle.text: writepaths || i18n.tr("<i>none</i>")
+                        }
+
+                        Button {
+                            anchors { right: parent.right }
+                            text: "Open"
+                            color: UbuntuColors.green
+                            visible: app.installed &&  (hooks & ApplicationItem.HookDesktop)
+                            onClicked: Qt.openUrlExternally("appid://" + app.appId + "/" + hookName + "/" + app.installedVersion)
                         }
                     }
-
-                    RowLayout {
-                        anchors { left: parent.left; right: parent.right }
-                        spacing: units.gu(1)
-                        visible: readpaths.length > 0
-                        Icon {
-                            Layout.preferredHeight: units.gu(3)
-                            Layout.preferredWidth: units.gu(3)
-                            implicitHeight: height
-                            implicitWidth: width
-                            name: "security-alert"
-                        }
-                        Label {
-                            text: "Read paths: " + readpaths
-                            Layout.fillWidth: true
-                            wrapMode: Text.WordWrap
-                            anchors.verticalCenter: parent.verticalCenter
-                        }
-                    }
-                    RowLayout {
-                        anchors { left: parent.left; right: parent.right }
-                        spacing: units.gu(1)
-                        visible: writepaths.length > 0
-                        Icon {
-                            Layout.preferredHeight: units.gu(3)
-                            Layout.preferredWidth: units.gu(3)
-                            implicitHeight: height
-                            implicitWidth: width
-                            name: "security-alert"
-                        }
-
-                        Label {
-                            text: "Write paths: " + writepaths
-                            Layout.fillWidth: true
-                            wrapMode: Text.WordWrap
-                            anchors.verticalCenter: parent.verticalCenter
-                        }
-                    }
-
-                    Button {
-                        anchors { left: parent.left }
-                        text: "Open"
-                        color: UbuntuColors.green
-                        visible: app.installed &&  (hooks & ApplicationItem.HookDesktop)
-                        onClicked: Qt.openUrlExternally("appid://" + app.appId + "/" + hookName + "/" + app.installedVersion)
-                    }
-                }
-            }
-            ThinDivider { }
-
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                text: "License: " + app.license
-                wrapMode: Text.WordWrap
-            }
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                text: "Source code:"
-                wrapMode: Text.WordWrap
-            }
-            AbstractButton {
-                anchors { left: parent.left; right: parent.right }
-                height: linkLabel.implicitHeight
-                Label {
-                    id: linkLabel
-                    anchors { left: parent.left; right: parent.right }
-                    text: app.source
-                    wrapMode: Text.WordWrap
-                    color: "blue"
-                }
-                onClicked: {
-                    Qt.openUrlExternally(app.source)
                 }
             }
         }
+    }
+
+    function printSize(i18n, size) {
+        var s
+
+        s = 1024 * 1024 * 1024
+        if (size >= s)
+            // TRANSLATORS: %1 is the size of a file, expressed in GB
+            return i18n.tr("%1 GB").arg((size / s).toFixed(2));
+
+        s = 1024 * 1024
+        if (size >= s)
+            // TRANSLATORS: %1 is the size of a file, expressed in MB
+            return i18n.tr("%1 MB").arg((size / s).toFixed(2));
+
+        s = 1024
+        if (size >= s)
+            // TRANSLATORS: %1 is the size of a file, expressed in kB
+            return i18n.tr("%1 kB").arg(parseInt(size / s));
+
+        // TRANSLATORS: %1 is the size of a file, expressed in byte
+        return i18n.tr("%1 byte").arg(size);
     }
 }

@@ -83,6 +83,7 @@ MainView {
     AppModel {
         id: appModel
         installer: installer
+        onRepositoryListFetched: repoFetchingIndicator.visible = false
     }
 
     ServiceRegistry {
@@ -114,19 +115,24 @@ MainView {
             id: mainPage
             header: PageHeader {
                 title: i18n.tr("Open Store")
+                automaticHeight: false
 
                 leadingActionBar.actions: Action {
-                    iconName: checked ? "close" : "navigation-menu"
-                    checkable: true
+                    iconName: "navigation-menu"
+                    text: i18n.tr("Categories")
+                    onTriggered: mainPage.pageStack.addPageToCurrentColumn(mainPage, Qt.resolvedUrl("CategoriesPage.qml"), {})
                 }
 
                 trailingActionBar.actions: Action {
                     iconName: "search"
                     text: i18n.tr("Search")
+                    onTriggered: {
+                        mainPage.pageStack.addPageToCurrentColumn(mainPage, searchPageComponent, {})
+                    }
                 }
 
                 sections {
-                    model: [ i18n.tr("Discover"), i18n.tr("Installed"), i18n.tr("Categories") ]
+                    model: [ i18n.tr("Discover"), i18n.tr("My Apps") ]
                     selectedIndex: 0   // Should always match "Discover"
                     onSelectedIndexChanged: {
                         // Current section has changed, if there was an opened page
@@ -155,21 +161,20 @@ MainView {
 
                 model: ObjectModel {
                     Loader {
+                        id: discoverTabLoader
                         width: view.width
                         height: view.height
                         asynchronous: true
                         source: Qt.resolvedUrl("DiscoverTab.qml")
-                    }
-                    Loader {
-                        width: view.width
-                        height: view.height
-                        asynchronous: true
-                        source: Qt.resolvedUrl("FilteredAppView.qml")
+
+                        active: false
+                        Connections {
+                            target: appModel
+                            onRepositoryListFetched: discoverTabLoader.active = true
+                        }
 
                         onLoaded: {
-                            item.model = appModel
-                            item.filterProperty = "installed"
-                            item.filterPattern = new RegExp("true")
+                            item.storeModel = appModel
 
                             item.appDetailsRequired.connect(function(appId) {
                                 var pageProps = {
@@ -177,16 +182,8 @@ MainView {
                                 }
                                 mainPage.pageStack.addPageToNextColumn(mainPage, Qt.resolvedUrl("AppDetailsPage.qml"), pageProps)
                             })
-                        }
-                    }
-                    Loader {
-                        width: view.width
-                        height: view.height
-                        asynchronous: true
-                        source: Qt.resolvedUrl("CategoriesTab.qml")
 
-                        onLoaded: {
-                            item.categoryClicked.connect(function(name, code) {
+                            item.categoryViewRequired.connect(function(name, code) {
                                 var pageProps = {
                                     title: name,
                                     filterPattern: new RegExp(code.toString()),
@@ -198,7 +195,71 @@ MainView {
                             })
                         }
                     }
+                    Loader {
+                        width: view.width
+                        height: view.height
+                        asynchronous: true
+                        source: Qt.resolvedUrl("FilteredAppView.qml")
+
+                        onLoaded: {
+                            item.model = appModel
+
+                            item.filterProperty = "installed"
+                            item.filterPattern = new RegExp("true")
+
+                            item.sortProperty = "updateAvailable"
+                            item.sortOrder = Qt.DescendingOrder
+
+                            item.view.section.property = "updateAvailable"
+                            item.view.section.delegate = updateDivider
+
+                            item.showTicks = false
+
+                            item.appDetailsRequired.connect(function(appId) {
+                                var pageProps = {
+                                    app: appModel.app(appModel.findApp(appId))
+                                }
+                                mainPage.pageStack.addPageToNextColumn(mainPage, Qt.resolvedUrl("AppDetailsPage.qml"), pageProps)
+                            })
+                        }
+
+                        Component {
+                            id: updateDivider
+                            SectionDivider {
+                                text: section == "true" ? i18n.tr("Available updates") : i18n.tr("Installed apps")
+                            }
+                        }
+                    }
                 }
+            }
+
+            Column {
+                id: repoFetchingIndicator
+                anchors.centerIn: parent
+                anchors.verticalCenterOffset: mainPage.header.height * 0.4
+                spacing: units.gu(1)
+                ActivityIndicator {
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    running: visible
+                }
+                Label {
+                    textSize: Label.Small
+                    text: i18n.tr("Fetching package list...")
+                }
+            }
+        }
+    }
+
+    Component {
+        id: searchPageComponent
+
+        SearchPage {
+            id: searchPage
+            model: appModel
+
+            onAppDetailsRequired: {
+                var pageProps = { app: appModel.app(appModel.findApp(appId)) }
+                searchPage.pageStack.addPageToNextColumn(searchPage, Qt.resolvedUrl("AppDetailsPage.qml"), pageProps)
             }
         }
     }
@@ -209,7 +270,10 @@ MainView {
             id: filteredAppPage
             property alias filterPattern: filteredAppView.filterPattern
             property alias filterProperty: filteredAppView.filterProperty
-            header: PageHeader { title: filteredAppPage.title }
+            header: PageHeader {
+                title: filteredAppPage.title
+                automaticHeight: false
+            }
             FilteredAppView {
                 id: filteredAppView
                 model: appModel

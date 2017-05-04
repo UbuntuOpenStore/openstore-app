@@ -25,7 +25,14 @@ ScrollView {
 
     property var filterPattern: new RegExp()
     property string filterProperty
+
+    property string sortProperty
+    property int sortOrder
+
     property alias model: sortedFilteredAppModel.model
+    property alias view: view
+
+    property bool showTicks: true
 
     signal appDetailsRequired(var appId)
 
@@ -33,8 +40,12 @@ ScrollView {
         id: view
         model: SortFilterModel {
             id: sortedFilteredAppModel
+
             filter.pattern: rootItem.filterPattern
             filter.property: rootItem.filterProperty
+
+            sort.property: rootItem.sortProperty
+            sort.order: rootItem.sortOrder
         }
 
         // TODO: Move it in Main.qml or elsewhere
@@ -58,6 +69,7 @@ ScrollView {
 
                 UbuntuShape {
                     SlotsLayout.position: SlotsLayout.Leading
+                    aspect: UbuntuShape.Flat
                     image: Image {
                         source: model.icon
                         height: parent.height
@@ -70,9 +82,9 @@ ScrollView {
                     width: height
                     implicitHeight: height
                     implicitWidth: width
-                    visible: model.installed
+                    visible: model.installed && rootItem.showTicks
                     name: "tick"
-                    color: model.installedVersion >= model.version ? UbuntuColors.green : UbuntuColors.orange
+                    color: model.updateAvailable ? UbuntuColors.orange : UbuntuColors.green
                 }
 
                 ProgressionSlot {}
@@ -84,8 +96,13 @@ ScrollView {
 
         Loader {
             anchors.centerIn: parent
-            source: Qt.resolvedUrl("NoMatchEmptyState.qml")
             active: view.count == 0
+            sourceComponent: EmptyState {
+                title: rootItem.filterProperty == "category" ? i18n.tr("Nothing here yet") : i18n.tr("No result found.").arg(rootItem.filterPattern)
+                subTitle: rootItem.filterProperty == "category" ? i18n.tr("No app has been released in this department yet.") : i18n.tr("Try with a different search.")
+                iconName: rootItem.filterProperty == "category" ? "ubuntu-store-symbolic" : "search"
+                anchors.centerIn: parent
+            }
         }
     }
 }

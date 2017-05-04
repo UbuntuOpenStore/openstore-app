@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 Canonical Ltd
+ * Copyright (C) 2014, 2015, 2016 Canonical Ltd
  *
  * This file is part of Ubuntu Clock App
  *
@@ -24,42 +24,51 @@ import Ubuntu.Components 1.3
  icon, title and subtitle to describe the empty state.
 */
 
-Item {
+Column {
     id: emptyState
+    spacing: units.gu(2)
+    width: units.gu(36)
 
     // Public APIs
+    default property alias iconPlaceholder: iconContainer.data
     property alias iconName: emptyIcon.name
     property alias title: emptyLabel.text
     property alias subTitle: emptySublabel.text
 
-    height: childrenRect.height
-
-    Icon {
-        id: emptyIcon
-        anchors.horizontalCenter: parent.horizontalCenter
-        height: units.gu(10)
-        width: height
-        color: "#BBBBBB"
+    Item {
+        width: childrenRect.width
+        height: childrenRect.height + units.gu(2)
+        Icon {
+            id: emptyIcon
+            height: visible ? units.gu(10) : 0
+            width: visible ? height : 0
+            color: "#BBBBBB"
+            visible: name || source
+        }
+        Row {
+            id: iconContainer
+            anchors.horizontalCenter: parent.horizontalCenter
+        }
     }
 
     Label {
         id: emptyLabel
-        anchors.top: emptyIcon.bottom
-        anchors.topMargin: units.gu(5)
-        anchors.horizontalCenter: parent.horizontalCenter
-        fontSize: "large"
-        font.bold: true
+        width: parent.width
+        horizontalAlignment: Text.AlignLeft
+        textSize: Label.XLarge
+
+        elide: Text.ElideRight
+        wrapMode: Text.WordWrap
+        maximumLineCount: 2
     }
 
     Label {
         id: emptySublabel
-        anchors.top: emptyLabel.bottom
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.leftMargin: units.gu(4)
-        anchors.rightMargin: units.gu(4)
+        width: parent.width
+        horizontalAlignment: Text.AlignLeft
+        textSize: Label.Medium
 
-        wrapMode: Text.Wrap
-        horizontalAlignment: Text.AlignHCenter
+        elide: Text.ElideRight
+        wrapMode: Text.WordWrap
     }
 }

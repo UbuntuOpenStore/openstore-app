@@ -73,8 +73,12 @@ QVariant AppModel::data(const QModelIndex &index, int role) const
         return m_list.at(index.row())->installed();
     case RoleInstalledVersion:
         return m_list.at(index.row())->installedVersion();
+    case RoleUpdateAvailable:
+        return bool(m_list.at(index.row())->installedVersion() < m_list.at(index.row())->version());
     case RoleMaintainer:
         return m_list.at(index.row())->maintainer();
+    case RoleSearchHackishString:
+        return QString(m_list.at(index.row())->name()) + QString(m_list.at(index.row())->appId()) + QString(m_list.at(index.row())->author());
     }
     return QVariant();
 }
@@ -95,7 +99,9 @@ QHash<int, QByteArray> AppModel::roleNames() const
     roles.insert(RoleVersion, "version");
     roles.insert(RoleInstalled, "installed");
     roles.insert(RoleInstalledVersion, "installedVersion");
+    roles.insert(RoleUpdateAvailable, "updateAvailable");
     roles.insert(RoleMaintainer, "maintainer");
+    roles.insert(RoleSearchHackishString, "searchHackishString");
     return roles;
 }
 
@@ -267,6 +273,8 @@ void AppModel::repoListFetched()
 
     // TODO: Is this really necessary?
     // buildInstalledClickList();
+
+    Q_EMIT repositoryListFetched();
 }
 
 void AppModel::buildInstalledClickList()

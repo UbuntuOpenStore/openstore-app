@@ -287,15 +287,6 @@ Page {
                 divider.visible: false
                 ListItemLayout {
                     anchors.centerIn: parent
-                    title.text: i18n.tr("Packager/Publisher")
-                    subtitle.text: app.maintainer || "Openstore team"
-                }
-            }
-
-            ListItem {
-                divider.visible: false
-                ListItemLayout {
-                    anchors.centerIn: parent
                     title.text: i18n.tr("Installed version")
                     subtitle.text: app.installedVersion || "None"
                 }

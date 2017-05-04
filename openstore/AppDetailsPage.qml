@@ -48,7 +48,7 @@ Page {
                     anchors.fill: parent
                     title.text: app.name
                     subtitle.text: app.author
-                    summary.text: printSize(i18n, app.fileSize)
+                    summary.text: printSize(app.fileSize)
 
                     UbuntuShape {
                         SlotsLayout.position: SlotsLayout.Leading
@@ -553,7 +553,7 @@ Page {
         }
     }
 
-    function printSize(i18n, size) {
+    function printSize(size) {
         var s
 
         s = 1024 * 1024 * 1024

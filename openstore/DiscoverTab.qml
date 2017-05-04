@@ -24,22 +24,22 @@ ScrollView {
     anchors.topMargin: parent.header ? parent.header.height : 0
 
     property var discoverData
+    property string discoverApiEndPoint: "https://open.uappexplorer.com/api/v1/apps/discover"
     property AppModel storeModel
 
     signal appDetailsRequired(var appId)
     signal categoryViewRequired(var name, var categoryCode)
 
     Component.onCompleted: {
-        var dataUrl = "https://gist.githubusercontent.com/sverzegnassi/e6cdcfc44785ce90e5904c5fa1f9441f/raw/ddb35eb91186d36ea131ab8b99604b8a40890939/DiscoverData.json"
         var doc = new XMLHttpRequest();
-
-        doc.onreadystatechange=function() {
+        doc.onreadystatechange = function() {
             if (doc.readyState == 4 && doc.status == 200) {
-                rootItem.discoverData = JSON.parse(doc.responseText)
+                rootItem.discoverData = JSON.parse(doc.responseText).data
+                console.log(JSON.stringify(rootItem.discoverData))
             }
         }
 
-        doc.open("GET", dataUrl, true);
+        doc.open("GET", discoverApiEndPoint, true);
         doc.send();
     }
 
@@ -49,11 +49,11 @@ ScrollView {
 
         header: AbstractButton {
             id: highlightAppControl
-            property var appItem: storeModel.app(storeModel.findApp(discoverData.highlightedAppId))
+            property var appItem: storeModel.app(storeModel.findApp(discoverData.highlighted_id))
             width: parent.width
             height: Math.min(units.gu(28), width * 9 / 16)
 
-            onClicked: rootItem.appDetailsRequired(discoverData.highlightedAppId)
+            onClicked: rootItem.appDetailsRequired(discoverData.highlighted_id)
 
             Image {
                 anchors.fill: parent
@@ -108,7 +108,7 @@ ScrollView {
                 visible: count > 0
                 spacing: units.gu(2)
                 orientation: ListView.Horizontal
-                model: modelData.appIds
+                model: modelData.ids
                 delegate: AbstractButton {
                     id: appDel
                     property var appItem: storeModel.app(storeModel.findApp(modelData))

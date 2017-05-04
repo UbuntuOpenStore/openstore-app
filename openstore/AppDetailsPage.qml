@@ -112,9 +112,9 @@ Page {
             ListItem {
                 visible: {
                     for (var i=0; i<app.hooksCount; ++i) {
-                        if (app.readPaths(i).length)
+                        if (includesUnconfinedLocations(app.readPaths(i)))
                             return true
-                        if (app.writePaths(i).length)
+                        if (includesUnconfinedLocations(app.writePaths(i)))
                             return true
                         if (app.apparmorTemplate(i).indexOf("unconfined") >= 0)
                             return true
@@ -447,6 +447,7 @@ Page {
 
                         ListItemLayout {
                             anchors { left: parent.left; right: parent.right }
+                            anchors.leftMargin: units.gu(-2)
                             height: units.gu(6)
                             Icon {
                                 SlotsLayout.position: SlotsLayout.Leading
@@ -458,11 +459,13 @@ Page {
                             title.text: i18n.tr("AppArmor profile")
                             subtitle.text: apparmorTemplate || "Ubuntu confined app"
                             subtitle.color: apparmorTemplate.indexOf("unconfined") >= 0 ? UbuntuColors.red : theme.palette.normal.backgroundSecondaryText
+                            subtitle.maximumLineCount: Number.MAX_VALUE
                         }
 
 
                         ListItemLayout {
                             anchors { left: parent.left; right: parent.right }
+                            anchors.leftMargin: units.gu(-2)
                             height: units.gu(6)
                             visible: permissions.length > 0
 
@@ -482,6 +485,7 @@ Page {
                             }
 
                             title.text: i18n.tr("Permissions")
+                            subtitle.maximumLineCount: Number.MAX_VALUE
                             subtitle.text: {
                                 if (permissions) {
                                     return permissions.replace("bluetooth", "<font color=\"#ED3146\">bluetooth</font>")
@@ -503,6 +507,7 @@ Page {
 
                         ListItemLayout {
                             anchors { left: parent.left; right: parent.right }
+                            anchors.leftMargin: units.gu(-2)
                             height: units.gu(6)
                             visible: readpaths.length > 0
 
@@ -510,28 +515,29 @@ Page {
                                 SlotsLayout.position: SlotsLayout.Leading
                                 width: units.gu(4); height: width
                                 name: "security-alert"
-                                // FIXME: It should be visible only when the hook really extended read permissions
-                                visible: readpaths
+                                visible: includesUnconfinedLocations(readpaths)
                             }
 
                             title.text: i18n.tr("Read paths")
                             subtitle.text: readpaths || i18n.tr("<i>none</i>")
+                            subtitle.maximumLineCount: Number.MAX_VALUE
                         }
 
                         ListItemLayout {
                             anchors { left: parent.left; right: parent.right }
+                            anchors.leftMargin: units.gu(-2)
                             height: units.gu(6)
                             visible: writepaths.length > 0
                             Icon {
                                 SlotsLayout.position: SlotsLayout.Leading
                                 width: units.gu(4); height: width
                                 name: "security-alert"
-                                // FIXME: It should be visible only when the hook really extended write permissions
-                                visible: writepaths
+                                visible: includesUnconfinedLocations(writepaths)
                             }
 
                             title.text: i18n.tr("Write paths")
                             subtitle.text: writepaths || i18n.tr("<i>none</i>")
+                            subtitle.maximumLineCount: Number.MAX_VALUE
                         }
 
                         Button {
@@ -567,5 +573,21 @@ Page {
 
         // TRANSLATORS: %1 is the size of a file, expressed in byte
         return i18n.tr("%1 byte").arg(size);
+    }
+
+    function includesUnconfinedLocations(paths) {
+        var p = paths.split(",")
+        var j = 0
+
+        for (var i=0; i < p.length; ++i) {
+            var x = p[i]
+            if (x.match(/[^\w\s]/)) {
+                if (x.indexOf("/home/phablet/.cache/" + app.appId) == -1 && x.indexOf("/home/phablet/.config/" + app.appId) == -1) {
+                    ++j
+                }
+            }
+        }
+
+        return (j > 0)
     }
 }

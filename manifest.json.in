@@ -13,5 +13,5 @@
     },
     "version": "0.103",
     "maintainer": "OpenStore Team <openstore-team@lists.launchpad.net>",
-    "framework": "ubuntu-sdk-15.04.3"
+    "framework": "ubuntu-sdk-15.04.6"
 }

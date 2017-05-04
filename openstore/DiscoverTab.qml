@@ -84,7 +84,7 @@ ScrollView {
                 divider.visible: false
                 onClicked: {
                     if (modelData.referral) {
-                        rootItem.categoryViewRequired("", modelData.referral)
+                        rootItem.categoryViewRequired(modelData.name, modelData.referral)
                     }
                 }
 

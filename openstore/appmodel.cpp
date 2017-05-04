@@ -271,9 +271,6 @@ void AppModel::repoListFetched()
     }
     endResetModel();
 
-    // TODO: Is this really necessary?
-    // buildInstalledClickList();
-
     Q_EMIT repositoryListFetched();
 }
 

@@ -55,20 +55,6 @@ Page {
                     ProgressionSlot {}
                 }
             }
-            /*section.property: "section"
-            section.delegate: Label {
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                    leftMargin: units.gu(1)
-                }
-
-                height: units.gu(4)
-                verticalAlignment: Text.AlignBottom
-                textSize: Label.Small
-                text: section == "mainCategories" ? i18n.tr("General") : i18n.tr("Categories")
-            }*/
         }
     }
-
 }

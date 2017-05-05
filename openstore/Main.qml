@@ -149,7 +149,7 @@ MainView {
                 }
 
                 trailingActionBar.actions: Action {
-                    iconName: "search"
+                    iconName: "find"
                     text: i18n.tr("Search")
                     onTriggered: {
                         mainPage.pageStack.addPageToCurrentColumn(mainPage, searchPageComponent, {})

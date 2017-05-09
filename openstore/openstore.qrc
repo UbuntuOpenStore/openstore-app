@@ -3,5 +3,12 @@
         <file>Main.qml</file>
         <file>AppDetailsPage.qml</file>
         <file>HookIcon.qml</file>
+        <file>DiscoverTab.qml</file>
+        <file>CategoriesPage.qml</file>
+        <file>FilteredAppView.qml</file>
+        <file>EmptyState.qml</file>
+        <file>SectionDivider.qml</file>
+        <file>SearchPage.qml</file>
+        <file>TextualButtonStyle.qml</file>
     </qresource>
 </RCC>

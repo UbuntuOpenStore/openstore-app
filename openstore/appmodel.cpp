@@ -49,6 +49,8 @@ QVariant AppModel::data(const QModelIndex &index, int role) const
     switch (role) {
     case RoleName:
         return m_list.at(index.row())->name();
+    case RoleAppId:
+        return m_list.at(index.row())->appId();
     case RoleIcon:
         return m_list.at(index.row())->icon();
     case RoleAuthor:
@@ -57,6 +59,8 @@ QVariant AppModel::data(const QModelIndex &index, int role) const
         return m_list.at(index.row())->tagline();
     case RoleDescription:
         return m_list.at(index.row())->description();
+    case RoleCategory:
+        return m_list.at(index.row())->category();
     case RoleScreenshots:
         return m_list.at(index.row())->screenshots();
     case RoleChangelog:
@@ -69,8 +73,12 @@ QVariant AppModel::data(const QModelIndex &index, int role) const
         return m_list.at(index.row())->installed();
     case RoleInstalledVersion:
         return m_list.at(index.row())->installedVersion();
+    case RoleUpdateAvailable:
+        return bool(m_list.at(index.row())->installedVersion() < m_list.at(index.row())->version());
     case RoleMaintainer:
         return m_list.at(index.row())->maintainer();
+    case RoleSearchHackishString:
+        return QString(m_list.at(index.row())->name()) + QString(m_list.at(index.row())->appId()) + QString(m_list.at(index.row())->author());
     }
     return QVariant();
 }
@@ -79,17 +87,21 @@ QHash<int, QByteArray> AppModel::roleNames() const
 {
     QHash<int, QByteArray> roles;
     roles.insert(RoleName, "name");
+    roles.insert(RoleAppId, "appId");
     roles.insert(RoleIcon, "icon");
     roles.insert(RoleAuthor, "author");
     roles.insert(RoleTagline, "tagline");
     roles.insert(RoleDescription, "description");
+    roles.insert(RoleCategory, "category");
     roles.insert(RoleScreenshots, "screenshots");
     roles.insert(RoleChangelog, "changelog");
     roles.insert(RolePackageUrl, "packageUrl");
     roles.insert(RoleVersion, "version");
     roles.insert(RoleInstalled, "installed");
     roles.insert(RoleInstalledVersion, "installedVersion");
+    roles.insert(RoleUpdateAvailable, "updateAvailable");
     roles.insert(RoleMaintainer, "maintainer");
+    roles.insert(RoleSearchHackishString, "searchHackishString");
     return roles;
 }
 
@@ -199,6 +211,7 @@ void AppModel::repoListFetched()
         item->setMaintainer(packageMap.value("maintainer_name").toString());
         item->setTagline(packageMap.value("tagline").toString());
         item->setDescription(packageMap.value("description").toString());
+        item->setCategory(packageMap.value("category").toString());
         item->setScreenshots(packageMap.value("screenshots").toStringList());
         item->setChangelog(packageMap.value("changelog").toString());
         item->setVersion(packageMap.value("version").toString());
@@ -257,6 +270,8 @@ void AppModel::repoListFetched()
         m_list.append(item);
     }
     endResetModel();
+
+    Q_EMIT repositoryListFetched();
 }
 
 void AppModel::buildInstalledClickList()

@@ -16,6 +16,7 @@ class ApplicationItem: public QObject
     Q_PROPERTY(QString author READ author CONSTANT)
     Q_PROPERTY(QString tagline READ tagline CONSTANT)
     Q_PROPERTY(QString description READ description CONSTANT)
+    Q_PROPERTY(QString category READ category CONSTANT)
     Q_PROPERTY(QStringList screenshots READ screenshots CONSTANT)
     Q_PROPERTY(QString changelog READ changelog CONSTANT)
     Q_PROPERTY(QString version READ version CONSTANT)
@@ -74,6 +75,9 @@ public:
     QString description() const { return m_description; }
     void setDescription(const QString &description) { m_description = description; }
 
+    QString category() const { return m_category; }
+    void setCategory(const QString &category) { m_category = category; }
+
     QStringList screenshots() const { return m_screenshots; }
     void setScreenshots(const QStringList &screenshots) { m_screenshots = screenshots; }
 
@@ -123,6 +127,7 @@ private:
     QString m_author;
     QString m_tagline;
     QString m_description;
+    QString m_category;
     QStringList m_screenshots;
     QString m_changelog;
     QString m_packageUrl;
@@ -144,17 +149,21 @@ class AppModel : public QAbstractListModel
 public:
     enum Roles {
         RoleName,
+        RoleAppId,
         RoleIcon,
         RoleAuthor,
         RoleTagline,
         RoleDescription,
+        RoleCategory,
         RoleScreenshots,
         RoleChangelog,
         RolePackageUrl,
         RoleVersion,
         RoleInstalled,
         RoleInstalledVersion,
-        RoleMaintainer
+        RoleUpdateAvailable,
+        RoleMaintainer,
+        RoleSearchHackishString
     };
 
     explicit AppModel(QObject *parent = 0);
@@ -182,6 +191,7 @@ private Q_SLOTS:
 
 Q_SIGNALS:
     void installerChanged();
+    void repositoryListFetched();
 
 private:
     QList<ApplicationItem*> m_list;

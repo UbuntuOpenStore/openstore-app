@@ -117,6 +117,11 @@ int AppModel::findApp(const QString &appId) const
 
 ApplicationItem *AppModel::app(int index) const
 {
+    if (index < -1 || index + 1 > m_list.count()) {
+        qWarning() << Q_FUNC_INFO << "Index is out of range. Returning nullptr...";
+        return nullptr;
+    }
+
     return m_list.at(index);
 }
 

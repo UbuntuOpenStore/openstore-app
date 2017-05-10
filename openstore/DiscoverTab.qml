@@ -54,28 +54,37 @@ ScrollView {
 
         header: AbstractButton {
             id: highlightAppControl
-            property var appItem: storeModel.app(storeModel.findApp(discoverData.highlighted_id))
+            property var appItem: storeModel.app(storeModel.findApp(discoverData.highlight.id))
             width: parent.width
             height: Math.min(units.gu(28), width * 9 / 16)
 
-            onClicked: rootItem.appDetailsRequired(discoverData.highlighted_id)
+            onClicked: rootItem.appDetailsRequired(discoverData.highlight.id)
 
             Image {
                 anchors.fill: parent
-                anchors.bottomMargin: units.gu(4)
-                source: highlightAppControl.appItem.icon
+                anchors.bottomMargin: units.gu(2)
+                source: discoverData.highlight.image || highlightAppControl.appItem.icon
                 fillMode: Image.PreserveAspectCrop
             }
 
+            Rectangle {
+                anchors.fill: highlightAppLabels
+                color: "black"
+                opacity: 0.45
+            }
+
             ListItemLayout {
-                anchors.centerIn: parent
+                id: highlightAppLabels
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: units.gu(2)
 
                 title.text: highlightAppControl.appItem.name
-                title.font.pixelSize: units.gu(3)
+                title.textSize: Label.Large
+                title.font.weight: Font.Normal
                 title.color: "white"
 
                 subtitle.text: highlightAppControl.appItem.tagline || highlightAppControl.appItem.description
-                subtitle.font.pixelSize: units.gu(1.5)
+                subtitle.textSize: Label.Small
                 subtitle.color: "white"
             }
         }

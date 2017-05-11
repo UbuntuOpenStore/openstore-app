@@ -1,0 +1,6 @@
+{
+  "template": "qmake",
+  "dependencies": [
+    "libclick-0.4-dev"
+  ]
+}

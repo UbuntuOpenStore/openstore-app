@@ -79,6 +79,7 @@ Page {
 
                     Button {
                         Layout.fillWidth: true
+                        Layout.maximumWidth: buttonsRow.width > units.gu(60) ? units.gu(24) : buttonsRow.width
                         text: app.installed ? i18n.tr("Upgrade") : i18n.tr("Install")
                         visible: !app.installed || (app.installed && app.installedVersion < app.version)
                         color: UbuntuColors.green
@@ -89,6 +90,7 @@ Page {
 
                     Button {
                         Layout.fillWidth: true
+                        Layout.maximumWidth: buttonsRow.width > units.gu(60) ? units.gu(24) : buttonsRow.width
                         text: i18n.tr("Remove")
                         visible: app.installed
                         color: UbuntuColors.red

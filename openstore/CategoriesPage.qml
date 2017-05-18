@@ -22,10 +22,6 @@ Page {
 
     header: PageHeader {
         title: i18n.tr("Categories")
-        leadingActionBar.actions: Action {
-            iconName: "close"
-            onTriggered: categoryPage.pageStack.removePages(categoryPage)
-        }
     }
 
     signal categoryClicked(var name, var code)

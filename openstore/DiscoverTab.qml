@@ -52,6 +52,9 @@ ScrollView {
         id: view
         anchors.fill: parent
 
+        // WORKAROUND: Fix for wrong grid unit size
+        Component.onCompleted: root.flickable_responsive_scroll_fix(view)
+
         header: AbstractButton {
             id: highlightAppControl
             property var appItem: storeModel.app(storeModel.findApp(discoverData.highlight.id))

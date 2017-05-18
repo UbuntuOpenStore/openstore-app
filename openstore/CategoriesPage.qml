@@ -42,6 +42,10 @@ Page {
         ListView {
             id: categoryView
             anchors.fill: parent
+
+            // WORKAROUND: Fix for wrong grid unit size
+            Component.onCompleted: root.flickable_responsive_scroll_fix(categoryView)
+
             model: categories.list
             delegate: ListItem {
                 onClicked: categoryPage.categoryClicked(modelData, modelData)

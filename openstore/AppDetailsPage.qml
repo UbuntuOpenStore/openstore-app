@@ -36,6 +36,9 @@ Page {
         anchors.fill: parent
         anchors.topMargin: parent.header.height
 
+        // WORKAROUND: Fix for wrong grid unit size
+        Component.onCompleted: root.flickable_responsive_scroll_fix(scrollView.flickableItem)
+
         Column {
             id: mainColumn
             width: scrollView.width

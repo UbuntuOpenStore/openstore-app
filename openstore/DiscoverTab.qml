@@ -86,6 +86,10 @@ ScrollView {
                 subtitle.text: highlightAppControl.appItem.tagline || highlightAppControl.appItem.description
                 subtitle.textSize: Label.Small
                 subtitle.color: "white"
+
+                summary.text: highlightAppControl.appItem.installed ? highlightAppControl.appItem.updateAvailable ? i18n.tr("Update available").toUpperCase() : i18n.tr("✓ Installed").toUpperCase() : ""
+                summary.textSize: Label.XSmall
+                summary.color: "white"
             }
         }
 
@@ -163,7 +167,7 @@ ScrollView {
                                 textSize: Label.XSmall
                             }
 
-                            summary.text: appDel.appItem.installed ? appDel.appItem.updateAvailable ? i18n.tr("Update available") : i18n.tr("Installed") : ""
+                            summary.text: appDel.appItem.installed ? appDel.appItem.updateAvailable ? i18n.tr("Update available").toUpperCase() : i18n.tr("✓ Installed").toUpperCase() : ""
                             summary.textSize: Label.XSmall
                         }
                     }

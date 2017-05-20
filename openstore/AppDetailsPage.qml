@@ -491,6 +491,7 @@ Page {
 
                             title.text: i18n.tr("Permissions")
                             subtitle.maximumLineCount: Number.MAX_VALUE
+                            subtitle.wrapMode: Text.WordWrap
                             subtitle.text: {
                                 if (permissions) {
                                     return permissions.replace("bluetooth", "<font color=\"#ED3146\">bluetooth</font>")
@@ -526,6 +527,7 @@ Page {
                             title.text: i18n.tr("Read paths")
                             subtitle.text: readpaths || i18n.tr("<i>none</i>")
                             subtitle.maximumLineCount: Number.MAX_VALUE
+                            subtitle.wrapMode: Text.WrapAtWordBoundaryOrAnywhere
                         }
 
                         ListItemLayout {
@@ -543,6 +545,7 @@ Page {
                             title.text: i18n.tr("Write paths")
                             subtitle.text: writepaths || i18n.tr("<i>none</i>")
                             subtitle.maximumLineCount: Number.MAX_VALUE
+                            subtitle.wrapMode: Text.WrapAtWordBoundaryOrAnywhere
                         }
 
                         Button {

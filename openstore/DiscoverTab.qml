@@ -113,6 +113,7 @@ ScrollView {
                     anchors.centerIn: parent
                     title.text: modelData.name
                     subtitle.text: modelData.tagline
+                    subtitle.wrapMode: Text.WordWrap
 
                     ProgressionSlot {
                         visible: modelData.referral != ""

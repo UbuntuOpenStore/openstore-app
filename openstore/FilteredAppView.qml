@@ -70,6 +70,7 @@ ScrollView {
                 id: layout
                 title.text: model.name
                 summary.text: model.tagline
+                summary.wrapMode: Text.WrapAtWordBoundaryOrAnywhere
 
                 UbuntuShape {
                     SlotsLayout.position: SlotsLayout.Leading

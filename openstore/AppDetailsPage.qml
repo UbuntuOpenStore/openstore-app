@@ -269,6 +269,7 @@ Page {
                 ListItemLayout {
                     id: changelogLayout
                     property bool showAll: false
+                    // TRANSLATORS: Title of the changelog section
                     title.text: i18n.tr("What's New")
                     subtitle.text: app.changelog
                     subtitle.textSize: Label.Small
@@ -347,6 +348,7 @@ Page {
                 }
                 ListItemLayout {
                     anchors.centerIn: parent
+                    // TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
                     title.text: i18n.tr("More from %1").arg(app.author)
                     ProgressionSlot {}
                 }
@@ -370,6 +372,7 @@ Page {
                 ListItemLayout {
                     anchors.centerIn: parent
                     // FIXME: app.category is not localized.
+                    // TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
                     title.text: i18n.tr("Other apps in %1").arg(app.category)
                     ProgressionSlot {}
                 }

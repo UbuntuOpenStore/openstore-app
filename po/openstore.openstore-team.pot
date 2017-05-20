@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-20 10:05+0000\n"
+"POT-Creation-Date: 2017-05-20 10:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,98 +37,101 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: /tmp/add-translations/openstore/AppDetailsPage.qml:272
+#. TRANSLATORS: Title of the changelog section
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:273
 msgid "What's New"
 msgstr ""
 
-#: /tmp/add-translations/openstore/AppDetailsPage.qml:290
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:291
 msgid "Packager/Publisher"
 msgstr ""
 
-#: /tmp/add-translations/openstore/AppDetailsPage.qml:291
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:292
 msgid "OpenStore team"
 msgstr ""
 
-#: /tmp/add-translations/openstore/AppDetailsPage.qml:299
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:300
 msgid "Installed version"
 msgstr ""
 
-#: /tmp/add-translations/openstore/AppDetailsPage.qml:309
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:310
 msgid "Latest available version"
 msgstr ""
 
-#: /tmp/add-translations/openstore/AppDetailsPage.qml:318
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:319
 msgid "License"
 msgstr ""
 
-#: /tmp/add-translations/openstore/AppDetailsPage.qml:318
-#: /tmp/add-translations/openstore/AppDetailsPage.qml:327
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:319
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:328
 msgid "N/A"
 msgstr ""
 
-#: /tmp/add-translations/openstore/AppDetailsPage.qml:327
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:328
 msgid "Source Code"
 msgstr ""
 
-#: /tmp/add-translations/openstore/AppDetailsPage.qml:350
+#. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:352
 #, qt-format
 msgid "More from %1"
 msgstr ""
 
-#: /tmp/add-translations/openstore/AppDetailsPage.qml:373
+#. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:376
 #, qt-format
 msgid "Other apps in %1"
 msgstr ""
 
-#: /tmp/add-translations/openstore/AppDetailsPage.qml:379
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:382
 msgid "Package contents"
 msgstr ""
 
-#: /tmp/add-translations/openstore/AppDetailsPage.qml:459
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:462
 msgid "AppArmor profile"
 msgstr ""
 
-#: /tmp/add-translations/openstore/AppDetailsPage.qml:487
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:490
 msgid "Permissions"
 msgstr ""
 
-#: /tmp/add-translations/openstore/AppDetailsPage.qml:504
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:507
 msgid "none required"
 msgstr ""
 
-#: /tmp/add-translations/openstore/AppDetailsPage.qml:521
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:524
 msgid "Read paths"
 msgstr ""
 
-#: /tmp/add-translations/openstore/AppDetailsPage.qml:522
-#: /tmp/add-translations/openstore/AppDetailsPage.qml:539
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:525
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:542
 msgid "none"
 msgstr ""
 
-#: /tmp/add-translations/openstore/AppDetailsPage.qml:538
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:541
 msgid "Write paths"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: /tmp/add-translations/openstore/AppDetailsPage.qml:562
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:565
 #, qt-format
 msgid "%1 GB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: /tmp/add-translations/openstore/AppDetailsPage.qml:567
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:570
 #, qt-format
 msgid "%1 MB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: /tmp/add-translations/openstore/AppDetailsPage.qml:572
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:575
 #, qt-format
 msgid "%1 kB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: /tmp/add-translations/openstore/AppDetailsPage.qml:575
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:578
 #, qt-format
 msgid "%1 bytes"
 msgstr ""

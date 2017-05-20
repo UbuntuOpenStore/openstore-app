@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-17 22:55+0000\n"
+"POT-Creation-Date: 2017-05-20 10:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,195 +17,191 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:79
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:79
 msgid "Upgrade"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:79
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:79
 msgid "Install"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:89
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:89
 msgid "Remove"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:126
-msgid "This software requires extra privileges. See below for details."
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:126
+msgid "This app has access to restricted system data, see below for details."
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:251
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:251
 msgid "Description"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:272
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:272
 msgid "What's New"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:290
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:290
 msgid "Packager/Publisher"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:291
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:291
 msgid "OpenStore team"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:299
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:299
 msgid "Installed version"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:309
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:309
 msgid "Latest available version"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:318
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:318
 msgid "License"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:318
-#: /tmp/openstore/openstore/AppDetailsPage.qml:327
-msgid "<i>N/A</i>"
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:318
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:327
+msgid "N/A"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:327
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:327
 msgid "Source Code"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:350
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:350
 #, qt-format
 msgid "More from %1"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:373
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:373
 #, qt-format
 msgid "Other apps in %1"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:379
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:379
 msgid "Package contents"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:459
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:459
 msgid "AppArmor profile"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:487
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:487
 msgid "Permissions"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:504
-msgid "<i>none required</i>"
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:504
+msgid "none required"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:521
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:521
 msgid "Read paths"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:522
-#: /tmp/openstore/openstore/AppDetailsPage.qml:539
-msgid "<i>none</i>"
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:522
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:539
+msgid "none"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:538
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:538
 msgid "Write paths"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: /tmp/openstore/openstore/AppDetailsPage.qml:562
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:562
 #, qt-format
 msgid "%1 GB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: /tmp/openstore/openstore/AppDetailsPage.qml:567
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:567
 #, qt-format
 msgid "%1 MB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: /tmp/openstore/openstore/AppDetailsPage.qml:572
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:572
 #, qt-format
 msgid "%1 kB"
 msgstr ""
 
-#. TRANSLATORS: %1 is the size of a file, expressed in byte
-#: /tmp/openstore/openstore/AppDetailsPage.qml:575
+#. TRANSLATORS: %1 is the size of a file, expressed in bytes
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:575
 #, qt-format
-msgid "%1 byte"
+msgid "%1 bytes"
 msgstr ""
 
-#: /tmp/openstore/openstore/CategoriesPage.qml:24
-#: /tmp/openstore/openstore/Main.qml:147
+#: /tmp/add-translations/openstore/CategoriesPage.qml:24
+#: /tmp/add-translations/openstore/Main.qml:147
 msgid "Categories"
 msgstr ""
 
-#: /tmp/openstore/openstore/DiscoverTab.qml:166
+#: /tmp/add-translations/openstore/DiscoverTab.qml:166
 msgid "Update available"
 msgstr ""
 
-#: /tmp/openstore/openstore/DiscoverTab.qml:166
+#: /tmp/add-translations/openstore/DiscoverTab.qml:166
 msgid "Installed"
 msgstr ""
 
-#: /tmp/openstore/openstore/FilteredAppView.qml:101
+#: /tmp/add-translations/openstore/FilteredAppView.qml:101
 msgid "Nothing here yet"
 msgstr ""
 
-#: /tmp/openstore/openstore/FilteredAppView.qml:101
-msgid "No result found."
+#: /tmp/add-translations/openstore/FilteredAppView.qml:101
+msgid "No results found."
 msgstr ""
 
-#: /tmp/openstore/openstore/FilteredAppView.qml:102
+#: /tmp/add-translations/openstore/FilteredAppView.qml:102
 msgid "No app has been released in this department yet."
 msgstr ""
 
-#: /tmp/openstore/openstore/FilteredAppView.qml:102
+#: /tmp/add-translations/openstore/FilteredAppView.qml:102
 msgid "Try with a different search."
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:142
-msgid "Open Store"
-msgstr ""
-
-#: /tmp/openstore/openstore/Main.qml:153
-#: /tmp/openstore/openstore/SearchPage.qml:29
+#: /tmp/add-translations/openstore/Main.qml:153
+#: /tmp/add-translations/openstore/SearchPage.qml:29
 msgid "Search"
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:160
+#: /tmp/add-translations/openstore/Main.qml:160
 msgid "Discover"
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:160
+#: /tmp/add-translations/openstore/Main.qml:160
 msgid "My Apps"
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:254
+#: /tmp/add-translations/openstore/Main.qml:254
 msgid "Available updates"
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:254
+#: /tmp/add-translations/openstore/Main.qml:254
 msgid "Installed apps"
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:272
+#: /tmp/add-translations/openstore/Main.qml:272
 msgid "Fetching package list..."
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:350
+#: /tmp/add-translations/openstore/Main.qml:350
 #, qt-format
 msgid "Do you want to install %1?"
 msgstr ""
 
-#: /tmp/openstore/openstore/SearchPage.qml:37
+#: /tmp/add-translations/openstore/SearchPage.qml:37
 msgid "Cancel"
 msgstr ""
 
-#: /tmp/openstore/openstore/SearchPage.qml:60
-msgid "search in OpenStore..."
+#: /tmp/add-translations/openstore/SearchPage.qml:60
+msgid "Search in OpenStore..."
 msgstr ""
 
-#: /tmp/openstore/openstore/TextualButtonStyle.qml:46
-#: /tmp/openstore/openstore/TextualButtonStyle.qml:54
-#: /tmp/openstore/openstore/TextualButtonStyle.qml:60
+#: /tmp/add-translations/openstore/TextualButtonStyle.qml:46
+#: /tmp/add-translations/openstore/TextualButtonStyle.qml:54
+#: /tmp/add-translations/openstore/TextualButtonStyle.qml:60
 msgid "Pick"
 msgstr ""

@@ -139,7 +139,7 @@ MainView {
         Page {
             id: mainPage
             header: PageHeader {
-                title: i18n.tr("Open Store")
+                title: "OpenStore"  // This is the name of the store - no need for translation.
                 automaticHeight: false
 
                 leadingActionBar.actions: Action {

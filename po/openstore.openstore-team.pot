@@ -1,0 +1,210 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-20 10:14+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:79
+msgid "Upgrade"
+msgstr ""
+
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:79
+msgid "Install"
+msgstr ""
+
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:89
+msgid "Remove"
+msgstr ""
+
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:126
+msgid "This app has access to restricted system data, see below for details."
+msgstr ""
+
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:251
+msgid "Description"
+msgstr ""
+
+#. TRANSLATORS: Title of the changelog section
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:273
+msgid "What's New"
+msgstr ""
+
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:291
+msgid "Packager/Publisher"
+msgstr ""
+
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:292
+msgid "OpenStore team"
+msgstr ""
+
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:300
+msgid "Installed version"
+msgstr ""
+
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:310
+msgid "Latest available version"
+msgstr ""
+
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:319
+msgid "License"
+msgstr ""
+
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:319
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:328
+msgid "N/A"
+msgstr ""
+
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:328
+msgid "Source Code"
+msgstr ""
+
+#. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:352
+#, qt-format
+msgid "More from %1"
+msgstr ""
+
+#. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:376
+#, qt-format
+msgid "Other apps in %1"
+msgstr ""
+
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:382
+msgid "Package contents"
+msgstr ""
+
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:462
+msgid "AppArmor profile"
+msgstr ""
+
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:490
+msgid "Permissions"
+msgstr ""
+
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:507
+msgid "none required"
+msgstr ""
+
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:524
+msgid "Read paths"
+msgstr ""
+
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:525
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:542
+msgid "none"
+msgstr ""
+
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:541
+msgid "Write paths"
+msgstr ""
+
+#. TRANSLATORS: %1 is the size of a file, expressed in GB
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:565
+#, qt-format
+msgid "%1 GB"
+msgstr ""
+
+#. TRANSLATORS: %1 is the size of a file, expressed in MB
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:570
+#, qt-format
+msgid "%1 MB"
+msgstr ""
+
+#. TRANSLATORS: %1 is the size of a file, expressed in kB
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:575
+#, qt-format
+msgid "%1 kB"
+msgstr ""
+
+#. TRANSLATORS: %1 is the size of a file, expressed in bytes
+#: /tmp/add-translations/openstore/AppDetailsPage.qml:578
+#, qt-format
+msgid "%1 bytes"
+msgstr ""
+
+#: /tmp/add-translations/openstore/CategoriesPage.qml:24
+#: /tmp/add-translations/openstore/Main.qml:147
+msgid "Categories"
+msgstr ""
+
+#: /tmp/add-translations/openstore/DiscoverTab.qml:166
+msgid "Update available"
+msgstr ""
+
+#: /tmp/add-translations/openstore/DiscoverTab.qml:166
+msgid "Installed"
+msgstr ""
+
+#: /tmp/add-translations/openstore/FilteredAppView.qml:101
+msgid "Nothing here yet"
+msgstr ""
+
+#: /tmp/add-translations/openstore/FilteredAppView.qml:101
+msgid "No results found."
+msgstr ""
+
+#: /tmp/add-translations/openstore/FilteredAppView.qml:102
+msgid "No app has been released in this department yet."
+msgstr ""
+
+#: /tmp/add-translations/openstore/FilteredAppView.qml:102
+msgid "Try with a different search."
+msgstr ""
+
+#: /tmp/add-translations/openstore/Main.qml:153
+#: /tmp/add-translations/openstore/SearchPage.qml:29
+msgid "Search"
+msgstr ""
+
+#: /tmp/add-translations/openstore/Main.qml:160
+msgid "Discover"
+msgstr ""
+
+#: /tmp/add-translations/openstore/Main.qml:160
+msgid "My Apps"
+msgstr ""
+
+#: /tmp/add-translations/openstore/Main.qml:254
+msgid "Available updates"
+msgstr ""
+
+#: /tmp/add-translations/openstore/Main.qml:254
+msgid "Installed apps"
+msgstr ""
+
+#: /tmp/add-translations/openstore/Main.qml:272
+msgid "Fetching package list..."
+msgstr ""
+
+#: /tmp/add-translations/openstore/Main.qml:350
+#, qt-format
+msgid "Do you want to install %1?"
+msgstr ""
+
+#: /tmp/add-translations/openstore/SearchPage.qml:37
+msgid "Cancel"
+msgstr ""
+
+#: /tmp/add-translations/openstore/SearchPage.qml:60
+msgid "Search in OpenStore..."
+msgstr ""
+
+#: /tmp/add-translations/openstore/TextualButtonStyle.qml:46
+#: /tmp/add-translations/openstore/TextualButtonStyle.qml:54
+#: /tmp/add-translations/openstore/TextualButtonStyle.qml:60
+msgid "Pick"
+msgstr ""

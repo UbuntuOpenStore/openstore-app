@@ -57,7 +57,7 @@ Page {
                 name: "search"
             }
 
-            placeholderText: i18n.tr("search in OpenStore...")
+            placeholderText: i18n.tr("Search in OpenStore...")
             onTextChanged: view.search(text)
             Component.onCompleted: view.search(text)
 

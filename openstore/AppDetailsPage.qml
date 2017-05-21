@@ -123,7 +123,7 @@ Page {
                 }
                 ListItemLayout {
                     anchors.centerIn: parent
-                    subtitle.text: i18n.tr("This software requires extra privileges. See below for details.")
+                    subtitle.text: i18n.tr("This app has access to restricted system data, see below for details.")
                     subtitle.color: UbuntuColors.red
                     subtitle.maximumLineCount: 2
                     subtitle.wrapMode: Text.WordWrap
@@ -269,6 +269,7 @@ Page {
                 ListItemLayout {
                     id: changelogLayout
                     property bool showAll: false
+                    // TRANSLATORS: Title of the changelog section
                     title.text: i18n.tr("What's New")
                     subtitle.text: app.changelog
                     subtitle.textSize: Label.Small
@@ -315,7 +316,7 @@ Page {
                 divider.visible: false
                 ListItemLayout {
                     anchors.centerIn: parent
-                    title.text: i18n.tr("License") || i18n.tr("<i>N/A</i>")
+                    title.text: i18n.tr("License") || "<i>" + i18n.tr("N/A") + "</i>"
                     subtitle.text: app.license
                 }
             }
@@ -324,7 +325,7 @@ Page {
                 onClicked: Qt.openUrlExternally(app.source)
                 ListItemLayout {
                     anchors.centerIn: parent
-                    title.text: i18n.tr("Source Code") || i18n.tr("<i>N/A</i>")
+                    title.text: i18n.tr("Source Code") || "<i>" + i18n.tr("N/A") + "</i>"
                     subtitle.text: app.source
                     ProgressionSlot { visible: app.source }
                 }
@@ -347,6 +348,7 @@ Page {
                 }
                 ListItemLayout {
                     anchors.centerIn: parent
+                    // TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
                     title.text: i18n.tr("More from %1").arg(app.author)
                     ProgressionSlot {}
                 }
@@ -370,6 +372,7 @@ Page {
                 ListItemLayout {
                     anchors.centerIn: parent
                     // FIXME: app.category is not localized.
+                    // TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
                     title.text: i18n.tr("Other apps in %1").arg(app.category)
                     ProgressionSlot {}
                 }
@@ -501,7 +504,7 @@ Page {
                                                       .replace("video_files", "<font color=\"#ED3146\">music_files_read</font>")
                                 }
 
-                                return i18n.tr("<i>none required</i>")
+                                return "<i>" + i18n.tr("none required") + "</i>"
                             }
                         }
 
@@ -519,7 +522,7 @@ Page {
                             }
 
                             title.text: i18n.tr("Read paths")
-                            subtitle.text: readpaths || i18n.tr("<i>none</i>")
+                            subtitle.text: readpaths || "<i>" + i18n.tr("none") + "</i>"
                             subtitle.maximumLineCount: Number.MAX_VALUE
                         }
 
@@ -536,7 +539,7 @@ Page {
                             }
 
                             title.text: i18n.tr("Write paths")
-                            subtitle.text: writepaths || i18n.tr("<i>none</i>")
+                            subtitle.text: writepaths || "<i>" + i18n.tr("none") + "</i>"
                             subtitle.maximumLineCount: Number.MAX_VALUE
                         }
 
@@ -571,8 +574,8 @@ Page {
             // TRANSLATORS: %1 is the size of a file, expressed in kB
             return i18n.tr("%1 kB").arg(parseInt(size / s));
 
-        // TRANSLATORS: %1 is the size of a file, expressed in byte
-        return i18n.tr("%1 byte").arg(size);
+        // TRANSLATORS: %1 is the size of a file, expressed in bytes
+        return i18n.tr("%1 bytes").arg(size);
     }
 
     function includesUnconfinedLocations(paths) {

@@ -17,6 +17,7 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.ListItems 1.3
+import Ubuntu.Components.Popups 1.3
 import QtQuick.Layouts 1.1
 import OpenStore 1.0
 
@@ -95,7 +96,10 @@ Page {
                         visible: app.installed
                         color: UbuntuColors.red
                         onClicked: {
-                            appModel.installer.removePackage(app.appId, app.version)
+                            var popup = PopupUtils.open(removeQuestion, root, {pkgName: app.name || "<i>" + i18n.tr("unknown") + "</i>" });
+                            popup.accepted.connect(function() {
+                                appModel.installer.removePackage(app.appId, app.version)
+                            })
                         }
                     }
                 }
@@ -560,6 +564,38 @@ Page {
             }
         }
     }
+
+
+    Component {
+        id: removeQuestion
+        Dialog {
+            id: removeQuestionDialog
+            title: i18n.tr("Remove package")
+            text: i18n.tr("Do you want to remove %1?").arg(pkgName)
+
+            property string pkgName
+            signal accepted();
+            signal rejected();
+
+            Button {
+                text: i18n.tr("Cancel")
+                onClicked: {
+                    removeQuestionDialog.rejected();
+                    PopupUtils.close(removeQuestionDialog)
+                }
+
+            }
+            Button {
+                text: i18n.tr("Remove")
+                color: UbuntuColors.red
+                onClicked: {
+                    removeQuestionDialog.accepted();
+                    PopupUtils.close(removeQuestionDialog)
+                }
+            }
+        }
+    }
+
 
     function printSize(size) {
         var s

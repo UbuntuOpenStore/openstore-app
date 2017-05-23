@@ -25,6 +25,7 @@ import QtQml.Models 2.1
 MainView {
     id: root
     applicationName: "openstore.openstore-team"
+    anchorToKeyboard: true
 
     width: units.gu(40)
     height: units.gu(75)

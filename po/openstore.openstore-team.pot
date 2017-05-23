@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-22 23:25+0000\n"
+"POT-Creation-Date: 2017-05-23 19:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,293 +17,294 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:27
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:27
 msgid "App details"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:79
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:79
 msgid "Upgrade"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:79
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:79
 msgid "Install"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:89
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:89
 msgid "Remove"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:126
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:126
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:251
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:251
 msgid "Description"
 msgstr ""
 
 #. TRANSLATORS: Title of the changelog section
-#: /tmp/openstore/openstore/AppDetailsPage.qml:273
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:273
 msgid "What's New"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:291
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:291
 msgid "Packager/Publisher"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:292
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:292
 msgid "OpenStore team"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:300
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:300
 msgid "Installed version"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:310
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:310
 msgid "Latest available version"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:319
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:319
 msgid "License"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:319
-#: /tmp/openstore/openstore/AppDetailsPage.qml:328
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:319
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:328
 msgid "N/A"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:328
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:328
 msgid "Source Code"
 msgstr ""
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
-#: /tmp/openstore/openstore/AppDetailsPage.qml:352
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:352
 #, qt-format
 msgid "More from %1"
 msgstr ""
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: /tmp/openstore/openstore/AppDetailsPage.qml:376
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:376
 #, qt-format
 msgid "Other apps in %1"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:382
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:382
 msgid "Package contents"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:462
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:462
 msgid "AppArmor profile"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:490
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:490
 msgid "Permissions"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:507
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:507
 msgid "none required"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:524
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:524
 msgid "Read paths"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:525
-#: /tmp/openstore/openstore/AppDetailsPage.qml:542
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:525
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:542
 msgid "none"
 msgstr ""
 
-#: /tmp/openstore/openstore/AppDetailsPage.qml:541
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:541
 msgid "Write paths"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: /tmp/openstore/openstore/AppDetailsPage.qml:565
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:565
 #, qt-format
 msgid "%1 GB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: /tmp/openstore/openstore/AppDetailsPage.qml:570
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:570
 #, qt-format
 msgid "%1 MB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: /tmp/openstore/openstore/AppDetailsPage.qml:575
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:575
 #, qt-format
 msgid "%1 kB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: /tmp/openstore/openstore/AppDetailsPage.qml:578
+#: /tmp/add-missing-strings-to-pot/openstore/AppDetailsPage.qml:578
 #, qt-format
 msgid "%1 bytes"
 msgstr ""
 
-#: /tmp/openstore/openstore/CategoriesPage.qml:24
-#: /tmp/openstore/openstore/Main.qml:147
+#: /tmp/add-missing-strings-to-pot/openstore/CategoriesPage.qml:24
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:147
 msgid "Categories"
 msgstr ""
 
-#: /tmp/openstore/openstore/DiscoverTab.qml:166
+#: /tmp/add-missing-strings-to-pot/openstore/DiscoverTab.qml:166
 msgid "Update available"
 msgstr ""
 
-#: /tmp/openstore/openstore/DiscoverTab.qml:166
+#: /tmp/add-missing-strings-to-pot/openstore/DiscoverTab.qml:166
 msgid "Installed"
 msgstr ""
 
-#: /tmp/openstore/openstore/FilteredAppView.qml:101
+#: /tmp/add-missing-strings-to-pot/openstore/FilteredAppView.qml:101
 msgid "Nothing here yet"
 msgstr ""
 
-#: /tmp/openstore/openstore/FilteredAppView.qml:101
+#: /tmp/add-missing-strings-to-pot/openstore/FilteredAppView.qml:101
 msgid "No results found."
 msgstr ""
 
-#: /tmp/openstore/openstore/FilteredAppView.qml:102
+#: /tmp/add-missing-strings-to-pot/openstore/FilteredAppView.qml:102
 msgid "No app has been released in this department yet."
 msgstr ""
 
-#: /tmp/openstore/openstore/FilteredAppView.qml:102
+#: /tmp/add-missing-strings-to-pot/openstore/FilteredAppView.qml:102
 msgid "Try with a different search."
 msgstr ""
 
-#: /tmp/openstore/openstore/HookIcon.qml:37
+#: /tmp/add-missing-strings-to-pot/openstore/HookIcon.qml:37
 msgid "Application"
 msgstr ""
 
-#: /tmp/openstore/openstore/HookIcon.qml:50
+#: /tmp/add-missing-strings-to-pot/openstore/HookIcon.qml:50
 msgid "Scope"
 msgstr ""
 
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
-#: /tmp/openstore/openstore/HookIcon.qml:64
+#: /tmp/add-missing-strings-to-pot/openstore/HookIcon.qml:64
 msgid "URL Handler"
 msgstr ""
 
 #. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
-#: /tmp/openstore/openstore/HookIcon.qml:78
+#: /tmp/add-missing-strings-to-pot/openstore/HookIcon.qml:78
 msgid "Content Hub Handler"
 msgstr ""
 
 #. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
-#: /tmp/openstore/openstore/HookIcon.qml:92
+#: /tmp/add-missing-strings-to-pot/openstore/HookIcon.qml:92
 msgid "Push Helper"
 msgstr ""
 
 #. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
-#: /tmp/openstore/openstore/HookIcon.qml:106
+#: /tmp/add-missing-strings-to-pot/openstore/HookIcon.qml:106
 msgid "Accounts provider"
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:153
-#: /tmp/openstore/openstore/SearchPage.qml:29
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:153
+#: /tmp/add-missing-strings-to-pot/openstore/SearchPage.qml:29
 msgid "Search"
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:160
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:160
 msgid "Discover"
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:160
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:160
 msgid "My Apps"
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:254
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:254
 msgid "Available updates"
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:254
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:254
 msgid "Installed apps"
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:272
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:272
 msgid "Fetching package list..."
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:319
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:319
 msgid "Warning"
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:320
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:328
 msgid ""
 "Open Store allows installing unconfined applications. Please make sure that "
-"you know about the implications of that. "
+"you know about the implications of that."
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:321
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:335
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
-"performance and/or spy on you. "
+"performance and/or spy on you."
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:322
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:342
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
-"don't take any responsibility if something bad slips through. "
+"don't take any responsibility if something bad slips through."
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:323
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:349
 msgid "Use this at your own risk."
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:329
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:353
 msgid "Okay. Got it! I'll be careful."
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:336
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:360
 msgid "Get me out of here!"
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:349
-msgid "Install package?"
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:373
+msgid "Install app?"
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:350
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:374
 #, qt-format
 msgid "Do you want to install %1?"
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:357
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:381
 msgid "Yes"
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:366
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:390
 msgid "No"
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:380
-msgid "Package installed"
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:404
+msgid "App installed"
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:381
-msgid "The package has been installed successfully."
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:405
+msgid "The app has been installed successfully."
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:384 /tmp/openstore/openstore/Main.qml:397
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:408
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:421
 msgid "OK"
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:393
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:417
 msgid "Installation failed"
 msgstr ""
 
-#: /tmp/openstore/openstore/Main.qml:394
+#: /tmp/add-missing-strings-to-pot/openstore/Main.qml:418
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 
-#: /tmp/openstore/openstore/SearchPage.qml:37
+#: /tmp/add-missing-strings-to-pot/openstore/SearchPage.qml:37
 msgid "Cancel"
 msgstr ""
 
-#: /tmp/openstore/openstore/SearchPage.qml:60
+#: /tmp/add-missing-strings-to-pot/openstore/SearchPage.qml:60
 msgid "Search in OpenStore..."
 msgstr ""
 
-#: /tmp/openstore/openstore/TextualButtonStyle.qml:46
-#: /tmp/openstore/openstore/TextualButtonStyle.qml:54
-#: /tmp/openstore/openstore/TextualButtonStyle.qml:60
+#: /tmp/add-missing-strings-to-pot/openstore/TextualButtonStyle.qml:46
+#: /tmp/add-missing-strings-to-pot/openstore/TextualButtonStyle.qml:54
+#: /tmp/add-missing-strings-to-pot/openstore/TextualButtonStyle.qml:60
 msgid "Pick"
 msgstr ""

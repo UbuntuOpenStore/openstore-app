@@ -317,13 +317,37 @@ MainView {
         Dialog {
             id: warningDialog
             title: i18n.tr("Warning")
-            text: i18n.tr("Open Store allows installing unconfined applications. Please make sure that you know about the implications of that. ") +
-                  i18n.tr("An unconfined application has the ability to break the system, reduce its performance and/or spy on you. ") +
-                  i18n.tr("While we are doing our best to prevent that by reviewing applications, we don't take any responsibility if something bad slips through. ") +
-                  i18n.tr("Use this at your own risk.")
 
             signal accepted();
             signal rejected();
+
+            Label {
+                anchors { left: parent.left; right: parent.right }
+                wrapMode: Text.WordWrap
+                maximumLineCount: Number.MAX_VALUE
+                text: i18n.tr("Open Store allows installing unconfined applications. Please make sure that you know about the implications of that.")
+            }
+
+            Label {
+                anchors { left: parent.left; right: parent.right }
+                wrapMode: Text.WordWrap
+                maximumLineCount: Number.MAX_VALUE
+                text: i18n.tr("An unconfined application has the ability to break the system, reduce its performance and/or spy on you.")
+            }
+
+            Label {
+                anchors { left: parent.left; right: parent.right }
+                wrapMode: Text.WordWrap
+                maximumLineCount: Number.MAX_VALUE
+                text: i18n.tr("While we are doing our best to prevent that by reviewing applications, we don't take any responsibility if something bad slips through.")
+            }
+
+            Label {
+                anchors { left: parent.left; right: parent.right }
+                wrapMode: Text.WordWrap
+                maximumLineCount: Number.MAX_VALUE
+                text: i18n.tr("Use this at your own risk.")
+            }
 
             Button {
                 text: i18n.tr("Okay. Got it! I'll be careful.")
@@ -346,7 +370,7 @@ MainView {
         id: installQuestion
         Dialog {
             id: installQuestionDialog
-            title: i18n.tr("Install package?")
+            title: i18n.tr("Install app?")
             text: i18n.tr("Do you want to install %1?").arg(fileName)
 
             property string fileName
@@ -377,8 +401,8 @@ MainView {
         id: installedConfirmation
         Dialog {
             id: installedConfirmationDialog
-            title: i18n.tr("Package installed")
-            text: i18n.tr("The package has been installed successfully.")
+            title: i18n.tr("App installed")
+            text: i18n.tr("The app has been installed successfully.")
             Button {
                 color: UbuntuColors.blue
                 text: i18n.tr("OK")

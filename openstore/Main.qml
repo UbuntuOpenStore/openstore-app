@@ -94,10 +94,11 @@ MainView {
     QtObject {
         id: categories
 
-        property string categoriesApiEndPoint: "https://open.uappexplorer.com/api/v1/categories"
+        property string categoriesApiEndPoint: "https://open.uappexplorer.com/api/v1/categories?lang=" + Qt.locale().name
         property var list
 
         Component.onCompleted: {
+            console.log("fetching categories from:", categories.categoriesApiEndPoint)
             var doc = new XMLHttpRequest();
             doc.onreadystatechange = function() {
                 if (doc.readyState == 4 && doc.status == 200) {

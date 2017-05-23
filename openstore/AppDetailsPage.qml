@@ -24,7 +24,7 @@ import OpenStore 1.0
 Page {
     id: appDetailsPage
     header: PageHeader {
-        title: app ? app.name : "App details"
+        title: app ? app.name : i18n.tr("App details")
         automaticHeight: false
     }
 

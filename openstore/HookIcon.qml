@@ -34,7 +34,7 @@ Icon {
                             name: "stock_application"
                         }
                         Label {
-                            text: "Application"
+                            text: i18n.tr("Application")
                             Layout.fillWidth: true
                         }
                     }
@@ -47,7 +47,7 @@ Icon {
                             name: "search"
                         }
                         Label {
-                            text: "Scope"
+                            text: i18n.tr("Scope")
                             Layout.fillWidth: true
                         }
                     }
@@ -60,7 +60,8 @@ Icon {
                             name: "stock_website"
                         }
                         Label {
-                            text: "URL Handler"
+                            // TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
+                            text: i18n.tr("URL Handler")
                             Layout.fillWidth: true
                         }
                     }
@@ -73,7 +74,8 @@ Icon {
                             name: "share"
                         }
                         Label {
-                            text: "Content Hub Handler"
+                            // TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
+                            text: i18n.tr("Content Hub Handler")
                             Layout.fillWidth: true
                         }
                     }
@@ -86,7 +88,8 @@ Icon {
                             name: "notification"
                         }
                         Label {
-                            text: "Push Helper"
+                            // TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
+                            text: i18n.tr("Push Helper")
                             Layout.fillWidth: true
                         }
                     }
@@ -99,7 +102,8 @@ Icon {
                             name: "contact-group"
                         }
                         Label {
-                            text: "Accounts provider"
+                            // TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
+                            text: i18n.tr("Accounts provider")
                             Layout.fillWidth: true
                         }
                     }

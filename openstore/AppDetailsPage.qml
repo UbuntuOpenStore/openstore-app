@@ -90,7 +90,7 @@ Page {
                         visible: app.installed
                         color: UbuntuColors.red
                         onClicked: {
-                            appModel.installer.removePackage(app.appId, app.version)
+                            appModel.installer.removePackage(app.appId, app.installedVersion)
                         }
                     }
                 }

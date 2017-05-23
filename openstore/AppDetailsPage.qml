@@ -98,7 +98,7 @@ Page {
                         onClicked: {
                             var popup = PopupUtils.open(removeQuestion, root, {pkgName: app.name || "<i>" + i18n.tr("unknown") + "</i>" });
                             popup.accepted.connect(function() {
-                                appModel.installer.removePackage(app.appId, app.version)
+                                appModel.installer.removePackage(app.appId, app.installedVersion)
                             })
                         }
                     }

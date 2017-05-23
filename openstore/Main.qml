@@ -178,7 +178,7 @@ MainView {
         Page {
             id: mainPage
             header: PageHeader {
-                title: i18n.tr("Open Store")
+                title: "OpenStore"  // This is the name of the store - no need for translation.
                 automaticHeight: false
 
                 leadingActionBar.actions: Action {
@@ -355,24 +355,48 @@ MainView {
 
         Dialog {
             id: warningDialog
-            title: "Warning"
-            text: "Open Store allows installing unconfined applications. Please make sure that you know about the implications of that. " +
-                  "An unconfined application has the ability to break the system, reduce its performance and/or spy on you. " +
-                  "While we are doing our best to prevent that by reviewing applications, we don't take any responsibility if something bad slips through. " +
-                  "Use this at your own risk."
+            title: i18n.tr("Warning")
 
             signal accepted();
             signal rejected();
 
+            Label {
+                anchors { left: parent.left; right: parent.right }
+                wrapMode: Text.WordWrap
+                maximumLineCount: Number.MAX_VALUE
+                text: i18n.tr("Open Store allows installing unconfined applications. Please make sure that you know about the implications of that.")
+            }
+
+            Label {
+                anchors { left: parent.left; right: parent.right }
+                wrapMode: Text.WordWrap
+                maximumLineCount: Number.MAX_VALUE
+                text: i18n.tr("An unconfined application has the ability to break the system, reduce its performance and/or spy on you.")
+            }
+
+            Label {
+                anchors { left: parent.left; right: parent.right }
+                wrapMode: Text.WordWrap
+                maximumLineCount: Number.MAX_VALUE
+                text: i18n.tr("While we are doing our best to prevent that by reviewing applications, we don't take any responsibility if something bad slips through.")
+            }
+
+            Label {
+                anchors { left: parent.left; right: parent.right }
+                wrapMode: Text.WordWrap
+                maximumLineCount: Number.MAX_VALUE
+                text: i18n.tr("Use this at your own risk.")
+            }
+
             Button {
-                text: "Okay. Got it! I'll be careful."
+                text: i18n.tr("Okay. Got it! I'll be careful.")
                 color: UbuntuColors.green
                 onClicked: {
                     warningDialog.accepted();
                 }
             }
             Button {
-                text: "Get me out of here!"
+                text: i18n.tr("Get me out of here!")
                 color: UbuntuColors.red
                 onClicked: {
                     warningDialog.rejected();
@@ -385,7 +409,7 @@ MainView {
         id: installQuestion
         Dialog {
             id: installQuestionDialog
-            title: "Install package?"
+            title: i18n.tr("Install app?")
             text: i18n.tr("Do you want to install %1?").arg(fileName)
 
             property string fileName
@@ -393,7 +417,7 @@ MainView {
             signal rejected();
 
             Button {
-                text: "Yes"
+                text: i18n.tr("Yes")
                 color: UbuntuColors.green
                 onClicked: {
                     installQuestionDialog.accepted();
@@ -402,7 +426,7 @@ MainView {
 
             }
             Button {
-                text: "No"
+                text: i18n.tr("No")
                 color: UbuntuColors.red
                 onClicked: {
                     installQuestionDialog.rejected();
@@ -416,11 +440,11 @@ MainView {
         id: installedConfirmation
         Dialog {
             id: installedConfirmationDialog
-            title: "Package installed"
-            text: "The package has been installed successfully."
+            title: i18n.tr("App installed")
+            text: i18n.tr("The app has been installed successfully.")
             Button {
                 color: UbuntuColors.blue
-                text: "OK"
+                text: i18n.tr("OK")
                 onClicked: PopupUtils.close(installedConfirmationDialog)
             }
         }
@@ -429,11 +453,11 @@ MainView {
         id: installationError
         Dialog {
             id: installationErrorDialog
-            title: "Installation failed"
-            text: "The package could not be installed. Make sure it is a valid click package."
+            title: i18n.tr("Installation failed")
+            text: i18n.tr("The package could not be installed. Make sure it is a valid click package.")
             Button {
                 color: UbuntuColors.orange
-                text: "OK"
+                text: i18n.tr("OK")
                 onClicked: PopupUtils.close(installationErrorDialog)
             }
         }

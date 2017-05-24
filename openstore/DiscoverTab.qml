@@ -90,7 +90,13 @@ ScrollView {
                 subtitle.textSize: Label.Small
                 subtitle.color: "white"
 
-                summary.text: highlightAppControl.appItem.installed ? highlightAppControl.appItem.updateAvailable ? i18n.tr("Update available").toUpperCase() : i18n.tr("✓ Installed").toUpperCase() : ""
+                summary.text: {
+                    if (highlightAppControl.appItem.installed)
+                        return highlightAppControl.appItem.updateAvailable ? i18n.tr("Update available").toUpperCase()
+                                                                           : i18n.tr("✓ Installed").toUpperCase()
+
+                    return ""
+                }
                 summary.textSize: Label.XSmall
                 summary.color: "white"
             }

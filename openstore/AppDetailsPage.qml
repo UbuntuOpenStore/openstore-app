@@ -581,20 +581,21 @@ Page {
             signal rejected();
 
             Button {
-                text: i18n.tr("Cancel")
-                onClicked: {
-                    removeQuestionDialog.rejected();
-                    PopupUtils.close(removeQuestionDialog)
-                }
-
-            }
-            Button {
                 text: i18n.tr("Remove")
                 color: UbuntuColors.red
                 onClicked: {
                     removeQuestionDialog.accepted();
                     PopupUtils.close(removeQuestionDialog)
                 }
+            }
+
+            Button {
+                text: i18n.tr("Cancel")
+                onClicked: {
+                    removeQuestionDialog.rejected();
+                    PopupUtils.close(removeQuestionDialog)
+                }
+
             }
         }
     }

@@ -17,6 +17,7 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.ListItems 1.3
+import Ubuntu.Components.Popups 1.3
 import QtQuick.Layouts 1.1
 import OpenStore 1.0
 
@@ -35,6 +36,9 @@ Page {
         id: scrollView
         anchors.fill: parent
         anchors.topMargin: parent.header.height
+
+        // WORKAROUND: Fix for wrong grid unit size
+        Component.onCompleted: root.flickable_responsive_scroll_fix(scrollView.flickableItem)
 
         Column {
             id: mainColumn
@@ -76,6 +80,7 @@ Page {
 
                     Button {
                         Layout.fillWidth: true
+                        Layout.maximumWidth: buttonsRow.width > units.gu(60) ? units.gu(24) : buttonsRow.width
                         text: app.installed ? i18n.tr("Upgrade") : i18n.tr("Install")
                         visible: !app.installed || (app.installed && app.installedVersion < app.version)
                         color: UbuntuColors.green
@@ -86,11 +91,15 @@ Page {
 
                     Button {
                         Layout.fillWidth: true
+                        Layout.maximumWidth: buttonsRow.width > units.gu(60) ? units.gu(24) : buttonsRow.width
                         text: i18n.tr("Remove")
                         visible: app.installed
                         color: UbuntuColors.red
                         onClicked: {
-                            appModel.installer.removePackage(app.appId, app.installedVersion)
+                            var popup = PopupUtils.open(removeQuestion, root, {pkgName: app.name || "<i>" + i18n.tr("unknown") + "</i>" });
+                            popup.accepted.connect(function() {
+                                appModel.installer.removePackage(app.appId, app.installedVersion)
+                            })
                         }
                     }
                 }
@@ -489,6 +498,7 @@ Page {
 
                             title.text: i18n.tr("Permissions")
                             subtitle.maximumLineCount: Number.MAX_VALUE
+                            subtitle.wrapMode: Text.WordWrap
                             subtitle.text: {
                                 if (permissions) {
                                     return permissions.replace("bluetooth", "<font color=\"#ED3146\">bluetooth</font>")
@@ -524,6 +534,7 @@ Page {
                             title.text: i18n.tr("Read paths")
                             subtitle.text: readpaths || "<i>" + i18n.tr("none") + "</i>"
                             subtitle.maximumLineCount: Number.MAX_VALUE
+                            subtitle.wrapMode: Text.WrapAtWordBoundaryOrAnywhere
                         }
 
                         ListItemLayout {
@@ -541,6 +552,7 @@ Page {
                             title.text: i18n.tr("Write paths")
                             subtitle.text: writepaths || "<i>" + i18n.tr("none") + "</i>"
                             subtitle.maximumLineCount: Number.MAX_VALUE
+                            subtitle.wrapMode: Text.WrapAtWordBoundaryOrAnywhere
                         }
 
                         Button {
@@ -555,6 +567,39 @@ Page {
             }
         }
     }
+
+
+    Component {
+        id: removeQuestion
+        Dialog {
+            id: removeQuestionDialog
+            title: i18n.tr("Remove package")
+            text: i18n.tr("Do you want to remove %1?").arg(pkgName)
+
+            property string pkgName
+            signal accepted();
+            signal rejected();
+
+            Button {
+                text: i18n.tr("Remove")
+                color: UbuntuColors.red
+                onClicked: {
+                    removeQuestionDialog.accepted();
+                    PopupUtils.close(removeQuestionDialog)
+                }
+            }
+
+            Button {
+                text: i18n.tr("Cancel")
+                onClicked: {
+                    removeQuestionDialog.rejected();
+                    PopupUtils.close(removeQuestionDialog)
+                }
+
+            }
+        }
+    }
+
 
     function printSize(size) {
         var s

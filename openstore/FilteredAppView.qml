@@ -38,6 +38,10 @@ ScrollView {
 
     ListView {
         id: view
+
+        // WORKAROUND: Fix for wrong grid unit size
+        Component.onCompleted: root.flickable_responsive_scroll_fix(view)
+
         model: SortFilterModel {
             id: sortedFilteredAppModel
 
@@ -66,6 +70,7 @@ ScrollView {
                 id: layout
                 title.text: model.name
                 summary.text: model.tagline
+                summary.wrapMode: Text.WrapAtWordBoundaryOrAnywhere
 
                 UbuntuShape {
                     SlotsLayout.position: SlotsLayout.Leading

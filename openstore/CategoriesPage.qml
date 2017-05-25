@@ -22,10 +22,6 @@ Page {
 
     header: PageHeader {
         title: i18n.tr("Categories")
-        leadingActionBar.actions: Action {
-            iconName: "close"
-            onTriggered: categoryPage.pageStack.removePages(categoryPage)
-        }
     }
 
     signal categoryClicked(var name, var code)
@@ -46,6 +42,10 @@ Page {
         ListView {
             id: categoryView
             anchors.fill: parent
+
+            // WORKAROUND: Fix for wrong grid unit size
+            Component.onCompleted: root.flickable_responsive_scroll_fix(categoryView)
+
             model: categories.list
             delegate: ListItem {
                 onClicked: categoryPage.categoryClicked(modelData, modelData)

@@ -52,6 +52,9 @@ ScrollView {
         id: view
         anchors.fill: parent
 
+        // WORKAROUND: Fix for wrong grid unit size
+        Component.onCompleted: root.flickable_responsive_scroll_fix(view)
+
         header: AbstractButton {
             id: highlightAppControl
             property var appItem: storeModel.app(storeModel.findApp(discoverData.highlight.id))
@@ -86,6 +89,16 @@ ScrollView {
                 subtitle.text: highlightAppControl.appItem.tagline || highlightAppControl.appItem.description
                 subtitle.textSize: Label.Small
                 subtitle.color: "white"
+
+                summary.text: {
+                    if (highlightAppControl.appItem.installed)
+                        return highlightAppControl.appItem.updateAvailable ? i18n.tr("Update available").toUpperCase()
+                                                                           : i18n.tr("✓ Installed").toUpperCase()
+
+                    return ""
+                }
+                summary.textSize: Label.XSmall
+                summary.color: "white"
             }
         }
 
@@ -106,6 +119,7 @@ ScrollView {
                     anchors.centerIn: parent
                     title.text: modelData.name
                     subtitle.text: modelData.tagline
+                    subtitle.wrapMode: Text.WordWrap
 
                     ProgressionSlot {
                         visible: modelData.referral != ""
@@ -163,7 +177,7 @@ ScrollView {
                                 textSize: Label.XSmall
                             }
 
-                            summary.text: appDel.appItem.installed ? appDel.appItem.updateAvailable ? i18n.tr("Update available") : i18n.tr("Installed") : ""
+                            summary.text: appDel.appItem.installed ? appDel.appItem.updateAvailable ? i18n.tr("Update available").toUpperCase() : i18n.tr("✓ Installed").toUpperCase() : ""
                             summary.textSize: Label.XSmall
                         }
                     }

@@ -25,6 +25,7 @@ import QtQml.Models 2.1
 MainView {
     id: root
     applicationName: "openstore.openstore-team"
+    anchorToKeyboard: true
 
     width: units.gu(40)
     height: units.gu(75)
@@ -136,6 +137,44 @@ MainView {
         id: pageStack
         anchors.fill: parent
         primaryPage: mainPage
+
+        layouts: [
+            // Span two columns only on BQ M10 - landscape mode.
+            PageColumnsLayout {
+                when: width > units.gu(120)
+                PageColumn {
+                    minimumWidth: units.gu(40)
+                    maximumWidth: units.gu(120)
+                    preferredWidth: units.gu(60)
+                }
+                PageColumn {
+                    // FIXME: 'minimumWidth' is not useful if first column get resized by user.
+                    // This is an upstream bug in UITK.
+                    minimumWidth: units.gu(40)
+                    fillWidth: true
+                }
+            },
+
+            PageColumnsLayout {
+                when: width > units.gu(120)
+                PageColumn {
+                    minimumWidth: units.gu(40)
+                    maximumWidth: units.gu(80)
+                    preferredWidth: units.gu(60)
+                }
+                PageColumn {
+                    fillWidth: true
+                }
+            },
+
+            PageColumnsLayout {
+                when: true
+                PageColumn {
+                    fillWidth: true
+                }
+            }
+        ]
+
 
         Page {
             id: mainPage
@@ -423,6 +462,15 @@ MainView {
                 onClicked: PopupUtils.close(installationErrorDialog)
             }
         }
+    }
+
+    // *** WORKAROUNDS ***
+
+    // Placed in MainView for convenience.
+    function flickable_responsive_scroll_fix(flickable) {
+        // WORKAROUND: Fix for wrong grid unit size
+        flickable.flickDeceleration = 1500 * units.gridUnit / 8
+        flickable.maximumFlickVelocity = 2500 * units.gridUnit / 8
     }
 }
 

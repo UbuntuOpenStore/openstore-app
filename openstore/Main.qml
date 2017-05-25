@@ -365,7 +365,7 @@ MainView {
                 anchors { left: parent.left; right: parent.right }
                 wrapMode: Text.WordWrap
                 maximumLineCount: Number.MAX_VALUE
-                text: i18n.tr("Open Store allows installing unconfined applications. Please make sure that you know about the implications of that.")
+                text: i18n.tr("OpenStore allows installing unconfined applications. Please make sure that you know about the implications of that.")
             }
 
             Label {
@@ -418,7 +418,7 @@ MainView {
             signal rejected();
 
             Button {
-                text: i18n.tr("Yes")
+                text: i18n.tr("Install")
                 color: UbuntuColors.green
                 onClicked: {
                     installQuestionDialog.accepted();
@@ -427,8 +427,7 @@ MainView {
 
             }
             Button {
-                text: i18n.tr("No")
-                color: UbuntuColors.red
+                text: i18n.tr("Cancel")
                 onClicked: {
                     installQuestionDialog.rejected();
                     PopupUtils.close(installQuestionDialog)
@@ -473,4 +472,3 @@ MainView {
         flickable.maximumFlickVelocity = 2500 * units.gridUnit / 8
     }
 }
-

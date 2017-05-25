@@ -96,7 +96,7 @@ Page {
                         visible: app.installed
                         color: UbuntuColors.red
                         onClicked: {
-                            var popup = PopupUtils.open(removeQuestion, root, {pkgName: app.name || "<i>" + i18n.tr("unknown") + "</i>" });
+                            var popup = PopupUtils.open(removeQuestion, root, {pkgName: app.name || app.id});
                             popup.accepted.connect(function() {
                                 appModel.installer.removePackage(app.appId, app.installedVersion)
                             })
@@ -284,7 +284,7 @@ Page {
                     subtitle.textSize: Label.Small
                     subtitle.wrapMode: Text.WordWrap
                     subtitle.maximumLineCount: showAll ? Number.MAX_VALUE : 5
-                    
+
                     Icon {
                         width: units.gu(2); height: width
                         SlotsLayout.position: SlotsLayout.Last
@@ -292,7 +292,7 @@ Page {
                     }
                 }
             }
-            
+
             ListItem {
                 divider.visible: false
                 ListItemLayout {
@@ -310,7 +310,7 @@ Page {
                     subtitle.text: app.installedVersion || "None"
                 }
             }
-            
+
             ListItem {
                 divider.visible: false
                 ListItemLayout {
@@ -320,13 +320,13 @@ Page {
                     subtitle.text: app.version
                 }
             }
-            
+
             ListItem {
                 divider.visible: false
                 ListItemLayout {
                     anchors.centerIn: parent
-                    title.text: i18n.tr("License") || "<i>" + i18n.tr("N/A") + "</i>"
-                    subtitle.text: app.license
+                    title.text: i18n.tr("License")
+                    subtitle.text: app.license || "<i>" + i18n.tr("N/A") + "</i>"
                 }
             }
 
@@ -334,7 +334,7 @@ Page {
                 onClicked: Qt.openUrlExternally(app.source)
                 ListItemLayout {
                     anchors.centerIn: parent
-                    title.text: i18n.tr("Source Code") || "<i>" + i18n.tr("N/A") + "</i>"
+                    title.text: i18n.tr("Source Code")
                     subtitle.text: app.source
                     ProgressionSlot { visible: app.source }
                 }
@@ -514,6 +514,7 @@ Page {
                                                       .replace("video_files", "<font color=\"#ED3146\">music_files_read</font>")
                                 }
 
+                                // TRANSLATORS: this will show when an app doesn't need any special permissions
                                 return "<i>" + i18n.tr("none required") + "</i>"
                             }
                         }
@@ -532,7 +533,7 @@ Page {
                             }
 
                             title.text: i18n.tr("Read paths")
-                            subtitle.text: readpaths || "<i>" + i18n.tr("none") + "</i>"
+                            subtitle.text: readpaths
                             subtitle.maximumLineCount: Number.MAX_VALUE
                             subtitle.wrapMode: Text.WrapAtWordBoundaryOrAnywhere
                         }
@@ -550,7 +551,7 @@ Page {
                             }
 
                             title.text: i18n.tr("Write paths")
-                            subtitle.text: writepaths || "<i>" + i18n.tr("none") + "</i>"
+                            subtitle.text: writepaths
                             subtitle.maximumLineCount: Number.MAX_VALUE
                             subtitle.wrapMode: Text.WrapAtWordBoundaryOrAnywhere
                         }

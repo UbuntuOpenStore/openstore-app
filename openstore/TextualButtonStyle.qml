@@ -41,26 +41,16 @@ Component {
                 name: action.iconName
                 source: action.iconSource
                 visible: (name != "") || (source != "")
-                color: {
-                    if (button.enabled)
-                        return text === i18n.tr("Pick") ? theme.palette.selected.backgroundText : theme.palette.normal.backgroundText
-
-                    return theme.palette.disabled.backgroundText
-                }
+                color: button.enabled ? theme.palette.normal.backgroundText : theme.palette.disabled.backgroundText
             }
             Label {
                 anchors.verticalCenter: parent.verticalCenter
                 text: action.text
-                font.weight: text === i18n.tr("Pick") ? Font.Normal : Font.Light
+                font.weight: Font.Light
                 // Hide text from overflow button of ActionBar
                 visible: text !== "More"
                 width: visible ? paintedWidth : 0
-                color: {
-                    if (button.enabled)
-                        return text === i18n.tr("Pick") ? theme.palette.selected.backgroundText : theme.palette.normal.backgroundText
-
-                    return theme.palette.disabled.backgroundText
-                }
+                color: button.enabled ? theme.palette.normal.backgroundText : theme.palette.disabled.backgroundText
             }
         }
     }

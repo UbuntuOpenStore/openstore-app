@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-25 13:35+0000\n"
-"PO-Revision-Date: 2017-07-05 08:08+0000\n"
+"PO-Revision-Date: 2017-07-05 08:15+0000\n"
 "Last-Translator: Sander <sander.k1007@kpnmail.nl>\n"
 "Language-Team: Dutch <https://ubpweblate.tnvcomp.com/projects/openstore"
 "/openstore-app/nl/>\n"
@@ -55,7 +55,7 @@ msgstr "Wat is er nieuw"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:300
 msgid "Packager/Publisher"
-msgstr "Packager/Publisher"
+msgstr "Packager/Uitgever"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:301
 msgid "OpenStore team"
@@ -259,8 +259,8 @@ msgid ""
 "performance and/or spy on you."
 msgstr ""
 "Een niet gecontroleerde app kan er voor zorgen dat het systeem niet meer "
-"functioneerd, de prestaties verminderen en of ongewild informatie "
-"doorstuurt / opslaat."
+"functioneert, de prestaties verminderen en/of ongewild informatie "
+"doorsturen/opslaan."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:382
 msgid ""
@@ -313,7 +313,7 @@ msgstr "Installatie mislukt"
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
-"Dit pakket kon niet worden geinstalleerd. Is dit wel een juist click pakket?"
+"Dit pakket kon niet worden geïnstalleerd. Is dit wel een juist click pakket?"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/SearchPage.qml:60
 msgid "Search in OpenStore..."

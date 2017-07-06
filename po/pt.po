@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-25 13:35+0000\n"
-"PO-Revision-Date: 2017-07-05 08:57+0000\n"
+"PO-Revision-Date: 2017-07-06 12:05+0000\n"
 "Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
 "Language-Team: Portuguese <https://ubpweblate.tnvcomp.com/projects/openstore"
 "/openstore-app/pt/>\n"
@@ -41,8 +41,8 @@ msgstr "Remover"
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:135
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
-"Esta app tem acesso restrito às informações de sistema, ver em baixo os "
-"detalhes."
+"Esta aplicação tem acesso restrito às informações de sistema, ver em baixo "
+"os detalhes."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:260
 msgid "Description"
@@ -91,7 +91,7 @@ msgstr "Mais de %1"
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:385
 #, qt-format
 msgid "Other apps in %1"
-msgstr "Outras apps em %1"
+msgstr "Outras aplicações em %1"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:391
 msgid "Package contents"
@@ -227,7 +227,7 @@ msgstr "Explorar"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:200
 msgid "My Apps"
-msgstr "As minhas apps"
+msgstr "As minhas aplicações"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:294
 msgid "Available updates"

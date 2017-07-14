@@ -8,15 +8,18 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-25 13:35+0000\n"
-"PO-Revision-Date: 2017-05-25 09:36+0000\n"
-"Last-Translator: Michal Predotka <mpredotka@gmail.com>\n"
-"Language-Team: Polish <pl@li.org>\n"
+"PO-Revision-Date: 2017-07-14 14:55+0000\n"
+"Last-Translator: Andrzej Stamburski <stambur@wp.pl>\n"
+"Language-Team: Polish <https://ubpweblate.tnvcomp.com/projects/openstore"
+"/openstore-app/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.15\n"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
-"X-Generator: Launchpad (build 18391)\n"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:28
 msgid "App details"
@@ -51,7 +54,7 @@ msgstr "Co nowego"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:300
 msgid "Packager/Publisher"
-msgstr ""
+msgstr "Programista/Wydawca"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:301
 msgid "OpenStore team"
@@ -104,7 +107,7 @@ msgstr "Uprawnienia"
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:518
 msgid "none required"
-msgstr ""
+msgstr "niewymagane"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:535
 msgid "Read paths"
@@ -170,7 +173,7 @@ msgstr "✓ Zainstalowane"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:106
 msgid "Nothing here yet"
-msgstr ""
+msgstr "Niczego nie znaleziono"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:106
 msgid "No results found."
@@ -178,15 +181,15 @@ msgstr "Brak wyników."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:107
 msgid "No app has been released in this category yet."
-msgstr ""
+msgstr "Nie ma aplikacji w tej kategorii."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:107
 msgid "Try with a different search."
-msgstr ""
+msgstr "Spróbuj z innym tekstem do wyszukania."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:37
 msgid "Application"
-msgstr ""
+msgstr "Aplikacja"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:50
 msgid "Scope"
@@ -215,7 +218,7 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:193
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/SearchPage.qml:29
 msgid "Search"
-msgstr ""
+msgstr "Wyszukaj"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:200
 msgid "Discover"
@@ -273,7 +276,7 @@ msgstr "Zabierz mnie stąd!"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:413
 msgid "Install app?"
-msgstr ""
+msgstr "Zainstalować aplikację?"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:414
 #, qt-format
@@ -282,16 +285,16 @@ msgstr "Zainstalować %1?"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:443
 msgid "App installed"
-msgstr ""
+msgstr "Aplikacja została zainstalowana"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:444
 msgid "The app has been installed successfully."
-msgstr ""
+msgstr "Ta aplikacja została zainstalowana pomyślnie."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:447
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:460
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:456
 msgid "Installation failed"
@@ -301,6 +304,8 @@ msgstr "Instalacja nieudana"
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
+"Ten plik nie może być zainstalowany. Upewnij się, że to jest prawidłowy plik "
+"typu click."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/SearchPage.qml:60
 msgid "Search in OpenStore..."

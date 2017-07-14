@@ -1,0 +1,305 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-25 13:35+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:28
+msgid "App details"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:84
+msgid "Upgrade"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:84
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:421
+msgid "Install"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:95
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:585
+msgid "Remove"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:135
+msgid "This app has access to restricted system data, see below for details."
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:260
+msgid "Description"
+msgstr ""
+
+#. TRANSLATORS: Title of the changelog section
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:282
+msgid "What's New"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:300
+msgid "Packager/Publisher"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:301
+msgid "OpenStore team"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:309
+msgid "Installed version"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:319
+msgid "Latest available version"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:328
+msgid "License"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:329
+msgid "N/A"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:337
+msgid "Source Code"
+msgstr ""
+
+#. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:361
+#, qt-format
+msgid "More from %1"
+msgstr ""
+
+#. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:385
+#, qt-format
+msgid "Other apps in %1"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:391
+msgid "Package contents"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:471
+msgid "AppArmor profile"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:499
+msgid "Permissions"
+msgstr ""
+
+#. TRANSLATORS: this will show when an app doesn't need any special permissions
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:518
+msgid "none required"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:535
+msgid "Read paths"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:553
+msgid "Write paths"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:577
+msgid "Remove package"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:578
+#, qt-format
+msgid "Do you want to remove %1?"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:594
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:430
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/SearchPage.qml:37
+msgid "Cancel"
+msgstr ""
+
+#. TRANSLATORS: %1 is the size of a file, expressed in GB
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:611
+#, qt-format
+msgid "%1 GB"
+msgstr ""
+
+#. TRANSLATORS: %1 is the size of a file, expressed in MB
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:616
+#, qt-format
+msgid "%1 MB"
+msgstr ""
+
+#. TRANSLATORS: %1 is the size of a file, expressed in kB
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:621
+#, qt-format
+msgid "%1 kB"
+msgstr ""
+
+#. TRANSLATORS: %1 is the size of a file, expressed in bytes
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:624
+#, qt-format
+msgid "%1 bytes"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/CategoriesPage.qml:24
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:187
+msgid "Categories"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/DiscoverTab.qml:95
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/DiscoverTab.qml:180
+msgid "Update available"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/DiscoverTab.qml:96
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/DiscoverTab.qml:180
+msgid "✓ Installed"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:106
+msgid "Nothing here yet"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:106
+msgid "No results found."
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:107
+msgid "No app has been released in this category yet."
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:107
+msgid "Try with a different search."
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:37
+msgid "Application"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:50
+msgid "Scope"
+msgstr ""
+
+#. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:64
+msgid "URL Handler"
+msgstr ""
+
+#. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:78
+msgid "Content Hub Handler"
+msgstr ""
+
+#. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:92
+msgid "Push Helper"
+msgstr ""
+
+#. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:106
+msgid "Accounts provider"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:193
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/SearchPage.qml:29
+msgid "Search"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:200
+msgid "Discover"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:200
+msgid "My Apps"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:294
+msgid "Available updates"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:294
+msgid "Installed apps"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:312
+msgid "Fetching package list..."
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:359
+msgid "Warning"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:368
+msgid ""
+"OpenStore allows installing unconfined applications. Please make sure that "
+"you know about the implications of that."
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:375
+msgid ""
+"An unconfined application has the ability to break the system, reduce its "
+"performance and/or spy on you."
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:382
+msgid ""
+"While we are doing our best to prevent that by reviewing applications, we "
+"don't take any responsibility if something bad slips through."
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:389
+msgid "Use this at your own risk."
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:393
+msgid "Okay. Got it! I'll be careful."
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:400
+msgid "Get me out of here!"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:413
+msgid "Install app?"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:414
+#, qt-format
+msgid "Do you want to install %1?"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:443
+msgid "App installed"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:444
+msgid "The app has been installed successfully."
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:447
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:460
+msgid "OK"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:456
+msgid "Installation failed"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:457
+msgid ""
+"The package could not be installed. Make sure it is a valid click package."
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/trunk/openstore/SearchPage.qml:60
+msgid "Search in OpenStore..."
+msgstr ""

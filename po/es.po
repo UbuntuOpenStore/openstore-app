@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-25 13:35+0000\n"
-"PO-Revision-Date: 2017-07-17 10:10+0000\n"
+"PO-Revision-Date: 2017-07-17 10:30+0000\n"
 "Last-Translator: advocatux <advocatux@airpost.net>\n"
 "Language-Team: Spanish <https://ubpweblate.tnvcomp.com/projects/openstore"
 "/openstore-app/es/>\n"
@@ -59,7 +59,7 @@ msgstr "Empaquetador/Publicador"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:301
 msgid "OpenStore team"
-msgstr "Equipo de Openstore"
+msgstr "Equipo de OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:309
 msgid "Installed version"
@@ -170,11 +170,11 @@ msgstr "Actualización disponible"
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/DiscoverTab.qml:96
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/DiscoverTab.qml:180
 msgid "✓ Installed"
-msgstr "Instalado"
+msgstr "✓ Instalado"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:106
 msgid "Nothing here yet"
-msgstr "No hay nada aquí aun."
+msgstr "No hay nada aquí aún"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:106
 msgid "No results found."
@@ -186,7 +186,7 @@ msgstr "Ninguna aplicación ha sido publicada en esta categoría aún."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:107
 msgid "Try with a different search."
-msgstr "Inténtelo con una búsqueda diferente"
+msgstr "Pruebe con una búsqueda diferente."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:37
 msgid "Application"
@@ -219,11 +219,11 @@ msgstr "Proveedor de cuentas"
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:193
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/SearchPage.qml:29
 msgid "Search"
-msgstr "Búsqueda"
+msgstr "Buscar"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:200
 msgid "Discover"
-msgstr "Descubra"
+msgstr "Descubrir"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:200
 msgid "My Apps"
@@ -239,7 +239,7 @@ msgstr "Aplicaciones instaladas"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:312
 msgid "Fetching package list..."
-msgstr "Obteniendo lista de paquetes"
+msgstr "Obteniendo la lista de paquetes..."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:359
 msgid "Warning"
@@ -259,7 +259,7 @@ msgid ""
 "performance and/or spy on you."
 msgstr ""
 "Una aplicación no confinada puede romper su sistema, reducir su rendimiento "
-"o espiarle."
+"y/o espiarle."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:382
 msgid ""
@@ -271,7 +271,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:389
 msgid "Use this at your own risk."
-msgstr "Úselo bajo su responsabilidad"
+msgstr "Use esto bajo su responsabilidad."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:393
 msgid "Okay. Got it! I'll be careful."

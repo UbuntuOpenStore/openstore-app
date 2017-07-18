@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-25 13:35+0000\n"
-"PO-Revision-Date: 2017-07-05 06:54+0000\n"
-"Last-Translator: Weblate Admin <flori-weblate@bin.org.in>\n"
+"PO-Revision-Date: 2017-07-18 19:29+0000\n"
+"Last-Translator: Fabian Klebig <fabianklebig@mailbox.org>\n"
 "Language-Team: German <https://ubpweblate.tnvcomp.com/projects/openstore"
 "/openstore-app/de/>\n"
 "Language: de\n"
@@ -185,7 +185,7 @@ msgstr "In dieser Kategorie wurde bisher keine App veröffentlicht."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:107
 msgid "Try with a different search."
-msgstr "Versuchen Sie mit neuem Suchbegriff."
+msgstr "Versuchen Sie es mit einem neuem Suchbegriff."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:37
 msgid "Application"

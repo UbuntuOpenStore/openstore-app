@@ -87,7 +87,7 @@ Page {
                 }
 
                 onClicked: {
-                    appModel.packageDetailsReady.connect(slot_packageDetailsReady)
+                    appModel.packageDetailsReady.connect(slot_installedPackageDetailsReady)
                     appModel.showPackageDetails(model.appId)
                 }
             }

@@ -19,18 +19,31 @@
 #include <QQuickView>
 #include <QQmlContext>
 
+#include "platformintegration.h"
 #include "clickinstaller.h"
-#include "appmodel.h"
-#include "serviceregistry.h"
+#include "searchmodel.h"
+#include "categoriesmodel.h"
+#include "packagesmodel.h"
+#include "discovermodel.h"
+
+static QObject *registerPlatformIntegrationSingleton (QQmlEngine * /*engine*/, QJSEngine * /*scriptEngine*/)
+{
+    return PlatformIntegration::instance();
+}
+
+// TODO: We might want to set a custom NetworkAccessManagerFactory, in order to cache images and reduce data usage.
 
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
-    qmlRegisterType<ClickInstaller>("OpenStore", 1, 0, "ClickInstaller");
-    qmlRegisterType<AppModel>("OpenStore", 1, 0, "AppModel");
-    qmlRegisterType<ServiceRegistry>("OpenStore", 1, 0, "ServiceRegistry");
-    qmlRegisterUncreatableType<ApplicationItem>("OpenStore", 1, 0, "ApplicationItem", "Don't!");
+    qmlRegisterSingletonType<PlatformIntegration>("OpenStore", 1, 0, "PlatformIntegration", registerPlatformIntegrationSingleton);
+    qmlRegisterUncreatableType<ClickInstaller>("OpenStore", 1, 0, "ClickInstaller", "Access ClickInstall from the PlatformIntegration singleton");
+    qmlRegisterType<PackagesModel>("OpenStore", 1, 0, "AppModel");
+    qmlRegisterType<DiscoverModel>("OpenStore", 1, 0, "DiscoverModel");
+    qmlRegisterType<SearchModel>("OpenStore", 1, 0, "SearchModel");
+    qmlRegisterType<CategoriesModel>("OpenStore", 1, 0, "CategoriesModel");
+    qmlRegisterUncreatableType<PackageItem>("OpenStore", 1, 0, "PackageItem", "PackageItem is only available through AppModel, DiscoverModel, or SearchModel.");
 
     QQuickView view;
 

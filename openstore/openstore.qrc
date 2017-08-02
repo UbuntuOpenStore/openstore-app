@@ -2,13 +2,23 @@
     <qresource prefix="/">
         <file>Main.qml</file>
         <file>AppDetailsPage.qml</file>
-        <file>HookIcon.qml</file>
         <file>DiscoverTab.qml</file>
-        <file>CategoriesPage.qml</file>
+        <file>CategoriesTab.qml</file>
         <file>FilteredAppView.qml</file>
-        <file>EmptyState.qml</file>
-        <file>SectionDivider.qml</file>
-        <file>SearchPage.qml</file>
-        <file>TextualButtonStyle.qml</file>
+        <file>InstalledAppsTab.qml</file>
+        <file>Components/BottomNavigationBar.qml</file>
+        <file>Components/EmptyState.qml</file>
+        <file>Components/SectionDivider.qml</file>
+        <file>MainPage.qml</file>
+        <file>SearchTab.qml</file>
+        <file>Components/HookIcon.qml</file>
+        <file>Components/LeftNavigationBar.qml</file>
+        <file>Components/ConvergentTabView.qml</file>
+        <file>Components/BottomEdgePageStack.qml</file>
+        <file>Components/TextualButtonStyle.qml</file>
+        <file>Components/OpenStoreCarousel.qml</file>
+        <file>Components/PackageTile.qml</file>
+        <file>Components/PackageListItem.qml</file>
+        <file>Components/ScreenshotImage.qml</file>
     </qresource>
 </RCC>

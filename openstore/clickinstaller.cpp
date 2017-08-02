@@ -30,7 +30,6 @@ ClickInstaller::ClickInstaller(QObject *parent) :
     m_download(0)
 {
     m_nam = new QNetworkAccessManager(this);
-
 }
 
 bool ClickInstaller::busy() const
@@ -74,6 +73,17 @@ void ClickInstaller::removePackage(const QString &appId, const QString &version)
     connect(m_installerProcess, SIGNAL(stateChanged(QProcess::ProcessState)), this, SLOT(processStatusChanged(QProcess::ProcessState)));
     m_installerProcess->start("pkcon", QStringList() << "remove" << appId + ";" + version + ";all;local:click");
     Q_EMIT busyChanged();
+}
+
+bool ClickInstaller::abortInstallation() const
+{
+    if (busy() && m_download) {
+        m_download->abort();
+        return true;
+    }
+
+    // else
+    return false;
 }
 
 void ClickInstaller::fetchPackage(const QString &packageUrl)
@@ -145,21 +155,23 @@ void ClickInstaller::downloadFinished()
 {
     qDebug() << "finished" << m_download->error() << m_download->errorString() << m_download->attribute(QNetworkRequest::RedirectionTargetAttribute);
 
-    m_file.write(m_download->readAll());
-    m_file.close();
+    if (m_download->error() != QNetworkReply::OperationCanceledError) {
+        m_file.write(m_download->readAll());
+        m_file.close();
+
+        if (!m_download->attribute(QNetworkRequest::RedirectionTargetAttribute).toString().isEmpty()) {
+            qDebug() << "fetching new url:" << m_download->attribute(QNetworkRequest::RedirectionTargetAttribute).toString();
+            fetchPackage(m_download->attribute(QNetworkRequest::RedirectionTargetAttribute).toUrl().toString());
+        } else {
+            qDebug() << "Package fetched. Starting installation";
+            installLocalPackage(m_file.fileName());
+        }
+    }
+
+    Q_EMIT downloadProgressChanged();
 
     m_download->deleteLater();
+    m_download = 0;
 
-    //QByteArray data = reply->readAll();
-
-    if (!m_download->attribute(QNetworkRequest::RedirectionTargetAttribute).toString().isEmpty()) {
-        qDebug() << "fetching new url:" << m_download->attribute(QNetworkRequest::RedirectionTargetAttribute).toString();
-        fetchPackage(m_download->attribute(QNetworkRequest::RedirectionTargetAttribute).toUrl().toString());
-    } else {
-        qDebug() << "Package fetched. Starting installation";
-        installLocalPackage(m_file.fileName());
-        Q_EMIT downloadProgressChanged();
-        m_download = 0;
-        Q_EMIT busyChanged();
-    }
+    Q_EMIT busyChanged();
 }

@@ -17,7 +17,6 @@ public:
     ClickInstaller* clickInstaller() const;
     void setClickInstaller(ClickInstaller *clickInstaller);
 
-
 Q_SIGNALS:
     void clickInstallerChanged();
 

@@ -21,16 +21,31 @@ import Ubuntu.Components.Popups 1.3
 import QtQuick.Layouts 1.1
 import OpenStore 1.0
 
+import "Components" as Components
 
 Page {
     id: appDetailsPage
-    header: PageHeader {
-        title: app ? app.name : i18n.tr("App details")
-        automaticHeight: false
-    }
 
     property var app: null
 
+    header: PageHeader {
+        title: app ? app.name : i18n.tr("App details")
+        enabled: !PlatformIntegration.clickInstaller.busy
+
+        trailingActionBar {
+            numberOfSlots: 1
+            delegate: Button {
+                anchors.verticalCenter: parent.verticalCenter
+                action: modelData
+                color: UbuntuColors.green
+            }
+            actions: Action {
+                text: i18n.tr("Open app")
+                visible: app.installed && app.containsApp
+                onTriggered: Qt.openUrlExternally(app.appLaunchUrl())
+            }
+        }
+    }
 
     ScrollView {
         id: scrollView
@@ -76,17 +91,15 @@ Page {
                     anchors.fill: parent
                     anchors.margins: units.gu(2)
                     spacing: units.gu(2)
-                    visible: !appModel.installer.busy
+                    visible: !PlatformIntegration.clickInstaller.busy
 
                     Button {
                         Layout.fillWidth: true
                         Layout.maximumWidth: buttonsRow.width > units.gu(60) ? units.gu(24) : buttonsRow.width
                         text: app.installed ? i18n.tr("Upgrade") : i18n.tr("Install")
-                        visible: !app.installed || (app.installed && app.installedVersion < app.version)
+                        visible: !app.installed || (app.installed && app.updateAvailable)
                         color: UbuntuColors.green
-                        onClicked: {
-                            appModel.installer.installPackage(app.packageUrl)
-                        }
+                        onClicked: app.install()
                     }
 
                     Button {
@@ -98,23 +111,48 @@ Page {
                         onClicked: {
                             var popup = PopupUtils.open(removeQuestion, root, {pkgName: app.name || app.id});
                             popup.accepted.connect(function() {
-                                appModel.installer.removePackage(app.appId, app.installedVersion)
+                                app.remove()
                             })
                         }
                     }
                 }
 
-                ProgressBar {
-                    id: installerProgressBar
-                    anchors {
-                        left: parent.left; leftMargin: units.gu(2)
-                        right: parent.right; rightMargin: units.gu(2)
-                        verticalCenter: parent.verticalCenter
+                RowLayout {
+                    id: installationRow
+                    anchors.fill: parent
+                    anchors.margins: units.gu(2)
+                    spacing: units.gu(2)
+                    visible: PlatformIntegration.clickInstaller.busy
+
+                    ProgressBar {
+                        Layout.fillWidth: true
+                        maximumValue: app ? app.fileSize : 0
+                        value: PlatformIntegration.clickInstaller.downloadProgress
+                        indeterminate: PlatformIntegration.clickInstaller.downloadProgress == 0
                     }
-                    maximumValue: app ? app.fileSize : 0
-                    value: appModel.installer.downloadProgress
-                    visible: appModel.installer.busy
-                    indeterminate: appModel.installer.downloadProgress == 0
+
+                    AbstractButton {
+                        id: abortBtn
+                        Layout.preferredWidth: units.gu(4)
+                        Layout.fillHeight: true
+                        action: Action {
+                            iconName: "close"
+                            onTriggered: PlatformIntegration.clickInstaller.abortInstallation()
+                            enabled: PlatformIntegration.clickInstaller.downloadProgress < app.fileSize
+                        }
+                        Rectangle {
+                            color: "#cdcdcd"
+                            anchors.fill: parent
+                            visible: abortBtn.pressed
+                        }
+                        Icon {
+                            anchors.centerIn: parent
+                            width: units.gu(2); height: width
+                            name: abortBtn.action.iconName
+                            source: abortBtn.action.iconSource
+                            color: "#CDCDCD"
+                        }
+                    }
                 }
             }
 
@@ -134,7 +172,7 @@ Page {
                     anchors.centerIn: parent
                     subtitle.text: i18n.tr("This app has access to restricted system data, see below for details.")
                     subtitle.color: UbuntuColors.red
-                    subtitle.maximumLineCount: 2
+                    subtitle.maximumLineCount: Number.MAX_VALUE
                     subtitle.wrapMode: Text.WordWrap
 
                     Icon {
@@ -178,73 +216,9 @@ Page {
                             anchors.fill: parent
                             onClicked: {
                                 print("opening at:", screenShotButton.mapToItem(root, 0, 0).x)
+                                var zoomIn = Qt.createComponent(Qt.resolvedUrl("../Components/ScreenshotImage.qml"));
                                 zoomIn.createObject(root, {x: screenShotButton.mapToItem(root, 0, 0).x, y: screenShotButton.mapToItem(root, 0, 0).y, itemScale: screenShotButton.height / root.height, imageSource: modelData});
                                 //                            zoomIn.createObject(root, {x: 100, y: 100});
-                            }
-                        }
-
-                        Component {
-                            id: zoomIn
-                            Rectangle {
-                                id: zI
-                                width: parent.width
-                                height: parent.height
-                                color: "black"
-
-                                property real itemScale: 1
-                                property string imageSource
-                                transform: Scale {
-                                    origin.x: 0
-                                    origin.y: 0
-                                    xScale: zI.itemScale
-                                    yScale: zI.itemScale
-                                }
-
-                                ParallelAnimation {
-                                    id: scaleInAnimation
-                                    onStarted: {
-                                        hideAnimation.initialScale = itemScale;
-                                        hideAnimation.initialX = x;
-                                        hideAnimation.initialY = y;
-                                    }
-
-                                    UbuntuNumberAnimation { target: zI; property: "itemScale"; to: 1 }
-                                    UbuntuNumberAnimation { target: zI; properties: "x,y"; to: 0 }
-                                }
-
-
-                                Component.onCompleted: {
-                                    scaleInAnimation.start();
-                                }
-
-                                Image {
-                                    anchors.fill: parent
-                                    source: zI.imageSource
-                                    fillMode: Image.PreserveAspectFit
-                                }
-
-                                AbstractButton {
-                                    anchors.fill: parent
-                                    onClicked: {
-                                        hideAnimation.start()
-                                    }
-                                }
-
-                                ParallelAnimation {
-                                    id: hideAnimation
-                                    property real initialScale: 1
-                                    property int initialX: 0
-                                    property int initialY: 0
-
-
-                                    UbuntuNumberAnimation { target: zI; property: "itemScale"; to: hideAnimation.initialScale }
-                                    UbuntuNumberAnimation { target: zI; property: "x"; to: hideAnimation.initialX }
-                                    UbuntuNumberAnimation { target: zI; property: "y"; to: hideAnimation.initialY }
-                                    onStopped: {
-                                        script: zI.destroy()
-                                    }
-
-                                }
                             }
                         }
                     }
@@ -266,6 +240,7 @@ Page {
                     Icon {
                         width: units.gu(2); height: width
                         SlotsLayout.position: SlotsLayout.Last
+                        visible: descLayout.subtitle.truncated
                         name: descLayout.showAll ? "go-up" : "go-down"
                     }
                 }
@@ -288,6 +263,7 @@ Page {
                     Icon {
                         width: units.gu(2); height: width
                         SlotsLayout.position: SlotsLayout.Last
+                        visible: changelogLayout.subtitle.truncated
                         name: changelogLayout.showAll ? "go-up" : "go-down"
                     }
                 }
@@ -307,7 +283,7 @@ Page {
                 ListItemLayout {
                     anchors.centerIn: parent
                     title.text: i18n.tr("Installed version")
-                    subtitle.text: app.installedVersion || "None"
+                    subtitle.text: app.installedVersionString || "None"
                 }
             }
 
@@ -315,9 +291,17 @@ Page {
                 divider.visible: false
                 ListItemLayout {
                     anchors.centerIn: parent
-
                     title.text: i18n.tr("Latest available version")
-                    subtitle.text: app.version
+                    subtitle.text: "%1 (%2)".arg(app.versionString).arg(app.updatedDate.toLocaleDateString(Locale.ShortFormat))
+                }
+            }
+
+            ListItem {
+                divider.visible: false
+                ListItemLayout {
+                    anchors.centerIn: parent
+                    title.text: i18n.tr("First released")
+                    subtitle.text: app.publishedDate.toLocaleDateString()
                 }
             }
 
@@ -341,19 +325,10 @@ Page {
             }
 
             ListItem {
+                enabled: !PlatformIntegration.clickInstaller.busy
                 onClicked: {
-                    // FIXME: I don't like this heuristic, but there's no other way to get a reference
-                    // to the page that pushed 'appDetailsPage' into the stack.
-                    // The parent node is actually the PageWrapper that created this page, 'parentPage' is one of its properties.
-                    //var realParentPage = appDetailsPage.parentNode.parentPage
-
-                    var pageProps = {
-                        title: app.author,
-                        filterPattern: new RegExp(app.author),
-                        filterProperty: "author"
-                    }
-
-                    appDetailsPage.pageStack.addPageToCurrentColumn(/*realParentPage*/ appDetailsPage, filteredAppPageComponent, pageProps)
+                    bottomEdgeStack.clear()
+                    mainPage.showSearch(app.author)
                 }
                 ListItemLayout {
                     anchors.centerIn: parent
@@ -364,19 +339,10 @@ Page {
             }
 
             ListItem {
+                enabled: !PlatformIntegration.clickInstaller.busy
                 onClicked: {
-                    // FIXME: I don't like this heuristic, but there's no other way to get a reference
-                    // to the page that pushed 'appDetailsPage' into the stack.
-                    // The parent node is actually the PageWrapper that created this page, 'parentPage' is one of its properties.
-                    //var realParentPage = appDetailsPage.parentNode.parentPage
-
-                    var pageProps = {
-                        title: app.category,
-                        filterPattern: new RegExp(app.category),
-                        filterProperty: "category"
-                    }
-
-                    appDetailsPage.pageStack.addPageToCurrentColumn(/*realParentPage*/ appDetailsPage, filteredAppPageComponent, pageProps)
+                    bottomEdgeStack.clear()
+                    mainPage.showCategory(app.category, app.category)
                 }
                 ListItemLayout {
                     anchors.centerIn: parent
@@ -387,7 +353,7 @@ Page {
                 }
             }
 
-            SectionDivider {
+            Components.SectionDivider {
                 text: i18n.tr("Package contents")
             }
 
@@ -419,41 +385,41 @@ Page {
                                 Layout.fillWidth: true
                             }
 
-                            HookIcon {
+                            Components.HookIcon {
                                 Layout.preferredHeight: units.gu(4)
                                 Layout.preferredWidth: units.gu(4)
                                 name: "stock_application"
-                                visible: (hooks & ApplicationItem.HookDesktop)
+                                visible: (hooks & PackageItem.HookDesktop)
                             }
-                            HookIcon {
+                            Components.HookIcon {
                                 Layout.preferredHeight: units.gu(4)
                                 Layout.preferredWidth: units.gu(4)
                                 name: "search"
-                                visible: (hooks & ApplicationItem.HookScope)
+                                visible: (hooks & PackageItem.HookScope)
                             }
-                            HookIcon {
+                            Components.HookIcon {
                                 Layout.preferredHeight: units.gu(4)
                                 Layout.preferredWidth: units.gu(4)
                                 name: "stock_website"
-                                visible: (hooks & ApplicationItem.HookUrls)
+                                visible: (hooks & PackageItem.HookUrls)
                             }
-                            HookIcon {
+                            Components.HookIcon {
                                 Layout.preferredHeight: units.gu(4)
                                 Layout.preferredWidth: units.gu(4)
                                 name: "share"
-                                visible: (hooks & ApplicationItem.HookContentHub)
+                                visible: (hooks & PackageItem.HookContentHub)
                             }
-                            HookIcon {
+                            Components.HookIcon {
                                 Layout.preferredHeight: units.gu(4)
                                 Layout.preferredWidth: units.gu(4)
                                 name: "notification"
-                                visible: (hooks & ApplicationItem.HookPushHelper)
+                                visible: (hooks & PackageItem.HookPushHelper)
                             }
-                            HookIcon {
+                            Components.HookIcon {
                                 Layout.preferredHeight: units.gu(4)
                                 Layout.preferredWidth: units.gu(4)
                                 name: "contact-group"
-                                visible: (hooks & ApplicationItem.HookAccountService)
+                                visible: (hooks & PackageItem.HookAccountService)
                             }
                         }
 
@@ -554,14 +520,6 @@ Page {
                             subtitle.text: writepaths
                             subtitle.maximumLineCount: Number.MAX_VALUE
                             subtitle.wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-                        }
-
-                        Button {
-                            anchors { right: parent.right }
-                            text: "Open"
-                            color: UbuntuColors.green
-                            visible: app.installed &&  (hooks & ApplicationItem.HookDesktop)
-                            onClicked: Qt.openUrlExternally("appid://" + app.appId + "/" + hookName + "/" + app.installedVersion)
                         }
                     }
                 }

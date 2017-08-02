@@ -17,97 +17,100 @@
 
 import QtQuick 2.4
 import Ubuntu.Components 1.3
+import OpenStore 1.0
 
-ScrollView {
+import "Components" as Components
+
+Item {
     id: rootItem
-    anchors.fill: parent
-    anchors.topMargin: parent.header ? parent.header.height : 0
 
-    property var filterPattern: new RegExp()
-    property string filterProperty
+    property string filterString
+    property string category
+    property string sortMode
+    property url queryUrl
 
-    property string sortProperty
-    property int sortOrder
-
-    property alias model: sortedFilteredAppModel.model
-    property alias view: view
+    property alias view: viewLoader.item
 
     property bool showTicks: true
 
-    signal appDetailsRequired(var appId)
+    signal appDetailsRequired(var index)
 
-    ListView {
-        id: view
+    function getPackage(index) {
+        return searchModel.getPackage(index)
+    }
 
-        // WORKAROUND: Fix for wrong grid unit size
-        Component.onCompleted: root.flickable_responsive_scroll_fix(view)
+    states: State {
+        when: Boolean(true) // i.e. when this component is active
+        PropertyChanges { target: searchModel; filterString: rootItem.filterString }
+        PropertyChanges { target: searchModel; category: rootItem.category }
+        PropertyChanges { target: searchModel; sortMode: rootItem.sortMode }
+        PropertyChanges { target: searchModel; queryUrl: rootItem.queryUrl }
+    }
 
-        model: SortFilterModel {
-            id: sortedFilteredAppModel
+    Loader {
+        id: viewLoader
+        anchors.fill: parent
+        active: searchModel.count > 0
+        sourceComponent: width > units.gu(80) ? gridViewComponent : listViewComponent
+    }
 
-            filter.pattern: rootItem.filterPattern
-            filter.property: rootItem.filterProperty
+    Component {
+        id: listViewComponent
 
-            sort.property: rootItem.sortProperty
-            sort.order: rootItem.sortOrder
-        }
+        ScrollView {
+            anchors.fill: parent
+            ListView {
+                id: view
 
-        // TODO: Move it in Main.qml or elsewhere
-        onCountChanged: {
-            if (count > 0 && root.appIdToOpen != "") {
-                var index = appModel.findApp(root.appIdToOpen)
-                if (index >= 0) {
-                    pageStack.addPageToNextColumn(mainPage, Qt.resolvedUrl("AppDetailsPage.qml"), {app: appModel.app(index)})
-                    root.appIdToOpen = "";
+                // WORKAROUND: Fix for wrong grid unit size
+                Component.onCompleted: root.flickable_responsive_scroll_fix(view)
+
+                model: searchModel
+                delegate: Components.PackageListItem {
+                    appItem: rootItem.getPackage(model.index)
+                    onClicked: rootItem.appDetailsRequired(model.index)
+                    showTicks: rootItem.showTicks
                 }
             }
         }
+    }
 
-        delegate: ListItem {
-            height: layout.height + divider.height
+    Component {
+        id: gridViewComponent
 
-            ListItemLayout {
-                id: layout
-                title.text: model.name
-                summary.text: model.tagline
-                summary.wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+        ScrollView {
+            anchors.fill: parent
 
-                UbuntuShape {
-                    SlotsLayout.position: SlotsLayout.Leading
-                    aspect: UbuntuShape.Flat
-                    image: Image {
-                        source: model.icon
-                        height: parent.height
-                        width: parent.width
-                    }
+            GridView {
+                id: view
+                anchors.fill: parent
+                anchors.margins: units.gu(2)
+
+                // WORKAROUND: Fix for wrong grid unit size
+                Component.onCompleted: root.flickable_responsive_scroll_fix(view)
+
+                cellWidth: units.gu(16)
+                cellHeight: units.gu(24)
+
+                model: searchModel
+                delegate: Components.PackageTile {
+                    appItem: rootItem.getPackage(model.index)
+                    onClicked: rootItem.appDetailsRequired(model.index)
+                    width: view.cellWidth - units.gu(4)
+                    height: view.cellHeight - units.gu(4)
                 }
-                Icon {
-                    SlotsLayout.position: SlotsLayout.Trailing
-                    height: units.gu(2)
-                    width: height
-                    implicitHeight: height
-                    implicitWidth: width
-                    visible: model.installed && rootItem.showTicks
-                    name: "tick"
-                    color: model.updateAvailable ? UbuntuColors.orange : UbuntuColors.green
-                }
-
-                ProgressionSlot {}
-            }
-            onClicked: {
-                rootItem.appDetailsRequired(model.appId)
             }
         }
+    }
 
-        Loader {
+    Loader {
+        anchors.centerIn: parent
+        active: searchModel.count == 0
+        sourceComponent: Components.EmptyState {
+            title: rootItem.filterProperty == "category" ? i18n.tr("Nothing here yet") : i18n.tr("No results found.").arg(rootItem.filterPattern)
+            subTitle: rootItem.filterProperty == "category" ? i18n.tr("No app has been released in this category yet.") : i18n.tr("Try with a different search.")
+            iconName: rootItem.filterProperty == "category" ? "ubuntu-store-symbolic" : "search"
             anchors.centerIn: parent
-            active: view.count == 0
-            sourceComponent: EmptyState {
-                title: rootItem.filterProperty == "category" ? i18n.tr("Nothing here yet") : i18n.tr("No results found.").arg(rootItem.filterPattern)
-                subTitle: rootItem.filterProperty == "category" ? i18n.tr("No app has been released in this category yet.") : i18n.tr("Try with a different search.")
-                iconName: rootItem.filterProperty == "category" ? "ubuntu-store-symbolic" : "search"
-                anchors.centerIn: parent
-            }
         }
     }
 }

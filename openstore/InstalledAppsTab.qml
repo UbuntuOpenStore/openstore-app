@@ -79,12 +79,15 @@ Page {
 
                     ProgressionSlot {}
                 }
+                
+                function slot_installedPackageDetailsReady(pkg) {
+                    appModel.packageDetailsReady.disconnect(slot_installedPackageDetailsReady)
+                    bottomEdgeStack.clear()
+                    bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
+                }
+
                 onClicked: {
-                    appModel.packageDetailsReady.connect(function(pkg){
-                        appModel.packageDetailsReady.disconnect(this)
-                        bottomEdgeStack.clear()
-                        bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
-                    })
+                    appModel.packageDetailsReady.connect(slot_packageDetailsReady)
                     appModel.showPackageDetails(model.appId)
                 }
             }

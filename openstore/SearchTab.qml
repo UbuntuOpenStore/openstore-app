@@ -17,6 +17,9 @@ Page {
             id: searchField
             anchors.centerIn: parent
             width: Math.min(parent.width, units.gu(36))
+            
+            // Disable predictive text
+            inputMethodHints: Qt.ImhNoPredictiveText
 
             primaryItem: Icon {
                 width: units.gu(2); height: width

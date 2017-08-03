@@ -35,15 +35,19 @@ QString OpenStoreNetworkManager::generateNewSignature() const
     return QUuid::createUuid().toString();
 }
 
-QNetworkReply *OpenStoreNetworkManager::sendRequest(const QNetworkRequest &request)
+QNetworkReply *OpenStoreNetworkManager::sendRequest(QNetworkRequest request)
 {
-    QUrlQuery q(request.url());
+    QUrl url = request.url();
+
+    QUrlQuery q(url);
     q.addQueryItem("frameworks", PlatformIntegration::instance()->supportedFrameworks().join(','));
     q.addQueryItem("architecture", PlatformIntegration::instance()->supportedArchitecture());
     q.addQueryItem("lang", PlatformIntegration::instance()->systemLocale());
-    request.url().setQuery(q);
 
-    //qDebug() << "Firing request for" << request.url();
+    url.setQuery(q);
+    request.setUrl(url);
+
+    // qDebug() << "Firing request for" << request.url();
 
     return m_manager->get(request);
 }

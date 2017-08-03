@@ -38,7 +38,7 @@ Q_SIGNALS:
     void newReply(const OpenStoreReply &reply);
 
 private:
-    QNetworkReply* sendRequest(const QNetworkRequest &request);
+    QNetworkReply* sendRequest(QNetworkRequest request);
     void emitReplySignal(QNetworkReply* reply, const QString &signature);
 
 private:

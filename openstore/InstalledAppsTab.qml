@@ -24,7 +24,7 @@ Page {
     id: rootItem
 
     header: PageHeader {
-        title: i18n.tr("My apps")
+        title: i18n.tr("My Apps")
     }
 
     ScrollView {

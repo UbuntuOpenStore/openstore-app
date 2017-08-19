@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-25 13:35+0000\n"
-"PO-Revision-Date: 2017-08-19 04:56+0000\n"
+"PO-Revision-Date: 2017-08-19 04:57+0000\n"
 "Last-Translator: qutghan <qutghan@outlook.com>\n"
 "Language-Team: Chinese (Simplified) "
 "<https://ubpweblate.tnvcomp.com/projects/openstore/openstore-app/zh_Hans/>\n"
@@ -80,13 +80,13 @@ msgstr "源代码"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:361
-#, qt-format
+#, fuzzy, qt-format
 msgid "More from %1"
 msgstr "译者： 这是从同一作者显示所有软件包的列表的按钮。%1 是作者的名字。"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:385
-#, qt-format
+#, fuzzy, qt-format
 msgid "Other apps in %1"
 msgstr "译者： 这是在同一类别中显示的所有其他程序包列表的按钮。%1 是类别的名称。"
 

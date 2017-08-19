@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-25 13:35+0000\n"
-"PO-Revision-Date: 2017-07-17 19:09+0000\n"
-"Last-Translator: Cesar Herrera <chg1@outlook.es>\n"
+"PO-Revision-Date: 2017-08-19 14:58+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://ubpweblate.tnvcomp.com/projects/openstore"
 "/openstore-app/es/>\n"
 "Language: es\n"
@@ -120,7 +120,7 @@ msgstr "Directorios de escritura"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:577
 msgid "Remove package"
-msgstr "Quitar paquete"
+msgstr "Eliminar paquete"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:578
 #, qt-format

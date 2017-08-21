@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-25 13:35+0000\n"
-"PO-Revision-Date: 2017-08-19 14:58+0000\n"
+"PO-Revision-Date: 2017-08-21 15:46+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://ubpweblate.tnvcomp.com/projects/openstore"
 "/openstore-app/es/>\n"
@@ -112,11 +112,11 @@ msgstr "ninguno requerido"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:535
 msgid "Read paths"
-msgstr "Directorios de lectura"
+msgstr "Rutas de lectura"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:553
 msgid "Write paths"
-msgstr "Directorios de escritura"
+msgstr "Rutas de escritura"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:577
 msgid "Remove package"

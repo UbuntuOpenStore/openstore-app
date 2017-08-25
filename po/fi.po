@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-25 13:35+0000\n"
-"PO-Revision-Date: 2017-07-09 12:41+0000\n"
-"Last-Translator: Sami Törmänen <tormanen.sami@gmail.com>\n"
+"PO-Revision-Date: 2017-08-25 10:10+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://ubpweblate.tnvcomp.com/projects/openstore"
 "/openstore-app/fi/>\n"
 "Language: fi\n"
@@ -107,15 +107,15 @@ msgstr "Käyttöoikeudet"
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:518
 msgid "none required"
-msgstr ""
+msgstr "ei vaadi oikeuksia"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:535
 msgid "Read paths"
-msgstr ""
+msgstr "Lukupolut"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:553
 msgid "Write paths"
-msgstr ""
+msgstr "Kirjoituspolut"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:577
 msgid "Remove package"
@@ -173,7 +173,7 @@ msgstr "✓ Asennettu"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:106
 msgid "Nothing here yet"
-msgstr ""
+msgstr "Täällä ei ole vielä mitään"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:106
 msgid "No results found."
@@ -213,7 +213,7 @@ msgstr ""
 #. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:106
 msgid "Accounts provider"
-msgstr ""
+msgstr "Tilien tarjoaja"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:193
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/SearchPage.qml:29
@@ -222,7 +222,7 @@ msgstr "Etsi"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:200
 msgid "Discover"
-msgstr ""
+msgstr "Löydä"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:200
 msgid "My Apps"
@@ -249,18 +249,24 @@ msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
 msgstr ""
+"OpenStore sallii eristämättömien sovellusten asentamisen. Varmista, että "
+"ymmärrät asian merkityksen."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:375
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
 msgstr ""
+"Eristämätön sovellus voi rikkoa järjestelmän, laskea järjestelmän "
+"suorituskykyä tai vakoilla käyttäjää."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:382
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
 msgstr ""
+"Vaikka teemme parhaamme estääksemme haittaohjelmien leviämisen tutkimalla "
+"sovellukset, emme ota mitään vastuuta jos jokin pääsee seulonnan läpi."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:389
 msgid "Use this at your own risk."
@@ -272,7 +278,7 @@ msgstr "Okei. Asia selvä! Olen varovainen."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:400
 msgid "Get me out of here!"
-msgstr ""
+msgstr "Haluan pois täältä!"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:413
 msgid "Install app?"
@@ -304,7 +310,8 @@ msgstr "Asennus epäonnistui"
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
+"Pakettia ei voitu asentaa. Varmista, että se on kelvollinen click-paketti."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/SearchPage.qml:60
 msgid "Search in OpenStore..."
-msgstr ""
+msgstr "Etsi OpenStoresta..."

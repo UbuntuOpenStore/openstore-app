@@ -160,7 +160,7 @@ msgstr "%1 bytes"
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/CategoriesPage.qml:24
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:187
 msgid "Categories"
-msgstr "Categorías"
+msgstr "Categorías"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/DiscoverTab.qml:95
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/DiscoverTab.qml:180

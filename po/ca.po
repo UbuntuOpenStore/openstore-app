@@ -35,7 +35,7 @@ msgstr "Actualitza-la"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:99
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:224
 msgid "Install"
-msgstr "Instal·la"
+msgstr "Instal·la-la"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:108
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:544

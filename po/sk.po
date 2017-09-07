@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-25 13:35+0000\n"
-"PO-Revision-Date: 2017-07-16 20:12+0000\n"
-"Last-Translator: t-h-e-p-e-t-e-r <peter.valachovic@gmail.com>\n"
-"Language-Team: Slovak <https://ubpweblate.tnvcomp.com/projects/openstore"
+"PO-Revision-Date: 2017-09-07 21:38+0000\n"
+"Last-Translator: František Tomajko <tomajko@gmail.com>\n"
+"Language-Team: Slovak <https://translate.ubports.com/projects/openstore"
 "/openstore-app/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -208,7 +208,7 @@ msgstr ""
 #. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:92
 msgid "Push Helper"
-msgstr ""
+msgstr "Asistent notifikácií"
 
 #. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:106

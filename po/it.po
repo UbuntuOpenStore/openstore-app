@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-25 13:35+0000\n"
-"PO-Revision-Date: 2017-07-04 20:04+0000\n"
-"Last-Translator: Gabriele <gabrielemartelli@tiscali.it>\n"
-"Language-Team: Italian <https://ubpweblate.tnvcomp.com/projects/openstore"
+"PO-Revision-Date: 2017-09-07 21:29+0000\n"
+"Last-Translator: Mike <miguel2000@livecom.it>\n"
+"Language-Team: Italian <https://translate.ubports.com/projects/openstore"
 "/openstore-app/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -41,8 +41,8 @@ msgstr "Rimuovi"
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:135
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
-"Quest'applicazione ha restrizioni nell'accesso a dati di sistema, vedi sotto "
-"per i dettagli"
+"Quest'applicazione ha accesso a dati di sistema ristretti, vedi sotto per i "
+"dettagli."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:260
 msgid "Description"
@@ -182,7 +182,7 @@ msgstr "Nessun risultato trovato."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:107
 msgid "No app has been released in this category yet."
-msgstr "Nessuna App é stata ancora pubblicata in questa categoria"
+msgstr "Nessuna App è stata ancora pubblicata in questa categoria."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:107
 msgid "Try with a different search."

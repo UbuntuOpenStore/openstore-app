@@ -8,298 +8,309 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-25 13:35+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-09-08 07:52+0000\n"
+"Last-Translator: Milan Korecký <milan.korecky@gmail.com>\n"
+"Language-Team: Czech <https://translate.ubports.com/projects/openstore"
+"/openstore-app/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 2.15\n"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:28
 msgid "App details"
-msgstr ""
+msgstr "Údaje o aplikaci"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:84
 msgid "Upgrade"
-msgstr ""
+msgstr "Aktualizovat"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:84
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:421
 msgid "Install"
-msgstr ""
+msgstr "Instalovat"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:95
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:585
 msgid "Remove"
-msgstr ""
+msgstr "Odstranit"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:135
 msgid "This app has access to restricted system data, see below for details."
-msgstr ""
+msgstr "Aplikace má přístup k systémovým údajům, pro více informací viz níže."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:260
 msgid "Description"
-msgstr ""
+msgstr "Popis"
 
 #. TRANSLATORS: Title of the changelog section
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:282
 msgid "What's New"
-msgstr ""
+msgstr "Novinky"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:300
 msgid "Packager/Publisher"
-msgstr ""
+msgstr "Autor/Vydavatel"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:301
 msgid "OpenStore team"
-msgstr ""
+msgstr "OpenStore tým"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:309
 msgid "Installed version"
-msgstr ""
+msgstr "Nainstalovaná verze"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:319
 msgid "Latest available version"
-msgstr ""
+msgstr "Nejnovější dostupná verze"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:328
 msgid "License"
-msgstr ""
+msgstr "Licence"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:329
 msgid "N/A"
-msgstr ""
+msgstr "Nedostupné"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:337
 msgid "Source Code"
-msgstr ""
+msgstr "Zdrojový kód"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:361
 #, qt-format
 msgid "More from %1"
-msgstr ""
+msgstr "Více od %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:385
 #, qt-format
 msgid "Other apps in %1"
-msgstr ""
+msgstr "Ostatní aplikace v %1"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:391
 msgid "Package contents"
-msgstr ""
+msgstr "Obsah balíčku"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:471
 msgid "AppArmor profile"
-msgstr ""
+msgstr "AppArmor profil"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:499
 msgid "Permissions"
-msgstr ""
+msgstr "Oprávnění"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:518
 msgid "none required"
-msgstr ""
+msgstr "nevyžadovány"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:535
 msgid "Read paths"
-msgstr ""
+msgstr "Read paths"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:553
 msgid "Write paths"
-msgstr ""
+msgstr "Write paths"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:577
 msgid "Remove package"
-msgstr ""
+msgstr "Odstranit balíček"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:578
 #, qt-format
 msgid "Do you want to remove %1?"
-msgstr ""
+msgstr "Opravdu odstranit %1?"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:594
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:430
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/SearchPage.qml:37
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušit"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:611
 #, qt-format
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:616
 #, qt-format
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:621
 #, qt-format
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:624
 #, qt-format
 msgid "%1 bytes"
-msgstr ""
+msgstr "%1 bytes"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/CategoriesPage.qml:24
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:187
 msgid "Categories"
-msgstr ""
+msgstr "Kategorie"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/DiscoverTab.qml:95
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/DiscoverTab.qml:180
 msgid "Update available"
-msgstr ""
+msgstr "Dostupná aktualizace"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/DiscoverTab.qml:96
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/DiscoverTab.qml:180
 msgid "✓ Installed"
-msgstr ""
+msgstr "✓ Nainstalováno"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:106
 msgid "Nothing here yet"
-msgstr ""
+msgstr "Zatím tu není nic"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:106
 msgid "No results found."
-msgstr ""
+msgstr "Žádné výsledky nenalezeny."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:107
 msgid "No app has been released in this category yet."
-msgstr ""
+msgstr "V této kategorii zatím nic není."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:107
 msgid "Try with a different search."
-msgstr ""
+msgstr "Zkuste hledat jinak."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:37
 msgid "Application"
-msgstr ""
+msgstr "Aplikace"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:50
 msgid "Scope"
-msgstr ""
+msgstr "Scope"
 
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:64
 msgid "URL Handler"
-msgstr ""
+msgstr "URL odkaz"
 
 #. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:78
 msgid "Content Hub Handler"
-msgstr ""
+msgstr "Správce struktury obsahu"
 
 #. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:92
 msgid "Push Helper"
-msgstr ""
+msgstr "Asistent oznámení"
 
 #. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:106
 msgid "Accounts provider"
-msgstr ""
+msgstr "Poskytovatel účtů"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:193
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/SearchPage.qml:29
 msgid "Search"
-msgstr ""
+msgstr "Hledat"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:200
 msgid "Discover"
-msgstr ""
+msgstr "Objevit"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:200
 msgid "My Apps"
-msgstr ""
+msgstr "Moje aplikace"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:294
 msgid "Available updates"
-msgstr ""
+msgstr "Dostupné aktualizace"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:294
 msgid "Installed apps"
-msgstr ""
+msgstr "Nainstalované aplikace"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:312
 msgid "Fetching package list..."
-msgstr ""
+msgstr "Získávám seznam balíčků…"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:359
 msgid "Warning"
-msgstr ""
+msgstr "Upozornění"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:368
 msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
 msgstr ""
+"OpenStore Vám umožňuje instalovat aplikace bez omezení oprávnění. Ujistěte "
+"se, že víte jaké to může mít důsledky."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:375
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
 msgstr ""
+"Aplikace bez omezených práv mohou poškodit systém, snížit jeho výkon anebo "
+"uživatele sledovat."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:382
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
 msgstr ""
+"Přestože se tomu snažíme zabránit kontrolou aplikací, nepřijímáme žádnou "
+"odpovědnost za to, že něco špatného proklouzne."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:389
 msgid "Use this at your own risk."
-msgstr ""
+msgstr "Používejte na vlastní riziko."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:393
 msgid "Okay. Got it! I'll be careful."
-msgstr ""
+msgstr "Dobře. Rozumím! Budu opatrný."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:400
 msgid "Get me out of here!"
-msgstr ""
+msgstr "Dostaň mě odsud!"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:413
 msgid "Install app?"
-msgstr ""
+msgstr "Nainstalovat aplikaci?"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:414
 #, qt-format
 msgid "Do you want to install %1?"
-msgstr ""
+msgstr "Chcete instalovat %1?"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:443
 msgid "App installed"
-msgstr ""
+msgstr "Aplikace nainstalována"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:444
 msgid "The app has been installed successfully."
-msgstr ""
+msgstr "Aplikace byla úspěšně nainstalována."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:447
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:460
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:456
 msgid "Installation failed"
-msgstr ""
+msgstr "Instalace selhala"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:457
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
+"Balíček se nepodařilo instalovat.\n"
+"Zkontrolujte zda se jedná o platný click balíček."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/SearchPage.qml:60
 msgid "Search in OpenStore..."
-msgstr ""
+msgstr "Hledat v OpenStore…"

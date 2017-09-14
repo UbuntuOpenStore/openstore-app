@@ -10,8 +10,8 @@ msgstr ""
 "POT-Creation-Date: 2017-05-25 13:35+0000\n"
 "PO-Revision-Date: 2017-08-19 09:05+0000\n"
 "Last-Translator: qutghan <qutghan@outlook.com>\n"
-"Language-Team: Uighur <https://ubpweblate.tnvcomp.com/projects/openstore"
-"/openstore-app/ug/>\n"
+"Language-Team: Uighur <https://ubpweblate.tnvcomp.com/projects/openstore/"
+"openstore-app/ug/>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -91,8 +91,8 @@ msgstr ""
 #, qt-format
 msgid "Other apps in %1"
 msgstr ""
-"تەرجىمان :بۇ بولسا ئوخشاش بىر تۈردىكى بارلىق ئەپلەرنى كۆرسىتىدىغان كۇنۇپكا. %"
-"1  تۈر ۋە ئىسىم"
+"تەرجىمان :بۇ بولسا ئوخشاش بىر تۈردىكى بارلىق ئەپلەرنى كۆرسىتىدىغان كۇنۇپكا. "
+"%1  تۈر ۋە ئىسىم"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:391
 msgid "Package contents"
@@ -209,25 +209,23 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:78
 msgid "Content Hub Handler"
 msgstr ""
-"تەرجىمان :بۇ بولسا ئالماشتۇرۇلغان مەزمۇنلار ( "
-"https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/)  "
-"Ubuntu سۇپىسى مۇلازىمىتى"
+"تەرجىمان :بۇ بولسا ئالماشتۇرۇلغان مەزمۇنلار ( https://developer.ubuntu.com/"
+"en/phone/platform/guides/content-hub-guide/)  Ubuntu سۇپىسى مۇلازىمىتى"
 
 #. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:92
 msgid "Push Helper"
 msgstr ""
-"تەرجىمان :بۇ بولسا يىتەكلەنگەن ئۇقتۇرۇشلار ( "
-"https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-"
-"client-guide/) ئۇبۇنتۇ سۇپسى مۇلازىمىتى"
+"تەرجىمان :بۇ بولسا يىتەكلەنگەن ئۇقتۇرۇشلار ( https://developer.ubuntu.com/en/"
+"phone/platform/guides/push-notifications-client-guide/) ئۇبۇنتۇ سۇپسى "
+"مۇلازىمىتى"
 
 #. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:106
 msgid "Accounts provider"
 msgstr ""
-"تەرجىمان ؛تور يۈزى ھىساباتى  ( "
-"https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-"
-"developer-guide/)"
+"تەرجىمان ؛تور يۈزى ھىساباتى  ( https://developer.ubuntu.com/en/phone/"
+"platform/guides/online-accounts-developer-guide/)"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:193
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/SearchPage.qml:29

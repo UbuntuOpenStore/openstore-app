@@ -156,9 +156,7 @@ void PackageItem::updateLocalInformations()
 {
     const QVersionNumber &localAppVersion = PlatformIntegration::instance()->appVersion(m_appId);
 
-    if (!localAppVersion.isNull()) {
-        m_installedVersion = localAppVersion;
-        Q_EMIT updated();
-        Q_EMIT installedChanged();
-    }
+    m_installedVersion = localAppVersion;
+    Q_EMIT updated();
+    Q_EMIT installedChanged();
 }

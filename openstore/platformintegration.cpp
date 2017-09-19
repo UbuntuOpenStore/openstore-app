@@ -46,7 +46,7 @@ PlatformIntegration *PlatformIntegration::instance()
 }
 
 void PlatformIntegration::update()
-{   
+{
     m_installedAppIds.clear();
 
     ClickDB *clickdb;

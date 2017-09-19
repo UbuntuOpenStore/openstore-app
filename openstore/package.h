@@ -7,12 +7,6 @@
 #include <QDebug>
 #include <QDateTime>
 
-#if QT_VERSION <= 0x050600
-#include "thirdparty/qversionnumber.h"
-#else
-#include <QVersionNumber>
-#endif
-
 class PackageItem: public QObject
 {
     Q_OBJECT

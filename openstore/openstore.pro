@@ -61,12 +61,3 @@ HEADERS += \
     platformintegration.h \
     packagescache.h \
     package.h
-
-# Backport QVersionNumber when < Qt 5.6
-lessThan(QT_MINOR_VERSION, 6) {
-    SOURCES += thirdparty/qversionnumber.cpp
-    HEADERS += thirdparty/qversionnumber.h
-}
-
-
-

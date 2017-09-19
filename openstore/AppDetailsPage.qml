@@ -187,6 +187,7 @@ Page {
                 height: units.gu(32)
                 visible: screenshotsView.count
 
+                // TODO: Reminder for the future: make it as carousel, so users can swipe between them.
                 ListView {
                     id: screenshotsView
                     anchors { left: parent.left; right: parent.right; verticalCenter: parent.verticalCenter }

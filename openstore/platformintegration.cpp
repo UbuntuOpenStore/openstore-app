@@ -1,7 +1,6 @@
 #include "platformintegration.h"
 #include "clickinstaller.h"
 #include "serviceregistry.h"
-#include "openstorenetworkmanager.h"
 
 #include <QJsonDocument>
 #include <QDebug>
@@ -109,7 +108,7 @@ void PlatformIntegration::update()
         QVariantMap appMap = appJson.toMap();
 
         QString appId = appMap.value("name").toString();
-        QVersionNumber version = QVersionNumber::fromString(appMap.value("version").toString());
+        QString version = appMap.value("version").toString();
 
         //         qDebug() << "have installed app:" << appId << version << appMap;
 

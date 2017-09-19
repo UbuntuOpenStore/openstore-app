@@ -56,7 +56,9 @@ Q_SIGNALS:
 
 private:
     QList<LocalPackageItem> m_list;
-    QHash<QString, QVersionNumber> m_remoteAppVersion; // appid, version
+    QHash<QString, int> m_remoteAppRevision; // appid, revision
+    QHash<QString, int> m_localAppRevision; // appid, revision
+
     QString m_signature;
 
     bool m_ready;

@@ -32,6 +32,7 @@ public Q_SLOTS:
     bool getCategories(const QString &signature);
     bool getUrl(const QString &signature, const QUrl &url);
     bool getUpdates(const QString &signature, const QStringList &appIds);
+    bool getRevisions(const QString &signature, const QStringList &appIdsAtVersion);
 
 Q_SIGNALS:
     void networkAccessibleChanged();

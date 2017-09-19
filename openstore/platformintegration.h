@@ -31,7 +31,7 @@ public:
     QString supportedArchitecture() const { return m_supportedArchitecture; }
     QString systemLocale() const { return m_systemLocale; }
 
-    QVersionNumber appVersion(const QString &appId) const { return m_installedAppIds.value(appId, QVersionNumber()); }
+    QString appVersion(const QString &appId) const { return m_installedAppIds.value(appId, QString()); }
     QStringList installedAppIds() const { return m_installedAppIds.keys(); }
 
     QVariantList clickDb() const { return m_clickDb; }
@@ -52,7 +52,7 @@ private:
     QString m_supportedArchitecture;
     QString m_systemLocale;
 
-    QHash<QString, QVersionNumber> m_installedAppIds; // appid, version
+    QHash<QString, QString> m_installedAppIds; // appid, version
     QVariantList m_clickDb;
 
     ClickInstaller* m_installer;

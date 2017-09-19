@@ -153,10 +153,30 @@ bool OpenStoreNetworkManager::getUrl(const QString &signature, const QUrl &url)
 
 bool OpenStoreNetworkManager::getUpdates(const QString &signature, const QStringList &appIds)
 {
-    QUrl url("https://open.uappexplorer.com/api/v1/apps/updates");
+    QUrl url("https://open.uappexplorer.com/api/v2/apps/updates");
 
     QUrlQuery q(url);
     q.addQueryItem("apps", appIds.join(","));
+
+    url.setQuery(q);
+
+    QNetworkReply *reply = sendRequest(QNetworkRequest(url));
+
+    connect(reply, &QNetworkReply::finished, [=]() {
+        emitReplySignal(reply, signature);
+    });
+
+    emitReplySignal(reply, signature);
+
+    return true;
+}
+
+bool OpenStoreNetworkManager::getRevisions(const QString &signature, const QStringList &appIdsAtVersion)
+{
+    QUrl url("https://open.uappexplorer.com/api/v2/apps/revision");
+
+    QUrlQuery q(url);
+    q.addQueryItem("apps", appIdsAtVersion.join(","));
 
     url.setQuery(q);
 

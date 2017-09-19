@@ -6,7 +6,6 @@
 PackageItem::PackageItem(const QVariantMap &json, QObject *parent)
     : QObject(parent)
 {
-    connect(PlatformIntegration::instance(), &PlatformIntegration::updated, this, &PackageItem::updateLocalInformations);
     fillData(json);
 }
 
@@ -53,12 +52,12 @@ bool PackageItem::remove() const
 
 QString PackageItem::appLaunchUrl() const
 {
-    if (m_installedVersion.toString().isEmpty())
+    if (m_installedVersion.isEmpty())
         return QString();
 
     Q_FOREACH(const HookStruct &h, m_hooks) {
         if (h.hooks & PackageItem::HookDesktop) {
-            return "appid://" + m_appId + "/" + h.name + "/" + m_installedVersion.toString();
+            return "appid://" + m_appId + "/" + h.name + "/" + m_installedVersion;
         }
     }
 
@@ -86,7 +85,8 @@ void PackageItem::fillData(const QVariantMap &json)
     m_category = json.value("category").toString();
     m_screenshots = json.value("screenshots").toStringList();
     m_changelog = json.value("changelog").toString();
-    m_version = QVersionNumber::fromString(json.value("version").toString());
+    m_version = json.value("version").toString();
+    m_revision = json.value("revision").toInt();
     m_fileSize = json.value("filesize").toInt();
     m_installedVersion = PlatformIntegration::instance()->appVersion(m_appId);
     m_publishedDate = json.value("published_date").toDateTime();
@@ -152,11 +152,11 @@ void PackageItem::fillData(const QVariantMap &json)
     Q_EMIT updated();
 }
 
-void PackageItem::updateLocalInformations()
+void PackageItem::updateLocalInfo(int localRevision, const QString &localVersion)
 {
-    const QVersionNumber &localAppVersion = PlatformIntegration::instance()->appVersion(m_appId);
+    m_installedVersion = localVersion;
+    m_installedRevision = localRevision;
 
-    m_installedVersion = localAppVersion;
     Q_EMIT updated();
     Q_EMIT installedChanged();
 }

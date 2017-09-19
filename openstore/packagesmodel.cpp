@@ -86,7 +86,8 @@ void PackagesModel::refresh()
         if (reply.signature != m_signature)
             return;
 
-        m_remoteAppVersion.clear();
+        m_remoteAppRevision.clear();
+        m_localAppRevision.clear();
 
         beginResetModel();
         m_list.clear();
@@ -107,23 +108,26 @@ void PackagesModel::refresh()
             return;
         }
 
-        QVariantMap data = replyMap.value("data").toMap();
-        for(QVariantMap::const_iterator i = data.begin(); i != data.end(); ++i) {
-            m_remoteAppVersion.insert(i.key(), QVersionNumber::fromString(i.value().toString()));
+        QVariantList data = replyMap.value("data").toList();
+        Q_FOREACH (QVariant d, data) {
+            QVariantMap map = d.toMap();
+            const QString &appId = map.value("id").toString();
+            m_remoteAppRevision.insert(appId, map.value("latest_revision").toInt());
+            m_localAppRevision.insert(appId, map.value("revision").toInt());
         }
 
         const QVariantList &clickDb = PlatformIntegration::instance()->clickDb();
 
-        beginInsertRows(QModelIndex(), m_list.count(), m_list.count() + m_remoteAppVersion.count() - 1);
+        beginInsertRows(QModelIndex(), m_list.count(), m_list.count() + m_remoteAppRevision.count() - 1);
         Q_FOREACH(const QVariant &pkg, clickDb) {
             QVariantMap map = pkg.toMap();
 
             LocalPackageItem pkgItem;
             pkgItem.appId = map.value("name").toString();
 
-            if (!m_remoteAppVersion.value(pkgItem.appId).isNull()) {
+            if (!m_remoteAppRevision.value(pkgItem.appId, -1) != -1) {
                 pkgItem.name = map.value("title").toString();
-                pkgItem.updateAvailable = bool(m_remoteAppVersion.value(pkgItem.appId) > PlatformIntegration::instance()->appVersion(pkgItem.appId));
+                pkgItem.updateAvailable = bool(m_remoteAppRevision.value(pkgItem.appId) > m_localAppRevision.value(pkgItem.appId));
 
                 //pkgItem.icon = map.value("icon").toString();
                 if (pkgItem.icon.isEmpty()) {
@@ -165,14 +169,24 @@ void PackagesModel::refresh()
         MODEL_END_REFRESH();
     });
 
+    QStringList appIdsAtRevisionList;
+
+    Q_FOREACH(const QString &appId, PlatformIntegration::instance()->installedAppIds()) {
+        const QString &version = PlatformIntegration::instance()->appVersion(appId);
+        appIdsAtRevisionList.append(QString("%1@%2").arg(appId, version));
+    }
+
     m_signature = OpenStoreNetworkManager::instance()->generateNewSignature();
-    OpenStoreNetworkManager::instance()->getUpdates(m_signature, PlatformIntegration::instance()->installedAppIds());
+    OpenStoreNetworkManager::instance()->getRevisions(m_signature, appIdsAtRevisionList);
 }
 
 void PackagesModel::showPackageDetails(const QString &appId)
 {
     if (PackagesCache::instance()->contains(appId)) {
-        Q_EMIT packageDetailsReady(PackagesCache::instance()->get(appId));
+        PackageItem *pkg = PackagesCache::instance()->get(appId);
+        pkg->updateLocalInfo(m_localAppRevision.value(pkg->appId()), PlatformIntegration::instance()->appVersion(pkg->appId()));
+
+        Q_EMIT packageDetailsReady(pkg);
     } else {
         const QString &signature = OpenStoreNetworkManager::instance()->generateNewSignature();
 
@@ -198,6 +212,7 @@ void PackagesModel::showPackageDetails(const QString &appId)
             QVariantMap pkg = replyMap.value("data").toMap();
 
             PackageItem* pkgItem = PackagesCache::instance()->insert(appId, pkg);
+            pkgItem->updateLocalInfo(m_localAppRevision.value(pkgItem->appId()), PlatformIntegration::instance()->appVersion(pkgItem->appId()));
 
             Q_EMIT packageDetailsReady(pkgItem);
         });

@@ -91,7 +91,7 @@ Page {
                     anchors.fill: parent
                     anchors.margins: units.gu(2)
                     spacing: units.gu(2)
-                    visible: !PlatformIntegration.clickInstaller.busy
+                    visible: !PlatformIntegration.clickInstaller.busy && !PackagesCache.updatingCache
 
                     Button {
                         Layout.fillWidth: true
@@ -122,13 +122,13 @@ Page {
                     anchors.fill: parent
                     anchors.margins: units.gu(2)
                     spacing: units.gu(2)
-                    visible: PlatformIntegration.clickInstaller.busy
+                    visible: PlatformIntegration.clickInstaller.busy || PackagesCache.updatingCache
 
                     ProgressBar {
                         Layout.fillWidth: true
                         maximumValue: app ? app.fileSize : 0
                         value: PlatformIntegration.clickInstaller.downloadProgress
-                        indeterminate: PlatformIntegration.clickInstaller.downloadProgress == 0
+                        indeterminate: PlatformIntegration.clickInstaller.downloadProgress == 0 || PackagesCache.updatingCache
                     }
 
                     AbstractButton {

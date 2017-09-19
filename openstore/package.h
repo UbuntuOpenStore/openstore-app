@@ -27,6 +27,8 @@ class PackageItem: public QObject
     Q_PROPERTY(QString changelog READ changelog NOTIFY updated)
     Q_PROPERTY(QString versionString READ versionString NOTIFY updated)
     Q_PROPERTY(QString installedVersionString READ installedVersionString NOTIFY updated)
+    Q_PROPERTY(int revision READ revision NOTIFY updated)
+    Q_PROPERTY(int installedRevision READ installedRevision NOTIFY updated)
     Q_PROPERTY(QString packageUrl READ packageUrl NOTIFY updated)
     Q_PROPERTY(QString source READ source NOTIFY updated)
     Q_PROPERTY(QString license READ license NOTIFY updated)
@@ -74,8 +76,10 @@ public:
     QString category() const { return m_category; }
     QStringList screenshots() const { return m_screenshots; }
     QString changelog() const { return m_changelog; }
-    QString versionString() const { return m_version.toString(); }
-    QString installedVersionString() const { return m_installedVersion.toString(); }
+    QString versionString() const { return m_version; }
+    QString installedVersionString() const { return m_installedVersion; }
+    int revision() const { return m_revision; }
+    int installedRevision() const { return m_installedRevision; }
     QString packageUrl() const { return m_packageUrl; }
     QString source() const { return m_source; }
     QString license() const { return m_license; }
@@ -94,7 +98,7 @@ public:
     Q_INVOKABLE QString writePaths(int index) { return m_hooks.at(index).writePaths.join(", "); }
     int hooksCount() const { return m_hooks.count(); }
     bool containsApp() const { Q_FOREACH (const HookStruct &hook, m_hooks) { if (hook.hooks & HookDesktop) return true; } return false; }
-    bool updateAvailable() const { return m_version > m_installedVersion; }
+    bool updateAvailable() const { return !m_installedVersion.isEmpty() && (m_revision > m_installedRevision); }
 
     Q_INVOKABLE bool install() const;
     Q_INVOKABLE bool remove() const;
@@ -104,9 +108,11 @@ Q_SIGNALS:
     void updated();
     void installedChanged();
 
+public Q_SLOTS:
+    void updateLocalInfo(int localRevision, const QString &localVersion);
+
 private Q_SLOTS:
     void fillData(const QVariantMap &json);
-    void updateLocalInformations();
 
 private:
     QString m_appId;
@@ -119,19 +125,17 @@ private:
     QStringList m_screenshots;
     QString m_changelog;
     QString m_packageUrl;
-    QVersionNumber m_version;
+    int m_revision;
+    QString m_version;
     QString m_source;
     QString m_license;
     QString m_maintainer;
     int m_fileSize;
-    QVersionNumber m_installedVersion;
+    int m_installedRevision;
+    QString m_installedVersion;
     QList<HookStruct> m_hooks;
     QDateTime m_publishedDate;
     QDateTime m_updatedDate;
-
-private:
-    QString m_requestSignature;
-
 };
 
 #endif // PACKAGE_H

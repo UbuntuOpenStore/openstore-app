@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-25 13:35+0000\n"
-"PO-Revision-Date: 2017-07-14 14:55+0000\n"
-"Last-Translator: Andrzej Stamburski <stambur@wp.pl>\n"
-"Language-Team: Polish <https://ubpweblate.tnvcomp.com/projects/openstore"
-"/openstore-app/pl/>\n"
+"PO-Revision-Date: 2017-09-01 21:11+0000\n"
+"Last-Translator: Daniel Frańczak <danielfranczak5@wp.pl>\n"
+"Language-Team: Polish <https://ubpweblate.tnvcomp.com/projects/openstore/"
+"openstore-app/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -193,7 +193,7 @@ msgstr "Aplikacja"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:50
 msgid "Scope"
-msgstr ""
+msgstr "Scope"
 
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:64
@@ -255,16 +255,20 @@ msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
 msgstr ""
+"Nieokreślona aplikacja ma możliwość złamania systemu, zmniejszenia jego "
+"wydajności i / lub szpiegowania."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:382
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
 msgstr ""
+"Chociaż dokładamy wszelkich starań, aby zapobiec temu, że sprawdzając "
+"aplikacje, nie bierzemy odpowiedzialności za przewinienie się czegoś."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:389
 msgid "Use this at your own risk."
-msgstr ""
+msgstr "Użyj tego na własne ryzyko."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:393
 msgid "Okay. Got it! I'll be careful."

@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-25 13:35+0000\n"
-"PO-Revision-Date: 2017-07-17 19:09+0000\n"
-"Last-Translator: Cesar Herrera <chg1@outlook.es>\n"
-"Language-Team: Spanish <https://ubpweblate.tnvcomp.com/projects/openstore"
-"/openstore-app/es/>\n"
+"PO-Revision-Date: 2017-08-21 16:28+0000\n"
+"Last-Translator: advocatux <advocatux@airpost.net>\n"
+"Language-Team: Spanish <https://ubpweblate.tnvcomp.com/projects/openstore/"
+"openstore-app/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -85,13 +85,13 @@ msgstr "Código fuente"
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:361
 #, qt-format
 msgid "More from %1"
-msgstr "Mas apps de %1"
+msgstr "Más de %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:385
 #, qt-format
 msgid "Other apps in %1"
-msgstr "Otras apps en %1"
+msgstr "Otras aplicaciones en %1"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:391
 msgid "Package contents"
@@ -108,19 +108,19 @@ msgstr "Permisos"
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:518
 msgid "none required"
-msgstr "ninguno requerido"
+msgstr "no se requiere ninguno"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:535
 msgid "Read paths"
-msgstr "Directorios de lectura"
+msgstr "Rutas de lectura"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:553
 msgid "Write paths"
-msgstr "Directorios de escritura"
+msgstr "Rutas de escritura"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:577
 msgid "Remove package"
-msgstr "Quitar paquete"
+msgstr "Eliminar paquete"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:578
 #, qt-format
@@ -160,7 +160,7 @@ msgstr "%1 bytes"
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/CategoriesPage.qml:24
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:187
 msgid "Categories"
-msgstr "Categorías"
+msgstr "Categorías"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/DiscoverTab.qml:95
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/DiscoverTab.qml:180
@@ -199,7 +199,7 @@ msgstr "Scope"
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:64
 msgid "URL Handler"
-msgstr "Manejador URL"
+msgstr "Manejador de URL"
 
 #. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:78
@@ -227,7 +227,7 @@ msgstr "Descubrir"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:200
 msgid "My Apps"
-msgstr "Mis Apps"
+msgstr "Mis aplicaciones"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:294
 msgid "Available updates"
@@ -266,16 +266,16 @@ msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
 msgstr ""
-"Mientras tratamos de prevenir esto revisando las aplicaciones, no tomamos "
-"responsabilidad alguna si algo malo se ha colado."
+"Aunque estamos haciendo el mayor esfuerzo para prevenir esto revisando las "
+"aplicaciones, no asumimos ninguna responsabilidad si algo malo se nos escapa."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:389
 msgid "Use this at your own risk."
-msgstr "Use esto bajo su responsabilidad."
+msgstr "Use esto bajo su propia responsabilidad."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:393
 msgid "Okay. Got it! I'll be careful."
-msgstr "Vale, tendré cuidado."
+msgstr "Vale. ¡Lo pillo! Seré cuidadoso."
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:400
 msgid "Get me out of here!"
@@ -301,11 +301,11 @@ msgstr "La aplicación se ha instalado correctamente."
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:447
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:460
 msgid "OK"
-msgstr "Vale"
+msgstr "OK"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:456
 msgid "Installation failed"
-msgstr "Instalación fallida"
+msgstr "La instalación falló"
 
 #: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:457
 msgid ""

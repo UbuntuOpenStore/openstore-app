@@ -125,7 +125,7 @@ void PackagesModel::refresh()
             LocalPackageItem pkgItem;
             pkgItem.appId = map.value("name").toString();
 
-            if (!m_remoteAppRevision.value(pkgItem.appId, -1) != -1) {
+            if (m_remoteAppRevision.value(pkgItem.appId, -1) != -1) {
                 pkgItem.name = map.value("title").toString();
                 pkgItem.updateAvailable = bool(m_remoteAppRevision.value(pkgItem.appId) > m_localAppRevision.value(pkgItem.appId));
 

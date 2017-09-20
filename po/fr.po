@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-20 14:20+0000\n"
 "PO-Revision-Date: 2017-09-20 17:59+0000\n"
-"Last-Translator: Anne Onyme <anneonyme017@openmailbox.org>\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: French <https://translate.ubports.com/projects/openstore"
 "/openstore-app/fr/>\n"
 "Language: fr\n"
@@ -191,13 +191,12 @@ msgid "✓ Installed"
 msgstr "✓ Installé"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:144
-#, fuzzy
 msgid "OpenStore update available"
-msgstr "Mise à jour disponible"
+msgstr "Mise à jour de l'OpenStore disponible"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:145
 msgid "Update OpenStore now!"
-msgstr ""
+msgstr "Mettre à jour l'OpenStore maintenant!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:151
 #, fuzzy

@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-20 14:20+0000\n"
-"PO-Revision-Date: 2017-09-01 21:11+0000\n"
-"Last-Translator: Daniel Frańczak <danielfranczak5@wp.pl>\n"
-"Language-Team: Polish <https://ubpweblate.tnvcomp.com/projects/openstore/"
-"openstore-app/pl/>\n"
+"PO-Revision-Date: 2017-09-20 15:04+0000\n"
+"Last-Translator: Beton <betonn@protonmail.com>\n"
+"Language-Team: Polish <https://translate.ubports.com/projects/openstore"
+"/openstore-app/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +27,7 @@ msgstr "Szczegóły aplikacji"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:43
 msgid "Open app"
-msgstr ""
+msgstr "Uruchom aplikację"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:99
 msgid "Upgrade"
@@ -74,7 +74,7 @@ msgstr "Najnowsza wersja"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:304
 msgid "First released"
-msgstr ""
+msgstr "Opublikowano"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:313
 msgid "License"
@@ -190,16 +190,14 @@ msgid "✓ Installed"
 msgstr "✓ Zainstalowane"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:144
-#, fuzzy
 msgid "OpenStore update available"
-msgstr "Dostępne aktualizacje"
+msgstr "Dostępna jest nowa wersja OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:145
 msgid "Update OpenStore now!"
-msgstr ""
+msgstr "Zaktualizuj OpenStore!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:151
-#, fuzzy
 msgid "Details"
 msgstr "Szczegóły aplikacji"
 
@@ -226,22 +224,20 @@ msgstr "Moje aplikacje"
 
 #. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:61
-#, fuzzy, qt-format
+#, qt-format
 msgid "Available updates (%1)"
-msgstr "Dostępne aktualizacje"
+msgstr "Dostępne aktualizacje (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:61
-#, fuzzy, qt-format
+#, qt-format
 msgid "Installed apps (%1)"
-msgstr "Zainstalowane aplikacje"
+msgstr "Zainstalowane aplikacje (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:101
-#, fuzzy
 msgid "No apps found"
 msgstr "Brak wyników."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
-#, fuzzy
 msgid "No app has been installed from OpenStore yet."
 msgstr "Nie ma aplikacji w tej kategorii."
 
@@ -254,22 +250,26 @@ msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
 msgstr ""
+"OpenStore pozwala na instalację nieoficjalnych programów. Upewnij się, że "
+"masz świadomość niebezpieczeństw z tym związanych."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:172
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
 msgstr ""
-"Nieokreślona aplikacja ma możliwość złamania systemu, zmniejszenia jego "
-"wydajności i / lub szpiegowania."
+"Nieoficjalne aplikacje mogą uszkodzić Twój system, zmniejszyć jego "
+"wydajność, a także mogą Cie szpiegować."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:179
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
 msgstr ""
-"Chociaż dokładamy wszelkich starań, aby zapobiec temu, że sprawdzając "
-"aplikacje, nie bierzemy odpowiedzialności za przewinienie się czegoś."
+"Chociaż dokładamy wszelkich starań, aby temu przeciwdziałać poprzez "
+"sprawdzanie aplikacji trafiających na OpenStore, nie ponosimy "
+"odpowiedzialności za ewentualne szkody wynikłe z instalowania nieoficjalnych "
+"programów."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:186
 msgid "Use this at your own risk."
@@ -318,9 +318,9 @@ msgstr ""
 "typu click."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:280
-#, fuzzy, qt-format
+#, qt-format
 msgid "Installation failed (Error %1)"
-msgstr "Instalacja nieudana"
+msgstr "Instalacja nieudana (Błąd: %1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:33
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15
@@ -329,11 +329,11 @@ msgstr "Wyszukaj"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Back"
-msgstr ""
+msgstr "Wstecz"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Close"
-msgstr ""
+msgstr "Zamknij"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:37
 msgid "Application"
@@ -341,7 +341,7 @@ msgstr "Aplikacja"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
 msgid "Scope"
-msgstr "Scope"
+msgstr "Soczewka"
 
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:64
@@ -367,7 +367,7 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:54
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
-msgstr ""
+msgstr "Wybierz"
 
 #~ msgid "Fetching package list..."
 #~ msgstr "Pobieranie listy pakietów..."

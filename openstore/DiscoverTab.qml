@@ -132,7 +132,7 @@ Page {
                 }
 
                 ListItem {
-                    id: appStoreUpdateWarning
+                    id: appStoreUpdateAlert
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: Math.min(parent.width, units.gu(80))
                     divider.visible: false
@@ -181,6 +181,14 @@ Page {
                 }
             }
         }
+    }
 
+    // WORKAROUND: appStoreUpdateAlert visibility is toggled after the whole page is layouted.
+    // This may result in the "Discover" tab being slightly scrolled down at start-up.
+    Connections {
+        target: appStoreUpdateAlert
+        onVisibleChanged: {
+            view.positionViewAtBeginning()
+        }
     }
 }

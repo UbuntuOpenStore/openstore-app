@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-20 14:20+0000\n"
-"PO-Revision-Date: 2017-09-20 17:58+0000\n"
+"PO-Revision-Date: 2017-09-20 18:05+0000\n"
 "Last-Translator: advocatux <advocatux@airpost.net>\n"
 "Language-Team: Spanish <https://translate.ubports.com/projects/openstore"
 "/openstore-app/es/>\n"
@@ -79,7 +79,7 @@ msgstr "Publicado por primera vez"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:313
 msgid "License"
-msgstr "Licencia de uso"
+msgstr "Licencia"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:314
 msgid "N/A"
@@ -307,7 +307,7 @@ msgstr "OK"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:265
 msgid "Installation failed"
-msgstr "La instalación falló"
+msgstr "Instalación fallida"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:266
 msgid ""

@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-20 14:20+0000\n"
-"PO-Revision-Date: 2017-07-27 19:07+0000\n"
-"Last-Translator: econergie germant <michael.germant@orange.fr>\n"
-"Language-Team: French <https://ubpweblate.tnvcomp.com/projects/openstore/"
-"openstore-app/fr/>\n"
+"PO-Revision-Date: 2017-09-20 17:59+0000\n"
+"Last-Translator: Anne Onyme <anneonyme017@openmailbox.org>\n"
+"Language-Team: French <https://translate.ubports.com/projects/openstore"
+"/openstore-app/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +26,7 @@ msgstr "Détails de l'application"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:43
 msgid "Open app"
-msgstr ""
+msgstr "Ouvrir l'application"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:99
 msgid "Upgrade"
@@ -63,7 +63,7 @@ msgstr "Auteur"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:278
 msgid "OpenStore team"
-msgstr "L'équipe OpenStore"
+msgstr "L'équipe de l'OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:286
 msgid "Installed version"
@@ -75,7 +75,7 @@ msgstr "Version disponible"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:304
 msgid "First released"
-msgstr ""
+msgstr "Publié pour la première fois"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:313
 msgid "License"

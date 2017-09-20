@@ -75,9 +75,8 @@ Page {
             // WORKAROUND: Fix for wrong grid unit size
             Component.onCompleted: root.flickable_responsive_scroll_fix(view)
 
-            header: Item {
+            header: Column {
                 width: parent.width
-                height: highlightAppControl.height
 
                 AbstractButton {
                     id: highlightAppControl
@@ -129,6 +128,39 @@ Page {
                         }
                         summary.textSize: Label.XSmall
                         summary.color: "white"
+                    }
+                }
+
+                ListItem {
+                    id: appStoreUpdateWarning
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    width: Math.min(parent.width, units.gu(80))
+                    divider.visible: false
+                    enabled: visible    // Just for being sure everything works as expected
+                    visible: appModel.appStoreUpdateAvailable
+
+                    ListItemLayout {
+                        anchors.fill: parent
+                        title.text: i18n.tr("OpenStore update available")
+                        subtitle.text: i18n.tr("Update OpenStore now!")
+                        subtitle.wrapMode: Text.WordWrap
+
+                        Button {
+                            SlotsLayout.position: SlotsLayout.Last
+                            color: UbuntuColors.green
+                            text: i18n.tr("Details")
+
+                            function slot_installedPackageDetailsReady(pkg) {
+                                appModel.packageDetailsReady.disconnect(slot_installedPackageDetailsReady)
+                                bottomEdgeStack.clear()
+                                bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
+                            }
+
+                            onClicked: {
+                                appModel.packageDetailsReady.connect(slot_installedPackageDetailsReady)
+                                appModel.showPackageDetails(appModel.appStoreAppId)
+                            }
+                        }
                     }
                 }
             }

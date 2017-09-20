@@ -110,7 +110,7 @@ MainView {
         property bool firstStart: true
     }
 
-    property QtObject appModel: AppModel { }
+    property QtObject appModel: AppModel { appStoreAppId: root.applicationName }
     property QtObject categoriesModel: CategoriesModel { }
     property QtObject discoverModel: DiscoverModel { }
     property QtObject searchModel: SearchModel { }

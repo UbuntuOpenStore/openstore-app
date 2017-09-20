@@ -20,6 +20,8 @@ class PackagesModel : public QAbstractListModel
     Q_PROPERTY(int count READ rowCount NOTIFY updated)
     Q_PROPERTY(bool ready READ ready NOTIFY readyChanged)
     Q_PROPERTY(int updatesAvailableCount READ updatesAvailableCount NOTIFY updated)
+    Q_PROPERTY(QString appStoreAppId MEMBER m_appStoreAppId NOTIFY appStoreAppIdChanged)
+    Q_PROPERTY(bool appStoreUpdateAvailable READ appStoreUpdateAvailable NOTIFY appStoreUpdateAvailableChanged)
 
 public:
     enum Roles {
@@ -38,6 +40,8 @@ public:
     bool ready() const { return m_ready; }
     int updatesAvailableCount() const;
 
+    bool appStoreUpdateAvailable() const { return m_appStoreUpdateAvailable; }
+
     Q_INVOKABLE void refresh();
     Q_INVOKABLE void showPackageDetails(const QString &appId);
 
@@ -47,9 +51,13 @@ Q_SIGNALS:
     void readyChanged();
     void updated();
     void packageDetailsReady(PackageItem* pkg);
+    void appStoreAppIdChanged();
+    void appStoreUpdateAvailableChanged();
 
 private:
     QList<LocalPackageItem> m_list;
+    QString m_appStoreAppId;
+    bool m_appStoreUpdateAvailable;
     bool m_ready;
 };
 

@@ -132,6 +132,12 @@ void PackagesModel::refresh()
             }
 
             m_list.append(pkgItem);
+
+            // Check if there's an update for OpenStore
+            if (pkgItem.appId == m_appStoreAppId) {
+                m_appStoreUpdateAvailable = pkgItem.updateAvailable;
+                Q_EMIT appStoreUpdateAvailableChanged();
+            }
         }
     }
 

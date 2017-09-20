@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-20 14:20+0000\n"
-"PO-Revision-Date: 2017-09-14 05:03+0000\n"
+"PO-Revision-Date: 2017-09-20 15:02+0000\n"
 "Last-Translator: Milan Korecký <milan.korecky@gmail.com>\n"
-"Language-Team: Czech <https://translate.ubports.com/projects/openstore/"
-"openstore-app/cs/>\n"
+"Language-Team: Czech <https://translate.ubports.com/projects/openstore"
+"/openstore-app/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +25,7 @@ msgstr "Údaje o aplikaci"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:43
 msgid "Open app"
-msgstr ""
+msgstr "Open app"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:99
 msgid "Upgrade"
@@ -72,7 +72,7 @@ msgstr "Nejnovější dostupná verze"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:304
 msgid "First released"
-msgstr ""
+msgstr "První vydání"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:313
 msgid "License"
@@ -188,16 +188,14 @@ msgid "✓ Installed"
 msgstr "✓ Nainstalováno"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:144
-#, fuzzy
 msgid "OpenStore update available"
-msgstr "Dostupná aktualizace"
+msgstr "Dostupná aktualizace pro OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:145
 msgid "Update OpenStore now!"
-msgstr ""
+msgstr "Aktualizovat OpenStore nyní!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:151
-#, fuzzy
 msgid "Details"
 msgstr "Údaje o aplikaci"
 
@@ -224,24 +222,22 @@ msgstr "Moje aplikace"
 
 #. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:61
-#, fuzzy, qt-format
+#, qt-format
 msgid "Available updates (%1)"
-msgstr "Dostupné aktualizace"
+msgstr "Dostupné aktualizace (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:61
-#, fuzzy, qt-format
+#, qt-format
 msgid "Installed apps (%1)"
-msgstr "Nainstalované aplikace"
+msgstr "Nainstalované aplikace (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:101
-#, fuzzy
 msgid "No apps found"
-msgstr "Žádné výsledky nenalezeny."
+msgstr "Žádné aplikace nenalezeny"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
-#, fuzzy
 msgid "No app has been installed from OpenStore yet."
-msgstr "V této kategorii zatím nic není."
+msgstr "Zatím nebyly instalovány žádné aplikace z OpenStore."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:156
 msgid "Warning"
@@ -281,7 +277,7 @@ msgstr "Dobře. Rozumím! Budu opatrný."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:197
 msgid "Get me out of here!"
-msgstr "Dostaň mě odsud!"
+msgstr "Pryč odsud!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:210
 msgid "Install app?"
@@ -318,9 +314,9 @@ msgstr ""
 "Zkontrolujte zda se jedná o platný click balíček."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:280
-#, fuzzy, qt-format
+#, qt-format
 msgid "Installation failed (Error %1)"
-msgstr "Instalace selhala"
+msgstr "Instalace selhala (Chyba %1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:33
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15
@@ -329,11 +325,11 @@ msgstr "Hledat"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Back"
-msgstr ""
+msgstr "Zpět"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Close"
-msgstr ""
+msgstr "Zavřít"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:37
 msgid "Application"
@@ -367,7 +363,7 @@ msgstr "Poskytovatel účtů"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:54
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
-msgstr ""
+msgstr "Výběr"
 
 #~ msgid "Fetching package list..."
 #~ msgstr "Získávám seznam balíčků…"

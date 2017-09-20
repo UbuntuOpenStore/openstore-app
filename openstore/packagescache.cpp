@@ -25,8 +25,9 @@ bool PackagesCache::contains(const QString &appId) const
 PackageItem* PackagesCache::insert(const QString &appId, const QVariantMap &jsonMap)
 {
     PackageItem *pkg = new PackageItem(jsonMap, this);
-    m_cache.insert(appId, pkg);
+    pkg->updateLocalInfo(m_localAppRevision.value(pkg->appId()), PlatformIntegration::instance()->appVersion(pkg->appId()));
 
+    m_cache.insert(appId, pkg);
     return pkg;
 }
 
@@ -59,16 +60,17 @@ void PackagesCache::updateCacheRevisions()
             return;
         }
 
-        QHash<QString, int> localAppRevision; // appid, revision
+        m_localAppRevision.clear();
+
         QVariantList data = replyMap.value("data").toList();
         Q_FOREACH (QVariant d, data) {
             QVariantMap map = d.toMap();
             const QString &appId = map.value("id").toString();
-            localAppRevision.insert(appId, map.value("revision").toInt());
+            m_localAppRevision.insert(appId, map.value("revision").toInt());
         }
 
         Q_FOREACH (PackageItem* pkg, m_cache) {
-            int pkgRevNo = localAppRevision.value(pkg->appId(), -1);
+            int pkgRevNo = m_localAppRevision.value(pkg->appId(), -1);
             if (pkgRevNo != -1) {
                 pkg->updateLocalInfo(pkgRevNo, PlatformIntegration::instance()->appVersion(pkg->appId()));
             }

@@ -29,6 +29,7 @@ private Q_SLOTS:
 
 private:
     QHash<QString, PackageItem*> m_cache;
+    QHash<QString, int> m_localAppRevision; // appid, revision
 
     QString m_signature;
     bool m_updatingCache;

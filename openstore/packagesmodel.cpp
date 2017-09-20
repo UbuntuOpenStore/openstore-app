@@ -108,6 +108,10 @@ void PackagesModel::refresh()
             return;
         }
 
+        // TODO: This is actually redundant, since we do the same in PackagesCache. However, we still
+        // need it for providing proper info in LocalPackageItem(s).
+        // We could add some getter in PackagesCache for local/remote app revision, so we don't need
+        // to repeat this request to the server.
         QVariantList data = replyMap.value("data").toList();
         Q_FOREACH (QVariant d, data) {
             QVariantMap map = d.toMap();
@@ -183,10 +187,7 @@ void PackagesModel::refresh()
 void PackagesModel::showPackageDetails(const QString &appId)
 {
     if (PackagesCache::instance()->contains(appId)) {
-        PackageItem *pkg = PackagesCache::instance()->get(appId);
-        pkg->updateLocalInfo(m_localAppRevision.value(pkg->appId()), PlatformIntegration::instance()->appVersion(pkg->appId()));
-
-        Q_EMIT packageDetailsReady(pkg);
+        Q_EMIT packageDetailsReady(PackagesCache::instance()->get(appId));
     } else {
         const QString &signature = OpenStoreNetworkManager::instance()->generateNewSignature();
 
@@ -212,8 +213,6 @@ void PackagesModel::showPackageDetails(const QString &appId)
             QVariantMap pkg = replyMap.value("data").toMap();
 
             PackageItem* pkgItem = PackagesCache::instance()->insert(appId, pkg);
-            pkgItem->updateLocalInfo(m_localAppRevision.value(pkgItem->appId()), PlatformIntegration::instance()->appVersion(pkgItem->appId()));
-
             Q_EMIT packageDetailsReady(pkgItem);
         });
 

@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-20 14:20+0000\n"
-"PO-Revision-Date: 2017-09-07 21:29+0000\n"
-"Last-Translator: Mike <miguel2000@livecom.it>\n"
-"Language-Team: Italian <https://translate.ubports.com/projects/openstore/"
-"openstore-app/it/>\n"
+"PO-Revision-Date: 2017-09-20 14:53+0000\n"
+"Last-Translator: Stefano Verzegnassi <verzegnassi.stefano@gmail.com>\n"
+"Language-Team: Italian <https://translate.ubports.com/projects/openstore"
+"/openstore-app/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +26,7 @@ msgstr "Dettagli dell'applicazione"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:43
 msgid "Open app"
-msgstr ""
+msgstr "Avvia App"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:99
 msgid "Upgrade"
@@ -75,7 +75,7 @@ msgstr "Ultima versione disponibile"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:304
 msgid "First released"
-msgstr ""
+msgstr "Primo rilascio"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:313
 msgid "License"
@@ -191,18 +191,16 @@ msgid "✓ Installed"
 msgstr "✔ Installato"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:144
-#, fuzzy
 msgid "OpenStore update available"
-msgstr "Aggiornamento disponibile"
+msgstr "Aggiornamento di OpenStore disponibile"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:145
 msgid "Update OpenStore now!"
-msgstr ""
+msgstr "Aggiorna OpenStore ora!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:151
-#, fuzzy
 msgid "Details"
-msgstr "Dettagli dell'applicazione"
+msgstr "Dettagli"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:110
 msgid "Nothing here yet"
@@ -227,24 +225,22 @@ msgstr "Le mie App"
 
 #. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:61
-#, fuzzy, qt-format
+#, qt-format
 msgid "Available updates (%1)"
-msgstr "Aggiornamenti disponibili"
+msgstr "Aggiornamenti disponibili (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:61
-#, fuzzy, qt-format
+#, qt-format
 msgid "Installed apps (%1)"
-msgstr "App installate"
+msgstr "Applicazioni installate (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:101
-#, fuzzy
 msgid "No apps found"
-msgstr "Nessun risultato trovato."
+msgstr "Nessuna applicazione trovata"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
-#, fuzzy
 msgid "No app has been installed from OpenStore yet."
-msgstr "Nessuna App è stata ancora pubblicata in questa categoria."
+msgstr "Nessuna App è stata ancora installata da OpenStore."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:156
 msgid "Warning"
@@ -322,9 +318,9 @@ msgstr ""
 "click valido."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:280
-#, fuzzy, qt-format
+#, qt-format
 msgid "Installation failed (Error %1)"
-msgstr "Installazione fallita"
+msgstr "Installazione fallita (Errore %1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:33
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15
@@ -333,11 +329,11 @@ msgstr "Cerca"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Back"
-msgstr ""
+msgstr "Indietro"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Close"
-msgstr ""
+msgstr "Chiudi"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:37
 msgid "Application"
@@ -371,7 +367,7 @@ msgstr "Fornitore di Account"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:54
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
-msgstr ""
+msgstr "Scegli"
 
 #~ msgid "Fetching package list..."
 #~ msgstr "Recuperando la lista dei pacchetti..."

@@ -4,7 +4,6 @@ TARGET = openstore
 load(ubuntu-click)
 
 QT += qml quick
-
 CONFIG += c++11
 
 DEFINES += QT_NO_KEYWORDS
@@ -21,9 +20,17 @@ INCLUDEPATH += /usr/include/click-0.4/ \
 LIBS += -lglib-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lclick-0.4
 
 SOURCES += main.cpp \
+    categoriesmodel.cpp \
     clickinstaller.cpp \
-    appmodel.cpp \
-    serviceregistry.cpp
+    discovermodel.cpp \
+    packagesmodel.cpp \
+    searchmodel.cpp \
+    serviceregistry.cpp \
+    openstorenetworkmanager.cpp \
+    platformintegration.cpp \
+    package.cpp \
+    packagescache.cpp
+
 
 RESOURCES += openstore.qrc
 
@@ -44,7 +51,13 @@ target.path = $${UBUNTU_CLICK_BINARY_PATH}
 INSTALLS+=target
 
 HEADERS += \
+    categoriesmodel.h \
     clickinstaller.h \
-    appmodel.h \
-    serviceregistry.h
-
+    discovermodel.h \
+    packagesmodel.h \
+    searchmodel.h \
+    serviceregistry.h \
+    openstorenetworkmanager.h \
+    platformintegration.h \
+    packagescache.h \
+    package.h

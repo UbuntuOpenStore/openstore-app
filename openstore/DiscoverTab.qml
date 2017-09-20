@@ -18,171 +18,177 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 import OpenStore 1.0
 
-ScrollView {
+import "Components" as Components
+
+Page {
     id: rootItem
-    anchors.fill: parent
-    anchors.topMargin: parent.header ? parent.header.height : 0
 
-    property var discoverData
-    property string discoverApiEndPoint: "https://open.uappexplorer.com/api/v1/apps/discover"
-    property AppModel storeModel
+    property DiscoverModel discoverModel: root.discoverModel
 
-    signal appDetailsRequired(var appId)
-    signal categoryViewRequired(var name, var categoryCode)
+    header: PageHeader {
+        title: i18n.tr("Discover")
+        contents: Rectangle {
+            id: searchField
+            anchors.centerIn: parent
+            width: Math.min(parent.width, units.gu(36))
+            implicitHeight: units.gu(4)
 
-    Component.onCompleted: {
-        var doc = new XMLHttpRequest();
-        doc.onreadystatechange = function() {
-            if (doc.readyState == 4 && doc.status == 200) {
-                var reply = JSON.parse(doc.responseText)
+            Row {
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                    verticalCenter: parent.verticalCenter
+                    margins: units.gu(1)
+                }
 
-                if (reply.success) {
-                    rootItem.discoverData = reply.data
-                } else {
-                    console.log("Unable to fetch discover data from server (success = false).")
+                spacing: units.gu(1)
+                Icon {
+                    width: units.gu(2); height: width
+                    name: "find"
+                }
+
+                Label {
+                    text: i18n.tr("Search in OpenStore...")
                 }
             }
-        }
 
-        doc.open("GET", discoverApiEndPoint, true);
-        doc.send();
+            radius: units.dp(8)
+            color: "transparent"
+            border.width: units.dp(1)
+            border.color: "#cdcdcd"
+
+            MouseArea {
+                anchors.fill: parent
+                onClicked: mainPage.showSearch()
+            }
+        }
     }
 
-    ListView {
-        id: view
+    ScrollView {
         anchors.fill: parent
+        anchors.topMargin: rootItem.header.height
 
-        // WORKAROUND: Fix for wrong grid unit size
-        Component.onCompleted: root.flickable_responsive_scroll_fix(view)
+        ListView {
+            id: view
+            anchors.fill: parent
 
-        header: AbstractButton {
-            id: highlightAppControl
-            property var appItem: storeModel.app(storeModel.findApp(discoverData.highlight.id))
-            width: parent.width
-            height: Math.min(units.gu(28), width * 9 / 16)
+            // WORKAROUND: Fix for wrong grid unit size
+            Component.onCompleted: root.flickable_responsive_scroll_fix(view)
 
-            onClicked: rootItem.appDetailsRequired(discoverData.highlight.id)
+            header: Column {
+                width: parent.width
 
-            Image {
-                anchors.fill: parent
-                anchors.bottomMargin: units.gu(2)
-                source: discoverData.highlight.image || highlightAppControl.appItem.icon
-                fillMode: Image.PreserveAspectCrop
-            }
+                AbstractButton {
+                    id: highlightAppControl
 
-            Rectangle {
-                anchors.fill: highlightAppLabels
-                color: "black"
-                opacity: 0.45
-            }
+                    property var appItem: discoverModel.getPackage(discoverModel.highlightAppId)
 
-            ListItemLayout {
-                id: highlightAppLabels
-                anchors.bottom: parent.bottom
-                anchors.bottomMargin: units.gu(2)
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    width: Math.min(parent.width, units.gu(80))
+                    height: width * 0.5
 
-                title.text: highlightAppControl.appItem.name
-                title.textSize: Label.Large
-                title.font.weight: Font.Normal
-                title.color: "white"
+                    onClicked: {
+                        var pageProps = { app: highlightAppControl.appItem }
+                        bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), pageProps)
+                    }
 
-                subtitle.text: highlightAppControl.appItem.tagline || highlightAppControl.appItem.description
-                subtitle.textSize: Label.Small
-                subtitle.color: "white"
+                    Image {
+                        anchors.fill: parent
+                        anchors.bottomMargin: units.gu(2)
+                        source: discoverModel.highlightBannerUrl || highlightAppControl.appItem.icon
+                        fillMode: Image.PreserveAspectCrop
+                    }
 
-                summary.text: {
-                    if (highlightAppControl.appItem.installed)
-                        return highlightAppControl.appItem.updateAvailable ? i18n.tr("Update available").toUpperCase()
-                                                                           : i18n.tr("✓ Installed").toUpperCase()
+                    Rectangle {
+                        anchors.fill: highlightAppLabels
+                        color: "black"
+                        opacity: 0.45
+                    }
 
-                    return ""
+                    ListItemLayout {
+                        id: highlightAppLabels
+                        anchors.bottom: parent.bottom
+                        anchors.bottomMargin: units.gu(2)
+
+                        title.text: highlightAppControl.appItem.name
+                        title.textSize: Label.Large
+                        title.font.weight: Font.Normal
+                        title.color: "white"
+
+                        subtitle.text: highlightAppControl.appItem.tagline || highlightAppControl.appItem.description
+                        subtitle.textSize: Label.Small
+                        subtitle.color: "white"
+
+                        summary.text: {
+                            if (highlightAppControl.appItem.installed)
+                                return highlightAppControl.appItem.updateAvailable ? i18n.tr("Update available").toUpperCase()
+                                                                                   : i18n.tr("✓ Installed").toUpperCase()
+
+                            return ""
+                        }
+                        summary.textSize: Label.XSmall
+                        summary.color: "white"
+                    }
                 }
-                summary.textSize: Label.XSmall
-                summary.color: "white"
+
+                ListItem {
+                    id: appStoreUpdateAlert
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    width: Math.min(parent.width, units.gu(80))
+                    divider.visible: false
+                    enabled: visible    // Just for being sure everything works as expected
+                    visible: appModel.appStoreUpdateAvailable
+
+                    ListItemLayout {
+                        anchors.fill: parent
+                        title.text: i18n.tr("OpenStore update available")
+                        subtitle.text: i18n.tr("Update OpenStore now!")
+                        subtitle.wrapMode: Text.WordWrap
+
+                        Button {
+                            SlotsLayout.position: SlotsLayout.Last
+                            color: UbuntuColors.green
+                            text: i18n.tr("Details")
+
+                            function slot_installedPackageDetailsReady(pkg) {
+                                appModel.packageDetailsReady.disconnect(slot_installedPackageDetailsReady)
+                                bottomEdgeStack.clear()
+                                bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
+                            }
+
+                            onClicked: {
+                                appModel.packageDetailsReady.connect(slot_installedPackageDetailsReady)
+                                appModel.showPackageDetails(appModel.appStoreAppId)
+                            }
+                        }
+                    }
+                }
+            }
+
+            model: discoverModel
+            delegate: Components.OpenStoreCarousel {
+                width: parent.width
+
+                title: model.name
+                subtitle: model.tagline
+                showProgression: model.queryUrl
+                onTitleClicked: if (model.queryUrl) { mainPage.showSearchQuery(model.queryUrl) }
+                onAppTileClicked: bottomEdgeStack.push(Qt.resolvedUrl("../AppDetailsPage.qml"), { app: appItem })
+
+                viewModel: model.appIds
+                function packageInfoGetter(i) {
+                    return discoverModel.getPackage(i)
+                }
             }
         }
+    }
 
-        model: discoverData ? rootItem.discoverData.categories : null
-        delegate: Column {
-            width: parent.width
-            spacing: units.gu(1)
-
-            ListItem {
-                divider.visible: false
-                onClicked: {
-                    if (modelData.referral) {
-                        rootItem.categoryViewRequired(modelData.name, modelData.referral)
-                    }
-                }
-
-                ListItemLayout {
-                    anchors.centerIn: parent
-                    title.text: modelData.name
-                    subtitle.text: modelData.tagline
-                    subtitle.wrapMode: Text.WordWrap
-
-                    ProgressionSlot {
-                        visible: modelData.referral != ""
-                    }
-                }
-            }
-
-            ListView {
-                anchors { left: parent.left; right: parent.right }
-                leftMargin: units.gu(2)
-                rightMargin: units.gu(2)
-                clip: true
-                height: count > 0 ? units.gu(24) : 0
-                visible: count > 0
-                spacing: units.gu(2)
-                orientation: ListView.Horizontal
-                model: modelData.ids
-                delegate: AbstractButton {
-                    id: appDel
-                    property var appItem: storeModel.app(storeModel.findApp(modelData))
-                    height: parent.height
-                    width: units.gu(16)
-
-                    onClicked: rootItem.appDetailsRequired(modelData)
-
-                    Column {
-                        anchors.fill: parent
-
-                        UbuntuShape {
-                            width: parent.width
-                            height: width
-                            aspect: UbuntuShape.Flat
-                            sourceFillMode: UbuntuShape.PreserveAspectFit
-                            source: Image {
-                                source: appDel.appItem.icon
-                            }
-                        }
-
-                        ListItemLayout {
-                            anchors {
-                                left: parent.left; leftMargin: units.gu(-1)
-                                right: parent.right
-                            }
-
-                            height: units.gu(4)
-                            title {
-                                text: appDel.appItem.name
-                                textSize: Label.Small
-                                wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-                                maximumLineCount: 2
-                            }
-
-                            subtitle {
-                                text: appDel.appItem.author
-                                textSize: Label.XSmall
-                            }
-
-                            summary.text: appDel.appItem.installed ? appDel.appItem.updateAvailable ? i18n.tr("Update available").toUpperCase() : i18n.tr("✓ Installed").toUpperCase() : ""
-                            summary.textSize: Label.XSmall
-                        }
-                    }
-                }
-            }
+    // WORKAROUND: appStoreUpdateAlert visibility is toggled after the whole page is layouted.
+    // This may result in the "Discover" tab being slightly scrolled down at start-up.
+    Connections {
+        target: appStoreUpdateAlert
+        onVisibleChanged: {
+            view.positionViewAtBeginning()
         }
     }
 }

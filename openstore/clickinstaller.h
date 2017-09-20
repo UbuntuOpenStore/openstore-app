@@ -12,7 +12,6 @@ class ClickInstaller : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(bool busy READ busy NOTIFY busyChanged)
-
     Q_PROPERTY(int downloadProgress READ downloadProgress NOTIFY downloadProgressChanged)
 
 public:
@@ -30,6 +29,7 @@ Q_SIGNALS:
 public Q_SLOTS:
     void installPackage(const QString &packageUrl);
     void removePackage(const QString &appId, const QString &version);
+    bool abortInstallation() const;
 
 private:
     void fetchPackage(const QString &packageUrl);
@@ -48,7 +48,6 @@ private:
 
     QNetworkAccessManager *m_nam;
     QFile m_file;
-
 };
 
 #endif // CLICKINSTALLER_H

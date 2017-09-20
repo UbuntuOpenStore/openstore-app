@@ -20,19 +20,25 @@ import OpenStore 1.0
 import QtQuick.Layouts 1.1
 import Qt.labs.settings 1.0
 import Ubuntu.Content 1.3
-import QtQml.Models 2.1
+
+import "Components" as Components
 
 MainView {
     id: root
     applicationName: "openstore.openstore-team"
     anchorToKeyboard: true
 
-    width: units.gu(40)
+    width: units.gu(130)
     height: units.gu(75)
 
     property string appIdToOpen
+    property var mainPage
 
     Component.onCompleted: {
+        mainPage = pageStack.push(Qt.resolvedUrl("MainPage.qml"))
+
+        PlatformIntegration.update()
+
         if (settings.firstStart) {
             var popup = PopupUtils.open(warningComponent)
             popup.accepted.connect(function() {
@@ -49,23 +55,41 @@ MainView {
         }
     }
 
+    property bool contentHubInstallInProgress: false
     Connections {
-        target: UriHandler
-        onOpened: {
-            var index = appModel.findApp(uris[0].split("://")[1])
-            if (index >= 0) {
-                pageStack.addPageToNextColumn(mainPage, Qt.resolvedUrl("AppDetailsPage.qml"), {app: appModel.app(index)})
-            }
+        target: ContentHub
+
+        onImportRequested: {
+            var filePath = String(transfer.items[0].url).replace('file://', '')
+            print("Should import file", filePath)
+            var fileName = filePath.split("/").pop();
+            var popup = PopupUtils.open(installQuestion, root, {fileName: fileName});
+            popup.accepted.connect(function() {
+                contentHubInstallInProgress = true;
+                PlatformIntegration.clickInstaller.installPackage(filePath)
+            })
         }
     }
 
-    Settings {
-        id: settings
-        property bool firstStart: true
+    function slot_packageDetailsReady(pkg) {
+        appModel.packageDetailsReady.disconnect(slot_packageDetailsReady)
+        bottomEdgeStack.clear()
+        bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
     }
 
-    ClickInstaller {
-        id: installer
+    Connections {
+        target: UriHandler
+        onOpened: {
+            var appId = uris[0].split("://")[1]
+            console.log("Fetching " + appId + " for UriHandler request")
+            appModel.packageDetailsReady.connect(slot_packageDetailsReady)
+            appModel.showPackageDetails(appId)
+        }
+    }
+
+    Connections {
+        target: PlatformIntegration.clickInstaller
+
         onPackageInstalled: {
             print("******* package installed")
             if (contentHubInstallInProgress) {
@@ -81,270 +105,43 @@ MainView {
         }
     }
 
-    AppModel {
-        id: appModel
-        installer: installer
-        onRepositoryListFetched: repoFetchingIndicator.visible = false
+    Settings {
+        id: settings
+        property bool firstStart: true
     }
 
-    ServiceRegistry {
-        id: serviceRegistry
-        clickInstaller: installer
-    }
+    property QtObject appModel: AppModel { appStoreAppId: root.applicationName }
+    property QtObject categoriesModel: CategoriesModel { }
+    property QtObject discoverModel: DiscoverModel { }
+    property QtObject searchModel: SearchModel { }
 
-    QtObject {
-        id: categories
-
-        property string categoriesApiEndPoint: "https://open.uappexplorer.com/api/v1/categories?lang=" + Qt.locale().name
-        property var list
-
-        Component.onCompleted: {
-            console.log("fetching categories from:", categories.categoriesApiEndPoint)
-            var doc = new XMLHttpRequest();
-            doc.onreadystatechange = function() {
-                if (doc.readyState == 4 && doc.status == 200) {
-                    var reply = JSON.parse(doc.responseText)
-                    if (reply.success) {
-                        list = reply.data
-                    } else {
-                        console.log("Unable to fetch categories from server (success = false).")
-                    }
-                }
-            }
-
-            doc.open("GET", categoriesApiEndPoint, true);
-            doc.send();
-        }
-
-    }
-
-    property bool contentHubInstallInProgress: false
-    Connections {
-        target: ContentHub
-
-        onImportRequested: {
-            var filePath = String(transfer.items[0].url).replace('file://', '')
-            print("Should import file", filePath)
-            var fileName = filePath.split("/").pop();
-            var popup = PopupUtils.open(installQuestion, root, {fileName: fileName});
-            popup.accepted.connect(function() {
-                contentHubInstallInProgress = true;
-                installer.installPackage(filePath)
-            })
-        }
-    }
-    AdaptivePageLayout {
+    PageStack {
         id: pageStack
-        anchors.fill: parent
-        primaryPage: mainPage
-
-        layouts: [
-            // Span two columns only on BQ M10 - landscape mode.
-            PageColumnsLayout {
-                when: width > units.gu(120)
-                PageColumn {
-                    minimumWidth: units.gu(40)
-                    maximumWidth: units.gu(120)
-                    preferredWidth: units.gu(60)
-                }
-                PageColumn {
-                    // FIXME: 'minimumWidth' is not useful if first column get resized by user.
-                    // This is an upstream bug in UITK.
-                    minimumWidth: units.gu(40)
-                    fillWidth: true
-                }
-            },
-
-            PageColumnsLayout {
-                when: width > units.gu(120)
-                PageColumn {
-                    minimumWidth: units.gu(40)
-                    maximumWidth: units.gu(80)
-                    preferredWidth: units.gu(60)
-                }
-                PageColumn {
-                    fillWidth: true
-                }
-            },
-
-            PageColumnsLayout {
-                when: true
-                PageColumn {
-                    fillWidth: true
-                }
-            }
-        ]
-
-
-        Page {
-            id: mainPage
-            header: PageHeader {
-                title: "OpenStore"  // This is the name of the store - no need for translation.
-                automaticHeight: false
-
-                leadingActionBar.actions: Action {
-                    iconName: "navigation-menu"
-                    text: i18n.tr("Categories")
-                    onTriggered: mainPage.pageStack.addPageToCurrentColumn(mainPage, Qt.resolvedUrl("CategoriesPage.qml"), {})
-                }
-
-                trailingActionBar.actions: Action {
-                    iconName: "find"
-                    text: i18n.tr("Search")
-                    onTriggered: {
-                        mainPage.pageStack.addPageToCurrentColumn(mainPage, searchPageComponent, {})
-                    }
-                }
-
-                sections {
-                    model: [ i18n.tr("Discover"), i18n.tr("My Apps") ]
-                    selectedIndex: 0   // Should always match "Discover"
-                    onSelectedIndexChanged: {
-                        // Current section has changed, if there was an opened page
-                        // in the second column, it is not anymore related to the
-                        // new current section. Remove it.
-                        mainPage.pageStack.removePages(mainPage)
-                    }
-                }
-            }
-
-            ListView {
-                id: view
-                anchors {
-                    top: mainPage.header.bottom
-                    bottom: parent.bottom
-                    left: parent.left
-                    right: parent.right
-                }
-
-                clip: true
-                orientation: ListView.Horizontal
-                interactive: false
-                snapMode: ListView.SnapOneItem
-                highlightMoveDuration: 0
-                currentIndex: mainPage.header.sections.selectedIndex
-
-                model: ObjectModel {
-                    Loader {
-                        id: discoverTabLoader
-                        width: view.width
-                        height: view.height
-                        asynchronous: true
-                        source: Qt.resolvedUrl("DiscoverTab.qml")
-
-                        active: false
-                        Connections {
-                            target: appModel
-                            onRepositoryListFetched: discoverTabLoader.active = true
-                        }
-
-                        onLoaded: {
-                            item.storeModel = appModel
-
-                            item.appDetailsRequired.connect(function(appId) {
-                                var pageProps = {
-                                    app: appModel.app(appModel.findApp(appId))
-                                }
-                                mainPage.pageStack.addPageToNextColumn(mainPage, Qt.resolvedUrl("AppDetailsPage.qml"), pageProps)
-                            })
-
-                            item.categoryViewRequired.connect(function(name, code) {
-                                var pageProps = {
-                                    title: name,
-                                    filterPattern: new RegExp(code.toString()),
-                                    filterProperty: "category"
-                                }
-
-                                mainPage.pageStack.removePages(mainPage)
-                                mainPage.pageStack.addPageToCurrentColumn(mainPage, filteredAppPageComponent, pageProps)
-                            })
-                        }
-                    }
-                    Loader {
-                        width: view.width
-                        height: view.height
-                        asynchronous: true
-                        source: Qt.resolvedUrl("FilteredAppView.qml")
-
-                        onLoaded: {
-                            item.model = appModel
-
-                            item.filterProperty = "installed"
-                            item.filterPattern = new RegExp("true")
-
-                            item.sortProperty = "updateAvailable"
-                            item.sortOrder = Qt.DescendingOrder
-
-                            item.view.section.property = "updateAvailable"
-                            item.view.section.delegate = updateDivider
-
-                            item.showTicks = false
-
-                            item.appDetailsRequired.connect(function(appId) {
-                                var pageProps = {
-                                    app: appModel.app(appModel.findApp(appId))
-                                }
-                                mainPage.pageStack.addPageToNextColumn(mainPage, Qt.resolvedUrl("AppDetailsPage.qml"), pageProps)
-                            })
-                        }
-
-                        Component {
-                            id: updateDivider
-                            SectionDivider {
-                                text: section == "true" ? i18n.tr("Available updates") : i18n.tr("Installed apps")
-                            }
-                        }
-                    }
-                }
-            }
-
-            Column {
-                id: repoFetchingIndicator
-                anchors.centerIn: parent
-                anchors.verticalCenterOffset: mainPage.header.height * 0.4
-                spacing: units.gu(1)
-                ActivityIndicator {
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    running: visible
-                }
-                Label {
-                    textSize: Label.Small
-                    text: i18n.tr("Fetching package list...")
-                }
-            }
-        }
     }
 
-    Component {
-        id: searchPageComponent
-
-        SearchPage {
-            id: searchPage
-            model: appModel
-
-            onAppDetailsRequired: {
-                var pageProps = { app: appModel.app(appModel.findApp(appId)) }
-                searchPage.pageStack.addPageToNextColumn(searchPage, Qt.resolvedUrl("AppDetailsPage.qml"), pageProps)
-            }
-        }
+    Components.BottomEdgePageStack {
+        id: bottomEdgeStack
     }
 
     Component {
         id: filteredAppPageComponent
         Page {
             id: filteredAppPage
-            property alias filterPattern: filteredAppView.filterPattern
-            property alias filterProperty: filteredAppView.filterProperty
+            property alias filterString: filteredAppView.filterString
+            property alias sortMode: filteredAppView.sortMode
+            property alias category: filteredAppView.category
             header: PageHeader {
                 title: filteredAppPage.title
                 automaticHeight: false
             }
             FilteredAppView {
+                anchors.fill: parent
+                anchors.topMargin: filteredAppPage.header.height
+
                 id: filteredAppView
-                model: appModel
                 onAppDetailsRequired: {
-                    var pageProps = { app: appModel.app(appModel.findApp(appId)) }
-                    filteredAppPage.pageStack.addPageToNextColumn(filteredAppPage, Qt.resolvedUrl("AppDetailsPage.qml"), pageProps)
+                    var pageProps = { app: filteredAppView.getPackage(index) }
+                    bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), pageProps)
                 }
             }
         }
@@ -417,21 +214,33 @@ MainView {
             signal accepted();
             signal rejected();
 
+            ActivityIndicator {
+                anchors.horizontalCenter: parent.horizontalCenter
+                visible: running
+                running: PlatformIntegration.clickInstaller.busy
+            }
+
             Button {
                 text: i18n.tr("Install")
                 color: UbuntuColors.green
+                visible: !PlatformIntegration.clickInstaller.busy
                 onClicked: {
-                    installQuestionDialog.accepted();
-                    PopupUtils.close(installQuestionDialog)
+                    installQuestionDialog.accepted()
                 }
-
             }
             Button {
                 text: i18n.tr("Cancel")
+                visible: !PlatformIntegration.clickInstaller.busy
                 onClicked: {
-                    installQuestionDialog.rejected();
+                    installQuestionDialog.rejected()
                     PopupUtils.close(installQuestionDialog)
                 }
+            }
+
+            Connections {
+                target: PlatformIntegration.clickInstaller
+                onPackageInstalled: PopupUtils.close(installQuestionDialog)
+                onPackageInstallationFailed: PopupUtils.close(installQuestionDialog)
             }
         }
     }
@@ -459,6 +268,21 @@ MainView {
                 color: UbuntuColors.orange
                 text: i18n.tr("OK")
                 onClicked: PopupUtils.close(installationErrorDialog)
+            }
+        }
+    }
+    Component {
+        id: timeoutError
+        Dialog {
+            id: timeoutErrorDialog
+            property int errorCode
+            property string errorString
+            title: i18n.tr("Installation failed (Error %1)").arg(errorCode)
+            text: errorString
+            Button {
+                color: UbuntuColors.orange
+                text: i18n.tr("OK")
+                onClicked: PopupUtils.close(timeoutErrorDialog)
             }
         }
     }

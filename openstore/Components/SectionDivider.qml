@@ -1,7 +1,7 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 
-Rectangle {
+Item {
     id: rootItem
 
     property alias text: sectionLabel.text
@@ -9,8 +9,6 @@ Rectangle {
 
     anchors { left: parent.left; right: parent.right }
     height: units.gu(4)
-
-    color: theme.palette.normal.foreground
 
     Row {
         anchors {
@@ -41,12 +39,7 @@ Rectangle {
             bottom: parent.bottom
         }
 
-        height: units.dp(2)
-        gradient: Gradient {
-            GradientStop { position: 0.0;  color: Qt.rgba(0, 0, 0, 0.1) }
-            GradientStop { position: 0.49; color: Qt.rgba(0, 0, 0, 0.1) }
-            GradientStop { position: 0.5;  color: Qt.rgba(1, 1, 1, 0.4) }
-            GradientStop { position: 1.0;  color: Qt.rgba(1, 1, 1, 0.4) }
-        }
+        height: units.dp(1)
+        color: "#cdcdcd"
     }
 }

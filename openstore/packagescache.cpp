@@ -75,9 +75,7 @@ void PackagesCache::updateCacheRevisions()
 
         Q_FOREACH (PackageItem* pkg, m_cache) {
             int pkgRevNo = m_localAppRevision.value(pkg->appId(), -1);
-            if (pkgRevNo != -1) {
-                pkg->updateLocalInfo(pkgRevNo, PlatformIntegration::instance()->appVersion(pkg->appId()));
-            }
+            pkg->updateLocalInfo(pkgRevNo, PlatformIntegration::instance()->appVersion(pkg->appId()));
         }
 
         m_updatingCache = false;

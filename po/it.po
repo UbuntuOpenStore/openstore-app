@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-20 14:20+0000\n"
-"PO-Revision-Date: 2017-09-20 14:53+0000\n"
+"PO-Revision-Date: 2017-09-20 14:59+0000\n"
 "Last-Translator: Stefano Verzegnassi <verzegnassi.stefano@gmail.com>\n"
 "Language-Team: Italian <https://translate.ubports.com/projects/openstore"
 "/openstore-app/it/>\n"
@@ -212,7 +212,7 @@ msgstr "Nessun risultato trovato."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:111
 msgid "No app has been released in this category yet."
-msgstr "Nessuna App è stata ancora pubblicata in questa categoria."
+msgstr "Nessuna applicazione è stata ancora pubblicata in questa categoria."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:111
 msgid "Try with a different search."
@@ -240,7 +240,7 @@ msgstr "Nessuna applicazione trovata"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
 msgid "No app has been installed from OpenStore yet."
-msgstr "Nessuna App è stata ancora installata da OpenStore."
+msgstr "Nessuna applicazione è stata installata da OpenStore."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:156
 msgid "Warning"
@@ -351,17 +351,17 @@ msgstr "Gestore di URL"
 #. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:78
 msgid "Content Hub Handler"
-msgstr "Gestore del Content Hub"
+msgstr "Gestore del servizio Content Hub"
 
 #. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:92
 msgid "Push Helper"
-msgstr "Aiutante Push"
+msgstr "Supporto notifiche push"
 
 #. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:106
 msgid "Accounts provider"
-msgstr "Fornitore di Account"
+msgstr "Provider per account online"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:46
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:54

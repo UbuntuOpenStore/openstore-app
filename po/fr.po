@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-20 14:20+0000\n"
-"PO-Revision-Date: 2017-09-20 17:59+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2017-09-20 18:05+0000\n"
+"Last-Translator: Anne Onyme <anneonyme017@openmailbox.org>\n"
 "Language-Team: French <https://translate.ubports.com/projects/openstore"
 "/openstore-app/fr/>\n"
 "Language: fr\n"
@@ -196,12 +196,11 @@ msgstr "Mise à jour de l'OpenStore disponible"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:145
 msgid "Update OpenStore now!"
-msgstr "Mettre à jour l'OpenStore maintenant!"
+msgstr "Mettez à jour l'OpenStore maintenant !"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:151
-#, fuzzy
 msgid "Details"
-msgstr "Détails de l'application"
+msgstr "Détails"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:110
 msgid "Nothing here yet"
@@ -226,24 +225,23 @@ msgstr "Mes Applications"
 
 #. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:61
-#, fuzzy, qt-format
+#, qt-format
 msgid "Available updates (%1)"
-msgstr "Mises à jour disponibles"
+msgstr "Mises à jour disponibles (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:61
-#, fuzzy, qt-format
+#, qt-format
 msgid "Installed apps (%1)"
-msgstr "Applications installées"
+msgstr "Applications installées (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:101
-#, fuzzy
 msgid "No apps found"
-msgstr "Aucun résultat trouvé."
+msgstr "Aucune application trouvée"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
-#, fuzzy
 msgid "No app has been installed from OpenStore yet."
-msgstr "Aucune application n'a encore été publiée dans cette catégorie."
+msgstr ""
+"Aucune application n'a pour le moment été installée à partir de l'OpenStore."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:156
 msgid "Warning"
@@ -321,9 +319,9 @@ msgstr ""
 "Click valide."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:280
-#, fuzzy, qt-format
+#, qt-format
 msgid "Installation failed (Error %1)"
-msgstr "L'installation a échoué"
+msgstr "L'installation a échoué (erreur %1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:33
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15
@@ -332,11 +330,11 @@ msgstr "Rechercher"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Back"
-msgstr ""
+msgstr "Retour"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Close"
-msgstr ""
+msgstr "Fermer"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:37
 msgid "Application"
@@ -370,7 +368,7 @@ msgstr "Fournisseur de comptes"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:54
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
-msgstr ""
+msgstr "Choisissez"
 
 #~ msgid "Fetching package list..."
 #~ msgstr "Acquisition de la liste des paquets..."

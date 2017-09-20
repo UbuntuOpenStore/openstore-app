@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-20 14:20+0000\n"
-"PO-Revision-Date: 2017-08-21 16:28+0000\n"
+"PO-Revision-Date: 2017-09-20 17:58+0000\n"
 "Last-Translator: advocatux <advocatux@airpost.net>\n"
-"Language-Team: Spanish <https://ubpweblate.tnvcomp.com/projects/openstore/"
-"openstore-app/es/>\n"
+"Language-Team: Spanish <https://translate.ubports.com/projects/openstore"
+"/openstore-app/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,11 +22,11 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
 msgid "App details"
-msgstr "Detalles de aplicación"
+msgstr "Detalles de la aplicación"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:43
 msgid "Open app"
-msgstr ""
+msgstr "Aplicación abierta"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:99
 msgid "Upgrade"
@@ -45,7 +45,7 @@ msgstr "Eliminar"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:173
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
-"Esta app tiene acceso a datos restringidos del sistema. Vea abajo los "
+"Esta aplicación tiene acceso a datos restringidos del sistema, vea abajo los "
 "detalles."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:235
@@ -75,7 +75,7 @@ msgstr "Última versión disponible"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:304
 msgid "First released"
-msgstr ""
+msgstr "Publicado por primera vez"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:313
 msgid "License"
@@ -191,18 +191,16 @@ msgid "✓ Installed"
 msgstr "✓ Instalado"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:144
-#, fuzzy
 msgid "OpenStore update available"
-msgstr "Actualización disponible"
+msgstr "Actualización de OpenStore disponible"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:145
 msgid "Update OpenStore now!"
-msgstr ""
+msgstr "¡Actualizar OpenStore ahora!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:151
-#, fuzzy
 msgid "Details"
-msgstr "Detalles de aplicación"
+msgstr "Detalles"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:110
 msgid "Nothing here yet"
@@ -227,24 +225,22 @@ msgstr "Mis aplicaciones"
 
 #. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:61
-#, fuzzy, qt-format
+#, qt-format
 msgid "Available updates (%1)"
-msgstr "Actualizaciones disponibles"
+msgstr "Actualizaciones disponibles (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:61
-#, fuzzy, qt-format
+#, qt-format
 msgid "Installed apps (%1)"
-msgstr "Aplicaciones instaladas"
+msgstr "Aplicaciones instaladas (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:101
-#, fuzzy
 msgid "No apps found"
-msgstr "No se encontraron resultados."
+msgstr "No se encontraron aplicaciones"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
-#, fuzzy
 msgid "No app has been installed from OpenStore yet."
-msgstr "Ninguna aplicación ha sido publicada en esta categoría aún."
+msgstr "Ninguna aplicación ha sido instalada desde OpenStore aún."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:156
 msgid "Warning"
@@ -321,9 +317,9 @@ msgstr ""
 "válido."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:280
-#, fuzzy, qt-format
+#, qt-format
 msgid "Installation failed (Error %1)"
-msgstr "La instalación falló"
+msgstr "Instalación fallida (Error %1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:33
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15
@@ -332,11 +328,11 @@ msgstr "Buscar"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Back"
-msgstr ""
+msgstr "Atrás"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Close"
-msgstr ""
+msgstr "Cerrar"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:37
 msgid "Application"
@@ -370,7 +366,7 @@ msgstr "Proveedor de cuentas"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:54
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
-msgstr ""
+msgstr "Escoger"
 
 #~ msgid "Fetching package list..."
 #~ msgstr "Obteniendo la lista de paquetes..."

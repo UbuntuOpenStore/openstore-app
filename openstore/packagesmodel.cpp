@@ -20,6 +20,8 @@ PackagesModel::PackagesModel(QAbstractListModel * parent)
     , m_ready(false)
 {
     connect(PlatformIntegration::instance(), &PlatformIntegration::updated, this, &PackagesModel::refresh);
+    connect(PackagesCache::instance(), &PackagesCache::updatingCacheChanged, this, &PackagesModel::refresh);
+
     refresh();
 }
 
@@ -82,73 +84,39 @@ void PackagesModel::refresh()
 
     MODEL_START_REFRESH();
 
-    connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::newReply, [=](const OpenStoreReply &reply) {
-        if (reply.signature != m_signature)
-            return;
+    beginResetModel();
+    m_list.clear();
+    endResetModel();
 
-        m_remoteAppRevision.clear();
-        m_localAppRevision.clear();
+    const QVariantList &clickDb = PlatformIntegration::instance()->clickDb();
 
-        beginResetModel();
-        m_list.clear();
-        endResetModel();
+    beginInsertRows(QModelIndex(), m_list.count(), m_list.count() + PackagesCache::instance()->numberOfInstalledAppsInStore() - 1);
+    Q_FOREACH(const QVariant &pkg, clickDb) {
+        QVariantMap map = pkg.toMap();
 
-        QJsonParseError error;
-        QJsonDocument jsonDoc = QJsonDocument::fromJson(reply.data, &error);
+        LocalPackageItem pkgItem;
+        pkgItem.appId = map.value("name").toString();
 
-        if (error.error != QJsonParseError::NoError) {
-            qWarning() << Q_FUNC_INFO << "Error parsing json";
-            return;
-        }
+        if (PackagesCache::instance()->getRemoteAppRevision(pkgItem.appId) != -1) {
+            pkgItem.name = map.value("title").toString();
+            pkgItem.updateAvailable = bool(PackagesCache::instance()->getRemoteAppRevision(pkgItem.appId) > PackagesCache::instance()->getLocalAppRevision(pkgItem.appId));
 
-        QVariantMap replyMap = jsonDoc.toVariant().toMap();
+            //pkgItem.icon = map.value("icon").toString();
+            if (pkgItem.icon.isEmpty()) {
+                const QString &directory = map.value("_directory").toString();
 
-        if (!replyMap.value("success").toBool() || !replyMap.contains("data")) {
-            qWarning() << Q_FUNC_INFO << "Response doesn't contain data";
-            return;
-        }
+                const QVariantMap &hooks = map.value("hooks").toMap();
+                Q_FOREACH(const QString &hook, hooks.keys()) {
+                    const QVariantMap &h = hooks.value(hook).toMap();
 
-        // TODO: This is actually redundant, since we do the same in PackagesCache. However, we still
-        // need it for providing proper info in LocalPackageItem(s).
-        // We could add some getter in PackagesCache for local/remote app revision, so we don't need
-        // to repeat this request to the server.
-        QVariantList data = replyMap.value("data").toList();
-        Q_FOREACH (QVariant d, data) {
-            QVariantMap map = d.toMap();
-            const QString &appId = map.value("id").toString();
-            m_remoteAppRevision.insert(appId, map.value("latest_revision").toInt());
-            m_localAppRevision.insert(appId, map.value("revision").toInt());
-        }
-
-        const QVariantList &clickDb = PlatformIntegration::instance()->clickDb();
-
-        beginInsertRows(QModelIndex(), m_list.count(), m_list.count() + m_remoteAppRevision.count() - 1);
-        Q_FOREACH(const QVariant &pkg, clickDb) {
-            QVariantMap map = pkg.toMap();
-
-            LocalPackageItem pkgItem;
-            pkgItem.appId = map.value("name").toString();
-
-            if (m_remoteAppRevision.value(pkgItem.appId, -1) != -1) {
-                pkgItem.name = map.value("title").toString();
-                pkgItem.updateAvailable = bool(m_remoteAppRevision.value(pkgItem.appId) > m_localAppRevision.value(pkgItem.appId));
-
-                //pkgItem.icon = map.value("icon").toString();
-                if (pkgItem.icon.isEmpty()) {
-                    const QString &directory = map.value("_directory").toString();
-
-                    const QVariantMap &hooks = map.value("hooks").toMap();
-                    Q_FOREACH(const QString &hook, hooks.keys()) {
-                        const QVariantMap &h = hooks.value(hook).toMap();
-
-                        const QString &desktop = h.value("desktop").toString();
-                        //const QString &scope = h.value("scope").toString();
-                        if (!desktop.isEmpty()) {
-                            const QString &desktopFile = directory + QDir::separator() + desktop;
-                            QSettings appInfo(desktopFile, QSettings::IniFormat);
-                            pkgItem.icon = directory + QDir::separator() + appInfo.value("Desktop Entry/Icon").toString();
-                            break;
-                        } /*else if (!scope.isEmpty()) {
+                    const QString &desktop = h.value("desktop").toString();
+                    //const QString &scope = h.value("scope").toString();
+                    if (!desktop.isEmpty()) {
+                        const QString &desktopFile = directory + QDir::separator() + desktop;
+                        QSettings appInfo(desktopFile, QSettings::IniFormat);
+                        pkgItem.icon = directory + QDir::separator() + appInfo.value("Desktop Entry/Icon").toString();
+                        break;
+                    } /*else if (!scope.isEmpty()) {
                             const QString &scopeFile = directory + QDir::separator() + scope + QDir::separator() + pkgItem.appId + "_" + scope + ".ini";
                             QSettings appInfo(scopeFile, QSettings::IniFormat);
                             QFileInfo fileInfo(scopeFile);
@@ -156,32 +124,21 @@ void PackagesModel::refresh()
                             pkgItem.icon = fileInfo.absolutePath() + QDir::separator() + appInfo.value("ScopeConfig/Icon").toString();
                             break;
                         }*/
-                    }
                 }
-
-                if (!pkgItem.icon.isEmpty()) {
-                    pkgItem.icon = pkgItem.icon.prepend("file://");
-                }
-
-                m_list.append(pkgItem);
             }
+
+            if (!pkgItem.icon.isEmpty()) {
+                pkgItem.icon = pkgItem.icon.prepend("file://");
+            }
+
+            m_list.append(pkgItem);
         }
-
-        endInsertRows();
-
-        Q_EMIT updated();
-        MODEL_END_REFRESH();
-    });
-
-    QStringList appIdsAtRevisionList;
-
-    Q_FOREACH(const QString &appId, PlatformIntegration::instance()->installedAppIds()) {
-        const QString &version = PlatformIntegration::instance()->appVersion(appId);
-        appIdsAtRevisionList.append(QString("%1@%2").arg(appId, version));
     }
 
-    m_signature = OpenStoreNetworkManager::instance()->generateNewSignature();
-    OpenStoreNetworkManager::instance()->getRevisions(m_signature, appIdsAtRevisionList);
+    endInsertRows();
+
+    Q_EMIT updated();
+    MODEL_END_REFRESH();
 }
 
 void PackagesModel::showPackageDetails(const QString &appId)

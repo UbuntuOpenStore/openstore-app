@@ -41,6 +41,8 @@ void PackagesCache::updateCacheRevisions()
     m_updatingCache = true;
     Q_EMIT updatingCacheChanged();
 
+    qDebug() << Q_FUNC_INFO << "called";
+
     connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::newReply, [=](const OpenStoreReply &reply) {
         if (reply.signature != m_signature)
             return;
@@ -61,12 +63,14 @@ void PackagesCache::updateCacheRevisions()
         }
 
         m_localAppRevision.clear();
+        m_remoteAppRevision.clear();
 
         QVariantList data = replyMap.value("data").toList();
         Q_FOREACH (QVariant d, data) {
             QVariantMap map = d.toMap();
             const QString &appId = map.value("id").toString();
             m_localAppRevision.insert(appId, map.value("revision").toInt());
+            m_remoteAppRevision.insert(appId, map.value("latest_revision").toInt());
         }
 
         Q_FOREACH (PackageItem* pkg, m_cache) {

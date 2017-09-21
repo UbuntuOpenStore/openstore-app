@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-20 14:20+0000\n"
-"PO-Revision-Date: 2017-09-20 18:05+0000\n"
+"PO-Revision-Date: 2017-09-21 21:51+0000\n"
 "Last-Translator: advocatux <advocatux@airpost.net>\n"
 "Language-Team: Spanish <https://translate.ubports.com/projects/openstore"
 "/openstore-app/es/>\n"
@@ -26,7 +26,7 @@ msgstr "Detalles de la aplicación"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:43
 msgid "Open app"
-msgstr "Aplicación abierta"
+msgstr "Abrir aplicación"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:99
 msgid "Upgrade"

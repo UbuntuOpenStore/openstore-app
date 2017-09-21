@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-20 14:20+0000\n"
-"PO-Revision-Date: 2017-08-19 04:57+0000\n"
-"Last-Translator: qutghan <qutghan@outlook.com>\n"
-"Language-Team: Chinese (Simplified) <https://ubpweblate.tnvcomp.com/projects/"
-"openstore/openstore-app/zh_Hans/>\n"
+"PO-Revision-Date: 2017-09-21 06:48+0000\n"
+"Last-Translator: DawnDIY <dawndiy.dev@gmail.com>\n"
+"Language-Team: Chinese (Simplified) "
+"<https://translate.ubports.com/projects/openstore/openstore-app/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -72,7 +72,7 @@ msgstr "新的可用版本"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:304
 msgid "First released"
-msgstr ""
+msgstr "首次发布"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:313
 msgid "License"
@@ -88,16 +88,15 @@ msgstr "源代码"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:337
-#, fuzzy, qt-format
+#, qt-format
 msgid "More from %1"
-msgstr "译者： 这是从同一作者显示所有软件包的列表的按钮。%1 是作者的名字。"
+msgstr "%1 的更多应用"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:352
-#, fuzzy, qt-format
+#, qt-format
 msgid "Other apps in %1"
-msgstr ""
-"译者： 这是在同一类别中显示的所有其他程序包列表的按钮。%1 是类别的名称。"
+msgstr "%1 的其他应用"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:358
 msgid "Package contents"
@@ -189,18 +188,16 @@ msgid "✓ Installed"
 msgstr "✓ 安装"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:144
-#, fuzzy
 msgid "OpenStore update available"
-msgstr "可用的更新"
+msgstr "OpenStore 更新可用"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:145
 msgid "Update OpenStore now!"
-msgstr ""
+msgstr "现在更新 OpenStore！"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:151
-#, fuzzy
 msgid "Details"
-msgstr "应用程序的详细信息"
+msgstr "详细信息"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:110
 msgid "Nothing here yet"
@@ -225,24 +222,22 @@ msgstr "我的应用程序"
 
 #. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:61
-#, fuzzy, qt-format
+#, qt-format
 msgid "Available updates (%1)"
-msgstr "可用的更新"
+msgstr "可用的更新(%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:61
-#, fuzzy, qt-format
+#, qt-format
 msgid "Installed apps (%1)"
-msgstr "安装的应用程序"
+msgstr "已安装应用(%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:101
-#, fuzzy
 msgid "No apps found"
-msgstr "未找到任何结果。"
+msgstr "未找到应用"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
-#, fuzzy
 msgid "No app has been installed from OpenStore yet."
-msgstr "没有应用程序已在此类别中尚未公布。"
+msgstr "还没有从 OpenStore 安装任何应用。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:156
 msgid "Warning"
@@ -313,9 +308,9 @@ msgid ""
 msgstr "无法安装该软件包。请确保它是一个有效点击软件包。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:280
-#, fuzzy, qt-format
+#, qt-format
 msgid "Installation failed (Error %1)"
-msgstr "安装失败"
+msgstr "安装失败(错误 %1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:33
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15
@@ -324,11 +319,11 @@ msgstr "搜索"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Back"
-msgstr ""
+msgstr "返回"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Close"
-msgstr ""
+msgstr "关闭"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:37
 msgid "Application"
@@ -341,36 +336,28 @@ msgstr "Scope"
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:64
 msgid "URL Handler"
-msgstr ""
-"译者： 这是 Ubuntu 平台服务启动其他应用程序 (参考文献 https://developer."
-"ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/)"
+msgstr "URL Handler"
 
 #. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:78
 msgid "Content Hub Handler"
-msgstr ""
-"译者： 这是内容交换 (参考文献 https://developer.ubuntu.com/en/phone/platform/"
-"guides/content-hub-guide/) Ubuntu 平台服务"
+msgstr "Content Hub Handler"
 
 #. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:92
 msgid "Push Helper"
-msgstr ""
-"译者： 这是推式通知 (参考文献 https://developer.ubuntu.com/en/phone/platform/"
-"guides/push-notifications-client-guide/) Ubuntu 平台服务"
+msgstr "推送助手"
 
 #. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:106
 msgid "Accounts provider"
-msgstr ""
-"译者： 即在线帐户 (参考文献 https://developer.ubuntu.com/en/phone/platform/"
-"guides/online-accounts-developer-guide/)"
+msgstr "帐号提供商"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:46
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:54
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
-msgstr ""
+msgstr "选择"
 
 #~ msgid "Fetching package list..."
 #~ msgstr "正在获取软件包列表..."

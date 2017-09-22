@@ -15,13 +15,13 @@ struct OpenStoreReply {
 class OpenStoreNetworkManager : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QNetworkAccessManager::NetworkAccessibility networkAccessible READ networkAccessible NOTIFY networkAccessibleChanged)
+    Q_PROPERTY(bool networkAccessible READ networkAccessible NOTIFY networkAccessibleChanged)
 
 public:   
     explicit OpenStoreNetworkManager();
     static OpenStoreNetworkManager* instance();
 
-    QNetworkAccessManager::NetworkAccessibility networkAccessible() const { return m_manager->networkAccessible(); }
+    bool networkAccessible() const { return m_manager->networkAccessible() != QNetworkAccessManager::NotAccessible; }
 
     QString generateNewSignature() const;
 

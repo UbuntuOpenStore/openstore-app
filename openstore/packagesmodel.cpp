@@ -18,6 +18,7 @@
 PackagesModel::PackagesModel(QAbstractListModel * parent)
     : QAbstractListModel(parent)
     , m_ready(false)
+    , m_appStoreUpdateAvailable(false)
 {
     connect(PlatformIntegration::instance(), &PlatformIntegration::updated, this, &PackagesModel::refresh);
     connect(PackagesCache::instance(), &PackagesCache::updatingCacheChanged, this, &PackagesModel::refresh);

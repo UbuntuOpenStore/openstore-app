@@ -89,6 +89,9 @@ AdaptivePageLayout {
                 id: categoryView
                 anchors.fill: parent
 
+                property int __currentTmpIndex
+                currentIndex: rootItem.columns > 1 ? __currentTmpIndex : -1
+
                 // WORKAROUND: Fix for wrong grid unit size
                 Component.onCompleted: root.flickable_responsive_scroll_fix(categoryView)
 
@@ -96,7 +99,7 @@ AdaptivePageLayout {
                 delegate: ListItem {
                     divider.anchors.leftMargin: units.gu(6.5)
                     onClicked: {
-                        categoryView.currentIndex = model.index
+                        categoryView.__currentTmpIndex = model.index
                         rootItem.categoryClicked(model.name, model.id)
                     }
                     ListItemLayout {

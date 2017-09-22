@@ -31,15 +31,4 @@ Item {
             anchors.verticalCenter: parent.verticalCenter
         }
     }
-
-    Rectangle {
-        anchors {
-            left: parent.left
-            right: parent.right
-            bottom: parent.bottom
-        }
-
-        height: units.dp(1)
-        color: "#cdcdcd"
-    }
 }

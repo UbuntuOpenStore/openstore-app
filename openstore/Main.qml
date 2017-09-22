@@ -105,6 +105,11 @@ MainView {
         }
     }
 
+    Connections {
+        target: OpenStoreNetworkManager
+        onNetworkAccessibleChanged: console.log("[OpenStoreNetworkManager] Is network accessible?", OpenStoreNetworkManager.networkAccessible)
+    }
+
     Settings {
         id: settings
         property bool firstStart: true
@@ -122,6 +127,38 @@ MainView {
     Components.BottomEdgePageStack {
         id: bottomEdgeStack
     }
+
+    /*
+    Loader {
+        anchors.fill: parent
+        z: Number.MAX_VALUE
+        active: !OpenStoreNetworkManager.networkAccessible
+        sourceComponent: MouseArea {
+            // Capture all mouse/touch events beneath 'mainContainer'
+            anchors.fill: parent
+            onWheel: wheel.accepted = true  // wheel events are not captured by default
+
+            Rectangle {
+                anchors.fill: parent
+                color: root.backgroundColor
+
+                Components.EmptyState {
+                    title: i18n.tr("Slow or no internet connection available")
+                    subTitle: i18n.tr("Please check your internet settings and try again")
+                    iconName: "airplane-mode"
+
+                    controlComponent: Button {
+                        color: UbuntuColors.green
+                        text: i18n.tr("Close OpenStore")
+                        onClicked: Qt.quit()
+                    }
+
+                    anchors.centerIn: parent
+                }
+            }
+        }
+    }
+    */
 
     Component {
         id: filteredAppPageComponent

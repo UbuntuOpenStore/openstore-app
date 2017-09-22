@@ -115,6 +115,13 @@ AdaptivePageLayout {
                 }
             }
         }
+
+        Connections {
+            target: rootItem
+            onColumnsChanged: {
+                categoryView.highlightItem.visible = (rootItem.columns > 1 ? true : false)
+            }
+        }
     }
 }
 

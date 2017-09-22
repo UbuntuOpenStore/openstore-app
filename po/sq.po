@@ -8,48 +8,53 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-20 14:20+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-09-22 11:01+0000\n"
+"Last-Translator: Jeff <jeffi27@live.at>\n"
+"Language-Team: Albanian <https://translate.ubports.com/projects/openstore"
+"/openstore-app/sq/>\n"
 "Language: sq\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.15\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
 msgid "App details"
-msgstr ""
+msgstr "Detajet e App"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:43
 msgid "Open app"
-msgstr ""
+msgstr "Hap App"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:99
 msgid "Upgrade"
-msgstr ""
+msgstr "Përditëso"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:99
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:224
 msgid "Install"
-msgstr ""
+msgstr "Instalo"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:108
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:544
 msgid "Remove"
-msgstr ""
+msgstr "Hiqe"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:173
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
+"Ky App ka qasje të kufizuar të të dhënat e sistemit, Shih më poshtë për "
+"detaje."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:235
 msgid "Description"
-msgstr ""
+msgstr "Përshkrimi"
 
 #. TRANSLATORS: Title of the changelog section
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:258
 msgid "What's New"
-msgstr ""
+msgstr "Çfarë ka të re"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:277
 msgid "Packager/Publisher"

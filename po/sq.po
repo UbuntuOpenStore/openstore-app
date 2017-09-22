@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-20 14:20+0000\n"
-"PO-Revision-Date: 2017-09-22 11:01+0000\n"
+"PO-Revision-Date: 2017-09-22 20:06+0000\n"
 "Last-Translator: Jeff <jeffi27@live.at>\n"
 "Language-Team: Albanian <https://translate.ubports.com/projects/openstore"
 "/openstore-app/sq/>\n"
@@ -58,64 +58,64 @@ msgstr "Çfarë ka të re"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:277
 msgid "Packager/Publisher"
-msgstr ""
+msgstr "Paketuesi/Publikuesi"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:278
 msgid "OpenStore team"
-msgstr ""
+msgstr "Ekipa e OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:286
 msgid "Installed version"
-msgstr ""
+msgstr "Veruioni i instaluar"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:295
 msgid "Latest available version"
-msgstr ""
+msgstr "Verzioni i fundit në dispozicion"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:304
 msgid "First released"
-msgstr ""
+msgstr "Lëshimi i parë"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:313
 msgid "License"
-msgstr ""
+msgstr "Liçenca"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:314
 msgid "N/A"
-msgstr ""
+msgstr "s/I"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:322
 msgid "Source Code"
-msgstr ""
+msgstr "Kodi burimorë"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:337
 #, qt-format
 msgid "More from %1"
-msgstr ""
+msgstr "Më shumë nga %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:352
 #, qt-format
 msgid "Other apps in %1"
-msgstr ""
+msgstr "Apps tjera nga %1"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:358
 msgid "Package contents"
-msgstr ""
+msgstr "Përmbajtja e Paketave"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:438
 msgid "AppArmor profile"
-msgstr ""
+msgstr "Profili i AppArmor"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:466
 msgid "Permissions"
-msgstr ""
+msgstr "Të drejtat"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:485
 msgid "none required"
-msgstr ""
+msgstr "nuk kërkohet"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:502
 msgid "Read paths"

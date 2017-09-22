@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-25 13:35+0000\n"
+"POT-Creation-Date: 2017-09-20 14:20+0000\n"
 "PO-Revision-Date: 2017-09-15 23:22+0000\n"
 "Last-Translator: Eran <etherpulse@gmail.com>\n"
-"Language-Team: Hebrew <https://translate.ubports.com/projects/openstore"
-"/openstore-app/he/>\n"
+"Language-Team: Hebrew <https://translate.ubports.com/projects/openstore/"
+"openstore-app/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,230 +19,235 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.15\n"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:28
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
 msgid "App details"
 msgstr "פרטי אפליקציה"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:84
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:43
+msgid "Open app"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:99
 msgid "Upgrade"
 msgstr "עידכון"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:84
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:421
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:99
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:224
 msgid "Install"
 msgstr "התקנה"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:95
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:585
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:108
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:544
 msgid "Remove"
 msgstr "הסרה"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:135
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:173
 msgid "This app has access to restricted system data, see below for details."
 msgstr "לאפליקציה זו יש גישה למידע חסום במערכת , פרטים נוספים למטה."
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:260
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:235
 msgid "Description"
 msgstr "תיאור"
 
 #. TRANSLATORS: Title of the changelog section
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:282
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:258
 msgid "What's New"
 msgstr "מה חדש"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:300
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:277
 msgid "Packager/Publisher"
 msgstr "מתחזק/מפיץ"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:301
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:278
 msgid "OpenStore team"
 msgstr "צוות OpenStore"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:309
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:286
 msgid "Installed version"
 msgstr "גרסא מותקנת"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:319
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:295
 msgid "Latest available version"
 msgstr "גרסא אחרונה זמינה"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:328
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:304
+msgid "First released"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:313
 msgid "License"
 msgstr "רשיון"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:329
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:314
 msgid "N/A"
 msgstr "N/A"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:337
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:322
 msgid "Source Code"
 msgstr "קוד מקור"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:361
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:337
 #, qt-format
 msgid "More from %1"
 msgstr "עוד מ %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:385
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:352
 #, qt-format
 msgid "Other apps in %1"
 msgstr "אפליקציות אחרות ב %1"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:391
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:358
 msgid "Package contents"
 msgstr "תוכן חבילה"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:471
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:438
 msgid "AppArmor profile"
 msgstr "פרופיל AppArmor"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:499
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:466
 msgid "Permissions"
 msgstr "הרשאות"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:518
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:485
 msgid "none required"
 msgstr "אין צורך בהרשאות מיוחדות"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:535
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:502
 msgid "Read paths"
 msgstr "נתיבי קריאה"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:553
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:520
 msgid "Write paths"
 msgstr "נתיבי כתיבה"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:577
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:536
 msgid "Remove package"
 msgstr "הסרת חבילה"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:578
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:537
 #, qt-format
 msgid "Do you want to remove %1?"
 msgstr "האם תרצו להסיר את %1?"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:594
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:430
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/SearchPage.qml:37
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:553
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:232
 msgid "Cancel"
 msgstr "ביטול"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:611
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:570
 #, qt-format
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:616
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:575
 #, qt-format
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:621
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:580
 #, qt-format
 msgid "%1 kB"
 msgstr "%1 קילובייט"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/AppDetailsPage.qml:624
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:583
 #, qt-format
 msgid "%1 bytes"
 msgstr "%1 בייט"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/CategoriesPage.qml:24
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:187
+#: /home/brian/dev/openstore/openstore-app/openstore/CategoriesPage.qml:24
+#: /home/brian/dev/openstore/openstore-app/openstore/CategoriesTab.qml:81
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:32
 msgid "Categories"
 msgstr "קטגוריות"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/DiscoverTab.qml:95
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/DiscoverTab.qml:180
-msgid "Update available"
-msgstr "עדכון זמין"
-
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/DiscoverTab.qml:96
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/DiscoverTab.qml:180
-msgid "✓ Installed"
-msgstr "✓ מותקן"
-
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:106
-msgid "Nothing here yet"
-msgstr "אין כאן כלום כרגע"
-
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:106
-msgid "No results found."
-msgstr "לא נמצאו תוצאות."
-
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:107
-msgid "No app has been released in this category yet."
-msgstr "עדיין לא שוחררו אפליקציות תחת הקטגוריה הזאת."
-
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/FilteredAppView.qml:107
-msgid "Try with a different search."
-msgstr "נסו עם חיפוש אחר."
-
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:37
-msgid "Application"
-msgstr "אפליקציה"
-
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:50
-msgid "Scope"
-msgstr "סקופ"
-
-#. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:64
-msgid "URL Handler"
-msgstr ""
-
-#. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:78
-msgid "Content Hub Handler"
-msgstr ""
-
-#. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:92
-msgid "Push Helper"
-msgstr ""
-
-#. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/HookIcon.qml:106
-msgid "Accounts provider"
-msgstr ""
-
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:193
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/SearchPage.qml:29
-msgid "Search"
-msgstr "חיפוש"
-
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:200
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:29
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:31
 msgid "Discover"
 msgstr ""
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:200
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:51
+#: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:28
+msgid "Search in OpenStore..."
+msgstr "חפשו ב OpenStore…"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:124
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:40
+msgid "Update available"
+msgstr "עדכון זמין"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:125
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:40
+msgid "✓ Installed"
+msgstr "✓ מותקן"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:144
+#, fuzzy
+msgid "OpenStore update available"
+msgstr "עדכון זמין"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:145
+msgid "Update OpenStore now!"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:151
+#, fuzzy
+msgid "Details"
+msgstr "פרטי אפליקציה"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:110
+msgid "Nothing here yet"
+msgstr "אין כאן כלום כרגע"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:110
+msgid "No results found."
+msgstr "לא נמצאו תוצאות."
+
+#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:111
+msgid "No app has been released in this category yet."
+msgstr "עדיין לא שוחררו אפליקציות תחת הקטגוריה הזאת."
+
+#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:111
+msgid "Try with a different search."
+msgstr "נסו עם חיפוש אחר."
+
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:27
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:34
 msgid "My Apps"
 msgstr "האפליקציות שלי"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:294
-msgid "Available updates"
+#. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:61
+#, fuzzy, qt-format
+msgid "Available updates (%1)"
 msgstr "עדכונים זמינים"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:294
-msgid "Installed apps"
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:61
+#, fuzzy, qt-format
+msgid "Installed apps (%1)"
 msgstr "אפליקציות מותקנות"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:312
-msgid "Fetching package list..."
-msgstr "מייבא רשימת חבילות…"
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:101
+#, fuzzy
+msgid "No apps found"
+msgstr "לא נמצאו תוצאות."
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:359
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
+#, fuzzy
+msgid "No app has been installed from OpenStore yet."
+msgstr "עדיין לא שוחררו אפליקציות תחת הקטגוריה הזאת."
+
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:156
 msgid "Warning"
 msgstr "אזהרה"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:368
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:165
 msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
@@ -250,7 +255,7 @@ msgstr ""
 "OpenStore מאפשרת התקנה של אפליקציות לא מוגבלות. אנא וודאו שאתם יודעים מה "
 "ההשלכות של כך."
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:375
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:172
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
@@ -258,7 +263,7 @@ msgstr ""
 "אפליקציה לא מוגבלת יכולה לגרום לשיבוש במערכת, להורדת ביצועים ו/או יכולה "
 "לעקוב אחריכם."
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:382
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:179
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
@@ -266,49 +271,101 @@ msgstr ""
 "למרות שאנו עושים ככל יכולתנו למנוע את זה ע\"י בדיקה של האפליקציות, אך איננו "
 "לוקחים אחריות עם משהו חומק מעיננו."
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:389
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:186
 msgid "Use this at your own risk."
 msgstr "השתמשו בזה באחריותיכם בלבד."
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:393
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:190
 msgid "Okay. Got it! I'll be careful."
 msgstr "בסדר. הבנתי! אני אזהר."
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:400
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:197
 msgid "Get me out of here!"
 msgstr "תוציאו אותי מפה!"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:413
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:210
 msgid "Install app?"
 msgstr "להתקין אפליקציה?"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:414
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:211
 #, qt-format
 msgid "Do you want to install %1?"
 msgstr "האם תרצו להתקין %1?"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:443
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:252
 msgid "App installed"
 msgstr "האפליקציה הותקנה"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:444
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:253
 msgid "The app has been installed successfully."
 msgstr "האפליקציה הותקנה בהצלחה."
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:447
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:460
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:256
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:269
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:284
 msgid "OK"
 msgstr "בסדר"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:456
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:265
 msgid "Installation failed"
 msgstr "ההתקנה נכשלה"
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/Main.qml:457
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:266
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 
-#: /home/brian/dev/openstore/openstore-app/trunk/openstore/SearchPage.qml:60
-msgid "Search in OpenStore..."
-msgstr "חפשו ב OpenStore…"
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:280
+#, fuzzy, qt-format
+msgid "Installation failed (Error %1)"
+msgstr "ההתקנה נכשלה"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:33
+#: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15
+msgid "Search"
+msgstr "חיפוש"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
+msgid "Back"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
+msgid "Close"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:37
+msgid "Application"
+msgstr "אפליקציה"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
+msgid "Scope"
+msgstr "סקופ"
+
+#. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:64
+msgid "URL Handler"
+msgstr ""
+
+#. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:78
+msgid "Content Hub Handler"
+msgstr ""
+
+#. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:92
+msgid "Push Helper"
+msgstr ""
+
+#. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:106
+msgid "Accounts provider"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:46
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:54
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
+msgid "Pick"
+msgstr ""
+
+#~ msgid "Fetching package list..."
+#~ msgstr "מייבא רשימת חבילות…"

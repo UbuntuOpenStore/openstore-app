@@ -10,8 +10,8 @@ msgstr ""
 "POT-Creation-Date: 2017-09-20 14:20+0000\n"
 "PO-Revision-Date: 2017-09-20 18:05+0000\n"
 "Last-Translator: advocatux <advocatux@airpost.net>\n"
-"Language-Team: Spanish <https://translate.ubports.com/projects/openstore"
-"/openstore-app/es/>\n"
+"Language-Team: Spanish <https://translate.ubports.com/projects/openstore/"
+"openstore-app/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +25,8 @@ msgid "App details"
 msgstr "Detalles de la aplicación"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:43
-msgid "Open app"
+#, fuzzy
+msgid "Open"
 msgstr "Aplicación abierta"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:99

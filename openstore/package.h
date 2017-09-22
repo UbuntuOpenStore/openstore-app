@@ -23,6 +23,7 @@ class PackageItem: public QObject
     Q_PROPERTY(QString installedVersionString READ installedVersionString NOTIFY updated)
     Q_PROPERTY(int revision READ revision NOTIFY updated)
     Q_PROPERTY(int installedRevision READ installedRevision NOTIFY updated)
+    Q_PROPERTY(bool isLocalVersionSideloaded READ isLocalVersionSideloaded NOTIFY updated)
     Q_PROPERTY(QString packageUrl READ packageUrl NOTIFY updated)
     Q_PROPERTY(QString source READ source NOTIFY updated)
     Q_PROPERTY(QString license READ license NOTIFY updated)
@@ -74,6 +75,7 @@ public:
     QString installedVersionString() const { return m_installedVersion; }
     int revision() const { return m_revision; }
     int installedRevision() const { return m_installedRevision; }
+    bool isLocalVersionSideloaded() const { return !m_installedVersion.isEmpty() && (m_installedRevision < 1); }
     QString packageUrl() const { return m_packageUrl; }
     QString source() const { return m_source; }
     QString license() const { return m_license; }

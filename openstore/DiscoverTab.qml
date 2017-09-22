@@ -163,6 +163,15 @@ Page {
                             }
                         }
                     }
+
+                    // WORKAROUND: appStoreUpdateAlert visibility is toggled after the whole page is layouted.
+                    // This may result in the "Discover" tab being slightly scrolled down at start-up.
+                    Connections {
+                        target: appStoreUpdateAlert
+                        onVisibleChanged: {
+                            view.positionViewAtBeginning()
+                        }
+                    }
                 }
             }
 
@@ -181,15 +190,6 @@ Page {
                     return discoverModel.getPackage(i)
                 }
             }
-        }
-    }
-
-    // WORKAROUND: appStoreUpdateAlert visibility is toggled after the whole page is layouted.
-    // This may result in the "Discover" tab being slightly scrolled down at start-up.
-    Connections {
-        target: appStoreUpdateAlert
-        onVisibleChanged: {
-            view.positionViewAtBeginning()
         }
     }
 }

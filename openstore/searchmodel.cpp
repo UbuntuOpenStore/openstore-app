@@ -88,8 +88,6 @@ void SearchModel::update()
 bool SearchModel::canFetchMore(const QModelIndex &parent) const
 {
     Q_UNUSED(parent)
-    qDebug() << m_fetchedAll;
-
     return m_queryUrl.isValid() ? false : bool(!m_fetchedAll);
 }
 

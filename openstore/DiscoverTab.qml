@@ -96,6 +96,7 @@ Page {
                         anchors.fill: parent
                         anchors.bottomMargin: units.gu(2)
                         source: discoverModel.highlightBannerUrl || highlightAppControl.appItem.icon
+                        sourceSize: Qt.size(width, height)
                         fillMode: Image.PreserveAspectCrop
                     }
 

@@ -84,6 +84,23 @@ Page {
             }
 
             ListItem {
+                visible: app.isLocalVersionSideloaded
+                height: sideloadedLayout.height
+                ListItemLayout {
+                    id: sideloadedLayout
+                    subtitle.text: i18n.tr("The installed version of this app doesn't come from the OpenStore server. You can install the latest stable update by tapping the button below.")
+                    subtitle.maximumLineCount: Number.MAX_VALUE
+                    subtitle.wrapMode: Text.WordWrap
+
+                    Icon {
+                        SlotsLayout.position: SlotsLayout.Leading
+                        width: units.gu(4); height: width
+                        name: "info"
+                    }
+                }
+            }
+
+            ListItem {
                 height: units.gu(8)
 
                 RowLayout {
@@ -98,7 +115,7 @@ Page {
                         Layout.maximumWidth: buttonsRow.width > units.gu(60) ? units.gu(24) : buttonsRow.width
                         text: app.installed ? i18n.tr("Upgrade") : i18n.tr("Install")
                         visible: !app.installed || (app.installed && app.updateAvailable)
-                        color: UbuntuColors.green
+                        color: app.isLocalVersionSideloaded ? theme.palette.normal.foreground : UbuntuColors.green
                         onClicked: app.install()
                     }
 

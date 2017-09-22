@@ -128,6 +128,7 @@ MainView {
         id: bottomEdgeStack
     }
 
+    /*
     Loader {
         anchors.fill: parent
         z: Number.MAX_VALUE
@@ -157,6 +158,7 @@ MainView {
             }
         }
     }
+    */
 
     Component {
         id: filteredAppPageComponent

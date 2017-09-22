@@ -26,6 +26,12 @@
 #include "packagesmodel.h"
 #include "discovermodel.h"
 #include "packagescache.h"
+#include "openstorenetworkmanager.h"
+
+static QObject *registerNetworkManagerSingleton (QQmlEngine * /*engine*/, QJSEngine * /*scriptEngine*/)
+{
+    return OpenStoreNetworkManager::instance();
+}
 
 static QObject *registerPlatformIntegrationSingleton (QQmlEngine * /*engine*/, QJSEngine * /*scriptEngine*/)
 {
@@ -43,6 +49,7 @@ int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
+    qmlRegisterSingletonType<OpenStoreNetworkManager>("OpenStore", 1, 0, "OpenStoreNetworkManager", registerNetworkManagerSingleton);
     qmlRegisterSingletonType<PlatformIntegration>("OpenStore", 1, 0, "PlatformIntegration", registerPlatformIntegrationSingleton);
     qmlRegisterSingletonType<PackagesCache>("OpenStore", 1, 0, "PackagesCache", registerPackagesCacheSingleton);
     qmlRegisterUncreatableType<ClickInstaller>("OpenStore", 1, 0, "ClickInstaller", "Access ClickInstall from the PlatformIntegration singleton");

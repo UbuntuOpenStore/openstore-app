@@ -35,9 +35,11 @@ Column {
     property alias title: emptyLabel.text
     property alias subTitle: emptySublabel.text
 
+    property alias controlComponent: controlLoader.sourceComponent
+
     Item {
         width: childrenRect.width
-        height: childrenRect.height + units.gu(2)
+        height: childrenRect.height
         Icon {
             id: emptyIcon
             height: visible ? units.gu(10) : 0
@@ -70,5 +72,9 @@ Column {
 
         elide: Text.ElideRight
         wrapMode: Text.WordWrap
+    }
+
+    Loader {
+        id: controlLoader
     }
 }

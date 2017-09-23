@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-20 14:20+0000\n"
-"PO-Revision-Date: 2017-09-22 20:06+0000\n"
+"PO-Revision-Date: 2017-09-23 11:58+0000\n"
 "Last-Translator: Jeff <jeffi27@live.at>\n"
 "Language-Team: Albanian <https://translate.ubports.com/projects/openstore"
 "/openstore-app/sq/>\n"
@@ -119,242 +119,250 @@ msgstr "nuk kërkohet"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:502
 msgid "Read paths"
-msgstr ""
+msgstr "Shtigje leximi"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:520
 msgid "Write paths"
-msgstr ""
+msgstr "Shtigje shkrimi"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:536
 msgid "Remove package"
-msgstr ""
+msgstr "Hiq paketën"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:537
 #, qt-format
 msgid "Do you want to remove %1?"
-msgstr ""
+msgstr "Dëshiron të hiqësh %1?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:553
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:232
 msgid "Cancel"
-msgstr ""
+msgstr "Anulo"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:570
 #, qt-format
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:575
 #, qt-format
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:580
 #, qt-format
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:583
 #, qt-format
 msgid "%1 bytes"
-msgstr ""
+msgstr "%1 bytes"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesPage.qml:24
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesTab.qml:81
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:32
 msgid "Categories"
-msgstr ""
+msgstr "Kategoritë"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:29
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:31
 msgid "Discover"
-msgstr ""
+msgstr "Zbulo"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:51
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:28
 msgid "Search in OpenStore..."
-msgstr ""
+msgstr "Kërko në OpenStore…"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:124
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:40
 msgid "Update available"
-msgstr ""
+msgstr "Përditësim i disponueshëm"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:125
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:40
 msgid "✓ Installed"
-msgstr ""
+msgstr "✓ Instaluar"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:144
 msgid "OpenStore update available"
-msgstr ""
+msgstr "Përditësimi i OpenStore në dispozicion"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:145
 msgid "Update OpenStore now!"
-msgstr ""
+msgstr "Përditëso OpenStore tani!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:151
 msgid "Details"
-msgstr ""
+msgstr "Detajet"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:110
 msgid "Nothing here yet"
-msgstr ""
+msgstr "Asgjë këtu akoma"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:110
 msgid "No results found."
-msgstr ""
+msgstr "Nuk u gjetën rezultate."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:111
 msgid "No app has been released in this category yet."
-msgstr ""
+msgstr "Asnjë aplikacion nuk është publikuar ende në këtë kategori."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:111
 msgid "Try with a different search."
-msgstr ""
+msgstr "Provoni me një kërkim të ndryshëm."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:27
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:34
 msgid "My Apps"
-msgstr ""
+msgstr "Apps e mia"
 
 #. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:61
 #, qt-format
 msgid "Available updates (%1)"
-msgstr ""
+msgstr "Përditësimet e disponueshme (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:61
 #, qt-format
 msgid "Installed apps (%1)"
-msgstr ""
+msgstr "App e instaluara (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:101
 msgid "No apps found"
-msgstr ""
+msgstr "Asnjë App nuk u gjet"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
 msgid "No app has been installed from OpenStore yet."
-msgstr ""
+msgstr "Asnjë App nuk është instaluar nga OpenStore ende."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:156
 msgid "Warning"
-msgstr ""
+msgstr "Paralajmërim"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:165
 msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
 msgstr ""
+"OpenStore lejon instalimin e aplikacioneve të paspecifikuara. Ju lutemi "
+"sigurohuni që ju të dini për implikimet e kësaj."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:172
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
 msgstr ""
+"Një aplikacion i konfirmuar ka aftësinë për të thyer sistemin, për të "
+"reduktuar performancën e tij dhe / ose për të spiunuar mbi ju."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:179
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
 msgstr ""
+"Ndërkohë që po bëjmë çmos për të parandaluar që duke shqyrtuar aplikimet, ne "
+"nuk marrim asnjë përgjegjësi nëse diçka e keqe rrëshqet përmes."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:186
 msgid "Use this at your own risk."
-msgstr ""
+msgstr "Përdoreni këtë në përgjegjësinë tuaj."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:190
 msgid "Okay. Got it! I'll be careful."
-msgstr ""
+msgstr "Mirë. E kuptova! Unë do të jem i kujdesshëm."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:197
 msgid "Get me out of here!"
-msgstr ""
+msgstr "Më nxirr nga këtu!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:210
 msgid "Install app?"
-msgstr ""
+msgstr "Instalo app?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:211
 #, qt-format
 msgid "Do you want to install %1?"
-msgstr ""
+msgstr "Dëshiron të instalosh %1?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:252
 msgid "App installed"
-msgstr ""
+msgstr "App është instaluar"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:253
 msgid "The app has been installed successfully."
-msgstr ""
+msgstr "Aplikacioni është instaluar me sukses."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:256
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:269
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:284
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:265
 msgid "Installation failed"
-msgstr ""
+msgstr "Instalimi dështoi"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:266
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
+"Paketa nuk mund të instalohej. Sigurohuni që është një paketë click e "
+"vlefshme."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:280
 #, qt-format
 msgid "Installation failed (Error %1)"
-msgstr ""
+msgstr "Instalimi dështoi (Gabim %1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:33
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15
 msgid "Search"
-msgstr ""
+msgstr "Kërkim"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Back"
-msgstr ""
+msgstr "Prapa"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Close"
-msgstr ""
+msgstr "Mbyllë"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:37
 msgid "Application"
-msgstr ""
+msgstr "Aplikacion"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
 msgid "Scope"
-msgstr ""
+msgstr "Scope"
 
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:64
 msgid "URL Handler"
-msgstr ""
+msgstr "URL i Mbajtësit"
 
 #. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:78
 msgid "Content Hub Handler"
-msgstr ""
+msgstr "Hub i përmbajtjes të Mbajtësit"
 
 #. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:92
 msgid "Push Helper"
-msgstr ""
+msgstr "Push Helper"
 
 #. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:106
 msgid "Accounts provider"
-msgstr ""
+msgstr "Ofruesi i llogarive"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:46
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:54
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
-msgstr ""
+msgstr "Merr"

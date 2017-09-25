@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-20 14:20+0000\n"
-"PO-Revision-Date: 2017-09-21 07:45+0000\n"
+"PO-Revision-Date: 2017-09-25 06:39+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://translate.ubports.com/projects/openstore"
 "/openstore-app/fi/>\n"
@@ -44,7 +44,7 @@ msgstr "Poista"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:173
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
-"Tällä ohjelmalla on pääsy rajoitettuihin järjestelmätietoihin, katso "
+"Tällä sovelluksella on pääsy rajoitettuihin järjestelmätietoihin, katso "
 "yksityiskohdat alempana."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:235
@@ -58,11 +58,11 @@ msgstr "Uutta"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:277
 msgid "Packager/Publisher"
-msgstr "Paketoija/Julkaisija"
+msgstr "Paketoija/julkaisija"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:278
 msgid "OpenStore team"
-msgstr "Openstore tiimi"
+msgstr "OpenStore-tiimi"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:286
 msgid "Installed version"
@@ -98,7 +98,7 @@ msgstr "Lisää käyttäjältä %1"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:352
 #, qt-format
 msgid "Other apps in %1"
-msgstr "Muita ohjelmia kategoriasta %1"
+msgstr "Muita sovelluksia luokasta %1"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:358
 msgid "Package contents"
@@ -106,7 +106,7 @@ msgstr "Paketin sisältö"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:438
 msgid "AppArmor profile"
-msgstr "AppArmor profiili"
+msgstr "AppArmor-profiili"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:466
 msgid "Permissions"
@@ -137,25 +137,25 @@ msgstr "Haluatko poistaa %1?"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:553
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:232
 msgid "Cancel"
-msgstr "Keskeytä"
+msgstr "Peru"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:570
 #, qt-format
 msgid "%1 GB"
-msgstr "%1 GB"
+msgstr "%1 Gt"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:575
 #, qt-format
 msgid "%1 MB"
-msgstr "%1 MB"
+msgstr "%1 Mt"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:580
 #, qt-format
 msgid "%1 kB"
-msgstr "%1 kB"
+msgstr "%1 kt"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:583
@@ -167,7 +167,7 @@ msgstr "%1 tavua"
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesTab.qml:81
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:32
 msgid "Categories"
-msgstr "Kategoriat"
+msgstr "Luokat"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:29
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:31
@@ -211,16 +211,16 @@ msgstr "Ei tuloksia."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:111
 msgid "No app has been released in this category yet."
-msgstr "Tässä kategoriassa ei ole vielä ohjelmia."
+msgstr "Tässä luokassa ei ole vielä sovelluksia."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:111
 msgid "Try with a different search."
-msgstr "Yritä etsiä eri hakusanoilla."
+msgstr "Yritä etsiä eri hakuehdoilla."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:27
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:34
 msgid "My Apps"
-msgstr "Omat ohjelmat"
+msgstr "Omat sovellukset"
 
 #. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:61
@@ -283,7 +283,7 @@ msgstr "Haluan pois täältä!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:210
 msgid "Install app?"
-msgstr "Asenna ohjelma?"
+msgstr "Asennetaanko sovellus?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:211
 #, qt-format
@@ -292,11 +292,11 @@ msgstr "Haluatko asentaa %1?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:252
 msgid "App installed"
-msgstr "Ohjelma asennettu"
+msgstr "Sovellus asennettu"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:253
 msgid "The app has been installed successfully."
-msgstr "Ohjelma asennettu onnistuneesti."
+msgstr "Sovellus on asennettu onnistuneesti."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:256
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:269
@@ -334,7 +334,7 @@ msgstr "Sulje"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:37
 msgid "Application"
-msgstr "Ohjelma"
+msgstr "Sovellus"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
 msgid "Scope"

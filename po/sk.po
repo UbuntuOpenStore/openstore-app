@@ -10,8 +10,8 @@ msgstr ""
 "POT-Creation-Date: 2017-09-20 14:20+0000\n"
 "PO-Revision-Date: 2017-09-20 21:51+0000\n"
 "Last-Translator: Peter Valachovič <peter.valachovic@gmail.com>\n"
-"Language-Team: Slovak <https://translate.ubports.com/projects/openstore"
-"/openstore-app/sk/>\n"
+"Language-Team: Slovak <https://translate.ubports.com/projects/openstore/"
+"openstore-app/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,7 +24,8 @@ msgid "App details"
 msgstr "Detaily aplikácie"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:43
-msgid "Open app"
+#, fuzzy
+msgid "Open"
 msgstr "Otvor aplikáciu"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:99

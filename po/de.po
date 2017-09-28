@@ -25,7 +25,8 @@ msgid "App details"
 msgstr "App-Details"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:43
-msgid "Open app"
+#, fuzzy
+msgid "Open"
 msgstr "App starten"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:99

@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-20 14:20+0000\n"
-"PO-Revision-Date: 2017-09-20 18:05+0000\n"
+"PO-Revision-Date: 2017-09-22 23:56+20000\n"
 "Last-Translator: advocatux <advocatux@airpost.net>\n"
-"Language-Team: Spanish <https://translate.ubports.com/projects/openstore"
-"/openstore-app/es/>\n"
+"Language-Team: Spanish <https://translate.ubports.com/projects/openstore/"
+"openstore-app/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: handmade for you"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
@@ -25,8 +25,8 @@ msgid "App details"
 msgstr "Detalles de la aplicación"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:43
-msgid "Open app"
-msgstr "Aplicación abierta"
+msgid "Open"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:99
 msgid "Upgrade"

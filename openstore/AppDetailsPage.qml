@@ -40,7 +40,7 @@ Page {
                 color: UbuntuColors.green
             }
             actions: Action {
-                text: i18n.tr("Open app")
+                text: i18n.tr("Open")
                 visible: app.installed && app.containsApp
                 onTriggered: Qt.openUrlExternally(app.appLaunchUrl())
             }

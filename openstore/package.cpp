@@ -72,9 +72,11 @@ void PackageItem::fillData(const QVariantMap &json)
     m_name = json.value("name").toString();
     m_author = json.value("author").toString();
 
-    m_packageUrl = json.value("package").toString();    // Used by the 'discover' API
+    m_packageUrl = json.value("download").toString();
     if (m_packageUrl.isEmpty()) {
-        m_packageUrl = json.value("download").toString();
+        // Fallback when "download" is not returned
+        // This might be the case for the 'discover' API
+        m_packageUrl = json.value("package").toString();
     }
 
     m_source = json.value("source").toString();

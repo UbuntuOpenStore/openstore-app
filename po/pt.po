@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-20 14:20+0000\n"
-"PO-Revision-Date: 2017-10-18 10:08+0000\n"
+"PO-Revision-Date: 2017-10-19 12:18+0000\n"
 "Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
 "Language-Team: Portuguese <https://translate.ubports.com/projects/openstore"
 "/openstore-app/pt/>\n"
@@ -63,7 +63,7 @@ msgstr "Desenvolvedor/Publicador"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:278
 msgid "OpenStore team"
-msgstr "Equipa OpenStore"
+msgstr "Equipa da OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:286
 msgid "Installed version"
@@ -103,7 +103,7 @@ msgstr "Outras aplicações em %1"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:358
 msgid "Package contents"
-msgstr "Conteúdo de pacote"
+msgstr "Conteúdo do pacote"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:438
 msgid "AppArmor profile"
@@ -128,7 +128,7 @@ msgstr "Escrever caminhos"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:536
 msgid "Remove package"
-msgstr "Remover pacote"
+msgstr "Remover o pacote"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:537
 #, qt-format
@@ -338,7 +338,7 @@ msgstr "Aplicação"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
 msgid "Scope"
-msgstr "Scope"
+msgstr "Scopes"
 
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:64

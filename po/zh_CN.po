@@ -8,11 +8,11 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-20 14:20+0000\n"
-"PO-Revision-Date: 2017-09-21 06:52+0000\n"
-"Last-Translator: DawnDIY <dawndiy.dev@gmail.com>\n"
-"Language-Team: Chinese (Simplified) <https://translate.ubports.com/projects/"
-"openstore/openstore-app/zh_Hans/>\n"
-"Language: zh_Hans\n"
+"PO-Revision-Date: 2017-09-30 05:33+0000\n"
+"Last-Translator: Mutse Young <yyhoo2.young@gmail.com>\n"
+"Language-Team: Chinese (Simplified) "
+"<https://translate.ubports.com/projects/openstore/openstore-app/zh_Hans/>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,7 +24,6 @@ msgid "App details"
 msgstr "应用程序的详细信息"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:43
-#, fuzzy
 msgid "Open"
 msgstr "打开应用"
 
@@ -53,11 +52,11 @@ msgstr "描述"
 #. TRANSLATORS: Title of the changelog section
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:258
 msgid "What's New"
-msgstr "更新日志部分的翻译： 标题"
+msgstr "最新特性"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:277
 msgid "Packager/Publisher"
-msgstr "包装机/发布者"
+msgstr "打包者/发布者"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:278
 msgid "OpenStore team"
@@ -114,7 +113,7 @@ msgstr "权限"
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:485
 msgid "none required"
-msgstr "译者： 这将显示当应用程序不需要任何特殊权限"
+msgstr "无权限要求"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:502
 msgid "Read paths"
@@ -142,31 +141,31 @@ msgstr "取消"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:570
 #, qt-format
 msgid "%1 GB"
-msgstr "译者： %1 是文件的大小，表示在 GB"
+msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:575
 #, qt-format
 msgid "%1 MB"
-msgstr "译者： %1 是文件的大小，以 MB 表示"
+msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:580
 #, qt-format
 msgid "%1 kB"
-msgstr "译者： %1 是文件的大小，以 kb 为单位表示"
+msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:583
 #, qt-format
 msgid "%1 bytes"
-msgstr "译者： %1 是文件的大小，以字节为单位表示"
+msgstr "%1 字节"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesPage.qml:24
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesTab.qml:81
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:32
 msgid "Categories"
-msgstr "类别"
+msgstr "分类"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:29
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:31
@@ -190,7 +189,7 @@ msgstr "✓ 安装"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:144
 msgid "OpenStore update available"
-msgstr "OpenStore 更新可用"
+msgstr "OpenStore 可用更新"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:145
 msgid "Update OpenStore now!"
@@ -202,7 +201,7 @@ msgstr "详细信息"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:110
 msgid "Nothing here yet"
-msgstr "没有还没来"
+msgstr "这里没有什么"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:110
 msgid "No results found."
@@ -210,7 +209,7 @@ msgstr "未找到任何结果。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:111
 msgid "No app has been released in this category yet."
-msgstr "没有应用程序已在此类别中尚未公布。"
+msgstr "此类别中尚未发布任何应用程序。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:111
 msgid "Try with a different search."
@@ -248,13 +247,13 @@ msgstr "警告"
 msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
-msgstr "OpenStore 允许安装开敞空间的应用程序。请确保你知道的所涉问题。"
+msgstr "OpenStore 允许安装不受限制的应用程序。请确保您所知道的涉及问题。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:172
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
-msgstr "开敞空间的应用程序有能力打破系统，降低其性能和/或监视你。"
+msgstr "不受限制的应用程序有能力破坏系统，降低其性能和/或监视您。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:179
 msgid ""
@@ -283,7 +282,7 @@ msgstr "安装应用程序吗？"
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:211
 #, qt-format
 msgid "Do you want to install %1?"
-msgstr "你想安装 %1 吗？"
+msgstr "您想安装 %1 吗？"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:252
 msgid "App installed"
@@ -297,7 +296,7 @@ msgstr "应用程序已成功安装。"
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:269
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:284
 msgid "OK"
-msgstr "OK"
+msgstr "确认"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:265
 msgid "Installation failed"
@@ -337,12 +336,12 @@ msgstr "Scope"
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:64
 msgid "URL Handler"
-msgstr "URL Handler"
+msgstr "URL 处理程序"
 
 #. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:78
 msgid "Content Hub Handler"
-msgstr "Content Hub Handler"
+msgstr "内容处理程序"
 
 #. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:92

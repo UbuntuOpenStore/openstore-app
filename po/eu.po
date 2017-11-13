@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-20 14:20+0000\n"
-"PO-Revision-Date: 2017-09-21 08:13+0000\n"
-"Last-Translator: Mikel Larrea <developer@larreamikel.com>\n"
-"Language-Team: Basque <https://translate.ubports.com/projects/openstore/"
-"openstore-app/eu/>\n"
+"PO-Revision-Date: 2017-10-29 17:05+0000\n"
+"Last-Translator: Aitzol Berasategi <aitzol76@gmail.com>\n"
+"Language-Team: Basque <https://translate.ubports.com/projects/openstore"
+"/openstore-app/eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,9 +25,8 @@ msgid "App details"
 msgstr "Aplikazioaren xehetasunak"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:43
-#, fuzzy
 msgid "Open"
-msgstr "Aplikazioa ireki"
+msgstr "Ireki"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:99
 msgid "Upgrade"
@@ -189,7 +188,7 @@ msgstr "Eguneraketa eskuragarri"
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:125
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:40
 msgid "✓ Installed"
-msgstr "Instalatua"
+msgstr "✓ Instalatua"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:144
 msgid "OpenStore update available"
@@ -273,7 +272,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:186
 msgid "Use this at your own risk."
-msgstr "Zure erantzunkizunpean erabili."
+msgstr "Zure ardurapean erabili."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:190
 msgid "Okay. Got it! I'll be careful."

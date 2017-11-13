@@ -1,29 +1,24 @@
-# Russian translation for openstore
-# Copyright (c) 2017 Rosetta Contributors and Canonical Ltd 2017
-# This file is distributed under the same license as the openstore package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: openstore\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-20 14:20+0000\n"
-"PO-Revision-Date: 2017-10-15 10:25+0000\n"
-"Last-Translator: Ivan Semkin <ivan@semkin.ru>\n"
-"Language-Team: Russian <https://translate.ubports.com/projects/openstore"
-"/openstore-app/ru/>\n"
-"Language: ru\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.15\n"
-"X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
 msgid "App details"
-msgstr "О программе"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:43
 msgid "Open"
@@ -31,101 +26,99 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:99
 msgid "Upgrade"
-msgstr "Обновить"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:99
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:224
 msgid "Install"
-msgstr "Установить"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:108
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:544
 msgid "Remove"
-msgstr "Удалить"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:173
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
-"У данного приложения, есть доступ к закрытой информации системы. Детали "
-"смотрите ниже."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:235
 msgid "Description"
-msgstr "Описание"
+msgstr ""
 
 #. TRANSLATORS: Title of the changelog section
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:258
 msgid "What's New"
-msgstr "Что нового"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:277
 msgid "Packager/Publisher"
-msgstr "Автор"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:278
 msgid "OpenStore team"
-msgstr "Команда OpenStore"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:286
 msgid "Installed version"
-msgstr "Установленная версия"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:295
 msgid "Latest available version"
-msgstr "Последняя доступная версия"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:304
 msgid "First released"
-msgstr "Дата первой публикации"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:313
 msgid "License"
-msgstr "Лицензия"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:314
 msgid "N/A"
-msgstr "Нет данных"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:322
 msgid "Source Code"
-msgstr "Исходный код"
+msgstr ""
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:337
 #, qt-format
 msgid "More from %1"
-msgstr "Больше от %1"
+msgstr ""
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:352
 #, qt-format
 msgid "Other apps in %1"
-msgstr "Другие программы от %1"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:358
 msgid "Package contents"
-msgstr "Файлы пакета"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:438
 msgid "AppArmor profile"
-msgstr "AppArmor профиль"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:466
 msgid "Permissions"
-msgstr "Права доступа"
+msgstr ""
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:485
 msgid "none required"
-msgstr "Не нужно никаких"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:502
 msgid "Read paths"
-msgstr "Читать пути"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:520
 msgid "Write paths"
-msgstr "Писать в пути"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:536
 msgid "Remove package"
@@ -139,108 +132,105 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:553
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:232
 msgid "Cancel"
-msgstr "Отменить"
+msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:570
 #, qt-format
 msgid "%1 GB"
-msgstr "%1 Гб"
+msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:575
 #, qt-format
 msgid "%1 MB"
-msgstr "%1 Mб"
+msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:580
 #, qt-format
 msgid "%1 kB"
-msgstr "%1 Кб"
+msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:583
 #, qt-format
 msgid "%1 bytes"
-msgstr "%1 байт"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesPage.qml:24
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesTab.qml:81
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:32
 msgid "Categories"
-msgstr "Категории"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:29
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:31
 msgid "Discover"
-msgstr "Исследовать"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:51
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:28
 msgid "Search in OpenStore..."
-msgstr "Искать в OpenStore..."
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:124
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:40
 msgid "Update available"
-msgstr "Доступно обновление"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:125
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:40
 msgid "✓ Installed"
-msgstr "✓ Установлено"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:144
-#, fuzzy
 msgid "OpenStore update available"
-msgstr "Доступно обновление"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:145
 msgid "Update OpenStore now!"
 msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:151
-#, fuzzy
 msgid "Details"
-msgstr "О программе"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:110
 msgid "Nothing here yet"
-msgstr "Ничего не найдено"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:110
 msgid "No results found."
-msgstr "Результаты не найдены."
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:111
 msgid "No app has been released in this category yet."
-msgstr "В этой категории ещё не было выпущено приложений."
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:111
 msgid "Try with a different search."
-msgstr "Попробуйте изменить параметры поиска"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:27
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:34
 msgid "My Apps"
-msgstr "Мои приложения"
+msgstr ""
 
 #. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:61
-#, fuzzy, qt-format
+#, qt-format
 msgid "Available updates (%1)"
-msgstr "Доступные обновления"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:61
-#, fuzzy, qt-format
+#, qt-format
 msgid "Installed apps (%1)"
-msgstr "Установленные программы"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:101
-#, fuzzy
 msgid "No apps found"
-msgstr "Результаты не найдены."
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
 msgid "No app has been installed from OpenStore yet."
@@ -248,7 +238,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:156
 msgid "Warning"
-msgstr "Внимание"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:165
 msgid ""
@@ -270,32 +260,32 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:186
 msgid "Use this at your own risk."
-msgstr "Используйте на свой риск."
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:190
 msgid "Okay. Got it! I'll be careful."
-msgstr "Хорошо. Я понял! Я буду осторожен."
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:197
 msgid "Get me out of here!"
-msgstr "Заберите меня отсюда!"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:210
 msgid "Install app?"
-msgstr "Установить приложение?"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:211
 #, qt-format
 msgid "Do you want to install %1?"
-msgstr "Вы уверены, что хотите установить %1?"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:252
 msgid "App installed"
-msgstr "Приложение установлено"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:253
 msgid "The app has been installed successfully."
-msgstr "Приложени было успешно установлено."
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:256
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:269
@@ -320,28 +310,28 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:33
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15
 msgid "Search"
-msgstr "Поиск"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Back"
-msgstr "Назад"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Close"
-msgstr "Закрыть"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:37
 msgid "Application"
-msgstr "Приложение"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
 msgid "Scope"
-msgstr "Scope"
+msgstr ""
 
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:64
 msgid "URL Handler"
-msgstr "URL"
+msgstr ""
 
 #. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:78
@@ -363,6 +353,3 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
 msgstr ""
-
-#~ msgid "Fetching package list..."
-#~ msgstr "Обновляем список приложений"

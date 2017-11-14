@@ -12,17 +12,20 @@
 Q_GLOBAL_STATIC(OpenStoreNetworkManager, s_openStoreNetworkManager)
 
 OpenStoreNetworkManager::OpenStoreNetworkManager()
-{
+{    
     m_manager = new QNetworkAccessManager(this);
     connect(m_manager, &QNetworkAccessManager::networkAccessibleChanged, this, &OpenStoreNetworkManager::networkAccessibleChanged);
+    connect(this, &OpenStoreNetworkManager::showNsfwChanged, this, &OpenStoreNetworkManager::deleteCache);
+
+    // Default value
+    m_showNsfw = false;
 
     // Cache result on disk
     QNetworkDiskCache *diskCache = new QNetworkDiskCache(this);
     diskCache->setCacheDirectory(QStringLiteral("%1/api_cache").arg(QStandardPaths::writableLocation(QStandardPaths::CacheLocation)));
     m_manager->setCache(diskCache);
 
-    // Clear cache from previous sessions.
-    diskCache->clear();
+    deleteCache();
 }
 
 OpenStoreNetworkManager *OpenStoreNetworkManager::instance()
@@ -43,11 +46,12 @@ QNetworkReply *OpenStoreNetworkManager::sendRequest(QNetworkRequest request)
     q.addQueryItem("frameworks", PlatformIntegration::instance()->supportedFrameworks().join(','));
     q.addQueryItem("architecture", PlatformIntegration::instance()->supportedArchitecture());
     q.addQueryItem("lang", PlatformIntegration::instance()->systemLocale());
+    q.addQueryItem("nsfw", QString(m_showNsfw ? "" : "false"));
 
     url.setQuery(q);
     request.setUrl(url);
 
-    // qDebug() << "Firing request for" << request.url();
+    qDebug() << "Firing request for" << request.url();
 
     return m_manager->get(request);
 }
@@ -189,4 +193,15 @@ bool OpenStoreNetworkManager::getRevisions(const QString &signature, const QStri
     emitReplySignal(reply, signature);
 
     return true;
+}
+
+void OpenStoreNetworkManager::deleteCache()
+{
+    if (m_manager == Q_NULLPTR)
+        return;
+
+    // Clear cache from previous sessions.
+    m_manager->cache()->clear();
+
+    Q_EMIT reloaded();
 }

@@ -9,11 +9,12 @@
 DiscoverModel::DiscoverModel(QObject *parent)
     : QAbstractListModel(parent)
 {
+    connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::reloaded, this, &DiscoverModel::refresh);
+
     connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::newReply,
             this, &DiscoverModel::parseReply);
 
-    m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
-    OpenStoreNetworkManager::instance()->getDiscover(m_requestSignature);
+    refresh();
 }
 
 int DiscoverModel::rowCount(const QModelIndex &parent) const
@@ -54,6 +55,17 @@ PackageItem* DiscoverModel::getPackage(const QString &appId)
     return PackagesCache::instance()->get(appId);
 }
 
+void DiscoverModel::refresh()
+{
+    // Safety is the number one priority
+    beginResetModel();
+    m_list.clear();
+    endResetModel();
+
+    m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
+    OpenStoreNetworkManager::instance()->getDiscover(m_requestSignature);
+}
+
 void DiscoverModel::parseReply(OpenStoreReply reply)
 {
     if (reply.signature != m_requestSignature)
@@ -75,11 +87,6 @@ void DiscoverModel::parseReply(OpenStoreReply reply)
     }
 
     QVariantMap data = replyMap.value("data").toMap();
-
-    // Safety is the number one priority
-    beginResetModel();
-    m_list.clear();
-    endResetModel();
 
     // Highlighted app data
     QVariantMap highlight = data.value("highlight").toMap();

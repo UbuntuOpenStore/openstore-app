@@ -29,6 +29,8 @@ Item {
         Label {
             id: sectionLabel
             anchors.verticalCenter: parent.verticalCenter
+            textSize: Label.Small
+            color: theme.palette.normal.backgroundTertiaryText
         }
     }
 }

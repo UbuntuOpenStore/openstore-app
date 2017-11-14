@@ -1,5 +1,6 @@
 #include "openstorenetworkmanager.h"
 #include "platformintegration.h"
+#include "apiconstants.h"
 
 #include <QNetworkDiskCache>
 #include <QNetworkReply>
@@ -75,7 +76,7 @@ void OpenStoreNetworkManager::emitReplySignal(QNetworkReply *reply, const QStrin
 
 bool OpenStoreNetworkManager::getDiscover(const QString &signature)
 {
-    QUrl url("https://open.uappexplorer.com/api/v1/apps/discover");
+    QUrl url(API_BASEURL + API_DISCOVER_ENDPOINT);
     QNetworkReply *reply = sendRequest(QNetworkRequest(url));
 
     connect(reply, &QNetworkReply::finished, [=]() {
@@ -92,7 +93,7 @@ bool OpenStoreNetworkManager::getDiscover(const QString &signature)
 
 bool OpenStoreNetworkManager::getAppDetails(const QString &signature, const QString &appId)
 {
-    QUrl url(QString("https://open.uappexplorer.com/api/v1/apps/%1").arg(appId));
+    QUrl url(API_BASEURL + API_APPDETAILS_ENDPOINT.arg(appId));
     QNetworkReply *reply = sendRequest(QNetworkRequest(url));
 
     connect(reply, &QNetworkReply::finished, [=]() {
@@ -106,7 +107,7 @@ bool OpenStoreNetworkManager::getAppDetails(const QString &signature, const QStr
 
 bool OpenStoreNetworkManager::getSearch(const QString &signature, int skip, int limit, const QString &filterString, const QString &category, const QString &sort)
 {
-    QUrl url("https://open.uappexplorer.com/api/v1/apps");
+    QUrl url(API_BASEURL + API_SEARCH_ENDPOINT);
 
     QUrlQuery q(url);
     q.addQueryItem("skip", QString::number(skip));
@@ -130,7 +131,7 @@ bool OpenStoreNetworkManager::getSearch(const QString &signature, int skip, int 
 
 bool OpenStoreNetworkManager::getCategories(const QString &signature)
 {
-    QUrl url("https://open.uappexplorer.com/api/v2/categories");
+    QUrl url(API_BASEURL + API_CATEGORIES_ENDPOINT);
     QNetworkReply *reply = sendRequest(QNetworkRequest(url));
 
     connect(reply, &QNetworkReply::finished, [=]() {
@@ -157,7 +158,7 @@ bool OpenStoreNetworkManager::getUrl(const QString &signature, const QUrl &url)
 
 bool OpenStoreNetworkManager::getUpdates(const QString &signature, const QStringList &appIds)
 {
-    QUrl url("https://open.uappexplorer.com/api/v2/apps/updates");
+    QUrl url(API_BASEURL + API_UPDATES_ENDPOINT);
 
     QUrlQuery q(url);
     q.addQueryItem("apps", appIds.join(","));
@@ -177,7 +178,7 @@ bool OpenStoreNetworkManager::getUpdates(const QString &signature, const QString
 
 bool OpenStoreNetworkManager::getRevisions(const QString &signature, const QStringList &appIdsAtVersion)
 {
-    QUrl url("https://open.uappexplorer.com/api/v2/apps/revision");
+    QUrl url(API_BASEURL + API_REVISION_ENDPOINT);
 
     QUrlQuery q(url);
     q.addQueryItem("apps", appIdsAtVersion.join(","));

@@ -19,7 +19,9 @@
 #include <QQuickView>
 #include <QQmlContext>
 #include <QElapsedTimer>
+#include <QHostInfo>
 
+#include "apiconstants.h"
 #include "platformintegration.h"
 #include "clickinstaller.h"
 #include "searchmodel.h"
@@ -28,6 +30,7 @@
 #include "discovermodel.h"
 #include "packagescache.h"
 #include "openstorenetworkmanager.h"
+#include "CachingNetworkManagerFactory.h"
 
 static QObject *registerNetworkManagerSingleton (QQmlEngine * /*engine*/, QJSEngine * /*scriptEngine*/)
 {
@@ -51,6 +54,8 @@ int main(int argc, char *argv[])
     QElapsedTimer initTimer;
     initTimer.start();
 
+    QHostInfo::lookupHost(STORE_DOMAIN, 0, 0);
+
     QGuiApplication app(argc, argv);
 
     qmlRegisterSingletonType<OpenStoreNetworkManager>("OpenStore", 1, 0, "OpenStoreNetworkManager", registerNetworkManagerSingleton);
@@ -68,6 +73,10 @@ int main(int argc, char *argv[])
     QObject::connect(view.engine(), &QQmlEngine::quit, &app, &QGuiApplication::quit);
 
     view.engine()->rootContext()->setContextProperty("cmdArgs", app.arguments());
+
+    CachingNetworkManagerFactory *managerFactory = new CachingNetworkManagerFactory();
+    view.engine()->setNetworkAccessManagerFactory(managerFactory);
+
 
     view.setSource(QUrl(QStringLiteral("qrc:///Main.qml")));
     view.setResizeMode(QQuickView::SizeRootObjectToView);

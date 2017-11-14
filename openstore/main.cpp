@@ -18,6 +18,7 @@
 #include <QQmlApplicationEngine>
 #include <QQuickView>
 #include <QQmlContext>
+#include <QElapsedTimer>
 
 #include "platformintegration.h"
 #include "clickinstaller.h"
@@ -47,6 +48,9 @@ static QObject *registerPackagesCacheSingleton (QQmlEngine * /*engine*/, QJSEngi
 
 int main(int argc, char *argv[])
 {
+    QElapsedTimer initTimer;
+    initTimer.start();
+
     QGuiApplication app(argc, argv);
 
     qmlRegisterSingletonType<OpenStoreNetworkManager>("OpenStore", 1, 0, "OpenStoreNetworkManager", registerNetworkManagerSingleton);
@@ -68,6 +72,8 @@ int main(int argc, char *argv[])
     view.setSource(QUrl(QStringLiteral("qrc:///Main.qml")));
     view.setResizeMode(QQuickView::SizeRootObjectToView);
     view.show();
+
+    qDebug() << "App required" << initTimer.elapsed() << "msec to be initialised.";
+
     return app.exec();
 }
-

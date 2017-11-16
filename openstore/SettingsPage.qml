@@ -26,6 +26,11 @@ Page {
         title: i18n.tr("Settings")
     }
 
+    AuthenticationHandler {
+        id: authHandler
+        serviceName: root.applicationName
+    }
+
     ScrollView {
         id: scrollView
         anchors.fill: parent
@@ -52,7 +57,18 @@ Page {
                         Switch {
                             SlotsLayout.position: SlotsLayout.Last
                             checked: settings.hideNsfw
-                            onCheckedChanged: settings.hideNsfw = checked
+
+                            onClicked: {
+                                authHandler.authenticationSucceeded.connect(function() {
+                                    settings.hideNsfw = checked
+                                })
+
+                                authHandler.authenticationAborted.connect(function() {
+                                    checked = !checked
+                                })
+
+                                authHandler.authenticate(i18n.tr("You need to authenticate in order to change this setting."))
+                            }
                         }
                     }
                 }

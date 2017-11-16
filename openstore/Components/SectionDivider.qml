@@ -12,10 +12,10 @@ Item {
 
     Row {
         anchors {
+            top: parent.top; topMargin: units.gu(3)
             left: parent.left
             right: parent.right
             margins: units.gu(2)
-            verticalCenter: parent.verticalCenter
         }
         spacing: units.gu(1)
 

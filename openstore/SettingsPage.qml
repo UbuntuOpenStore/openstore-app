@@ -62,6 +62,7 @@ Page {
                 }
 
                 ListItem {
+                    onClicked: Qt.openUrlExternally("https://open.uappexplorer.com/manage")
                     ListItemLayout {
                         anchors.centerIn: parent
                         title.text: i18n.tr("Manage your apps on OpenStore")
@@ -70,7 +71,25 @@ Page {
                 }
 
                 Components.SectionDivider {
-                    text: i18n.tr("About")
+                    text: i18n.tr("About OpenStore")
+                }
+
+                ListItem {
+                    onClicked: Qt.openUrlExternally("https://github.com/UbuntuOpenStore/openstore-app")
+                    ListItemLayout {
+                        anchors.centerIn: parent
+                        title.text: i18n.tr("Source Code")
+                        ProgressionSlot {}
+                    }
+                }
+
+                ListItem {
+                    onClicked: Qt.openUrlExternally("https://github.com/UbuntuOpenStore/openstore-meta/issues/new")
+                    ListItemLayout {
+                        anchors.centerIn: parent
+                        title.text: i18n.tr("Report an issue")
+                        ProgressionSlot {}
+                    }
                 }
             }
         }

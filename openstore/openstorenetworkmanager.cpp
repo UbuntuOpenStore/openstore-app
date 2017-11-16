@@ -51,7 +51,7 @@ QNetworkReply *OpenStoreNetworkManager::sendRequest(QNetworkRequest request)
     url.setQuery(q);
     request.setUrl(url);
 
-    qDebug() << "Firing request for" << request.url();
+    // qDebug() << "Firing request for" << request.url();
 
     return m_manager->get(request);
 }

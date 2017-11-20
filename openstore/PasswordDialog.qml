@@ -56,7 +56,7 @@ Dialog {
 
     TextField {
         id: passwordField
-        placeholderText: authenticationDialog.isAlphanumeric ? i18n.tr("passphrase (default is 0000 if unset)") : i18n.tr("passcode (default is 0000 if unset)")
+        placeholderText: authenticationDialog.isAlphanumeric ? i18n.tr("passphrase (default is 0000)") : i18n.tr("passcode (default is 0000)")
         echoMode: TextInput.Password
 
         inputMethodHints: Qt.ImhHiddenText | Qt.ImhSensitiveData |

@@ -67,7 +67,12 @@ Page {
                                     checked = !checked
                                 })
 
-                                authHandler.authenticate(i18n.tr("You need to authenticate in order to change this setting."))
+                                if (!checked) {
+                                    // Ask authentication only if user is trying to enable NSFW
+                                    authHandler.authenticate(i18n.tr("By typing you password you take full responsability for showing NSFW content."))
+                                } else {
+                                    settings.hideNsfw = checked
+                                }
                             }
                         }
                     }

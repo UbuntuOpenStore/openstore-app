@@ -26,6 +26,8 @@ public:
 
     QString generateNewSignature() const;
 
+    Q_INVOKABLE void refresh();
+
 public Q_SLOTS:
     bool getDiscover(const QString &signature);
     bool getAppDetails(const QString &signature, const QString &appId);

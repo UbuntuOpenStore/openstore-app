@@ -14,6 +14,7 @@ Q_GLOBAL_STATIC(OpenStoreNetworkManager, s_openStoreNetworkManager)
 OpenStoreNetworkManager::OpenStoreNetworkManager()
 {    
     m_manager = new QNetworkAccessManager(this);
+
     connect(m_manager, &QNetworkAccessManager::networkAccessibleChanged, this, &OpenStoreNetworkManager::networkAccessibleChanged);
     connect(this, &OpenStoreNetworkManager::showNsfwChanged, this, &OpenStoreNetworkManager::deleteCache);
 
@@ -36,6 +37,11 @@ OpenStoreNetworkManager *OpenStoreNetworkManager::instance()
 QString OpenStoreNetworkManager::generateNewSignature() const
 {
     return QUuid::createUuid().toString();
+}
+
+void OpenStoreNetworkManager::refresh()
+{
+    deleteCache();
 }
 
 QNetworkReply *OpenStoreNetworkManager::sendRequest(QNetworkRequest request)

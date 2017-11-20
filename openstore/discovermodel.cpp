@@ -62,6 +62,11 @@ void DiscoverModel::refresh()
     m_list.clear();
     endResetModel();
 
+    m_highlightBannerUrl = QString();
+    m_highlightAppId = QString();
+
+    Q_EMIT updated();
+
     m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
     OpenStoreNetworkManager::instance()->getDiscover(m_requestSignature);
 }

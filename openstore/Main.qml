@@ -20,6 +20,7 @@ import OpenStore 1.0
 import QtQuick.Layouts 1.1
 import Qt.labs.settings 1.0
 import Ubuntu.Content 1.3
+import Ubuntu.Connectivity 1.0
 
 import "Components" as Components
 
@@ -105,11 +106,6 @@ MainView {
         }
     }
 
-    Connections {
-        target: OpenStoreNetworkManager
-        onNetworkAccessibleChanged: console.log("[OpenStoreNetworkManager] Is network accessible?", OpenStoreNetworkManager.networkAccessible)
-    }
-
     Binding {
         target: OpenStoreNetworkManager
         property: "showNsfw"
@@ -137,13 +133,36 @@ MainView {
         id: bottomEdgeStack
     }
 
-    /*
     Loader {
         anchors.fill: parent
         z: Number.MAX_VALUE
-        active: !OpenStoreNetworkManager.networkAccessible
+
+        // Ubuntu.Connectivity works only on Ubuntu Touch. On desktop it always return false.
+        // Since we still want to test the app on desktop, we keep the empty state disabled on other platforms.
+        active: isUbuntuTouch ? !Connectivity.online : false
+
+        // WORKAROUND: 'activeChanged' signal is triggered at component creation
+        property bool __init: false
+        Component.onCompleted: __init = true
+
+        onActiveChanged: {
+            if (__init) {
+                pageStack.opacity = 0
+                refreshTimer.start()
+            }
+        }
+        Timer {
+            id: refreshTimer
+            interval: 1000
+            onTriggered: {
+                if (isUbuntuTouch && Connectivity.online)
+                    OpenStoreNetworkManager.refresh()
+
+                pageStack.opacity = 1
+            }
+        }
+
         sourceComponent: MouseArea {
-            // Capture all mouse/touch events beneath 'mainContainer'
             anchors.fill: parent
             onWheel: wheel.accepted = true  // wheel events are not captured by default
 
@@ -152,22 +171,14 @@ MainView {
                 color: root.backgroundColor
 
                 Components.EmptyState {
-                    title: i18n.tr("Slow or no internet connection available")
-                    subTitle: i18n.tr("Please check your internet settings and try again")
+                    title: i18n.tr("No internet connection available")
+                    subTitle: i18n.tr("Please check your internet settings.\nThe page will refresh automatically as soon as the connection is restored.")
                     iconName: "airplane-mode"
-
-                    controlComponent: Button {
-                        color: UbuntuColors.green
-                        text: i18n.tr("Close OpenStore")
-                        onClicked: Qt.quit()
-                    }
-
                     anchors.centerIn: parent
                 }
             }
         }
     }
-    */
 
     Component {
         id: filteredAppPageComponent

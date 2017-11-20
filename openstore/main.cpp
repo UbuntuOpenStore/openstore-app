@@ -30,7 +30,7 @@
 #include "discovermodel.h"
 #include "packagescache.h"
 #include "openstorenetworkmanager.h"
-#include "CachingNetworkManagerFactory.h"
+#include "cachingnetworkmanagerfactory.h"
 
 static QObject *registerNetworkManagerSingleton (QQmlEngine * /*engine*/, QJSEngine * /*scriptEngine*/)
 {
@@ -46,8 +46,6 @@ static QObject *registerPackagesCacheSingleton (QQmlEngine * /*engine*/, QJSEngi
 {
     return PackagesCache::instance();
 }
-
-// TODO: We might want to set a custom NetworkAccessManagerFactory, in order to cache images and reduce data usage.
 
 int main(int argc, char *argv[])
 {
@@ -74,6 +72,7 @@ int main(int argc, char *argv[])
 
     view.engine()->rootContext()->setContextProperty("cmdArgs", app.arguments());
 
+    // This applies to QML requests only
     CachingNetworkManagerFactory *managerFactory = new CachingNetworkManagerFactory();
     view.engine()->setNetworkAccessManagerFactory(managerFactory);
 

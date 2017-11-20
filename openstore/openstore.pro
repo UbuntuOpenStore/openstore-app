@@ -30,7 +30,7 @@ SOURCES += main.cpp \
     platformintegration.cpp \
     package.cpp \
     packagescache.cpp \
-    CachingNetworkManagerFactory.cpp
+    cachingnetworkmanagerfactory.cpp
 
 
 RESOURCES += openstore.qrc
@@ -62,5 +62,5 @@ HEADERS += \
     platformintegration.h \
     packagescache.h \
     package.h \
-    CachingNetworkManagerFactory.h \
+    cachingnetworkmanagerfactory.h \
     apiconstants.h

@@ -16,7 +16,7 @@
  *
  */
 
-#include "CachingNetworkManagerFactory.h"
+#include "cachingnetworkmanagerfactory.h"
 #include "apiconstants.h"
 
 #include <QNetworkDiskCache>
@@ -31,8 +31,8 @@ QNetworkReply* CachingNetworkAccessManager::createRequest(Operation op, const QN
 {
     const QUrl &requestedUrl = request.url();
 
+    // Use cache only for images
     if (requestedUrl.fileName().indexOf(".png") || requestedUrl.fileName().indexOf(".svg") || requestedUrl.fileName().indexOf(".jpg") || requestedUrl.fileName().indexOf(".jpeg")) {
-        //qDebug() << "Image requested:" << request.url().toString() << "It will be served preferrable from the cache.";
         QNetworkRequest req(request);
         req.setAttribute(QNetworkRequest::CacheLoadControlAttribute, QNetworkRequest::PreferCache);
         return QNetworkAccessManager::createRequest(op, req, outgoingData);
@@ -47,7 +47,6 @@ CachingNetworkManagerFactory::CachingNetworkManagerFactory()
 QNetworkAccessManager *CachingNetworkManagerFactory::create(QObject *parent) {
     QNetworkAccessManager *manager = new CachingNetworkAccessManager(parent);
 
-    // Initialize connection, in order to reduce network latency
     for (int i=0; i < 6; ++i ) {
         manager->connectToHostEncrypted(STORE_DOMAIN);
     }

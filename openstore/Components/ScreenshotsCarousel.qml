@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2015 - Michael Zanetti <michael.zanetti@ubuntu.com>
- * Copyright (C) 2017 - Michael Zanetti <verzegnassi.stefano@gmail.com>
+ * Copyright (C) 2017 - Stefano Verzegnassi <verzegnassi.stefano@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

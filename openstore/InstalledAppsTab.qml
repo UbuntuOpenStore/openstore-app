@@ -25,6 +25,14 @@ Page {
 
     header: PageHeader {
         title: i18n.tr("My Apps")
+
+        trailingActionBar {
+            actions: Action {
+                iconName: "settings"
+                text: i18n.tr("Settings")
+                onTriggered: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
+            }
+        }
     }
 
     ScrollView {

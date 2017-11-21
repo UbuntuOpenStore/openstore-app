@@ -1,5 +1,6 @@
 #include "openstorenetworkmanager.h"
 #include "platformintegration.h"
+#include "apiconstants.h"
 
 #include <QNetworkDiskCache>
 #include <QNetworkReply>
@@ -12,17 +13,20 @@
 Q_GLOBAL_STATIC(OpenStoreNetworkManager, s_openStoreNetworkManager)
 
 OpenStoreNetworkManager::OpenStoreNetworkManager()
-{
+{    
     m_manager = new QNetworkAccessManager(this);
     connect(m_manager, &QNetworkAccessManager::networkAccessibleChanged, this, &OpenStoreNetworkManager::networkAccessibleChanged);
+    connect(this, &OpenStoreNetworkManager::showNsfwChanged, this, &OpenStoreNetworkManager::deleteCache);
+
+    // Default value
+    m_showNsfw = false;
 
     // Cache result on disk
     QNetworkDiskCache *diskCache = new QNetworkDiskCache(this);
     diskCache->setCacheDirectory(QStringLiteral("%1/api_cache").arg(QStandardPaths::writableLocation(QStandardPaths::CacheLocation)));
     m_manager->setCache(diskCache);
 
-    // Clear cache from previous sessions.
-    diskCache->clear();
+    deleteCache();
 }
 
 OpenStoreNetworkManager *OpenStoreNetworkManager::instance()
@@ -43,11 +47,12 @@ QNetworkReply *OpenStoreNetworkManager::sendRequest(QNetworkRequest request)
     q.addQueryItem("frameworks", PlatformIntegration::instance()->supportedFrameworks().join(','));
     q.addQueryItem("architecture", PlatformIntegration::instance()->supportedArchitecture());
     q.addQueryItem("lang", PlatformIntegration::instance()->systemLocale());
+    q.addQueryItem("nsfw", QString(m_showNsfw ? "" : "false"));
 
     url.setQuery(q);
     request.setUrl(url);
 
-    // qDebug() << "Firing request for" << request.url();
+    qDebug() << "Firing request for" << request.url();
 
     return m_manager->get(request);
 }
@@ -71,7 +76,7 @@ void OpenStoreNetworkManager::emitReplySignal(QNetworkReply *reply, const QStrin
 
 bool OpenStoreNetworkManager::getDiscover(const QString &signature)
 {
-    QUrl url("https://open.uappexplorer.com/api/v1/apps/discover");
+    QUrl url(API_BASEURL + API_DISCOVER_ENDPOINT);
     QNetworkReply *reply = sendRequest(QNetworkRequest(url));
 
     connect(reply, &QNetworkReply::finished, [=]() {
@@ -88,7 +93,7 @@ bool OpenStoreNetworkManager::getDiscover(const QString &signature)
 
 bool OpenStoreNetworkManager::getAppDetails(const QString &signature, const QString &appId)
 {
-    QUrl url(QString("https://open.uappexplorer.com/api/v1/apps/%1").arg(appId));
+    QUrl url(API_BASEURL + API_APPDETAILS_ENDPOINT.arg(appId));
     QNetworkReply *reply = sendRequest(QNetworkRequest(url));
 
     connect(reply, &QNetworkReply::finished, [=]() {
@@ -102,7 +107,7 @@ bool OpenStoreNetworkManager::getAppDetails(const QString &signature, const QStr
 
 bool OpenStoreNetworkManager::getSearch(const QString &signature, int skip, int limit, const QString &filterString, const QString &category, const QString &sort)
 {
-    QUrl url("https://open.uappexplorer.com/api/v1/apps");
+    QUrl url(API_BASEURL + API_SEARCH_ENDPOINT);
 
     QUrlQuery q(url);
     q.addQueryItem("skip", QString::number(skip));
@@ -126,7 +131,7 @@ bool OpenStoreNetworkManager::getSearch(const QString &signature, int skip, int 
 
 bool OpenStoreNetworkManager::getCategories(const QString &signature)
 {
-    QUrl url("https://open.uappexplorer.com/api/v2/categories");
+    QUrl url(API_BASEURL + API_CATEGORIES_ENDPOINT);
     QNetworkReply *reply = sendRequest(QNetworkRequest(url));
 
     connect(reply, &QNetworkReply::finished, [=]() {
@@ -153,7 +158,7 @@ bool OpenStoreNetworkManager::getUrl(const QString &signature, const QUrl &url)
 
 bool OpenStoreNetworkManager::getUpdates(const QString &signature, const QStringList &appIds)
 {
-    QUrl url("https://open.uappexplorer.com/api/v2/apps/updates");
+    QUrl url(API_BASEURL + API_UPDATES_ENDPOINT);
 
     QUrlQuery q(url);
     q.addQueryItem("apps", appIds.join(","));
@@ -173,7 +178,7 @@ bool OpenStoreNetworkManager::getUpdates(const QString &signature, const QString
 
 bool OpenStoreNetworkManager::getRevisions(const QString &signature, const QStringList &appIdsAtVersion)
 {
-    QUrl url("https://open.uappexplorer.com/api/v2/apps/revision");
+    QUrl url(API_BASEURL + API_REVISION_ENDPOINT);
 
     QUrlQuery q(url);
     q.addQueryItem("apps", appIdsAtVersion.join(","));
@@ -189,4 +194,15 @@ bool OpenStoreNetworkManager::getRevisions(const QString &signature, const QStri
     emitReplySignal(reply, signature);
 
     return true;
+}
+
+void OpenStoreNetworkManager::deleteCache()
+{
+    if (m_manager == Q_NULLPTR)
+        return;
+
+    // Clear cache from previous sessions.
+    m_manager->cache()->clear();
+
+    Q_EMIT reloaded();
 }

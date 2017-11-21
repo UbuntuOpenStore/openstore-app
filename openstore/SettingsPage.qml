@@ -29,6 +29,15 @@ Page {
     AuthenticationHandler {
         id: authHandler
         serviceName: root.applicationName
+
+        onAuthenticationSucceeded: {
+            settings.hideNsfw = nsfwSwitch.checked
+        }
+
+        onAuthenticationAborted: {
+            nsfwSwitch.checked = !nsfwSwitch.checked
+        }
+
     }
 
     ScrollView {
@@ -55,21 +64,14 @@ Page {
                         title.text: i18n.tr("Hide adult-oriented content")
 
                         Switch {
+                            id: nsfwSwitch
                             SlotsLayout.position: SlotsLayout.Last
                             checked: settings.hideNsfw
 
                             onClicked: {
-                                authHandler.authenticationSucceeded.connect(function() {
-                                    settings.hideNsfw = checked
-                                })
-
-                                authHandler.authenticationAborted.connect(function() {
-                                    checked = !checked
-                                })
-
                                 if (!checked) {
                                     // Ask authentication only if user is trying to enable NSFW
-                                    authHandler.authenticate(i18n.tr("By typing you password you take full responsability for showing NSFW content."))
+                                    authHandler.authenticate(i18n.tr("By typing your password you take full responsability for showing NSFW content."))
                                 } else {
                                     settings.hideNsfw = checked
                                 }

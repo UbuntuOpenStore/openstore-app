@@ -66,6 +66,12 @@ Item {
        }
     }
 
+    Rectangle {
+        anchors.fill: closeBtn
+        opacity: 0.5
+        color: "black"
+    }
+
     AbstractButton {
         id: closeBtn
         anchors.top: parent.top

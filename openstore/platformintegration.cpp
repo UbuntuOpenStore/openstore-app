@@ -6,6 +6,7 @@
 #include <QDebug>
 #include <QNetworkRequest>
 #include <QNetworkReply>
+#include <QProcess>
 
 #include <click.h>
 #include <gio/gio.h>
@@ -138,8 +139,23 @@ QStringList PlatformIntegration::getSupportedFrameworks()
 
 QString PlatformIntegration::getSupportedArchitecture()
 {
-    // FIXME: Shouldn't be hardcoded
-    return QString("armhf");
+    QProcess dpkg;
+    dpkg.setProgram("dpkg");
+    dpkg.setArguments(QStringList() << "--print-architecture");
+
+    dpkg.start();
+    dpkg.waitForFinished(5000);
+
+    QString output = QString::fromUtf8(dpkg.readAllStandardOutput()).simplified();
+
+    if (output.isEmpty()) {
+        // Assume 'armhf' by default
+        output = QString("armhf");
+    }
+
+    qDebug() << Q_FUNC_INFO << "Device architecture is:" << output;
+
+    return output;
 }
 
 QString PlatformIntegration::getSystemLocale()

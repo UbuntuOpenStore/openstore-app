@@ -30,7 +30,8 @@ SOURCES += main.cpp \
     platformintegration.cpp \
     package.cpp \
     packagescache.cpp \
-    pamauthentication.cpp
+    pamauthentication.cpp \
+    cachingnetworkmanagerfactory.cpp
 
 
 RESOURCES += openstore.qrc
@@ -62,4 +63,6 @@ HEADERS += \
     platformintegration.h \
     packagescache.h \
     package.h \
-    pamauthentication.h
+    pamauthentication.h \
+    cachingnetworkmanagerfactory.h \
+    apiconstants.h

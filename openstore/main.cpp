@@ -18,7 +18,10 @@
 #include <QQmlApplicationEngine>
 #include <QQuickView>
 #include <QQmlContext>
+#include <QElapsedTimer>
+#include <QHostInfo>
 
+#include "apiconstants.h"
 #include "platformintegration.h"
 #include "clickinstaller.h"
 #include "searchmodel.h"
@@ -28,6 +31,7 @@
 #include "packagescache.h"
 #include "openstorenetworkmanager.h"
 #include "pamauthentication.h"
+#include "cachingnetworkmanagerfactory.h"
 
 static QObject *registerNetworkManagerSingleton (QQmlEngine * /*engine*/, QJSEngine * /*scriptEngine*/)
 {
@@ -44,10 +48,13 @@ static QObject *registerPackagesCacheSingleton (QQmlEngine * /*engine*/, QJSEngi
     return PackagesCache::instance();
 }
 
-// TODO: We might want to set a custom NetworkAccessManagerFactory, in order to cache images and reduce data usage.
-
 int main(int argc, char *argv[])
 {
+    QElapsedTimer initTimer;
+    initTimer.start();
+
+    QHostInfo::lookupHost(STORE_DOMAIN, 0, 0);
+
     QGuiApplication app(argc, argv);
 
     qmlRegisterSingletonType<OpenStoreNetworkManager>("OpenStore", 1, 0, "OpenStoreNetworkManager", registerNetworkManagerSingleton);
@@ -68,9 +75,17 @@ int main(int argc, char *argv[])
 
     view.engine()->rootContext()->setContextProperty("cmdArgs", app.arguments());
 
+    // This applies to QML requests only
+    CachingNetworkManagerFactory *managerFactory = new CachingNetworkManagerFactory();
+    view.engine()->setNetworkAccessManagerFactory(managerFactory);
+
+
     view.setSource(QUrl(QStringLiteral("qrc:///Main.qml")));
     view.setResizeMode(QQuickView::SizeRootObjectToView);
     view.show();
+
+    qDebug() << "App required" << initTimer.elapsed() << "msec to be initialised.";
+
     return app.exec();
 }
 

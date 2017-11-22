@@ -23,5 +23,6 @@
         <file>SettingsPage.qml</file>
         <file>AuthenticationHandler.qml</file>
         <file>PasswordDialog.qml</file>
+        <file>Components/ScreenshotsCarousel.qml</file>
     </qresource>
 </RCC>

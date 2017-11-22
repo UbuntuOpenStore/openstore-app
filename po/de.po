@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-20 14:20+0000\n"
-"PO-Revision-Date: 2017-09-28 21:40+0000\n"
-"Last-Translator: Weblate Admin <flori-weblate@bin.org.in>\n"
+"PO-Revision-Date: 2017-11-13 10:58+0000\n"
+"Last-Translator: Peter Nerlich <peter.nerlich+ubports@googlemail.com>\n"
 "Language-Team: German <https://translate.ubports.com/projects/openstore"
 "/openstore-app/de/>\n"
 "Language: de\n"
@@ -187,7 +187,7 @@ msgstr "Aktualisierung verfügbar"
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:125
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:40
 msgid "✓ Installed"
-msgstr "Installiert"
+msgstr "✓ Installiert"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:144
 msgid "OpenStore update available"

@@ -16,7 +16,9 @@ Item {
     }
 
     property real itemScale: 1
-    property string imageSource
+    property var model
+    property int currentIndex
+
     transform: Scale {
         origin.x: 0
         origin.y: 0
@@ -42,16 +44,53 @@ Item {
         scaleInAnimation.start();
     }
 
-    Image {
+    MouseArea {
+        // Capture all mouse/touch events below
         anchors.fill: parent
-        source: zI.imageSource
-        fillMode: Image.PreserveAspectFit
+        onWheel: wheel.accepted = true  // wheel events are not captured by default
+    }
+
+    ListView {
+        anchors.fill: parent
+        clip: true
+
+        model: zI.model
+        currentIndex: zI.currentIndex
+        orientation: ListView.Horizontal
+        snapMode: ListView.SnapOneItem
+        delegate: Image {
+            width: zI.width
+            height: zI.height
+            source: modelData
+            fillMode: Image.PreserveAspectFit
+       }
+    }
+
+    Rectangle {
+        anchors.fill: closeBtn
+        opacity: 0.5
+        color: "black"
     }
 
     AbstractButton {
-        anchors.fill: parent
-        onClicked: {
-            hideAnimation.start()
+        id: closeBtn
+        anchors.top: parent.top
+        anchors.left: parent.left
+
+        width: units.gu(8)
+        height: width
+
+        styleName: "IconButtonStyle"
+        StyleHints {
+            foregroundColor: "white"
+            backgroundColor: closeBtn.pressed ? "#666666" : "transparent"
+        }
+
+        action: Action {
+            iconName: "close"
+            onTriggered: {
+                hideAnimation.start()
+            }
         }
     }
 

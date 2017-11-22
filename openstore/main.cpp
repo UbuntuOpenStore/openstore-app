@@ -31,6 +31,7 @@
 #include "packagescache.h"
 #include "openstorenetworkmanager.h"
 #include "cachingnetworkmanagerfactory.h"
+#include "pamauthentication.h"
 
 static QObject *registerNetworkManagerSingleton (QQmlEngine * /*engine*/, QJSEngine * /*scriptEngine*/)
 {
@@ -65,6 +66,8 @@ int main(int argc, char *argv[])
     qmlRegisterType<SearchModel>("OpenStore", 1, 0, "SearchModel");
     qmlRegisterType<CategoriesModel>("OpenStore", 1, 0, "CategoriesModel");
     qmlRegisterUncreatableType<PackageItem>("OpenStore", 1, 0, "PackageItem", "PackageItem is only available through AppModel, DiscoverModel, or SearchModel.");
+
+    qmlRegisterType<PamAuthentication>("OpenStore.PamAuthentication", 0, 1, "PamAuthentication");
 
     QQuickView view;
 

@@ -30,6 +30,7 @@ SOURCES += main.cpp \
     platformintegration.cpp \
     package.cpp \
     packagescache.cpp \
+    cachingnetworkmanagerfactory.cpp
     pamauthentication.cpp
 
 
@@ -62,4 +63,6 @@ HEADERS += \
     platformintegration.h \
     packagescache.h \
     package.h \
+    cachingnetworkmanagerfactory.h \
+    apiconstants.h \
     pamauthentication.h

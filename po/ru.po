@@ -217,7 +217,7 @@ msgstr "В этой категории ещё не было выпущено п�
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:111
 msgid "Try with a different search."
-msgstr "Попробуйте изменить параметры поиска"
+msgstr "Попробуйте изменить параметры поиска."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:27
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:34

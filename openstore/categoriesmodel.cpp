@@ -9,6 +9,7 @@ CategoriesModel::CategoriesModel(QObject *parent)
     , m_ready(false)
 {
     connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::newReply, this, &CategoriesModel::parseReply);
+    connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::reloaded, this, &CategoriesModel::update);
 
     update();
 }

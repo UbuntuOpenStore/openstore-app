@@ -110,9 +110,18 @@ MainView {
         onNetworkAccessibleChanged: console.log("[OpenStoreNetworkManager] Is network accessible?", OpenStoreNetworkManager.networkAccessible)
     }
 
+    Binding {
+        target: OpenStoreNetworkManager
+        property: "showNsfw"
+        value: !settings.hideNsfw
+    }
+
     Settings {
         id: settings
         property bool firstStart: true
+        property bool hideNsfw: true
+
+        Component.onCompleted: OpenStoreNetworkManager.showNsfw = !settings.hideNsfw
     }
 
     property QtObject appModel: AppModel { appStoreAppId: root.applicationName }

@@ -40,6 +40,8 @@ public:
 
     Q_INVOKABLE PackageItem* getPackage(const QString &appId);
 
+    Q_INVOKABLE void refresh();
+
 Q_SIGNALS:
     void updated();
 

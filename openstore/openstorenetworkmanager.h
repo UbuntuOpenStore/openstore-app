@@ -16,6 +16,7 @@ class OpenStoreNetworkManager : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(bool networkAccessible READ networkAccessible NOTIFY networkAccessibleChanged)
+    Q_PROPERTY(bool showNsfw MEMBER m_showNsfw NOTIFY showNsfwChanged)
 
 public:   
     explicit OpenStoreNetworkManager();
@@ -37,6 +38,11 @@ public Q_SLOTS:
 Q_SIGNALS:
     void networkAccessibleChanged();
     void newReply(const OpenStoreReply &reply);
+    void showNsfwChanged();
+    void reloaded();
+
+private Q_SLOTS:
+    void deleteCache();
 
 private:
     QNetworkReply* sendRequest(QNetworkRequest request);
@@ -44,6 +50,7 @@ private:
 
 private:
     QNetworkAccessManager* m_manager;
+    bool m_showNsfw;
 };
 
 #endif // OPENSTORENETWORKMANAGER_H

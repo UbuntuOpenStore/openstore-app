@@ -3,7 +3,7 @@ TARGET = openstore
 
 load(ubuntu-click)
 
-QT += qml quick
+QT += qml quick dbus
 CONFIG += c++11
 
 DEFINES += QT_NO_KEYWORDS
@@ -17,7 +17,7 @@ INCLUDEPATH += /usr/include/click-0.4/ \
     /usr/lib/arm-linux-gnueabihf/glib-2.0/include \
     /usr/include/json-glib-1.0 \
 
-LIBS += -lglib-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lclick-0.4
+LIBS += -lglib-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lclick-0.4 -lpam
 
 SOURCES += main.cpp \
     categoriesmodel.cpp \
@@ -29,7 +29,8 @@ SOURCES += main.cpp \
     openstorenetworkmanager.cpp \
     platformintegration.cpp \
     package.cpp \
-    packagescache.cpp
+    packagescache.cpp \
+    pamauthentication.cpp
 
 
 RESOURCES += openstore.qrc
@@ -60,4 +61,5 @@ HEADERS += \
     openstorenetworkmanager.h \
     platformintegration.h \
     packagescache.h \
-    package.h
+    package.h \
+    pamauthentication.h

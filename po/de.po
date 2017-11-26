@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 04:14+0000\n"
-"PO-Revision-Date: 2017-11-13 10:58+0000\n"
+"PO-Revision-Date: 2017-11-26 08:18+0000\n"
 "Last-Translator: Peter Nerlich <peter.nerlich+ubports@googlemail.com>\n"
-"Language-Team: German <https://translate.ubports.com/projects/openstore/"
-"openstore-app/de/>\n"
+"Language-Team: German <https://translate.ubports.com/projects/openstore"
+"/openstore-app/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,10 +29,13 @@ msgid "Open"
 msgstr "Öffnen"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:91
+#, fuzzy
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
 msgstr ""
+"Die installierte Version dieser App kommt nicht vom OpenStore Server. Das "
+"neuste stabile Update kann über den Butten unten installiert werden."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:116
 msgid "Upgrade"
@@ -233,7 +236,7 @@ msgstr "Meine Apps"
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:32
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:26
 msgid "Settings"
-msgstr ""
+msgstr "Einstellungen"
 
 #. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
@@ -341,63 +344,73 @@ msgstr "Suche"
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:29
 msgid "Your passphrase is required to access restricted content"
 msgstr ""
+"Ihr Passwort ist erforderlich, um auf eingeschränkte Inhalte zuzugreifen"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:30
+#, fuzzy
 msgid "Your passcode is required to access restricted content"
-msgstr ""
+msgstr "Ihre PIN ist erforderlich, um auf eingeschränkte Inhalte zuzugreifen"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:39
-#, fuzzy
 msgid "Authentication failed"
-msgstr "Installation fehlgeschlagen"
+msgstr "Authentifizierung fehlgeschlagen"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
-#, fuzzy
 msgid "Passphrase required"
-msgstr "keine erforderlich"
+msgstr "Passwort erforderlich"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
-#, fuzzy
 msgid "Passcode required"
-msgstr "keine erforderlich"
+msgstr "PIN erforderlich"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
+#, fuzzy
 msgid "passphrase (default is 0000)"
-msgstr ""
+msgstr "Passwort (Standard: 0000)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
+#, fuzzy
 msgid "passcode (default is 0000)"
-msgstr ""
+msgstr "PIN (Standard: 0000)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:71
+#, fuzzy
 msgid "Authentication failed. Please retry"
-msgstr ""
+msgstr "Authentifizierung fehlgeschlagen. Bitte erneut versuchen"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:76
+#, fuzzy
 msgid "Authenticate"
-msgstr ""
+msgstr "Authentifizieren"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:58
+#, fuzzy
 msgid "Parental control"
-msgstr ""
+msgstr "Kindersicherung"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:64
+#, fuzzy
 msgid "Hide adult-oriented content"
-msgstr ""
+msgstr "An Erwachsene gerichtete Inhalte verbergen"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:74
+#, fuzzy
 msgid ""
 "By typing your password you take full responsability for showing NSFW "
 "content."
 msgstr ""
+"Durch Eingabe des Passworts übernehmen Sie volle Verantwortung für die "
+"Anzeige von NSFW-Inhalten."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:84
+#, fuzzy
 msgid "Developers"
-msgstr ""
+msgstr "Entwickler"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:91
+#, fuzzy
 msgid "Manage your apps on OpenStore"
-msgstr ""
+msgstr "Ihre Apps im OpenStore verwalten"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:97
 #, fuzzy
@@ -406,7 +419,7 @@ msgstr "OpenStore Team"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:113
 msgid "Report an issue"
-msgstr ""
+msgstr "Ein Problem melden"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Back"

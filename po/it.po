@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 04:14+0000\n"
-"PO-Revision-Date: 2017-11-26 18:47+0000\n"
+"PO-Revision-Date: 2017-11-26 18:52+0000\n"
 "Last-Translator: sambuccid <sambuccid@gmail.com>\n"
 "Language-Team: Italian <https://translate.ubports.com/projects/openstore"
 "/openstore-app/it/>\n"
@@ -363,7 +363,7 @@ msgstr "nessuno richiesto"
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
 #, fuzzy
 msgid "Passcode required"
-msgstr "nessuno richiesto"
+msgstr "E' richiesto il codice di accesso"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passphrase (default is 0000)"

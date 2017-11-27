@@ -71,7 +71,7 @@ Page {
                             onClicked: {
                                 if (!checked) {
                                     // Ask authentication only if user is trying to enable NSFW
-                                    authHandler.authenticate(i18n.tr("By typing your password you take full responsability for showing NSFW content."))
+                                    authHandler.authenticate(i18n.tr("By typing your password you take full responsibility for showing NSFW content."))
                                 } else {
                                     settings.hideNsfw = checked
                                 }

@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 04:14+0000\n"
-"PO-Revision-Date: 2017-11-26 19:05+0000\n"
-"Last-Translator: sambuccid <sambuccid@gmail.com>\n"
+"PO-Revision-Date: 2017-11-27 07:43+0000\n"
+"Last-Translator: Stefano Melchior <stefano.melchior@me.com>\n"
 "Language-Team: Italian <https://translate.ubports.com/projects/openstore"
 "/openstore-app/it/>\n"
 "Language: it\n"
@@ -345,7 +345,8 @@ msgstr "Cerca"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:29
 msgid "Your passphrase is required to access restricted content"
-msgstr "Per accedere ai contenuti ristetti è richiesta la tua frase di accesso"
+msgstr ""
+"Per accedere ai contenuti ristetti è richiesta la tua 'frase di segreta'"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:30
 msgid "Your passcode is required to access restricted content"

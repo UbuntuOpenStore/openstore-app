@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 04:14+0000\n"
-"PO-Revision-Date: 2017-10-01 14:49+0000\n"
+"PO-Revision-Date: 2017-11-28 09:34+0000\n"
 "Last-Translator: Stefano Melchior <stefano.melchior@me.com>\n"
-"Language-Team: Catalan <https://translate.ubports.com/projects/openstore/"
-"openstore-app/ca/>\n"
+"Language-Team: Catalan <https://translate.ubports.com/projects/openstore"
+"/openstore-app/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,6 +33,8 @@ msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
 msgstr ""
+"La versió instal·lada de l'aplicació no ve del servidor de l'OpenStore. Es "
+"pot instal·lar la última actualització 'estable' picant al butó avall."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:116
 msgid "Upgrade"
@@ -204,7 +206,7 @@ msgstr "Hi ha una actualització de l'OpenStore disponible"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:146
 msgid "Update OpenStore now!"
-msgstr "Actualitza l'OpenStore ara"
+msgstr "Actualitza l'OpenStore ara!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:152
 msgid "Details"
@@ -229,12 +231,12 @@ msgstr "Proveu amb una altra cerca."
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:27
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:34
 msgid "My Apps"
-msgstr "Apps"
+msgstr "Le meves Applicacions"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:32
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:26
 msgid "Settings"
-msgstr ""
+msgstr "Paràmetres"
 
 #. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
@@ -293,7 +295,7 @@ msgstr "D'acord. Ho entenc i aniré amb compte."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:243
 msgid "Get me out of here!"
-msgstr "Treu-me d'aquí."
+msgstr "Treu-me d'aquí!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:256
 msgid "Install app?"
@@ -341,73 +343,71 @@ msgstr "Cercau"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:29
 msgid "Your passphrase is required to access restricted content"
-msgstr ""
+msgstr "Cal posar la frase d'accès per accedir al contingut restringit"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:30
 msgid "Your passcode is required to access restricted content"
-msgstr ""
+msgstr "Cal posar el codi d'accès per accedir al contingut restringit"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:39
-#, fuzzy
 msgid "Authentication failed"
-msgstr "La instal·lació ha fallat"
+msgstr "La autenticació ha fallat"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
-#, fuzzy
 msgid "Passphrase required"
-msgstr "no se'n requereix cap"
+msgstr "Cal posar la frase d'accès"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
-#, fuzzy
 msgid "Passcode required"
-msgstr "no se'n requereix cap"
+msgstr "Cal posar el codi d'accès"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passphrase (default is 0000)"
-msgstr ""
+msgstr "Frase d'accès (per defecte és 0000)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passcode (default is 0000)"
-msgstr ""
+msgstr "codi d'accès (per defecte és 0000)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:71
 msgid "Authentication failed. Please retry"
-msgstr ""
+msgstr "L'autenticació ha fallat. Si us plau, intenteu-la de nou"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:76
 msgid "Authenticate"
-msgstr ""
+msgstr "Autenticar"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:58
 msgid "Parental control"
-msgstr ""
+msgstr "Control parental"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:64
 msgid "Hide adult-oriented content"
-msgstr ""
+msgstr "Amagar contingut per a adults"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:74
 msgid ""
 "By typing your password you take full responsability for showing NSFW "
 "content."
 msgstr ""
+"Posant la contrasenya preneu tota la responsabilitat d'ensenyar contingut "
+"per a adults."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:84
 msgid "Developers"
-msgstr ""
+msgstr "Desenvolupadors"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:91
 msgid "Manage your apps on OpenStore"
-msgstr ""
+msgstr "Gestionar les seves aplicacions en l'OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:97
-#, fuzzy
 msgid "About OpenStore"
-msgstr "L'equip de l'OpenStore"
+msgstr "Quant a l'OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:113
 msgid "Report an issue"
-msgstr ""
+msgstr "Informar de un problema"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Back"

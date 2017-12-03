@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 04:14+0000\n"
-"PO-Revision-Date: 2017-11-30 02:51+0000\n"
-"Last-Translator: Beton <betonn@protonmail.com>\n"
+"PO-Revision-Date: 2017-12-03 12:53+0000\n"
+"Last-Translator: Jonasz Potoniec <joni311099@gmail.com>\n"
 "Language-Team: Polish <https://translate.ubports.com/projects/openstore"
 "/openstore-app/pl/>\n"
 "Language: pl\n"
@@ -34,6 +34,8 @@ msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
 msgstr ""
+"Zainstalowana wersja aplikacji nie zawiera serwera OpenStore. Możesz "
+"zainstalować najnowszą, stabilną wersję klikając przycisk poniżej."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:116
 msgid "Upgrade"
@@ -342,42 +344,39 @@ msgstr "Wyszukaj"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:29
 msgid "Your passphrase is required to access restricted content"
-msgstr ""
+msgstr "Twoje hasło jest wymagane aby uzyskać dostęp do zastrzeżonej zawartości"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:30
 msgid "Your passcode is required to access restricted content"
 msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:39
-#, fuzzy
 msgid "Authentication failed"
-msgstr "Instalacja nieudana"
+msgstr "Uwierzytelnienie nieudane"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
-#, fuzzy
 msgid "Passphrase required"
-msgstr "niewymagane"
+msgstr "Wymagane hasło"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
-#, fuzzy
 msgid "Passcode required"
-msgstr "niewymagane"
+msgstr "Wymagane hasło"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passphrase (default is 0000)"
-msgstr ""
+msgstr "hasło (domyślne to 0000)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passcode (default is 0000)"
-msgstr ""
+msgstr "hasło (domyślne to 0000)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:71
 msgid "Authentication failed. Please retry"
-msgstr ""
+msgstr "Uwierzytelnienie nieudane. Spróbuj ponownie"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:76
 msgid "Authenticate"
-msgstr ""
+msgstr "Uwierzytelnienie"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:58
 msgid "Parental control"
@@ -385,30 +384,31 @@ msgstr "Kontrola rodzicielska"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:64
 msgid "Hide adult-oriented content"
-msgstr ""
+msgstr "Ukryj zawartość dla dorosłych"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:74
 msgid ""
 "By typing your password you take full responsability for showing NSFW "
 "content."
 msgstr ""
+"Wpisując hasło bierzesz pełną odpowiedzialność za pokazywanie treści dla "
+"dorosłych."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:84
 msgid "Developers"
-msgstr ""
+msgstr "Programiści"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:91
 msgid "Manage your apps on OpenStore"
 msgstr "Zarządzaj swoimi aplikacjami w OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:97
-#, fuzzy
 msgid "About OpenStore"
-msgstr "Ekipa OpenStore"
+msgstr "O OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:113
 msgid "Report an issue"
-msgstr ""
+msgstr "Zgłoś błąd"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Back"

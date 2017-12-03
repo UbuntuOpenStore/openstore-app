@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 04:14+0000\n"
-"PO-Revision-Date: 2017-12-03 18:10+0000\n"
+"PO-Revision-Date: 2017-12-03 18:14+0000\n"
 "Last-Translator: Milan Korecký <milan.korecky@gmail.com>\n"
 "Language-Team: Czech <https://translate.ubports.com/projects/openstore"
 "/openstore-app/cs/>\n"
@@ -185,7 +185,7 @@ msgstr "Najít"
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:51
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:28
 msgid "Search in OpenStore..."
-msgstr "Hledat v OpenStore…"
+msgstr "Hledat v OpenStore..."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:125
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:40
@@ -195,7 +195,7 @@ msgstr "Dostupná aktualizace"
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:126
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:40
 msgid "✓ Installed"
-msgstr "✓ Zavedeno"
+msgstr "✓ Vlastníte"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:145
 msgid "OpenStore update available"
@@ -325,8 +325,8 @@ msgstr "Instalace selhala"
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
-"Balíček se nepodařilo instalovat.\n"
-"Zkontrolujte zda se jedná o platný click balíček."
+"Balíček se nepodařilo instalovat. Zkontrolujte, zda se jedná o platný click "
+"balíček."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
 #, qt-format
@@ -396,7 +396,7 @@ msgstr "Vývojáří"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:91
 msgid "Manage your apps on OpenStore"
-msgstr "Spravujte vaše aplikace v OpenStore"
+msgstr "Spravovat vaše aplikace v OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:97
 msgid "About OpenStore"

@@ -20,5 +20,9 @@
         <file>Components/PackageTile.qml</file>
         <file>Components/PackageListItem.qml</file>
         <file>Components/ScreenshotImage.qml</file>
+        <file>SettingsPage.qml</file>
+        <file>AuthenticationHandler.qml</file>
+        <file>PasswordDialog.qml</file>
+        <file>Components/ScreenshotsCarousel.qml</file>
     </qresource>
 </RCC>

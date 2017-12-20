@@ -7,349 +7,449 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-20 14:20+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2017-11-22 04:14+0000\n"
+"PO-Revision-Date: 2017-12-10 22:42+0000\n"
+"Last-Translator: Brînzariu Cristian <info@ebeton.ro>\n"
+"Language-Team: Romanian <https://translate.ubports.com/projects/openstore"
+"/openstore-app/ro/>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 2.15\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
 msgid "App details"
-msgstr ""
+msgstr "Detalii aplicație"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:43
 msgid "Open"
-msgstr ""
+msgstr "Deschide"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:99
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:91
+msgid ""
+"The installed version of this app doesn't come from the OpenStore server. "
+"You can install the latest stable update by tapping the button below."
+msgstr ""
+"Versiunea instalată a acestei aplicații nu provine din serverul OpenStore. "
+"Poți să instalezi ultima versiune oficială prin apăsara butonului de mai jos."
+
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:116
 msgid "Upgrade"
-msgstr ""
+msgstr "Actualizează"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:99
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:224
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:116
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:270
 msgid "Install"
-msgstr ""
+msgstr "Instalează"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:108
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:544
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:125
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:523
 msgid "Remove"
-msgstr ""
+msgstr "Elimină"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:173
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:190
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
+"Această aplicație are acces la informații protejate din sistem, vezi "
+"detaliile mai jos."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:235
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:214
 msgid "Description"
-msgstr ""
+msgstr "Descriere"
 
 #. TRANSLATORS: Title of the changelog section
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:258
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:237
 msgid "What's New"
-msgstr ""
+msgstr "Ce este nou"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:277
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:256
 msgid "Packager/Publisher"
-msgstr ""
+msgstr "Packager / Dezvoltator"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:278
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:257
 msgid "OpenStore team"
-msgstr ""
+msgstr "Echipa OpenStore"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:286
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:265
 msgid "Installed version"
-msgstr ""
+msgstr "Versiunea instalată"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:295
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:274
 msgid "Latest available version"
-msgstr ""
+msgstr "Cea mai nouă versiune disponibilă"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:304
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:283
 msgid "First released"
-msgstr ""
+msgstr "Data apariției"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:313
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:292
 msgid "License"
-msgstr ""
+msgstr "Licență"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:314
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:293
 msgid "N/A"
-msgstr ""
+msgstr "Nu este disponibil"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:322
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:301
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:104
 msgid "Source Code"
-msgstr ""
+msgstr "Codul sursă"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:337
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:316
 #, qt-format
 msgid "More from %1"
-msgstr ""
+msgstr "Mai multe de la %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:352
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:331
 #, qt-format
 msgid "Other apps in %1"
-msgstr ""
+msgstr "Alte aplicații în %1"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:358
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:337
 msgid "Package contents"
-msgstr ""
+msgstr "Pachetul conține"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:438
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:417
 msgid "AppArmor profile"
-msgstr ""
+msgstr "Profil AppArmor"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:466
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:445
 msgid "Permissions"
-msgstr ""
+msgstr "Permisiuni"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:485
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:464
 msgid "none required"
-msgstr ""
+msgstr "niciuna necesară"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:502
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:481
 msgid "Read paths"
-msgstr ""
+msgstr "Citește locațiile"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:520
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:499
 msgid "Write paths"
-msgstr ""
+msgstr "Scrie locațiile"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:536
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:515
 msgid "Remove package"
-msgstr ""
+msgstr "Elimină pachetul"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:537
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:516
 #, qt-format
 msgid "Do you want to remove %1?"
-msgstr ""
+msgstr "Vrei să elimini %1?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:553
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:232
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:532
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:278
+#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
-msgstr ""
+msgstr "Anulează"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:570
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:549
 #, qt-format
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 gigabiți"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:575
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:554
 #, qt-format
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 megabiți"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:580
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:559
 #, qt-format
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 kilobiți"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:583
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:562
 #, qt-format
 msgid "%1 bytes"
-msgstr ""
+msgstr "%1 biți"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesPage.qml:24
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesTab.qml:81
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:32
 msgid "Categories"
-msgstr ""
+msgstr "Categorii"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:29
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:31
 msgid "Discover"
-msgstr ""
+msgstr "Descoperă"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:51
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:28
 msgid "Search in OpenStore..."
-msgstr ""
-
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:124
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:40
-msgid "Update available"
-msgstr ""
+msgstr "Caută în OpenStore..."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:125
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:40
-msgid "✓ Installed"
-msgstr ""
+msgid "Update available"
+msgstr "Actualizare disponibilă"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:144
-msgid "OpenStore update available"
-msgstr ""
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:126
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:40
+msgid "✓ Installed"
+msgstr "Instalată"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:145
-msgid "Update OpenStore now!"
-msgstr ""
+msgid "OpenStore update available"
+msgstr "Actualizare OpenStore disponibilă"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:151
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:146
+msgid "Update OpenStore now!"
+msgstr "Actualizează OpenStore acum!"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:152
 msgid "Details"
-msgstr ""
+msgstr "Detalii"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:110
 msgid "Nothing here yet"
-msgstr ""
+msgstr "Încă nu există nimic aici"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:110
 msgid "No results found."
-msgstr ""
+msgstr "Nu am găsit niciun rezultat."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:111
 msgid "No app has been released in this category yet."
-msgstr ""
+msgstr "Nu a fost publicată nicio aplicație în această categorie până acum."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:111
 msgid "Try with a different search."
-msgstr ""
+msgstr "Încearcă să folosești o căutare diferită."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:27
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:34
 msgid "My Apps"
-msgstr ""
+msgstr "Aplicațiile mele"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:32
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:26
+msgid "Settings"
+msgstr "Setări"
 
 #. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:61
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
 #, qt-format
 msgid "Available updates (%1)"
-msgstr ""
+msgstr "Actualizări disponibile (%1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:61
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
 #, qt-format
 msgid "Installed apps (%1)"
-msgstr ""
+msgstr "Aplicații instalate (%1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:101
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:109
 msgid "No apps found"
-msgstr ""
+msgstr "Nici o aplicație găsită"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:110
 msgid "No app has been installed from OpenStore yet."
-msgstr ""
+msgstr "Nu ai încă nicio aplicație instalată din OpenStore."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:156
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:202
 msgid "Warning"
-msgstr ""
+msgstr "Avertisment"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:165
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:211
 msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
 msgstr ""
+"OpenStore permite instalarea aplicațiilor fără limitări. Te rugăm să te "
+"asiguri că înțelegi implicațiile acestui lucru."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:172
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:218
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
 msgstr ""
+"O aplicație fără limitări poate să strice sistemul de operare, să-i reducă "
+"performanțele și/sau să te spioneze."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:179
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:225
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
 msgstr ""
+"Cu toate că noi facem tot posibilul să prevenim acest lucru prin verificarea "
+"aplicațiilor, nu ne asumăm nicio responsabilitate dacă ceva rău ne scapă."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:186
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:232
 msgid "Use this at your own risk."
-msgstr ""
+msgstr "Folosește asta pe propriul risc."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:190
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:236
 msgid "Okay. Got it! I'll be careful."
-msgstr ""
+msgstr "De acord. Am înțeles! O să am grijă."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:197
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:243
 msgid "Get me out of here!"
-msgstr ""
-
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:210
-msgid "Install app?"
-msgstr ""
-
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:211
-#, qt-format
-msgid "Do you want to install %1?"
-msgstr ""
-
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:252
-msgid "App installed"
-msgstr ""
-
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:253
-msgid "The app has been installed successfully."
-msgstr ""
+msgstr "Scoate-mă de aici!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:256
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:269
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:284
+msgid "Install app?"
+msgstr "Instalezi aplicația?"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:257
+#, qt-format
+msgid "Do you want to install %1?"
+msgstr "Vrei să instalezi %1?"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:298
+msgid "App installed"
+msgstr "Aplicație instalată"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:299
+msgid "The app has been installed successfully."
+msgstr "Aplicația a fost instalată cu succes."
+
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:302
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:315
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:330
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:265
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:311
 msgid "Installation failed"
-msgstr ""
+msgstr "Instalarea a eșuat"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:266
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:312
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
+"Pachetul nu sa instalat.\n"
+"Verifică dacă este un pachet de tip click valid."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:280
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
 #, qt-format
 msgid "Installation failed (Error %1)"
-msgstr ""
+msgstr "Instalarea a eșuat (Eroare %1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:33
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15
 msgid "Search"
+msgstr "Caută"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:29
+msgid "Your passphrase is required to access restricted content"
 msgstr ""
+"Fraza ta parolă este necesară pentru accesarea conținutului restricționat"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:30
+msgid "Your passcode is required to access restricted content"
+msgstr ""
+"Codul tău de tip parolă este necesar pentru accesarea conținutului "
+"restricționat"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:39
+msgid "Authentication failed"
+msgstr "Autentificare eșuată"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
+msgid "Passphrase required"
+msgstr "Frază de tip parolă necesară"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
+msgid "Passcode required"
+msgstr "Este necesară parola"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
+msgid "passphrase (default is 0000)"
+msgstr "frază parolă (implicit este 0000)"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
+msgid "passcode (default is 0000)"
+msgstr "cod parolă (implicit este 0000)"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:71
+msgid "Authentication failed. Please retry"
+msgstr "Autentificare eșuată. Te rugăm să încerci din nou"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:76
+msgid "Authenticate"
+msgstr "Autentificare"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:58
+msgid "Parental control"
+msgstr "Control parental"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:64
+msgid "Hide adult-oriented content"
+msgstr "Ascunde conținutul pentru adulți"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:74
+msgid ""
+"By typing your password you take full responsability for showing NSFW "
+"content."
+msgstr ""
+"Prin tastarea parolei îți asumi întreaga responsabilitate pentru afișarea "
+"conținutului pentru adulți."
+
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:84
+msgid "Developers"
+msgstr "Dezvoltatori"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:91
+msgid "Manage your apps on OpenStore"
+msgstr "Gestionează aplicațiile tale din OpenStore"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:97
+msgid "About OpenStore"
+msgstr "Despre OpenStore"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:113
+msgid "Report an issue"
+msgstr "Raportează o problemă"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Back"
-msgstr ""
+msgstr "Înapoi"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Close"
-msgstr ""
+msgstr "Închide"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:37
 msgid "Application"
-msgstr ""
+msgstr "Aplicație"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
 msgid "Scope"
-msgstr ""
+msgstr "Scope"
 
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:64
 msgid "URL Handler"
-msgstr ""
+msgstr "Manipulator de URL"
 
 #. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:78
 msgid "Content Hub Handler"
-msgstr ""
+msgstr "Manipulator Hub de conținut"
 
 #. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:92
 msgid "Push Helper"
-msgstr ""
+msgstr "Helper pentru Push"
 
 #. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:106
 msgid "Accounts provider"
-msgstr ""
+msgstr "Furnizor de conturi"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:46
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:54
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
-msgstr ""
+msgstr "Alege"

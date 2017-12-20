@@ -13,6 +13,8 @@ SearchModel::SearchModel(QObject *parent)
     connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::newReply,
             this, &SearchModel::parseReply);
 
+    connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::reloaded, this, &SearchModel::update);
+
     connect(this, &SearchModel::filterStringChanged, this, &SearchModel::update);
     connect(this, &SearchModel::categoryChanged, this, &SearchModel::update);
     connect(this, &SearchModel::sortModeChanged, this, &SearchModel::update);

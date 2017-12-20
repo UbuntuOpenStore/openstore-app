@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-20 14:20+0000\n"
+"POT-Creation-Date: 2017-11-22 04:14+0000\n"
 "PO-Revision-Date: 2017-10-20 07:21+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
-"Language-Team: Finnish <https://translate.ubports.com/projects/openstore"
-"/openstore-app/fi/>\n"
+"Language-Team: Finnish <https://translate.ubports.com/projects/openstore/"
+"openstore-app/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,138 +27,146 @@ msgstr "Ohjelman tiedot"
 msgid "Open"
 msgstr "Avaa"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:99
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:91
+msgid ""
+"The installed version of this app doesn't come from the OpenStore server. "
+"You can install the latest stable update by tapping the button below."
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:116
 msgid "Upgrade"
 msgstr "Päivitä"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:99
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:224
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:116
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:270
 msgid "Install"
 msgstr "Asenna"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:108
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:544
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:125
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:523
 msgid "Remove"
 msgstr "Poista"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:173
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:190
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
 "Tällä sovelluksella on pääsy rajoitettuihin järjestelmätietoihin, katso "
 "yksityiskohdat alempana."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:235
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:214
 msgid "Description"
 msgstr "Kuvaus"
 
 #. TRANSLATORS: Title of the changelog section
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:258
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:237
 msgid "What's New"
 msgstr "Uutta"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:277
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:256
 msgid "Packager/Publisher"
 msgstr "Paketoija/julkaisija"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:278
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:257
 msgid "OpenStore team"
 msgstr "OpenStore-tiimi"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:286
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:265
 msgid "Installed version"
 msgstr "Asennettu versio"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:295
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:274
 msgid "Latest available version"
 msgstr "Uusin saatavilla oleva versio"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:304
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:283
 msgid "First released"
 msgstr "Ensimmäinen julkaisu"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:313
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:292
 msgid "License"
 msgstr "Lisenssi"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:314
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:293
 msgid "N/A"
 msgstr "N/A"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:322
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:301
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:104
 msgid "Source Code"
 msgstr "Lähdekoodi"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:337
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:316
 #, qt-format
 msgid "More from %1"
 msgstr "Lisää käyttäjältä %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:352
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:331
 #, qt-format
 msgid "Other apps in %1"
 msgstr "Muita sovelluksia luokasta %1"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:358
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:337
 msgid "Package contents"
 msgstr "Paketin sisältö"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:438
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:417
 msgid "AppArmor profile"
 msgstr "AppArmor-profiili"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:466
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:445
 msgid "Permissions"
 msgstr "Käyttöoikeudet"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:485
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:464
 msgid "none required"
 msgstr "ei vaadi oikeuksia"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:502
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:481
 msgid "Read paths"
 msgstr "Lukupolut"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:520
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:499
 msgid "Write paths"
 msgstr "Kirjoituspolut"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:536
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:515
 msgid "Remove package"
 msgstr "Poista paketti"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:537
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:516
 #, qt-format
 msgid "Do you want to remove %1?"
 msgstr "Haluatko poistaa %1?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:553
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:232
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:532
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:278
+#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
 msgstr "Peru"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:570
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:549
 #, qt-format
 msgid "%1 GB"
 msgstr "%1 Gt"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:575
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:554
 #, qt-format
 msgid "%1 MB"
 msgstr "%1 Mt"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:580
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:559
 #, qt-format
 msgid "%1 kB"
 msgstr "%1 kt"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:583
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:562
 #, qt-format
 msgid "%1 bytes"
 msgstr "%1 tavua"
@@ -179,25 +187,25 @@ msgstr "Löydä"
 msgid "Search in OpenStore..."
 msgstr "Etsi OpenStoresta..."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:124
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:125
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:40
 msgid "Update available"
 msgstr "Päivitys saatavilla"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:125
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:126
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:40
 msgid "✓ Installed"
 msgstr "✓ Asennettu"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:144
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:145
 msgid "OpenStore update available"
 msgstr "OpenStore-päivitys saatavilla"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:145
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:146
 msgid "Update OpenStore now!"
 msgstr "Päivitä OpenStore nyt!"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:151
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:152
 msgid "Details"
 msgstr "Tiedot"
 
@@ -222,30 +230,35 @@ msgstr "Yritä etsiä eri hakuehdoilla."
 msgid "My Apps"
 msgstr "Asennetut"
 
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:32
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:26
+msgid "Settings"
+msgstr ""
+
 #. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:61
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
 #, qt-format
 msgid "Available updates (%1)"
 msgstr "Saatavilla olevat päivitykset (%1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:61
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
 #, qt-format
 msgid "Installed apps (%1)"
 msgstr "Asennetut sovellukset (%1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:101
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:109
 msgid "No apps found"
 msgstr "Sovelluksia ei löytynyt"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:110
 msgid "No app has been installed from OpenStore yet."
 msgstr "Yhtäkään sovellusta ei ole vielä asennettu OpenStoresta."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:156
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:202
 msgid "Warning"
 msgstr "Varoitus"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:165
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:211
 msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
@@ -253,7 +266,7 @@ msgstr ""
 "OpenStore sallii eristämättömien sovellusten asentamisen. Varmista, että "
 "ymmärrät asian merkityksen."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:172
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:218
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
@@ -261,7 +274,7 @@ msgstr ""
 "Eristämätön sovellus voi rikkoa järjestelmän, laskea järjestelmän "
 "suorituskykyä tai vakoilla käyttäjää."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:179
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:225
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
@@ -269,52 +282,52 @@ msgstr ""
 "Vaikka teemme parhaamme estääksemme haittaohjelmien leviämisen tutkimalla "
 "sovellukset, emme ota mitään vastuuta jos jokin pääsee seulonnan läpi."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:186
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:232
 msgid "Use this at your own risk."
 msgstr "Käytä tätä omalla vastuullasi."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:190
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:236
 msgid "Okay. Got it! I'll be careful."
 msgstr "Okei. Asia selvä! Olen varovainen."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:197
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:243
 msgid "Get me out of here!"
 msgstr "Haluan pois täältä!"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:210
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:256
 msgid "Install app?"
 msgstr "Asennetaanko sovellus?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:211
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:257
 #, qt-format
 msgid "Do you want to install %1?"
 msgstr "Haluatko asentaa %1?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:252
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:298
 msgid "App installed"
 msgstr "Sovellus asennettu"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:253
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:299
 msgid "The app has been installed successfully."
 msgstr "Sovellus on asennettu onnistuneesti."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:256
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:269
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:284
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:302
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:315
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:330
 msgid "OK"
 msgstr "OK"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:265
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:311
 msgid "Installation failed"
 msgstr "Asennus epäonnistui"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:266
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:312
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 "Pakettia ei voitu asentaa. Varmista, että se on kelvollinen click-paketti."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:280
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
 #, qt-format
 msgid "Installation failed (Error %1)"
 msgstr "Asennus epäonnistui (Virhe %1)"
@@ -323,6 +336,76 @@ msgstr "Asennus epäonnistui (Virhe %1)"
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15
 msgid "Search"
 msgstr "Etsi"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:29
+msgid "Your passphrase is required to access restricted content"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:30
+msgid "Your passcode is required to access restricted content"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:39
+#, fuzzy
+msgid "Authentication failed"
+msgstr "Asennus epäonnistui"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
+#, fuzzy
+msgid "Passphrase required"
+msgstr "ei vaadi oikeuksia"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
+#, fuzzy
+msgid "Passcode required"
+msgstr "ei vaadi oikeuksia"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
+msgid "passphrase (default is 0000)"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
+msgid "passcode (default is 0000)"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:71
+msgid "Authentication failed. Please retry"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:76
+msgid "Authenticate"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:58
+msgid "Parental control"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:64
+msgid "Hide adult-oriented content"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:74
+msgid ""
+"By typing your password you take full responsability for showing NSFW "
+"content."
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:84
+msgid "Developers"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:91
+msgid "Manage your apps on OpenStore"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:97
+#, fuzzy
+msgid "About OpenStore"
+msgstr "OpenStore-tiimi"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:113
+msgid "Report an issue"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Back"

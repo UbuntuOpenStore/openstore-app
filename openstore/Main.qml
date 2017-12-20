@@ -124,7 +124,18 @@ MainView {
         Component.onCompleted: OpenStoreNetworkManager.showNsfw = !settings.hideNsfw
     }
 
-    property QtObject appModel: AppModel { appStoreAppId: root.applicationName }
+    property QtObject appModel: AppModel {
+        appStoreAppId: root.applicationName
+
+        onReadyChanged: {
+            if (ready && root.appIdToOpen != "") {
+                console.log("Fetching " + root.appIdToOpen + " for UriHandler request at launch")
+                appModel.packageDetailsReady.connect(slot_packageDetailsReady)
+                appModel.showPackageDetails(root.appIdToOpen)
+                root.appIdToOpen = ""
+            }
+        }
+    }
     property QtObject categoriesModel: CategoriesModel { }
     property QtObject discoverModel: DiscoverModel { }
     property QtObject searchModel: SearchModel { }

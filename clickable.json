@@ -2,6 +2,7 @@
   "template": "qmake",
   "kill": "openstore",
   "dependencies": [
-    "libclick-0.4-dev"
+    "libclick-0.4-dev",
+    "libpam0g-dev"
   ]
 }

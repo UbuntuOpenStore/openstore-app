@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 04:14+0000\n"
-"PO-Revision-Date: 2017-12-17 13:21+0000\n"
+"PO-Revision-Date: 2017-12-21 16:38+0000\n"
 "Last-Translator: Eran <etherpulse@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.ubports.com/projects/openstore"
 "/openstore-app/he/>\n"
@@ -326,7 +326,7 @@ msgstr "ההתקנה נכשלה"
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:312
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
-msgstr ""
+msgstr "לא ניתן להתקין חבילה. אנא ודאו שהחבילה היא חבילת CLICK תקינה."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
 #, fuzzy, qt-format
@@ -367,7 +367,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passcode (default is 0000)"
-msgstr ""
+msgstr "קוד ( ברירת המחדל היא 0000 )"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:71
 msgid "Authentication failed. Please retry"
@@ -375,15 +375,15 @@ msgstr "אימות נכשל. אנא נסו שנית"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:76
 msgid "Authenticate"
-msgstr ""
+msgstr "אמת"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:58
 msgid "Parental control"
-msgstr ""
+msgstr "שליטה הורית"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:64
 msgid "Hide adult-oriented content"
-msgstr ""
+msgstr "החבא תוכן למבוגרים"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:74
 msgid ""
@@ -448,7 +448,7 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:54
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
-msgstr ""
+msgstr "בחרו"
 
 #~ msgid "Fetching package list..."
 #~ msgstr "מייבא רשימת חבילות…"

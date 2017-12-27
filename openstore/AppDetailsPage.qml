@@ -424,7 +424,6 @@ Page {
                         ListItemLayout {
                             anchors { left: parent.left; right: parent.right }
                             anchors.leftMargin: units.gu(-2)
-                            height: units.gu(6)
                             visible: permissions.length > 0
 
                             Icon {
@@ -468,7 +467,6 @@ Page {
                         ListItemLayout {
                             anchors { left: parent.left; right: parent.right }
                             anchors.leftMargin: units.gu(-2)
-                            height: units.gu(6)
                             visible: readpaths.length > 0
 
                             Icon {
@@ -487,7 +485,6 @@ Page {
                         ListItemLayout {
                             anchors { left: parent.left; right: parent.right }
                             anchors.leftMargin: units.gu(-2)
-                            height: units.gu(6)
                             visible: writepaths.length > 0
                             Icon {
                                 SlotsLayout.position: SlotsLayout.Leading

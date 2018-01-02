@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-22 04:14+0000\n"
-"PO-Revision-Date: 2017-09-10 15:18+0000\n"
+"PO-Revision-Date: 2018-01-02 15:49+0000\n"
 "Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
-"Language-Team: Sardinian <https://translate.ubports.com/projects/openstore/"
-"openstore-app/sc/>\n"
+"Language-Team: Sardinian <https://translate.ubports.com/projects/openstore"
+"/openstore-app/sc/>\n"
 "Language: sc\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,13 +26,16 @@ msgstr "Informatziones de s'aplicatzione"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:43
 msgid "Open"
-msgstr ""
+msgstr "Aberi·la"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:91
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
 msgstr ""
+"Sa versione installada de custa aplicatzione non benit dae su server de "
+"OpenStore. Nde podes installare s'ùrtima atualizatzione istàbile incarchende "
+"su pulsante in giosso."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:116
 msgid "Upgrade"
@@ -49,8 +52,11 @@ msgid "Remove"
 msgstr "Boga"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:190
+#, fuzzy
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
+"Custa aplicatzione tenet atzessu a datos restrintos de su sistema. Bides "
+"suta is detàllios."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:214
 msgid "Description"
@@ -80,7 +86,7 @@ msgstr "Ùrtima versione a disponimentu"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:283
 msgid "First released"
-msgstr ""
+msgstr "Prima publicatzione"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:292
 msgid "License"
@@ -207,7 +213,7 @@ msgstr "Atualizatzione a disponimentu"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:146
 msgid "Update OpenStore now!"
-msgstr ""
+msgstr "Atualiza s'OpenStore immoe!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:152
 #, fuzzy
@@ -240,7 +246,7 @@ msgstr "Aplicatziones meas"
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:32
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:26
 msgid "Settings"
-msgstr ""
+msgstr "Cunfiguratzione"
 
 #. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
@@ -290,8 +296,9 @@ msgid ""
 msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:232
+#, fuzzy
 msgid "Use this at your own risk."
-msgstr ""
+msgstr "Imprea custa aplicatzione a arriscu tuo."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:236
 msgid "Okay. Got it! I'll be careful."
@@ -348,17 +355,18 @@ msgid "Search"
 msgstr "Chirca"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:29
+#, fuzzy
 msgid "Your passphrase is required to access restricted content"
-msgstr ""
+msgstr "Pro atzèdere a cuntenutos restrintos, b'at bisòngiu de sa crae tua."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:30
+#, fuzzy
 msgid "Your passcode is required to access restricted content"
-msgstr ""
+msgstr "Pro atzèdere a cuntenutos restrintos, b'at bisòngiu de su còdighe tuo."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:39
-#, fuzzy
 msgid "Authentication failed"
-msgstr "B'at àpidu una faddina in s'installatzione"
+msgstr "Faddina in s'autenticatzione"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
 #, fuzzy
@@ -372,27 +380,29 @@ msgstr "perunu rechèdidu"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passphrase (default is 0000)"
-msgstr ""
+msgstr "crae (sa crae predefinida est 0000)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passcode (default is 0000)"
-msgstr ""
+msgstr "còdighe (su còdighe predefinidu est 0000)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:71
 msgid "Authentication failed. Please retry"
-msgstr ""
+msgstr "Faddina in s'autenticatzione. Torra·bi a proare"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:76
+#, fuzzy
 msgid "Authenticate"
-msgstr ""
+msgstr "Autentica·ti"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:58
+#, fuzzy
 msgid "Parental control"
-msgstr ""
+msgstr "Controllu de genitores"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:64
 msgid "Hide adult-oriented content"
-msgstr ""
+msgstr "Cua cuntenutos pro adultos"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:74
 msgid ""
@@ -402,11 +412,11 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:84
 msgid "Developers"
-msgstr ""
+msgstr "Isvilupadores"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:91
 msgid "Manage your apps on OpenStore"
-msgstr ""
+msgstr "Gesti is aplicatziones tuas in s'OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:97
 #, fuzzy
@@ -415,15 +425,15 @@ msgstr "Iscuadra de OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:113
 msgid "Report an issue"
-msgstr ""
+msgstr "Signala unu problemu"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Back"
-msgstr ""
+msgstr "In segus"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Close"
-msgstr ""
+msgstr "Serra"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:37
 msgid "Application"
@@ -457,7 +467,7 @@ msgstr "Frunidore de contos"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:54
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
-msgstr ""
+msgstr "Sèbera"
 
 #~ msgid "Fetching package list..."
 #~ msgstr "Carrighende sa lista de pachetes..."

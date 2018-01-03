@@ -72,7 +72,7 @@ MainView {
     }
 
     function slot_packageDetailsReady(pkg) {
-        appModel.packageDetailsReady.disconnect(slot_packageDetailsReady)
+        PackagesCache.packageDetailsReady.disconnect(slot_packageDetailsReady)
         bottomEdgeStack.clear()
         bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
     }
@@ -82,8 +82,8 @@ MainView {
         onOpened: {
             var appId = uris[0].split("://")[1]
             console.log("Fetching " + appId + " for UriHandler request")
-            appModel.packageDetailsReady.connect(slot_packageDetailsReady)
-            appModel.showPackageDetails(appId)
+            PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady)
+            PackagesCache.getPackageDetails(appId)
         }
     }
 
@@ -131,7 +131,7 @@ MainView {
             if (ready && root.appIdToOpen != "") {
                 console.log("Fetching " + root.appIdToOpen + " for UriHandler request at launch")
                 appModel.packageDetailsReady.connect(slot_packageDetailsReady)
-                appModel.showPackageDetails(root.appIdToOpen)
+                appModel.getPackageDetails(root.appIdToOpen)
                 root.appIdToOpen = ""
             }
         }
@@ -197,8 +197,8 @@ MainView {
 
                 id: filteredAppView
                 onAppDetailsRequired: {
-                    var pageProps = { app: filteredAppView.getPackage(index) }
-                    bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), pageProps)
+                    PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady)
+                    PackagesCache.getPackageDetails(appId)
                 }
             }
         }

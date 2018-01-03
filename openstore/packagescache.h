@@ -26,8 +26,11 @@ public:
 
     int numberOfInstalledAppsInStore() const { return m_remoteAppRevision.count(); }
 
+    Q_INVOKABLE void getPackageDetails(const QString &appId);
+
 Q_SIGNALS:
     void updatingCacheChanged();
+    void packageDetailsReady(PackageItem* pkg);
 
 private Q_SLOTS:
     void updateCacheRevisions();

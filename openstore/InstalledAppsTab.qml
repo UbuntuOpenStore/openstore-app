@@ -89,14 +89,14 @@ Page {
                 }
                 
                 function slot_installedPackageDetailsReady(pkg) {
-                    appModel.packageDetailsReady.disconnect(slot_installedPackageDetailsReady)
+                    PackagesCache.packageDetailsReady.disconnect(slot_installedPackageDetailsReady)
                     bottomEdgeStack.clear()
                     bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
                 }
 
                 onClicked: {
-                    appModel.packageDetailsReady.connect(slot_installedPackageDetailsReady)
-                    appModel.showPackageDetails(model.appId)
+                    PackagesCache.packageDetailsReady.connect(slot_installedPackageDetailsReady)
+                    PackagesCache.getPackageDetails(model.appId)
                 }
             }
         }

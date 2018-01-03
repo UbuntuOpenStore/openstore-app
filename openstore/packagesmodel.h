@@ -43,14 +43,11 @@ public:
     bool appStoreUpdateAvailable() const { return m_appStoreUpdateAvailable; }
 
     Q_INVOKABLE void refresh();
-    Q_INVOKABLE void showPackageDetails(const QString &appId);
-
 
 Q_SIGNALS:
     void countChanged();
     void readyChanged();
     void updated();
-    void packageDetailsReady(PackageItem* pkg);
     void appStoreAppIdChanged();
     void appStoreUpdateAvailableChanged();
 

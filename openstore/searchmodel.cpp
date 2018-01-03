@@ -14,6 +14,7 @@ SearchModel::SearchModel(QObject *parent)
             this, &SearchModel::parseReply);
 
     connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::reloaded, this, &SearchModel::update);
+    connect(PlatformIntegration::instance(), &PlatformIntegration::updated, this, &SearchModel::refreshInstalledInfo);
 
     connect(this, &SearchModel::filterStringChanged, this, &SearchModel::update);
     connect(this, &SearchModel::categoryChanged, this, &SearchModel::update);
@@ -31,23 +32,24 @@ int SearchModel::rowCount(const QModelIndex &parent) const
 
 QVariant SearchModel::data(const QModelIndex &index, int role) const
 {
-    PackageItem* item = PackagesCache::instance()->get(m_list.at(index.row()));
-
-    if (item == Q_NULLPTR) {
+    if (index.row() < 0 || index.row() > rowCount())
         return QVariant();
-    }
+        
+    auto item = m_list.at(index.row());
 
     switch (role) {
     case RoleName:
-        return item->name();
+        return item.name;
+    case RoleAppId:
+        return item.appId;
     case RoleIcon:
-        return item->icon();
+        return item.icon;
     case RoleTagline:
-        return item->tagline();
+        return item.tagline;
     case RoleInstalled:
-        return item->installed();
+        return item.installed;
     case RoleUpdateAvailable:
-        return item->updateAvailable();
+        return item.updateAvailable;
     }
     return QVariant();
 }
@@ -56,6 +58,7 @@ QHash<int, QByteArray> SearchModel::roleNames() const
 {
     QHash<int, QByteArray> roles;
     roles.insert(RoleName, "name");
+    roles.insert(RoleAppId, "appId");
     roles.insert(RoleIcon, "icon");
     roles.insert(RoleTagline, "tagline");
     roles.insert(RoleInstalled, "installed");
@@ -65,17 +68,12 @@ QHash<int, QByteArray> SearchModel::roleNames() const
 
 int SearchModel::find(const QString &appId) const
 {
-    return m_list.indexOf(appId);   // Returns -1 if not found
-}
-
-PackageItem *SearchModel::getPackage(int index) const
-{
-    if (index < 0 || index + 1 > m_list.count()) {
-        qWarning() << Q_FUNC_INFO << "Index is out of range. Returning nullptr...";
-        return Q_NULLPTR;
+    for (int i=0; i<m_list.count(); ++i) {
+        if (m_list.at(i).appId == appId)
+            return i;
     }
 
-    return PackagesCache::instance()->get(m_list.at(index));
+    return -1;
 }
 
 void SearchModel::update()
@@ -143,20 +141,18 @@ void SearchModel::parseReply(OpenStoreReply reply)
     beginInsertRows(QModelIndex(), m_list.count(), m_list.count() + pkgList.count() - 1);
 
     Q_FOREACH (const QVariant &pkg, pkgList) {
+        SearchPackageItem item;
         const QVariantMap &pkgMap = pkg.toMap();
 
-        const QString &appId = pkgMap.value("id").toString();
+        item.appId = pkgMap.value("id").toString();
+        item.name = pkgMap.value("name").toString();
+        item.tagline = pkgMap.value("tagline").toString();
+        item.icon = pkgMap.value("icon").toString();
 
-        if (!PackagesCache::instance()->contains(appId)) {
-            PackagesCache::instance()->insert(appId, pkgMap);
-        }
-
-        m_list.append(appId);
-
-        connect(PackagesCache::instance()->get(appId), &PackageItem::installedChanged, [=]() {
-            int idx = m_list.indexOf(appId);
-            Q_EMIT dataChanged(index(idx), index(idx));
-        });
+        item.updateAvailable = bool(PackagesCache::instance()->getRemoteAppRevision(item.appId) > PackagesCache::instance()->getLocalAppRevision(item.appId));
+        item.installed = !PlatformIntegration::instance()->appVersion(item.appId).isNull();
+        
+        m_list.append(item);
     }
 
     endInsertRows();
@@ -164,4 +160,13 @@ void SearchModel::parseReply(OpenStoreReply reply)
     m_fetchedAll = !data.value("next").toUrl().isValid();
 
     Q_EMIT updated();
+}
+
+void SearchModel::refreshInstalledInfo()
+{
+    for (int i=0; i<m_list.count(); ++i) {
+        m_list[i].updateAvailable = bool(PackagesCache::instance()->getRemoteAppRevision(m_list[i].appId) > PackagesCache::instance()->getLocalAppRevision(m_list[i].appId));
+        m_list[i].installed = !PlatformIntegration::instance()->appVersion(m_list[i].appId).isNull();
+        Q_EMIT dataChanged(index(i), index(i));
+    }
 }

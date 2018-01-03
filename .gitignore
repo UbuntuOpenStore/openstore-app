@@ -1,3 +1,4 @@
 .bzr
 build
+build-pc
 *.user*

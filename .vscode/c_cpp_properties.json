@@ -1,0 +1,35 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceRoot}",
+                "/usr/include/x86_64-linux-gnu/qt5/QtCore",
+                "/usr/include/x86_64-linux-gnu/qt5",
+                "/usr/include/c++/5",
+                "/usr/include/x86_64-linux-gnu/c++/5",
+                "/usr/include/linux",
+                "/usr/include/x86_64-linux-gnu",
+                "/usr/lib/gcc/x86_64-linux-gnu/5/include",
+                "/usr/include/x86_64-linux-gnu/qt5/QtNetwork"
+            ],
+            "defines": [],
+            "browse": {
+                "path": [
+                    "/usr/include/c++/5",
+                    "/usr/include/x86_64-linux-gnu/c++/5",
+                    "/usr/include/c++/5/backward",
+                    "/usr/lib/gcc/x86_64-linux-gnu/5/include",
+                    "/usr/local/include",
+                    "/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed",
+                    "/usr/include/x86_64-linux-gnu",
+                    "/usr/include",
+                    "${workspaceRoot}"
+                ],
+                "databaseFilename": ""
+            },
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 3
+}

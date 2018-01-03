@@ -139,6 +139,10 @@ QStringList PlatformIntegration::getSupportedFrameworks()
 
 QString PlatformIntegration::getSupportedArchitecture()
 {
+#ifdef DESKTOP_DEBUG_BUILD
+    // Force "armhf", so we can see all the apps in the store
+    return QString("armhf");
+#else
     QProcess dpkg;
     dpkg.setProgram("dpkg");
     dpkg.setArguments(QStringList() << "--print-architecture");
@@ -156,6 +160,7 @@ QString PlatformIntegration::getSupportedArchitecture()
     qDebug() << Q_FUNC_INFO << "Device architecture is:" << output;
 
     return output;
+#endif
 }
 
 QString PlatformIntegration::getSystemLocale()

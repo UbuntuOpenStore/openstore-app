@@ -11,7 +11,9 @@
                 "/usr/include/linux",
                 "/usr/include/x86_64-linux-gnu",
                 "/usr/lib/gcc/x86_64-linux-gnu/5/include",
-                "/usr/include/x86_64-linux-gnu/qt5/QtNetwork"
+                "/usr/include/x86_64-linux-gnu/qt5/QtNetwork",
+                "/usr/include/click-0.4",
+                "/usr/include/glib-2.0"
             ],
             "defines": [],
             "browse": {

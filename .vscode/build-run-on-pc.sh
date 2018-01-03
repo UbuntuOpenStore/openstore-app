@@ -13,7 +13,7 @@ mkdir build-pc
 cd build-pc
 
 echo "Running qmake..."
-qmake ..
+qmake DEFINES+=DESKTOP_DEBUG_BUILD ..
 
 echo "Building..."
 make

@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-22 04:14+0000\n"
+"POT-Creation-Date: 2018-01-06 05:17+0000\n"
 "PO-Revision-Date: 2017-12-21 16:38+0000\n"
 "Last-Translator: Eran <etherpulse@gmail.com>\n"
-"Language-Team: Hebrew <https://translate.ubports.com/projects/openstore"
-"/openstore-app/he/>\n"
+"Language-Team: Hebrew <https://translate.ubports.com/projects/openstore/"
+"openstore-app/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,12 +38,12 @@ msgid "Upgrade"
 msgstr "עידכון"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:116
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:270
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:281
 msgid "Install"
 msgstr "התקנה"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:125
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:523
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:520
 msgid "Remove"
 msgstr "הסרה"
 
@@ -113,58 +113,58 @@ msgstr "תוכן חבילה"
 msgid "AppArmor profile"
 msgstr "פרופיל AppArmor"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:445
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:444
 msgid "Permissions"
 msgstr "הרשאות"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:464
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:463
 msgid "none required"
 msgstr "אין צורך בהרשאות מיוחדות"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:481
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:479
 msgid "Read paths"
 msgstr "נתיבי קריאה"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:499
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:496
 msgid "Write paths"
 msgstr "נתיבי כתיבה"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:515
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:512
 msgid "Remove package"
 msgstr "הסרת חבילה"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:516
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:513
 #, qt-format
 msgid "Do you want to remove %1?"
 msgstr "האם תרצו להסיר את %1?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:532
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:278
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:529
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:289
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
 msgstr "ביטול"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:549
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:546
 #, qt-format
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:554
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:551
 #, qt-format
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:559
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:556
 #, qt-format
 msgid "%1 kB"
 msgstr "%1 קילובייט"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:562
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:559
 #, qt-format
 msgid "%1 bytes"
 msgstr "%1 בייט"
@@ -209,19 +209,19 @@ msgstr "עדכנו את OpenStore עכשיו!"
 msgid "Details"
 msgstr "פרטי אפליקציה"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:110
+#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
 msgid "Nothing here yet"
 msgstr "אין כאן כלום כרגע"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:110
+#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
 msgid "No results found."
 msgstr "לא נמצאו תוצאות."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:111
+#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
 msgid "No app has been released in this category yet."
 msgstr "עדיין לא שוחררו אפליקציות תחת הקטגוריה הזאת."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:111
+#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
 msgid "Try with a different search."
 msgstr "נסו עם חיפוש אחר."
 
@@ -256,11 +256,11 @@ msgstr "לא נמצאו תוצאות."
 msgid "No app has been installed from OpenStore yet."
 msgstr "עדיין לא שוחררו אפליקציות תחת הקטגוריה הזאת."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:202
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:213
 msgid "Warning"
 msgstr "אזהרה"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:211
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:222
 msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
@@ -268,7 +268,7 @@ msgstr ""
 "OpenStore מאפשרת התקנה של אפליקציות לא מוגבלות. אנא וודאו שאתם יודעים מה "
 "ההשלכות של כך."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:218
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:229
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
@@ -276,7 +276,7 @@ msgstr ""
 "אפליקציה לא מוגבלת יכולה לגרום לשיבוש במערכת, להורדת ביצועים ו/או יכולה "
 "לעקוב אחריכם."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:225
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:236
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
@@ -284,51 +284,51 @@ msgstr ""
 "למרות שאנו עושים ככל יכולתנו למנוע את זה ע\"י בדיקה של האפליקציות, אך איננו "
 "לוקחים אחריות עם משהו חומק מעיננו."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:232
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:243
 msgid "Use this at your own risk."
 msgstr "השתמשו בזה באחריותיכם בלבד."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:236
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:247
 msgid "Okay. Got it! I'll be careful."
 msgstr "בסדר. הבנתי! אני אזהר."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:243
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:254
 msgid "Get me out of here!"
 msgstr "תוציאו אותי מפה!"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:256
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:267
 msgid "Install app?"
 msgstr "להתקין אפליקציה?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:257
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:268
 #, qt-format
 msgid "Do you want to install %1?"
 msgstr "האם תרצו להתקין %1?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:298
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:309
 msgid "App installed"
 msgstr "האפליקציה הותקנה"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:299
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:310
 msgid "The app has been installed successfully."
 msgstr "האפליקציה הותקנה בהצלחה."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:302
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:315
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:330
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:313
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:341
 msgid "OK"
 msgstr "בסדר"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:311
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:322
 msgid "Installation failed"
 msgstr "ההתקנה נכשלה"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:312
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:323
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr "לא ניתן להתקין חבילה. אנא ודאו שהחבילה היא חבילת CLICK תקינה."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:337
 #, fuzzy, qt-format
 msgid "Installation failed (Error %1)"
 msgstr "ההתקנה נכשלה"
@@ -387,7 +387,7 @@ msgstr "החבא תוכן למבוגרים"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:74
 msgid ""
-"By typing your password you take full responsability for showing NSFW "
+"By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr ""
 

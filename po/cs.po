@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-22 04:14+0000\n"
+"POT-Creation-Date: 2018-01-06 05:17+0000\n"
 "PO-Revision-Date: 2017-12-03 18:14+0000\n"
 "Last-Translator: Milan Korecký <milan.korecky@gmail.com>\n"
-"Language-Team: Czech <https://translate.ubports.com/projects/openstore"
-"/openstore-app/cs/>\n"
+"Language-Team: Czech <https://translate.ubports.com/projects/openstore/"
+"openstore-app/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,12 +40,12 @@ msgid "Upgrade"
 msgstr "Aktualizovat"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:116
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:270
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:281
 msgid "Install"
 msgstr "Instalovat"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:125
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:523
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:520
 msgid "Remove"
 msgstr "Odstranit"
 
@@ -115,58 +115,58 @@ msgstr "Obsah balíčku"
 msgid "AppArmor profile"
 msgstr "AppArmor profil"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:445
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:444
 msgid "Permissions"
 msgstr "Oprávnění"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:464
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:463
 msgid "none required"
 msgstr "nevyžadovány"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:481
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:479
 msgid "Read paths"
 msgstr "Read paths"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:499
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:496
 msgid "Write paths"
 msgstr "Write paths"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:515
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:512
 msgid "Remove package"
 msgstr "Odstranit balíček"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:516
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:513
 #, qt-format
 msgid "Do you want to remove %1?"
 msgstr "Opravdu odstranit %1?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:532
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:278
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:529
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:289
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
 msgstr "Zrušit"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:549
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:546
 #, qt-format
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:554
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:551
 #, qt-format
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:559
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:556
 #, qt-format
 msgid "%1 kB"
 msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:562
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:559
 #, qt-format
 msgid "%1 bytes"
 msgstr "%1 bytes"
@@ -209,19 +209,19 @@ msgstr "Aktualizovat OpenStore nyní!"
 msgid "Details"
 msgstr "Údaje o aplikaci"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:110
+#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
 msgid "Nothing here yet"
 msgstr "Zatím tu není nic"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:110
+#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
 msgid "No results found."
 msgstr "Žádné výsledky nenalezeny."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:111
+#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
 msgid "No app has been released in this category yet."
 msgstr "V této kategorii zatím nic není."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:111
+#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
 msgid "Try with a different search."
 msgstr "Zkuste hledat jinak."
 
@@ -254,11 +254,11 @@ msgstr "Žádné aplikace nenalezeny"
 msgid "No app has been installed from OpenStore yet."
 msgstr "Zatím nebyly instalovány žádné aplikace z OpenStore."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:202
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:213
 msgid "Warning"
 msgstr "Upozornění"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:211
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:222
 msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
@@ -266,7 +266,7 @@ msgstr ""
 "OpenStore Vám umožňuje instalovat aplikace bez omezení oprávnění. Ujistěte "
 "se, že víte jaké to může mít důsledky."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:218
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:229
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
@@ -274,7 +274,7 @@ msgstr ""
 "Aplikace bez omezených práv mohou poškodit systém, snížit jeho výkon anebo "
 "uživatele sledovat."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:225
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:236
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
@@ -282,53 +282,53 @@ msgstr ""
 "Přestože se tomu snažíme zabránit kontrolou aplikací, nepřijímáme žádnou "
 "odpovědnost za to, že něco špatného proklouzne."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:232
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:243
 msgid "Use this at your own risk."
 msgstr "Používejte na vlastní riziko."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:236
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:247
 msgid "Okay. Got it! I'll be careful."
 msgstr "Dobře. Rozumím! Budu opatrný."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:243
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:254
 msgid "Get me out of here!"
 msgstr "Pryč odsud!"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:256
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:267
 msgid "Install app?"
 msgstr "Nainstalovat aplikaci?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:257
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:268
 #, qt-format
 msgid "Do you want to install %1?"
 msgstr "Chcete instalovat %1?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:298
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:309
 msgid "App installed"
 msgstr "Aplikace nainstalována"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:299
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:310
 msgid "The app has been installed successfully."
 msgstr "Aplikace byla úspěšně nainstalována."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:302
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:315
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:330
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:313
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:341
 msgid "OK"
 msgstr "OK"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:311
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:322
 msgid "Installation failed"
 msgstr "Instalace selhala"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:312
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:323
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 "Balíček se nepodařilo instalovat. Zkontrolujte, zda se jedná o platný click "
 "balíček."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:337
 #, qt-format
 msgid "Installation failed (Error %1)"
 msgstr "Instalace selhala (Chyba %1)"
@@ -383,8 +383,9 @@ msgid "Hide adult-oriented content"
 msgstr "Skrýt obsah pro dospělé"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:74
+#, fuzzy
 msgid ""
-"By typing your password you take full responsability for showing NSFW "
+"By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr ""
 "Zadáním Vašeho hesla přebíráte v plném rozsahu odpovědnost za zobrazení "

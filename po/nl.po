@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-22 04:14+0000\n"
+"POT-Creation-Date: 2018-01-06 05:17+0000\n"
 "PO-Revision-Date: 2017-12-05 10:43+0000\n"
 "Last-Translator: Joeke de Graaf <mappack@null.net>\n"
-"Language-Team: Dutch <https://translate.ubports.com/projects/openstore"
-"/openstore-app/nl/>\n"
+"Language-Team: Dutch <https://translate.ubports.com/projects/openstore/"
+"openstore-app/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -42,12 +42,12 @@ msgid "Upgrade"
 msgstr "Upgrade"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:116
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:270
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:281
 msgid "Install"
 msgstr "Installeren"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:125
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:523
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:520
 msgid "Remove"
 msgstr "Verwijder"
 
@@ -119,58 +119,58 @@ msgstr "Pakket inhoud"
 msgid "AppArmor profile"
 msgstr "AppArmor profiel"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:445
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:444
 msgid "Permissions"
 msgstr "Toestemmingen"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:464
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:463
 msgid "none required"
 msgstr "geen verplicht"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:481
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:479
 msgid "Read paths"
 msgstr "Lees paden"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:499
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:496
 msgid "Write paths"
 msgstr "Schrijf paden"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:515
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:512
 msgid "Remove package"
 msgstr "Verwijder pakket"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:516
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:513
 #, qt-format
 msgid "Do you want to remove %1?"
 msgstr "Wilt u %1 verwijderen?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:532
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:278
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:529
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:289
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
 msgstr "Annuleren"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:549
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:546
 #, qt-format
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:554
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:551
 #, qt-format
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:559
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:556
 #, qt-format
 msgid "%1 kB"
 msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:562
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:559
 #, qt-format
 msgid "%1 bytes"
 msgstr "%1 bytes"
@@ -215,19 +215,19 @@ msgstr ""
 msgid "Details"
 msgstr "App-details"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:110
+#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
 msgid "Nothing here yet"
 msgstr "Hier is nog niks te vinden"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:110
+#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
 msgid "No results found."
 msgstr "Geen resultaten gevonden."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:111
+#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
 msgid "No app has been released in this category yet."
 msgstr "Er is nog geen app uitgebracht in deze categorie."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:111
+#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
 msgid "Try with a different search."
 msgstr "Probeer met een andere zoekactie."
 
@@ -262,11 +262,11 @@ msgstr "Geen resultaten gevonden."
 msgid "No app has been installed from OpenStore yet."
 msgstr "Er is nog geen app uitgebracht in deze categorie."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:202
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:213
 msgid "Warning"
 msgstr "Waarschuwing"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:211
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:222
 msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
@@ -274,7 +274,7 @@ msgstr ""
 "OpenStore staat het toe om apps met onbeperkte rechten te installeren. Zorg "
 "ervoor dat u weet wat de gevolgen hiervan zijn."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:218
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:229
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
@@ -283,7 +283,7 @@ msgstr ""
 "functioneert, de prestaties verminderen en/of ongewild informatie doorsturen/"
 "opslaan."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:225
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:236
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
@@ -292,52 +292,52 @@ msgstr ""
 "apps kunnen we dit niet garanderen of hiervoor enige verantwoordelijkheid "
 "nemen."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:232
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:243
 msgid "Use this at your own risk."
 msgstr "Gebruik op eigen risico."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:236
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:247
 msgid "Okay. Got it! I'll be careful."
 msgstr "Oké. Ik heb het begrepen. Ik zal voorzichtig zijn."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:243
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:254
 msgid "Get me out of here!"
 msgstr "Nee. Dat wil ik niet. Haal me hier weg!"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:256
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:267
 msgid "Install app?"
 msgstr "Installeer app?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:257
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:268
 #, qt-format
 msgid "Do you want to install %1?"
 msgstr "Wil je %1 installeren?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:298
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:309
 msgid "App installed"
 msgstr "App geïnstalleerd"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:299
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:310
 msgid "The app has been installed successfully."
 msgstr "Deze app is succesvol geïnstalleerd."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:302
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:315
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:330
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:313
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:341
 msgid "OK"
 msgstr "Ok"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:311
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:322
 msgid "Installation failed"
 msgstr "Installatie mislukt"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:312
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:323
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 "Dit pakket kon niet worden geïnstalleerd. Is dit wel een juist click pakket?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:337
 #, fuzzy, qt-format
 msgid "Installation failed (Error %1)"
 msgstr "Installatie mislukt"
@@ -396,7 +396,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:74
 msgid ""
-"By typing your password you take full responsability for showing NSFW "
+"By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr ""
 

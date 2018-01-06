@@ -33,11 +33,7 @@ Item {
 
     property bool showTicks: true
 
-    signal appDetailsRequired(var index)
-
-    function getPackage(index) {
-        return searchModel.getPackage(index)
-    }
+    signal appDetailsRequired(var appId)
 
     states: State {
         when: Boolean(true) // i.e. when this component is active
@@ -67,8 +63,8 @@ Item {
 
                 model: searchModel
                 delegate: Components.PackageListItem {
-                    appItem: rootItem.getPackage(model.index)
-                    onClicked: rootItem.appDetailsRequired(model.index)
+                    appItem: model
+                    onClicked: rootItem.appDetailsRequired(model.appId)
                     showTicks: rootItem.showTicks
                 }
             }
@@ -94,8 +90,8 @@ Item {
 
                 model: searchModel
                 delegate: Components.PackageTile {
-                    appItem: rootItem.getPackage(model.index)
-                    onClicked: rootItem.appDetailsRequired(model.index)
+                    appItem: model
+                    onClicked: rootItem.appDetailsRequired(model.appId)
                     width: view.cellWidth - units.gu(4)
                     height: view.cellHeight - units.gu(4)
                 }

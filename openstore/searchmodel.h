@@ -7,6 +7,15 @@
 #include "openstorenetworkmanager.h"
 #include "package.h"
 
+struct SearchPackageItem {
+    QString name;
+    QString appId;
+    QString icon;
+    QString tagline;
+    bool installed;
+    bool updateAvailable;
+};
+
 class SearchModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -20,6 +29,7 @@ class SearchModel : public QAbstractListModel
 public:
     enum Roles {
         RoleName,
+        RoleAppId,
         RoleIcon,
         RoleTagline,
         RoleInstalled,
@@ -33,7 +43,6 @@ public:
     QHash<int, QByteArray> roleNames() const Q_DECL_OVERRIDE;
 
     Q_INVOKABLE int find(const QString &appId) const;
-    Q_INVOKABLE PackageItem* getPackage(int index) const;
 
 Q_SIGNALS:
     void filterStringChanged();
@@ -50,6 +59,7 @@ private Q_SLOTS:
     void update();
     void sendRequest(int skip = 0);
     void parseReply(OpenStoreReply reply);
+    void refreshInstalledInfo();
 
 private:
     QString m_filterString;
@@ -59,7 +69,7 @@ private:
 
     bool m_fetchedAll;
 
-    QStringList m_list;
+    QList<SearchPackageItem> m_list;
     QString m_requestSignature;
 };
 

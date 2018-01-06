@@ -35,8 +35,8 @@ Page {
         anchors.topMargin: rootItem.header.height
 
         onAppDetailsRequired: {
-            var pageProps = { app: view.getPackage(index) }
-            bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), pageProps)
+            PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady)
+            PackagesCache.getPackageDetails(appId)
         }  
 
         Timer {

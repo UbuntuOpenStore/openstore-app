@@ -158,8 +158,8 @@ Page {
                             }
 
                             onClicked: {
-                                appModel.packageDetailsReady.connect(slot_installedPackageDetailsReady)
-                                appModel.showPackageDetails(appModel.appStoreAppId)
+                                PackagesCache.packageDetailsReady.connect(slot_installedPackageDetailsReady)
+                                PackagesCache.getPackageDetails(appModel.appStoreAppId)
                             }
                         }
                     }

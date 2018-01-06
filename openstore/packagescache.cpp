@@ -36,6 +36,42 @@ PackageItem *PackagesCache::get(const QString &appId) const
     return m_cache.value(appId, Q_NULLPTR);
 }
 
+void PackagesCache::getPackageDetails(const QString &appId)
+{
+    if (contains(appId)) {
+        Q_EMIT packageDetailsReady(get(appId));
+    } else {
+        const QString &signature = OpenStoreNetworkManager::instance()->generateNewSignature();
+
+        connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::newReply, [=](const OpenStoreReply &reply) {
+            if (reply.signature != signature)
+                return;
+
+            QJsonParseError error;
+            QJsonDocument jsonDoc = QJsonDocument::fromJson(reply.data, &error);
+
+            if (error.error != QJsonParseError::NoError) {
+                qWarning() << Q_FUNC_INFO << "Error parsing json";
+                return;
+            }
+
+            QVariantMap replyMap = jsonDoc.toVariant().toMap();
+
+            if (!replyMap.value("success").toBool() || !replyMap.contains("data")) {
+                qWarning() << Q_FUNC_INFO << "Error retriving info from" << reply.url;
+                return;
+            }
+
+            QVariantMap pkg = replyMap.value("data").toMap();
+
+            PackageItem* pkgItem = insert(appId, pkg);
+            Q_EMIT packageDetailsReady(pkgItem);
+        });
+
+        OpenStoreNetworkManager::instance()->getAppDetails(signature, appId);
+    }
+}
+
 void PackagesCache::updateCacheRevisions()
 {
     m_updatingCache = true;

@@ -53,8 +53,6 @@ int main(int argc, char *argv[])
     QElapsedTimer initTimer;
     initTimer.start();
 
-    QHostInfo::lookupHost(STORE_DOMAIN, 0, 0);
-
     QGuiApplication app(argc, argv);
 
     qmlRegisterSingletonType<OpenStoreNetworkManager>("OpenStore", 1, 0, "OpenStoreNetworkManager", registerNetworkManagerSingleton);

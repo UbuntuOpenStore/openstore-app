@@ -15,6 +15,8 @@ AbstractButton {
             sourceFillMode: UbuntuShape.PreserveAspectFit
             source: Image {
                 source: rootItem.appItem.icon
+                sourceSize.width: parent.width
+				sourceSize.height: parent.height
             }
         }
 

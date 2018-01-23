@@ -20,6 +20,8 @@ ListItem {
             aspect: UbuntuShape.Flat
             image: Image {
                 source: rootItem.appItem.icon
+                sourceSize.width: parent.width
+				sourceSize.height: parent.height
                 height: parent.height
                 width: parent.width
             }

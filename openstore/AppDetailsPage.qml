@@ -77,6 +77,8 @@ Page {
                         image: Image {
                             height: parent.height
                             width: parent.width
+                            sourceSize.width: parent.width
+                            sourceSize.height: parent.height
                             source: app ? app.icon : ""
                         }
                     }

@@ -82,7 +82,11 @@ Page {
                         SlotsLayout.position: SlotsLayout.Leading
                         width: units.gu(4); height: width
                         aspect: UbuntuShape.Flat
-                        image: Image { source: model.icon }
+                        image: Image { 
+							sourceSize.width: parent.width
+                            sourceSize.height: parent.height
+							source: model.icon 
+						}
                     }
 
                     ProgressionSlot {}

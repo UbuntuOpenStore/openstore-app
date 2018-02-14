@@ -1,8 +1,8 @@
 #ifndef APICONSTANTS_H
 #define APICONSTANTS_H
 
-#define STORE_DOMAIN QStringLiteral("open.uappexplorer.com")
-#define API_BASEURL QStringLiteral("https://open.uappexplorer.com/api/")
+#define STORE_DOMAIN QStringLiteral("open-store.io")
+#define API_BASEURL QStringLiteral("https://open-store.io/api/")
 
 #define API_DISCOVER_ENDPOINT QStringLiteral("v1/apps/discover")
 #define API_APPDETAILS_ENDPOINT QStringLiteral("v1/apps/%1")

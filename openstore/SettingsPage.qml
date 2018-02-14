@@ -85,7 +85,7 @@ Page {
                 }
 
                 ListItem {
-                    onClicked: Qt.openUrlExternally("https://open.uappexplorer.com/manage")
+                    onClicked: Qt.openUrlExternally("https://open-store.io/manage")
                     ListItemLayout {
                         anchors.centerIn: parent
                         title.text: i18n.tr("Manage your apps on OpenStore")

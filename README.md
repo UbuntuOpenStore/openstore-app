@@ -1,6 +1,6 @@
 # OpenStore App
 
-Ubuntu Touch app for the [OpenStore](https://open.uappexplorer.com/).
+Ubuntu Touch app for the [OpenStore](https://open-store.io/).
 
 ## Reporting Bugs
 

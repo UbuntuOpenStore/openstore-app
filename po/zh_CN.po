@@ -1,23 +1,18 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Chinese (Simplified) (OpenStore)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-27 05:35+0000\n"
-"PO-Revision-Date: 2018-01-07 08:43+0000\n"
-"Last-Translator: Mutse Young <yyhoo2.young@gmail.com>\n"
-"Language-Team: Chinese (Simplified) <https://translate.ubports.com/projects/"
-"openstore/openstore-app/zh_Hans/>\n"
+"POT-Creation-Date: 2018-02-24 06:45+0000\n"
+"PO-Revision-Date: 2018-02-24 14:46+0800\n"
+"Last-Translator: Luo Yufan <njlyf2011@hotmail.com>\n"
+"Language-Team: Chinese (Simplified) "
+"<https://translate.ubports.com/projects/openstore/openstore-app/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
 msgid "App details"
@@ -341,19 +336,16 @@ msgid "Your passcode is required to access restricted content"
 msgstr "访问受限内容需要密码"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:39
-#, fuzzy
 msgid "Authentication failed"
-msgstr "安装失败"
+msgstr "验证失败"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
-#, fuzzy
 msgid "Passphrase required"
-msgstr "无权限要求"
+msgstr "需要密码"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
-#, fuzzy
 msgid "Passcode required"
-msgstr "无权限要求"
+msgstr "需要密码"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passphrase (default is 0000)"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-27 05:35+0000\n"
-"PO-Revision-Date: 2018-03-04 19:37+0000\n"
+"PO-Revision-Date: 2018-03-04 19:49+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.ubports.com/projects/openstore"
 "/openstore-app/he/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
 msgid "App details"
-msgstr "פרטי אפליקציה"
+msgstr "פרטי יישומון"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:43
 msgid "Open"
@@ -32,12 +32,12 @@ msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
 msgstr ""
-"מקורה של הגרסה המותקנת של היישומון הזה היא איננה שרת ה־OpenStore. ניתן "
-"להתקין את העדכון היציב העדכני ביותר על ידי נגיעה בכפתור שלהלן."
+"מקורה של גרסת היישומון המותקנת הוא אינו שרת ה־OpenStore. ניתן להתקין את "
+"העדכון היציב העדכני ביותר על ידי נגיעה בכפתור שלהלן."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:118
 msgid "Upgrade"
-msgstr "עידכון"
+msgstr "שדרוג"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:118
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:281
@@ -51,7 +51,7 @@ msgstr "הסרה"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:192
 msgid "This app has access to restricted system data, see below for details."
-msgstr "לאפליקציה זו יש גישה למידע חסום במערכת , פרטים נוספים למטה."
+msgstr "ליישומון זהו יש גישה למידע מוגבל במערכת, פרטים נוספים להלן."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:216
 msgid "Description"
@@ -72,15 +72,15 @@ msgstr "צוות OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:267
 msgid "Installed version"
-msgstr "גרסא מותקנת"
+msgstr "גרסה מותקנת"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:276
 msgid "Latest available version"
-msgstr "גרסא אחרונה זמינה"
+msgstr "גרסה אחרונה זמינה"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:285
 msgid "First released"
-msgstr "גרסא ראשונה"
+msgstr "גרסה ראשונה"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:294
 msgid "License"
@@ -88,7 +88,7 @@ msgstr "רשיון"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:295
 msgid "N/A"
-msgstr "N/A"
+msgstr "לא זמין"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:303
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:104
@@ -99,17 +99,17 @@ msgstr "קוד מקור"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:318
 #, qt-format
 msgid "More from %1"
-msgstr "עוד מ %1"
+msgstr "עוד מ־%1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:333
 #, qt-format
 msgid "Other apps in %1"
-msgstr "אפליקציות אחרות ב %1"
+msgstr "יישומונים אחרים תחת %1"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:339
 msgid "Package contents"
-msgstr "תוכן חבילה"
+msgstr "תכני החבילה"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:419
 msgid "AppArmor profile"
@@ -139,7 +139,7 @@ msgstr "הסרת חבילה"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:515
 #, qt-format
 msgid "Do you want to remove %1?"
-msgstr "האם תרצו להסיר את %1?"
+msgstr "להסיר את %1?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:531
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:289
@@ -151,25 +151,25 @@ msgstr "ביטול"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:548
 #, qt-format
 msgid "%1 GB"
-msgstr "%1 GB"
+msgstr "%1 ג״ב"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:553
 #, qt-format
 msgid "%1 MB"
-msgstr "%1 MB"
+msgstr "%1 מ״ב"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:558
 #, qt-format
 msgid "%1 kB"
-msgstr "%1 קילובייט"
+msgstr "%1 ק״ב"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:561
 #, qt-format
 msgid "%1 bytes"
-msgstr "%1 בייט"
+msgstr "%1 בתים"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesPage.qml:24
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesTab.qml:81
@@ -180,17 +180,17 @@ msgstr "קטגוריות"
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:29
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:31
 msgid "Discover"
-msgstr "גלו"
+msgstr "לגלות"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:51
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:28
 msgid "Search in OpenStore..."
-msgstr "חפשו ב OpenStore…"
+msgstr "חיפוש ב־OpenStore…"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:125
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:42
 msgid "Update available"
-msgstr "עדכון זמין"
+msgstr "יש עדכון"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:126
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:42
@@ -203,7 +203,7 @@ msgstr "יש עדכון זמין ב־OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:146
 msgid "Update OpenStore now!"
-msgstr "עדכנו את OpenStore עכשיו!"
+msgstr "כדאי לעדכן את OpenStore עכשיו!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:152
 msgid "Details"
@@ -219,16 +219,16 @@ msgstr "לא נמצאו תוצאות."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
 msgid "No app has been released in this category yet."
-msgstr "עדיין לא שוחררו אפליקציות תחת הקטגוריה הזאת."
+msgstr "עדיין לא שוחררו יישומונים תחת הקטגוריה הזאת."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
 msgid "Try with a different search."
-msgstr "נסו עם חיפוש אחר."
+msgstr "כדאי לנסות לחפש ביטוי אחר."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:27
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:34
 msgid "My Apps"
-msgstr "האפליקציות שלי"
+msgstr "היישומונים שלי"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:32
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:26
@@ -263,32 +263,31 @@ msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
 msgstr ""
-"OpenStore מאפשרת התקנה של אפליקציות לא מוגבלות. אנא וודאו שאתם יודעים מה "
-"ההשלכות של כך."
+"OpenStore מאפשרת התקנה של יישומונים בלתי מוגבלים. נא לוודא שהשלכות המהלך "
+"ברורות לך."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:229
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
 msgstr ""
-"אפליקציה לא מוגבלת יכולה לגרום לשיבוש במערכת, להורדת ביצועים ו/או יכולה "
-"לעקוב אחריכם."
+"יישומון בלתי מוגבל עלול לגרום לשיבוש במערכת, להורדת ביצועים ו/או לעקוב אחריך."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:236
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
 msgstr ""
-"למרות שאנו עושים ככל יכולתנו למנוע את זה ע\"י בדיקה של האפליקציות, אך איננו "
-"לוקחים אחריות עם משהו חומק מעיננו."
+"למרות שאנחנו עושים כמיטב יכולתנו למנוע מצב שכזה על ידי סקירת היישומונים, "
+"איננו לוקחים אחריות אם משהו זדוני חומק מעיננו."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:243
 msgid "Use this at your own risk."
-msgstr "השתמשו בזה באחריותיכם בלבד."
+msgstr "יש להשתמש בזה באחריותך בלבד."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:247
 msgid "Okay. Got it! I'll be careful."
-msgstr "בסדר. הבנתי! אני אזהר."
+msgstr "בסדר. הבנתי! אזהר."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:254
 msgid "Get me out of here!"
@@ -296,20 +295,20 @@ msgstr "תוציאו אותי מפה!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:267
 msgid "Install app?"
-msgstr "להתקין אפליקציה?"
+msgstr "להתקין את היישומון?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:268
 #, qt-format
 msgid "Do you want to install %1?"
-msgstr "האם תרצו להתקין %1?"
+msgstr "להתקין את %1?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:309
 msgid "App installed"
-msgstr "האפליקציה הותקנה"
+msgstr "היישומון הותקן"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:310
 msgid "The app has been installed successfully."
-msgstr "האפליקציה הותקנה בהצלחה."
+msgstr "היישומון הותקן בהצלחה."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:313
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
@@ -324,7 +323,7 @@ msgstr "ההתקנה נכשלה"
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:323
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
-msgstr "לא ניתן להתקין חבילה. אנא ודאו שהחבילה היא חבילת CLICK תקינה."
+msgstr "לא ניתן להתקין חבילה. נא לוודא שהחבילה היא חבילת click תקינה."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:337
 #, qt-format
@@ -362,15 +361,15 @@ msgstr "מילת צופן (בררת המחדל היא 0000)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passcode (default is 0000)"
-msgstr "קוד ( ברירת המחדל היא 0000 )"
+msgstr "קוד סודי (בררת המחדל היא 0000)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:71
 msgid "Authentication failed. Please retry"
-msgstr "אימות נכשל. אנא נסו שנית"
+msgstr "האימות נכשל. נא לנסות שנית"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:76
 msgid "Authenticate"
-msgstr "אמת"
+msgstr "אימות"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:58
 msgid "Parental control"
@@ -378,7 +377,7 @@ msgstr "שליטה הורית"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:64
 msgid "Hide adult-oriented content"
-msgstr "החבא תוכן למבוגרים"
+msgstr "הסתרת תוכן למבוגרים"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:74
 msgid ""
@@ -392,7 +391,7 @@ msgstr "מפתחים"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:91
 msgid "Manage your apps on OpenStore"
-msgstr "נהלו את האפליקציות שלכם ב - OpenStore"
+msgstr "ניהול היישומונים שלך ב־OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:97
 msgid "About OpenStore"
@@ -400,7 +399,7 @@ msgstr "על אודות ה־OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:113
 msgid "Report an issue"
-msgstr "דווחו על בעיות"
+msgstr "דיווח על בעיה"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Back"
@@ -412,11 +411,11 @@ msgstr "סגירה"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:37
 msgid "Application"
-msgstr "אפליקציה"
+msgstr "יישומון"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
 msgid "Scope"
-msgstr "סקופ"
+msgstr "טווח"
 
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:64
@@ -442,7 +441,7 @@ msgstr "ספק חשבון"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:54
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
-msgstr "בחרו"
+msgstr "בחירה"
 
 #~ msgid "Fetching package list..."
 #~ msgstr "מייבא רשימת חבילות…"

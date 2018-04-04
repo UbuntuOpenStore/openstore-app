@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-27 05:35+0000\n"
+"POT-Creation-Date: 2018-04-04 08:56+0000\n"
 "PO-Revision-Date: 2018-01-02 15:49+0000\n"
 "Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/openstore/"
@@ -20,15 +20,15 @@ msgstr ""
 "X-Generator: Weblate 2.15\n"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:32
 msgid "App details"
 msgstr "Informatziones de s'aplicatzione"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:43
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:43
 msgid "Open"
 msgstr "Aberi·la"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:93
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:93
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
@@ -37,243 +37,248 @@ msgstr ""
 "OpenStore. Nde podes installare s'ùrtima atualizatzione istàbile incarchende "
 "su pulsante in giosso."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:118
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:118
 msgid "Upgrade"
 msgstr "Atualiza"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:118
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:281
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:118
+#, fuzzy
+msgid "Downgrade"
+msgstr "Atualiza"
+
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:118
+#: /home/peter/Documents/programming/openstore-app/openstore/Main.qml:281
 msgid "Install"
 msgstr "Installa"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:127
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:522
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:127
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:522
 msgid "Remove"
 msgstr "Boga"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:192
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:192
 #, fuzzy
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
 "Custa aplicatzione tenet atzessu a datos restrintos de su sistema. Bides "
 "suta is detàllios."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:216
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:216
 msgid "Description"
 msgstr "Descritzione"
 
 #. TRANSLATORS: Title of the changelog section
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:239
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:239
 msgid "What's New"
 msgstr "Novidades"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:258
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:258
 #, fuzzy
 msgid "Packager/Publisher"
 msgstr "Isvilupadore/editore"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:259
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:259
 msgid "OpenStore team"
 msgstr "Iscuadra de OpenStore"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:267
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:267
 msgid "Installed version"
 msgstr "Versione installada"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:276
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:276
 msgid "Latest available version"
 msgstr "Ùrtima versione a disponimentu"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:285
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:285
 msgid "First released"
 msgstr "Prima publicatzione"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:294
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:294
 msgid "License"
 msgstr "Lissèntzia"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:295
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:295
 #, fuzzy
 msgid "N/A"
 msgstr "Non a disponimentu"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:303
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:104
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:303
+#: /home/peter/Documents/programming/openstore-app/openstore/SettingsPage.qml:104
 msgid "Source Code"
 msgstr "Còdighe de orìgine"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:318
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:318
 #, qt-format
 msgid "More from %1"
 msgstr "Àteru dae %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:333
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:333
 #, qt-format
 msgid "Other apps in %1"
 msgstr "Àteras aplicatziones in %1"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:339
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:339
 msgid "Package contents"
 msgstr "Cuntenutu de su pachete"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:419
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:419
 msgid "AppArmor profile"
 msgstr "Profilu AppArmor"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:446
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:446
 msgid "Permissions"
 msgstr "Permissos"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:465
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:465
 msgid "none required"
 msgstr "perunu rechèdidu"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:481
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:481
 msgid "Read paths"
 msgstr "Podet lèghere in"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:498
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:498
 msgid "Write paths"
 msgstr "Podet iscriere in"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:514
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:514
 #, fuzzy
 msgid "Remove package"
 msgstr "Boga pachete"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:515
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:515
 #, fuzzy, qt-format
 msgid "Do you want to remove %1?"
 msgstr "Ses seguru chi boles bogare %1?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:531
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:289
-#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:531
+#: /home/peter/Documents/programming/openstore-app/openstore/Main.qml:289
+#: /home/peter/Documents/programming/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
 msgstr "Annulla"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:548
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:548
 #, qt-format
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:553
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:553
 #, qt-format
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:558
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:558
 #, qt-format
 msgid "%1 kB"
 msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:561
+#: /home/peter/Documents/programming/openstore-app/openstore/AppDetailsPage.qml:561
 #, qt-format
 msgid "%1 bytes"
 msgstr "%1 byte"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/CategoriesPage.qml:24
-#: /home/brian/dev/openstore/openstore-app/openstore/CategoriesTab.qml:81
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:32
+#: /home/peter/Documents/programming/openstore-app/openstore/CategoriesPage.qml:24
+#: /home/peter/Documents/programming/openstore-app/openstore/CategoriesTab.qml:81
+#: /home/peter/Documents/programming/openstore-app/openstore/MainPage.qml:32
 msgid "Categories"
 msgstr "Categorias"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:29
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:31
+#: /home/peter/Documents/programming/openstore-app/openstore/DiscoverTab.qml:29
+#: /home/peter/Documents/programming/openstore-app/openstore/MainPage.qml:31
 #, fuzzy
 msgid "Discover"
 msgstr "Iscoberi"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:51
-#: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:28
+#: /home/peter/Documents/programming/openstore-app/openstore/DiscoverTab.qml:51
+#: /home/peter/Documents/programming/openstore-app/openstore/SearchTab.qml:28
 msgid "Search in OpenStore..."
 msgstr "Chirca in OpenStore..."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:125
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:42
+#: /home/peter/Documents/programming/openstore-app/openstore/DiscoverTab.qml:125
+#: /home/peter/Documents/programming/openstore-app/openstore/Components/PackageTile.qml:42
 msgid "Update available"
 msgstr "Atualizatzione a disponimentu"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:126
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:42
+#: /home/peter/Documents/programming/openstore-app/openstore/DiscoverTab.qml:126
+#: /home/peter/Documents/programming/openstore-app/openstore/Components/PackageTile.qml:42
 msgid "✓ Installed"
 msgstr "✓ Installadu"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:145
+#: /home/peter/Documents/programming/openstore-app/openstore/DiscoverTab.qml:145
 #, fuzzy
 msgid "OpenStore update available"
 msgstr "Atualizatzione a disponimentu"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:146
+#: /home/peter/Documents/programming/openstore-app/openstore/DiscoverTab.qml:146
 msgid "Update OpenStore now!"
 msgstr "Atualiza s'OpenStore immoe!"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:152
+#: /home/peter/Documents/programming/openstore-app/openstore/DiscoverTab.qml:152
 #, fuzzy
 msgid "Details"
 msgstr "Informatziones de s'aplicatzione"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
+#: /home/peter/Documents/programming/openstore-app/openstore/FilteredAppView.qml:106
 #, fuzzy
 msgid "Nothing here yet"
 msgstr "Galu nudda inoghe"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
+#: /home/peter/Documents/programming/openstore-app/openstore/FilteredAppView.qml:106
 msgid "No results found."
 msgstr "Perunu resurtadu."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
+#: /home/peter/Documents/programming/openstore-app/openstore/FilteredAppView.qml:107
 msgid "No app has been released in this category yet."
 msgstr "Galu peruna aplicatzione publicada in custa categoria."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
+#: /home/peter/Documents/programming/openstore-app/openstore/FilteredAppView.qml:107
 #, fuzzy
 msgid "Try with a different search."
 msgstr "Proa cun un'àtera chirca."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:27
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:34
+#: /home/peter/Documents/programming/openstore-app/openstore/InstalledAppsTab.qml:27
+#: /home/peter/Documents/programming/openstore-app/openstore/MainPage.qml:34
 msgid "My Apps"
 msgstr "Aplicatziones meas"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:32
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:26
+#: /home/peter/Documents/programming/openstore-app/openstore/InstalledAppsTab.qml:32
+#: /home/peter/Documents/programming/openstore-app/openstore/SettingsPage.qml:26
 msgid "Settings"
 msgstr "Cunfiguratzione"
 
 #. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
+#: /home/peter/Documents/programming/openstore-app/openstore/InstalledAppsTab.qml:69
 #, fuzzy, qt-format
 msgid "Available updates (%1)"
 msgstr "Atualizatziones a disponimentu"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
+#: /home/peter/Documents/programming/openstore-app/openstore/InstalledAppsTab.qml:69
 #, fuzzy, qt-format
 msgid "Installed apps (%1)"
 msgstr "Aplicatziones installadas"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:113
+#: /home/peter/Documents/programming/openstore-app/openstore/InstalledAppsTab.qml:113
 #, fuzzy
 msgid "No apps found"
 msgstr "Perunu resurtadu."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:114
+#: /home/peter/Documents/programming/openstore-app/openstore/InstalledAppsTab.qml:114
 #, fuzzy
 msgid "No app has been installed from OpenStore yet."
 msgstr "Galu peruna aplicatzione publicada in custa categoria."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:213
+#: /home/peter/Documents/programming/openstore-app/openstore/Main.qml:213
 msgid "Warning"
 msgstr "Atentzione"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:222
+#: /home/peter/Documents/programming/openstore-app/openstore/Main.qml:222
 msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
@@ -281,7 +286,7 @@ msgstr ""
 "OpenStore permitet s'installatzione de aplicatziones non cunfinadas. "
 "Assegura·ti de cumprèndere is cajones chi custu suponet."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:229
+#: /home/peter/Documents/programming/openstore-app/openstore/Main.qml:229
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
@@ -289,183 +294,183 @@ msgstr ""
 "Un'aplicatzione non cunfinada tenet sa capatzidade de iscalabrare su "
 "sistema, nde reduire su rendimentu suo o ispiare is fainas tuas."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:236
+#: /home/peter/Documents/programming/openstore-app/openstore/Main.qml:236
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
 msgstr ""
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:243
+#: /home/peter/Documents/programming/openstore-app/openstore/Main.qml:243
 #, fuzzy
 msgid "Use this at your own risk."
 msgstr "Imprea custa aplicatzione a arriscu tuo."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:247
+#: /home/peter/Documents/programming/openstore-app/openstore/Main.qml:247
 msgid "Okay. Got it! I'll be careful."
 msgstr "Andat bene. Apo cumpresu e apo a istare atentu."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:254
+#: /home/peter/Documents/programming/openstore-app/openstore/Main.qml:254
 #, fuzzy
 msgid "Get me out of here!"
 msgstr "Lassa·mi essire!"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:267
+#: /home/peter/Documents/programming/openstore-app/openstore/Main.qml:267
 msgid "Install app?"
 msgstr "Boles installare s'aplicatzione?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:268
+#: /home/peter/Documents/programming/openstore-app/openstore/Main.qml:268
 #, qt-format
 msgid "Do you want to install %1?"
 msgstr "Ses seguru chi boles installare %1?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:309
+#: /home/peter/Documents/programming/openstore-app/openstore/Main.qml:309
 msgid "App installed"
 msgstr "Aplicatzione installada"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:310
+#: /home/peter/Documents/programming/openstore-app/openstore/Main.qml:310
 #, fuzzy
 msgid "The app has been installed successfully."
 msgstr "Aplicatzione installada."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:313
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:341
+#: /home/peter/Documents/programming/openstore-app/openstore/Main.qml:313
+#: /home/peter/Documents/programming/openstore-app/openstore/Main.qml:326
+#: /home/peter/Documents/programming/openstore-app/openstore/Main.qml:341
 msgid "OK"
 msgstr "AB"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:322
+#: /home/peter/Documents/programming/openstore-app/openstore/Main.qml:322
 msgid "Installation failed"
 msgstr "B'at àpidu una faddina in s'installatzione"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:323
+#: /home/peter/Documents/programming/openstore-app/openstore/Main.qml:323
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 "B'at àpidu una faddina in s'installatzione de su pachete. Assegura·ti chi "
 "est unu pachete click vàlidu."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:337
+#: /home/peter/Documents/programming/openstore-app/openstore/Main.qml:337
 #, fuzzy, qt-format
 msgid "Installation failed (Error %1)"
 msgstr "B'at àpidu una faddina in s'installatzione"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:33
-#: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15
+#: /home/peter/Documents/programming/openstore-app/openstore/MainPage.qml:33
+#: /home/peter/Documents/programming/openstore-app/openstore/SearchTab.qml:15
 msgid "Search"
 msgstr "Chirca"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:29
+#: /home/peter/Documents/programming/openstore-app/openstore/PasswordDialog.qml:29
 #, fuzzy
 msgid "Your passphrase is required to access restricted content"
 msgstr "Pro atzèdere a cuntenutos restrintos, b'at bisòngiu de sa crae tua."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:30
+#: /home/peter/Documents/programming/openstore-app/openstore/PasswordDialog.qml:30
 #, fuzzy
 msgid "Your passcode is required to access restricted content"
 msgstr "Pro atzèdere a cuntenutos restrintos, b'at bisòngiu de su còdighe tuo."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:39
+#: /home/peter/Documents/programming/openstore-app/openstore/PasswordDialog.qml:39
 msgid "Authentication failed"
 msgstr "Faddina in s'autenticatzione"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
+#: /home/peter/Documents/programming/openstore-app/openstore/PasswordDialog.qml:47
 #, fuzzy
 msgid "Passphrase required"
 msgstr "perunu rechèdidu"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
+#: /home/peter/Documents/programming/openstore-app/openstore/PasswordDialog.qml:47
 #, fuzzy
 msgid "Passcode required"
 msgstr "perunu rechèdidu"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
+#: /home/peter/Documents/programming/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passphrase (default is 0000)"
 msgstr "crae (sa crae predefinida est 0000)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
+#: /home/peter/Documents/programming/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passcode (default is 0000)"
 msgstr "còdighe (su còdighe predefinidu est 0000)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:71
+#: /home/peter/Documents/programming/openstore-app/openstore/PasswordDialog.qml:71
 msgid "Authentication failed. Please retry"
 msgstr "Faddina in s'autenticatzione. Torra·bi a proare"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:76
+#: /home/peter/Documents/programming/openstore-app/openstore/PasswordDialog.qml:76
 #, fuzzy
 msgid "Authenticate"
 msgstr "Autentica·ti"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:58
+#: /home/peter/Documents/programming/openstore-app/openstore/SettingsPage.qml:58
 #, fuzzy
 msgid "Parental control"
 msgstr "Controllu de genitores"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:64
+#: /home/peter/Documents/programming/openstore-app/openstore/SettingsPage.qml:64
 msgid "Hide adult-oriented content"
 msgstr "Cua cuntenutos pro adultos"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:74
+#: /home/peter/Documents/programming/openstore-app/openstore/SettingsPage.qml:74
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr ""
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:84
+#: /home/peter/Documents/programming/openstore-app/openstore/SettingsPage.qml:84
 msgid "Developers"
 msgstr "Isvilupadores"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:91
+#: /home/peter/Documents/programming/openstore-app/openstore/SettingsPage.qml:91
 msgid "Manage your apps on OpenStore"
 msgstr "Gesti is aplicatziones tuas in s'OpenStore"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:97
+#: /home/peter/Documents/programming/openstore-app/openstore/SettingsPage.qml:97
 #, fuzzy
 msgid "About OpenStore"
 msgstr "Iscuadra de OpenStore"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:113
+#: /home/peter/Documents/programming/openstore-app/openstore/SettingsPage.qml:113
 msgid "Report an issue"
 msgstr "Signala unu problemu"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
+#: /home/peter/Documents/programming/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Back"
 msgstr "In segus"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
+#: /home/peter/Documents/programming/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Close"
 msgstr "Serra"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:37
+#: /home/peter/Documents/programming/openstore-app/openstore/Components/HookIcon.qml:37
 msgid "Application"
 msgstr "Aplicatzione"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
+#: /home/peter/Documents/programming/openstore-app/openstore/Components/HookIcon.qml:50
 msgid "Scope"
 msgstr "Àmbitu"
 
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:64
+#: /home/peter/Documents/programming/openstore-app/openstore/Components/HookIcon.qml:64
 msgid "URL Handler"
 msgstr "Gestore de URL"
 
 #. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:78
+#: /home/peter/Documents/programming/openstore-app/openstore/Components/HookIcon.qml:78
 msgid "Content Hub Handler"
 msgstr "Gestore de su tzentru de cuntenutos"
 
 #. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:92
+#: /home/peter/Documents/programming/openstore-app/openstore/Components/HookIcon.qml:92
 msgid "Push Helper"
 msgstr "Assistente Push"
 
 #. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:106
+#: /home/peter/Documents/programming/openstore-app/openstore/Components/HookIcon.qml:106
 msgid "Accounts provider"
 msgstr "Frunidore de contos"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:46
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:54
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
+#: /home/peter/Documents/programming/openstore-app/openstore/Components/TextualButtonStyle.qml:46
+#: /home/peter/Documents/programming/openstore-app/openstore/Components/TextualButtonStyle.qml:54
+#: /home/peter/Documents/programming/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
 msgstr "Sèbera"
 

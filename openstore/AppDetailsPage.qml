@@ -115,7 +115,7 @@ Page {
                     Button {
                         Layout.fillWidth: true
                         Layout.maximumWidth: buttonsRow.width > units.gu(60) ? units.gu(24) : buttonsRow.width
-                        text: app.installed ? i18n.tr("Upgrade") : i18n.tr("Install")
+                        text: app.installed ? (app.installedVersionString < app.versionString ? i18n.tr("Upgrade") : i18n.tr("Downgrade")) : i18n.tr("Install")
                         visible: !app.installed || (app.installed && app.updateAvailable)
                         color: app.isLocalVersionSideloaded ? theme.palette.normal.foreground : UbuntuColors.green
                         onClicked: app.install()

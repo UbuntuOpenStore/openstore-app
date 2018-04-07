@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-27 05:35+0000\n"
-"PO-Revision-Date: 2018-04-07 22:21+0000\n"
+"PO-Revision-Date: 2018-04-07 22:24+0000\n"
 "Last-Translator: Joeke de Graaf <mappack@null.net>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/openstore"
 "/openstore-app/nl/>\n"
@@ -33,7 +33,7 @@ msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
 msgstr ""
-"De geïnstalleerde versie van deze app komt niet van de OpenStore server. U "
+"De geïnstalleerde versie van deze app komt niet van de OpenStore-server. U "
 "kunt de meest recente stabiele update installeren door op de knop hieronder "
 "te tikken."
 
@@ -207,7 +207,7 @@ msgstr "OpenStore-update beschikbaar"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:146
 msgid "Update OpenStore now!"
-msgstr "Update de OpenStore nu!"
+msgstr "Update OpenStore nu!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:152
 msgid "Details"
@@ -256,7 +256,7 @@ msgstr "Geen apps gevonden"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:114
 msgid "No app has been installed from OpenStore yet."
-msgstr "Er zijn nog geen apps geïnstalleerd vanuit de OpenStore."
+msgstr "Er zijn nog geen apps geïnstalleerd vanuit OpenStore."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:213
 msgid "Warning"
@@ -331,7 +331,7 @@ msgstr "Installatie mislukt"
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
-"Dit pakket kon niet worden geïnstalleerd. Is dit wel een juist click pakket?"
+"Dit pakket kon niet worden geïnstalleerd. Is dit wel een juist click-pakket?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:337
 #, qt-format

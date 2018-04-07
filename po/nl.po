@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-27 05:35+0000\n"
-"PO-Revision-Date: 2017-12-05 10:43+0000\n"
+"PO-Revision-Date: 2018-04-07 22:21+0000\n"
 "Last-Translator: Joeke de Graaf <mappack@null.net>\n"
-"Language-Team: Dutch <https://translate.ubports.com/projects/openstore/"
-"openstore-app/nl/>\n"
+"Language-Team: Dutch <https://translate.ubports.com/projects/openstore"
+"/openstore-app/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,12 +34,12 @@ msgid ""
 "You can install the latest stable update by tapping the button below."
 msgstr ""
 "De geïnstalleerde versie van deze app komt niet van de OpenStore server. U "
-"kunt de meest recente stabiele update installeren door op be knop hieronder "
+"kunt de meest recente stabiele update installeren door op de knop hieronder "
 "te tikken."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:118
 msgid "Upgrade"
-msgstr "Upgrade"
+msgstr "Werk bij"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:118
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:281
@@ -72,7 +72,7 @@ msgstr "Packager/Uitgever"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:259
 msgid "OpenStore team"
-msgstr "OpenStore team"
+msgstr "OpenStore-team"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:267
 msgid "Installed version"
@@ -84,7 +84,7 @@ msgstr "Nieuwste beschikbare versie"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:285
 msgid "First released"
-msgstr ""
+msgstr "Voor het eerst gepubliceerd op"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:294
 msgid "License"
@@ -202,16 +202,14 @@ msgid "✓ Installed"
 msgstr "✓ Geïnstalleerd"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:145
-#, fuzzy
 msgid "OpenStore update available"
-msgstr "Update beschikbaar"
+msgstr "OpenStore-update beschikbaar"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:146
 msgid "Update OpenStore now!"
-msgstr ""
+msgstr "Update de OpenStore nu!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:152
-#, fuzzy
 msgid "Details"
 msgstr "App-details"
 
@@ -239,28 +237,26 @@ msgstr "Mijn apps"
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:32
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:26
 msgid "Settings"
-msgstr ""
+msgstr "Instellingen"
 
 #. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
-#, fuzzy, qt-format
+#, qt-format
 msgid "Available updates (%1)"
-msgstr "Beschikbare updates"
+msgstr "(%1) beschikbare updates"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
-#, fuzzy, qt-format
+#, qt-format
 msgid "Installed apps (%1)"
-msgstr "Geïnstalleerde apps"
+msgstr "(%1) geïnstalleerde apps"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:113
-#, fuzzy
 msgid "No apps found"
-msgstr "Geen resultaten gevonden."
+msgstr "Geen apps gevonden"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:114
-#, fuzzy
 msgid "No app has been installed from OpenStore yet."
-msgstr "Er is nog geen app uitgebracht in deze categorie."
+msgstr "Er zijn nog geen apps geïnstalleerd vanuit de OpenStore."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:213
 msgid "Warning"
@@ -338,9 +334,9 @@ msgstr ""
 "Dit pakket kon niet worden geïnstalleerd. Is dit wel een juist click pakket?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:337
-#, fuzzy, qt-format
+#, qt-format
 msgid "Installation failed (Error %1)"
-msgstr "Installatie mislukt"
+msgstr "Installatie mislukt, (Fout %1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:33
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15
@@ -349,81 +345,79 @@ msgstr "Zoeken"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:29
 msgid "Your passphrase is required to access restricted content"
-msgstr ""
+msgstr "Uw wachtwoord is vereist om toegang tot afgeschermde inhoud te krijgen"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:30
 msgid "Your passcode is required to access restricted content"
-msgstr ""
+msgstr "Uw wachtwoord is vereist om toegang te krijgen tot afgeschermde inhoud"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:39
-#, fuzzy
 msgid "Authentication failed"
-msgstr "Installatie mislukt"
+msgstr "Authenticatie mislukt"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
-#, fuzzy
 msgid "Passphrase required"
-msgstr "geen verplicht"
+msgstr "Wachtwoord vereist"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
-#, fuzzy
 msgid "Passcode required"
-msgstr "geen verplicht"
+msgstr "Wachtwoord vereist"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passphrase (default is 0000)"
-msgstr ""
+msgstr "wachtwoord (standaard is dit 0000)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passcode (default is 0000)"
-msgstr ""
+msgstr "wachtwoord (standaard is dit 0000)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:71
 msgid "Authentication failed. Please retry"
-msgstr ""
+msgstr "Authenticatie mislukt. Probeert u het alstublieft nog eens"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:76
 msgid "Authenticate"
-msgstr ""
+msgstr "Authentificeren"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:58
 msgid "Parental control"
-msgstr ""
+msgstr "Ouderlijk toezicht"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:64
 msgid "Hide adult-oriented content"
-msgstr ""
+msgstr "Verberg volwassen inhoud"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:74
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr ""
+"Door uw wachtwoord in te vullen neemt u volledige verantwoordelijkheid voor "
+"het door de app laten zien van volwassen inhoud."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:84
 msgid "Developers"
-msgstr ""
+msgstr "Ontwikkelaars"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:91
 msgid "Manage your apps on OpenStore"
-msgstr ""
+msgstr "Beheer uw apps op OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:97
-#, fuzzy
 msgid "About OpenStore"
-msgstr "OpenStore team"
+msgstr "Over OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:113
 msgid "Report an issue"
-msgstr ""
+msgstr "Meld een probleem"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Back"
-msgstr ""
+msgstr "Terug"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Close"
-msgstr ""
+msgstr "Sluiten"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:37
 msgid "Application"
@@ -457,7 +451,7 @@ msgstr "Accounts leverancier"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:54
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
-msgstr ""
+msgstr "Kiezen"
 
 #~ msgid "Fetching package list..."
 #~ msgstr "Pakketlijst ophalen..."

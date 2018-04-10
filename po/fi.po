@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-06 05:17+0000\n"
-"PO-Revision-Date: 2018-01-17 08:14+0000\n"
+"PO-Revision-Date: 2018-04-10 08:02+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://translate.ubports.com/projects/openstore"
 "/openstore-app/fi/>\n"
@@ -32,6 +32,8 @@ msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
 msgstr ""
+"Tämän sovelluksen asennettu versio ei tule OpenStore-palvelimelta. Voit "
+"asentaa viimeisimmän vakaan päivityksen napauttamalla alla olevaa painiketta."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:118
 msgid "Upgrade"
@@ -350,22 +352,20 @@ msgid "Authentication failed"
 msgstr "Tunnistautuminen epäonnistui"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
-#, fuzzy
 msgid "Passphrase required"
-msgstr "ei vaadi oikeuksia"
+msgstr "Tunnuslause vaaditaan"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
-#, fuzzy
 msgid "Passcode required"
-msgstr "ei vaadi oikeuksia"
+msgstr "Suojakoodi vaaditaan"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passphrase (default is 0000)"
-msgstr ""
+msgstr "tunnuslause (oletus on 0000)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passcode (default is 0000)"
-msgstr ""
+msgstr "suojakoodi (oletus on 0000)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:71
 msgid "Authentication failed. Please retry"
@@ -377,7 +377,7 @@ msgstr "Tunnistaudu"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:58
 msgid "Parental control"
-msgstr ""
+msgstr "Käytönvalvonta"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:64
 msgid "Hide adult-oriented content"
@@ -388,6 +388,8 @@ msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr ""
+"Antamalla salasanasi otat täyden vastuun aikuisille tarkoitetun sisällön "
+"näyttämisestä."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:84
 msgid "Developers"

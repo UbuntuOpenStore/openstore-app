@@ -141,6 +141,7 @@ void ClickInstaller::installerFinished(int exitCode, QProcess::ExitStatus exitSt
 
 void ClickInstaller::processStatusChanged(QProcess::ProcessState state)
 {
+    Q_UNUSED(state);
 //    qDebug() << "process state changed:" << state;
 }
 

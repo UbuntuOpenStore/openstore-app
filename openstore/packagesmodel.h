@@ -54,8 +54,8 @@ Q_SIGNALS:
 private:
     QList<LocalPackageItem> m_list;
     QString m_appStoreAppId;
-    bool m_appStoreUpdateAvailable;
     bool m_ready;
+    bool m_appStoreUpdateAvailable;
 };
 
 #endif // PACKAGESMODEL_H

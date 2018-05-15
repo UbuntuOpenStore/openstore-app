@@ -24,6 +24,7 @@ public:
     QStringList supportedFrameworks() const { return m_supportedFrameworks; }
     QString supportedArchitecture() const { return m_supportedArchitecture; }
     QString systemLocale() const { return m_systemLocale; }
+    QString systemCodename() const { return m_systemCodename; }
 
     QString appVersion(const QString &appId) const { return m_installedAppIds.value(appId, QString()); }
     QStringList installedAppIds() const { return m_installedAppIds.keys(); }
@@ -40,11 +41,13 @@ private:
     QStringList getSupportedFrameworks();
     QString getSupportedArchitecture();
     QString getSystemLocale();
+    QString getSystemCodename();
 
 private:
     QStringList m_supportedFrameworks;
     QString m_supportedArchitecture;
     QString m_systemLocale;
+    QString m_systemCodename;
 
     QHash<QString, QString> m_installedAppIds; // appid, version
     QVariantList m_clickDb;

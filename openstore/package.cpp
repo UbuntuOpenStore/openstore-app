@@ -79,6 +79,21 @@ void PackageItem::fillData(const QVariantMap &json)
         m_packageUrl = json.value("package").toString();
     }
 
+    QList<QVariant> downloads = json.value("downloads").toList();
+
+    m_version = json.value("version").toString();
+    m_revision = json.value("revision").toInt();
+    Q_FOREACH (QVariant download, downloads) {
+        QMap<QString, QVariant> downloadData = download.toMap();
+        if (downloadData.value("channel") == PlatformIntegration::instance()->systemCodename()) {
+            m_version = downloadData.value("version").toString();
+            m_revision = downloadData.value("revision").toInt();
+            m_packageUrl = downloadData.value("download_url").toString();
+        }
+    }
+
+    qDebug() << m_appId << m_version << m_revision << m_packageUrl;
+
     m_source = json.value("source").toString();
     m_license = json.value("license").toString();
     m_maintainer = json.value("maintainer_name").toString();
@@ -87,8 +102,6 @@ void PackageItem::fillData(const QVariantMap &json)
     m_category = json.value("category").toString();
     m_screenshots = json.value("screenshots").toStringList();
     m_changelog = json.value("changelog").toString();
-    m_version = json.value("version").toString();
-    m_revision = json.value("revision").toInt();
     m_fileSize = json.value("filesize").toInt();
     m_installedVersion = PlatformIntegration::instance()->appVersion(m_appId);
     m_publishedDate = json.value("published_date").toDateTime();

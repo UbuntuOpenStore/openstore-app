@@ -18,7 +18,7 @@ class OpenStoreNetworkManager : public QObject
     Q_PROPERTY(bool networkAccessible READ networkAccessible NOTIFY networkAccessibleChanged)
     Q_PROPERTY(bool showNsfw MEMBER m_showNsfw NOTIFY showNsfwChanged)
 
-public:   
+public:
     explicit OpenStoreNetworkManager();
     static OpenStoreNetworkManager* instance();
 
@@ -32,7 +32,6 @@ public Q_SLOTS:
     bool getSearch(const QString &signature, int skip, int limit, const QString &filterString, const QString &category, const QString &sort);
     bool getCategories(const QString &signature);
     bool getUrl(const QString &signature, const QUrl &url);
-    bool getUpdates(const QString &signature, const QStringList &appIds);
     bool getRevisions(const QString &signature, const QStringList &appIdsAtVersion);
 
 Q_SIGNALS:

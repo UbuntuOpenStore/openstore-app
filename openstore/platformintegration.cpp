@@ -19,6 +19,7 @@ PlatformIntegration::PlatformIntegration()
     m_supportedFrameworks = getSupportedFrameworks();
     m_supportedArchitecture = getSupportedArchitecture();
     m_systemLocale = getSystemLocale();
+    m_systemCodename = getSystemCodename();
 
     m_installer = new ClickInstaller();
 
@@ -191,4 +192,31 @@ QString PlatformIntegration::getSystemLocale()
     qDebug() << Q_FUNC_INFO << locale;
 
     return locale;
+}
+
+QString PlatformIntegration::getSystemCodename()
+{
+#ifdef DESKTOP_DEBUG_BUILD
+    // Force "vivid", so we can see all the apps in the store
+    return QString("vivid");
+#else
+    QProcess lsb_release;
+    lsb_release.setProgram("lsb_release");
+    lsb_release.setArguments(QStringList() << "-c");
+
+    lsb_release.start();
+    lsb_release.waitForFinished(5000);
+
+    QString output = QString::fromUtf8(lsb_release.readAllStandardOutput()).simplified();
+    output = output.remove(QStringLiteral("Codename:")).simplified();
+
+    if (output.isEmpty()) {
+        // Assume 'vivid' by default
+        output = QString("vivid");
+    }
+
+    qDebug() << Q_FUNC_INFO << "OS codename is:" << output;
+
+    return output;
+#endif
 }

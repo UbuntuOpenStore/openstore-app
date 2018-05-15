@@ -13,7 +13,7 @@
 Q_GLOBAL_STATIC(OpenStoreNetworkManager, s_openStoreNetworkManager)
 
 OpenStoreNetworkManager::OpenStoreNetworkManager()
-{    
+{
     m_manager = new QNetworkAccessManager(this);
     connect(m_manager, &QNetworkAccessManager::networkAccessibleChanged, this, &OpenStoreNetworkManager::networkAccessibleChanged);
     connect(this, &OpenStoreNetworkManager::showNsfwChanged, this, &OpenStoreNetworkManager::deleteCache);
@@ -48,6 +48,7 @@ QNetworkReply *OpenStoreNetworkManager::sendRequest(QNetworkRequest request)
     q.addQueryItem("architecture", PlatformIntegration::instance()->supportedArchitecture());
     q.addQueryItem("lang", PlatformIntegration::instance()->systemLocale());
     q.addQueryItem("nsfw", QString(m_showNsfw ? "" : "false"));
+    q.addQueryItem("channel", PlatformIntegration::instance()->systemCodename());
 
     url.setQuery(q);
     request.setUrl(url);
@@ -145,26 +146,6 @@ bool OpenStoreNetworkManager::getCategories(const QString &signature)
 
 bool OpenStoreNetworkManager::getUrl(const QString &signature, const QUrl &url)
 {
-    QNetworkReply *reply = sendRequest(QNetworkRequest(url));
-
-    connect(reply, &QNetworkReply::finished, [=]() {
-        emitReplySignal(reply, signature);
-    });
-
-    emitReplySignal(reply, signature);
-
-    return true;
-}
-
-bool OpenStoreNetworkManager::getUpdates(const QString &signature, const QStringList &appIds)
-{
-    QUrl url(API_BASEURL + API_UPDATES_ENDPOINT);
-
-    QUrlQuery q(url);
-    q.addQueryItem("apps", appIds.join(","));
-
-    url.setQuery(q);
-
     QNetworkReply *reply = sendRequest(QNetworkRequest(url));
 
     connect(reply, &QNetworkReply::finished, [=]() {

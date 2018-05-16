@@ -86,7 +86,7 @@ Page {
             }
 
             ListItem {
-                visible: app.isLocalVersionSideloaded
+                visible: app.isLocalVersionSideloaded && app.channelMatchesOS
                 height: sideloadedLayout.height
                 ListItemLayout {
                     id: sideloadedLayout
@@ -103,7 +103,25 @@ Page {
             }
 
             ListItem {
+                visible: !app.channelMatchesOS
+                height: mismatchLayout.height
+                ListItemLayout {
+                    id: mismatchLayout
+                    subtitle.text: i18n.tr('This app is not compatible with your system.')
+                    subtitle.maximumLineCount: Number.MAX_VALUE
+                    subtitle.wrapMode: Text.WordWrap
+
+                    Icon {
+                        SlotsLayout.position: SlotsLayout.Leading
+                        width: units.gu(4); height: width
+                        name: 'warning'
+                    }
+                }
+            }
+
+            ListItem {
                 height: units.gu(8)
+                visible: app.channelMatchesOS
 
                 RowLayout {
                     id: buttonsRow

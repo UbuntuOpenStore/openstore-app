@@ -106,6 +106,8 @@ void PackageItem::fillData(const QVariantMap &json)
     m_installedVersion = PlatformIntegration::instance()->appVersion(m_appId);
     m_publishedDate = json.value("published_date").toDateTime();
     m_updatedDate = json.value("updated_date").toDateTime();
+    m_channels = json.value("channels").toStringList();
+    m_types = json.value("types").toStringList();
 
     QList<PackageItem::HookStruct> hooksList;
     if (json.contains("manifest") && json.value("manifest").toMap().contains("hooks")) {

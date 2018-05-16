@@ -7,6 +7,8 @@
 #include <QDebug>
 #include <QDateTime>
 
+#include "platformintegration.h"
+
 class PackageItem: public QObject
 {
     Q_OBJECT
@@ -35,6 +37,9 @@ class PackageItem: public QObject
     Q_PROPERTY(bool updateAvailable READ updateAvailable NOTIFY updated)
     Q_PROPERTY(QDateTime publishedDate READ publishedDate NOTIFY updated)
     Q_PROPERTY(QDateTime updatedDate READ updatedDate NOTIFY updated)
+    Q_PROPERTY(QStringList channels READ channels NOTIFY updated)
+    Q_PROPERTY(QStringList types READ types NOTIFY updated)
+    Q_PROPERTY(bool channelMatchesOS READ channelMatchesOS NOTIFY updated)
 
     Q_ENUMS(Hook)
     Q_FLAGS(Hooks)
@@ -85,6 +90,9 @@ public:
     bool installed() const { return !m_installedVersion.isNull(); }
     QDateTime publishedDate() const { return m_publishedDate; }
     QDateTime updatedDate() const { return m_updatedDate; }
+    QStringList channels() const { return m_channels; }
+    QStringList types() const { return m_types; }
+    bool channelMatchesOS() const {  return m_channels.contains(PlatformIntegration::instance()->systemCodename()); };
 
     Q_INVOKABLE QString permissions(int index) const { return m_hooks.at(index).permissions.join(", "); }
     Q_INVOKABLE Hooks hooks(int index) const { return m_hooks.at(index).hooks; }
@@ -132,6 +140,8 @@ private:
     QList<HookStruct> m_hooks;
     QDateTime m_publishedDate;
     QDateTime m_updatedDate;
+    QStringList m_channels;
+    QStringList m_types;
 };
 
 #endif // PACKAGE_H

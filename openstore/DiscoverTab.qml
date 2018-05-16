@@ -152,7 +152,7 @@ Page {
                             text: i18n.tr("Details")
 
                             function slot_installedPackageDetailsReady(pkg) {
-                                appModel.packageDetailsReady.disconnect(slot_installedPackageDetailsReady)
+                                PackagesCache.packageDetailsReady.disconnect(slot_installedPackageDetailsReady)
                                 bottomEdgeStack.clear()
                                 bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
                             }

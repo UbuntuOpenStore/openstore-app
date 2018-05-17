@@ -92,8 +92,6 @@ void PackageItem::fillData(const QVariantMap &json)
         }
     }
 
-    qDebug() << m_appId << m_version << m_revision << m_packageUrl;
-
     m_source = json.value("source").toString();
     m_license = json.value("license").toString();
     m_maintainer = json.value("maintainer_name").toString();

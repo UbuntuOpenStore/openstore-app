@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-27 05:35+0000\n"
+"POT-Creation-Date: 2018-05-16 05:11+0000\n"
 "PO-Revision-Date: 2018-01-06 21:07+0000\n"
 "Last-Translator: Stefano Melchior <stefano.melchior@me.com>\n"
 "Language-Team: Catalan <https://translate.ubports.com/projects/openstore/"
@@ -36,140 +36,140 @@ msgstr ""
 "La versió instal·lada de l'aplicació no ve del servidor de l'OpenStore. "
 "Podeu instal·lar-ne la última actualització «estable» tocant al botó de sota."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:118
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:136
 msgid "Upgrade"
 msgstr "Actualitza-la"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:118
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:136
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:281
 msgid "Install"
 msgstr "Instal·la-la"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:127
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:522
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:145
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:540
 msgid "Remove"
 msgstr "Suprimeix-la"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:192
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:210
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
 "Aquesta aplicació té accés a informació restringida del sistema. Vegeu més "
 "avall els detalls."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:216
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:234
 msgid "Description"
 msgstr "Descripció"
 
 #. TRANSLATORS: Title of the changelog section
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:239
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:257
 msgid "What's New"
 msgstr "Novetats"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:258
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:276
 msgid "Packager/Publisher"
 msgstr "Empaquetació/publicació"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:259
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:277
 msgid "OpenStore team"
 msgstr "L'equip de l'OpenStore"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:267
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:285
 msgid "Installed version"
 msgstr "Versió instal·lada"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:276
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:294
 msgid "Latest available version"
 msgstr "Darrera versió disponible"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:285
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:303
 msgid "First released"
 msgstr "Primera publicació"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:294
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:312
 msgid "License"
 msgstr "Llicència"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:295
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:313
 msgid "N/A"
 msgstr "No disponible"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:303
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:321
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:104
 msgid "Source Code"
 msgstr "Codi font"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:318
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:336
 #, qt-format
 msgid "More from %1"
 msgstr "Més aplicacions de %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:333
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:351
 #, qt-format
 msgid "Other apps in %1"
 msgstr "Altres aplicacions a %1"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:339
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:357
 msgid "Package contents"
 msgstr "Contingut del paquet"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:419
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:437
 msgid "AppArmor profile"
 msgstr "Perfil d'AppArmor"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:446
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:464
 msgid "Permissions"
 msgstr "Permisos"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:465
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:483
 msgid "none required"
 msgstr "no se'n requereix cap"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:481
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:499
 msgid "Read paths"
 msgstr "Pot llegir a"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:498
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:516
 msgid "Write paths"
 msgstr "Pot escriure a"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:514
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:532
 msgid "Remove package"
 msgstr "Elimina el paquet"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:515
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:533
 #, qt-format
 msgid "Do you want to remove %1?"
 msgstr "Voleu eliminar %1?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:531
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:549
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:289
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
 msgstr "Cancel·la"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:548
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:566
 #, qt-format
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:553
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:571
 #, qt-format
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:558
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:576
 #, qt-format
 msgid "%1 kB"
 msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:561
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:579
 #, qt-format
 msgid "%1 bytes"
 msgstr "%1 bytes"

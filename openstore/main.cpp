@@ -53,6 +53,8 @@ int main(int argc, char *argv[])
     QElapsedTimer initTimer;
     initTimer.start();
 
+    QCoreApplication::setApplicationName(QStringLiteral("openstore.openstore-team"));
+
     QGuiApplication app(argc, argv);
 
     qmlRegisterSingletonType<OpenStoreNetworkManager>("OpenStore", 1, 0, "OpenStoreNetworkManager", registerNetworkManagerSingleton);

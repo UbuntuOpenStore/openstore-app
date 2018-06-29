@@ -5,6 +5,8 @@ AbstractButton {
     id: rootItem
     property var appItem
 
+    signal imageLoaded()
+
     Column {
         anchors.fill: parent
 
@@ -13,10 +15,22 @@ AbstractButton {
             height: width
             aspect: UbuntuShape.Flat
             sourceFillMode: UbuntuShape.PreserveAspectFit
+
             source: Image {
                 source: rootItem.appItem.icon
                 sourceSize.width: parent.width
-				sourceSize.height: parent.height
+                sourceSize.height: parent.height
+
+                visible: false
+
+                onStatusChanged: {
+                    // WORKAROUND: Since we use PackageTile in ListView
+                    // delegates, we need to delay delegates destruction
+                    // until the image is loaded.
+                    if (status == Image.Ready) {
+                        rootItem.imageLoaded()
+                    }                     
+                }
             }
         }
 

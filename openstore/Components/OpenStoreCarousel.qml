@@ -41,6 +41,7 @@ Column {
         leftMargin: units.gu(2)
         rightMargin: units.gu(2)
 
+        cacheBuffer: 0
         clip: true
 
         height: count > 0 ? rootItem.tilesWidth * 1.5 + units.gu(4) : 0
@@ -57,6 +58,16 @@ Column {
             width: rootItem.tilesWidth
 
             onClicked: rootItem.appTileClicked(appDel.appItem)
+
+            // WORKAROUND: Delay removal until image is loaded. That should
+            // prevent potential race conditions.
+            ListView.delayRemove: true
+            onImageLoaded: removalTimer.restart()
+            Timer {
+               id: removalTimer
+               interval: 3000
+               onTriggered: ListView.delayRemove = false
+            }
         }
     }
 }

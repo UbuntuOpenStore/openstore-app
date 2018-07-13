@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-16 05:11+0000\n"
-"PO-Revision-Date: 2018-01-02 15:49+0000\n"
-"Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
-"Language-Team: Sardinian <https://translate.ubports.com/projects/openstore/"
-"openstore-app/sc/>\n"
+"PO-Revision-Date: 2018-07-13 14:58+0000\n"
+"Last-Translator: Matteo Mandis <mandismatteo@gmail.com>\n"
+"Language-Team: Sardinian <https://translate.ubports.com/projects/openstore"
+"/openstore-app/sc/>\n"
 "Language: sc\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Weblate 2.17\n"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
@@ -360,9 +360,8 @@ msgid "Your passphrase is required to access restricted content"
 msgstr "Pro atzèdere a cuntenutos restrintos, b'at bisòngiu de sa crae tua."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:30
-#, fuzzy
 msgid "Your passcode is required to access restricted content"
-msgstr "Pro atzèdere a cuntenutos restrintos, b'at bisòngiu de su còdighe tuo."
+msgstr "Pro atzèdere a cuntenutos restrintos, b'est bisòngiu de su còdighe tuo."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:39
 msgid "Authentication failed"

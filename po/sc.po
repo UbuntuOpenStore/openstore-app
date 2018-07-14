@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-16 05:11+0000\n"
-"PO-Revision-Date: 2018-07-14 11:40+0000\n"
-"Last-Translator: Matteo Mandis <mandismatteo@gmail.com>\n"
+"PO-Revision-Date: 2018-07-14 11:42+0000\n"
+"Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/openstore"
 "/openstore-app/sc/>\n"
 "Language: sc\n"
@@ -289,7 +289,7 @@ msgid ""
 "don't take any responsibility if something bad slips through."
 msgstr ""
 "Mancari fatzamus de su mellus pro lu evitare, esaminende is aplicatziones, "
-"no assumimos peruna responsabilidade si carchi cosa andat male."
+"no assumimus peruna responsabilidade si carchi cosa andat male."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:243
 #, fuzzy
@@ -319,7 +319,6 @@ msgid "App installed"
 msgstr "Aplicatzione installada"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:310
-#, fuzzy
 msgid "The app has been installed successfully."
 msgstr "Aplicatzione installada."
 
@@ -341,9 +340,9 @@ msgstr ""
 "est unu pachete click vàlidu."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:337
-#, fuzzy, qt-format
+#, qt-format
 msgid "Installation failed (Error %1)"
-msgstr "B'at àpidu una faddina in s'installatzione"
+msgstr "Faddina in s'installatzione (Errore %1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:33
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15

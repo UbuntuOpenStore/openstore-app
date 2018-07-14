@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-16 05:11+0000\n"
-"PO-Revision-Date: 2018-07-14 11:44+0000\n"
+"PO-Revision-Date: 2018-07-22 00:00+0000\n"
 "Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/openstore"
 "/openstore-app/sc/>\n"
@@ -344,7 +344,7 @@ msgstr "Chirca"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:29
 msgid "Your passphrase is required to access restricted content"
-msgstr "Pro atzèdere a cuntenutos restrintos, b'est bisòngiu de sa crae tua."
+msgstr "Pro atzèdere a cuntenutos restrintos, b'est bisòngiu de sa crae tua"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:30
 msgid "Your passcode is required to access restricted content"

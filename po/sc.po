@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-16 05:11+0000\n"
 "PO-Revision-Date: 2018-07-14 11:40+0000\n"
-"Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
+"Last-Translator: Matteo Mandis <mandismatteo@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/openstore"
 "/openstore-app/sc/>\n"
 "Language: sc\n"
@@ -288,6 +288,8 @@ msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
 msgstr ""
+"Mancari fatzamus de su mellus pro lu evitare, esaminende is aplicatziones, "
+"no assumimos peruna responsabilidade si carchi cosa andat male."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:243
 #, fuzzy

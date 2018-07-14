@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-16 05:11+0000\n"
-"PO-Revision-Date: 2018-07-14 11:43+0000\n"
-"Last-Translator: Matteo Mandis <mandismatteo@gmail.com>\n"
+"PO-Revision-Date: 2018-07-14 11:44+0000\n"
+"Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/openstore"
 "/openstore-app/sc/>\n"
 "Language: sc\n"
@@ -52,11 +52,10 @@ msgid "Remove"
 msgstr "Boga"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:210
-#, fuzzy
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
-"Custa aplicatzione tenet atzessu a datos restrintos de su sistema. Bides "
-"suta is detàllios."
+"Custa aplicatzione tenet atzessu a datos restrintos de su sistema. Bide suta "
+"is detàllios."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:234
 msgid "Description"
@@ -68,7 +67,6 @@ msgid "What's New"
 msgstr "Novidades"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:276
-#, fuzzy
 msgid "Packager/Publisher"
 msgstr "Isvilupadore/editore"
 
@@ -93,7 +91,6 @@ msgid "License"
 msgstr "Lissèntzia"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:313
-#, fuzzy
 msgid "N/A"
 msgstr "Non a disponimentu"
 
@@ -186,7 +183,6 @@ msgstr "Categorias"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:29
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:31
-#, fuzzy
 msgid "Discover"
 msgstr "Iscoberi"
 
@@ -230,7 +226,6 @@ msgid "No app has been released in this category yet."
 msgstr "Galu peruna aplicatzione publicada in custa categoria."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
-#, fuzzy
 msgid "Try with a different search."
 msgstr "Proa cun un'àtera chirca."
 
@@ -292,7 +287,6 @@ msgstr ""
 "no assumimus peruna responsabilidade si carchi cosa andat male."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:243
-#, fuzzy
 msgid "Use this at your own risk."
 msgstr "Imprea custa aplicatzione a arriscu tuo."
 
@@ -301,7 +295,6 @@ msgid "Okay. Got it! I'll be careful."
 msgstr "Andat bene. Apo cumpresu e apo a istare atentu."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:254
-#, fuzzy
 msgid "Get me out of here!"
 msgstr "Lassa·mi essire!"
 
@@ -382,12 +375,10 @@ msgid "Authentication failed. Please retry"
 msgstr "Faddina in s'autenticatzione. Torra·bi a proare"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:76
-#, fuzzy
 msgid "Authenticate"
 msgstr "Autentica·ti"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:58
-#, fuzzy
 msgid "Parental control"
 msgstr "Controllu de genitores"
 
@@ -400,8 +391,8 @@ msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr ""
-"Insertande sa crae tua assumes totu sa responsabilidade ammustrende "
-"cuntenutos pro adultos. (NSFW)"
+"Insertende sa crae tua assumes totu sa responsabilidade de ammustrare "
+"cuntenutos pro adultos (Not Suitable For Work)."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:84
 msgid "Developers"
@@ -412,9 +403,8 @@ msgid "Manage your apps on OpenStore"
 msgstr "Gesti is aplicatziones tuas in s'OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:97
-#, fuzzy
 msgid "About OpenStore"
-msgstr "Iscuadra de OpenStore"
+msgstr "Informatziones subra de OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:113
 msgid "Report an issue"

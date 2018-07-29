@@ -34,6 +34,16 @@ MainView {
     property string appIdToOpen
     property var mainPage
 
+    Arguments {
+        id: args
+        Argument {
+            name: 'url'
+            help: i18n.tr('Startup url')
+            required: false
+            valueNames: ['URL']
+        }
+    }
+
     Component.onCompleted: {
         mainPage = pageStack.push(Qt.resolvedUrl("MainPage.qml"))
 
@@ -52,6 +62,19 @@ MainView {
 
         if (cmdArgs[1].length) {
             root.appIdToOpen = cmdArgs[1].split("://")[1];
+        }
+
+        if (args.values.url && args.values.url.match(/^openstore:/)) {
+            console.log('url ', args.values.url);
+            root.appIdToOpen =  args.values.url.split("://")[1];
+        }
+        else if (Qt.application.arguments && Qt.application.arguments.length > 0) {
+            for (var i = 0; i < Qt.application.arguments.length; i++) {
+                if (Qt.application.arguments[i].match(/^openstore:/)) {
+                    console.log('url ', Qt.application.arguments[i]);
+                    root.appIdToOpen = Qt.application.arguments[i].split("://")[1];
+                }
+            }
         }
     }
 
@@ -129,10 +152,11 @@ MainView {
 
         onReadyChanged: {
             if (ready && root.appIdToOpen != "") {
-                console.log("Fetching " + root.appIdToOpen + " for UriHandler request at launch")
-                appModel.packageDetailsReady.connect(slot_packageDetailsReady)
-                appModel.getPackageDetails(root.appIdToOpen)
-                root.appIdToOpen = ""
+                console.log("Fetching " + root.appIdToOpen + " for UriHandler request at launch");
+
+                PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady);
+                PackagesCache.getPackageDetails(root.appIdToOpen);
+                root.appIdToOpen = "";
             }
         }
     }

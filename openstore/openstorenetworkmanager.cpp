@@ -114,8 +114,14 @@ bool OpenStoreNetworkManager::getSearch(const QString &signature, int skip, int 
     q.addQueryItem("skip", QString::number(skip));
     q.addQueryItem("limit", QString::number(limit));
     q.addQueryItem("sort", sort);
-    q.addQueryItem("search", filterString);
     q.addQueryItem("category", category);
+
+    if (filterString.startsWith("author:")) {
+        q.addQueryItem("author", filterString.right(filterString.size() - 7));
+    }
+    else {
+        q.addQueryItem("search", filterString);
+    }
 
     url.setQuery(q);
 

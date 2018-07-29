@@ -328,7 +328,7 @@ Page {
                 enabled: !PlatformIntegration.clickInstaller.busy
                 onClicked: {
                     bottomEdgeStack.clear()
-                    mainPage.showSearch(app.author)
+                    mainPage.showSearch('author:' + app.author)
                 }
                 ListItemLayout {
                     anchors.centerIn: parent

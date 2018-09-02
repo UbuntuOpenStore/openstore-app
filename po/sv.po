@@ -8,78 +8,84 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-16 05:11+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2018-10-10 04:17+0000\n"
+"Last-Translator: Rondy Andersson <rondarius@gmail.com>\n"
+"Language-Team: Swedish <https://translate.ubports.com/projects/openstore/"
+"openstore-app/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.20\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
 msgid "App details"
-msgstr ""
+msgstr "Detaljer"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:43
 msgid "Open"
-msgstr ""
+msgstr "Öppna"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:93
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
 msgstr ""
+"Den installerade versionen kommer inte från Openstores servrar. Du kan "
+"installera den senaste versionen genom att klicka på knappen nedanför."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:136
 msgid "Upgrade"
-msgstr ""
+msgstr "Uppgradera"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:136
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:281
 msgid "Install"
-msgstr ""
+msgstr "Installera"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:145
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:540
 msgid "Remove"
-msgstr ""
+msgstr "Ta bort"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:210
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
+"Denna app har tillgång till begränsad systemdata, se nedan för detaljer."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:234
 msgid "Description"
-msgstr ""
+msgstr "Beskrivning"
 
 #. TRANSLATORS: Title of the changelog section
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:257
 msgid "What's New"
-msgstr ""
+msgstr "ÖVERSÄTTARE: Titel för changelog sektionen"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:276
 msgid "Packager/Publisher"
-msgstr ""
+msgstr "Förpackaren/Utgivare"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:277
 msgid "OpenStore team"
-msgstr ""
+msgstr "Openstore team"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:285
 msgid "Installed version"
-msgstr ""
+msgstr "Installerad version"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:294
 msgid "Latest available version"
-msgstr ""
+msgstr "Senast tillgängliga version"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:303
 msgid "First released"
-msgstr ""
+msgstr "Först utgiven"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:312
 msgid "License"
-msgstr ""
+msgstr "Licens"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:313
 msgid "N/A"

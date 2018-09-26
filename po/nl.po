@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-16 05:11+0000\n"
-"PO-Revision-Date: 2018-04-07 22:24+0000\n"
-"Last-Translator: Joeke de Graaf <mappack@null.net>\n"
+"PO-Revision-Date: 2018-10-10 04:17+0000\n"
+"Last-Translator: Ben van Hartingsveldt <benvanhartingsveldt@gmail.com>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/openstore/"
 "openstore-app/nl/>\n"
 "Language: nl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Weblate 2.20\n"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
@@ -331,7 +331,7 @@ msgstr "Installatie mislukt"
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
-"Dit pakket kon niet worden geïnstalleerd. Is dit wel een juist click-pakket?"
+"Dit pakket kon niet worden geïnstalleerd. Zorg voor een geldig click-pakket."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:337
 #, qt-format

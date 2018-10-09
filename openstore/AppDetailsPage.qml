@@ -103,32 +103,14 @@ Page {
             }
 
             ListItem {
-                visible: !app.channelMatchesOS
-                height: mismatchLayout.height
-                ListItemLayout {
-                    id: mismatchLayout
-                    subtitle.text: i18n.tr('This app is not compatible with your system.')
-                    subtitle.maximumLineCount: Number.MAX_VALUE
-                    subtitle.wrapMode: Text.WordWrap
-
-                    Icon {
-                        SlotsLayout.position: SlotsLayout.Leading
-                        width: units.gu(4); height: width
-                        name: 'warning'
-                    }
-                }
-            }
-
-            ListItem {
                 height: units.gu(8)
-                visible: app.channelMatchesOS
 
                 RowLayout {
                     id: buttonsRow
                     anchors.fill: parent
                     anchors.margins: units.gu(2)
                     spacing: units.gu(2)
-                    visible: !PlatformIntegration.clickInstaller.busy && !PackagesCache.updatingCache
+                    visible: !PlatformIntegration.clickInstaller.busy && !PackagesCache.updatingCache && app.channelMatchesOS
 
                     Button {
                         Layout.fillWidth: true
@@ -161,6 +143,13 @@ Page {
                     spacing: units.gu(2)
                     visible: PlatformIntegration.clickInstaller.busy || PackagesCache.updatingCache
 
+                    onVisibleChanged: {
+                        // The page is automatically closed for channel-incompatible apps when they are removed.
+                        if (!app.installed && !app.channelMatchesOS) {
+                            pageStack.pop();
+                        }
+                    }
+
                     ProgressBar {
                         Layout.fillWidth: true
                         maximumValue: app ? app.fileSize : 0
@@ -188,6 +177,35 @@ Page {
                             name: abortBtn.action.iconName
                             source: abortBtn.action.iconSource
                             color: "#CDCDCD"
+                        }
+                    }
+                }
+
+                ListItemLayout {
+                    // Layout shown when the app is not compatible with the system.
+                    id: mismatchLayout
+                    subtitle.text: i18n.tr('This app is not compatible with your system.')
+                    subtitle.maximumLineCount: Number.MAX_VALUE
+                    subtitle.wrapMode: Text.WordWrap
+                    visible: !app.channelMatchesOS && !PlatformIntegration.clickInstaller.busy && !PackagesCache.updatingCache
+
+                    Icon {
+                        SlotsLayout.position: SlotsLayout.Leading
+                        width: units.gu(4); height: width
+                        name: 'dialog-warning-symbolic'
+                    }
+
+                    Button {
+                        Layout.fillWidth: true
+                        Layout.maximumWidth: buttonsRow.width > units.gu(60) ? units.gu(24) : buttonsRow.width
+                        text: i18n.tr("Remove")
+                        visible: app.installed && !PackagesCache.updatingCache
+                        color: UbuntuColors.red
+                        onClicked: {
+                            var popup = PopupUtils.open(removeQuestion, root, {pkgName: app.name || app.id});
+                            popup.accepted.connect(function() {
+                                app.remove();
+                            })
                         }
                     }
                 }

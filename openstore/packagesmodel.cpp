@@ -97,34 +97,40 @@ void PackagesModel::refresh()
 
         LocalPackageItem pkgItem;
         pkgItem.appId = map.value("name").toString();
+        pkgItem.name = map.value("title").toString();
+        pkgItem.updateAvailable = bool(PackagesCache::instance()->getRemoteAppRevision(pkgItem.appId) > PackagesCache::instance()->getLocalAppRevision(pkgItem.appId));
 
-        if (PackagesCache::instance()->getRemoteAppRevision(pkgItem.appId) != -1) {
-            pkgItem.name = map.value("title").toString();
-            pkgItem.updateAvailable = bool(PackagesCache::instance()->getRemoteAppRevision(pkgItem.appId) > PackagesCache::instance()->getLocalAppRevision(pkgItem.appId));
+        //pkgItem.icon = map.value("icon").toString();
+        if (pkgItem.icon.isEmpty()) {
+            const QString &directory = map.value("_directory").toString();
 
-            //pkgItem.icon = map.value("icon").toString();
-            if (pkgItem.icon.isEmpty()) {
-                const QString &directory = map.value("_directory").toString();
+            const QVariantMap &hooks = map.value("hooks").toMap();
+            Q_FOREACH(const QString &hook, hooks.keys()) {
+                const QVariantMap &h = hooks.value(hook).toMap();
 
-                const QVariantMap &hooks = map.value("hooks").toMap();
-                Q_FOREACH(const QString &hook, hooks.keys()) {
-                    const QVariantMap &h = hooks.value(hook).toMap();
+                const QString &desktop = h.value("desktop").toString();
+                const QString &scope = h.value("scope").toString();
+                if (!desktop.isEmpty()) {
+                    //        qDebug() << "Getting icon from .desktop file.";
+                    const QString &desktopFile = directory + QDir::separator() + desktop;
+                    QSettings appInfo(desktopFile, QSettings::IniFormat);
+                    pkgItem.icon = directory + QDir::separator() + appInfo.value("Desktop Entry/Icon").toString();
+                    //        qDebug() << pkgItem.icon;
+                    break;
+                } else if (!scope.isEmpty()) {
+                    //        qDebug() << "Getting icon from scope.";
+                    const QString &scopeFile = directory + QDir::separator() + scope + QDir::separator() + pkgItem.appId + "_" + scope + ".ini";
+                    QSettings appInfo(scopeFile, QSettings::IniFormat);
+                    QFileInfo fileInfo(scopeFile);
 
-                    const QString &desktop = h.value("desktop").toString();
-                    //const QString &scope = h.value("scope").toString();
-                    if (!desktop.isEmpty()) {
-                        const QString &desktopFile = directory + QDir::separator() + desktop;
-                        QSettings appInfo(desktopFile, QSettings::IniFormat);
-                        pkgItem.icon = directory + QDir::separator() + appInfo.value("Desktop Entry/Icon").toString();
+                    const QString &possibleIconFile = appInfo.value("ScopeConfig/Icon").toString();
+
+                    if (!possibleIconFile.isEmpty()) {
+                        pkgItem.icon = fileInfo.absolutePath() + QDir::separator() + appInfo.value("ScopeConfig/Icon").toString();
+                        //        qDebug() << pkgItem.icon;
                         break;
-                    } /*else if (!scope.isEmpty()) {
-                            const QString &scopeFile = directory + QDir::separator() + scope + QDir::separator() + pkgItem.appId + "_" + scope + ".ini";
-                            QSettings appInfo(scopeFile, QSettings::IniFormat);
-                            QFileInfo fileInfo(scopeFile);
-
-                            pkgItem.icon = fileInfo.absolutePath() + QDir::separator() + appInfo.value("ScopeConfig/Icon").toString();
-                            break;
-                        }*/
+                    }
+                    //        qDebug() << "Icon not found in scope.";
                 }
             }
 
@@ -141,6 +147,7 @@ void PackagesModel::refresh()
             }
         }
     }
+    //        qDebug() << "Finished refresh.";
 
     endInsertRows();
 

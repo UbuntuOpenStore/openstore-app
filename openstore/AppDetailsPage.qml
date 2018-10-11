@@ -41,7 +41,7 @@ Page {
             }
             actions: Action {
                 text: i18n.tr("Open")
-                visible: app.installed && app.containsApp
+                visible: app.installed && app.containsApp && app.appId!="openstore.openstore-team"
                 onTriggered: Qt.openUrlExternally(app.appLaunchUrl())
             }
         }

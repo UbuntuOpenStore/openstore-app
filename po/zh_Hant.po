@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-16 05:11+0000\n"
-"PO-Revision-Date: 2018-10-28 00:00+0000\n"
+"PO-Revision-Date: 2018-11-05 15:10+0000\n"
 "Last-Translator: Louies <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
 "openstore/openstore-app/zh_Hant/>\n"
@@ -17,12 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.1.1\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
-#, fuzzy
 msgid "App details"
-msgstr "應用詳情"
+msgstr "應用程式詳細資訊"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:43
 msgid "Open"
@@ -178,9 +177,8 @@ msgstr "分類"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:29
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:31
-#, fuzzy
 msgid "Discover"
-msgstr "檢測"
+msgstr "發現"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:51
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:28
@@ -210,9 +208,8 @@ msgid "Details"
 msgstr "詳情"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
-#, fuzzy
 msgid "Nothing here yet"
-msgstr "這裡沒有東西"
+msgstr "這裡沒有任何東西"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
 msgid "No results found."
@@ -223,7 +220,6 @@ msgid "No app has been released in this category yet."
 msgstr "此類別尚未發布任何應用程序。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
-#, fuzzy
 msgid "Try with a different search."
 msgstr "嘗試使用不同的搜尋。"
 
@@ -257,7 +253,6 @@ msgid "No app has been installed from OpenStore yet."
 msgstr "尚未從OpenStore安裝任何應用程序。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:213
-#, fuzzy
 msgid "Warning"
 msgstr "注意"
 
@@ -289,16 +284,16 @@ msgstr "是的!安裝它，我會小心的。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:254
 msgid "Get me out of here!"
-msgstr "不!帶我離開這裡！"
+msgstr "不!帶我離開這裡!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:267
 msgid "Install app?"
-msgstr "安裝應用程序嗎？"
+msgstr "安裝應用程序嗎?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:268
 #, qt-format
 msgid "Do you want to install %1?"
-msgstr "要安裝％1嗎？"
+msgstr "要安裝％1嗎?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:309
 msgid "App installed"
@@ -326,7 +321,7 @@ msgstr "無法安裝該軟體。確保它是有效的軟體封包。"
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:337
 #, qt-format
 msgid "Installation failed (Error %1)"
-msgstr "安裝失敗（錯誤％1）"
+msgstr "安裝失敗(錯誤％1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:33
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15
@@ -334,9 +329,8 @@ msgid "Search"
 msgstr "搜尋"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:29
-#, fuzzy
 msgid "Your passphrase is required to access restricted content"
-msgstr "您需要密碼才能解鎖對於受限制的內容擁有訪問權限。"
+msgstr "您需要密碼才能解鎖受限制的內容擁有訪問權限"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:30
 msgid "Your passcode is required to access restricted content"
@@ -364,7 +358,7 @@ msgstr "密碼（預設密碼為0000）"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:71
 msgid "Authentication failed. Please retry"
-msgstr "驗證失敗。請重試"
+msgstr "驗證失敗。請再重試"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:76
 msgid "Authenticate"
@@ -413,19 +407,16 @@ msgid "Application"
 msgstr "應用程式"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
-#, fuzzy
 msgid "Scope"
 msgstr "範圍"
 
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:64
-#, fuzzy
 msgid "URL Handler"
 msgstr "URL處理程序"
 
 #. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:78
-#, fuzzy
 msgid "Content Hub Handler"
 msgstr "內容中心處理程序"
 
@@ -436,7 +427,6 @@ msgstr "推送助手"
 
 #. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:106
-#, fuzzy
 msgid "Accounts provider"
 msgstr "帳戶支援"
 

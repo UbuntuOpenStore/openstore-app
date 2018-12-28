@@ -44,12 +44,21 @@ AdaptivePageLayout {
         __isThereSecondPage = true
     }
 
+    Component.onDestruction: tabView.barVisible = true
+
     states: [
         State {
             when: __isThereSecondPage && rootItem.columns == 1
             PropertyChanges {
                 target: tabView
                 barVisible: false
+            }
+        },
+        State {
+            when: !__isThereSecondPage || rootItem.columns != 1
+            PropertyChanges {
+                target: tabView
+                barVisible: true
             }
         }
     ]
@@ -120,7 +129,3 @@ AdaptivePageLayout {
         }
     }
 }
-
-
-
-

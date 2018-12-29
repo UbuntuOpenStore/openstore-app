@@ -89,7 +89,7 @@ MainView {
             var popup = PopupUtils.open(installQuestion, root, {fileName: fileName});
             popup.accepted.connect(function() {
                 contentHubInstallInProgress = true;
-                PlatformIntegration.clickInstaller.installPackage(filePath)
+                PlatformIntegration.clickInstaller.installPackage(filePath, true)
             })
         }
     }

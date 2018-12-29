@@ -141,7 +141,7 @@ Page {
                     anchors.fill: parent
                     anchors.margins: units.gu(2)
                     spacing: units.gu(2)
-                    visible: PlatformIntegration.clickInstaller.busy || PackagesCache.updatingCache
+                    visible: (PlatformIntegration.clickInstaller.busy && !PlatformIntegration.clickInstaller.isLocalInstall) || PackagesCache.updatingCache
 
                     onVisibleChanged: {
                         // The page is automatically closed for channel-incompatible apps when they are removed.

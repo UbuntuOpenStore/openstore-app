@@ -37,6 +37,11 @@ bool ClickInstaller::busy() const
     return m_installerProcess != 0 || m_download != 0;
 }
 
+bool ClickInstaller::isLocalInstall() const
+{
+    return m_isLocalInstall;
+}
+
 int ClickInstaller::downloadProgress() const
 {
     if (m_file.isOpen()) {
@@ -45,7 +50,7 @@ int ClickInstaller::downloadProgress() const
     return 0;
 }
 
-void ClickInstaller::installPackage(const QString &packageUrl)
+void ClickInstaller::installPackage(const QString &packageUrl, const bool isLocalInstall)
 {
 //    qDebug() << "should install package" << packageUrl;
     if (busy()) {
@@ -56,6 +61,10 @@ void ClickInstaller::installPackage(const QString &packageUrl)
         fetchPackage(packageUrl);
         return;
     }
+
+    m_isLocalInstall = isLocalInstall;
+    Q_EMIT isLocalInstallChanged();
+
     QString localPath = packageUrl;
     localPath.remove(QRegExp("$file://"));
     installLocalPackage(localPath);
@@ -160,6 +169,9 @@ void ClickInstaller::downloadFinished()
     m_file.close();
 
     m_download->deleteLater();
+
+    m_isLocalInstall = false;
+    Q_EMIT isLocalInstallChanged();
 
     if (m_download->error() == QNetworkReply::OperationCanceledError) {
         Q_EMIT downloadProgressChanged();

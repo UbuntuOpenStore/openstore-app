@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-16 05:11+0000\n"
-"PO-Revision-Date: 2019-01-02 13:08+0000\n"
-"Last-Translator: Max Libre <libremax@protonmail.com>\n"
+"PO-Revision-Date: 2019-01-06 00:00+0000\n"
+"Last-Translator: Anne Onyme <anneonyme017@netcourrier.com>\n"
 "Language-Team: French <https://translate.ubports.com/projects/openstore/"
 "openstore-app/fr/>\n"
 "Language: fr\n"
@@ -39,7 +39,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:136
 msgid "Upgrade"
-msgstr "Mettre à jour"
+msgstr "Mettre à niveau"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:136
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:281
@@ -68,7 +68,7 @@ msgstr "Nouveautés"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:276
 msgid "Packager/Publisher"
-msgstr "Auteur"
+msgstr "Auteur(e)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:277
 msgid "OpenStore team"
@@ -80,11 +80,11 @@ msgstr "Version installée"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:294
 msgid "Latest available version"
-msgstr "Version disponible"
+msgstr "Dernière version disponible"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:303
 msgid "First released"
-msgstr "Publié pour la première fois"
+msgstr "Publiée pour la première fois"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:312
 msgid "License"
@@ -113,11 +113,11 @@ msgstr "Autres applications dans %1"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:357
 msgid "Package contents"
-msgstr "Contenu du paquet"
+msgstr "Contenus du paquet"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:437
 msgid "AppArmor profile"
-msgstr "Profile AppArmor"
+msgstr "Profil AppArmor"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:464
 msgid "Permissions"
@@ -126,7 +126,7 @@ msgstr "Permissions"
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:483
 msgid "none required"
-msgstr "Aucun prérequis"
+msgstr "Aucune permission demandée"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:499
 msgid "Read paths"
@@ -155,7 +155,7 @@ msgstr "Annuler"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:566
 #, qt-format
 msgid "%1 GB"
-msgstr "%1 GB"
+msgstr "%1 Go"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:571
@@ -199,7 +199,7 @@ msgstr "Mise à jour disponible"
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:126
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:42
 msgid "✓ Installed"
-msgstr "✓ Installé"
+msgstr "✓ Installée"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:145
 msgid "OpenStore update available"
@@ -268,7 +268,7 @@ msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
 msgstr ""
-"OpenStore permet l'installation d'application non confinées. Veuillez vous "
+"L'OpenStore permet l'installation d'application non confinées. Veuillez vous "
 "assurer que vous avez conscience des implications que cela a."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:229
@@ -321,7 +321,7 @@ msgstr "L'application a été installée avec succès."
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:341
 msgid "OK"
-msgstr "OK"
+msgstr "Valider"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:322
 msgid "Installation failed"
@@ -346,7 +346,7 @@ msgstr "Rechercher"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:29
 msgid "Your passphrase is required to access restricted content"
-msgstr "Votre phrase secrète est nécessaire pour accéder au contenu restreint"
+msgstr "Votre mot de passe est nécessaire pour accéder au contenu restreint"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:30
 msgid "Your passcode is required to access restricted content"
@@ -358,7 +358,7 @@ msgstr "L'authentification a échoué"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
 msgid "Passphrase required"
-msgstr "Phrase secrète nécessaire"
+msgstr "Mot de passe nécessaire"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
 msgid "Passcode required"
@@ -366,11 +366,11 @@ msgstr "Code d'accès nécessaire"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passphrase (default is 0000)"
-msgstr "phrase secrète (0000 par défaut)"
+msgstr "Mot de passe (0000 par défaut)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passcode (default is 0000)"
-msgstr "code d'accès (0000 par défaut)"
+msgstr "Code d'accès (0000 par défaut)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:71
 msgid "Authentication failed. Please retry"
@@ -398,7 +398,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:84
 msgid "Developers"
-msgstr "Développeurs"
+msgstr "Développeurs et développeuses"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:91
 msgid "Manage your apps on OpenStore"
@@ -414,7 +414,7 @@ msgstr "Signaler un problème"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Back"
-msgstr "En arrière"
+msgstr "Retour"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Close"

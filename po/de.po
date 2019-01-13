@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-16 05:11+0000\n"
-"PO-Revision-Date: 2018-01-07 21:24+0000\n"
-"Last-Translator: Peter Nerlich <peter.nerlich+ubports@googlemail.com>\n"
+"PO-Revision-Date: 2019-01-06 00:00+0000\n"
+"Last-Translator: Daniel Frost <one@frostinfo.de>\n"
 "Language-Team: German <https://translate.ubports.com/projects/openstore/"
 "openstore-app/de/>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Weblate 3.1.1\n"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
@@ -66,7 +66,7 @@ msgstr "Was gibt's Neues"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:276
 msgid "Packager/Publisher"
-msgstr "Herausgeber"
+msgstr "Veröffentlicher"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:277
 msgid "OpenStore team"
@@ -147,7 +147,7 @@ msgstr "Möchten Sie %1 deinstallieren?"
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:289
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
-msgstr "Abbrechen"
+msgstr "Abbruch"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:566

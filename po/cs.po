@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-16 05:11+0000\n"
-"PO-Revision-Date: 2018-01-06 09:02+0000\n"
+"PO-Revision-Date: 2019-01-06 00:00+0000\n"
 "Last-Translator: Milan Korecký <milan.korecky@gmail.com>\n"
 "Language-Team: Czech <https://translate.ubports.com/projects/openstore/"
 "openstore-app/cs/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Weblate 3.1.1\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
 msgid "App details"
@@ -64,7 +64,7 @@ msgstr "Novinky"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:276
 msgid "Packager/Publisher"
-msgstr "Autor/Vydavatel"
+msgstr "Vytvořil/Publikoval"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:277
 msgid "OpenStore team"

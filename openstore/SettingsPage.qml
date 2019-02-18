@@ -107,7 +107,7 @@ Page {
                 }
 
                 ListItem {
-                    onClicked: Qt.openUrlExternally("https://gitlab.com/theopenstore/openstore-meta/issues/new?issue%5Bassignee_id%5D=&issue%5Bmilestone_id%5D=")
+                    onClicked: Qt.openUrlExternally("https://gitlab.com/theopenstore/openstore-meta/issues/new")
                     ListItemLayout {
                         anchors.centerIn: parent
                         title.text: i18n.tr("Report an issue")

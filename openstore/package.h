@@ -28,6 +28,8 @@ class PackageItem: public QObject
     Q_PROPERTY(bool isLocalVersionSideloaded READ isLocalVersionSideloaded NOTIFY updated)
     Q_PROPERTY(QString packageUrl READ packageUrl NOTIFY updated)
     Q_PROPERTY(QString source READ source NOTIFY updated)
+    Q_PROPERTY(QString donateUrl READ donateUrl NOTIFY updated)
+    Q_PROPERTY(QString supportUrl READ supportUrl NOTIFY updated)
     Q_PROPERTY(QString license READ license NOTIFY updated)
     Q_PROPERTY(QString maintainer READ maintainer NOTIFY updated)
     Q_PROPERTY(int fileSize READ fileSize NOTIFY updated)
@@ -83,6 +85,8 @@ public:
     bool isLocalVersionSideloaded() const { return !m_installedVersion.isEmpty() && (m_installedRevision < 1); }
     QString packageUrl() const { return m_packageUrl; }
     QString source() const { return m_source; }
+    QString donateUrl() const { return m_donateUrl; }
+    QString supportUrl() const { return m_supportUrl; }
     QString license() const { return m_license; }
     QString maintainer() const { return m_maintainer; }
     int fileSize() const { return m_fileSize; }
@@ -132,6 +136,8 @@ private:
     int m_revision;
     QString m_version;
     QString m_source;
+    QString m_donateUrl;
+    QString m_supportUrl;
     QString m_license;
     QString m_maintainer;
     int m_fileSize;

@@ -333,12 +333,41 @@ Page {
             }
 
             ListItem {
+                visible: !!app.source
                 onClicked: Qt.openUrlExternally(app.source)
                 ListItemLayout {
                     anchors.centerIn: parent
+
                     title.text: i18n.tr("Source Code")
                     subtitle.text: app.source
-                    ProgressionSlot { visible: app.source }
+
+                    ProgressionSlot {}
+                }
+            }
+
+            ListItem {
+                visible: !!app.supportUrl
+                onClicked: Qt.openUrlExternally(app.supportUrl)
+                ListItemLayout {
+                    anchors.centerIn: parent
+
+                    title.text: i18n.tr("Get support for this app")
+                    subtitle.text: app.supportUrl
+
+                    ProgressionSlot {}
+                }
+            }
+
+            ListItem {
+                visible: !!app.donateUrl
+                onClicked: Qt.openUrlExternally(app.donateUrl)
+                ListItemLayout {
+                    anchors.centerIn: parent
+
+                    title.text: i18n.tr("Donate to support this app")
+                    subtitle.text: app.donateUrl
+
+                    ProgressionSlot {}
                 }
             }
 

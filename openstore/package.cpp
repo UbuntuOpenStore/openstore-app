@@ -93,6 +93,8 @@ void PackageItem::fillData(const QVariantMap &json)
     }
 
     m_source = json.value("source").toString();
+    m_donateUrl = json.value("donate_url").toString();
+    m_supportUrl = json.value("support_url").toString();
     m_license = json.value("license").toString();
     m_maintainer = json.value("maintainer_name").toString();
     m_tagline = json.value("tagline").toString();

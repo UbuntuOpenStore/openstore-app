@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-26 05:14+0000\n"
-"PO-Revision-Date: 2019-01-13 00:00+0000\n"
+"PO-Revision-Date: 2019-03-09 15:09+0000\n"
 "Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
 "Language-Team: Catalan <https://translate.ubports.com/projects/openstore/"
 "openstore-app/ca/>\n"
@@ -101,11 +101,11 @@ msgstr "Codi font"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:354
 msgid "Get support for this app"
-msgstr ""
+msgstr "Suport per aquesta aplicació"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:367
 msgid "Donate to support this app"
-msgstr ""
+msgstr "Donacions per col·laborar amb l'app"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:383

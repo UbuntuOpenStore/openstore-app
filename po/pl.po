@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-26 05:14+0000\n"
-"PO-Revision-Date: 2018-01-06 21:35+0000\n"
+"PO-Revision-Date: 2019-03-03 14:39+0000\n"
 "Last-Translator: Daniel Frańczak <danielfranczak5@wp.pl>\n"
 "Language-Team: Polish <https://translate.ubports.com/projects/openstore/"
 "openstore-app/pl/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Weblate 3.1.1\n"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
@@ -100,11 +100,11 @@ msgstr "Kod źródłowy"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:354
 msgid "Get support for this app"
-msgstr ""
+msgstr "Zgłoś problemy, ulepszenia"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:367
 msgid "Donate to support this app"
-msgstr ""
+msgstr "Przekaż darowiznę na wsparcie tej aplikacji"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:383

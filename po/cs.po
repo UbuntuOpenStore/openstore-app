@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-26 05:14+0000\n"
-"PO-Revision-Date: 2019-01-20 00:00+0000\n"
+"PO-Revision-Date: 2019-03-03 12:42+0000\n"
 "Last-Translator: Milan Korecký <milan.korecky@gmail.com>\n"
 "Language-Team: Czech <https://translate.ubports.com/projects/openstore/"
 "openstore-app/cs/>\n"
@@ -98,11 +98,11 @@ msgstr "Zdrojový kód"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:354
 msgid "Get support for this app"
-msgstr ""
+msgstr "Zažádat o podporu k aplikaci"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:367
 msgid "Donate to support this app"
-msgstr ""
+msgstr "Zaslat dar na podporu aplikace"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:383

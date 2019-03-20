@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-26 05:14+0000\n"
-"PO-Revision-Date: 2019-03-17 00:00+0000\n"
+"PO-Revision-Date: 2019-03-24 00:00+0000\n"
 "Last-Translator: Rúben Carneiro <rubencarneiro01@gmail.com>\n"
 "Language-Team: Portuguese <https://translate.ubports.com/projects/openstore/"
 "openstore-app/pt/>\n"
@@ -240,7 +240,7 @@ msgstr "Tente novamente uma pesquisa diferente."
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:27
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:34
 msgid "My Apps"
-msgstr "As minhas apps"
+msgstr "As minhas Aplicações"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:32
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:26
@@ -256,7 +256,7 @@ msgstr "Atualizações disponíveis (%1)"
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
 #, qt-format
 msgid "Installed apps (%1)"
-msgstr "Apps instaladas (%1)"
+msgstr "Aplicações instaladas (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:113
 msgid "No apps found"
@@ -264,7 +264,7 @@ msgstr "Sem aplicações encontradas"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:114
 msgid "No app has been installed from OpenStore yet."
-msgstr "Ainda sem apps instaladas a partir da OpenStore."
+msgstr "Ainda sem aplicações instaladas a partir da OpenStore."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:237
 msgid "Warning"
@@ -296,7 +296,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:267
 msgid "Use this at your own risk."
-msgstr "Use com sua conta em risco."
+msgstr "Use isso a seu próprio risco."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:271
 msgid "Okay. Got it! I'll be careful."

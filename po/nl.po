@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-26 05:14+0000\n"
-"PO-Revision-Date: 2019-03-31 00:00+0000\n"
+"PO-Revision-Date: 2019-04-08 19:26+0000\n"
 "Last-Translator: Tom Dom <thomas@patoel.nl>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/openstore/"
 "openstore-app/nl/>\n"
@@ -106,7 +106,7 @@ msgstr "Ondersteuning krijgen voor deze app"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:367
 msgid "Donate to support this app"
-msgstr ""
+msgstr "Doneer om deze app te ondersteunen"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:383

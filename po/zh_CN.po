@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Chinese (Simplified) (OpenStore)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-26 05:14+0000\n"
-"PO-Revision-Date: 2019-04-22 13:36+0000\n"
+"PO-Revision-Date: 2019-04-24 21:35+0000\n"
 "Last-Translator: tongsj2333 <hh23333@foxmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.ubports.com/projects/"
 "openstore/openstore-app/zh_Hans/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.2.2\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
 msgid "App details"
@@ -72,7 +72,7 @@ msgstr "已安装的版本"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:312
 msgid "Latest available version"
-msgstr "新的可用版本"
+msgstr "最新的可用版本"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:321
 msgid "First released"

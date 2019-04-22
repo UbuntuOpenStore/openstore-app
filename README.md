@@ -4,7 +4,7 @@ Ubuntu Touch app for the [OpenStore](https://open-store.io/).
 
 ## Reporting Bugs
 
-Please report any bugs/features/requests in our [bug tracker](https://github.com/UbuntuOpenStore/openstore-meta/issues).
+Please report any bugs/features/requests in our [bug tracker](https://gitlab.com/theopenstore/openstore-meta/issues).
 
 ## Translations
 

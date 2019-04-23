@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chinese (Simplified) (OpenStore)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-26 05:14+0000\n"
+"POT-Creation-Date: 2019-04-23 05:00+0000\n"
 "PO-Revision-Date: 2019-03-24 00:00+0000\n"
 "Last-Translator: xiaxiaxiaxia <1534515084@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.ubports.com/projects/"
@@ -241,22 +241,23 @@ msgstr "我的应用程序"
 msgid "Settings"
 msgstr "设置"
 
-#. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
-#, qt-format
-msgid "Available updates (%1)"
-msgstr "可用的更新(%1)"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
+#. TRANSLATORS: %1 is the number of installed apps
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:71
 #, qt-format
 msgid "Installed apps (%1)"
 msgstr "已安装应用(%1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:113
+#. TRANSLATORS: %1 is the number of available app updates
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:75
+#, qt-format
+msgid "Available updates (%1)"
+msgstr "可用的更新(%1)"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:139
 msgid "No apps found"
 msgstr "未找到应用"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:114
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:140
 msgid "No app has been installed from OpenStore yet."
 msgstr "还没有从 OpenStore 安装任何应用。"
 

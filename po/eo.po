@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-26 05:14+0000\n"
+"POT-Creation-Date: 2019-04-23 05:00+0000\n"
 "PO-Revision-Date: 2018-01-25 09:59+0000\n"
 "Last-Translator: Pablo F. <pablo.foche@gmail.com>\n"
 "Language-Team: Esperanto <https://translate.ubports.com/projects/openstore/"
@@ -247,22 +247,23 @@ msgstr "Miaj aplikaĵoj"
 msgid "Settings"
 msgstr "Agordoj"
 
-#. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
-#, qt-format
-msgid "Available updates (%1)"
-msgstr "Disponeblaj ĝisdatigoj (%1)"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
+#. TRANSLATORS: %1 is the number of installed apps
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:71
 #, qt-format
 msgid "Installed apps (%1)"
 msgstr "Instalitaj aplikaĵoj (%1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:113
+#. TRANSLATORS: %1 is the number of available app updates
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:75
+#, qt-format
+msgid "Available updates (%1)"
+msgstr "Disponeblaj ĝisdatigoj (%1)"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:139
 msgid "No apps found"
 msgstr "Neniu aplikaĵo trovita"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:114
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:140
 msgid "No app has been installed from OpenStore yet."
 msgstr "Neniu aplikaĵo instalita per OpenStore ankoraŭ."
 

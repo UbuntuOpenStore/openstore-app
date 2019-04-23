@@ -145,7 +145,7 @@ Page {
 
                     onVisibleChanged: {
                         // The page is automatically closed for channel-incompatible apps when they are removed.
-                        if (!app.installed && !app.channelMatchesOS) {
+                        if (app && !app.installed && !app.channelMatchesOS) {
                             pageStack.pop();
                         }
                     }

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-26 05:14+0000\n"
+"POT-Creation-Date: 2019-04-23 05:00+0000\n"
 "PO-Revision-Date: 2019-02-12 05:38+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/openstore/"
@@ -248,22 +248,23 @@ msgstr "Mijn apps"
 msgid "Settings"
 msgstr "Instellingen"
 
-#. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
-#, qt-format
-msgid "Available updates (%1)"
-msgstr "(%1) beschikbare updates"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
+#. TRANSLATORS: %1 is the number of installed apps
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:71
 #, qt-format
 msgid "Installed apps (%1)"
 msgstr "(%1) geïnstalleerde apps"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:113
+#. TRANSLATORS: %1 is the number of available app updates
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:75
+#, qt-format
+msgid "Available updates (%1)"
+msgstr "(%1) beschikbare updates"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:139
 msgid "No apps found"
 msgstr "Geen apps gevonden"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:114
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:140
 msgid "No app has been installed from OpenStore yet."
 msgstr "Er zijn nog geen apps geïnstalleerd via OpenStore."
 

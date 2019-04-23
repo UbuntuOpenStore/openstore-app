@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-26 05:14+0000\n"
+"POT-Creation-Date: 2019-04-23 05:00+0000\n"
 "PO-Revision-Date: 2017-10-29 17:05+0000\n"
 "Last-Translator: Aitzol Berasategi <aitzol76@gmail.com>\n"
 "Language-Team: Basque <https://translate.ubports.com/projects/openstore/"
@@ -245,22 +245,23 @@ msgstr "Nere Aplikazioak"
 msgid "Settings"
 msgstr ""
 
-#. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
-#, qt-format
-msgid "Available updates (%1)"
-msgstr "Eguneraketa eskuragarriak (%1)"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
+#. TRANSLATORS: %1 is the number of installed apps
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:71
 #, qt-format
 msgid "Installed apps (%1)"
 msgstr "Instalaturiko aplikazioak (%1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:113
+#. TRANSLATORS: %1 is the number of available app updates
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:75
+#, qt-format
+msgid "Available updates (%1)"
+msgstr "Eguneraketa eskuragarriak (%1)"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:139
 msgid "No apps found"
 msgstr "Ez da emaitzarik aurkitu"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:114
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:140
 msgid "No app has been installed from OpenStore yet."
 msgstr "OpenStore-ko aplikaziorik ez da instalatu oraindik."
 

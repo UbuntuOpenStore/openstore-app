@@ -5,32 +5,55 @@ Item {
     id: rootItem
 
     property alias text: sectionLabel.text
-    property alias iconName: icon.name
+    property alias subtext: sectionSublabel.text
+    property alias buttonText: button.text
 
-    anchors { left: parent.left; right: parent.right }
+    signal buttonClicked();
+
+    anchors {
+        left: parent.left
+        right: parent.right
+        margins: units.gu(2)
+    }
     height: units.gu(4)
 
-    Row {
+    Label {
+        id: sectionLabel
         anchors {
-            top: parent.top; topMargin: units.gu(3)
+            top: sectionSublabel.text ? parent.top : undefined
+            topMargin: sectionSublabel.text ? units.gu(2) : 0
             left: parent.left
+            verticalCenter: sectionSublabel.text ? undefined : parent.verticalCenter
+        }
+
+        textSize: Label.Small
+        color: theme.palette.normal.backgroundTertiaryText
+    }
+
+    Label {
+        id: sectionSublabel
+        visible: !!text
+        width: parent.width
+
+        anchors {
+            top: sectionLabel.bottom
+            topMargin: units.gu(1)
+        }
+
+        textSize: Label.XSmall
+        wrapMode: Label.WordWrap
+        color: theme.palette.normal.backgroundTertiaryText
+    }
+
+    Button {
+        id: button
+        anchors {
             right: parent.right
-            margins: units.gu(2)
-        }
-        spacing: units.gu(1)
-
-        Icon {
-            id: icon
-            height: units.gu(2)
-            width: name ? units.gu(2) : 0
-            anchors.verticalCenter: parent.verticalCenter
+            verticalCenter: parent.verticalCenter
         }
 
-        Label {
-            id: sectionLabel
-            anchors.verticalCenter: parent.verticalCenter
-            textSize: Label.Small
-            color: theme.palette.normal.backgroundTertiaryText
-        }
+        visible: !!text
+        color: UbuntuColors.green
+        onClicked: buttonClicked()
     }
 }

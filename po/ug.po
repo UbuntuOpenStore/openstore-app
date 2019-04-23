@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-26 05:14+0000\n"
+"POT-Creation-Date: 2019-04-23 05:00+0000\n"
 "PO-Revision-Date: 2017-08-19 09:05+0000\n"
 "Last-Translator: qutghan <qutghan@outlook.com>\n"
 "Language-Team: Uighur <https://ubpweblate.tnvcomp.com/projects/openstore/"
@@ -248,23 +248,24 @@ msgstr "مېنىڭ ئەپلىرىم"
 msgid "Settings"
 msgstr ""
 
-#. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
-#, fuzzy, qt-format
-msgid "Available updates (%1)"
-msgstr "يېڭلاشقا بۇلىدۇ"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
+#. TRANSLATORS: %1 is the number of installed apps
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:71
 #, fuzzy, qt-format
 msgid "Installed apps (%1)"
 msgstr "قاچىلانغان ئەپلەر"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:113
+#. TRANSLATORS: %1 is the number of available app updates
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:75
+#, fuzzy, qt-format
+msgid "Available updates (%1)"
+msgstr "يېڭلاشقا بۇلىدۇ"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:139
 #, fuzzy
 msgid "No apps found"
 msgstr "ھېچقانداق نەتىجە تېپىلمىدى."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:114
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:140
 #, fuzzy
 msgid "No app has been installed from OpenStore yet."
 msgstr "ئەپ تۈرىدە ھىېچقانداق نەتىجە ئېلان قىلىنمىدى."

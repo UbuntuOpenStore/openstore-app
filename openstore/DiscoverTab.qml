@@ -93,6 +93,7 @@ Page {
                     }
 
                     Image {
+                        id: bannerImage
                         anchors.fill: parent
                         anchors.bottomMargin: units.gu(2)
                         source: discoverModel.highlightBannerUrl || highlightAppControl.appItem.icon
@@ -100,10 +101,17 @@ Page {
                         fillMode: Image.PreserveAspectCrop
                     }
 
+                    ActivityIndicator {
+                        anchors.centerIn: parent
+                        visible: bannerImage.status !== Image.Ready
+                        running: visible
+                    }
+
                     Rectangle {
                         anchors.fill: highlightAppLabels
                         color: "black"
                         opacity: 0.45
+                        visible: bannerImage.status === Image.Ready
                     }
 
                     ListItemLayout {

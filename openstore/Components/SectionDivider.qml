@@ -7,6 +7,7 @@ Item {
     property alias text: sectionLabel.text
     property alias subtext: sectionSublabel.text
     property alias buttonText: button.text
+    property alias buttonEnabled: button.enabled
 
     signal buttonClicked();
 

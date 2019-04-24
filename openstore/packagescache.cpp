@@ -100,6 +100,7 @@ void PackagesCache::updateCacheRevisions()
 
         m_localAppRevision.clear();
         m_remoteAppRevision.clear();
+        m_packageUrls.clear();
 
         QVariantList data = replyMap.value("data").toList();
         Q_FOREACH (QVariant d, data) {
@@ -107,6 +108,7 @@ void PackagesCache::updateCacheRevisions()
             const QString &appId = map.value("id").toString();
             m_localAppRevision.insert(appId, map.value("revision").toInt());
             m_remoteAppRevision.insert(appId, map.value("latest_revision").toInt());
+            m_packageUrls.insert(appId, map.value("download_url").toString());
         }
 
         Q_FOREACH (PackageItem* pkg, m_cache) {

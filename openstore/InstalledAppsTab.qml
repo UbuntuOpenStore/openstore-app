@@ -25,7 +25,26 @@ Page {
     id: rootItem
 
     property var currentApp: null
+    property var appsUpdating: null
+
     property bool updating: (PlatformIntegration.clickInstaller.busy && !PlatformIntegration.clickInstaller.isLocalInstall) || PackagesCache.updatingCache
+
+    function updateNextPackage() {
+        console.log('updateNextPackage', JSON.stringify(appsUpdating));
+
+        if (appsUpdating.length > 0) {
+            var nextApp = appsUpdating.shift();
+            currentApp = nextApp.appId;
+
+            PlatformIntegration.clickInstaller.installPackage(nextApp.packageUrl);
+        }
+    }
+
+    Connections {
+        target: PlatformIntegration.clickInstaller
+        onPackageInstalled: updateNextPackage()
+        onPackageInstallationFailed: updateNextPackage()
+    }
 
     header: PageHeader {
         title: i18n.tr("My Apps")
@@ -88,23 +107,17 @@ Page {
                 buttonEnabled: !PlatformIntegration.clickInstaller.busy
 
                 onButtonClicked: {
+                    var updates = [];
                     for (var i = 0; i < appModel.count; i++) {
                         var app = appModel.get(i);
 
-                        if (app && app.updateStatus == 'available') {
-                            // TODO get the app details and install the update
-                            PackagesCache.packageDetailsReady.connect(slot_currentPackageDetailsReady)
-                            PackagesCache.getPackageDetails(app.appId)
-                            currentApp = app.appId
-                            console.log(app.appId)
+                        if (app && app.updateStatus == 'available' && app.packageUrl) {
+                            updates.push(app);
                         }
                     }
 
-                    function slot_currentPackageDetailsReady(pkg) {
-                        PackagesCache.packageDetailsReady.disconnect(slot_currentPackageDetailsReady)
-                        console.log("Got current pkg. Installing update")
-                        pkg.install()
-                    }
+                    appsUpdating = updates;
+                    updateNextPackage();
                 }
             }
 
@@ -122,29 +135,32 @@ Page {
 
                     title.text: model.name
 
-                    UbuntuShape {
-                        id: appIcon
+                    Item {
                         SlotsLayout.position: SlotsLayout.Leading
-                        opacity: updateSpinner.visible ? .2 : 1
                         width: units.gu(4); height: width
-                        aspect: UbuntuShape.Flat
-                        image: Image {
-                            sourceSize.width: parent.width
-                            sourceSize.height: parent.height
-                            source: model.icon
+
+                        UbuntuShape {
+                            id: appIcon
+                            anchors.fill: parent
+                            opacity: updateSpinner.visible ? .2 : 1
+                            aspect: UbuntuShape.Flat
+                            image: Image {
+                                sourceSize.width: parent.width
+                                sourceSize.height: parent.height
+                                source: model.icon
+                            }
+                        }
+
+                        ActivityIndicator {
+                            id: updateSpinner
+                            width: parent.width - units.gu(1)
+                            height: width
+                            anchors.centerIn: parent
+                            visible: updating && currentApp == model.appId
+                            running: visible
                         }
                     }
 
-                    ActivityIndicator {
-                        id: updateSpinner
-                        width: appIcon.width - units.gu(1)
-                        height: width
-                        anchors.centerIn: appIcon
-                        visible: updating && currentApp == model.appId
-                        running: visible
-                    }
-
-                    // TODO show installing progress bar
 
                     ProgressionSlot {
                         name: updating && currentApp == model.appId ? "close" : "next"

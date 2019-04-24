@@ -35,6 +35,7 @@ QHash<int, QByteArray> PackagesModel::roleNames() const
     roles.insert(RoleIcon, "icon");
     roles.insert(RoleUpdateAvailable, "updateAvailable");
     roles.insert(RoleUpdateStatus, "updateStatus");
+    roles.insert(RolePackageUrl, "packageUrl");
 
     return roles;
 }
@@ -63,6 +64,8 @@ QVariant PackagesModel::data(const QModelIndex & index, int role) const
         return pkg.updateAvailable;
     case RoleUpdateStatus:
         return pkg.updateStatus;
+    case RolePackageUrl:
+        return pkg.packageUrl;
 
     default:
         return QVariant();
@@ -114,6 +117,7 @@ void PackagesModel::refresh()
         LocalPackageItem pkgItem;
         pkgItem.appId = map.value("name").toString();
         pkgItem.name = map.value("title").toString();
+        pkgItem.packageUrl = PackagesCache::instance()->getPackageUrl(pkgItem.appId);
 
         int remoteRevision = PackagesCache::instance()->getRemoteAppRevision(pkgItem.appId);
         int localRevision = PackagesCache::instance()->getLocalAppRevision(pkgItem.appId);

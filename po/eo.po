@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-23 05:00+0000\n"
+"POT-Creation-Date: 2019-04-24 20:00+0000\n"
 "PO-Revision-Date: 2018-01-25 09:59+0000\n"
 "Last-Translator: Pablo F. <pablo.foche@gmail.com>\n"
 "Language-Team: Esperanto <https://translate.ubports.com/projects/openstore/"
@@ -237,33 +237,33 @@ msgstr "Neniu aplikaĵo estis publikigita en ĉi tiu kategorio ankoraŭ."
 msgid "Try with a different search."
 msgstr "Provu alian serĉon."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:27
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:50
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:34
 msgid "My Apps"
 msgstr "Miaj aplikaĵoj"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:32
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:55
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:26
 msgid "Settings"
 msgstr "Agordoj"
 
 #. TRANSLATORS: %1 is the number of installed apps
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:71
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:94
 #, qt-format
 msgid "Installed apps (%1)"
 msgstr "Instalitaj aplikaĵoj (%1)"
 
 #. TRANSLATORS: %1 is the number of available app updates
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:75
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:98
 #, qt-format
 msgid "Available updates (%1)"
 msgstr "Disponeblaj ĝisdatigoj (%1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:139
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:188
 msgid "No apps found"
 msgstr "Neniu aplikaĵo trovita"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:140
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:189
 msgid "No app has been installed from OpenStore yet."
 msgstr "Neniu aplikaĵo instalita per OpenStore ankoraŭ."
 

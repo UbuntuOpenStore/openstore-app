@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-23 05:00+0000\n"
+"POT-Creation-Date: 2019-04-24 20:00+0000\n"
 "PO-Revision-Date: 2017-09-23 11:58+0000\n"
 "Last-Translator: Jeff <jeffi27@live.at>\n"
 "Language-Team: Albanian <https://translate.ubports.com/projects/openstore/"
@@ -235,33 +235,33 @@ msgstr "Asnjë aplikacion nuk është publikuar ende në këtë kategori."
 msgid "Try with a different search."
 msgstr "Provoni me një kërkim të ndryshëm."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:27
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:50
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:34
 msgid "My Apps"
 msgstr "Apps e mia"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:32
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:55
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:26
 msgid "Settings"
 msgstr ""
 
 #. TRANSLATORS: %1 is the number of installed apps
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:71
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:94
 #, qt-format
 msgid "Installed apps (%1)"
 msgstr "App e instaluara (%1)"
 
 #. TRANSLATORS: %1 is the number of available app updates
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:75
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:98
 #, qt-format
 msgid "Available updates (%1)"
 msgstr "Përditësimet e disponueshme (%1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:139
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:188
 msgid "No apps found"
 msgstr "Asnjë App nuk u gjet"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:140
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:189
 msgid "No app has been installed from OpenStore yet."
 msgstr "Asnjë App nuk është instaluar nga OpenStore ende."
 

@@ -12,6 +12,7 @@ struct LocalPackageItem {
     QString icon;
     bool updateAvailable;
     QString updateStatus;
+    QString packageUrl;
 };
 
 class PackagesModel : public QAbstractListModel
@@ -32,6 +33,7 @@ public:
         RoleIcon,
         RoleUpdateAvailable,
         RoleUpdateStatus,
+        RolePackageUrl,
     };
 
     explicit PackagesModel(QAbstractListModel *parent = 0);

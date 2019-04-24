@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-23 05:00+0000\n"
+"POT-Creation-Date: 2019-04-24 20:00+0000\n"
 "PO-Revision-Date: 2019-02-12 05:38+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/openstore/"
@@ -238,33 +238,33 @@ msgstr "Er is nog geen app uitgebracht in deze categorie."
 msgid "Try with a different search."
 msgstr "Probeer een andere zoekopdracht."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:27
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:50
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:34
 msgid "My Apps"
 msgstr "Mijn apps"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:32
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:55
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:26
 msgid "Settings"
 msgstr "Instellingen"
 
 #. TRANSLATORS: %1 is the number of installed apps
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:71
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:94
 #, qt-format
 msgid "Installed apps (%1)"
 msgstr "(%1) geïnstalleerde apps"
 
 #. TRANSLATORS: %1 is the number of available app updates
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:75
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:98
 #, qt-format
 msgid "Available updates (%1)"
 msgstr "(%1) beschikbare updates"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:139
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:188
 msgid "No apps found"
 msgstr "Geen apps gevonden"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:140
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:189
 msgid "No app has been installed from OpenStore yet."
 msgstr "Er zijn nog geen apps geïnstalleerd via OpenStore."
 

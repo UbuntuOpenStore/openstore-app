@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-26 05:14+0000\n"
-"PO-Revision-Date: 2019-03-09 15:09+0000\n"
+"PO-Revision-Date: 2019-04-26 20:37+0000\n"
 "Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
 "Language-Team: Catalan <https://translate.ubports.com/projects/openstore/"
 "openstore-app/ca/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.2.2\n"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
@@ -34,7 +34,7 @@ msgid ""
 "You can install the latest stable update by tapping the button below."
 msgstr ""
 "La versió instal·lada de l'aplicació no ve del servidor de l'OpenStore. "
-"Podeu instal·lar-ne la última actualització «estable» tocant al botó de sota."
+"Podeu instal·lar-ne la última actualització «estable» tocant el botó de sota."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:118
 msgid "Upgrade"
@@ -392,7 +392,7 @@ msgstr "Control parental"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:64
 msgid "Hide adult-oriented content"
-msgstr "Amagar contingut per a adults"
+msgstr "Amaga el contingut per a adults"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:74
 msgid ""
@@ -408,7 +408,7 @@ msgstr "Desenvolupadors"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:91
 msgid "Manage your apps on OpenStore"
-msgstr "Gestionar les seves aplicacions en l'OpenStore"
+msgstr "Gestioneu les vostres aplicacions a l'OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:97
 msgid "About OpenStore"
@@ -416,7 +416,7 @@ msgstr "Quant a l'OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:113
 msgid "Report an issue"
-msgstr "Informar de un problema"
+msgstr "Informeu d'un problema"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Back"

@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: Chinese (Simplified) (OpenStore)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-26 05:14+0000\n"
-"PO-Revision-Date: 2019-03-24 00:00+0000\n"
-"Last-Translator: xiaxiaxiaxia <1534515084@qq.com>\n"
+"PO-Revision-Date: 2019-04-24 21:35+0000\n"
+"Last-Translator: tongsj2333 <hh23333@foxmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.ubports.com/projects/"
 "openstore/openstore-app/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.2.2\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
 msgid "App details"
@@ -72,7 +72,7 @@ msgstr "已安装的版本"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:312
 msgid "Latest available version"
-msgstr "新的可用版本"
+msgstr "最新的可用版本"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:321
 msgid "First released"
@@ -92,14 +92,12 @@ msgid "Source Code"
 msgstr "源代码"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:354
-#, fuzzy
 msgid "Get support for this app"
 msgstr "获得对此应用的支持"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:367
-#, fuzzy
 msgid "Donate to support this app"
-msgstr "捐赠以支持这个应用"
+msgstr "捐赠以支持此应用"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:383

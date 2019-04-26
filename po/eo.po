@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-24 20:00+0000\n"
+"POT-Creation-Date: 2019-04-26 04:07+0000\n"
 "PO-Revision-Date: 2018-01-25 09:59+0000\n"
 "Last-Translator: Pablo F. <pablo.foche@gmail.com>\n"
 "Language-Team: Esperanto <https://translate.ubports.com/projects/openstore/"
@@ -41,7 +41,7 @@ msgid "Upgrade"
 msgstr "Ĝisdatigi"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:118
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:305
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
 msgid "Install"
 msgstr "Instali"
 
@@ -154,7 +154,7 @@ msgid "Do you want to remove %1?"
 msgstr "Ĉu vi volas forigi %1?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:596
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:313
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:334
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
 msgstr "Nuligi"
@@ -185,12 +185,12 @@ msgstr "%1 bajtoj"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesPage.qml:24
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesTab.qml:90
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:32
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:36
 msgid "Categories"
 msgstr "Kategorioj"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:29
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:31
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:35
 msgid "Discover"
 msgstr "Malkovri"
 
@@ -238,7 +238,7 @@ msgid "Try with a different search."
 msgstr "Provu alian serĉon."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:50
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:34
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:38
 msgid "My Apps"
 msgstr "Miaj aplikaĵoj"
 
@@ -267,11 +267,11 @@ msgstr "Neniu aplikaĵo trovita"
 msgid "No app has been installed from OpenStore yet."
 msgstr "Neniu aplikaĵo instalita per OpenStore ankoraŭ."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:237
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:258
 msgid "Warning"
 msgstr "Averto"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:246
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:267
 msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
@@ -279,7 +279,7 @@ msgstr ""
 "OpenStore ebligas instali nelimigitajn aplikaĵojn. Bv. certiĝi pri tio ke vi "
 "konas ĝiajn implikaĵojn."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:253
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:274
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
@@ -287,7 +287,7 @@ msgstr ""
 "Nelimigita aplikaĵo povus rompi la sistemon, redukti ĝian rapidecon kaj/aŭ "
 "spioni vin."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:260
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:281
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
@@ -295,58 +295,58 @@ msgstr ""
 "Kvankam ni faras tion kion ni kapablas por eviti ĝin kontrolante la "
 "aplikaĵojn, ni ne prenas sur ni la respondecon se io malbona okazas."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:267
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:288
 msgid "Use this at your own risk."
 msgstr "Uzu ĉi tion sur via propra respondeco."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:271
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:292
 msgid "Okay. Got it! I'll be careful."
 msgstr "Enorde. Mi komprenis! Mi estos zorgema."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:278
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:299
 msgid "Get me out of here!"
 msgstr "Mi volas eliri!"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:291
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:312
 msgid "Install app?"
 msgstr "Ĉu instali aplikaĵon?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:292
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:313
 #, qt-format
 msgid "Do you want to install %1?"
 msgstr "Ĉu vi volas instali %1?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:333
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:354
 msgid "App installed"
 msgstr "Aplikaĵo instalita"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:334
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:355
 msgid "The app has been installed successfully."
 msgstr "La aplikaĵo estis instalita sukcese."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:337
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:350
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:365
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:358
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:371
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:386
 msgid "OK"
 msgstr "Jes"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:346
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:367
 msgid "Installation failed"
 msgstr "Instalado malsukcesis"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:347
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:368
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 "La pakaĵo ne povis esti instalita. Certiĝu pri tio ke ĝi estas valida click-"
 "pakaĵo."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:361
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:382
 #, qt-format
 msgid "Installation failed (Error %1)"
 msgstr "Instalado malsukcesis (Eraro %1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:33
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:37
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15
 msgid "Search"
 msgstr "Serĉi"

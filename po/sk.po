@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-24 20:00+0000\n"
+"POT-Creation-Date: 2019-04-26 04:07+0000\n"
 "PO-Revision-Date: 2017-09-20 21:51+0000\n"
 "Last-Translator: Peter Valachovič <peter.valachovic@gmail.com>\n"
 "Language-Team: Slovak <https://translate.ubports.com/projects/openstore/"
@@ -39,7 +39,7 @@ msgid "Upgrade"
 msgstr "Aktualizácia"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:118
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:305
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
 msgid "Install"
 msgstr "Inštalovať"
 
@@ -152,7 +152,7 @@ msgid "Do you want to remove %1?"
 msgstr "Naozaj odstrániť %1?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:596
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:313
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:334
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
 msgstr "Zrušiť"
@@ -183,12 +183,12 @@ msgstr "%1 bajtov"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesPage.qml:24
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesTab.qml:90
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:32
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:36
 msgid "Categories"
 msgstr "Kategórie"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:29
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:31
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:35
 msgid "Discover"
 msgstr "Objavovať"
 
@@ -236,7 +236,7 @@ msgid "Try with a different search."
 msgstr "Skús hľadať inak."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:50
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:34
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:38
 msgid "My Apps"
 msgstr "Moje aplikácie"
 
@@ -265,11 +265,11 @@ msgstr "Nenájdené žiadne aplikácie"
 msgid "No app has been installed from OpenStore yet."
 msgstr "Z OpenStore ešte nebolo nič naišntalované."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:237
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:258
 msgid "Warning"
 msgstr "Upozornenie"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:246
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:267
 msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
@@ -277,7 +277,7 @@ msgstr ""
 "OpenStore dovoľuje inštaláciu neobmedzených aplikácii. Uistite sa, že viete, "
 "čo to znamená."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:253
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:274
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
@@ -285,7 +285,7 @@ msgstr ""
 "Neobmedzená aplikácia má možnosť poškodiť systém, znížiť jeho výkonnosť a/"
 "alebo sledovať užívateľa."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:260
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:281
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
@@ -293,58 +293,58 @@ msgstr ""
 "Hoc aj hodnotením aplikácií robíme všetko, aby sme tomu zabránili, neberieme "
 "žiadnu zodpovednosť, ak niečo predsa prekĺzne."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:267
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:288
 msgid "Use this at your own risk."
 msgstr "Použitie na vlastné riziko."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:271
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:292
 msgid "Okay. Got it! I'll be careful."
 msgstr "Dobre. Rozumiem! Budem opatrný."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:278
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:299
 msgid "Get me out of here!"
 msgstr "Chcem odtiaľto preč!"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:291
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:312
 msgid "Install app?"
 msgstr "Nainštalovať apku?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:292
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:313
 #, qt-format
 msgid "Do you want to install %1?"
 msgstr "Chceš inštalovať %1?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:333
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:354
 msgid "App installed"
 msgstr "Apka nainštalovaná"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:334
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:355
 msgid "The app has been installed successfully."
 msgstr "Apka bola úspešne nainštalovaná."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:337
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:350
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:365
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:358
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:371
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:386
 msgid "OK"
 msgstr "Dobre"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:346
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:367
 msgid "Installation failed"
 msgstr "Inštalácia zlyhala"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:347
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:368
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 "Balíček sa nepodarilo nainštalovať. Treba skontrolovať či je to platný \"klik"
 "\" balíček."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:361
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:382
 #, qt-format
 msgid "Installation failed (Error %1)"
 msgstr "Inštalácia zlyhala (Error %1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:33
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:37
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15
 msgid "Search"
 msgstr "Hľadať"

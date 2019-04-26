@@ -23,6 +23,10 @@ PageTreeNode {
         view.item.categoryClicked(name, id)
     }
 
+    function openMyApps() {
+        tabView.selectedIndex = 3; // My Apps
+    }
+
     Components.ConvergentTabView {
         id: tabView
         anchors.fill: parent

@@ -174,8 +174,12 @@ Page {
                 }
 
                 onClicked: {
-                    PackagesCache.packageDetailsReady.connect(slot_installedPackageDetailsReady)
-                    PackagesCache.getPackageDetails(model.appId)
+                    if (updating && currentApp == model.appId) {
+                        onTriggered: PlatformIntegration.clickInstaller.abortInstallation()
+                    } else {
+                        PackagesCache.packageDetailsReady.connect(slot_installedPackageDetailsReady)
+                        PackagesCache.getPackageDetails(model.appId)
+                    }
                 }
             }
         }

@@ -161,7 +161,6 @@ Page {
                         }
                     }
 
-
                     ProgressionSlot {
                         name: updating && currentApp == model.appId ? "close" : "next"
                     }

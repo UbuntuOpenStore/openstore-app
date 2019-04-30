@@ -161,7 +161,6 @@ Page {
                         }
                     }
 
-
                     ProgressionSlot {
                         name: updating && currentApp == model.appId ? "close" : "next"
                     }
@@ -174,8 +173,12 @@ Page {
                 }
 
                 onClicked: {
-                    PackagesCache.packageDetailsReady.connect(slot_installedPackageDetailsReady)
-                    PackagesCache.getPackageDetails(model.appId)
+                    if (updating && currentApp == model.appId) {
+                        PlatformIntegration.clickInstaller.abortInstallation()
+                    } else {
+                        PackagesCache.packageDetailsReady.connect(slot_installedPackageDetailsReady)
+                        PackagesCache.getPackageDetails(model.appId)
+                    }
                 }
             }
         }

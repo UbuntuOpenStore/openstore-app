@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-26 05:14+0000\n"
+"POT-Creation-Date: 2019-04-26 04:07+0000\n"
 "PO-Revision-Date: 2018-02-09 18:01+0000\n"
 "Last-Translator: Ivan Semkin <ivan@semkin.ru>\n"
 "Language-Team: Russian <https://translate.ubports.com/projects/openstore/"
@@ -42,7 +42,7 @@ msgid "Upgrade"
 msgstr "Обновить"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:118
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:305
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
 msgid "Install"
 msgstr "Установить"
 
@@ -155,7 +155,7 @@ msgid "Do you want to remove %1?"
 msgstr "Вы действительно хотите удалить %1?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:596
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:313
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:334
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
 msgstr "Отменить"
@@ -186,12 +186,12 @@ msgstr "%1 байт"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesPage.qml:24
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesTab.qml:90
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:32
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:36
 msgid "Categories"
 msgstr "Категории"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:29
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:31
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:35
 msgid "Discover"
 msgstr "Исследовать"
 
@@ -238,40 +238,41 @@ msgstr "В этой категории ещё не было выпущено п�
 msgid "Try with a different search."
 msgstr "Попробуйте изменить параметры поиска."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:27
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:34
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:50
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:38
 msgid "My Apps"
 msgstr "Мои приложения"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:32
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:55
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:26
 msgid "Settings"
 msgstr "Настройки"
 
-#. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
-#, qt-format
-msgid "Available updates (%1)"
-msgstr "Доступны обновления (%1)"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
+#. TRANSLATORS: %1 is the number of installed apps
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:94
 #, qt-format
 msgid "Installed apps (%1)"
 msgstr "Установленные приложения (%1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:113
+#. TRANSLATORS: %1 is the number of available app updates
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:98
+#, qt-format
+msgid "Available updates (%1)"
+msgstr "Доступны обновления (%1)"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:188
 msgid "No apps found"
 msgstr "Нет приложений, отвечающих параметрам запроса"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:114
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:189
 msgid "No app has been installed from OpenStore yet."
 msgstr "Отсутствуют приложения, установленные из OpenStore."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:237
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:258
 msgid "Warning"
 msgstr "Внимание"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:246
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:267
 msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
@@ -279,7 +280,7 @@ msgstr ""
 "OpenStore позволяет устанавливать «не изолированные» приложения. Пожалуйста, "
 "убедитесь, что вы понимаете все последствия этого."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:253
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:274
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
@@ -287,7 +288,7 @@ msgstr ""
 "«Не изолированное» приложение может вывести из строя систему, уменьшить её "
 "производительность и/или шпионить за вами."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:260
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:281
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
@@ -296,56 +297,56 @@ msgstr ""
 "приложения, мы не берём на себя никакой ответственности, если вредоносное "
 "приложение не будет выявлено вовремя."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:267
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:288
 msgid "Use this at your own risk."
 msgstr "Используйте на свой риск."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:271
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:292
 msgid "Okay. Got it! I'll be careful."
 msgstr "Хорошо. Я понял! Я буду осторожен."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:278
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:299
 msgid "Get me out of here!"
 msgstr "Заберите меня отсюда!"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:291
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:312
 msgid "Install app?"
 msgstr "Установить приложение?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:292
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:313
 #, qt-format
 msgid "Do you want to install %1?"
 msgstr "Вы уверены, что хотите установить %1?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:333
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:354
 msgid "App installed"
 msgstr "Приложение установлено"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:334
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:355
 msgid "The app has been installed successfully."
 msgstr "Приложение успешно установлено."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:337
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:350
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:365
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:358
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:371
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:386
 msgid "OK"
 msgstr "OK"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:346
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:367
 msgid "Installation failed"
 msgstr "Ошибка установки"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:347
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:368
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr "Не удалось установить пакет. Убедитесь, что это правильный клик-пакет."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:361
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:382
 #, qt-format
 msgid "Installation failed (Error %1)"
 msgstr "Не удалось произвести установку (Ошибка %1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:33
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:37
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15
 msgid "Search"
 msgstr "Поиск"

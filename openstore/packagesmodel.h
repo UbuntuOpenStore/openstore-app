@@ -11,6 +11,8 @@ struct LocalPackageItem {
     QString appId;
     QString icon;
     bool updateAvailable;
+    QString updateStatus;
+    QString packageUrl;
 };
 
 class PackagesModel : public QAbstractListModel
@@ -20,6 +22,7 @@ class PackagesModel : public QAbstractListModel
     Q_PROPERTY(int count READ rowCount NOTIFY updated)
     Q_PROPERTY(bool ready READ ready NOTIFY readyChanged)
     Q_PROPERTY(int updatesAvailableCount READ updatesAvailableCount NOTIFY updated)
+    Q_PROPERTY(int downgradesAvailableCount READ downgradesAvailableCount NOTIFY updated)
     Q_PROPERTY(QString appStoreAppId MEMBER m_appStoreAppId NOTIFY appStoreAppIdChanged)
     Q_PROPERTY(bool appStoreUpdateAvailable READ appStoreUpdateAvailable NOTIFY appStoreUpdateAvailableChanged)
 
@@ -29,6 +32,8 @@ public:
         RoleAppId,
         RoleIcon,
         RoleUpdateAvailable,
+        RoleUpdateStatus,
+        RolePackageUrl,
     };
 
     explicit PackagesModel(QAbstractListModel *parent = 0);
@@ -39,10 +44,12 @@ public:
 
     bool ready() const { return m_ready; }
     int updatesAvailableCount() const;
+    int downgradesAvailableCount() const;
 
     bool appStoreUpdateAvailable() const { return m_appStoreUpdateAvailable; }
 
     Q_INVOKABLE void refresh();
+    Q_INVOKABLE QVariantMap get(int row);
 
 Q_SIGNALS:
     void countChanged();

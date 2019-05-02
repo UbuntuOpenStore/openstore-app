@@ -60,21 +60,30 @@ MainView {
             })
         }
 
-        if (cmdArgs[1].length) {
-            root.appIdToOpen = cmdArgs[1].split("://")[1];
+        var appIdToOpen = null;
+        if (cmdArgs[1] && cmdArgs[1].length) {
+            console.log('url ', cmdArgs[1]);
+            appIdToOpen = cmdArgs[1].split("://")[1];
         }
 
         if (args.values.url && args.values.url.match(/^openstore:/)) {
             console.log('url ', args.values.url);
-            root.appIdToOpen =  args.values.url.split("://")[1];
+            appIdToOpen =  args.values.url.split("://")[1];
         }
         else if (Qt.application.arguments && Qt.application.arguments.length > 0) {
             for (var i = 0; i < Qt.application.arguments.length; i++) {
                 if (Qt.application.arguments[i].match(/^openstore:/)) {
                     console.log('url ', Qt.application.arguments[i]);
-                    root.appIdToOpen = Qt.application.arguments[i].split("://")[1];
+                    appIdToOpen = Qt.application.arguments[i].split("://")[1];
                 }
             }
+        }
+
+        if (appIdToOpen == 'my-apps' || appIdToOpen == 'updates') {
+            mainPage.openMyApps();
+        }
+        else {
+            root.appIdToOpen = appIdToOpen;
         }
     }
 
@@ -104,9 +113,19 @@ MainView {
         target: UriHandler
         onOpened: {
             var appId = uris[0].split("://")[1]
-            console.log("Fetching " + appId + " for UriHandler request")
-            PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady)
-            PackagesCache.getPackageDetails(appId)
+
+            if (appId == 'my-apps' || appId == 'updates') {
+                console.log('Opening "My Apps" from UriHandler request');
+
+                bottomEdgeStack.clear();
+                mainPage.openMyApps();
+            }
+            else {
+                console.log("Fetching " + appId + " for UriHandler request");
+                PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady);
+                PackagesCache.getPackageDetails(appId);
+            }
+
         }
     }
 

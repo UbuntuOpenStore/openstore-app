@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-26 05:14+0000\n"
+"POT-Creation-Date: 2019-04-26 04:07+0000\n"
 "PO-Revision-Date: 2017-08-19 09:05+0000\n"
 "Last-Translator: qutghan <qutghan@outlook.com>\n"
 "Language-Team: Uighur <https://ubpweblate.tnvcomp.com/projects/openstore/"
@@ -38,7 +38,7 @@ msgid "Upgrade"
 msgstr "يېڭلانما"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:118
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:305
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
 msgid "Install"
 msgstr "ئورنات"
 
@@ -153,7 +153,7 @@ msgid "Do you want to remove %1?"
 msgstr "سىز راستىنلا ئۈچۈرۈپ %1 تاشلامسىز؟"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:596
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:313
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:334
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
 msgstr "بىكار قىل"
@@ -184,12 +184,12 @@ msgstr "تەرجىمان: %1  بولسا ھۆججەت چوڭ كىچىكلىكى 
 
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesPage.qml:24
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesTab.qml:90
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:32
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:36
 msgid "Categories"
 msgstr "تۈر"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:29
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:31
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:35
 msgid "Discover"
 msgstr "بايقاش"
 
@@ -238,42 +238,43 @@ msgstr "ئەپ تۈرىدە ھىېچقانداق نەتىجە ئېلان قىل�
 msgid "Try with a different search."
 msgstr "باشقا نامدا ئىزدەپ سىناپ كۈرۈڭ."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:27
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:34
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:50
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:38
 msgid "My Apps"
 msgstr "مېنىڭ ئەپلىرىم"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:32
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:55
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:26
 msgid "Settings"
 msgstr ""
 
-#. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
-#, fuzzy, qt-format
-msgid "Available updates (%1)"
-msgstr "يېڭلاشقا بۇلىدۇ"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
+#. TRANSLATORS: %1 is the number of installed apps
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:94
 #, fuzzy, qt-format
 msgid "Installed apps (%1)"
 msgstr "قاچىلانغان ئەپلەر"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:113
+#. TRANSLATORS: %1 is the number of available app updates
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:98
+#, fuzzy, qt-format
+msgid "Available updates (%1)"
+msgstr "يېڭلاشقا بۇلىدۇ"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:188
 #, fuzzy
 msgid "No apps found"
 msgstr "ھېچقانداق نەتىجە تېپىلمىدى."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:114
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:189
 #, fuzzy
 msgid "No app has been installed from OpenStore yet."
 msgstr "ئەپ تۈرىدە ھىېچقانداق نەتىجە ئېلان قىلىنمىدى."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:237
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:258
 msgid "Warning"
 msgstr "اگاھلاندۇرۇش"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:246
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:267
 msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
@@ -281,7 +282,7 @@ msgstr ""
 "OpenStore   بولسا ئەمەلىيى قوللىنىشچان پىروگىراممىلارنى قاچىلاشقا رۇخسەت "
 "قىلىدۇ.بۇ نى بىلشىڭز كېرەك."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:253
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:274
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
@@ -289,7 +290,7 @@ msgstr ""
 "بۇ مەشغۇلاتىڭز سىستېمىغا زىيان يەتكۈزۈشى مومكىن.بەلكىم سىتما باشقىلار "
 "تەرپىتىن كونتىرول قىلىنىشى ياكى كۈزىتىلىش ئېھتىمالىقى بار."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:260
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:281
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
@@ -297,56 +298,56 @@ msgstr ""
 "ئەگەر بىز ھازىر ئەپلەرنى تەكشۈرۈپ خەتەرنىڭ ئالدىنى ئالمىساق كىلىپ چىققان "
 "ئاقىۋاتكە ئۈزىڭز ئىگە."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:267
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:288
 msgid "Use this at your own risk."
 msgstr "ئىشلەتسىڭز سىستېمىڭزغا خەتەر يېتىشى مومكىن."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:271
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:292
 msgid "Okay. Got it! I'll be careful."
 msgstr "بۇلىدۇ.مەن چۈشەندىم !مەن ئېھتىيات قىلىمەن."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:278
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:299
 msgid "Get me out of here!"
 msgstr "مېنى چىقىرۋەت!"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:291
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:312
 msgid "Install app?"
 msgstr "ئەپ ئورنىتامسىز؟"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:292
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:313
 #, qt-format
 msgid "Do you want to install %1?"
 msgstr "ئەپ %1 ئورناتماقچىمۇ؟"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:333
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:354
 msgid "App installed"
 msgstr "ئەپ ئورنىتمەن"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:334
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:355
 msgid "The app has been installed successfully."
 msgstr "ئەپ قاچىلاندى."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:337
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:350
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:365
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:358
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:371
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:386
 msgid "OK"
 msgstr "OK"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:346
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:367
 msgid "Installation failed"
 msgstr "قاچىلاش مەغلۇپ بولدى"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:347
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:368
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr "ئەپ بوخچىسىنى قاچىلانمىدى.ئەپ بوخچىسىدا مەسلە بۇلىشى بومكىن."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:361
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:382
 #, fuzzy, qt-format
 msgid "Installation failed (Error %1)"
 msgstr "قاچىلاش مەغلۇپ بولدى"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:33
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:37
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15
 msgid "Search"
 msgstr "ئىزدە"

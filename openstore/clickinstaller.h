@@ -30,7 +30,7 @@ Q_SIGNALS:
     void packageInstallationFailed();
 
 public Q_SLOTS:
-    void installPackage(const QString &packageUrl, const bool isLocalInstall = false);
+    Q_INVOKABLE void installPackage(const QString &packageUrl, const bool isLocalInstall = false);
     void removePackage(const QString &appId, const QString &version);
     bool abortInstallation() const;
 

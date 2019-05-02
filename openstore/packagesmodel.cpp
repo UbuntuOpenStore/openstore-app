@@ -34,6 +34,8 @@ QHash<int, QByteArray> PackagesModel::roleNames() const
     roles.insert(RoleAppId, "appId");
     roles.insert(RoleIcon, "icon");
     roles.insert(RoleUpdateAvailable, "updateAvailable");
+    roles.insert(RoleUpdateStatus, "updateStatus");
+    roles.insert(RolePackageUrl, "packageUrl");
 
     return roles;
 }
@@ -60,6 +62,10 @@ QVariant PackagesModel::data(const QModelIndex & index, int role) const
         return pkg.icon;
     case RoleUpdateAvailable:
         return pkg.updateAvailable;
+    case RoleUpdateStatus:
+        return pkg.updateStatus;
+    case RolePackageUrl:
+        return pkg.packageUrl;
 
     default:
         return QVariant();
@@ -71,7 +77,20 @@ int PackagesModel::updatesAvailableCount() const
     int result = 0;
 
     Q_FOREACH (const LocalPackageItem &pkg, m_list) {
-        if (pkg.updateAvailable) {
+        if (pkg.updateStatus == QStringLiteral("available")) {
+            ++result;
+        }
+    }
+
+    return result;
+}
+
+int PackagesModel::downgradesAvailableCount() const
+{
+    int result = 0;
+
+    Q_FOREACH (const LocalPackageItem &pkg, m_list) {
+        if (pkg.updateStatus == QStringLiteral("downgrade")) {
             ++result;
         }
     }
@@ -98,7 +117,21 @@ void PackagesModel::refresh()
         LocalPackageItem pkgItem;
         pkgItem.appId = map.value("name").toString();
         pkgItem.name = map.value("title").toString();
-        pkgItem.updateAvailable = bool(PackagesCache::instance()->getRemoteAppRevision(pkgItem.appId) > PackagesCache::instance()->getLocalAppRevision(pkgItem.appId));
+        pkgItem.packageUrl = PackagesCache::instance()->getPackageUrl(pkgItem.appId);
+
+        int remoteRevision = PackagesCache::instance()->getRemoteAppRevision(pkgItem.appId);
+        int localRevision = PackagesCache::instance()->getLocalAppRevision(pkgItem.appId);
+        pkgItem.updateAvailable = bool(remoteRevision > localRevision);
+
+        if (localRevision == 0) {
+            pkgItem.updateStatus = QStringLiteral("downgrade");
+        }
+        else if (pkgItem.updateAvailable) {
+            pkgItem.updateStatus = QStringLiteral("available");
+        }
+        else {
+            pkgItem.updateStatus = QStringLiteral("none");
+        }
 
         //pkgItem.icon = map.value("icon").toString();
         if (pkgItem.icon.isEmpty()) {
@@ -153,4 +186,19 @@ void PackagesModel::refresh()
 
     Q_EMIT updated();
     MODEL_END_REFRESH();
+}
+
+QVariantMap PackagesModel::get(int row) {
+    QHash<int,QByteArray> names = roleNames();
+    QHashIterator<int, QByteArray> ittr(names);
+    QVariantMap map;
+    while (ittr.hasNext()) {
+        ittr.next();
+
+        QModelIndex idx = index(row, 0);
+        QVariant data = idx.data(ittr.key());
+        map[ittr.value()] = data;
+    }
+
+    return map;
 }

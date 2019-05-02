@@ -23,6 +23,7 @@ public:
 
     int getLocalAppRevision(const QString &appId) const { return m_localAppRevision.value(appId, -1); }
     int getRemoteAppRevision(const QString &appId) const { return m_remoteAppRevision.value(appId, -1); }
+    QString getPackageUrl(const QString &appId) const { return m_packageUrls.value(appId, QStringLiteral("")); }
 
     int numberOfInstalledAppsInStore() const { return m_remoteAppRevision.count(); }
 
@@ -39,6 +40,7 @@ private:
     QHash<QString, PackageItem*> m_cache;
     QHash<QString, int> m_remoteAppRevision; // appid, revision
     QHash<QString, int> m_localAppRevision; // appid, revision
+    QHash<QString, QString> m_packageUrls; // appid, packageUrl
 
     QString m_signature;
     bool m_updatingCache;

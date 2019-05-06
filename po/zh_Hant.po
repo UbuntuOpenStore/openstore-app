@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-26 04:07+0000\n"
-"PO-Revision-Date: 2019-03-05 00:11+0000\n"
+"POT-Creation-Date: 2019-02-26 05:14+0000\n"
+"PO-Revision-Date: 2019-05-03 21:02+0000\n"
 "Last-Translator: louies0623 <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
 "openstore/openstore-app/zh_Hant/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.6.1\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
 msgid "App details"
@@ -31,16 +31,14 @@ msgstr "開啟"
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
-msgstr ""
-"此應用程序的已安裝版本不是來自OpenStore服務器。 您可以點擊下面的按鈕安裝最新"
-"的穩定更新。"
+msgstr "此應用程式的已安裝版本不是來自 OpenStore 的伺服器。 您可以點擊下面的按鈕安裝最新的穩定更新。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:118
 msgid "Upgrade"
 msgstr "升級"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:118
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:305
 msgid "Install"
 msgstr "安裝"
 
@@ -89,7 +87,7 @@ msgstr "許可証"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:331
 msgid "N/A"
-msgstr "N/A"
+msgstr "沒有"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:341
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:104
@@ -108,13 +106,13 @@ msgstr "贊助來支援此應用程式"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:383
 #, qt-format
 msgid "More from %1"
-msgstr "更多來自％1"
+msgstr "更多來自 %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:398
 #, qt-format
 msgid "Other apps in %1"
-msgstr "％1的其他應用程式"
+msgstr "%1 的其他應用程式"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:404
 msgid "Package contents"
@@ -122,7 +120,7 @@ msgstr "封裝內容"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:484
 msgid "AppArmor profile"
-msgstr "AppArmor配置文件"
+msgstr "AppArmor 配置文件"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:511
 msgid "Permissions"
@@ -148,10 +146,10 @@ msgstr "刪除封包"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:580
 #, qt-format
 msgid "Do you want to remove %1?"
-msgstr "要刪除％1嗎？"
+msgstr "要刪除 %1 嗎？"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:596
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:334
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:313
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
 msgstr "取消"
@@ -172,7 +170,7 @@ msgstr "%1 MB"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:623
 #, qt-format
 msgid "%1 kB"
-msgstr "%1 kB"
+msgstr "%1 KB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:626
@@ -182,19 +180,19 @@ msgstr "%1 位元組"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesPage.qml:24
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesTab.qml:90
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:36
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:32
 msgid "Categories"
 msgstr "分類"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:29
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:35
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:31
 msgid "Discover"
 msgstr "發現"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:51
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:28
 msgid "Search in OpenStore..."
-msgstr "在Open Store中搜尋..."
+msgstr "在 Open Store 中搜尋..."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:125
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:56
@@ -234,53 +232,52 @@ msgstr "此類別尚未發布任何應用程式。"
 msgid "Try with a different search."
 msgstr "嘗試使用不同的搜尋。"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:50
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:38
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:27
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:34
 msgid "My Apps"
 msgstr "我的應用程式"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:55
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:32
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:26
 msgid "Settings"
-msgstr "設定"
+msgstr "設置"
 
-#. TRANSLATORS: %1 is the number of installed apps
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:94
-#, qt-format
-msgid "Installed apps (%1)"
-msgstr "已安裝應用程式（％1）"
-
-#. TRANSLATORS: %1 is the number of available app updates
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:98
+#. TRANSLATORS: %1 is the number of items in a given section ("Available updates" or "Installed apps")
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
 #, qt-format
 msgid "Available updates (%1)"
-msgstr "可用的更新（%1）"
+msgstr "可用的更新 (%1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:188
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:69
+#, qt-format
+msgid "Installed apps (%1)"
+msgstr "已安裝應用程式 (%1)"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:113
 msgid "No apps found"
 msgstr "未找到應用程式"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:189
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:114
 msgid "No app has been installed from OpenStore yet."
-msgstr "尚未從OpenStore安裝任何應用程式。"
+msgstr "尚未從 OpenStore 安裝任何應用程式。"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:258
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:237
 msgid "Warning"
 msgstr "注意"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:267
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:246
 msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
-msgstr "OpenStore將允許安裝不受限制的應用程式。請確保你知道它的風險。"
+msgstr "OpenStore 將允許安裝不受限制的應用程式。請確保你知道它的風險。"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:274
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:253
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
 msgstr "不受限制的應用程式具有能力破壞系統，降低安全性能或者監視您的行動。"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:281
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:260
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
@@ -288,56 +285,56 @@ msgstr ""
 "雖然我們正在盡最大努力通過審核申請來防止這種情況，但如果出現問題，我們不承擔"
 "任何責任。"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:288
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:267
 msgid "Use this at your own risk."
 msgstr "使用此風險需要您自行擔。"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:292
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:271
 msgid "Okay. Got it! I'll be careful."
-msgstr "是的!安裝它，我會小心的。"
+msgstr "是的！安裝它，我會小心的。"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:299
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:278
 msgid "Get me out of here!"
-msgstr "不!帶我離開這裡!"
+msgstr "不!帶我離開這裡！"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:312
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:291
 msgid "Install app?"
 msgstr "要安裝應用程式嗎?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:313
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:292
 #, qt-format
 msgid "Do you want to install %1?"
-msgstr "要安裝％1嗎?"
+msgstr "您確定要安裝 %1 嗎?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:354
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:333
 msgid "App installed"
 msgstr "已安裝"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:355
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:334
 msgid "The app has been installed successfully."
 msgstr "該應用程式已成功安裝。"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:358
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:371
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:386
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:337
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:350
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:365
 msgid "OK"
 msgstr "好的"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:367
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:346
 msgid "Installation failed"
 msgstr "安裝失敗"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:368
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:347
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr "無法安裝該軟體。確保它是有效的軟體封包。"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:382
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:361
 #, qt-format
 msgid "Installation failed (Error %1)"
-msgstr "安裝失敗(錯誤％1)"
+msgstr "安裝失敗 (錯誤 %1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:37
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:33
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15
 msgid "Search"
 msgstr "搜尋"
@@ -364,11 +361,11 @@ msgstr "需要密碼"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passphrase (default is 0000)"
-msgstr "密碼（預設密碼為0000）"
+msgstr "密碼 (預設密碼為 0000)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passcode (default is 0000)"
-msgstr "密碼（預設密碼為0000）"
+msgstr "密碼 (預設密碼為 0000)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:71
 msgid "Authentication failed. Please retry"
@@ -398,11 +395,11 @@ msgstr "開發商"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:91
 msgid "Manage your apps on OpenStore"
-msgstr "在OpenStore上管理您的應用程式"
+msgstr "在 OpenStore 上管理您的應用程式"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:97
 msgid "About OpenStore"
-msgstr "關於OpenStore"
+msgstr "關於 OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:113
 msgid "Report an issue"
@@ -427,7 +424,7 @@ msgstr "觀查"
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:64
 msgid "URL Handler"
-msgstr "URL處理程序"
+msgstr "URL 處理程序"
 
 #. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:78

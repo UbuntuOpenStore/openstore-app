@@ -82,17 +82,21 @@ Page {
                     id: highlightAppControl
 
                     property var appItem: discoverModel.getPackage(discoverModel.highlightAppId)
+                    property bool ready: bannerImage.status === Image.Ready
 
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: Math.min(parent.width, units.gu(80))
                     height: width * 0.5
 
                     onClicked: {
-                        var pageProps = { app: highlightAppControl.appItem }
-                        bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), pageProps)
+                        if (highlightAppControl.ready) {
+                            var pageProps = { app: highlightAppControl.appItem }
+                            bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), pageProps)
+                        }
                     }
 
                     Image {
+                        id: bannerImage
                         anchors.fill: parent
                         anchors.bottomMargin: units.gu(2)
                         source: discoverModel.highlightBannerUrl || highlightAppControl.appItem.icon
@@ -100,10 +104,17 @@ Page {
                         fillMode: Image.PreserveAspectCrop
                     }
 
+                    ActivityIndicator {
+                        anchors.centerIn: parent
+                        visible: !highlightAppControl.ready
+                        running: visible
+                    }
+
                     Rectangle {
                         anchors.fill: highlightAppLabels
                         color: "black"
                         opacity: 0.45
+                        visible: highlightAppControl.ready
                     }
 
                     ListItemLayout {

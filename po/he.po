@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-26 04:07+0000\n"
+"POT-Creation-Date: 2019-05-08 04:05+0000\n"
 "PO-Revision-Date: 2018-03-04 19:49+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.ubports.com/projects/openstore/"
@@ -40,7 +40,7 @@ msgid "Upgrade"
 msgstr "שדרוג"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:118
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:324
 msgid "Install"
 msgstr "התקנה"
 
@@ -49,6 +49,10 @@ msgstr "התקנה"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:587
 msgid "Remove"
 msgstr "הסרה"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:187
+msgid "This app is not compatible with your system."
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:228
 msgid "This app has access to restricted system data, see below for details."
@@ -151,7 +155,7 @@ msgid "Do you want to remove %1?"
 msgstr "להסיר את %1?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:596
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:334
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:332
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
 msgstr "ביטול"
@@ -196,25 +200,25 @@ msgstr "לגלות"
 msgid "Search in OpenStore..."
 msgstr "חיפוש ב־OpenStore…"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:125
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:133
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:56
 msgid "Update available"
 msgstr "יש עדכון"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:126
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:134
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:56
 msgid "✓ Installed"
 msgstr "✓ מותקן"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:145
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:153
 msgid "OpenStore update available"
 msgstr "יש עדכון זמין ב־OpenStore"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:146
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:154
 msgid "Update OpenStore now!"
 msgstr "כדאי לעדכן את OpenStore עכשיו!"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:152
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:160
 msgid "Details"
 msgstr "פרטים"
 
@@ -256,19 +260,39 @@ msgstr "יישומונים מותקנים (%1)"
 msgid "Available updates (%1)"
 msgstr "עדכונים זמינים (%1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:188
+#. TRANSLATORS: %1 is the number of apps that can be downgraded
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
+#, qt-format
+msgid "Stable version available (%1)"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:105
+#, fuzzy
+msgid ""
+"The installed versions of these apps did not come from the OpenStore but a "
+"stable version is available."
+msgstr ""
+"מקורה של גרסת היישומון המותקנת הוא אינו שרת ה־OpenStore. ניתן להתקין את "
+"העדכון היציב העדכני ביותר על ידי נגיעה בכפתור שלהלן."
+
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:106
+#, fuzzy
+msgid "Update all"
+msgstr "יש עדכון"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:191
 msgid "No apps found"
 msgstr "לא נמצאו יישומונים"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:189
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:192
 msgid "No app has been installed from OpenStore yet."
 msgstr "עדיין לא הותקנו יישומונים מה־OpenStore."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:258
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:256
 msgid "Warning"
 msgstr "אזהרה"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:267
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:265
 msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
@@ -276,14 +300,14 @@ msgstr ""
 "OpenStore מאפשרת התקנה של יישומונים בלתי מוגבלים. נא לוודא שהשלכות המהלך "
 "ברורות לך."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:274
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:272
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
 msgstr ""
 "יישומון בלתי מוגבל עלול לגרום לשיבוש במערכת, להורדת ביצועים ו/או לעקוב אחריך."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:281
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:279
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
@@ -291,51 +315,51 @@ msgstr ""
 "למרות שאנחנו עושים כמיטב יכולתנו למנוע מצב שכזה על ידי סקירת היישומונים, "
 "איננו לוקחים אחריות אם משהו זדוני חומק מעיננו."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:288
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:286
 msgid "Use this at your own risk."
 msgstr "יש להשתמש בזה באחריותך בלבד."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:292
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:290
 msgid "Okay. Got it! I'll be careful."
 msgstr "בסדר. הבנתי! אזהר."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:299
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:297
 msgid "Get me out of here!"
 msgstr "תוציאו אותי מפה!"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:312
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:310
 msgid "Install app?"
 msgstr "להתקין את היישומון?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:313
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:311
 #, qt-format
 msgid "Do you want to install %1?"
 msgstr "להתקין את %1?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:354
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:352
 msgid "App installed"
 msgstr "היישומון הותקן"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:355
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:353
 msgid "The app has been installed successfully."
 msgstr "היישומון הותקן בהצלחה."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:358
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:371
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:386
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:356
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:369
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:384
 msgid "OK"
 msgstr "בסדר"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:367
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:365
 msgid "Installation failed"
 msgstr "ההתקנה נכשלה"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:368
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:366
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr "לא ניתן להתקין חבילה. נא לוודא שהחבילה היא חבילת click תקינה."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:382
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:380
 #, qt-format
 msgid "Installation failed (Error %1)"
 msgstr "ההתקנה נכשלה (שגיאה %1)"

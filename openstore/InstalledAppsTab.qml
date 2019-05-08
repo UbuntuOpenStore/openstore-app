@@ -99,11 +99,11 @@ Page {
                     }
 
                     // TRANSLATORS: %1 is the number of apps that can be downgraded
-                    return i18n.tr('Stable version available (%1)'.arg(appModel.downgradesAvailableCount));
+                    return i18n.tr("Stable version available (%1)".arg(appModel.downgradesAvailableCount));
                 }
 
-                subtext: (section == 'downgrade') ? i18n.tr('The installed versions of these apps did not come from the OpenStore but a stable version is available.') : '';
-                buttonText: (section == 'available') ? i18n.tr('Update all') : ''
+                subtext: (section == 'downgrade') ? i18n.tr("The installed versions of these apps did not come from the OpenStore but a stable version is available.") : '';
+                buttonText: (section == 'available') ? i18n.tr("Update all") : ''
                 buttonEnabled: !PlatformIntegration.clickInstaller.busy
 
                 onButtonClicked: {

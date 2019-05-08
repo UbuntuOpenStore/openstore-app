@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-26 04:07+0000\n"
+"POT-Creation-Date: 2019-05-08 04:05+0000\n"
 "PO-Revision-Date: 2018-01-18 23:32+0000\n"
 "Last-Translator: Noock <nklowns@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://translate.ubports.com/projects/"
@@ -41,7 +41,7 @@ msgid "Upgrade"
 msgstr "Atualizar"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:118
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:324
 msgid "Install"
 msgstr "Instalar"
 
@@ -50,6 +50,10 @@ msgstr "Instalar"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:587
 msgid "Remove"
 msgstr "Remover"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:187
+msgid "This app is not compatible with your system."
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:228
 msgid "This app has access to restricted system data, see below for details."
@@ -154,7 +158,7 @@ msgid "Do you want to remove %1?"
 msgstr "Deseja remover %1?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:596
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:334
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:332
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
 msgstr "Cancelar"
@@ -199,25 +203,25 @@ msgstr "Explorar"
 msgid "Search in OpenStore..."
 msgstr "Procurar na OpenStore..."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:125
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:133
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:56
 msgid "Update available"
 msgstr "Atualização disponível"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:126
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:134
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:56
 msgid "✓ Installed"
 msgstr "✓ Instalado"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:145
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:153
 msgid "OpenStore update available"
 msgstr "Atualização da OpenStore disponível"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:146
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:154
 msgid "Update OpenStore now!"
 msgstr "Atualize a OpenStore agora!"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:152
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:160
 msgid "Details"
 msgstr "Detalhes"
 
@@ -259,19 +263,39 @@ msgstr "Apps instalados (%1)"
 msgid "Available updates (%1)"
 msgstr "Atualizações disponíveis (%1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:188
+#. TRANSLATORS: %1 is the number of apps that can be downgraded
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
+#, qt-format
+msgid "Stable version available (%1)"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:105
+#, fuzzy
+msgid ""
+"The installed versions of these apps did not come from the OpenStore but a "
+"stable version is available."
+msgstr ""
+"A versão instalada não é do servidor da OpenStore. Pode instalar a última "
+"versão estável ao tocar no botão em baixo."
+
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:106
+#, fuzzy
+msgid "Update all"
+msgstr "Atualização disponível"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:191
 msgid "No apps found"
 msgstr "Nenhum app encontrado"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:189
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:192
 msgid "No app has been installed from OpenStore yet."
 msgstr "Sem apps instalados a partir da OpenStore."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:258
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:256
 msgid "Warning"
 msgstr "Aviso"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:267
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:265
 msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
@@ -279,7 +303,7 @@ msgstr ""
 "A OpenStore permite a instalação de aplicações não confirmadas. Por favor, "
 "certifique-se quais as suas implicações."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:274
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:272
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
@@ -287,7 +311,7 @@ msgstr ""
 "Uma aplicação não confirmada tem a possibilidade de quebrar o sistema, "
 "reduzir a performance ou rastreá-lo."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:281
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:279
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
@@ -295,51 +319,51 @@ msgstr ""
 "Enquanto nós estamos fazendo nosso melhor ao analisar os aplicativos, não "
 "assumimos qualquer responsabilidade por qualquer aplicativo."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:288
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:286
 msgid "Use this at your own risk."
 msgstr "Use com sua conta em risco."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:292
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:290
 msgid "Okay. Got it! I'll be careful."
 msgstr "Ok. Entendi! Serei cuidadoso."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:299
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:297
 msgid "Get me out of here!"
 msgstr "Tire-me daqui!"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:312
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:310
 msgid "Install app?"
 msgstr "Instalar aplicação?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:313
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:311
 #, qt-format
 msgid "Do you want to install %1?"
 msgstr "Deseja instalar %1?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:354
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:352
 msgid "App installed"
 msgstr "Aplicativo instalado"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:355
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:353
 msgid "The app has been installed successfully."
 msgstr "O aplicativo foi instalado com sucesso."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:358
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:371
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:386
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:356
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:369
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:384
 msgid "OK"
 msgstr "OK"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:367
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:365
 msgid "Installation failed"
 msgstr "A instalação falhou"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:368
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:366
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr "O pacote não pode ser instalado. Assegure-se que é um pacote válido."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:382
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:380
 #, qt-format
 msgid "Installation failed (Error %1)"
 msgstr "A instalação falhou (Erro %1)"

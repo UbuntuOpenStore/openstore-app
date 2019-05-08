@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-26 04:07+0000\n"
+"POT-Creation-Date: 2019-05-08 04:05+0000\n"
 "PO-Revision-Date: 2017-09-23 11:58+0000\n"
 "Last-Translator: Jeff <jeffi27@live.at>\n"
 "Language-Team: Albanian <https://translate.ubports.com/projects/openstore/"
@@ -39,7 +39,7 @@ msgid "Upgrade"
 msgstr "Përditëso"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:118
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:324
 msgid "Install"
 msgstr "Instalo"
 
@@ -48,6 +48,10 @@ msgstr "Instalo"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:587
 msgid "Remove"
 msgstr "Hiqe"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:187
+msgid "This app is not compatible with your system."
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:228
 msgid "This app has access to restricted system data, see below for details."
@@ -152,7 +156,7 @@ msgid "Do you want to remove %1?"
 msgstr "Dëshiron të hiqësh %1?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:596
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:334
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:332
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
 msgstr "Anulo"
@@ -197,25 +201,25 @@ msgstr "Zbulo"
 msgid "Search in OpenStore..."
 msgstr "Kërko në OpenStore…"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:125
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:133
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:56
 msgid "Update available"
 msgstr "Përditësim i disponueshëm"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:126
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:134
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:56
 msgid "✓ Installed"
 msgstr "✓ Instaluar"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:145
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:153
 msgid "OpenStore update available"
 msgstr "Përditësimi i OpenStore në dispozicion"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:146
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:154
 msgid "Update OpenStore now!"
 msgstr "Përditëso OpenStore tani!"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:152
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:160
 msgid "Details"
 msgstr "Detajet"
 
@@ -257,19 +261,36 @@ msgstr "App e instaluara (%1)"
 msgid "Available updates (%1)"
 msgstr "Përditësimet e disponueshme (%1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:188
+#. TRANSLATORS: %1 is the number of apps that can be downgraded
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
+#, qt-format
+msgid "Stable version available (%1)"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:105
+msgid ""
+"The installed versions of these apps did not come from the OpenStore but a "
+"stable version is available."
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:106
+#, fuzzy
+msgid "Update all"
+msgstr "Përditësim i disponueshëm"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:191
 msgid "No apps found"
 msgstr "Asnjë App nuk u gjet"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:189
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:192
 msgid "No app has been installed from OpenStore yet."
 msgstr "Asnjë App nuk është instaluar nga OpenStore ende."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:258
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:256
 msgid "Warning"
 msgstr "Paralajmërim"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:267
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:265
 msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
@@ -277,7 +298,7 @@ msgstr ""
 "OpenStore lejon instalimin e aplikacioneve të paspecifikuara. Ju lutemi "
 "sigurohuni që ju të dini për implikimet e kësaj."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:274
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:272
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
@@ -285,7 +306,7 @@ msgstr ""
 "Një aplikacion i konfirmuar ka aftësinë për të thyer sistemin, për të "
 "reduktuar performancën e tij dhe / ose për të spiunuar mbi ju."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:281
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:279
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
@@ -293,53 +314,53 @@ msgstr ""
 "Ndërkohë që po bëjmë çmos për të parandaluar që duke shqyrtuar aplikimet, ne "
 "nuk marrim asnjë përgjegjësi nëse diçka e keqe rrëshqet përmes."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:288
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:286
 msgid "Use this at your own risk."
 msgstr "Përdoreni këtë në përgjegjësinë tuaj."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:292
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:290
 msgid "Okay. Got it! I'll be careful."
 msgstr "Mirë. E kuptova! Unë do të jem i kujdesshëm."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:299
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:297
 msgid "Get me out of here!"
 msgstr "Më nxirr nga këtu!"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:312
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:310
 msgid "Install app?"
 msgstr "Instalo app?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:313
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:311
 #, qt-format
 msgid "Do you want to install %1?"
 msgstr "Dëshiron të instalosh %1?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:354
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:352
 msgid "App installed"
 msgstr "App është instaluar"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:355
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:353
 msgid "The app has been installed successfully."
 msgstr "Aplikacioni është instaluar me sukses."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:358
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:371
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:386
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:356
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:369
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:384
 msgid "OK"
 msgstr "OK"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:367
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:365
 msgid "Installation failed"
 msgstr "Instalimi dështoi"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:368
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:366
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 "Paketa nuk mund të instalohej. Sigurohuni që është një paketë click e "
 "vlefshme."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:382
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:380
 #, qt-format
 msgid "Installation failed (Error %1)"
 msgstr "Instalimi dështoi (Gabim %1)"

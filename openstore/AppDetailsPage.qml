@@ -184,7 +184,7 @@ Page {
                 ListItemLayout {
                     // Layout shown when the app is not compatible with the system.
                     id: mismatchLayout
-                    subtitle.text: i18n.tr('This app is not compatible with your system.')
+                    subtitle.text: i18n.tr("This app is not compatible with your system.")
                     subtitle.maximumLineCount: Number.MAX_VALUE
                     subtitle.wrapMode: Text.WordWrap
                     visible: !app.channelMatchesOS && !PlatformIntegration.clickInstaller.busy && !PackagesCache.updatingCache

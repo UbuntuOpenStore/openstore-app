@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-08 04:05+0000\n"
-"PO-Revision-Date: 2019-03-03 14:39+0000\n"
+"PO-Revision-Date: 2019-05-10 21:02+0000\n"
 "Last-Translator: Daniel Frańczak <danielfranczak5@wp.pl>\n"
 "Language-Team: Polish <https://translate.ubports.com/projects/openstore/"
 "openstore-app/pl/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
@@ -54,7 +54,7 @@ msgstr "Usuń"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:187
 msgid "This app is not compatible with your system."
-msgstr ""
+msgstr "Ta aplikacja nie jest kompatybilna z Twoim systemem."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:228
 msgid "This app has access to restricted system data, see below for details."
@@ -266,21 +266,19 @@ msgstr "Dostępne aktualizacje (%1)"
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
 #, qt-format
 msgid "Stable version available (%1)"
-msgstr ""
+msgstr "Dostępna stabilna wersja (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:105
-#, fuzzy
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
 msgstr ""
-"Zainstalowana wersja aplikacji nie zawiera serwera OpenStore. Możesz "
-"zainstalować najnowszą, stabilną wersję klikając przycisk poniżej."
+"Zainstalowane wersje tych aplikacji nie pochodzą z OpenStore, ale dostępna "
+"jest stabilna wersja."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:106
-#, fuzzy
 msgid "Update all"
-msgstr "Dostępne aktualizacje"
+msgstr "Zaktualizuj wszystkie"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:191
 msgid "No apps found"

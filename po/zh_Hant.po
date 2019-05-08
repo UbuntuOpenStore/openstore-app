@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-08 04:05+0000\n"
-"PO-Revision-Date: 2019-05-03 21:02+0000\n"
+"PO-Revision-Date: 2019-05-10 21:02+0000\n"
 "Last-Translator: louies0623 <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
 "openstore/openstore-app/zh_Hant/>\n"
@@ -52,7 +52,7 @@ msgstr "移除"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:187
 msgid "This app is not compatible with your system."
-msgstr ""
+msgstr "此應用程式與您的系統不相容。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:228
 msgid "This app has access to restricted system data, see below for details."
@@ -81,11 +81,11 @@ msgstr "已安裝的版本"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:312
 msgid "Latest available version"
-msgstr "最新版本"
+msgstr "最新可用版本"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:321
 msgid "First released"
-msgstr "最先發布"
+msgstr "最先發佈"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:330
 msgid "License"
@@ -152,7 +152,7 @@ msgstr "刪除封包"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:580
 #, qt-format
 msgid "Do you want to remove %1?"
-msgstr "要刪除 %1 嗎？"
+msgstr "您想要刪除 %1 嗎？"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:596
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:332
@@ -264,21 +264,17 @@ msgstr "可用的更新 (%1)"
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
 #, qt-format
 msgid "Stable version available (%1)"
-msgstr ""
+msgstr "有可用的穩定版本 (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:105
-#, fuzzy
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
-msgstr ""
-"此應用程式的已安裝版本不是來自 OpenStore 的伺服器。 您可以點擊下面的按鈕安裝"
-"最新的穩定更新。"
+msgstr "此應用程式的已安裝版本不是來自 OpenStore 的伺服器，但有提供了穩定版本。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:106
-#, fuzzy
 msgid "Update all"
-msgstr "有可用的更新"
+msgstr "全部更新"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:191
 msgid "No apps found"
@@ -335,7 +331,7 @@ msgstr "您確定要安裝 %1 嗎?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:352
 msgid "App installed"
-msgstr "已安裝"
+msgstr "應用程式已安裝"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:353
 msgid "The app has been installed successfully."

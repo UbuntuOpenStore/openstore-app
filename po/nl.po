@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-08 04:05+0000\n"
-"PO-Revision-Date: 2019-04-08 19:26+0000\n"
+"PO-Revision-Date: 2019-05-13 20:02+0000\n"
 "Last-Translator: Tom Dom <thomas@patoel.nl>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/openstore/"
 "openstore-app/nl/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
@@ -54,7 +54,7 @@ msgstr "Verwijderen"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:187
 msgid "This app is not compatible with your system."
-msgstr ""
+msgstr "Deze app is niet compatibel met het systeem."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:228
 msgid "This app has access to restricted system data, see below for details."
@@ -268,22 +268,19 @@ msgstr "(%1) beschikbare updates"
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
 #, qt-format
 msgid "Stable version available (%1)"
-msgstr ""
+msgstr "Beschikbare stabiele versies (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:105
-#, fuzzy
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
 msgstr ""
-"De geïnstalleerde versie van deze app is niet afkomstig van de OpenStore-"
-"server. Je kunt de meest recente stabiele update installeren door op de knop "
-"hieronder te drukken."
+"De geïnstalleerde versie van deze app is niet afkomstig van de OpenStore, "
+"maar een stabiele versie is beschikbaar."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:106
-#, fuzzy
 msgid "Update all"
-msgstr "Update beschikbaar"
+msgstr "Update alles"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:191
 msgid "No apps found"

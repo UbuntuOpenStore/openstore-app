@@ -98,7 +98,7 @@ Page {
                 }
 
                 ListItem {
-                    onClicked: Qt.openUrlExternally("https://github.com/UbuntuOpenStore/openstore-app")
+                    onClicked: Qt.openUrlExternally("https://gitlab.com/theopenstore/openstore-app")
                     ListItemLayout {
                         anchors.centerIn: parent
                         title.text: i18n.tr("Source Code")

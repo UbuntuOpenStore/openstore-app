@@ -106,7 +106,7 @@ public:
     Q_INVOKABLE QString writePaths(int index) { return m_hooks.at(index).writePaths.join(", "); }
     int hooksCount() const { return m_hooks.count(); }
     bool containsApp() const { Q_FOREACH (const HookStruct &hook, m_hooks) { if (hook.hooks & HookDesktop) return true; } return false; }
-    bool updateAvailable() const { return !m_installedVersion.isEmpty() && (m_revision > m_installedRevision); }
+    bool updateAvailable() const { return !m_installedVersion.isEmpty() && (m_revision > m_installedRevision) && m_installedRevision > 0; }
 
     Q_INVOKABLE bool install() const;
     Q_INVOKABLE bool remove() const;

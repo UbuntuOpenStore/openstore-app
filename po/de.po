@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-08 04:05+0000\n"
+"POT-Creation-Date: 2019-06-13 03:43+0000\n"
 "PO-Revision-Date: 2019-05-10 21:02+0000\n"
 "Last-Translator: Christian <christian-pauly@posteo.de>\n"
 "Language-Team: German <https://translate.ubports.com/projects/openstore/"
@@ -41,7 +41,7 @@ msgid "Upgrade"
 msgstr "Aktualisieren"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:118
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:324
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:297
 msgid "Install"
 msgstr "Installieren"
 
@@ -157,7 +157,7 @@ msgid "Do you want to remove %1?"
 msgstr "Möchten Sie %1 deinstallieren?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:596
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:332
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:305
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
 msgstr "Abbruch"
@@ -202,25 +202,25 @@ msgstr "Entdecken"
 msgid "Search in OpenStore..."
 msgstr "Den OpenStore durchsuchen..."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:133
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:136
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:56
 msgid "Update available"
 msgstr "Aktualisierung verfügbar"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:134
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:137
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:56
 msgid "✓ Installed"
 msgstr "✓ Installiert"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:153
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:156
 msgid "OpenStore update available"
 msgstr "OpenStore Aktualisierung verfügbar"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:154
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:157
 msgid "Update OpenStore now!"
 msgstr "OpenStore jetzt aktualisieren!"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:160
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:163
 msgid "Details"
 msgstr "Details"
 
@@ -288,11 +288,11 @@ msgstr "Keine Apps gefunden"
 msgid "No app has been installed from OpenStore yet."
 msgstr "Bisher wurden keine Apps aus OpenStore installiert."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:256
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:229
 msgid "Warning"
 msgstr "Hinweis"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:265
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:238
 msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
@@ -300,7 +300,7 @@ msgstr ""
 "OpenStore ermöglicht die Installation uneingeschränkter Apps. Seien Sie sich "
 "über die Folgen im Klaren."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:272
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:245
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
@@ -308,7 +308,7 @@ msgstr ""
 "Eine App ohne Zugriffsbeschränkung kann das System beschädigen, die "
 "Performance beeinträchtigen oder den Nutzer ausspionieren."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:279
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:252
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
@@ -316,53 +316,53 @@ msgstr ""
 "Wir geben uns Mühe, die Apps einer manuellen Prüfung zu unterziehen, können "
 "jedoch nicht dafür garantieren, dass wir nichts übersehen."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:286
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:259
 msgid "Use this at your own risk."
 msgstr "Benutzen Sie diese App auf eigene Gefahr."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:290
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:263
 msgid "Okay. Got it! I'll be careful."
 msgstr "Ok. Ich habe verstanden! Ich werde vorsichtig sein."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:297
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:270
 msgid "Get me out of here!"
 msgstr "Nichts wie raus hier!"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:310
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:283
 msgid "Install app?"
 msgstr "App installieren?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:311
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:284
 #, qt-format
 msgid "Do you want to install %1?"
 msgstr "Möchten Sie %1 installieren?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:352
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:325
 msgid "App installed"
 msgstr "App installiert"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:353
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
 msgid "The app has been installed successfully."
 msgstr "Die App wurde erfolgreich installiert."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:356
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:369
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:384
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:329
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:342
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:357
 msgid "OK"
 msgstr "OK"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:365
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:338
 msgid "Installation failed"
 msgstr "Installation fehlgeschlagen"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:366
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:339
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 "Das Paket konnte nicht installiert werden. Stellen Sie sicher, dass es ein "
 "gültiges Clickpaket ist."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:380
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:353
 #, qt-format
 msgid "Installation failed (Error %1)"
 msgstr "Installation fehlgeschlagen (Fehler %1)"

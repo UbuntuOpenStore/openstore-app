@@ -31,16 +31,34 @@ MainView {
     width: units.gu(130)
     height: units.gu(75)
 
-    property string appIdToOpen
     property var mainPage
 
-    Arguments {
-        id: args
-        Argument {
-            name: 'url'
-            help: i18n.tr('Startup url')
-            required: false
-            valueNames: ['URL']
+    function slot_packageDetailsReady(pkg) {
+        PackagesCache.packageDetailsReady.disconnect(slot_packageDetailsReady)
+        bottomEdgeStack.clear()
+        bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
+    }
+
+    function parseUrl(url) {
+        var result = "";
+        if (url.match(/^(openstore|http[s]?):\/\/(open-store\.io\/app\/)?.*/)) {
+            // Get last part of path as ID to open, and strip the /
+            result = url.substr(url.lastIndexOf("/") + 1);
+        }
+        return result;
+    }
+
+    function loadAppId(appId) {
+        if (appId == 'my-apps' || appId == 'updates') {
+            console.log('Opening "My Apps" from URL request');
+
+            bottomEdgeStack.clear();
+            mainPage.openMyApps();
+        }
+        else {
+            console.log("Fetching package details for %1".arg(appId));
+            PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady);
+            PackagesCache.getPackageDetails(appId);
         }
     }
 
@@ -60,30 +78,14 @@ MainView {
             })
         }
 
-        var appIdToOpen = null;
-        if (cmdArgs[1] && cmdArgs[1].length) {
-            console.log('url ', cmdArgs[1]);
-            appIdToOpen = cmdArgs[1].split("://")[1];
+        var appIdToOpen = "";
+        var appArgs = Qt.application.arguments;
+        for (var i = 0; i < appArgs.length; i++) {
+            appIdToOpen = parseUrl(appArgs[i]);
         }
 
-        if (args.values.url && args.values.url.match(/^openstore:/)) {
-            console.log('url ', args.values.url);
-            appIdToOpen =  args.values.url.split("://")[1];
-        }
-        else if (Qt.application.arguments && Qt.application.arguments.length > 0) {
-            for (var i = 0; i < Qt.application.arguments.length; i++) {
-                if (Qt.application.arguments[i].match(/^openstore:/)) {
-                    console.log('url ', Qt.application.arguments[i]);
-                    appIdToOpen = Qt.application.arguments[i].split("://")[1];
-                }
-            }
-        }
-
-        if (appIdToOpen == 'my-apps' || appIdToOpen == 'updates') {
-            mainPage.openMyApps();
-        }
-        else {
-            root.appIdToOpen = appIdToOpen;
+        if (appIdToOpen != "") {
+            loadAppId(appIdToOpen);
         }
     }
 
@@ -103,29 +105,10 @@ MainView {
         }
     }
 
-    function slot_packageDetailsReady(pkg) {
-        PackagesCache.packageDetailsReady.disconnect(slot_packageDetailsReady)
-        bottomEdgeStack.clear()
-        bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
-    }
-
     Connections {
         target: UriHandler
         onOpened: {
-            var appId = uris[0].split("://")[1]
-
-            if (appId == 'my-apps' || appId == 'updates') {
-                console.log('Opening "My Apps" from UriHandler request');
-
-                bottomEdgeStack.clear();
-                mainPage.openMyApps();
-            }
-            else {
-                console.log("Fetching " + appId + " for UriHandler request");
-                PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady);
-                PackagesCache.getPackageDetails(appId);
-            }
-
+            loadAppId(parseUrl(uris[0]));
         }
     }
 
@@ -168,16 +151,6 @@ MainView {
 
     property QtObject appModel: AppModel {
         appStoreAppId: root.applicationName
-
-        onReadyChanged: {
-            if (ready && root.appIdToOpen != "") {
-                console.log("Fetching " + root.appIdToOpen + " for UriHandler request at launch");
-
-                PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady);
-                PackagesCache.getPackageDetails(root.appIdToOpen);
-                root.appIdToOpen = "";
-            }
-        }
     }
     property QtObject categoriesModel: CategoriesModel { }
     property QtObject discoverModel: DiscoverModel { }

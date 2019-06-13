@@ -1,5 +1,13 @@
 [
     {
         "protocol": "openstore"
+    },
+    {
+        "protocol": "http",
+        "domain-suffix": "open-store.io"
+    },
+    {
+        "protocol": "https",
+        "domain-suffix": "open-store.io"
     }
 ]

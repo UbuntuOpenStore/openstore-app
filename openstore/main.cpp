@@ -73,8 +73,6 @@ int main(int argc, char *argv[])
 
     QObject::connect(view.engine(), &QQmlEngine::quit, &app, &QGuiApplication::quit);
 
-    view.engine()->rootContext()->setContextProperty("cmdArgs", app.arguments());
-
     // This applies to QML requests only
     CachingNetworkManagerFactory *managerFactory = new CachingNetworkManagerFactory();
     view.engine()->setNetworkAccessManagerFactory(managerFactory);

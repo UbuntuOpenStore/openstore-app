@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chinese (Simplified) (OpenStore)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-13 03:43+0000\n"
+"POT-Creation-Date: 2019-06-19 03:56+0000\n"
 "PO-Revision-Date: 2019-04-24 21:35+0000\n"
 "Last-Translator: tongsj2333 <hh23333@foxmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.ubports.com/projects/"
@@ -91,7 +91,7 @@ msgid "N/A"
 msgstr "N/A"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:341
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:104
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:106
 msgid "Source Code"
 msgstr "源代码"
 
@@ -411,19 +411,11 @@ msgid ""
 "content."
 msgstr "通过输入密码，您将对显示的 NSFW 内容承担全部的责任。"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:84
-msgid "Developers"
-msgstr "开发者"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:91
-msgid "Manage your apps on OpenStore"
-msgstr "在 OpenStore 上管理应用程序"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:97
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:99
 msgid "About OpenStore"
 msgstr "关于 OpenStore"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:113
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:115
 msgid "Report an issue"
 msgstr "报告问题"
 
@@ -468,6 +460,12 @@ msgstr "帐号提供商"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
 msgstr "选择"
+
+#~ msgid "Developers"
+#~ msgstr "开发者"
+
+#~ msgid "Manage your apps on OpenStore"
+#~ msgstr "在 OpenStore 上管理应用程序"
 
 #~ msgid "Fetching package list..."
 #~ msgstr "正在获取软件包列表..."

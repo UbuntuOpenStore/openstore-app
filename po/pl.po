@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-13 03:43+0000\n"
+"POT-Creation-Date: 2019-06-19 03:56+0000\n"
 "PO-Revision-Date: 2019-05-10 21:02+0000\n"
 "Last-Translator: Daniel Frańczak <danielfranczak5@wp.pl>\n"
 "Language-Team: Polish <https://translate.ubports.com/projects/openstore/"
@@ -98,7 +98,7 @@ msgid "N/A"
 msgstr "B/D"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:341
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:104
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:106
 msgid "Source Code"
 msgstr "Kod źródłowy"
 
@@ -427,19 +427,11 @@ msgstr ""
 "Wpisując hasło bierzesz pełną odpowiedzialność za pokazywanie treści dla "
 "dorosłych."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:84
-msgid "Developers"
-msgstr "Programiści"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:91
-msgid "Manage your apps on OpenStore"
-msgstr "Zarządzaj swoimi aplikacjami w OpenStore"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:97
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:99
 msgid "About OpenStore"
 msgstr "O OpenStore"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:113
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:115
 msgid "Report an issue"
 msgstr "Zgłoś błąd"
 
@@ -484,6 +476,12 @@ msgstr "Dostawca kont"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
 msgstr "Wybierz"
+
+#~ msgid "Developers"
+#~ msgstr "Programiści"
+
+#~ msgid "Manage your apps on OpenStore"
+#~ msgstr "Zarządzaj swoimi aplikacjami w OpenStore"
 
 #~ msgid "Fetching package list..."
 #~ msgstr "Pobieranie listy pakietów..."

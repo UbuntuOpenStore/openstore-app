@@ -80,6 +80,7 @@ Page {
                     }
                 }
 
+                /*
                 Components.SectionDivider {
                     text: i18n.tr("Developers")
                 }
@@ -92,6 +93,7 @@ Page {
                         ProgressionSlot {}
                     }
                 }
+                */
 
                 Components.SectionDivider {
                     text: i18n.tr("About OpenStore")

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-13 03:43+0000\n"
+"POT-Creation-Date: 2019-06-19 03:56+0000\n"
 "PO-Revision-Date: 2017-11-27 20:04+0000\n"
 "Last-Translator: Arda Canbolat <oardacn@gmail.com>\n"
 "Language-Team: Turkish <https://translate.ubports.com/projects/openstore/"
@@ -98,7 +98,7 @@ msgid "N/A"
 msgstr "Bilinmeyen"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:341
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:104
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:106
 msgid "Source Code"
 msgstr "Kaynak Kodu"
 
@@ -425,19 +425,11 @@ msgid ""
 msgstr ""
 "Şifrenizi yazarak, +18 içeriğini göstermek için tam sorumluluk alırsınız."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:84
-msgid "Developers"
-msgstr "Geliştiriciler"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:91
-msgid "Manage your apps on OpenStore"
-msgstr "OpenStore'daki uygulamalarınızı yönetin"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:97
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:99
 msgid "About OpenStore"
 msgstr "OpenStore Hakkında"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:113
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:115
 msgid "Report an issue"
 msgstr "Sorun bildir"
 
@@ -482,3 +474,9 @@ msgstr "Hesap sağlayıcı"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
 msgstr "Almak"
+
+#~ msgid "Developers"
+#~ msgstr "Geliştiriciler"
+
+#~ msgid "Manage your apps on OpenStore"
+#~ msgstr "OpenStore'daki uygulamalarınızı yönetin"

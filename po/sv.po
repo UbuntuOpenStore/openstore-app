@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-13 03:43+0000\n"
+"POT-Creation-Date: 2019-06-19 03:56+0000\n"
 "PO-Revision-Date: 2019-01-12 10:27+0000\n"
 "Last-Translator: Rondy Andersson <rondarius@gmail.com>\n"
 "Language-Team: Swedish <https://translate.ubports.com/projects/openstore/"
@@ -98,7 +98,7 @@ msgid "N/A"
 msgstr "ej tillämpbar"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:341
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:104
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:106
 msgid "Source Code"
 msgstr "Källkod"
 
@@ -427,19 +427,11 @@ msgstr ""
 "Genom att skriva ditt lösenord tar du det fulla ansvaret för att visa NSFW "
 "innehåll."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:84
-msgid "Developers"
-msgstr "Utvecklare"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:91
-msgid "Manage your apps on OpenStore"
-msgstr "Hantera dina appar på OpenStore"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:97
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:99
 msgid "About OpenStore"
 msgstr "Om OpenStore"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:113
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:115
 msgid "Report an issue"
 msgstr "Rapportera ett problem"
 
@@ -484,3 +476,9 @@ msgstr "Konto leverantör"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
 msgstr "Välj"
+
+#~ msgid "Developers"
+#~ msgstr "Utvecklare"
+
+#~ msgid "Manage your apps on OpenStore"
+#~ msgstr "Hantera dina appar på OpenStore"

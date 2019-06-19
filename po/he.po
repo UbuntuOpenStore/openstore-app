@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-13 03:43+0000\n"
+"POT-Creation-Date: 2019-06-19 03:56+0000\n"
 "PO-Revision-Date: 2018-03-04 19:49+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.ubports.com/projects/openstore/"
@@ -96,7 +96,7 @@ msgid "N/A"
 msgstr "לא זמין"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:341
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:104
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:106
 msgid "Source Code"
 msgstr "קוד מקור"
 
@@ -419,19 +419,11 @@ msgid ""
 "content."
 msgstr "הקלדת הססמה שלך מהווה את אחריותך המלאה להצגת תוכן למבוגרים."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:84
-msgid "Developers"
-msgstr "מפתחים"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:91
-msgid "Manage your apps on OpenStore"
-msgstr "ניהול היישומונים שלך ב־OpenStore"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:97
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:99
 msgid "About OpenStore"
 msgstr "על אודות ה־OpenStore"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:113
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:115
 msgid "Report an issue"
 msgstr "דיווח על בעיה"
 
@@ -476,6 +468,12 @@ msgstr "ספק חשבון"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
 msgstr "בחירה"
+
+#~ msgid "Developers"
+#~ msgstr "מפתחים"
+
+#~ msgid "Manage your apps on OpenStore"
+#~ msgstr "ניהול היישומונים שלך ב־OpenStore"
 
 #~ msgid "Fetching package list..."
 #~ msgstr "מייבא רשימת חבילות…"

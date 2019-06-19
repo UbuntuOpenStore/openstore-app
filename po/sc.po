@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-13 03:43+0000\n"
+"POT-Creation-Date: 2019-06-19 03:56+0000\n"
 "PO-Revision-Date: 2019-01-13 01:00+0000\n"
 "Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/openstore/"
@@ -100,7 +100,7 @@ msgid "N/A"
 msgstr "Non a disponimentu"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:341
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:104
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:106
 msgid "Source Code"
 msgstr "Còdighe de orìgine"
 
@@ -429,19 +429,11 @@ msgstr ""
 "Insertende sa crae tua assumes totu sa responsabilidade de ammustrare "
 "cuntenutos pro adultos (Not Suitable For Work)."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:84
-msgid "Developers"
-msgstr "Isvilupadores"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:91
-msgid "Manage your apps on OpenStore"
-msgstr "Gesti is aplicatziones tuas in s'OpenStore"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:97
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:99
 msgid "About OpenStore"
 msgstr "Informatziones subra de OpenStore"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:113
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:115
 msgid "Report an issue"
 msgstr "Signala unu problemu"
 
@@ -486,6 +478,12 @@ msgstr "Frunidore de contos"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
 msgstr "Sèbera"
+
+#~ msgid "Developers"
+#~ msgstr "Isvilupadores"
+
+#~ msgid "Manage your apps on OpenStore"
+#~ msgstr "Gesti is aplicatziones tuas in s'OpenStore"
 
 #~ msgid "Fetching package list..."
 #~ msgstr "Carrighende sa lista de pachetes..."

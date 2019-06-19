@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-13 03:43+0000\n"
+"POT-Creation-Date: 2019-06-19 03:56+0000\n"
 "PO-Revision-Date: 2019-04-29 19:03+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://translate.ubports.com/projects/openstore/"
@@ -98,7 +98,7 @@ msgid "N/A"
 msgstr "N/A"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:341
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:104
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:106
 msgid "Source Code"
 msgstr "Lähdekoodi"
 
@@ -425,19 +425,11 @@ msgstr ""
 "Antamalla salasanasi otat täyden vastuun aikuisille tarkoitetun sisällön "
 "näyttämisestä."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:84
-msgid "Developers"
-msgstr "Kehittäjät"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:91
-msgid "Manage your apps on OpenStore"
-msgstr "Hallitse sovelluksiasi OpenStoressa"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:97
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:99
 msgid "About OpenStore"
 msgstr "Tietoja OpenStoresta"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:113
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:115
 msgid "Report an issue"
 msgstr "Ilmoita ongelmasta"
 
@@ -482,6 +474,12 @@ msgstr "Tilien tarjoaja"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
 msgstr ""
+
+#~ msgid "Developers"
+#~ msgstr "Kehittäjät"
+
+#~ msgid "Manage your apps on OpenStore"
+#~ msgstr "Hallitse sovelluksiasi OpenStoressa"
 
 #~ msgid "Fetching package list..."
 #~ msgstr "Noudetaan pakettilistaa..."

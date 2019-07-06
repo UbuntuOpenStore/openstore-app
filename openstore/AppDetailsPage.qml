@@ -86,7 +86,7 @@ Page {
             }
 
             ListItem {
-                visible: app.isLocalVersionSideloaded && app.channelMatchesOS
+                visible: app.isLocalVersionSideloaded && app.channelMatchesOS && app.frameworkMatchesOS
                 height: sideloadedLayout.height
                 ListItemLayout {
                     id: sideloadedLayout

@@ -42,6 +42,7 @@ class PackageItem: public QObject
     Q_PROPERTY(QStringList channels READ channels NOTIFY updated)
     Q_PROPERTY(QStringList types READ types NOTIFY updated)
     Q_PROPERTY(bool channelMatchesOS READ channelMatchesOS NOTIFY updated)
+    Q_PROPERTY(bool frameworkMatchesOS READ frameworkMatchesOS NOTIFY updated)
 
     Q_ENUMS(Hook)
     Q_FLAGS(Hooks)
@@ -97,6 +98,7 @@ public:
     QStringList channels() const { return m_channels; }
     QStringList types() const { return m_types; }
     bool channelMatchesOS() const {  return m_channels.contains(PlatformIntegration::instance()->systemCodename()); };
+    bool frameworkMatchesOS() const { return PlatformIntegration::instance()->supportedFrameworks().contains(m_framework); };
 
     Q_INVOKABLE QString permissions(int index) const { return m_hooks.at(index).permissions.join(", "); }
     Q_INVOKABLE Hooks hooks(int index) const { return m_hooks.at(index).hooks; }
@@ -148,6 +150,7 @@ private:
     QDateTime m_updatedDate;
     QStringList m_channels;
     QStringList m_types;
+    QString m_framework;
 };
 
 #endif // PACKAGE_H

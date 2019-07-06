@@ -111,7 +111,10 @@ void PackageItem::fillData(const QVariantMap &json)
 
     QList<PackageItem::HookStruct> hooksList;
     if (json.contains("manifest") && json.value("manifest").toMap().contains("hooks")) {
-        QVariantMap hookMap = json.value("manifest").toMap().value("hooks").toMap();
+        QVariantMap manifest = json.value("manifest").toMap();
+        QVariantMap hookMap = manifest.value("hooks").toMap();
+
+        m_framework = manifest.value("framework").toString();
 
         Q_FOREACH (const QString & hook, hookMap.keys()) {
             PackageItem::HookStruct hookStruct;

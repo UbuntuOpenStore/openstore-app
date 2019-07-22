@@ -2,6 +2,8 @@
 
 Ubuntu Touch app for the [OpenStore](https://open-store.io/).
 
+[![OpenStore](https://open-store.io/badges/en_US.png)](https://open-store.io/app/openstore.openstore-team)
+
 ## Reporting Bugs
 
 Please report any bugs/features/requests in our [bug tracker](https://gitlab.com/theopenstore/openstore-meta/issues).

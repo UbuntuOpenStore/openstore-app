@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-19 03:56+0000\n"
-"PO-Revision-Date: 2019-07-05 08:13+0000\n"
-"Last-Translator: Moshe Lazar <wersewikkov@gmail.com>\n"
+"PO-Revision-Date: 2019-08-05 06:49+0000\n"
+"Last-Translator: vokaliz <vokaliz@protonmail.com>\n"
 "Language-Team: Russian <https://translate.ubports.com/projects/openstore/"
 "openstore-app/ru/>\n"
 "Language: ru\n"
@@ -106,11 +106,11 @@ msgstr "Исходный код"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:354
 msgid "Get support for this app"
-msgstr ""
+msgstr "Получить поддержку для этого приложения"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:367
 msgid "Donate to support this app"
-msgstr ""
+msgstr "Пожертвуйте, чтобы поддержать это приложение"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:383
@@ -271,18 +271,16 @@ msgid "Stable version available (%1)"
 msgstr "Доступна стабильная версия (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:105
-#, fuzzy
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
 msgstr ""
 "Версия приложения, установленная на этом устройстве, загружена не с сервера "
-"OpenStore. Чтобы установить последнюю стабильную версию нажмите кнопку ниже."
+"OpenStore, но стабильная версия доступна."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:106
-#, fuzzy
 msgid "Update all"
-msgstr "Доступно обновление"
+msgstr "Обновить все приложения сразу"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:191
 msgid "No apps found"

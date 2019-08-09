@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-19 03:56+0000\n"
-"PO-Revision-Date: 2019-05-10 21:02+0000\n"
+"PO-Revision-Date: 2019-08-10 14:49+0000\n"
 "Last-Translator: Anne Onyme <anneonyme017@netcourrier.com>\n"
 "Language-Team: French <https://translate.ubports.com/projects/openstore/"
 "openstore-app/fr/>\n"
@@ -73,7 +73,7 @@ msgstr "Nouveautés"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:294
 msgid "Packager/Publisher"
-msgstr "Auteur(e)"
+msgstr "Publication"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:295
 msgid "OpenStore team"

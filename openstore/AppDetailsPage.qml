@@ -327,7 +327,7 @@ Page {
                 divider.visible: false
                 ListItemLayout {
                     anchors.centerIn: parent
-                    title.text: i18n.tr("Downloads for the latest version")
+                    title.text: i18n.tr("Downloads of the latest version")
                     subtitle.text: app.latestDownloads || "<i>" + i18n.tr("N/A") + "</i>"
                 }
             }

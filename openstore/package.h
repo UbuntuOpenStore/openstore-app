@@ -31,6 +31,8 @@ class PackageItem: public QObject
     Q_PROPERTY(QString donateUrl READ donateUrl NOTIFY updated)
     Q_PROPERTY(QString supportUrl READ supportUrl NOTIFY updated)
     Q_PROPERTY(QString license READ license NOTIFY updated)
+    Q_PROPERTY(QString latestDownloads READ latestDownloads NOTIFY updated)
+    Q_PROPERTY(QString totalDownloads READ totalDownloads NOTIFY updated)
     Q_PROPERTY(QString maintainer READ maintainer NOTIFY updated)
     Q_PROPERTY(int fileSize READ fileSize NOTIFY updated)
     Q_PROPERTY(bool installed READ installed NOTIFY updated)
@@ -89,6 +91,8 @@ public:
     QString donateUrl() const { return m_donateUrl; }
     QString supportUrl() const { return m_supportUrl; }
     QString license() const { return m_license; }
+    QString latestDownloads() const { return m_latestDownloads; }
+    QString totalDownloads() const { return m_totalDownloads; }
     QString maintainer() const { return m_maintainer; }
     int fileSize() const { return m_fileSize; }
     void setFileSize(int fileSize) { m_fileSize = fileSize; }
@@ -141,6 +145,8 @@ private:
     QString m_donateUrl;
     QString m_supportUrl;
     QString m_license;
+    QString m_latestDownloads;
+    QString m_totalDownloads;
     QString m_maintainer;
     int m_fileSize;
     int m_installedRevision;

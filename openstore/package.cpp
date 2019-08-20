@@ -96,6 +96,8 @@ void PackageItem::fillData(const QVariantMap &json)
     m_donateUrl = json.value("donate_url").toString();
     m_supportUrl = json.value("support_url").toString();
     m_license = json.value("license").toString();
+    m_latestDownloads = json.value("latestDownloads").toString();
+    m_totalDownloads= json.value("totalDownloads").toString();
     m_maintainer = json.value("maintainer_name").toString();
     m_tagline = json.value("tagline").toString();
     m_description = json.value("description").toString();

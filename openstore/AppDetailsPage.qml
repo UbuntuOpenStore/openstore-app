@@ -327,6 +327,24 @@ Page {
                 divider.visible: false
                 ListItemLayout {
                     anchors.centerIn: parent
+                    title.text: i18n.tr("Downloads for the latest version")
+                    subtitle.text: app.latestDownloads || "<i>" + i18n.tr("N/A") + "</i>"
+                }
+            }
+            
+            ListItem {
+                divider.visible: false
+                ListItemLayout {
+                    anchors.centerIn: parent
+                    title.text: i18n.tr("Total downloads")
+                    subtitle.text: app.totalDownloads || "<i>" + i18n.tr("N/A") + "</i>"
+                }
+            }
+
+            ListItem {
+                divider.visible: false
+                ListItemLayout {
+                    anchors.centerIn: parent
                     title.text: i18n.tr("License")
                     subtitle.text: app.license || "<i>" + i18n.tr("N/A") + "</i>"
                 }

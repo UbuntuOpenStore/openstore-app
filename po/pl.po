@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-19 03:56+0000\n"
+"POT-Creation-Date: 2019-08-20 18:13+0000\n"
 "PO-Revision-Date: 2019-05-10 21:02+0000\n"
 "Last-Translator: Daniel Frańczak <danielfranczak5@wp.pl>\n"
 "Language-Team: Polish <https://translate.ubports.com/projects/openstore/"
@@ -21,15 +21,15 @@ msgstr ""
 "X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:32
 msgid "App details"
 msgstr "Szczegóły aplikacji"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:43
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:43
 msgid "Open"
 msgstr "Uruchom aplikację"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:93
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:93
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
@@ -37,238 +37,248 @@ msgstr ""
 "Zainstalowana wersja aplikacji nie zawiera serwera OpenStore. Możesz "
 "zainstalować najnowszą, stabilną wersję klikając przycisk poniżej."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:118
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:118
 msgid "Upgrade"
 msgstr "Aktualizuj"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:118
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:297
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:118
+#: /home/malte/Entwicklung/openstore-app/openstore/Main.qml:297
 msgid "Install"
 msgstr "Zainstaluj"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:127
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:201
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:587
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:127
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:201
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:605
 msgid "Remove"
 msgstr "Usuń"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:187
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:187
 msgid "This app is not compatible with your system."
 msgstr "Ta aplikacja nie jest kompatybilna z Twoim systemem."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:228
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:228
 msgid "This app has access to restricted system data, see below for details."
 msgstr "Ta aplikacja posiada dostęp do danych systemowych, szczegóły poniżej."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:252
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:252
 msgid "Description"
 msgstr "Opis"
 
 #. TRANSLATORS: Title of the changelog section
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:275
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:275
 msgid "What's New"
 msgstr "Co nowego"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:294
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:294
 msgid "Packager/Publisher"
 msgstr "Programista/Wydawca"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:295
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:295
 msgid "OpenStore team"
 msgstr "Ekipa OpenStore"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:303
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:303
 msgid "Installed version"
 msgstr "Zainstalowana wersja"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:312
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:312
 msgid "Latest available version"
 msgstr "Najnowsza wersja"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:321
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:321
 msgid "First released"
 msgstr "Opublikowano"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:330
-msgid "License"
-msgstr "Licencja"
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:330
+msgid "Downloads for the latest version"
+msgstr ""
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:331
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:331
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:340
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:349
 msgid "N/A"
 msgstr "B/D"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:341
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:106
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:339
+msgid "Total downloads"
+msgstr ""
+
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:348
+msgid "License"
+msgstr "Licencja"
+
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:359
+#: /home/malte/Entwicklung/openstore-app/openstore/SettingsPage.qml:106
 msgid "Source Code"
 msgstr "Kod źródłowy"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:354
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:372
 msgid "Get support for this app"
 msgstr "Zgłoś problemy, ulepszenia"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:367
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:385
 msgid "Donate to support this app"
 msgstr "Przekaż darowiznę na wsparcie tej aplikacji"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:383
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:401
 #, qt-format
 msgid "More from %1"
 msgstr "Więcej od %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:398
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:416
 #, qt-format
 msgid "Other apps in %1"
 msgstr "Inne aplikacje w kategorii %1"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:404
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:422
 msgid "Package contents"
 msgstr "Zawartość pakietu"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:484
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:502
 msgid "AppArmor profile"
 msgstr "Profil AppArmor"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:511
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:529
 msgid "Permissions"
 msgstr "Uprawnienia"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:530
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:548
 msgid "none required"
 msgstr "niewymagane"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:546
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:564
 msgid "Read paths"
 msgstr "Odczyt ścieżek"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:563
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:581
 msgid "Write paths"
 msgstr "Zapis ścieżek"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:579
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:597
 msgid "Remove package"
 msgstr "Usuń pakiet"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:580
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:598
 #, qt-format
 msgid "Do you want to remove %1?"
 msgstr "Usunąć %1?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:596
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:305
-#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:614
+#: /home/malte/Entwicklung/openstore-app/openstore/Main.qml:305
+#: /home/malte/Entwicklung/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
 msgstr "Anuluj"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:613
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:631
 #, qt-format
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:618
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:636
 #, qt-format
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:623
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:641
 #, qt-format
 msgid "%1 kB"
 msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:626
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:644
 #, qt-format
 msgid "%1 bytes"
 msgstr "%1 bajtów"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/CategoriesPage.qml:24
-#: /home/brian/dev/openstore/openstore-app/openstore/CategoriesTab.qml:90
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:36
+#: /home/malte/Entwicklung/openstore-app/openstore/CategoriesPage.qml:24
+#: /home/malte/Entwicklung/openstore-app/openstore/CategoriesTab.qml:90
+#: /home/malte/Entwicklung/openstore-app/openstore/MainPage.qml:36
 msgid "Categories"
 msgstr "Kategorie"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:29
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:35
+#: /home/malte/Entwicklung/openstore-app/openstore/DiscoverTab.qml:29
+#: /home/malte/Entwicklung/openstore-app/openstore/MainPage.qml:35
 msgid "Discover"
 msgstr "Odkrywaj"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:51
-#: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:28
+#: /home/malte/Entwicklung/openstore-app/openstore/DiscoverTab.qml:51
+#: /home/malte/Entwicklung/openstore-app/openstore/SearchTab.qml:28
 msgid "Search in OpenStore..."
 msgstr "Przeszukaj OpenStore..."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:136
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:56
+#: /home/malte/Entwicklung/openstore-app/openstore/DiscoverTab.qml:136
+#: /home/malte/Entwicklung/openstore-app/openstore/Components/PackageTile.qml:56
 msgid "Update available"
 msgstr "Dostępne aktualizacje"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:137
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:56
+#: /home/malte/Entwicklung/openstore-app/openstore/DiscoverTab.qml:137
+#: /home/malte/Entwicklung/openstore-app/openstore/Components/PackageTile.qml:56
 msgid "✓ Installed"
 msgstr "✓ Zainstalowane"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:156
+#: /home/malte/Entwicklung/openstore-app/openstore/DiscoverTab.qml:156
 msgid "OpenStore update available"
 msgstr "Dostępna jest nowa wersja OpenStore"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:157
+#: /home/malte/Entwicklung/openstore-app/openstore/DiscoverTab.qml:157
 msgid "Update OpenStore now!"
 msgstr "Zaktualizuj OpenStore!"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:163
+#: /home/malte/Entwicklung/openstore-app/openstore/DiscoverTab.qml:163
 msgid "Details"
 msgstr "Szczegóły aplikacji"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
+#: /home/malte/Entwicklung/openstore-app/openstore/FilteredAppView.qml:106
 msgid "Nothing here yet"
 msgstr "Niczego nie znaleziono"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
+#: /home/malte/Entwicklung/openstore-app/openstore/FilteredAppView.qml:106
 msgid "No results found."
 msgstr "Brak wyników."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
+#: /home/malte/Entwicklung/openstore-app/openstore/FilteredAppView.qml:107
 msgid "No app has been released in this category yet."
 msgstr "Nie ma aplikacji w tej kategorii."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
+#: /home/malte/Entwicklung/openstore-app/openstore/FilteredAppView.qml:107
 msgid "Try with a different search."
 msgstr "Spróbuj z innym tekstem do wyszukania."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:50
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:38
+#: /home/malte/Entwicklung/openstore-app/openstore/InstalledAppsTab.qml:50
+#: /home/malte/Entwicklung/openstore-app/openstore/MainPage.qml:38
 msgid "My Apps"
 msgstr "Moje aplikacje"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:55
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:26
+#: /home/malte/Entwicklung/openstore-app/openstore/InstalledAppsTab.qml:55
+#: /home/malte/Entwicklung/openstore-app/openstore/SettingsPage.qml:26
 msgid "Settings"
 msgstr "Ustawienia"
 
 #. TRANSLATORS: %1 is the number of installed apps
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:94
+#: /home/malte/Entwicklung/openstore-app/openstore/InstalledAppsTab.qml:94
 #, qt-format
 msgid "Installed apps (%1)"
 msgstr "Zainstalowane aplikacje (%1)"
 
 #. TRANSLATORS: %1 is the number of available app updates
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:98
+#: /home/malte/Entwicklung/openstore-app/openstore/InstalledAppsTab.qml:98
 #, qt-format
 msgid "Available updates (%1)"
 msgstr "Dostępne aktualizacje (%1)"
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
+#: /home/malte/Entwicklung/openstore-app/openstore/InstalledAppsTab.qml:102
 #, qt-format
 msgid "Stable version available (%1)"
 msgstr "Dostępna stabilna wersja (%1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:105
+#: /home/malte/Entwicklung/openstore-app/openstore/InstalledAppsTab.qml:105
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
@@ -276,23 +286,23 @@ msgstr ""
 "Zainstalowane wersje tych aplikacji nie pochodzą z OpenStore, ale dostępna "
 "jest stabilna wersja."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:106
+#: /home/malte/Entwicklung/openstore-app/openstore/InstalledAppsTab.qml:106
 msgid "Update all"
 msgstr "Zaktualizuj wszystkie"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:191
+#: /home/malte/Entwicklung/openstore-app/openstore/InstalledAppsTab.qml:191
 msgid "No apps found"
 msgstr "Brak wyników."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:192
+#: /home/malte/Entwicklung/openstore-app/openstore/InstalledAppsTab.qml:192
 msgid "No app has been installed from OpenStore yet."
 msgstr "Nie ma aplikacji w tej kategorii."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:229
+#: /home/malte/Entwicklung/openstore-app/openstore/Main.qml:229
 msgid "Warning"
 msgstr "Ostrzeżenie"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:238
+#: /home/malte/Entwicklung/openstore-app/openstore/Main.qml:238
 msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
@@ -300,7 +310,7 @@ msgstr ""
 "OpenStore pozwala na instalację nieoficjalnych programów. Upewnij się, że "
 "masz świadomość niebezpieczeństw z tym związanych."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:245
+#: /home/malte/Entwicklung/openstore-app/openstore/Main.qml:245
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
@@ -308,7 +318,7 @@ msgstr ""
 "Nieoficjalne aplikacje mogą uszkodzić Twój system, zmniejszyć jego "
 "wydajność, a także mogą Cie szpiegować."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:252
+#: /home/malte/Entwicklung/openstore-app/openstore/Main.qml:252
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
@@ -318,108 +328,108 @@ msgstr ""
 "odpowiedzialności za ewentualne szkody wynikłe z instalowania nieoficjalnych "
 "programów."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:259
+#: /home/malte/Entwicklung/openstore-app/openstore/Main.qml:259
 msgid "Use this at your own risk."
 msgstr "Użyj tego na własne ryzyko."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:263
+#: /home/malte/Entwicklung/openstore-app/openstore/Main.qml:263
 msgid "Okay. Got it! I'll be careful."
 msgstr "Rozumiem! Będę ostrożny."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:270
+#: /home/malte/Entwicklung/openstore-app/openstore/Main.qml:270
 msgid "Get me out of here!"
 msgstr "Zabierz mnie stąd!"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:283
+#: /home/malte/Entwicklung/openstore-app/openstore/Main.qml:283
 msgid "Install app?"
 msgstr "Zainstalować aplikację?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:284
+#: /home/malte/Entwicklung/openstore-app/openstore/Main.qml:284
 #, qt-format
 msgid "Do you want to install %1?"
 msgstr "Zainstalować %1?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:325
+#: /home/malte/Entwicklung/openstore-app/openstore/Main.qml:325
 msgid "App installed"
 msgstr "Aplikacja została zainstalowana"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
+#: /home/malte/Entwicklung/openstore-app/openstore/Main.qml:326
 msgid "The app has been installed successfully."
 msgstr "Ta aplikacja została zainstalowana pomyślnie."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:329
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:342
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:357
+#: /home/malte/Entwicklung/openstore-app/openstore/Main.qml:329
+#: /home/malte/Entwicklung/openstore-app/openstore/Main.qml:342
+#: /home/malte/Entwicklung/openstore-app/openstore/Main.qml:357
 msgid "OK"
 msgstr "OK"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:338
+#: /home/malte/Entwicklung/openstore-app/openstore/Main.qml:338
 msgid "Installation failed"
 msgstr "Instalacja nieudana"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:339
+#: /home/malte/Entwicklung/openstore-app/openstore/Main.qml:339
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 "Ten plik nie może być zainstalowany. Upewnij się, że to jest prawidłowy plik "
 "typu click."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:353
+#: /home/malte/Entwicklung/openstore-app/openstore/Main.qml:353
 #, qt-format
 msgid "Installation failed (Error %1)"
 msgstr "Instalacja nieudana (Błąd: %1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:37
-#: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15
+#: /home/malte/Entwicklung/openstore-app/openstore/MainPage.qml:37
+#: /home/malte/Entwicklung/openstore-app/openstore/SearchTab.qml:15
 msgid "Search"
 msgstr "Wyszukaj"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:29
+#: /home/malte/Entwicklung/openstore-app/openstore/PasswordDialog.qml:29
 msgid "Your passphrase is required to access restricted content"
 msgstr ""
 "Twoje hasło jest wymagane aby uzyskać dostęp do zastrzeżonej zawartości"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:30
+#: /home/malte/Entwicklung/openstore-app/openstore/PasswordDialog.qml:30
 msgid "Your passcode is required to access restricted content"
 msgstr "Twoje hasło jest wymagane, aby uzyskać dostęp do zastrzeżonych treści"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:39
+#: /home/malte/Entwicklung/openstore-app/openstore/PasswordDialog.qml:39
 msgid "Authentication failed"
 msgstr "Uwierzytelnienie nieudane"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
+#: /home/malte/Entwicklung/openstore-app/openstore/PasswordDialog.qml:47
 msgid "Passphrase required"
 msgstr "Wymagane hasło"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
+#: /home/malte/Entwicklung/openstore-app/openstore/PasswordDialog.qml:47
 msgid "Passcode required"
 msgstr "Wymagane hasło"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
+#: /home/malte/Entwicklung/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passphrase (default is 0000)"
 msgstr "hasło (domyślne to 0000)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
+#: /home/malte/Entwicklung/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passcode (default is 0000)"
 msgstr "hasło (domyślne to 0000)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:71
+#: /home/malte/Entwicklung/openstore-app/openstore/PasswordDialog.qml:71
 msgid "Authentication failed. Please retry"
 msgstr "Uwierzytelnienie nieudane. Spróbuj ponownie"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:76
+#: /home/malte/Entwicklung/openstore-app/openstore/PasswordDialog.qml:76
 msgid "Authenticate"
 msgstr "Uwierzytelnienie"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:58
+#: /home/malte/Entwicklung/openstore-app/openstore/SettingsPage.qml:58
 msgid "Parental control"
 msgstr "Kontrola rodzicielska"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:64
+#: /home/malte/Entwicklung/openstore-app/openstore/SettingsPage.qml:64
 msgid "Hide adult-oriented content"
 msgstr "Ukryj zawartość dla dorosłych"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:74
+#: /home/malte/Entwicklung/openstore-app/openstore/SettingsPage.qml:74
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
@@ -427,53 +437,53 @@ msgstr ""
 "Wpisując hasło bierzesz pełną odpowiedzialność za pokazywanie treści dla "
 "dorosłych."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:99
+#: /home/malte/Entwicklung/openstore-app/openstore/SettingsPage.qml:99
 msgid "About OpenStore"
 msgstr "O OpenStore"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:115
+#: /home/malte/Entwicklung/openstore-app/openstore/SettingsPage.qml:115
 msgid "Report an issue"
 msgstr "Zgłoś błąd"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
+#: /home/malte/Entwicklung/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Back"
 msgstr "Wstecz"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
+#: /home/malte/Entwicklung/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Close"
 msgstr "Zamknij"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:37
+#: /home/malte/Entwicklung/openstore-app/openstore/Components/HookIcon.qml:37
 msgid "Application"
 msgstr "Aplikacja"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
+#: /home/malte/Entwicklung/openstore-app/openstore/Components/HookIcon.qml:50
 msgid "Scope"
 msgstr "Soczewka"
 
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:64
+#: /home/malte/Entwicklung/openstore-app/openstore/Components/HookIcon.qml:64
 msgid "URL Handler"
 msgstr "Podręcznik URL"
 
 #. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:78
+#: /home/malte/Entwicklung/openstore-app/openstore/Components/HookIcon.qml:78
 msgid "Content Hub Handler"
 msgstr "Content Hub Handler"
 
 #. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:92
+#: /home/malte/Entwicklung/openstore-app/openstore/Components/HookIcon.qml:92
 msgid "Push Helper"
 msgstr "Pomocnik rozprowadzania"
 
 #. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:106
+#: /home/malte/Entwicklung/openstore-app/openstore/Components/HookIcon.qml:106
 msgid "Accounts provider"
 msgstr "Dostawca kont"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:46
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:54
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
+#: /home/malte/Entwicklung/openstore-app/openstore/Components/TextualButtonStyle.qml:46
+#: /home/malte/Entwicklung/openstore-app/openstore/Components/TextualButtonStyle.qml:54
+#: /home/malte/Entwicklung/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
 msgstr "Wybierz"
 

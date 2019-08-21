@@ -30,8 +30,11 @@
                 ],
                 "databaseFilename": ""
             },
-            "intelliSenseMode": "clang-x64"
+            "intelliSenseMode": "clang-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
         }
     ],
-    "version": 3
+    "version": 4
 }

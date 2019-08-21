@@ -25,12 +25,12 @@ Page {
     id: rootItem
 
     property var currentApp: null
-    property var appsUpdating: null
+    property var appsUpdating: []
 
     property bool updating: (PlatformIntegration.clickInstaller.busy && !PlatformIntegration.clickInstaller.isLocalInstall) || PackagesCache.updatingCache
 
     function updateNextPackage() {
-        console.log('updateNextPackage', JSON.stringify(appsUpdating));
+        //console.log('updateNextPackage', JSON.stringify(appsUpdating));
 
         if (appsUpdating.length > 0) {
             var nextApp = appsUpdating.shift();

@@ -122,17 +122,17 @@ Page {
                         anchors.bottom: parent.bottom
                         anchors.bottomMargin: units.gu(2)
 
-                        title.text: highlightAppControl.appItem.name
+                        title.text: highlightAppControl.appItem ? highlightAppControl.appItem.name : ''
                         title.textSize: Label.Large
                         title.font.weight: Font.Normal
                         title.color: "white"
 
-                        subtitle.text: highlightAppControl.appItem.tagline || highlightAppControl.appItem.description
+                        subtitle.text: highlightAppControl.appItem ? (highlightAppControl.appItem.tagline || highlightAppControl.appItem.description) : ''
                         subtitle.textSize: Label.Small
                         subtitle.color: "white"
 
                         summary.text: {
-                            if (highlightAppControl.appItem.installed)
+                            if (highlightAppControl.appItem && highlightAppControl.appItem.installed)
                                 return highlightAppControl.appItem.updateAvailable ? i18n.tr("Update available").toUpperCase()
                                                                                    : i18n.tr("✓ Installed").toUpperCase()
 

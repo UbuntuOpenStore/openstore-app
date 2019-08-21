@@ -43,7 +43,7 @@ void ServiceRegistry::installerBusyChanged()
 void ServiceRegistry::clickDirChanged()
 {
     QDir clickDir(clickRoot);
-    Q_FOREACH (const QString &dir, clickDir.entryList()) {
+    Q_FOREACH (const QString &dir, clickDir.entryList(QDir::NoDotAndDotDot)) {
         QString appId = dir;
         QString infoDirPath = clickRoot + dir + "/current/.click/info/";
         QDir infoDir(infoDirPath);

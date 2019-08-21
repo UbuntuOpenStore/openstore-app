@@ -163,7 +163,10 @@ void ClickInstaller::slotDownloadProgress()
 
 void ClickInstaller::downloadFinished()
 {
-    qDebug() << "finished" << m_download->error() << m_download->errorString() << m_download->attribute(QNetworkRequest::RedirectionTargetAttribute);
+    qDebug() << "finished" << m_download->error();
+    if (m_download->error() == QNetworkReply::NoError) {
+        qDebug() << m_download->errorString() << m_download->attribute(QNetworkRequest::RedirectionTargetAttribute);
+    }
 
     m_file.write(m_download->readAll());
     m_file.close();

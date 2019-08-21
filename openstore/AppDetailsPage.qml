@@ -1,4 +1,4 @@
-/*
+ *
  * Copyright (C) 2015 - Michael Zanetti <michael.zanetti@ubuntu.com>
  *
  * This program is free software; you can redistribute it and/or modify
@@ -119,7 +119,7 @@ Page {
                         visible: !app.installed || (app.installed && app.updateAvailable)
                         color: app.isLocalVersionSideloaded ? theme.palette.normal.foreground : UbuntuColors.green
                         onClicked: {
-                            if(app.donateUrl)
+                            if(app.donateUrl && !app.installed)
                             {
                                 var popupdonationPopup = PopupUtils.open(donatingPopup)
                                 popupdonationPopup.accepted.connect(function() {

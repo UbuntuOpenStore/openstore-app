@@ -118,7 +118,21 @@ Page {
                         text: app.installed ? i18n.tr("Upgrade") : i18n.tr("Install")
                         visible: !app.installed || (app.installed && app.updateAvailable)
                         color: app.isLocalVersionSideloaded ? theme.palette.normal.foreground : UbuntuColors.green
-                        onClicked: app.install()
+                        onClicked: {
+                            if(app.donateUrl)
+                            {
+                                var popupdonationPopup = PopupUtils.open(donatingPopup)
+                                popupdonationPopup.accepted.connect(function() {
+                                    app.install()
+                                    Qt.openUrlExternally(app.donateUrl)
+                                })
+                                popupdonationPopup.rejected.connect(function() {
+                                    app.install()
+                                })  
+                            }
+                            else
+                                app.install()                         
+                        }
                     }
 
                     Button {
@@ -571,6 +585,33 @@ Page {
         }
     }
 
+    Component {
+        id: donatingPopup
+        Dialog {
+            id: donatingdDialog
+            title: i18n.tr("Donating")
+            text: i18n.tr("Would you like to support this app with a donation to the developer?")
+
+            signal accepted()
+            signal rejected()
+
+            Button {
+                text: i18n.tr("Donate now")
+                color: UbuntuColors.green
+                onClicked: {
+                    donatingdDialog.accepted()
+                    PopupUtils.close(donatingdDialog)
+                }
+            }
+            Button {
+                text: i18n.tr("Maybe later")
+                onClicked: {
+                    donatingdDialog.rejected();
+                    PopupUtils.close(donatingdDialog)
+                }
+            }
+        }
+    }
 
     Component {
         id: removeQuestion

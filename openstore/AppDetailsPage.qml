@@ -344,7 +344,7 @@ Page {
                 ListItemLayout {
                     anchors.centerIn: parent
                     title.text: i18n.tr("Total downloads")
-                    subtitle.text: app.totalDownloads || "<i>" + i18n.tr("N/A") + "</i>"
+                    subtitle.text: app.totalDownloads || "<i>0</i>"
                 }
             }
 

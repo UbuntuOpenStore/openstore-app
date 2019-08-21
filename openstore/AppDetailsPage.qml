@@ -324,11 +324,18 @@ Page {
             }
 
             ListItem {
+                id: latestVersionDownloads
                 divider.visible: false
                 ListItemLayout {
                     anchors.centerIn: parent
                     title.text: i18n.tr("Downloads of the latest version")
-                    subtitle.text: app.latestDownloads || "<i>" + i18n.tr("N/A") + "</i>"
+                    subtitle.text: app.latestDownloads
+                }
+                Component.onCompleted: {
+                    if(!app.latestDownloads)
+                    {
+                        latestVersionDownloads.visible = false
+                    }
                 }
             }
             

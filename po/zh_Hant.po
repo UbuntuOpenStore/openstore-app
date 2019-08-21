@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-20 18:13+0000\n"
+"POT-Creation-Date: 2019-08-21 05:17+0000\n"
 "PO-Revision-Date: 2019-05-10 21:02+0000\n"
 "Last-Translator: louies0623 <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
@@ -46,7 +46,7 @@ msgstr "安裝"
 
 #: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:127
 #: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:201
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:605
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:612
 msgid "Remove"
 msgstr "移除"
 
@@ -87,109 +87,109 @@ msgstr "最新可用版本"
 msgid "First released"
 msgstr "最先發佈"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:330
-msgid "Downloads for the latest version"
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:331
+msgid "Downloads of the latest version"
 msgstr ""
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:331
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:340
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:349
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:332
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:347
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:356
 msgid "N/A"
 msgstr "沒有"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:339
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:346
 msgid "Total downloads"
 msgstr ""
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:348
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:355
 msgid "License"
 msgstr "許可証"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:359
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:366
 #: /home/malte/Entwicklung/openstore-app/openstore/SettingsPage.qml:106
 msgid "Source Code"
 msgstr "源碼"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:372
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:379
 msgid "Get support for this app"
 msgstr "獲得對這個應用程式的支援"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:385
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:392
 msgid "Donate to support this app"
 msgstr "贊助來支援此應用程式"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:401
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:408
 #, qt-format
 msgid "More from %1"
 msgstr "更多來自 %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:416
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:423
 #, qt-format
 msgid "Other apps in %1"
 msgstr "%1 的其他應用程式"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:422
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:429
 msgid "Package contents"
 msgstr "封裝內容"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:502
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:509
 msgid "AppArmor profile"
 msgstr "AppArmor 配置文件"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:529
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:536
 msgid "Permissions"
 msgstr "權限"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:548
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:555
 msgid "none required"
 msgstr "無權限要求"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:564
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:571
 msgid "Read paths"
 msgstr "讀取路徑"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:581
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:588
 msgid "Write paths"
 msgstr "寫入路徑"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:597
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:604
 msgid "Remove package"
 msgstr "刪除封包"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:598
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:605
 #, qt-format
 msgid "Do you want to remove %1?"
 msgstr "您想要刪除 %1 嗎？"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:614
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:621
 #: /home/malte/Entwicklung/openstore-app/openstore/Main.qml:305
 #: /home/malte/Entwicklung/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
 msgstr "取消"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:631
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:638
 #, qt-format
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:636
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:643
 #, qt-format
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:641
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:648
 #, qt-format
 msgid "%1 kB"
 msgstr "%1 KB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:644
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:651
 #, qt-format
 msgid "%1 bytes"
 msgstr "%1 位元組"

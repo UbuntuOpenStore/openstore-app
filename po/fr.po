@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-20 18:13+0000\n"
+"POT-Creation-Date: 2019-08-21 05:17+0000\n"
 "PO-Revision-Date: 2019-08-10 14:49+0000\n"
 "Last-Translator: Anne Onyme <anneonyme017@netcourrier.com>\n"
 "Language-Team: French <https://translate.ubports.com/projects/openstore/"
@@ -48,7 +48,7 @@ msgstr "Installer"
 
 #: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:127
 #: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:201
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:605
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:612
 msgid "Remove"
 msgstr "Retirer"
 
@@ -91,109 +91,109 @@ msgstr "Dernière version disponible"
 msgid "First released"
 msgstr "Publiée pour la première fois"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:330
-msgid "Downloads for the latest version"
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:331
+msgid "Downloads of the latest version"
 msgstr ""
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:331
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:340
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:349
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:332
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:347
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:356
 msgid "N/A"
 msgstr "N/A"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:339
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:346
 msgid "Total downloads"
 msgstr ""
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:348
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:355
 msgid "License"
 msgstr "Licence"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:359
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:366
 #: /home/malte/Entwicklung/openstore-app/openstore/SettingsPage.qml:106
 msgid "Source Code"
 msgstr "Code source"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:372
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:379
 msgid "Get support for this app"
 msgstr "Obtenir de l'aide pour cette application"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:385
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:392
 msgid "Donate to support this app"
 msgstr "Faire un don pour soutenir cette application"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:401
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:408
 #, qt-format
 msgid "More from %1"
 msgstr "A propos de %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:416
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:423
 #, qt-format
 msgid "Other apps in %1"
 msgstr "Autres applications dans %1"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:422
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:429
 msgid "Package contents"
 msgstr "Contenus du paquet"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:502
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:509
 msgid "AppArmor profile"
 msgstr "Profil AppArmor"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:529
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:536
 msgid "Permissions"
 msgstr "Permissions"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:548
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:555
 msgid "none required"
 msgstr "Aucune permission demandée"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:564
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:571
 msgid "Read paths"
 msgstr "Chemins en lecture"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:581
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:588
 msgid "Write paths"
 msgstr "Chemins en écriture"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:597
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:604
 msgid "Remove package"
 msgstr "Supprimer le paquet"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:598
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:605
 #, qt-format
 msgid "Do you want to remove %1?"
 msgstr "Voulez-vous vraiment supprimer %1 ?"
 
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:614
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:621
 #: /home/malte/Entwicklung/openstore-app/openstore/Main.qml:305
 #: /home/malte/Entwicklung/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
 msgstr "Annuler"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:631
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:638
 #, qt-format
 msgid "%1 GB"
 msgstr "%1 Go"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:636
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:643
 #, qt-format
 msgid "%1 MB"
 msgstr "%1 Mo"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:641
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:648
 #, qt-format
 msgid "%1 kB"
 msgstr "%1 ko"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:644
+#: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:651
 #, qt-format
 msgid "%1 bytes"
 msgstr "%1 octets"

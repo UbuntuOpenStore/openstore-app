@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-22 05:23+0000\n"
-"PO-Revision-Date: 2019-05-10 21:02+0000\n"
+"PO-Revision-Date: 2019-08-23 17:49+0000\n"
 "Last-Translator: Milan Korecký <milan.korecky@gmail.com>\n"
 "Language-Team: Czech <https://translate.ubports.com/projects/openstore/"
 "openstore-app/cs/>\n"
@@ -147,19 +147,19 @@ msgstr "Write paths"
 
 #: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:592
 msgid "Donating"
-msgstr ""
+msgstr "Přispívat"
 
 #: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:593
 msgid "Would you like to support this app with a donation to the developer?"
-msgstr ""
+msgstr "Přejete si přispět a podpořit vývojáře aplikace?"
 
 #: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:599
 msgid "Donate now"
-msgstr ""
+msgstr "Přispět nyní"
 
 #: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:607
 msgid "Maybe later"
-msgstr ""
+msgstr "Možná později"
 
 #: /home/malte/Entwicklung/openstore-app/openstore/AppDetailsPage.qml:620
 msgid "Remove package"

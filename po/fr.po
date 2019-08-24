@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-24 03:11+0000\n"
-"PO-Revision-Date: 2019-08-10 14:49+0000\n"
-"Last-Translator: Anne Onyme <anneonyme017@netcourrier.com>\n"
+"POT-Creation-Date: 2019-08-22 05:23+0000\n"
+"PO-Revision-Date: 2019-08-23 17:49+0000\n"
+"Last-Translator: RedXXIII <redxxiii@zaclys.net>\n"
 "Language-Team: French <https://translate.ubports.com/projects/openstore/"
 "openstore-app/fr/>\n"
 "Language: fr\n"
@@ -164,19 +164,20 @@ msgstr "Chemins en écriture"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:621
 msgid "Donating"
-msgstr ""
+msgstr "Faire un don"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:622
 msgid "Would you like to support this app with a donation to the developer?"
 msgstr ""
+"Souhaitez-vous soutenir cette application en faisant un don au développeur ?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:628
 msgid "Donate now"
-msgstr ""
+msgstr "Faire un don maintenant"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:636
 msgid "Maybe later"
-msgstr ""
+msgstr "Peut-être plus tard"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:649
 msgid "Remove package"

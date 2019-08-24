@@ -100,7 +100,7 @@ int PackagesModel::downgradesAvailableCount() const
 
 void PackagesModel::refresh()
 {
-    qDebug() << Q_FUNC_INFO << "called";
+    //qDebug() << Q_FUNC_INFO << "called";
 
     MODEL_START_REFRESH();
 

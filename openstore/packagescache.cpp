@@ -77,7 +77,7 @@ void PackagesCache::updateCacheRevisions()
     m_updatingCache = true;
     Q_EMIT updatingCacheChanged();
 
-    qDebug() << Q_FUNC_INFO << "called";
+    //qDebug() << Q_FUNC_INFO << "called";
 
     connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::newReply, [=](const OpenStoreReply &reply) {
         if (reply.signature != m_signature)

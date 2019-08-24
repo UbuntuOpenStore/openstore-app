@@ -105,7 +105,7 @@ void PlatformIntegration::update()
     //     qDebug() << "loaded stuff" << jsond.toJson();
     m_clickDb = jsond.toVariant().toList();
 
-    qDebug() << "building click list:";
+    //qDebug() << "building click list:";
     Q_FOREACH(const QVariant &appJson, m_clickDb) {
         QVariantMap appMap = appJson.toMap();
 

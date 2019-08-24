@@ -115,10 +115,33 @@ Page {
                     Button {
                         Layout.fillWidth: true
                         Layout.maximumWidth: buttonsRow.width > units.gu(60) ? units.gu(24) : buttonsRow.width
-                        text: app.installed ? i18n.tr("Upgrade") : i18n.tr("Install")
-                        visible: !app.installed || (app.installed && app.updateAvailable)
+                        text: {
+                            if (app.isLocalVersionSideloaded) {
+                                return i18n.tr("Install stable version");
+                            }
+                            else if (app.installed) {
+                                return i18n.tr("Upgrade");
+                            }
+
+                            return i18n.tr("Install");
+                        }
+                        visible: !app.installed || (app.installed && app.updateAvailable) || app.isLocalVersionSideloaded
                         color: app.isLocalVersionSideloaded ? theme.palette.normal.foreground : UbuntuColors.green
-                        onClicked: app.install()
+                        onClicked: {
+                            if(app.donateUrl && !app.installed)
+                            {
+                                var popupdonationPopup = PopupUtils.open(donatingPopup)
+                                popupdonationPopup.accepted.connect(function() {
+                                    app.install()
+                                    Qt.openUrlExternally(app.donateUrl)
+                                })
+                                popupdonationPopup.rejected.connect(function() {
+                                    app.install()
+                                })  
+                            }
+                            else
+                                app.install()                         
+                        }
                     }
 
                     Button {
@@ -596,6 +619,33 @@ Page {
         }
     }
 
+    Component {
+        id: donatingPopup
+        Dialog {
+            id: donatingdDialog
+            title: i18n.tr("Donating")
+            text: i18n.tr("Would you like to support this app with a donation to the developer?")
+
+            signal accepted()
+            signal rejected()
+
+            Button {
+                text: i18n.tr("Donate now")
+                color: UbuntuColors.green
+                onClicked: {
+                    donatingdDialog.accepted()
+                    PopupUtils.close(donatingdDialog)
+                }
+            }
+            Button {
+                text: i18n.tr("Maybe later")
+                onClicked: {
+                    donatingdDialog.rejected();
+                    PopupUtils.close(donatingdDialog)
+                }
+            }
+        }
+    }
 
     Component {
         id: removeQuestion

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-22 05:23+0000\n"
-"PO-Revision-Date: 2019-08-23 17:49+0000\n"
+"PO-Revision-Date: 2019-08-25 14:48+0000\n"
 "Last-Translator: advocatux <advocatux@airpost.net>\n"
 "Language-Team: Spanish <https://translate.ubports.com/projects/openstore/"
 "openstore-app/es/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.7.1\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
 msgid "App details"
@@ -36,9 +36,8 @@ msgstr ""
 "Puede instalar la última actualización estable pulsando en el botón de abajo."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:120
-#, fuzzy
 msgid "Install stable version"
-msgstr "Versión instalada"
+msgstr "Instalar versión estable"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:123
 msgid "Upgrade"
@@ -96,11 +95,11 @@ msgstr "Publicado por primera vez"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:355
 msgid "Downloads of the latest version"
-msgstr ""
+msgstr "Descargas de la última versión"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:364
 msgid "Total downloads"
-msgstr ""
+msgstr "Descargas totales"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:373
 msgid "License"

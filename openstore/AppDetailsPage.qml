@@ -137,10 +137,10 @@ Page {
                                 })
                                 popupdonationPopup.rejected.connect(function() {
                                     app.install()
-                                })  
+                                })
                             }
                             else
-                                app.install()                         
+                                app.install()
                         }
                     }
 
@@ -349,19 +349,14 @@ Page {
             ListItem {
                 id: latestVersionDownloads
                 divider.visible: false
+                visible: (app.latestDownloads > 0)
                 ListItemLayout {
                     anchors.centerIn: parent
                     title.text: i18n.tr("Downloads of the latest version")
                     subtitle.text: app.latestDownloads
                 }
-                Component.onCompleted: {
-                    if(!app.latestDownloads)
-                    {
-                        latestVersionDownloads.visible = false
-                    }
-                }
             }
-            
+
             ListItem {
                 divider.visible: false
                 ListItemLayout {

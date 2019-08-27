@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-24 03:11+0000\n"
-"PO-Revision-Date: 2019-01-13 01:00+0000\n"
+"PO-Revision-Date: 2019-08-28 09:49+0000\n"
 "Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/openstore/"
 "openstore-app/sc/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
@@ -38,9 +38,8 @@ msgstr ""
 "su pulsante in giosso."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:120
-#, fuzzy
 msgid "Install stable version"
-msgstr "Versione installada"
+msgstr "Installa sa versione istàbile"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:123
 msgid "Upgrade"
@@ -59,7 +58,7 @@ msgstr "Boga"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:210
 msgid "This app is not compatible with your system."
-msgstr ""
+msgstr "Custa aplicatzione no est cumpatìbile cun su sistema tuo."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:251
 msgid "This app has access to restricted system data, see below for details."
@@ -98,11 +97,11 @@ msgstr "Prima publicatzione"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:355
 msgid "Downloads of the latest version"
-msgstr ""
+msgstr "Iscarrigamentos de s'ùrtima versione"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:364
 msgid "Total downloads"
-msgstr ""
+msgstr "Iscarrigamentos totales"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:373
 msgid "License"
@@ -119,11 +118,11 @@ msgstr "Còdighe de orìgine"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:397
 msgid "Get support for this app"
-msgstr ""
+msgstr "Otene agiudu pro custa aplicatzione"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:410
 msgid "Donate to support this app"
-msgstr ""
+msgstr "Dona pro contribuire a custa aplicatzione"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:426
@@ -164,19 +163,19 @@ msgstr "Podet iscriere in"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:621
 msgid "Donating"
-msgstr ""
+msgstr "Dona"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:622
 msgid "Would you like to support this app with a donation to the developer?"
-msgstr ""
+msgstr "Boles contribuire cun unu donu a s'isvilupadore?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:628
 msgid "Donate now"
-msgstr ""
+msgstr "Dona immoe"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:636
 msgid "Maybe later"
-msgstr ""
+msgstr "Forsis prus a tardu"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:649
 msgid "Remove package"
@@ -297,22 +296,19 @@ msgstr "Atualizatziones a disponimentu (%1)"
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
 #, qt-format
 msgid "Stable version available (%1)"
-msgstr ""
+msgstr "Versione istàbile a disponimentu (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:105
-#, fuzzy
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
 msgstr ""
-"Sa versione installada de custa aplicatzione non benit dae su server de "
-"OpenStore. Nde podes installare s'ùrtima atualizatzione istàbile incarchende "
-"su pulsante in giosso."
+"Sa versione installada de custas aplicatziones non benit dae su server de "
+"OpenStore, però b'est una versione istàbile a disponimentu."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:106
-#, fuzzy
 msgid "Update all"
-msgstr "Atualizatzione a disponimentu"
+msgstr "Atualiza totu"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:191
 msgid "No apps found"

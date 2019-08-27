@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-24 03:11+0000\n"
-"PO-Revision-Date: 2019-05-13 20:02+0000\n"
+"PO-Revision-Date: 2019-08-28 09:49+0000\n"
 "Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
 "Language-Team: Catalan <https://translate.ubports.com/projects/openstore/"
 "openstore-app/ca/>\n"
@@ -37,9 +37,8 @@ msgstr ""
 "Podeu instal·lar-ne la última actualització «estable» tocant el botó de sota."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:120
-#, fuzzy
 msgid "Install stable version"
-msgstr "Versió instal·lada"
+msgstr "Instal·la la versió estable"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:123
 msgid "Upgrade"
@@ -97,11 +96,11 @@ msgstr "Primera publicació"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:355
 msgid "Downloads of the latest version"
-msgstr ""
+msgstr "Descàrregues de la darrera versió"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:364
 msgid "Total downloads"
-msgstr ""
+msgstr "Descàrregues totals"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:373
 msgid "License"
@@ -163,19 +162,19 @@ msgstr "Pot escriure a"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:621
 msgid "Donating"
-msgstr ""
+msgstr "Donacions"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:622
 msgid "Would you like to support this app with a donation to the developer?"
-msgstr ""
+msgstr "Voleu contribuir amb una donació per al desenvolupament d'aquesta app?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:628
 msgid "Donate now"
-msgstr ""
+msgstr "Dona ara"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:636
 msgid "Maybe later"
-msgstr ""
+msgstr "Potser més tard"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:649
 msgid "Remove package"

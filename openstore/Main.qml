@@ -268,7 +268,6 @@ MainView {
             }
             Button {
                 text: i18n.tr("Get me out of here!")
-                color: UbuntuColors.red
                 onClicked: {
                     warningDialog.rejected();
                 }
@@ -338,7 +337,7 @@ MainView {
             title: i18n.tr("Installation failed")
             text: i18n.tr("The package could not be installed. Make sure it is a valid click package.")
             Button {
-                color: UbuntuColors.orange
+                color: UbuntuColors.blue
                 text: i18n.tr("OK")
                 onClicked: PopupUtils.close(installationErrorDialog)
             }
@@ -353,7 +352,7 @@ MainView {
             title: i18n.tr("Installation failed (Error %1)").arg(errorCode)
             text: errorString
             Button {
-                color: UbuntuColors.orange
+                color: UbuntuColors.blue
                 text: i18n.tr("OK")
                 onClicked: PopupUtils.close(timeoutErrorDialog)
             }

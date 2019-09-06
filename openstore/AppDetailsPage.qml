@@ -34,15 +34,17 @@ Page {
 
         trailingActionBar {
             numberOfSlots: 1
-            delegate: Button {
-                anchors.verticalCenter: parent.verticalCenter
-                action: modelData
-                color: UbuntuColors.green
-            }
             actions: Action {
-                text: i18n.tr("Open")
-                visible: app.installed && app.containsApp && app.appId!="openstore.openstore-team"
-                onTriggered: Qt.openUrlExternally(app.appLaunchUrl())
+                iconName: "delete"
+                text: i18n.tr("Remove")
+                visible: app.installed
+
+                onTriggered: {
+                    var popup = PopupUtils.open(removeQuestion, root, {pkgName: app.name || app.id});
+                    popup.accepted.connect(function() {
+                        app.remove()
+                    })
+                }
             }
         }
     }
@@ -115,6 +117,19 @@ Page {
                     Button {
                         Layout.fillWidth: true
                         Layout.maximumWidth: buttonsRow.width > units.gu(60) ? units.gu(24) : buttonsRow.width
+                        text: i18n.tr("Open")
+                        visible: app.installed && app.containsApp && app.appId!="openstore.openstore-team"
+                        color: installUpgradeButton.visible
+                            ? UbuntuColors.ash
+                            : UbuntuColors.green
+
+                        onClicked: Qt.openUrlExternally(app.appLaunchUrl())
+                    }
+
+                    Button {
+                        id: installUpgradeButton
+                        Layout.fillWidth: true
+                        Layout.maximumWidth: buttonsRow.width > units.gu(60) ? units.gu(24) : buttonsRow.width
                         text: {
                             if (app.isLocalVersionSideloaded) {
                                 return i18n.tr("Install stable version");
@@ -126,7 +141,7 @@ Page {
                             return i18n.tr("Install");
                         }
                         visible: !app.installed || (app.installed && app.updateAvailable) || app.isLocalVersionSideloaded
-                        color: app.isLocalVersionSideloaded ? theme.palette.normal.foreground : UbuntuColors.green
+                        color: app.isLocalVersionSideloaded ? UbuntuColors.blue : UbuntuColors.green
                         onClicked: {
                             if(app.donateUrl && !app.installed)
                             {
@@ -141,20 +156,6 @@ Page {
                             }
                             else
                                 app.install()
-                        }
-                    }
-
-                    Button {
-                        Layout.fillWidth: true
-                        Layout.maximumWidth: buttonsRow.width > units.gu(60) ? units.gu(24) : buttonsRow.width
-                        text: i18n.tr("Remove")
-                        visible: app.installed
-                        color: UbuntuColors.red
-                        onClicked: {
-                            var popup = PopupUtils.open(removeQuestion, root, {pkgName: app.name || app.id});
-                            popup.accepted.connect(function() {
-                                app.remove()
-                            })
                         }
                     }
                 }

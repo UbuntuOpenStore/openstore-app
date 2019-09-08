@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-24 03:11+0000\n"
-"PO-Revision-Date: 2019-07-08 14:48+0000\n"
+"PO-Revision-Date: 2019-09-04 09:50+0000\n"
 "Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
 "Language-Team: Portuguese <https://translate.ubports.com/projects/openstore/"
 "openstore-app/pt/>\n"
@@ -37,9 +37,8 @@ msgstr ""
 "última versão estável ao tocar no botão em baixo."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:120
-#, fuzzy
 msgid "Install stable version"
-msgstr "Versão instalada"
+msgstr "Instalar versão estável"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:123
 msgid "Upgrade"
@@ -97,11 +96,11 @@ msgstr "Primeira versão"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:355
 msgid "Downloads of the latest version"
-msgstr ""
+msgstr "Transferências da última versão"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:364
 msgid "Total downloads"
-msgstr ""
+msgstr "Total de transferências"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:373
 msgid "License"
@@ -163,19 +162,19 @@ msgstr "Escrever caminhos"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:621
 msgid "Donating"
-msgstr ""
+msgstr "Doar"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:622
 msgid "Would you like to support this app with a donation to the developer?"
-msgstr ""
+msgstr "Gostaria de suportar esta app com uma doação para o desenvolvedor?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:628
 msgid "Donate now"
-msgstr ""
+msgstr "Doar agora"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:636
 msgid "Maybe later"
-msgstr ""
+msgstr "Talvez mais tarde"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:649
 msgid "Remove package"

@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-24 03:11+0000\n"
-"PO-Revision-Date: 2019-05-13 20:02+0000\n"
-"Last-Translator: Tom Dom <thomas@patoel.nl>\n"
+"PO-Revision-Date: 2019-09-04 09:50+0000\n"
+"Last-Translator: matv1 <mathijsv33n@gmail.com>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/openstore/"
 "openstore-app/nl/>\n"
 "Language: nl\n"
@@ -98,11 +98,11 @@ msgstr "Voor het eerst gepubliceerd op"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:355
 msgid "Downloads of the latest version"
-msgstr ""
+msgstr "Downloads van de laatste versie"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:364
 msgid "Total downloads"
-msgstr ""
+msgstr "Totaal aantal downloads"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:373
 msgid "License"
@@ -164,19 +164,19 @@ msgstr "Schrijfpaden"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:621
 msgid "Donating"
-msgstr ""
+msgstr "Donerend"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:622
 msgid "Would you like to support this app with a donation to the developer?"
-msgstr ""
+msgstr "Wil je deze app ondersteunen door een donatie aan de ontwikkelaar?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:628
 msgid "Donate now"
-msgstr ""
+msgstr "Doneer nu"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:636
 msgid "Maybe later"
-msgstr ""
+msgstr "Misschien later"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:649
 msgid "Remove package"

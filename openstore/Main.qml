@@ -42,9 +42,14 @@ MainView {
     function parseUrl(url) {
         var result = "";
         if (url.match(/^(openstore|http[s]?):\/\/(open-store\.io\/app\/)?.*/)) {
+            if (url[url.length - 1] == '/') {
+                url = url.substr(0, url.length - 1);
+            }
+
             // Get last part of path as ID to open, and strip the /
             result = url.substr(url.lastIndexOf("/") + 1);
         }
+
         return result;
     }
 
@@ -108,7 +113,10 @@ MainView {
     Connections {
         target: UriHandler
         onOpened: {
-            loadAppId(parseUrl(uris[0]));
+            var appIdToOpen = parseUrl(uris[0]);
+            if (appIdToOpen) {
+                loadAppId(appIdToOpen);
+            }
         }
     }
 

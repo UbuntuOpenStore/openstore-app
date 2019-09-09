@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-22 05:23+0000\n"
-"PO-Revision-Date: 2019-09-04 09:50+0000\n"
-"Last-Translator: Anne Onyme <anneonyme017@netcourrier.com>\n"
+"PO-Revision-Date: 2019-09-10 16:50+0000\n"
+"Last-Translator: RedXXIII <redxxiii@zaclys.net>\n"
 "Language-Team: French <https://translate.ubports.com/projects/openstore/"
 "openstore-app/fr/>\n"
 "Language: fr\n"
@@ -480,7 +480,7 @@ msgstr "Application"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
 msgid "Scope"
-msgstr "Moteur de recherche"
+msgstr "Scope"
 
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:64

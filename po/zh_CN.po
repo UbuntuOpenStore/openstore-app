@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chinese (Simplified) (OpenStore)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-24 03:11+0000\n"
+"POT-Creation-Date: 2019-09-08 03:48+0000\n"
 "PO-Revision-Date: 2019-04-24 21:35+0000\n"
 "Last-Translator: tongsj2333 <hh23333@foxmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.ubports.com/projects/"
@@ -18,11 +18,13 @@ msgstr ""
 msgid "App details"
 msgstr "应用程序的详细信息"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:43
-msgid "Open"
-msgstr "打开应用"
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:39
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:225
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:658
+msgid "Remove"
+msgstr "删除"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:93
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:95
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
@@ -31,179 +33,177 @@ msgstr ""
 "新的稳定更新。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:120
+msgid "Open"
+msgstr "打开应用"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:135
 #, fuzzy
 msgid "Install stable version"
 msgstr "已安装的版本"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:123
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:138
 msgid "Upgrade"
 msgstr "升级"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:126
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:297
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:141
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:296
 msgid "Install"
 msgstr "安装"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:150
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:224
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:657
-msgid "Remove"
-msgstr "删除"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:210
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:211
 msgid "This app is not compatible with your system."
 msgstr ""
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:251
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:252
 msgid "This app has access to restricted system data, see below for details."
 msgstr "这个应用程序有权访问受限的系统数据，详情见下文。"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:275
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:276
 msgid "Description"
 msgstr "描述"
 
 #. TRANSLATORS: Title of the changelog section
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:298
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:299
 msgid "What's New"
 msgstr "最新特性"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:317
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:318
 msgid "Packager/Publisher"
 msgstr "打包者/发布者"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:318
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:319
 msgid "OpenStore team"
 msgstr "OpenStore 团队"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:326
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:327
 msgid "Installed version"
 msgstr "已安装的版本"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:335
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:336
 msgid "Latest available version"
 msgstr "最新的可用版本"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:344
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:345
 msgid "First released"
 msgstr "首次发布"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:355
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:356
 msgid "Downloads of the latest version"
 msgstr ""
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:364
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:365
 msgid "Total downloads"
 msgstr ""
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:373
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:374
 msgid "License"
 msgstr "许可证"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:374
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:375
 msgid "N/A"
 msgstr "N/A"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:384
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:385
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:106
 msgid "Source Code"
 msgstr "源代码"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:397
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:398
 msgid "Get support for this app"
 msgstr "获得对此应用的支持"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:410
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:411
 msgid "Donate to support this app"
 msgstr "捐赠以支持此应用"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:426
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:427
 #, qt-format
 msgid "More from %1"
 msgstr "%1 的更多应用"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:441
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:442
 #, qt-format
 msgid "Other apps in %1"
 msgstr "%1 的其他应用"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:447
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:448
 msgid "Package contents"
 msgstr "程序包的内容"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:527
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:528
 msgid "AppArmor profile"
 msgstr "AppArmor 配置文件"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:554
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:555
 msgid "Permissions"
 msgstr "权限"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:573
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:574
 msgid "none required"
 msgstr "无权限要求"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:589
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:590
 msgid "Read paths"
 msgstr "读路径"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:606
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:607
 msgid "Write paths"
 msgstr "写入路径"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:621
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:622
 msgid "Donating"
 msgstr ""
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:622
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:623
 msgid "Would you like to support this app with a donation to the developer?"
 msgstr ""
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:628
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:629
 msgid "Donate now"
 msgstr ""
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:636
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:637
 msgid "Maybe later"
 msgstr ""
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:649
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:650
 msgid "Remove package"
 msgstr "删除程序包"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:650
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:651
 #, qt-format
 msgid "Do you want to remove %1?"
 msgstr "你想要删除 %1 吗？"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:666
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:305
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:667
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:304
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
 msgstr "取消"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:683
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:684
 #, qt-format
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:688
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:689
 #, qt-format
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:693
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:694
 #, qt-format
 msgid "%1 kB"
 msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:696
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:697
 #, qt-format
 msgid "%1 bytes"
 msgstr "%1 字节"
@@ -348,39 +348,39 @@ msgstr "好吧。明白了！我会小心。"
 msgid "Get me out of here!"
 msgstr "把我弄出去 ！"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:283
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:282
 msgid "Install app?"
 msgstr "安装应用程序吗？"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:284
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:283
 #, qt-format
 msgid "Do you want to install %1?"
 msgstr "您想安装 %1 吗？"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:325
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:324
 msgid "App installed"
 msgstr "应用程序安装"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:326
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:325
 msgid "The app has been installed successfully."
 msgstr "应用程序已成功安装。"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:329
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:342
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:357
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:328
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:341
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:356
 msgid "OK"
 msgstr "确认"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:338
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:337
 msgid "Installation failed"
 msgstr "安装失败"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:339
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:338
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr "无法安装该软件包。请确保它是一个有效点击软件包。"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:353
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:352
 #, qt-format
 msgid "Installation failed (Error %1)"
 msgstr "安装失败(错误 %1)"

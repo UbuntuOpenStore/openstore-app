@@ -11,7 +11,7 @@
             "content-hub": "openstore/openstore-contenthub.json"
         }
     },
-    "version": "2.74",
+    "version": "2.76",
     "maintainer": "OpenStore Team <openstore-team@lists.launchpad.net>",
     "framework": "ubuntu-sdk-16.04"
 }

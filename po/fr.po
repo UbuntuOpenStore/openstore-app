@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-22 05:23+0000\n"
+"POT-Creation-Date: 2019-09-08 03:48+0000\n"
 "PO-Revision-Date: 2019-09-10 16:50+0000\n"
 "Last-Translator: RedXXIII <redxxiii@zaclys.net>\n"
 "Language-Team: French <https://translate.ubports.com/projects/openstore/"
@@ -56,13 +56,7 @@ msgstr "Mettre à jour"
 msgid "Install"
 msgstr "Installer"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:150
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:224
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:657
-msgid "Remove"
-msgstr "Désinstaller"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:210
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:211
 msgid "This app is not compatible with your system."
 msgstr "Cette application n'est pas compatible avec votre système."
 

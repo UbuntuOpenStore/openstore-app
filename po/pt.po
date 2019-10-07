@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-24 03:11+0000\n"
+"POT-Creation-Date: 2019-09-08 03:48+0000\n"
 "PO-Revision-Date: 2019-09-04 09:50+0000\n"
 "Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
 "Language-Team: Portuguese <https://translate.ubports.com/projects/openstore/"
@@ -39,6 +39,10 @@ msgstr ""
 "última versão estável ao tocar no botão em baixo."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:120
+msgid "Open"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:135
 msgid "Install stable version"
 msgstr "Instalar versão estável"
 

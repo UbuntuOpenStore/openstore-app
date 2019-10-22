@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-08 03:48+0000\n"
-"PO-Revision-Date: 2019-10-05 12:53+0000\n"
+"PO-Revision-Date: 2019-10-21 11:55+0000\n"
 "Last-Translator: Sami Törmänen <tormanen.sami@gmail.com>\n"
 "Language-Team: Finnish <https://translate.ubports.com/projects/openstore/"
 "openstore-app/fi/>\n"
@@ -42,9 +42,8 @@ msgid "Open"
 msgstr "Avaa"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:135
-#, fuzzy
 msgid "Install stable version"
-msgstr "Asennettu versio"
+msgstr "Asenna vakaa versio"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:138
 msgid "Upgrade"

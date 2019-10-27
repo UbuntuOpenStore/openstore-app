@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-08 03:48+0000\n"
-"PO-Revision-Date: 2019-05-10 21:02+0000\n"
+"PO-Revision-Date: 2019-10-28 13:36+0000\n"
 "Last-Translator: louies0623 <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
 "openstore/openstore-app/zh_Hant/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.8\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
 msgid "App details"
@@ -42,9 +42,8 @@ msgid "Open"
 msgstr "開啟"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:135
-#, fuzzy
 msgid "Install stable version"
-msgstr "已安裝的版本"
+msgstr "安裝穩定版本"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:138
 msgid "Upgrade"
@@ -94,11 +93,11 @@ msgstr "最先發佈"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:356
 msgid "Downloads of the latest version"
-msgstr ""
+msgstr "最新版本下載"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:365
 msgid "Total downloads"
-msgstr ""
+msgstr "下載次數"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:374
 msgid "License"
@@ -160,7 +159,7 @@ msgstr "寫入路徑"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:622
 msgid "Donating"
-msgstr ""
+msgstr "贊助"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:623
 msgid "Would you like to support this app with a donation to the developer?"
@@ -168,11 +167,11 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:629
 msgid "Donate now"
-msgstr ""
+msgstr "現在贊助"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:637
 msgid "Maybe later"
-msgstr ""
+msgstr "之後再說"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:650
 msgid "Remove package"

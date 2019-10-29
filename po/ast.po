@@ -8,13 +8,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-08 03:48+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-10-30 12:36+0000\n"
+"Last-Translator: enolp <enolp@softastur.org>\n"
+"Language-Team: Asturian <https://translate.ubports.com/projects/openstore/"
+"openstore-app/ast/>\n"
 "Language: ast\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.8\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
 msgid "App details"
@@ -24,17 +27,19 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:225
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:658
 msgid "Remove"
-msgstr ""
+msgstr "Desaniciar"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:95
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
 msgstr ""
+"La versión instalada d'esta aplicación nun vien del sirvidor d'OpenStore. "
+"Pues instalar la última versión estable tocando'l botón d'embaxo."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:120
 msgid "Open"
-msgstr ""
+msgstr "Abrir"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:135
 msgid "Install stable version"
@@ -42,102 +47,104 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:138
 msgid "Upgrade"
-msgstr ""
+msgstr "Anovar"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:141
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:296
 msgid "Install"
-msgstr ""
+msgstr "Instalar"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:211
 msgid "This app is not compatible with your system."
-msgstr ""
+msgstr "Esta aplicación nun ye compatible col sistema."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:252
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
+"Esta aplicación tien accesu a los datos torgaos del sistema, embaxo tán los "
+"detalles."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:276
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 #. TRANSLATORS: Title of the changelog section
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:299
 msgid "What's New"
-msgstr ""
+msgstr "Qué hai nuevo"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:318
 msgid "Packager/Publisher"
-msgstr ""
+msgstr "Empaquetador/Espublizador"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:319
 msgid "OpenStore team"
-msgstr ""
+msgstr "L'equipu d'OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:327
 msgid "Installed version"
-msgstr ""
+msgstr "Versión instalada"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:336
 msgid "Latest available version"
-msgstr ""
+msgstr "La última versión disponible"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:345
 msgid "First released"
-msgstr ""
+msgstr "Data de llanzamientu"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:356
 msgid "Downloads of the latest version"
-msgstr ""
+msgstr "Descargues de la última versión"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:365
 msgid "Total downloads"
-msgstr ""
+msgstr "Descargues totales"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:374
 msgid "License"
-msgstr ""
+msgstr "Llicencia"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:375
 msgid "N/A"
-msgstr ""
+msgstr "N/D"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:385
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:106
 msgid "Source Code"
-msgstr ""
+msgstr "Códigu fonte"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:398
 msgid "Get support for this app"
-msgstr ""
+msgstr "Consiguir el sofitu d'esta aplicación"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:411
 msgid "Donate to support this app"
-msgstr ""
+msgstr "Donar pa sofitar esta aplicación"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:427
 #, qt-format
 msgid "More from %1"
-msgstr ""
+msgstr "Más de %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:442
 #, qt-format
 msgid "Other apps in %1"
-msgstr ""
+msgstr "Otres aplicaciones en %1"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:448
 msgid "Package contents"
-msgstr ""
+msgstr "Conteníu del paquete"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:528
 msgid "AppArmor profile"
-msgstr ""
+msgstr "Perfil d'AppArmor"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:555
 msgid "Permissions"
-msgstr ""
+msgstr "Permisos"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:574
@@ -146,82 +153,83 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:590
 msgid "Read paths"
-msgstr ""
+msgstr "Caminos de llectura"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:607
 msgid "Write paths"
-msgstr ""
+msgstr "Caminos d'escritura"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:622
 msgid "Donating"
-msgstr ""
+msgstr "Donación"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:623
 msgid "Would you like to support this app with a donation to the developer?"
 msgstr ""
+"¿Prestaríate sofitar esta aplicación con una donación pal desendolcador?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:629
 msgid "Donate now"
-msgstr ""
+msgstr "Donar agora"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:637
 msgid "Maybe later"
-msgstr ""
+msgstr "Quiciabes más sero"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:650
 msgid "Remove package"
-msgstr ""
+msgstr "Desaniciu del paquete"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:651
 #, qt-format
 msgid "Do you want to remove %1?"
-msgstr ""
+msgstr "¿Quies desaniciar %1?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:667
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:304
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
-msgstr ""
+msgstr "Encaboxar"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:684
 #, qt-format
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:689
 #, qt-format
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:694
 #, qt-format
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 KB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:697
 #, qt-format
 msgid "%1 bytes"
-msgstr ""
+msgstr "%1 bytes"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesPage.qml:24
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesTab.qml:90
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:36
 msgid "Categories"
-msgstr ""
+msgstr "Estayes"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:29
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:35
 msgid "Discover"
-msgstr ""
+msgstr "Descubrir"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:51
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:28
 msgid "Search in OpenStore..."
-msgstr ""
+msgstr "Guetar n'OpenStore..."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:136
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:56
@@ -231,7 +239,7 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:137
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:56
 msgid "✓ Installed"
-msgstr ""
+msgstr "✓ Instalóse"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:156
 msgid "OpenStore update available"
@@ -243,51 +251,51 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:163
 msgid "Details"
-msgstr ""
+msgstr "Detalles"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
 msgid "Nothing here yet"
-msgstr ""
+msgstr "Equí entá nun hai nada"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
 msgid "No results found."
-msgstr ""
+msgstr "Nun s'alcontraron resultaos."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
 msgid "No app has been released in this category yet."
-msgstr ""
+msgstr "Entá nun se llanzó denguna aplicación nesta estaya."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
 msgid "Try with a different search."
-msgstr ""
+msgstr "Prueba con otra gueta."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:50
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:38
 msgid "My Apps"
-msgstr ""
+msgstr "Aplicaciones de mio"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:55
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:26
 msgid "Settings"
-msgstr ""
+msgstr "Axustes"
 
 #. TRANSLATORS: %1 is the number of installed apps
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:94
 #, qt-format
 msgid "Installed apps (%1)"
-msgstr ""
+msgstr "Aplicaciones instalaes (%1)"
 
 #. TRANSLATORS: %1 is the number of available app updates
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:98
 #, qt-format
 msgid "Available updates (%1)"
-msgstr ""
+msgstr "Anovamientos disponibles (%1)"
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
 #, qt-format
 msgid "Stable version available (%1)"
-msgstr ""
+msgstr "Versiones estables disponibles (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:105
 msgid ""
@@ -297,37 +305,43 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:106
 msgid "Update all"
-msgstr ""
+msgstr "Anovar too"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:191
 msgid "No apps found"
-msgstr ""
+msgstr "Nun s'alcontraron aplicaciones"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:192
 msgid "No app has been installed from OpenStore yet."
-msgstr ""
+msgstr "Entá nun s'instaló denguna aplicación d'OpenStore."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:229
 msgid "Warning"
-msgstr ""
+msgstr "Alvertencia"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:238
 msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
 msgstr ""
+"OpenStore permítete instalar aplicaciones con privilexos. Asegúrate que "
+"sabes lo qu'implica, por favor."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:245
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
 msgstr ""
+"Una aplicación con privilexos tien la capacidá de romper el sistema, "
+"amenorgar el so rindimientu y/o esclucate."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:252
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
 msgstr ""
+"Al empar que nos esforzamos pa evitalo revisando les aplicaciones, nun nos "
+"facemos responsables si pasa daqué malo pasa la peñera."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:259
 msgid "Use this at your own risk."
@@ -335,11 +349,11 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:263
 msgid "Okay. Got it! I'll be careful."
-msgstr ""
+msgstr "¡Sí, entiéndolo! Voi tener curiáu."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:270
 msgid "Get me out of here!"
-msgstr ""
+msgstr "¡Sacáime d'equí!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:282
 msgid "Install app?"
@@ -348,7 +362,7 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:283
 #, qt-format
 msgid "Do you want to install %1?"
-msgstr ""
+msgstr "¿Quies instalar %1?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:324
 msgid "App installed"
@@ -356,7 +370,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:325
 msgid "The app has been installed successfully."
-msgstr ""
+msgstr "L'aplicación instalóse con ésitu."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:328
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:341
@@ -366,30 +380,31 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:337
 msgid "Installation failed"
-msgstr ""
+msgstr "Falló la instalación"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:338
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
+"El paquete nun pudo instalase. Asegúrate que ye un paquete click válidu."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:352
 #, qt-format
 msgid "Installation failed (Error %1)"
-msgstr ""
+msgstr "Falló la instalación (Fallu %1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:37
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15
 msgid "Search"
-msgstr ""
+msgstr "Guetar"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:29
 msgid "Your passphrase is required to access restricted content"
-msgstr ""
+msgstr "Ríquese la contraseña p'acceder al conteníu torgáu"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:30
 msgid "Your passcode is required to access restricted content"
-msgstr ""
+msgstr "Ríquese'l códigu p'acceder al conteníu torgáu"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:39
 msgid "Authentication failed"
@@ -397,70 +412,72 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
 msgid "Passphrase required"
-msgstr ""
+msgstr "Ríquese la contraseña"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
 msgid "Passcode required"
-msgstr ""
+msgstr "Ríquese'l códigu"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passphrase (default is 0000)"
-msgstr ""
+msgstr "contraseña (por defeutu 0000)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passcode (default is 0000)"
-msgstr ""
+msgstr "códigu (por defeutu 0000)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:71
 msgid "Authentication failed. Please retry"
-msgstr ""
+msgstr "Falló l'autenticación. Volvi tentalo, por favor"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:76
 msgid "Authenticate"
-msgstr ""
+msgstr "Autenticase"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:58
 msgid "Parental control"
-msgstr ""
+msgstr "Control parental"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:64
 msgid "Hide adult-oriented content"
-msgstr ""
+msgstr "Anubrir el conteníu p'adultos"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:74
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr ""
+"Teclexando la contraseña responsabilíceste dafechu de l'amuesta de conteníu "
+"NSFW."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:99
 msgid "About OpenStore"
-msgstr ""
+msgstr "Tocante a OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:115
 msgid "Report an issue"
-msgstr ""
+msgstr "Informar d'un problema"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Back"
-msgstr ""
+msgstr "Atrás"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Close"
-msgstr ""
+msgstr "Zarrar"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:37
 msgid "Application"
-msgstr ""
+msgstr "Aplicación"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
 msgid "Scope"
-msgstr ""
+msgstr "Ámbitu"
 
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:64
 msgid "URL Handler"
-msgstr ""
+msgstr "Remanador d'URLs"
 
 #. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:78
@@ -475,10 +492,10 @@ msgstr ""
 #. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:106
 msgid "Accounts provider"
-msgstr ""
+msgstr "Fornidor de cuentes"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:46
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:54
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
-msgstr ""
+msgstr "Escoyer"

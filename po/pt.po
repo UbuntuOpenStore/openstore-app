@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-08 03:48+0000\n"
-"PO-Revision-Date: 2019-09-04 09:50+0000\n"
+"PO-Revision-Date: 2019-11-03 19:36+0000\n"
 "Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
 "Language-Team: Portuguese <https://translate.ubports.com/projects/openstore/"
 "openstore-app/pt/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.8\n"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
@@ -40,7 +40,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:120
 msgid "Open"
-msgstr ""
+msgstr "Abrir"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:135
 msgid "Install stable version"

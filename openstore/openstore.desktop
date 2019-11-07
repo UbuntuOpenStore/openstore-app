@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=OpenStore
+GenericName=Software Store
 Exec=openstore %u
 Icon=openstore/openstore.svg
 Terminal=false
 Type=Application
 X-Ubuntu-Touch=true
 X-Ubuntu-Splash-Color=#292929
+Keywords=software;apps;applications;programs;store;market;play;click;discover;install;

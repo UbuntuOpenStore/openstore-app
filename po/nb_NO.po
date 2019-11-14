@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-08 03:48+0000\n"
-"PO-Revision-Date: 2019-11-13 18:36+0000\n"
+"PO-Revision-Date: 2019-11-15 19:36+0000\n"
 "Last-Translator: Ari Börde Kröyer <ari.kroyer@online.no>\n"
 "Language-Team: Norwegian Bokmål <https://translate.ubports.com/projects/"
 "openstore/openstore-app/nb_NO/>\n"
@@ -75,7 +75,7 @@ msgstr "Nytt"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:318
 msgid "Packager/Publisher"
-msgstr "Pakkeutgiver"
+msgstr "Utgiver"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:319
 msgid "OpenStore team"

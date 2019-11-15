@@ -13,8 +13,7 @@ testing {
 
 INCLUDEPATH += /usr/include/click-0.4/ \
     /usr/include/glib-2.0/ \
-    /usr/lib/x86_64-linux-gnu/glib-2.0/include \
-    /usr/lib/arm-linux-gnueabihf/glib-2.0/include \
+    /usr/lib/$$(ARCH_TRIPLET)/glib-2.0/include \
     /usr/include/json-glib-1.0 \
 
 LIBS += -lglib-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lclick-0.4 -lpam

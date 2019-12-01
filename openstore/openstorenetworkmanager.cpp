@@ -39,6 +39,25 @@ QString OpenStoreNetworkManager::generateNewSignature() const
     return QUuid::createUuid().toString();
 }
 
+QString OpenStoreNetworkManager::getUrl() const {
+    return getUrl("");
+}
+
+QString OpenStoreNetworkManager::getUrl(QString route) const
+{
+    QString base = qgetenv("OPENSTORE_API");
+    if (base.isEmpty()) {
+        base = API_BASEURL;
+    }
+
+    return base + route;
+}
+
+bool OpenStoreNetworkManager::isDifferentDomain() const
+{
+    return (getUrl() != API_BASEURL);
+}
+
 QNetworkReply *OpenStoreNetworkManager::sendRequest(QNetworkRequest request)
 {
     QUrl url = request.url();
@@ -77,7 +96,7 @@ void OpenStoreNetworkManager::emitReplySignal(QNetworkReply *reply, const QStrin
 
 bool OpenStoreNetworkManager::getDiscover(const QString &signature)
 {
-    QUrl url(API_BASEURL + API_DISCOVER_ENDPOINT);
+    QUrl url(getUrl(API_DISCOVER_ENDPOINT));
     QNetworkReply *reply = sendRequest(QNetworkRequest(url));
 
     connect(reply, &QNetworkReply::finished, [=]() {
@@ -94,7 +113,7 @@ bool OpenStoreNetworkManager::getDiscover(const QString &signature)
 
 bool OpenStoreNetworkManager::getAppDetails(const QString &signature, const QString &appId)
 {
-    QUrl url(API_BASEURL + API_APPDETAILS_ENDPOINT.arg(appId));
+    QUrl url(getUrl(API_APPDETAILS_ENDPOINT.arg(appId)));
     QNetworkReply *reply = sendRequest(QNetworkRequest(url));
 
     connect(reply, &QNetworkReply::finished, [=]() {
@@ -108,7 +127,7 @@ bool OpenStoreNetworkManager::getAppDetails(const QString &signature, const QStr
 
 bool OpenStoreNetworkManager::getSearch(const QString &signature, int skip, int limit, const QString &filterString, const QString &category, const QString &sort)
 {
-    QUrl url(API_BASEURL + API_SEARCH_ENDPOINT);
+    QUrl url(getUrl(API_SEARCH_ENDPOINT));
 
     QUrlQuery q(url);
     q.addQueryItem("skip", QString::number(skip));
@@ -138,7 +157,7 @@ bool OpenStoreNetworkManager::getSearch(const QString &signature, int skip, int 
 
 bool OpenStoreNetworkManager::getCategories(const QString &signature)
 {
-    QUrl url(API_BASEURL + API_CATEGORIES_ENDPOINT);
+    QUrl url(getUrl(API_CATEGORIES_ENDPOINT));
     QNetworkReply *reply = sendRequest(QNetworkRequest(url));
 
     connect(reply, &QNetworkReply::finished, [=]() {
@@ -165,7 +184,7 @@ bool OpenStoreNetworkManager::getUrl(const QString &signature, const QUrl &url)
 
 bool OpenStoreNetworkManager::getRevisions(const QString &signature, const QStringList &appIdsAtVersion)
 {
-    QUrl url(API_BASEURL + API_REVISION_ENDPOINT);
+    QUrl url(getUrl(API_REVISION_ENDPOINT));
 
     QUrlQuery q(url);
     q.addQueryItem("apps", appIdsAtVersion.join(","));

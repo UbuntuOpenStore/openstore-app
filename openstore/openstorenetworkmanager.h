@@ -17,12 +17,17 @@ class OpenStoreNetworkManager : public QObject
     Q_OBJECT
     Q_PROPERTY(bool networkAccessible READ networkAccessible NOTIFY networkAccessibleChanged)
     Q_PROPERTY(bool showNsfw MEMBER m_showNsfw NOTIFY showNsfwChanged)
+    Q_PROPERTY(bool isDifferentDomain READ isDifferentDomain CONSTANT)
+    Q_PROPERTY(QString domain READ getUrl CONSTANT)
 
 public:
     explicit OpenStoreNetworkManager();
     static OpenStoreNetworkManager* instance();
 
     bool networkAccessible() const { return m_manager->networkAccessible() != QNetworkAccessManager::NotAccessible; }
+    bool isDifferentDomain() const;
+    QString getUrl() const;
+    QString getUrl(QString route) const;
 
     QString generateNewSignature() const;
 

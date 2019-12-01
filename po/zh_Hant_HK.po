@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-08 03:48+0000\n"
+"POT-Creation-Date: 2019-12-01 05:07+0000\n"
 "PO-Revision-Date: 2019-05-10 21:02+0000\n"
 "Last-Translator: louies0623 <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Hong Kong) <https://translate.ubports.com/projects/"
@@ -51,7 +51,7 @@ msgid "Upgrade"
 msgstr "升級"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:141
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:296
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:361
 msgid "Install"
 msgstr "安裝"
 
@@ -184,7 +184,7 @@ msgid "Do you want to remove %1?"
 msgstr "您想要刪除 %1 啊?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:667
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:304
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:369
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
 msgstr "取消"
@@ -314,23 +314,43 @@ msgstr "未搵到應用程序"
 msgid "No app has been installed from OpenStore yet."
 msgstr "尚未由 OpenStore 安裝任何應用程序。"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:229
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:245
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:294
 msgid "Warning"
 msgstr "注意"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:238
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:254
+msgid ""
+"You are currently using a non-standard domain for the OpenStore. This is a "
+"development feature. The domain you are using is:"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:268
+msgid "Are you sure you want to continue?"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:272
+msgid "Yes, I know what I'm doing"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:280
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:335
+msgid "Get me out of here!"
+msgstr "不! 帶我離開呢度!"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:303
 msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
 msgstr "OpenStore 將允許安裝唔受限制的應用程序。請確保你知道它的風險。"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:245
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:310
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
 msgstr "唔受限制的應用程序具有能力破壞系統，降低安全性或者監視你得嘅行動。"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:252
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:317
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
@@ -338,51 +358,47 @@ msgstr ""
 "雖然我們正在盡最大努力通過審核申請嚟防止這種情況，但如果出現問題，我哋唔承擔"
 "任何責任。"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:259
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:324
 msgid "Use this at your own risk."
 msgstr "使用此風險需要你自行擔。"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:263
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:328
 msgid "Okay. Got it! I'll be careful."
 msgstr "係!安裝佢，我會小心啲。"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:270
-msgid "Get me out of here!"
-msgstr "不! 帶我離開呢度!"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:282
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:347
 msgid "Install app?"
 msgstr "要安裝應用程序嗎?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:283
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:348
 #, qt-format
 msgid "Do you want to install %1?"
 msgstr "你肯定要安裝%1 嗎？"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:324
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:389
 msgid "App installed"
 msgstr "應用程序"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:325
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:390
 msgid "The app has been installed successfully."
 msgstr "該應用程序已成功安裝。"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:328
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:341
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:356
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:393
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:406
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:421
 msgid "OK"
 msgstr "好"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:337
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:402
 msgid "Installation failed"
 msgstr "安裝失敗"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:338
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:403
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr "無法安裝該軟件。確保佢係有效嘅軟件封包。"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:352
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:417
 #, qt-format
 msgid "Installation failed (Error %1)"
 msgstr "安裝失敗 (錯誤 %1)"

@@ -72,20 +72,19 @@ void PackageItem::fillData(const QVariantMap &json)
     m_name = json.value("name").toString();
     m_author = json.value("author").toString();
 
-    m_packageUrl = json.value("download").toString();
-    if (m_packageUrl.isEmpty()) {
-        // Fallback when "download" is not returned
-        // This might be the case for the 'discover' API
-        m_packageUrl = json.value("package").toString();
-    }
-
     QList<QVariant> downloads = json.value("downloads").toList();
-
     m_version = json.value("version").toString();
     m_revision = json.value("revision").toInt();
     Q_FOREACH (QVariant download, downloads) {
         QMap<QString, QVariant> downloadData = download.toMap();
-        if (downloadData.value("channel") == PlatformIntegration::instance()->systemCodename()) {
+
+        if (
+            downloadData.value("channel") == PlatformIntegration::instance()->systemCodename() &&
+            (
+                downloadData.value("architecture") == PlatformIntegration::instance()->supportedArchitecture() ||
+                downloadData.value("architecture") == QStringLiteral("all")
+            )
+        ) {
             m_version = downloadData.value("version").toString();
             m_revision = downloadData.value("revision").toInt();
             m_packageUrl = downloadData.value("download_url").toString();

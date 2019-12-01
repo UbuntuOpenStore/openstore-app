@@ -72,7 +72,16 @@ MainView {
 
         PlatformIntegration.update()
 
-        if (settings.firstStart) {
+        if (OpenStoreNetworkManager.isDifferentDomain) {
+            var popup = PopupUtils.open(domainWarningComponent)
+            popup.accepted.connect(function() {
+                PopupUtils.close(popup)
+            })
+            popup.rejected.connect(function() {
+                Qt.quit();
+            })
+        }
+        else if (settings.firstStart) {
             var popup = PopupUtils.open(warningComponent)
             popup.accepted.connect(function() {
                 settings.firstStart = false;
@@ -223,6 +232,54 @@ MainView {
                 onAppDetailsRequired: {
                     PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady)
                     PackagesCache.getPackageDetails(appId)
+                }
+            }
+        }
+    }
+
+    Component {
+        id: domainWarningComponent
+
+        Dialog {
+            id: warningDialog
+            title: i18n.tr("Warning")
+
+            signal accepted();
+            signal rejected();
+
+            Label {
+                anchors { left: parent.left; right: parent.right }
+                wrapMode: Text.WordWrap
+                maximumLineCount: Number.MAX_VALUE
+                text: i18n.tr("You are currently using a non-standard domain for the OpenStore. This is a development feature. The domain you are using is:")
+            }
+
+            Label {
+                anchors { left: parent.left; right: parent.right }
+                wrapMode: Text.WordWrap
+                maximumLineCount: Number.MAX_VALUE
+                text: OpenStoreNetworkManager.domain
+            }
+
+            Label {
+                anchors { left: parent.left; right: parent.right }
+                wrapMode: Text.WordWrap
+                maximumLineCount: Number.MAX_VALUE
+                text: i18n.tr("Are you sure you want to continue?")
+            }
+
+            Button {
+                text: i18n.tr("Yes, I know what I'm doing")
+                color: UbuntuColors.green
+                onClicked: {
+                    warningDialog.accepted();
+                }
+            }
+
+            Button {
+                text: i18n.tr("Get me out of here!")
+                onClicked: {
+                    warningDialog.rejected();
                 }
             }
         }

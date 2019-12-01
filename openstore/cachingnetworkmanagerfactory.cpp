@@ -47,8 +47,13 @@ CachingNetworkManagerFactory::CachingNetworkManagerFactory()
 QNetworkAccessManager *CachingNetworkManagerFactory::create(QObject *parent) {
     QNetworkAccessManager *manager = new CachingNetworkAccessManager(parent);
 
+    QString domain = qgetenv("OPENSTORE_DOMAIN");
+    if (domain.isEmpty()) {
+        domain = STORE_DOMAIN;
+    }
+
     for (int i=0; i < 6; ++i ) {
-        manager->connectToHostEncrypted(STORE_DOMAIN);
+        manager->connectToHostEncrypted(domain);
     }
 
     QNetworkDiskCache* cache = new QNetworkDiskCache(manager);

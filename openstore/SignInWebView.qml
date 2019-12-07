@@ -17,9 +17,12 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import QtWebEngine 1.5
+import OpenStore 1.0
 
 Page {
     id: rootItem
+
+    readonly property string baseUrl: OpenStoreNetworkManager.domain
 
     header: PageHeader {
         id: header
@@ -33,7 +36,7 @@ Page {
         anchors.left: parent.left
         anchors.right: parent.right
         zoomFactor: units.gu(1) / 8
-        url: "https://open-store.io/login"
+        url: baseUrl + "login"
         settings {
             localStorageEnabled: false
          }
@@ -44,7 +47,7 @@ Page {
          property bool reloaded: false
 
         onUrlChanged: {
-            if (url == "https://open-store.io/manage") {
+            if (url == baseUrl + "manage") {
                 webView.opacity = 0
                 function Timer() {
                     return Qt.createQmlObject("import QtQuick 2.0; Timer {}", root)
@@ -57,8 +60,8 @@ Page {
                 })
                 timer.start()
             }
-            else if (("" + url).startsWith("https://open-store.io/manage/apikey")) {
-                root.apiKey = ("" + url).replace("https://open-store.io/manage/apikey#","")
+            else if (("" + url).startsWith(baseUrl + "manage/apikey")) {
+                root.apiKey = ("" + url).replace(baseUrl + "manage/apikey#","")
                 bottomEdgeStack.pop()
             }
         }

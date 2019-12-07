@@ -11,6 +11,7 @@
         <file>Components/SectionDivider.qml</file>
         <file>MainPage.qml</file>
         <file>SearchTab.qml</file>
+        <file>SignInWebView.qml</file>
         <file>Components/HookIcon.qml</file>
         <file>Components/LeftNavigationBar.qml</file>
         <file>Components/ConvergentTabView.qml</file>

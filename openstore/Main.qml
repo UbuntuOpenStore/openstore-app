@@ -32,6 +32,7 @@ MainView {
     height: units.gu(75)
 
     property var mainPage
+    property alias apiKey: settings.apiKey
 
     function slot_packageDetailsReady(pkg) {
         PackagesCache.packageDetailsReady.disconnect(slot_packageDetailsReady)
@@ -162,6 +163,7 @@ MainView {
         id: settings
         property bool firstStart: true
         property bool hideNsfw: true
+        property string apiKey: ""
 
         Component.onCompleted: OpenStoreNetworkManager.showNsfw = !settings.hideNsfw
     }

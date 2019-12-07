@@ -80,6 +80,38 @@ Page {
                     }
                 }
 
+                ListItem {
+                    visible: root.apiKey === ""
+                    onClicked: bottomEdgeStack.push(Qt.resolvedUrl("SignInWebView.qml"))
+                    ListItemLayout {
+                        anchors.centerIn: parent
+                        title.text: i18n.tr("Sign in")
+
+                        Icon {
+                            name: "account"
+                            SlotsLayout.position: SlotsLayout.Trailing
+                            width: units.gu(3)
+                            height: units.gu(3)
+                        }
+                    }
+                }
+
+                ListItem {
+                    visible: root.apiKey !== ""
+                    onClicked: root.apiKey = ""
+                    ListItemLayout {
+                        anchors.centerIn: parent
+                        title.text: i18n.tr("Sign out")
+
+                        Icon {
+                            name: "edit-clear"
+                            SlotsLayout.position: SlotsLayout.Trailing
+                            width: units.gu(3)
+                            height: units.gu(3)
+                        }
+                    }
+                }
+
                 /*
                 Components.SectionDivider {
                     text: i18n.tr("Developers")

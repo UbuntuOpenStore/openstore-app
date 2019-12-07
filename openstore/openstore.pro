@@ -65,4 +65,5 @@ HEADERS += \
     package.h \
     pamauthentication.h \
     cachingnetworkmanagerfactory.h \
-    apiconstants.h
+    apiconstants.h \
+    review.h

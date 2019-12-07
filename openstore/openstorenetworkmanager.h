@@ -1,10 +1,13 @@
 #ifndef OPENSTORENETWORKMANAGER_H
 #define OPENSTORENETWORKMANAGER_H
 
+#include "review.h"
+
 #include <QObject>
 #include <QNetworkAccessManager>
 
 #include <QUrlQuery>
+
 
 struct OpenStoreReply {
     QByteArray data;
@@ -33,6 +36,7 @@ public Q_SLOTS:
     bool getCategories(const QString &signature);
     bool getUrl(const QString &signature, const QUrl &url);
     bool getRevisions(const QString &signature, const QStringList &appIdsAtVersion);
+    bool postReview(const QString &signature, const QString &appId, const QString &version, const QString &review, ReviewItem::Rating rating);
 
 Q_SIGNALS:
     void networkAccessibleChanged();

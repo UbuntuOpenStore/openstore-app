@@ -10,5 +10,8 @@
 #define API_CATEGORIES_ENDPOINT QStringLiteral("v3/categories")
 #define API_REVISION_ENDPOINT QStringLiteral("v3/revisions")
 
+#define API_REVIEW_LIST_ENDPOINT API_APPDETAILS_ENDPOINT + QStringLiteral("/reviews")
+#define API_REVIEW_ENDPOINT API_APPDETAILS_ENDPOINT + QStringLiteral("/reviews/%2")
+#define API_REVIEW_COMMENT_ENDPOINT API_APPDETAILS_ENDPOINT + QStringLiteral("/reviews/%2/comment")
 
 #endif // APICONSTANTS_H

@@ -7,6 +7,7 @@
 #include <QStandardPaths>
 #include <QUrlQuery>
 #include <QUuid>
+#include <QJsonObject>
 
 #include <QDebug>
 
@@ -182,6 +183,42 @@ bool OpenStoreNetworkManager::getRevisions(const QString &signature, const QStri
 
     return true;
 }
+
+
+bool OpenStoreNetworkManager::postReview(const QString &signature,
+                                         const QString &appId,
+                                         const QString &version,
+                                         const QString &review,
+                                         ReviewItem::Rating rating)
+{
+    QJsonObject createReview{
+        { "body", review },
+        { "version", version },
+        { "rating", ReviewItem::ratingToString(rating) }
+    };
+    QJsonDocument jsonDocument(createReview);
+
+    QUrl url(API_BASEURL + API_REVIEW_LIST_ENDPOINT.arg(appId));
+
+    QUrlQuery q(url);
+    q.addQueryItem("append", "true");
+
+    url.setQuery(q);
+
+    QNetworkRequest request(url);
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+
+    QNetworkReply *reply = m_manager->post(request, jsonDocument.toJson());
+
+    connect(reply, &QNetworkReply::finished, [=]() {
+        emitReplySignal(reply, signature);
+    });
+
+    emitReplySignal(reply, signature);
+
+    return true;
+}
+
 
 void OpenStoreNetworkManager::deleteCache()
 {

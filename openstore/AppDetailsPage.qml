@@ -327,7 +327,7 @@ Page {
             }
 
             Components.ReviewPreview {
-                reviews: [
+                reviews: app.reviews/*[
                     {
                         "author_id":"hfuhduahdasuhd",
                         "author_displayname":"Hans Müller",
@@ -350,7 +350,7 @@ Page {
                             "date":592346189234724
                         }
                     }
-                ]
+                ]*/
             }
 
             ListItem {

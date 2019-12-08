@@ -48,7 +48,7 @@ ListItem {
     }
 
     function postReview(rating, body) {
-        app.review(body, 42, root.apiKey)
+        app.review(body, rating, root.apiKey)
     }
 
     Component {

@@ -17,6 +17,7 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
+import OpenStore 1.0
 
 
 ListItem {
@@ -47,7 +48,7 @@ ListItem {
     }
 
     function postReview(rating, body) {
-        app.postReview(body, rating, root.apikey)
+        app.review(body, 42, root.apikey)
     }
 
     Component {
@@ -76,7 +77,7 @@ ListItem {
                     enabled: textArea.text.length <= maxLength
                     onClicked: {
                         PopupUtils.close(dialogue)
-                        postReview("THUMPS_UP", textArea.text)
+                        postReview(ReviewItem.RatingThumbsUp, textArea.text)
                     }
                  }
                  Button {
@@ -87,7 +88,7 @@ ListItem {
                     enabled: textArea.text.length <= maxLength
                     onClicked: {
                         PopupUtils.close(dialogue)
-                        postReview("THUMPS_DOWN", textArea.text)
+                        postReview(ReviewItem.RatingThumbsDown, textArea.text)
                     }
                  }
                  Button {
@@ -98,7 +99,7 @@ ListItem {
                     enabled: textArea.text.length <= maxLength
                     onClicked: {
                         PopupUtils.close(dialogue)
-                        postReview("HAPPY", textArea.text)
+                        postReview(ReviewItem.RatingHappy, textArea.text)
                     }
                  }
                  Button {
@@ -109,7 +110,7 @@ ListItem {
                     enabled: textArea.text.length <= maxLength
                     onClicked: {
                         PopupUtils.close(dialogue)
-                        postReview("NEUTRAL", textArea.text)
+                        postReview(ReviewItem.RatingNeutral, textArea.text)
                     }
                  }
                  Button {
@@ -120,7 +121,7 @@ ListItem {
                     enabled: textArea.text.length <= maxLength
                     onClicked: {
                         PopupUtils.close(dialogue)
-                        postReview("BUGGY", textArea.text)
+                        postReview(ReviewItem.RatingBuggy, textArea.text)
                     }
                  }
              }

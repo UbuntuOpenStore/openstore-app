@@ -202,7 +202,6 @@ bool OpenStoreNetworkManager::postReview(const QString &signature,
     QUrl url(API_BASEURL + API_REVIEW_LIST_ENDPOINT.arg(appId));
 
     QUrlQuery q(url);
-    q.addQueryItem("append", "true");
     q.addQueryItem("apikey", apikey);
 
     url.setQuery(q);

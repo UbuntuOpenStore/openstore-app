@@ -189,7 +189,8 @@ bool OpenStoreNetworkManager::postReview(const QString &signature,
                                          const QString &appId,
                                          const QString &version,
                                          const QString &review,
-                                         ReviewItem::Rating rating)
+                                         ReviewItem::Rating rating,
+                                         const QString &apikey)
 {
     QJsonObject createReview{
         { "body", review },
@@ -202,6 +203,7 @@ bool OpenStoreNetworkManager::postReview(const QString &signature,
 
     QUrlQuery q(url);
     q.addQueryItem("append", "true");
+    q.addQueryItem("apikey", apikey);
 
     url.setQuery(q);
 

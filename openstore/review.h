@@ -9,13 +9,14 @@
 class ReviewItem: public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QString id MEMBER m_reviewId)
+    Q_PROPERTY(QString id READ id)
     Q_PROPERTY(QString body MEMBER m_body)
     Q_PROPERTY(QString comment MEMBER m_comment)
-    Q_PROPERTY(Rating rating MEMBER m_rating)
-    Q_PROPERTY(QString reviewedVersion MEMBER m_reviewedVersion)
+    Q_PROPERTY(Rating rating READ rating)
+    Q_PROPERTY(QString reviewedVersion READ reviewedVersion)
     Q_PROPERTY(bool isReducted MEMBER m_isReducted)
     Q_PROPERTY(QString author MEMBER m_author)
+    Q_PROPERTY(unsigned int date MEMBER m_date)
 
     Q_ENUMS(Rating)
 
@@ -42,9 +43,23 @@ public:
                 return "HAPPY";
             case RatingBuggy:
                 return "BUGGY";
-            default:
-                return "";
         }
+        return "";
+    }
+
+    QString id() const
+    {
+        return m_reviewId;
+    }
+
+    QString reviewedVersion() const
+    {
+        return m_reviewedVersion;
+    }
+
+    Rating rating() const
+    {
+        return m_rating;
     }
 
 //    explicit ReviewItem(const QVariantMap &json, QObject *parent = 0);
@@ -67,6 +82,7 @@ private:
     QString m_reviewedVersion;
     bool m_isReducted;
     QString m_author;
+    unsigned int m_date;
 };
 
 #endif // REVIEW_H

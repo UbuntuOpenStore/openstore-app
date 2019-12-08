@@ -36,7 +36,10 @@ public Q_SLOTS:
     bool getCategories(const QString &signature);
     bool getUrl(const QString &signature, const QUrl &url);
     bool getRevisions(const QString &signature, const QStringList &appIdsAtVersion);
-    bool postReview(const QString &signature, const QString &appId, const QString &version, const QString &review, ReviewItem::Rating rating, const QString &apikey);
+    bool postReview(const QString &signature, const QString &appId, const QString &version, const QString &review, ReviewItem::Rating rating, const QString &apiKey);
+    bool getReviews(const QString &signature, const QString &appId);
+    bool getReviews(const QString &signature, const QString &appId, unsigned int limit, const QString &fromReviewId);
+    bool getReviews(const QString &signature, const QString &appId, const QString &apiKey);
 
 Q_SIGNALS:
     void networkAccessibleChanged();
@@ -50,6 +53,7 @@ private Q_SLOTS:
 private:
     QNetworkReply* sendRequest(QNetworkRequest request);
     void emitReplySignal(QNetworkReply* reply, const QString &signature);
+    bool getReviewsByUrl(const QString &signature, const QUrl &url);
 
 private:
     QNetworkAccessManager* m_manager;

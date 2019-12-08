@@ -6,8 +6,10 @@
 #include <QJsonDocument>
 #include <QDebug>
 #include <QDateTime>
+#include <QPointer>
 
 #include "platformintegration.h"
+#include "reviewsmodel.h"
 
 class PackageItem: public QObject
 {
@@ -45,6 +47,7 @@ class PackageItem: public QObject
     Q_PROPERTY(QStringList types READ types NOTIFY updated)
     Q_PROPERTY(bool channelMatchesOS READ channelMatchesOS NOTIFY updated)
     Q_PROPERTY(bool frameworkMatchesOS READ frameworkMatchesOS NOTIFY updated)
+    Q_PROPERTY(ReviewsModel * reviews MEMBER m_reviews NOTIFY updated)
 
     Q_ENUMS(Hook)
     Q_FLAGS(Hooks)
@@ -117,6 +120,7 @@ public:
     Q_INVOKABLE bool install() const;
     Q_INVOKABLE bool remove() const;
     Q_INVOKABLE QString appLaunchUrl() const;
+    Q_INVOKABLE bool review(const QString &text, ReviewItem::Rating rating, const QString &apiKey) const;
 
 Q_SIGNALS:
     void updated();
@@ -157,6 +161,7 @@ private:
     QStringList m_channels;
     QStringList m_types;
     QString m_framework;
+    QPointer<ReviewsModel> m_reviews;
 };
 
 #endif // PACKAGE_H

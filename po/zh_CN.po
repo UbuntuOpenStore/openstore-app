@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chinese (Simplified) (OpenStore)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-01 05:07+0000\n"
-"PO-Revision-Date: 2019-04-24 21:35+0000\n"
-"Last-Translator: tongsj2333 <hh23333@foxmail.com>\n"
+"POT-Creation-Date: 2019-09-08 03:48+0000\n"
+"PO-Revision-Date: 2019-12-03 17:38+0000\n"
+"Last-Translator: Sam Zhang <sammyok@163.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.ubports.com/projects/"
 "openstore/openstore-app/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.2.2\n"
+"X-Generator: Weblate 3.8\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
 msgid "App details"
@@ -37,9 +37,8 @@ msgid "Open"
 msgstr "打开应用"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:135
-#, fuzzy
 msgid "Install stable version"
-msgstr "已安装的版本"
+msgstr "安装稳定版"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:138
 msgid "Upgrade"
@@ -52,7 +51,7 @@ msgstr "安装"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:211
 msgid "This app is not compatible with your system."
-msgstr ""
+msgstr "此应用与你的系统不兼容。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:252
 msgid "This app has access to restricted system data, see below for details."
@@ -89,11 +88,11 @@ msgstr "首次发布"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:356
 msgid "Downloads of the latest version"
-msgstr ""
+msgstr "下载最新版本"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:365
 msgid "Total downloads"
-msgstr ""
+msgstr "总计下载"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:374
 msgid "License"
@@ -155,19 +154,19 @@ msgstr "写入路径"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:622
 msgid "Donating"
-msgstr ""
+msgstr "捐赠"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:623
 msgid "Would you like to support this app with a donation to the developer?"
-msgstr ""
+msgstr "你想通过捐赠开发者来支持此应用吗？"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:629
 msgid "Donate now"
-msgstr ""
+msgstr "现在捐赠"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:637
 msgid "Maybe later"
-msgstr ""
+msgstr "以后再说"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:650
 msgid "Remove package"
@@ -288,21 +287,17 @@ msgstr "可用的更新(%1)"
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
 #, qt-format
 msgid "Stable version available (%1)"
-msgstr ""
+msgstr "可用的稳定版  (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:105
-#, fuzzy
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
-msgstr ""
-"这个安装版本的应用不是来自 OpenStore 服务器。您可以通过点击下面的按钮来安装最"
-"新的稳定更新。"
+msgstr "已安装的应用不是来自 OpenStore 但有稳定版本可供下载。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:106
-#, fuzzy
 msgid "Update all"
-msgstr "可用的更新"
+msgstr "全部更新"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:191
 msgid "No apps found"

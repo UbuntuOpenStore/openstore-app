@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
 
     qmlRegisterType<PamAuthentication>("OpenStore.PamAuthentication", 0, 1, "PamAuthentication");
     qmlRegisterType<ReviewItem>("OpenStore", 1, 0, "ReviewItem");
-
+    qRegisterMetaType<ReviewItem::Rating>("Rating");
     QQuickView view;
 
     QObject::connect(view.engine(), &QQmlEngine::quit, &app, &QGuiApplication::quit);

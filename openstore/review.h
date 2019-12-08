@@ -84,5 +84,5 @@ private:
     QString m_author;
     unsigned int m_date;
 };
-
+typedef ReviewItem::Rating Rating;
 #endif // REVIEW_H

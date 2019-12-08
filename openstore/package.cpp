@@ -184,7 +184,7 @@ void PackageItem::updateLocalInfo(int localRevision, const QString &localVersion
     Q_EMIT installedChanged();
 }
 
-bool PackageItem::review(const QString &review, ReviewItem::Rating rating, const QString &apiKey) const
+bool PackageItem::review(const QString &review, Rating rating, const QString &apiKey) const
 {
     return m_reviews->postReview(m_version, review, rating, apiKey);
 }

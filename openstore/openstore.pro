@@ -31,7 +31,8 @@ SOURCES += main.cpp \
     packagescache.cpp \
     pamauthentication.cpp \
     cachingnetworkmanagerfactory.cpp \
-    reviewsmodel.cpp
+    reviewsmodel.cpp \
+    review.cpp
 
 
 RESOURCES += openstore.qrc

@@ -20,6 +20,12 @@ class ReviewsModel : public QAbstractListModel
 
 public:
     enum Roles {
+        RoleId,
+        RoleBody,
+        RoleComment,
+        RoleRedacted,
+        RoleDate,
+        RoleAuthor,
         RoleVersion,
         RoleRating
     };

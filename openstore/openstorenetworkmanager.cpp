@@ -8,6 +8,7 @@
 #include <QUrlQuery>
 #include <QUuid>
 #include <QJsonObject>
+#include <QJsonDocument>
 
 #include <QDebug>
 
@@ -245,6 +246,11 @@ bool OpenStoreNetworkManager::getReviews(const QString &signature,
 {
     QUrl url(API_BASEURL + API_REVIEW_LIST_ENDPOINT.arg(appId));
 
+    QUrlQuery q(url);
+    q.addQueryItem("limit", "10");
+
+    url.setQuery(q);
+
     return getReviewsByUrl(signature, url);
 }
 
@@ -283,7 +289,7 @@ bool OpenStoreNetworkManager::getReviews(const QString &signature,
 
 bool OpenStoreNetworkManager::getReviewsByUrl(const QString &signature, const QUrl &url)
 {
-    QNetworkReply *reply = sendRequest(QNetworkRequest(url));
+    QNetworkReply *reply = m_manager->get(QNetworkRequest(url));
 
     connect(reply, &QNetworkReply::finished, [=]() {
         emitReplySignal(reply, signature);

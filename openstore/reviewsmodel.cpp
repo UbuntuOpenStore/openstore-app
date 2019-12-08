@@ -2,6 +2,8 @@
 #include "review.h"
 
 #include <QJsonDocument>
+#include <QJsonObject>
+#include <QJsonArray>
 #include <QDebug>
 
 ReviewsModel::ReviewsModel(const QString &appId, QObject *parent)
@@ -27,10 +29,22 @@ QVariant ReviewsModel::data(const QModelIndex &index, int role) const
     const ReviewItem &item = m_list.at(index.row());
 
     switch (role) {
+    case RoleId:
+        return item.id();
+    case RoleBody:
+        return item.body();
+    case RoleComment:
+        return item.comment();
+    case RoleRedacted:
+        return item.redacted();
+    case RoleAuthor:
+        return item.author();
     case RoleVersion:
-        return item.reviewedVersion();
+        return item.version();
     case RoleRating:
         return item.rating();
+    case RoleDate:
+        return item.date();
     }
     return QVariant();
 }
@@ -39,8 +53,14 @@ QVariant ReviewsModel::data(const QModelIndex &index, int role) const
 QHash<int, QByteArray> ReviewsModel::roleNames() const
 {
     QHash<int, QByteArray> roles;
-    roles.insert(RoleVersion, "version");
+    roles.insert(RoleId, "id");
+    roles.insert(RoleBody, "body");
+    roles.insert(RoleComment, "comment");
+    roles.insert(RoleRedacted, "redacted");
+    roles.insert(RoleAuthor, "author");
     roles.insert(RoleRating, "rating");
+    roles.insert(RoleDate, "date");
+    roles.insert(RoleVersion, "version");
     return roles;
 }
 
@@ -65,57 +85,29 @@ void ReviewsModel::parseReply(OpenStoreReply reply)
         return;
 
     QJsonParseError error;
-    QJsonDocument jsonDoc = QJsonDocument::fromJson(reply.data, &error);
+    QJsonDocument jsonDocument = QJsonDocument::fromJson(reply.data, &error);
 
     if (error.error != QJsonParseError::NoError) {
         qWarning() << Q_FUNC_INFO << "Error parsing json";
         return;
     }
 
-    QVariantMap replyMap = jsonDoc.toVariant().toMap();
-
-    if (!replyMap.value("success").toBool() || !replyMap.contains("data")) {
-        qWarning() << Q_FUNC_INFO << "Server replied with error";
+    if (!jsonDocument.isObject()) {
+        qWarning() << Q_FUNC_INFO << "Error parsing json";
         return;
     }
+    QJsonObject jsonObject = jsonDocument.object();
 
-    QVariantMap data = replyMap.value("data").toMap();
+    QJsonObject data = jsonObject["data"].toObject();
 
-    /*
-     * TODO
-     *
-     * QVariantMap highlight = data.value("highlight").toMap();
-    m_highlightBannerUrl = highlight.value("image").toUrl();
-    m_highlightAppId = highlight.value("id").toString();
+    QJsonArray reviews = data["reviews"].toArray();
+    //qDebug() << "review array: " << reviews;
 
-    if (!PackagesCache::instance()->contains(m_highlightAppId)) {
-        PackagesCache::instance()->insert(m_highlightAppId, highlight.value("app").toMap());
+    Q_FOREACH(const QJsonValue &reviewJson, reviews) {
+        qDebug() << reviewJson;
+        ReviewItem review(reviewJson.toObject(), this);
+        m_list << review;
     }
-
-    // Categories parsing
-    QVariantList categories = data.value("categories").toList();
-    Q_FOREACH(const QVariant &categoryVariant, categories) {
-        const QVariantMap &category = categoryVariant.toMap();
-
-        beginInsertRows(QModelIndex(), m_list.count(), m_list.count());
-        DiscoverCategoryItem item;
-        item.name = category.value("name").toString();
-        item.tagline = category.value("tagline").toString();
-        item.queryUrl = category.value("query_url").toString();
-        item.appIds = category.value("ids").toStringList();
-        m_list.append(item);
-        endInsertRows();
-
-        QVariantList catAppsList = category.value("apps").toList();
-        Q_FOREACH(const QVariant &appVariant, catAppsList) {
-            const QVariantMap &app = appVariant.toMap();
-            const QString &appId = app.value("id").toString();
-
-            if (!PackagesCache::instance()->contains(appId)) {
-                PackagesCache::instance()->insert(appId, app);
-            }
-        }
-    }*/
-
+    
     Q_EMIT updated();
 }

@@ -175,7 +175,7 @@ ListItem {
             orientation: ListView.Horizontal
             spacing: units.gu(2)
             delegate: UbuntuShape {
-                property var review: reviews[index]
+                property var review: model
                 height: reviewsListView.height - units.gu(4)
                 width: height * 1.3
                 aspect: UbuntuShape.DropShadow
@@ -201,7 +201,7 @@ ListItem {
                             }
                             Column {
                                 Label {
-                                    text: review.author_displayname
+                                    text: review.author
                                     font.bold: true
                                 }
                                 Label {
@@ -218,7 +218,7 @@ ListItem {
                     }
                 }
             }
-            model: reviewsWithBody()
+            model: reviews //WithBody()
         }
     }
 

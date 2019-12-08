@@ -64,6 +64,7 @@ Page {
 
             ListItem {
                 height: units.gu(16)
+                divider.visible: false
 
                 ListItemLayout {
                     anchors.fill: parent
@@ -83,6 +84,43 @@ Page {
                             sourceSize.height: parent.height
                             source: app ? app.icon : ""
                         }
+                    }
+                }
+            }
+
+            // Review
+            ListItem {
+                height: units.gu(4)
+
+                Row {
+                    anchors.left: parent.left
+                    anchors.leftMargin: units.gu(2)
+                    anchors.verticalCenter: parent.verticalCenter
+                    spacing: units.gu(5)
+
+                    Components.ReviewItem {
+                        reviewIcon: "👍"
+                        reviewNumber: "10k" // + app.review.thumpup
+                    }
+
+                    Components.ReviewItem {
+                        reviewIcon: "👎"
+                        reviewNumber: "10k" // + app.review.thumpdown
+                    }
+
+                    Components.ReviewItem {
+                        reviewIcon: "🙂"
+                        reviewNumber: "500+" // + app.review.happy
+                    }
+
+                    Components.ReviewItem {
+                        reviewIcon: "😐"
+                        reviewNumber: "200+" // + app.review.neutral
+                    }
+
+                    Components.ReviewItem {
+                        reviewIcon: "🐛"
+                        reviewNumber: "100+" // + // + app.review.buggy
                     }
                 }
             }
@@ -286,6 +324,86 @@ Page {
                         name: descLayout.showAll ? "go-up" : "go-down"
                     }
                 }
+            }
+
+            Components.ReviewPreview {
+                reviews: [
+                    {
+                        "author_id":"hfuhduahdasuhd",
+                        "author_displayname":"Hans Müller",
+                        "body":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu",
+                        "version":"0.2.0",
+                        "rating":"NEUTRAL",
+                        "date":592346189234723,
+                        "redacted":false
+                    },
+                    {
+                        "author_id":"hfuhduahdasuhd2",
+                        "author_displayname":"Hans Hans",
+                        "body":"Die App ist super! Lorem ipsum dolor sit amet, consetetur sadipscing",
+                        "version":"0.2.1",
+                        "rating":"NEUTRAL",
+                        "date":592346189234723,
+                        "redacted":false,
+                        "comment":{
+                            "body":"You are right...",
+                            "date":592346189234724
+                        }
+                    },
+                    {
+                        "author_id":"hfuhduahdasuhd",
+                        "author_displayname":"Hans Müller",
+                        "body":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu",
+                        "version":"0.2.0",
+                        "rating":"NEUTRAL",
+                        "date":592346189234723,
+                        "redacted":false
+                    },
+                    {
+                        "author_id":"hfuhduahdasuhd2",
+                        "author_displayname":"Hans Hans",
+                        "body":"Die App ist super! Lorem ipsum dolor sit amet, consetetur sadipscing",
+                        "version":"0.2.1",
+                        "rating":"NEUTRAL",
+                        "date":592346189234723,
+                        "redacted":false,
+                        "comment":{
+                            "body":"You are right...",
+                            "date":592346189234724
+                        }
+                    },
+                    {
+                        "author_id":"hfuhduahdasuhd",
+                        "author_displayname":"Hans Müller",
+                        "body":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu",
+                        "version":"0.2.0",
+                        "rating":"NEUTRAL",
+                        "date":592346189234723,
+                        "redacted":false
+                    },
+                    {
+                        "author_id":"hfuhduahdasuhd2",
+                        "author_displayname":"Hans Hans",
+                        "body":"Die App ist super! Lorem ipsum dolor sit amet, consetetur sadipscing",
+                        "version":"0.2.1",
+                        "rating":"NEUTRAL",
+                        "date":592346189234723,
+                        "redacted":false,
+                        "comment":{
+                            "body":"You are right...",
+                            "date":592346189234724
+                        }
+                    },
+                    {
+                        "author_id":"hfuhduahdasuhd2",
+                        "author_displayname":"Hans Hans",
+                        "body":"",
+                        "version":"0.2.1",
+                        "rating":"NEUTRAL",
+                        "date":592346189234723,
+                        "redacted":true
+                    },
+                ]
             }
 
             ListItem {

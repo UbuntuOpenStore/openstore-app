@@ -7,6 +7,7 @@
 #include <QStandardPaths>
 #include <QUrlQuery>
 #include <QUuid>
+#include <QJsonObject>
 
 #include <QDebug>
 
@@ -201,6 +202,98 @@ bool OpenStoreNetworkManager::getRevisions(const QString &signature, const QStri
 
     return true;
 }
+
+
+bool OpenStoreNetworkManager::postReview(const QString &signature,
+                                         const QString &appId,
+                                         const QString &version,
+                                         const QString &review,
+                                         ReviewItem::Rating rating,
+                                         const QString &apikey)
+{
+    QJsonObject createReview{
+        { "body", review },
+        { "version", version },
+        { "rating", ReviewItem::ratingToString(rating) }
+    };
+    QJsonDocument jsonDocument(createReview);
+
+    QUrl url(API_BASEURL + API_REVIEW_LIST_ENDPOINT.arg(appId));
+
+    QUrlQuery q(url);
+    q.addQueryItem("apikey", apikey);
+
+    url.setQuery(q);
+
+    QNetworkRequest request(url);
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+
+    QNetworkReply *reply = m_manager->post(request, jsonDocument.toJson());
+
+    connect(reply, &QNetworkReply::finished, [=]() {
+        emitReplySignal(reply, signature);
+    });
+
+    emitReplySignal(reply, signature);
+
+    return true;
+}
+
+
+bool OpenStoreNetworkManager::getReviews(const QString &signature,
+                                         const QString &appId)
+{
+    QUrl url(API_BASEURL + API_REVIEW_LIST_ENDPOINT.arg(appId));
+
+    return getReviewsByUrl(signature, url);
+}
+
+
+bool OpenStoreNetworkManager::getReviews(const QString &signature,
+                                         const QString &appId,
+                                         const QString &apiKey)
+{
+    QUrl url(API_BASEURL + API_REVIEW_LIST_ENDPOINT.arg(appId));
+
+    QUrlQuery q(url);
+    q.addQueryItem("apikey", apiKey);
+
+    url.setQuery(q);
+
+    return getReviewsByUrl(signature, url);
+}
+
+
+bool OpenStoreNetworkManager::getReviews(const QString &signature,
+                                         const QString &appId,
+                                         unsigned int limit,
+                                         const QString &fromReviewId)
+{
+    QUrl url(API_BASEURL + API_REVIEW_LIST_ENDPOINT.arg(appId));
+
+    QUrlQuery q(url);
+    q.addQueryItem("limit", QString::number(limit));
+    q.addQueryItem("from", fromReviewId);
+
+    url.setQuery(q);
+
+    return getReviewsByUrl(signature, url);
+}
+
+
+bool OpenStoreNetworkManager::getReviewsByUrl(const QString &signature, const QUrl &url)
+{
+    QNetworkReply *reply = sendRequest(QNetworkRequest(url));
+
+    connect(reply, &QNetworkReply::finished, [=]() {
+        emitReplySignal(reply, signature);
+    });
+
+    emitReplySignal(reply, signature);
+
+    return true;
+}
+
 
 void OpenStoreNetworkManager::deleteCache()
 {

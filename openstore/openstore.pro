@@ -30,7 +30,8 @@ SOURCES += main.cpp \
     package.cpp \
     packagescache.cpp \
     pamauthentication.cpp \
-    cachingnetworkmanagerfactory.cpp
+    cachingnetworkmanagerfactory.cpp \
+    reviewsmodel.cpp
 
 
 RESOURCES += openstore.qrc
@@ -64,4 +65,6 @@ HEADERS += \
     package.h \
     pamauthentication.h \
     cachingnetworkmanagerfactory.h \
-    apiconstants.h
+    apiconstants.h \
+    review.h \
+    reviewsmodel.h

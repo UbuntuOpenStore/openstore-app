@@ -26,14 +26,14 @@ ListItem {
     readonly property int maxLength: 512
 
     function getRatingEmoji(rating) {
-        var map = {
-            "THUMBS_UP": "👍",
-            "THUMBS_DOWN": "👎",
-            "HAPPY": "🙂",
-            "NEUTRAL": "😐",
-            "BUGGY": "🐛"
+        switch(rating) {
+            case ReviewItem.RatingThumbsUp: return "👍"
+            case ReviewItem.RatingThumbsDown: return "👎"
+            case ReviewItem.RatingHappy: return "🙂"
+            case ReviewItem.RatingNeutral: return "😐"
+            case ReviewItem.RatingBuggy: return "🐛"
         }
-        return map[rating]
+        return "😐"
     }
 
     function reviewsWithBody() {
@@ -47,7 +47,7 @@ ListItem {
     }
 
     function postReview(rating, body) {
-
+        app.postReview(body, rating, root.apikey)
     }
 
     Component {

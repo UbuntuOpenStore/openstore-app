@@ -24,5 +24,6 @@
         <file>AuthenticationHandler.qml</file>
         <file>PasswordDialog.qml</file>
         <file>Components/ScreenshotsCarousel.qml</file>
+        <file>Components/ReviewItem.qml</file>
     </qresource>
 </RCC>

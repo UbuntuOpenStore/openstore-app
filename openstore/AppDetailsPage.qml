@@ -62,6 +62,7 @@ Page {
 
             ListItem {
                 height: units.gu(16)
+                divider.visible: false
 
                 ListItemLayout {
                     anchors.fill: parent
@@ -81,6 +82,43 @@ Page {
                             sourceSize.height: parent.height
                             source: app ? app.icon : ""
                         }
+                    }
+                }
+            }
+
+            // Review
+            ListItem {
+                height: units.gu(4)
+
+                Row {
+                    anchors.left: parent.left
+                    anchors.leftMargin: units.gu(2)
+                    anchors.verticalCenter: parent.verticalCenter
+                    spacing: units.gu(5)
+
+                    Components.ReviewItem {
+                        reviewIcon: "👍"
+                        reviewNumber: "10k" // + app.review.thumpup
+                    }
+
+                    Components.ReviewItem {
+                        reviewIcon: "👎"
+                        reviewNumber: "10k" // + app.review.thumpdown
+                    }
+
+                    Components.ReviewItem {
+                        reviewIcon: "🙂"
+                        reviewNumber: "500+" // + app.review.happy
+                    }
+
+                    Components.ReviewItem {
+                        reviewIcon: "😐"
+                        reviewNumber: "200+" // + app.review.neutral
+                    }
+
+                    Components.ReviewItem {
+                        reviewIcon: "🐛"
+                        reviewNumber: "100+" // + // + app.review.buggy
                     }
                 }
             }

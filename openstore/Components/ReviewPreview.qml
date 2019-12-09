@@ -37,16 +37,6 @@ ListItem {
         return "😐"
     }
 
-    function reviewsWithBody() {
-        var reviewsWithBody = []
-        for(var i = 0; i < reviews.length; i++) {
-            if (reviews[i].body !== "") {
-                reviewsWithBody[reviewsWithBody.length] = reviews[i]
-            }
-        }
-        return reviewsWithBody
-    }
-
     function postReview(rating, body) {
         app.review(body, rating, root.apiKey)
     }
@@ -145,7 +135,7 @@ ListItem {
             width: parent.width
             height: addReviewButton.height + units.gu(2)
             Label {
-                text: i18n.tr("%1 reviews").arg(reviewsWithBody().length)
+                text: i18n.tr("%1 reviews").arg(reviewsListView.model.reviewCount)
                 textSize: Label.Large
                 anchors.left: parent.left
                 anchors.top: parent.top
@@ -218,7 +208,7 @@ ListItem {
                     }
                 }
             }
-            model: reviews //WithBody()
+            model: reviews
         }
     }
 

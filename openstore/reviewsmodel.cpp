@@ -34,7 +34,7 @@ QVariant ReviewsModel::data(const QModelIndex &index, int role) const
     case RoleBody:
         return item.body();
     case RoleComment:
-        return item.comment();
+        return QVariant::fromValue<ReviewItem::Comment>(item.comment());
     case RoleRedacted:
         return item.redacted();
     case RoleAuthor:
@@ -72,6 +72,12 @@ void ReviewsModel::loadMore()
 }
 
 
+unsigned int ReviewsModel::reviewCount() const
+{
+    return m_thumbsUpCount + m_thumbsDownCount + m_neutralCount + m_happyCount + m_buggyCount;
+}
+
+
 bool ReviewsModel::postReview(const QString &version, const QString &review, ReviewItem::Rating rating, const QString &apiKey)
 {
     m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
@@ -101,12 +107,11 @@ void ReviewsModel::parseReply(OpenStoreReply reply)
     QJsonObject data = jsonObject["data"].toObject();
 
     QJsonArray reviews = data["reviews"].toArray();
-    //qDebug() << "review array: " << reviews;
 
     Q_FOREACH(const QJsonValue &reviewJson, reviews) {
         qDebug() << reviewJson;
-        ReviewItem review(reviewJson.toObject(), this);
-        m_list << review;
+        ReviewItem review(reviewJson.toObject());
+        m_list.append(review);
     }
     
     Q_EMIT updated();

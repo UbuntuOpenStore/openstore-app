@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QJsonObject>
+#include <QMap>
 
 class ReviewItem: public QObject
 {
@@ -11,6 +12,7 @@ class ReviewItem: public QObject
 
 public:
     explicit ReviewItem(const QJsonObject &json, QObject * parent = Q_NULLPTR);
+    // TODO: can we add objects derived from QObject to QLists properly?
     explicit ReviewItem(const ReviewItem &review);
 
     enum Rating {
@@ -23,27 +25,69 @@ public:
 
     static QString ratingToString(enum Rating rating);
 
+    class Comment
+    {
+    public:
+        QString m_body;
+        unsigned int m_date;
+
+        Comment() : m_body(""), m_date(0) {}
+        Comment(const QString &body, unsigned int date)
+            : m_body(body), m_date(date)
+        {
+        }
+
+        Comment(const Comment &comment)
+            : m_body(comment.m_body), m_date(comment.m_date)
+        {
+        }
+
+        QString body() const
+        {
+            return m_body;
+        }
+
+        unsigned int date() const
+        {
+            return m_date;
+        }
+    };
+
     QString id() const;
     QString version() const;
     Rating rating() const;
     QString body() const;
-    QString comment() const;
+    Comment comment() const;
     bool redacted() const;
     QString author() const;
     unsigned int date() const;
 
 private:
     static Rating ratingFromString(const QString &rating);
+    static QMap<QString, Rating> & stringToRatingMap()
+    {
+        static QMap<QString, Rating> map
+        {
+            {"THUMBS_UP", RatingThumbsUp},
+            {"THUMBS_DOWN", RatingThumbsDown},
+            {"NEUTRAL", RatingNeutral},
+            {"HAPPY", RatingHappy},
+            {"BUGGY", RatingBuggy}
+        };
+        return map;
+    }
 
     QString m_reviewId;
+    QString m_author;
     QString m_body;
-    QString m_comment;
     Rating m_rating;
     QString m_reviewedVersion;
+    Comment m_comment;
     bool m_isRedacted;
-    QString m_author;
     unsigned int m_date;
 };
+
+Q_DECLARE_METATYPE(ReviewItem::Comment);
 
 typedef ReviewItem::Rating Rating;
 #endif // REVIEW_H

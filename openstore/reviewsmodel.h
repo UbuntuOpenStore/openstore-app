@@ -17,6 +17,7 @@ class ReviewsModel : public QAbstractListModel
     Q_PROPERTY(unsigned int neutralCounter MEMBER m_neutralCount NOTIFY updated)
     Q_PROPERTY(unsigned int happyCounter MEMBER m_happyCount NOTIFY updated)
     Q_PROPERTY(unsigned int buggyCounter MEMBER m_buggyCount NOTIFY updated)
+    Q_PROPERTY(unsigned int reviewCount READ reviewCount NOTIFY updated)
 
 public:
     enum Roles {
@@ -36,9 +37,10 @@ public:
     QVariant data(const QModelIndex &index, int role) const Q_DECL_OVERRIDE;
     QHash<int, QByteArray> roleNames() const Q_DECL_OVERRIDE;
 
+    unsigned int reviewCount() const;
+
     bool postReview(const QString &version, const QString &review, ReviewItem::Rating rating, const QString &apiKey);
 
-    //Q_INVOKABLE PackageItem* getPackage(const QString &appId);
     Q_INVOKABLE void loadMore();
 
 Q_SIGNALS:
@@ -58,8 +60,6 @@ private:
     unsigned int m_neutralCount;
     unsigned int m_happyCount;
     unsigned int m_buggyCount;
-//    QHash<QString, PackageItem*> m_packages;    // Cache
-
 };
 
 #endif // REVIEWSMODEL_H

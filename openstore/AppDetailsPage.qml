@@ -69,7 +69,7 @@ Page {
                     anchors.fill: parent
                     title.text: app.name
                     subtitle.text: app.author
-                    summary.text: printSize(app.fileSize)
+                    summary.text: app.fileSize ? printSize(app.fileSize) : ''
 
                     UbuntuShape {
                         SlotsLayout.position: SlotsLayout.Leading

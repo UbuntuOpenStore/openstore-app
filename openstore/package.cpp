@@ -88,6 +88,7 @@ void PackageItem::fillData(const QVariantMap &json)
             m_version = downloadData.value("version").toString();
             m_revision = downloadData.value("revision").toInt();
             m_packageUrl = downloadData.value("download_url").toString();
+            m_fileSize = json.value("filesize").toInt();
         }
     }
 
@@ -103,7 +104,6 @@ void PackageItem::fillData(const QVariantMap &json)
     m_category = json.value("category").toString();
     m_screenshots = json.value("screenshots").toStringList();
     m_changelog = json.value("changelog").toString();
-    m_fileSize = json.value("filesize").toInt();
     m_installedVersion = PlatformIntegration::instance()->appVersion(m_appId);
     m_publishedDate = json.value("published_date").toDateTime();
     m_updatedDate = json.value("updated_date").toDateTime();

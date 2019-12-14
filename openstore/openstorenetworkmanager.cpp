@@ -210,7 +210,8 @@ bool OpenStoreNetworkManager::postReview(const QString &signature,
                                          const QString &version,
                                          const QString &review,
                                          ReviewItem::Rating rating,
-                                         const QString &apikey)
+                                         const QString &apikey,
+                                         const bool &edit)
 {
     QJsonObject createReview{
         { "body", review },
@@ -229,7 +230,14 @@ bool OpenStoreNetworkManager::postReview(const QString &signature,
     QNetworkRequest request(url);
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
 
-    QNetworkReply *reply = m_manager->post(request, jsonDocument.toJson());
+    QNetworkReply *reply;
+
+    if (edit) {
+        reply = m_manager->put(request, jsonDocument.toJson());
+    }
+    else {
+        reply = m_manager->post(request, jsonDocument.toJson());
+    }
 
     connect(reply, &QNetworkReply::finished, [=]() {
         emitReplySignal(reply, signature);

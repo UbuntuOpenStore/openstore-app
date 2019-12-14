@@ -100,27 +100,27 @@ Page {
 
                     Components.ReviewItem {
                         reviewIcon: "👍"
-                        reviewNumber: "10k" // + app.review.thumpup
+                        reviewNumber: app.ratings.thumbsUpCounter // + app.review.thumpup
                     }
 
                     Components.ReviewItem {
                         reviewIcon: "👎"
-                        reviewNumber: "10k" // + app.review.thumpdown
+                        reviewNumber: app.ratings.thumbsDownCounter // + app.review.thumpdown
                     }
 
                     Components.ReviewItem {
                         reviewIcon: "🙂"
-                        reviewNumber: "500+" // + app.review.happy
+                        reviewNumber: app.ratings.happyCounter // + app.review.happy
                     }
 
                     Components.ReviewItem {
                         reviewIcon: "😐"
-                        reviewNumber: "200+" // + app.review.neutral
+                        reviewNumber: app.ratings.neutralCounter // + app.review.neutral
                     }
 
                     Components.ReviewItem {
                         reviewIcon: "🐛"
-                        reviewNumber: "100+" // + app.review.buggy
+                        reviewNumber: app.ratings.buggyCounter // + app.review.buggy
                     }
                 }
             }

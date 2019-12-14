@@ -144,6 +144,7 @@ ListItem {
                 textSize: Label.Large
                 anchors.left: parent.left
                 anchors.top: parent.top
+                anchors.topMargin: units.gu(0.5)
             }
             Button {
                 text: i18n.tr("Sign in to add review")

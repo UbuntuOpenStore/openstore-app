@@ -21,10 +21,22 @@ Item {
     width: units.gu(3); height: width
 
     property string reviewIcon
-    property string reviewNumber
+    property int reviewNumber
+
+    function getNumberShortForm() {
+        if (reviewNumber > 999999) {
+            return Math.floor(reviewNumber/1000000) + "M"
+        }
+        else if (reviewNumber > 999) {
+            return Math.floor(reviewNumber/1000) + "K"
+        }
+        else return reviewNumber
+    }
 
     Row {
-        width: units.gu(3); height: width
+        width: units.gu(3)
+        height: width
+        spacing: units.gu(0.5)
 
         Label {
             width: units.gu(3); height: width
@@ -35,7 +47,7 @@ Item {
         Label {
             anchors.verticalCenter: parent.verticalCenter
             width: units.gu(3)
-            text: reviewNumber
+            text: getNumberShortForm()
         }
     }
 }

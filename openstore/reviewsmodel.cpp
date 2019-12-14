@@ -115,11 +115,14 @@ void ReviewsModel::parseReply(OpenStoreReply reply)
         m_reviewCount = data["count"].toInt();
         QJsonArray reviews = data["reviews"].toArray();
 
+        beginResetModel();
+        m_list.clear();
         Q_FOREACH(const QJsonValue &reviewJson, reviews) {
             qDebug() << reviewJson;
             ReviewItem review(reviewJson.toObject());
             m_list.append(review);
         }
+        endResetModel();
     }
     else if (data.contains("review_id")) {
         Q_EMIT refresh();

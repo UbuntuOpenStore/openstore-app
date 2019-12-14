@@ -23,8 +23,12 @@ import OpenStore 1.0
 ListItem {
     id: reviewPreviewListItem
     height: reviewPreviewColumn.height
-    property var reviews: []
+    property var reviews
     readonly property int maxLength: 512
+
+    Component.onCompleted: {
+        console.log(JSON.stringify(reviews))
+    }
 
     function getRatingEmoji(rating) {
         switch(rating) {
@@ -135,7 +139,7 @@ ListItem {
             width: parent.width
             height: addReviewButton.height + units.gu(2)
             Label {
-                text: i18n.tr("%1 reviews").arg(reviewsListView.model.reviewCount)
+                text: i18n.tr("%1 reviews").arg(reviews.count)
                 textSize: Label.Large
                 anchors.left: parent.left
                 anchors.top: parent.top
@@ -208,7 +212,7 @@ ListItem {
                     }
                 }
             }
-            model: reviews
+            model: reviews.reviews
         }
     }
 

@@ -24,20 +24,16 @@ ListItem {
     id: reviewPreviewListItem
     height: reviewPreviewColumn.height
     property var reviews
-    readonly property int count: reviews.count || 0
+    readonly property int count: reviews.reviewCount
     readonly property int maxLength: 512
-
-    Component.onCompleted: {
-        console.log(JSON.stringify(reviews))
-    }
 
     function getRatingEmoji(rating) {
         switch(rating) {
-            case ReviewItem.RatingThumbsUp: return "👍"
-            case ReviewItem.RatingThumbsDown: return "👎"
-            case ReviewItem.RatingHappy: return "🙂"
-            case ReviewItem.RatingNeutral: return "😐"
-            case ReviewItem.RatingBuggy: return "🐛"
+            case 0: return "👍"
+            case 1: return "👎"
+            case 2: return "🙂"
+            case 3: return "😐"
+            case 4: return "🐛"
         }
         return "😐"
     }
@@ -140,7 +136,7 @@ ListItem {
             width: parent.width
             height: addReviewButton.height + units.gu(count > 0 ? 2 : 1)
             Label {
-                text: i18n.tr("%1 reviews").arg(count)
+                text: i18n.tr("%1 reviews").arg(getNumberShortForm(count))
                 textSize: Label.Large
                 anchors.left: parent.left
                 anchors.top: parent.top
@@ -191,8 +187,8 @@ ListItem {
                                 height: units.gu(4)
                                 aspect: UbuntuShape.DropShadow
                                 Label {
-                                    text: "👍"//getRatingEmoji(review.rating)
-                                    textSize: Label.XLarge
+                                    text: getRatingEmoji(review.rating)
+                                    textSize: Label.Large
                                     anchors.centerIn: parent
                                 }
                             }
@@ -202,7 +198,7 @@ ListItem {
                                     font.bold: true
                                 }
                                 Label {
-                                    text: (new Date(review.date)).toLocaleString(Qt.locale(), Locale.ShortFormat)
+                                    text: (new Date(review.date)).toLocaleDateString(Qt.locale(), Locale.ShortFormat)
                                     textSize: Label.Small
                                 }
                             }
@@ -215,7 +211,7 @@ ListItem {
                     }
                 }
             }
-            model: reviews.reviews
+            model: reviews
         }
     }
 

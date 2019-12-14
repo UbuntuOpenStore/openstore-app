@@ -28,6 +28,16 @@ Page {
 
     property var app: null
 
+    function getNumberShortForm(number) {
+        if (number > 999999) {
+            return Math.floor(number/1000000) + "M"
+        }
+        else if (number > 999) {
+            return Math.floor(number/1000) + "K"
+        }
+        else return number + ""
+    }
+
     header: PageHeader {
         title: app ? app.name : i18n.tr("App details")
         enabled: !PlatformIntegration.clickInstaller.busy
@@ -100,27 +110,27 @@ Page {
 
                     Components.ReviewItem {
                         reviewIcon: "👍"
-                        reviewNumber: app.ratings.thumbsUpCounter // + app.review.thumpup
+                        reviewNumber: app.reviews.thumbsUpCounter // + app.review.thumpup
                     }
 
                     Components.ReviewItem {
                         reviewIcon: "👎"
-                        reviewNumber: app.ratings.thumbsDownCounter // + app.review.thumpdown
+                        reviewNumber: app.reviews.thumbsDownCounter // + app.review.thumpdown
                     }
 
                     Components.ReviewItem {
                         reviewIcon: "🙂"
-                        reviewNumber: app.ratings.happyCounter // + app.review.happy
+                        reviewNumber: app.reviews.happyCounter // + app.review.happy
                     }
 
                     Components.ReviewItem {
                         reviewIcon: "😐"
-                        reviewNumber: app.ratings.neutralCounter // + app.review.neutral
+                        reviewNumber: app.reviews.neutralCounter // + app.review.neutral
                     }
 
                     Components.ReviewItem {
                         reviewIcon: "🐛"
-                        reviewNumber: app.ratings.buggyCounter // + app.review.buggy
+                        reviewNumber: app.reviews.buggyCounter // + app.review.buggy
                     }
                 }
             }

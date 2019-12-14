@@ -92,7 +92,7 @@ ListItem {
                     enabled: textArea.text.length <= maxLength
                     onClicked: {
                         PopupUtils.close(dialogue)
-                        postReview(0, textArea.text)
+                        postReview(0, textArea.displayText)
                     }
                  }
                  Button {
@@ -103,7 +103,7 @@ ListItem {
                     enabled: textArea.text.length <= maxLength
                     onClicked: {
                         PopupUtils.close(dialogue)
-                        postReview(1, textArea.text)
+                        postReview(1, textArea.displayText)
                     }
                  }
                  Button {
@@ -114,7 +114,7 @@ ListItem {
                     enabled: textArea.text.length <= maxLength
                     onClicked: {
                         PopupUtils.close(dialogue)
-                        postReview(2, textArea.text)
+                        postReview(2, textArea.displayText)
                     }
                  }
                  Button {
@@ -125,7 +125,7 @@ ListItem {
                     enabled: textArea.text.length <= maxLength
                     onClicked: {
                         PopupUtils.close(dialogue)
-                        postReview(3, textArea.text)
+                        postReview(3, textArea.displayText)
                     }
                  }
                  Button {
@@ -136,7 +136,7 @@ ListItem {
                     enabled: textArea.text.length <= maxLength
                     onClicked: {
                         PopupUtils.close(dialogue)
-                        postReview(4, textArea.text)
+                        postReview(4, textArea.displayText)
                     }
                  }
              }

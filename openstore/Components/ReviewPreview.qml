@@ -41,6 +41,7 @@ ListItem {
 
     function postReview(rating, body) {
         success = app.review(body, rating, root.apiKey)
+        app.updateLocalInfo(app.revision, app.versionString)
         PopupUtils.open(successPostDialog)
     }
 

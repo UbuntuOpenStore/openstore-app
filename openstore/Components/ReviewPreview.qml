@@ -24,6 +24,7 @@ ListItem {
     id: reviewPreviewListItem
     height: reviewPreviewColumn.height
     property var reviews
+    readonly property int count: reviews.count || 0
     readonly property int maxLength: 512
 
     Component.onCompleted: {
@@ -130,16 +131,16 @@ ListItem {
         id: reviewPreviewColumn
 
         width: reviewPreviewListItem.width - units.gu(4)
-        height: units.gu(42)
+        height: count > 0 ? units.gu(42) : addReviewButton.height + units.gu(4)
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.margins: units.gu(2)
 
         Item {
             width: parent.width
-            height: addReviewButton.height + units.gu(2)
+            height: addReviewButton.height + units.gu(count > 0 ? 2 : 1)
             Label {
-                text: i18n.tr("%1 reviews").arg(reviews.count)
+                text: i18n.tr("%1 reviews").arg(count)
                 textSize: Label.Large
                 anchors.left: parent.left
                 anchors.top: parent.top
@@ -165,6 +166,7 @@ ListItem {
         ListView {
             id: reviewsListView
             width: parent.width
+            visible: count > 0
             height: parent.height - addReviewButton.height - units.gu(2)
             orientation: ListView.Horizontal
             spacing: units.gu(2)

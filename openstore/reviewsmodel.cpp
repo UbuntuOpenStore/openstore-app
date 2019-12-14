@@ -74,7 +74,7 @@ void ReviewsModel::loadMore()
 
 unsigned int ReviewsModel::reviewCount() const
 {
-    return m_thumbsUpCount + m_thumbsDownCount + m_neutralCount + m_happyCount + m_buggyCount;
+    return m_reviewCount;
 }
 
 
@@ -106,6 +106,7 @@ void ReviewsModel::parseReply(OpenStoreReply reply)
 
     QJsonObject data = jsonObject["data"].toObject();
 
+    m_reviewCount = data["count"].toInt();
     QJsonArray reviews = data["reviews"].toArray();
 
     Q_FOREACH(const QJsonValue &reviewJson, reviews) {

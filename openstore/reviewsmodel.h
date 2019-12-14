@@ -39,7 +39,7 @@ public:
 
     unsigned int reviewCount() const;
 
-    bool postReview(const QString &version, const QString &review, ReviewItem::Rating rating, const QString &apiKey);
+    bool sendReview(const QString &version, const QString &review, ReviewItem::Rating rating, const QString &apiKey, const bool &edit);
 
     Q_INVOKABLE void loadMore();
 

@@ -121,6 +121,7 @@ public:
     Q_INVOKABLE bool remove() const;
     Q_INVOKABLE QString appLaunchUrl() const;
     Q_INVOKABLE bool review(const QString &text, Rating rating, const QString &apiKey) const;
+    Q_INVOKABLE bool editReview(const QString &text, Rating rating, const QString &apiKey) const;
 
 Q_SIGNALS:
     void updated();

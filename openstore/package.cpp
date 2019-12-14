@@ -186,5 +186,10 @@ void PackageItem::updateLocalInfo(int localRevision, const QString &localVersion
 
 bool PackageItem::review(const QString &review, Rating rating, const QString &apiKey) const
 {
-    return m_reviews->postReview(m_version, review, rating, apiKey);
+    return m_reviews->sendReview(m_version, review, rating, apiKey, false);
+}
+
+bool PackageItem::editReview(const QString &review, Rating rating, const QString &apiKey) const
+{
+    return m_reviews->sendReview(m_version, review, rating, apiKey, true);
 }

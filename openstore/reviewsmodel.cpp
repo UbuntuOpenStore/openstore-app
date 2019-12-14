@@ -78,12 +78,11 @@ unsigned int ReviewsModel::reviewCount() const
 }
 
 
-bool ReviewsModel::postReview(const QString &version, const QString &review, ReviewItem::Rating rating, const QString &apiKey)
+bool ReviewsModel::sendReview(const QString &version, const QString &review, ReviewItem::Rating rating, const QString &apiKey, const bool &edit)
 {
     m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
-    return OpenStoreNetworkManager::instance()->postReview(m_requestSignature, m_appId, version, review, rating, apiKey);
+    return OpenStoreNetworkManager::instance()->postReview(m_requestSignature, m_appId, version, review, rating, apiKey, edit);
 }
-
 
 void ReviewsModel::parseReply(OpenStoreReply reply)
 {

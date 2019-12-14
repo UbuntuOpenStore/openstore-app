@@ -90,7 +90,7 @@ Page {
 
             // Review
             ListItem {
-                height: units.gu(4)
+                height: units.gu(6)
 
                 Row {
                     anchors.left: parent.left
@@ -120,7 +120,7 @@ Page {
 
                     Components.ReviewItem {
                         reviewIcon: "🐛"
-                        reviewNumber: "100+" // + // + app.review.buggy
+                        reviewNumber: "100+" // + app.review.buggy
                     }
                 }
             }

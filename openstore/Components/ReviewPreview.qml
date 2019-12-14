@@ -197,7 +197,6 @@ ListItem {
                 width: height * 1.3
                 aspect: UbuntuShape.DropShadow
                 backgroundColor: theme.palette.normal.background
-                Component.onCompleted: console.log(review.date)
                 ScrollView {
                     id: reviewScrollView
                     anchors.fill: parent

@@ -44,7 +44,7 @@ Column {
         cacheBuffer: 0
         clip: true
 
-        height: count > 0 ? rootItem.tilesWidth * 1.5 + units.gu(4) : 0
+        height: count > 0 ? rootItem.tilesWidth * 1.5 + units.gu(5) : 0
         visible: count > 0
 
         spacing: units.gu(1.5)

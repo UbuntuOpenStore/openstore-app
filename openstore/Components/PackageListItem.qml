@@ -8,6 +8,15 @@ ListItem {
 
     height: layout.height
 
+    RatingsRow {
+        appItem: appItem
+        width: units.gu(12)
+        anchors.bottom: parent.bottom
+        anchors.left: parent.left
+        anchors.leftMargin: units.gu(12)
+        anchors.bottomMargin: units.gu(1.5)
+    }
+
     ListItemLayout {
         id: layout
 
@@ -16,6 +25,7 @@ ListItem {
         summary.wrapMode: Text.WrapAtWordBoundaryOrAnywhere
 
         UbuntuShape {
+            id: appIconShape
             SlotsLayout.position: SlotsLayout.Leading
             aspect: UbuntuShape.Flat
             image: Image {

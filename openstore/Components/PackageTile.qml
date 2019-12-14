@@ -1,4 +1,5 @@
 import QtQuick 2.4
+import QtGraphicalEffects 1.0
 import Ubuntu.Components 1.3
 
 AbstractButton {
@@ -32,6 +33,16 @@ AbstractButton {
                     }                     
                 }
             }
+        }
+
+        Rectangle {
+            width: parent.width
+            height: units.gu(0.6)
+            color: "transparent"
+        }
+
+        RatingsRow {
+            appItem: appItem
         }
 
         ListItemLayout {

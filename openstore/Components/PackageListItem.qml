@@ -9,7 +9,6 @@ ListItem {
     height: layout.height
 
     RatingsRow {
-        appItem: appItem
         width: units.gu(12)
         anchors.bottom: parent.bottom
         anchors.left: parent.left

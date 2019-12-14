@@ -42,7 +42,6 @@ AbstractButton {
         }
 
         RatingsRow {
-            appItem: appItem
         }
 
         ListItemLayout {

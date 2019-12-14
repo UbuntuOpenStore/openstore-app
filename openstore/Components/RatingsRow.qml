@@ -6,7 +6,6 @@ Row {
     id: ratingsRow
     width: parent.width
     height: units.gu(0.4)
-    property var appItem
     readonly property int ratingCount: appItem.ratings.thumbsUpCount +
         appItem.ratings.happyCount +
         appItem.ratings.thumbsDownCount +

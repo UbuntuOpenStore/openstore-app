@@ -46,9 +46,9 @@ ReviewItem::ReviewItem(const QJsonObject &json, QObject * parent)
     m_rating = Ratings::ratingFromString(json["rating"].toString());
     m_reviewedVersion = json["version"].toString();
     QJsonObject jsonComment = json["comment"].toObject();
-    m_comment = Comment(jsonComment["body"].toString(), jsonComment["date"].toInt());
+    m_comment = Comment(jsonComment["body"].toString(), jsonComment["date"].toVariant().toLongLong());
     m_isRedacted = json["redacted"].toBool();
-    m_date = json["date"].toInt();
+    m_date = json["date"].toVariant().toLongLong();
 }
 
 ReviewItem::ReviewItem(const ReviewItem &review)
@@ -91,7 +91,7 @@ QString ReviewItem::author() const
     return m_author;
 }
 
-unsigned int ReviewItem::date() const
+qlonglong ReviewItem::date() const
 {
     return m_date;
 }

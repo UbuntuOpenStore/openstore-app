@@ -59,7 +59,7 @@ public:
     {
     public:
         QString m_body;
-        unsigned int m_date;
+        qlonglong m_date;
 
         Comment() : m_body(""), m_date(0) {}
         Comment(const QString &body, unsigned int date)
@@ -77,7 +77,7 @@ public:
             return m_body;
         }
 
-        unsigned int date() const
+        qlonglong date() const
         {
             return m_date;
         }
@@ -90,7 +90,7 @@ public:
     Comment comment() const;
     bool redacted() const;
     QString author() const;
-    unsigned int date() const;
+    qlonglong date() const;
 
     QString m_reviewId;
     QString m_author;
@@ -99,7 +99,7 @@ public:
     QString m_reviewedVersion;
     Comment m_comment;
     bool m_isRedacted;
-    unsigned int m_date;
+    qlonglong m_date;
 };
 
 Q_DECLARE_METATYPE(ReviewItem::Comment);

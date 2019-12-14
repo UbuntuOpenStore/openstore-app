@@ -11,6 +11,7 @@ ReviewsModel::ReviewsModel(const QString &appId, QObject *parent)
 {
     connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::newReply,
             this, &ReviewsModel::parseReply);
+    connect(this, &ReviewsModel::refresh, this, &ReviewsModel::onRefresh);
 
     m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
     OpenStoreNetworkManager::instance()->getReviews(m_requestSignature, appId);
@@ -121,6 +122,7 @@ void ReviewsModel::parseReply(OpenStoreReply reply)
         }
     }
     else if (data.contains("review_id")) {
+        Q_EMIT refresh();
         return;
     }
     else {
@@ -128,4 +130,10 @@ void ReviewsModel::parseReply(OpenStoreReply reply)
     }
     
     Q_EMIT updated();
+}
+
+void ReviewsModel::onRefresh()
+{
+    m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
+    OpenStoreNetworkManager::instance()->getReviews(m_requestSignature, m_appId);
 }

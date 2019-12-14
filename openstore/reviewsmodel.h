@@ -40,9 +40,11 @@ public:
 
 Q_SIGNALS:
     void updated();
+    void refresh();
 
 private Q_SLOTS:
     void parseReply(OpenStoreReply reply);
+    void onRefresh();
 
 private:
     QString m_requestSignature;

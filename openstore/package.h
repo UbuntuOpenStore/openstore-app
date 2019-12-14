@@ -48,6 +48,7 @@ class PackageItem: public QObject
     Q_PROPERTY(bool channelMatchesOS READ channelMatchesOS NOTIFY updated)
     Q_PROPERTY(bool frameworkMatchesOS READ frameworkMatchesOS NOTIFY updated)
     Q_PROPERTY(ReviewsModel * reviews MEMBER m_reviews NOTIFY updated)
+    Q_PROPERTY(Ratings * ratings MEMBER m_ratings NOTIFY updated)
 
     Q_ENUMS(Hook)
     Q_FLAGS(Hooks)
@@ -163,6 +164,7 @@ private:
     QStringList m_types;
     QString m_framework;
     QPointer<ReviewsModel> m_reviews;
+    QPointer<Ratings> m_ratings;
 };
 
 #endif // PACKAGE_H

@@ -209,14 +209,14 @@ bool OpenStoreNetworkManager::postReview(const QString &signature,
                                          const QString &appId,
                                          const QString &version,
                                          const QString &review,
-                                         ReviewItem::Rating rating,
+                                         Ratings::Rating rating,
                                          const QString &apikey,
                                          const bool &edit)
 {
     QJsonObject createReview{
         { "body", review },
         { "version", version },
-        { "rating", ReviewItem::ratingToString(rating) }
+        { "rating", Ratings::ratingToString(rating) }
     };
     QJsonDocument jsonDocument(createReview);
 

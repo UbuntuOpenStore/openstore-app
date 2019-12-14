@@ -5,15 +5,19 @@
 #include <QJsonObject>
 #include <QMap>
 
-class ReviewItem: public QObject
+class Ratings: public QObject
 {
     Q_OBJECT
     Q_ENUMS(Rating)
+    Q_PROPERTY(unsigned int thumbsUpCount MEMBER m_thumbsUpCount NOTIFY updated)
+    Q_PROPERTY(unsigned int thumbsDownCount MEMBER m_thumbsDownCount NOTIFY updated)
+    Q_PROPERTY(unsigned int neutralCount MEMBER m_neutralCount NOTIFY updated)
+    Q_PROPERTY(unsigned int happyCount MEMBER m_happyCount NOTIFY updated)
+    Q_PROPERTY(unsigned int buggyCount MEMBER m_buggyCount NOTIFY updated)
 
 public:
-    explicit ReviewItem(const QJsonObject &json, QObject * parent = Q_NULLPTR);
-    // TODO: can we add objects derived from QObject to QLists properly?
-    explicit ReviewItem(const ReviewItem &review);
+    explicit Ratings(const QMap<QString, QVariant> &map, QObject * parent = Q_NULLPTR);
+    explicit Ratings(QObject * parent = Q_NULLPTR);
 
     enum Rating {
         RatingThumbsUp = 0,
@@ -24,6 +28,32 @@ public:
     };
 
     static QString ratingToString(enum Rating rating);
+    static Rating ratingFromString(const QString &rating);
+
+Q_SIGNALS:
+    void updated();
+
+private:
+    static QMap<QString, Rating> & stringToRatingMap();
+
+    unsigned int m_thumbsUpCount;
+    unsigned int m_thumbsDownCount;
+    unsigned int m_neutralCount;
+    unsigned int m_happyCount;
+    unsigned int m_buggyCount;
+};
+
+typedef Ratings::Rating Rating;
+
+
+class ReviewItem: public QObject
+{
+    Q_OBJECT
+
+public:
+    explicit ReviewItem(const QJsonObject &json, QObject * parent = Q_NULLPTR);
+    // TODO: can we add objects derived from QObject to QLists properly?
+    explicit ReviewItem(const ReviewItem &review);
 
     class Comment
     {
@@ -62,21 +92,6 @@ public:
     QString author() const;
     unsigned int date() const;
 
-private:
-    static Rating ratingFromString(const QString &rating);
-    static QMap<QString, Rating> & stringToRatingMap()
-    {
-        static QMap<QString, Rating> map
-        {
-            {"THUMBS_UP", RatingThumbsUp},
-            {"THUMBS_DOWN", RatingThumbsDown},
-            {"NEUTRAL", RatingNeutral},
-            {"HAPPY", RatingHappy},
-            {"BUGGY", RatingBuggy}
-        };
-        return map;
-    }
-
     QString m_reviewId;
     QString m_author;
     QString m_body;
@@ -89,5 +104,4 @@ private:
 
 Q_DECLARE_METATYPE(ReviewItem::Comment);
 
-typedef ReviewItem::Rating Rating;
 #endif // REVIEW_H

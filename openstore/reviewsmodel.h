@@ -12,11 +12,6 @@ class QNetworkReply;
 class ReviewsModel : public QAbstractListModel
 {
     Q_OBJECT
-    Q_PROPERTY(unsigned int thumbsUpCounter MEMBER m_thumbsUpCount NOTIFY updated)
-    Q_PROPERTY(unsigned int thumbsDownCounter MEMBER m_thumbsDownCount NOTIFY updated)
-    Q_PROPERTY(unsigned int neutralCounter MEMBER m_neutralCount NOTIFY updated)
-    Q_PROPERTY(unsigned int happyCounter MEMBER m_happyCount NOTIFY updated)
-    Q_PROPERTY(unsigned int buggyCounter MEMBER m_buggyCount NOTIFY updated)
     Q_PROPERTY(unsigned int reviewCount READ reviewCount NOTIFY updated)
 
 public:
@@ -39,7 +34,7 @@ public:
 
     unsigned int reviewCount() const;
 
-    bool sendReview(const QString &version, const QString &review, ReviewItem::Rating rating, const QString &apiKey, const bool &edit);
+    bool sendReview(const QString &version, const QString &review, Ratings::Rating rating, const QString &apiKey, const bool &edit);
 
     Q_INVOKABLE void loadMore();
 
@@ -56,11 +51,6 @@ private:
     QString m_appId;
 
     unsigned int m_reviewCount;
-    unsigned int m_thumbsUpCount;
-    unsigned int m_thumbsDownCount;
-    unsigned int m_neutralCount;
-    unsigned int m_happyCount;
-    unsigned int m_buggyCount;
 };
 
 #endif // REVIEWSMODEL_H

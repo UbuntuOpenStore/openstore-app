@@ -41,7 +41,7 @@ public Q_SLOTS:
     bool getCategories(const QString &signature);
     bool getUrl(const QString &signature, const QUrl &url);
     bool getRevisions(const QString &signature, const QStringList &appIdsAtVersion);
-    bool postReview(const QString &signature, const QString &appId, const QString &version, const QString &review, ReviewItem::Rating rating, const QString &apiKey, const bool &edit);
+    bool postReview(const QString &signature, const QString &appId, const QString &version, const QString &review, Ratings::Rating rating, const QString &apiKey, const bool &edit);
     bool getReviews(const QString &signature, const QString &appId);
     bool getReviews(const QString &signature, const QString &appId, unsigned int limit, const QString &fromReviewId);
     bool getReviews(const QString &signature, const QString &appId, const QString &apiKey);

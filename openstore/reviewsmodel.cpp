@@ -78,7 +78,7 @@ unsigned int ReviewsModel::reviewCount() const
 }
 
 
-bool ReviewsModel::sendReview(const QString &version, const QString &review, ReviewItem::Rating rating, const QString &apiKey, const bool &edit)
+bool ReviewsModel::sendReview(const QString &version, const QString &review, Ratings::Rating rating, const QString &apiKey, const bool &edit)
 {
     m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
     return OpenStoreNetworkManager::instance()->postReview(m_requestSignature, m_appId, version, review, rating, apiKey, edit);

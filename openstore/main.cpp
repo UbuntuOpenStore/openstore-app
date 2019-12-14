@@ -69,8 +69,8 @@ int main(int argc, char *argv[])
     qmlRegisterUncreatableType<PackageItem>("OpenStore", 1, 0, "PackageItem", "PackageItem is only available through AppModel, DiscoverModel, or SearchModel.");
 
     qmlRegisterType<PamAuthentication>("OpenStore.PamAuthentication", 0, 1, "PamAuthentication");
-    //qmlRegisterType<ReviewItem>("OpenStore", 1, 0, "ReviewItem");
-    qRegisterMetaType<ReviewItem::Rating>("Rating");
+    qmlRegisterType<Ratings>("OpenStore", 1, 0, "Ratings");
+    qRegisterMetaType<Ratings::Rating>("Rating");
     QQuickView view;
 
     QObject::connect(view.engine(), &QQmlEngine::quit, &app, &QGuiApplication::quit);

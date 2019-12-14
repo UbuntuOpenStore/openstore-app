@@ -171,6 +171,7 @@ void PackageItem::fillData(const QVariantMap &json)
     }
 
     m_reviews = new ReviewsModel(m_appId, this);
+    m_ratings = new Ratings(json["ratings"].toMap(), this);
 
     Q_EMIT updated();
 }

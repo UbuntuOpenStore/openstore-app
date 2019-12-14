@@ -26,6 +26,7 @@ ListItem {
     property var reviews
     readonly property int count: reviews.reviewCount
     readonly property int maxLength: 512
+    property bool success: true
 
     function getRatingEmoji(rating) {
         switch(rating) {
@@ -39,7 +40,30 @@ ListItem {
     }
 
     function postReview(rating, body) {
-        app.review(body, rating, root.apiKey)
+        success = app.review(body, rating, root.apiKey)
+        PopupUtils.open(successPostDialog)
+    }
+
+    Component {
+         id: successPostDialog
+         Dialog {
+             id: dialogue
+             title: success ? i18n.tr("Review has been posted") : i18n.tr("Could not post review")
+             Rectangle {
+                 height: units.gu(12)
+                 color: "transparent"
+                 Icon {
+                     anchors.centerIn: parent
+                     width: units.gu(8)
+                     height: width
+                     name: success ? "tick" : "edit-clear"
+                 }
+             }
+             Button {
+                 text: i18n.tr("Close")
+                 onClicked: PopupUtils.close(dialogue)
+             }
+         }
     }
 
     Component {
@@ -173,6 +197,7 @@ ListItem {
                 width: height * 1.3
                 aspect: UbuntuShape.DropShadow
                 backgroundColor: theme.palette.normal.background
+                Component.onCompleted: console.log(review.date)
                 ScrollView {
                     id: reviewScrollView
                     anchors.fill: parent

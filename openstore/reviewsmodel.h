@@ -55,6 +55,7 @@ private:
     QList<ReviewItem> m_list;
     QString m_appId;
 
+    unsigned int m_reviewCount;
     unsigned int m_thumbsUpCount;
     unsigned int m_thumbsDownCount;
     unsigned int m_neutralCount;

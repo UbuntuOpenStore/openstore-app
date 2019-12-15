@@ -52,13 +52,42 @@ private Q_SLOTS:
 
 private:
     QString m_requestSignature;
-    QString m_getOwnReviewSignature;
 
     QList<ReviewItem> m_list;
     QString m_appId;
 
     int m_reviewCount;
-    bool m_clearReviewsOnResponse;
+
+    class ReplyHandler
+    {
+    public:
+        virtual void handle(const QJsonObject &data, ReviewsModel &model) = 0;
+    } * m_replyHandler = Q_NULLPTR;
+
+    class GetOwnReviewReplyHandler: public ReplyHandler
+    {
+        void handle(const QJsonObject &data, ReviewsModel &model);
+    } m_getOwnReviewReplyHandler;
+
+    class GetReviewsResetHandler: public ReplyHandler
+    {
+        void handle(const QJsonObject &data, ReviewsModel &model);
+    } m_getReviewsResetHandler;
+
+    class GetReviewsAppendHandler: public ReplyHandler
+    {
+        void handle(const QJsonObject &data, ReviewsModel &model);
+    } m_getReviewsAppendHandler;
+
+    class ReviewPostedHandler: public ReplyHandler
+    {
+        void handle(const QJsonObject &data, ReviewsModel &model);
+    } m_reviewPostedHandler;
+
+    friend class ReviewPostedHandler;
+    friend class GetReviewsAppendHandler;
+    friend class GetReviewsResetHandler;
+    friend class GetOwnReviewReplyHandler;
 };
 
 #endif // REVIEWSMODEL_H

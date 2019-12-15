@@ -41,6 +41,7 @@ QMap<QString, Rating> & Ratings::stringToRatingMap()
 
 ReviewItem::ReviewItem(const QJsonObject &json, QObject * parent)
 {
+    m_reviewId = json["id"].toString();
     m_author = json["author"].toString();
     m_body = json["body"].toString();
     m_rating = Ratings::ratingFromString(json["rating"].toString());

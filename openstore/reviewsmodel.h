@@ -57,7 +57,8 @@ private:
     QList<ReviewItem> m_list;
     QString m_appId;
 
-    unsigned int m_reviewCount;
+    int m_reviewCount;
+    bool m_clearReviewsOnResponse;
 };
 
 #endif // REVIEWSMODEL_H

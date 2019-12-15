@@ -68,8 +68,12 @@ QHash<int, QByteArray> ReviewsModel::roleNames() const
 
 void ReviewsModel::loadMore()
 {
+    if (m_list.count() == m_reviewCount) {
+        return;
+    }
+    m_clearReviewsOnResponse = false;
     m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
-    OpenStoreNetworkManager::instance()->getReviews(m_requestSignature, m_appId, 50, m_list.constLast().id());
+    OpenStoreNetworkManager::instance()->getReviews(m_requestSignature, m_appId, 10, m_list.constLast().id());
 }
 
 
@@ -143,14 +147,23 @@ void ReviewsModel::parseReply(OpenStoreReply reply)
         m_reviewCount = data["count"].toInt();
         QJsonArray reviews = data["reviews"].toArray();
 
-        beginResetModel();
-        m_list.clear();
-        Q_FOREACH(const QJsonValue &reviewJson, reviews) {
-            qDebug() << reviewJson;
-            ReviewItem review(reviewJson.toObject());
-            m_list.append(review);
+        if (m_clearReviewsOnResponse) {
+            beginResetModel();
+            m_list.clear();
+            Q_FOREACH(const QJsonValue &reviewJson, reviews) {
+                ReviewItem review(reviewJson.toObject());
+                m_list.append(review);
+            }
+            endResetModel();
         }
-        endResetModel();
+        else {
+            beginInsertRows(QModelIndex(), m_list.count(), m_list.count());
+            Q_FOREACH(const QJsonValue &reviewJson, reviews) {
+                ReviewItem review(reviewJson.toObject());
+                m_list.append(review);
+            }
+            endInsertRows();
+        }
     }
     else if (data.contains("review_id")) {
         ReviewsModel::reviewPosted();
@@ -167,6 +180,7 @@ void ReviewsModel::parseReply(OpenStoreReply reply)
 
 void ReviewsModel::onRefresh()
 {
+    m_clearReviewsOnResponse = true;
     m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
     OpenStoreNetworkManager::instance()->getReviews(m_requestSignature, m_appId);
 }

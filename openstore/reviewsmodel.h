@@ -37,12 +37,14 @@ public:
     bool sendReview(const QString &version, const QString &review, Ratings::Rating rating, const QString &apiKey, const bool &edit);
 
     Q_INVOKABLE void loadMore();
+    Q_INVOKABLE void getOwnReview(QString &apiKey);
 
 Q_SIGNALS:
     void updated();
     void refresh();
     void error(QString text);
     void reviewPosted();
+    void ownReviewResponse(ReviewItem *review);
 
 private Q_SLOTS:
     void parseReply(OpenStoreReply reply);
@@ -50,6 +52,7 @@ private Q_SLOTS:
 
 private:
     QString m_requestSignature;
+    QString m_getOwnReviewSignature;
 
     QList<ReviewItem> m_list;
     QString m_appId;

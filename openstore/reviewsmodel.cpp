@@ -73,6 +73,13 @@ void ReviewsModel::loadMore()
 }
 
 
+void ReviewsModel::getOwnReview(QString &apiKey)
+{
+    m_getOwnReviewSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
+    OpenStoreNetworkManager::instance()->getReviews(m_getOwnReviewSignature, m_appId, apiKey);
+}
+
+
 unsigned int ReviewsModel::reviewCount() const
 {
     return m_reviewCount;
@@ -121,6 +128,17 @@ void ReviewsModel::parseReply(OpenStoreReply reply)
         return;
     }
 
+    if (reply.signature == m_getOwnReviewSignature) {
+        QJsonArray reviews = data["reviews"].toArray();
+        if (reviews.count() > 0) {
+            ReviewItem review(reviews[0].toObject());
+            ReviewsModel::ownReviewResponse(&review);
+        }
+        else {
+            ReviewsModel::ownReviewResponse(Q_NULLPTR);
+        }
+        return;
+    }
     if (data.contains("reviews")) {
         m_reviewCount = data["count"].toInt();
         QJsonArray reviews = data["reviews"].toArray();

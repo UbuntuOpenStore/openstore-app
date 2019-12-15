@@ -26,7 +26,6 @@ ListItem {
     property var reviews
     readonly property int count: reviews.reviewCount
     readonly property int maxLength: 512
-    property bool success: true
 
     function getRatingEmoji(rating) {
         switch(rating) {
@@ -40,15 +39,25 @@ ListItem {
     }
 
     function postReview(rating, body) {
-        success = app.review(body, rating, root.apiKey)
-        PopupUtils.open(successPostDialog)
+        app.review(body, rating, root.apiKey)
+    }
+
+    property string errorText: i18n.tr("Something went wrong...")
+
+    Connections {
+        target: reviews
+        onReviewPosted: PopupUtils.open(successPostDialog)
+        onError: {
+            errorText = text
+            PopupUtils.open(errorDialog)
+        }
     }
 
     Component {
-         id: successPostDialog
+         id: errorDialog
          Dialog {
              id: dialogue
-             title: success ? i18n.tr("Review has been posted") : i18n.tr("Could not post review")
+             title: reviewPreviewListItem.errorText
              Rectangle {
                  height: units.gu(12)
                  color: "transparent"
@@ -56,7 +65,29 @@ ListItem {
                      anchors.centerIn: parent
                      width: units.gu(8)
                      height: width
-                     name: success ? "tick" : "edit-clear"
+                     name: "edit-clear"
+                 }
+             }
+             Button {
+                 text: i18n.tr("Close")
+                 onClicked: PopupUtils.close(dialogue)
+             }
+         }
+    }
+
+    Component {
+         id: successPostDialog
+         Dialog {
+             id: dialogue
+             title: i18n.tr("Review has been posted")
+             Rectangle {
+                 height: units.gu(12)
+                 color: "transparent"
+                 Icon {
+                     anchors.centerIn: parent
+                     width: units.gu(8)
+                     height: width
+                     name: "tick"
                  }
              }
              Button {

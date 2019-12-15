@@ -100,16 +100,26 @@ void ReviewsModel::parseReply(OpenStoreReply reply)
 
     if (error.error != QJsonParseError::NoError) {
         qWarning() << Q_FUNC_INFO << "Error parsing json";
+        ReviewsModel::error(QString("Invalid response"));
         return;
     }
 
     if (!jsonDocument.isObject()) {
         qWarning() << Q_FUNC_INFO << "Error parsing json";
+        ReviewsModel::error(QString("Invalid response"));
         return;
     }
     QJsonObject jsonObject = jsonDocument.object();
 
     QJsonObject data = jsonObject["data"].toObject();
+
+    bool success = jsonObject["success"].toBool();
+
+    if (!success) {
+        QString message = jsonObject["message"].toString();
+        ReviewsModel::error(message);
+        return;
+    }
 
     if (data.contains("reviews")) {
         m_reviewCount = data["count"].toInt();
@@ -125,13 +135,15 @@ void ReviewsModel::parseReply(OpenStoreReply reply)
         endResetModel();
     }
     else if (data.contains("review_id")) {
+        ReviewsModel::reviewPosted();
         Q_EMIT refresh();
         return;
     }
     else {
         qWarning() << Q_FUNC_INFO << "Invalid response to sendReview: " << data;
+        ReviewsModel::error(QString("Invalid response"));
     }
-    
+
     Q_EMIT updated();
 }
 

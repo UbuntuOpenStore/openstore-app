@@ -41,6 +41,8 @@ public:
 Q_SIGNALS:
     void updated();
     void refresh();
+    void error(QString text);
+    void reviewPosted();
 
 private Q_SLOTS:
     void parseReply(OpenStoreReply reply);

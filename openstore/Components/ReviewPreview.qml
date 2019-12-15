@@ -41,7 +41,6 @@ ListItem {
 
     function postReview(rating, body) {
         success = app.review(body, rating, root.apiKey)
-        app.updateLocalInfo(app.revision, app.versionString)
         PopupUtils.open(successPostDialog)
     }
 
@@ -192,6 +191,7 @@ ListItem {
             height: parent.height - addReviewButton.height - units.gu(2)
             orientation: ListView.Horizontal
             spacing: units.gu(2)
+            onContentXChanged: if ( atXEnd ) reviews.loadMore()
             delegate: UbuntuShape {
                 property var review: model
                 height: reviewsListView.height - units.gu(4)

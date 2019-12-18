@@ -235,12 +235,13 @@ ListItem {
             }
             Button {
                 id: addReviewButton
-                text: i18n.tr("Add review")
+                text: app.installed ? i18n.tr("Add review") : i18n.tr("Install to add review")
                 visible: root.apiKey !== ""
                 onClicked: PopupUtils.open(composeDialog)
                 color: UbuntuColors.green
                 anchors.right: parent.right
                 anchors.top: parent.top
+                enabled: app.installed
             }
         }
 

@@ -54,7 +54,7 @@ private:
     struct IReplyHandling
     {
         virtual void dispatch(ReviewsModel & model, const QJsonObject &data) = 0;
-    } * m_replyHandling;
+    } & m_replyHandling;
 
     template <class T>
     struct ReplyHandling: IReplyHandling
@@ -65,23 +65,22 @@ private:
         }
     };
 
-    struct ReviewPosted: ReplyHandling<ReviewPosted> {} m_handleReviewPosted;
+    struct HandleReviewPosted: ReplyHandling<HandleReviewPosted> {} m_handleReviewPosted;
     struct AppendReviews: ReplyHandling<AppendReviews> {} m_appendReviews;
     struct ResetReviews: ReplyHandling<ResetReviews> {} m_resetReviews;
-    struct OwnReview: ReplyHandling<OwnReview> {} m_handleOwnReview;
+    struct HandleOwnReview: ReplyHandling<HandleOwnReview> {} m_handleOwnReview;
 
     QString m_requestSignature;
-
     QList<ReviewItem> m_list;
     QString m_appId;
-
     int m_reviewCount;
+    bool m_loadMorePending;
 
 public:
-    void handleReply(const QJsonObject &data, const ReviewPosted *);
+    void handleReply(const QJsonObject &, const HandleReviewPosted *);
     void handleReply(const QJsonObject &data, const AppendReviews *);
     void handleReply(const QJsonObject &data, const ResetReviews *);
-    void handleReply(const QJsonObject &data, const OwnReview *);
+    void handleReply(const QJsonObject &data, const HandleOwnReview *);
 };
 
 #endif // REVIEWSMODEL_H

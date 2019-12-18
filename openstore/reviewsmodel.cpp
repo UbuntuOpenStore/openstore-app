@@ -7,14 +7,13 @@
 #include <QDebug>
 
 ReviewsModel::ReviewsModel(const QString &appId, QObject *parent)
-    : QAbstractListModel(parent), m_appId(appId)
+    : QAbstractListModel(parent), m_replyHandling(m_appendReviews), m_appId(appId), m_loadMorePending(false)
 {
     connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::newReply,
             this, &ReviewsModel::parseReply);
     connect(this, &ReviewsModel::refresh, this, &ReviewsModel::onRefresh);
 
     m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
-    m_replyHandling = &m_appendReviews;
     OpenStoreNetworkManager::instance()->getReviews(m_requestSignature, appId);
 }
 
@@ -66,23 +65,22 @@ QHash<int, QByteArray> ReviewsModel::roleNames() const
 
 void ReviewsModel::loadMore()
 {
-    if (m_replyHandling == &m_appendReviews) {
-        return;
-    }
-    qWarning() << "loadMore";
     if (m_list.count() == m_reviewCount)
     {
-        qWarning() << "all reviews downloaded";
         return;
     }
-    m_replyHandling = &m_appendReviews;
+    if (m_loadMorePending) {
+        return;
+    }
+    m_loadMorePending = true;
+    m_replyHandling = m_appendReviews;
     m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
     OpenStoreNetworkManager::instance()->getReviews(m_requestSignature, m_appId, 10, m_list.constLast().date());
 }
 
 void ReviewsModel::getOwnReview(const QString &apiKey)
 {
-    m_replyHandling = &m_handleOwnReview;
+    m_replyHandling = m_handleOwnReview;
     m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
     OpenStoreNetworkManager::instance()->getReviews(m_requestSignature, m_appId, apiKey);
 }
@@ -95,7 +93,7 @@ unsigned int ReviewsModel::reviewCount() const
 bool ReviewsModel::sendReview(const QString &version, const QString &review, Ratings::Rating rating, const QString &apiKey, const bool &edit)
 {
     m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
-    m_replyHandling = &m_handleReviewPosted;
+    m_replyHandling = m_handleReviewPosted;
     bool success = OpenStoreNetworkManager::instance()->postReview(m_requestSignature, m_appId, version, review, rating, apiKey, edit);
     if (!success)
     {
@@ -139,18 +137,17 @@ void ReviewsModel::parseReply(OpenStoreReply reply)
         return;
     }
 
-    m_replyHandling->dispatch(*this, data);
-//    handleReply(data, m_replyHandling);
+    m_replyHandling.dispatch(*this, data);
 }
 
 void ReviewsModel::onRefresh()
 {
-    m_replyHandling = &m_resetReviews;
+    m_replyHandling = m_resetReviews;
     m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
     OpenStoreNetworkManager::instance()->getReviews(m_requestSignature, m_appId);
 }
 
-void ReviewsModel::handleReply(const QJsonObject &data, const ReviewsModel::OwnReview *)
+void ReviewsModel::handleReply(const QJsonObject &data, const ReviewsModel::HandleOwnReview *)
 {
     QJsonArray reviews = data["reviews"].toArray();
     if (reviews.count() > 0)
@@ -193,11 +190,11 @@ void ReviewsModel::handleReply(const QJsonObject &data, const ReviewsModel::Appe
         m_list.append(review);
     }
     endInsertRows();
-    m_replyHandling = Q_NULLPTR;
+    m_loadMorePending = false;
     Q_EMIT updated();
 }
 
-void ReviewsModel::handleReply(const QJsonObject &data, const ReviewsModel::ReviewPosted *)
+void ReviewsModel::handleReply(const QJsonObject &, const ReviewsModel::HandleReviewPosted *)
 {
     Q_EMIT reviewPosted();
     Q_EMIT refresh();

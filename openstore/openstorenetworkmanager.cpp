@@ -281,13 +281,13 @@ bool OpenStoreNetworkManager::getReviews(const QString &signature,
 bool OpenStoreNetworkManager::getReviews(const QString &signature,
                                          const QString &appId,
                                          unsigned int limit,
-                                         const QString &fromReviewId)
+                                         qlonglong fromDate)
 {
     QUrl url(API_BASEURL + API_REVIEW_LIST_ENDPOINT.arg(appId));
 
     QUrlQuery q(url);
     q.addQueryItem("limit", QString::number(limit));
-    q.addQueryItem("from", fromReviewId);
+    q.addQueryItem("from", QString::number(fromDate));
 
     url.setQuery(q);
 

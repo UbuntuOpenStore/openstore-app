@@ -66,13 +66,18 @@ QHash<int, QByteArray> ReviewsModel::roleNames() const
 
 void ReviewsModel::loadMore()
 {
+    if (m_replyHandler == &m_getReviewsAppendHandler) {
+        return;
+    }
+    qWarning() << "loadMore";
     if (m_list.count() == m_reviewCount)
     {
+        qWarning() << "all reviews downloaded";
         return;
     }
     m_replyHandler = &m_getReviewsAppendHandler;
     m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
-    OpenStoreNetworkManager::instance()->getReviews(m_requestSignature, m_appId, 10, m_list.constLast().id());
+    OpenStoreNetworkManager::instance()->getReviews(m_requestSignature, m_appId, 10, m_list.constLast().date());
 }
 
 void ReviewsModel::getOwnReview(const QString &apiKey)
@@ -178,13 +183,16 @@ void ReviewsModel::GetReviewsAppendHandler::handle(const QJsonObject &data, Revi
     model.m_reviewCount = data["count"].toInt();
     QJsonArray reviews = data["reviews"].toArray();
 
-    model.beginInsertRows(QModelIndex(), model.m_list.count(), model.m_list.count());
+    model.beginInsertRows(QModelIndex(),
+                          model.m_list.count(),
+                          model.m_list.count()+reviews.count()-1);
     Q_FOREACH (const QJsonValue &reviewJson, reviews)
     {
         ReviewItem review(reviewJson.toObject());
         model.m_list.append(review);
     }
     model.endInsertRows();
+    model.m_replyHandler = Q_NULLPTR;
     Q_EMIT model.updated();
 }
 

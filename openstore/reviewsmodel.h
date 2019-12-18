@@ -8,14 +8,14 @@
 
 class QNetworkReply;
 
-
 class ReviewsModel : public QAbstractListModel
 {
     Q_OBJECT
     Q_PROPERTY(unsigned int reviewCount READ reviewCount NOTIFY updated)
 
 public:
-    enum Roles {
+    enum Roles
+    {
         RoleId,
         RoleBody,
         RoleComment,
@@ -37,14 +37,14 @@ public:
     bool sendReview(const QString &version, const QString &review, Ratings::Rating rating, const QString &apiKey, const bool &edit);
 
     Q_INVOKABLE void loadMore();
-    Q_INVOKABLE void getOwnReview(QString &apiKey);
+    Q_INVOKABLE void getOwnReview(const QString &apiKey);
 
 Q_SIGNALS:
     void updated();
     void refresh();
     void error(QString text);
     void reviewPosted();
-    void ownReviewResponse(ReviewItem *review);
+    void ownReviewResponse(QJsonObject review);
 
 private Q_SLOTS:
     void parseReply(OpenStoreReply reply);
@@ -62,24 +62,24 @@ private:
     {
     public:
         virtual void handle(const QJsonObject &data, ReviewsModel &model) = 0;
-    } * m_replyHandler = Q_NULLPTR;
+    } *m_replyHandler = Q_NULLPTR;
 
-    class GetOwnReviewReplyHandler: public ReplyHandler
+    class GetOwnReviewReplyHandler : public ReplyHandler
     {
         void handle(const QJsonObject &data, ReviewsModel &model);
     } m_getOwnReviewReplyHandler;
 
-    class GetReviewsResetHandler: public ReplyHandler
+    class GetReviewsResetHandler : public ReplyHandler
     {
         void handle(const QJsonObject &data, ReviewsModel &model);
     } m_getReviewsResetHandler;
 
-    class GetReviewsAppendHandler: public ReplyHandler
+    class GetReviewsAppendHandler : public ReplyHandler
     {
         void handle(const QJsonObject &data, ReviewsModel &model);
     } m_getReviewsAppendHandler;
 
-    class ReviewPostedHandler: public ReplyHandler
+    class ReviewPostedHandler : public ReplyHandler
     {
         void handle(const QJsonObject &data, ReviewsModel &model);
     } m_reviewPostedHandler;

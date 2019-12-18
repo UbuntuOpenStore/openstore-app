@@ -38,10 +38,6 @@ ListItem {
         return "😐"
     }
 
-    function postReview(rating, body) {
-        app.review(body, rating, root.apiKey)
-    }
-
     property string errorText: i18n.tr("Something went wrong...")
 
     Connections {
@@ -98,13 +94,35 @@ ListItem {
     }
 
     Component {
-         id: dialog
+         id: composeDialog
          Dialog {
              id: dialogue
              readonly property var buttonWidth: (textArea.width - 4*units.gu(2)) / 5
-             title: i18n.tr("Post a rating")
+             title: ready ? i18n.tr("Post a rating") : i18n.tr("Loading...")
+             Component.onCompleted: reviews.getOwnReview(root.apiKey)
+             property var ownReview: null
+             property bool ready: false
+
+            function postReview(rating, body) {
+                if (ownReview === null) {
+                    app.review(body, rating, root.apiKey)
+                }
+                else {
+                    app.editReview(body, rating, root.apiKey)
+                }
+            }
+
+             Connections {
+                 target: reviews
+                 onOwnReviewResponse: {
+                     ownReview = 'body' in review ? review : null
+                     ready = true
+                 }
+             }
              TextArea {
                  id: textArea
+                 readOnly: !ready
+                 text: ownReview !== null ? ownReview.body : ""
                  placeholderText: i18n.tr("(Optional) Write a review.")
              }
              Label {
@@ -112,9 +130,20 @@ ListItem {
                  textSize: Label.Small
                  color: textArea.text.length > maxLength ? UbuntuColors.red : theme.palette.normal.base
              }
+             Item {
+                 width: parent.width
+                 height: buttonWidth
+                 visible: !ready
+                 ActivityIndicator {
+                     running: !ready
+                     visible: !ready
+                     anchors.centerIn: parent
+                 }
+             }
              Row {
                  spacing: units.gu(2)
                  anchors.horizontalCenter: parent.horizontalCenter
+                 visible: ready
                  Button {
                     color: theme.palette.normal.background
                     text: "👍"
@@ -208,7 +237,7 @@ ListItem {
                 id: addReviewButton
                 text: i18n.tr("Add review")
                 visible: root.apiKey !== ""
-                onClicked: PopupUtils.open(dialog)
+                onClicked: PopupUtils.open(composeDialog)
                 color: UbuntuColors.green
                 anchors.right: parent.right
                 anchors.top: parent.top

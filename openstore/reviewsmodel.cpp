@@ -18,19 +18,18 @@ ReviewsModel::ReviewsModel(const QString &appId, QObject *parent)
     OpenStoreNetworkManager::instance()->getReviews(m_requestSignature, appId);
 }
 
-
 int ReviewsModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent)
     return m_list.count();
 }
 
-
 QVariant ReviewsModel::data(const QModelIndex &index, int role) const
 {
     const ReviewItem &item = m_list.at(index.row());
 
-    switch (role) {
+    switch (role)
+    {
     case RoleId:
         return item.id();
     case RoleBody:
@@ -51,7 +50,6 @@ QVariant ReviewsModel::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
-
 QHash<int, QByteArray> ReviewsModel::roleNames() const
 {
     QHash<int, QByteArray> roles;
@@ -66,10 +64,10 @@ QHash<int, QByteArray> ReviewsModel::roleNames() const
     return roles;
 }
 
-
 void ReviewsModel::loadMore()
 {
-    if (m_list.count() == m_reviewCount) {
+    if (m_list.count() == m_reviewCount)
+    {
         return;
     }
     m_replyHandler = &m_getReviewsAppendHandler;
@@ -77,33 +75,30 @@ void ReviewsModel::loadMore()
     OpenStoreNetworkManager::instance()->getReviews(m_requestSignature, m_appId, 10, m_list.constLast().id());
 }
 
-
-void ReviewsModel::getOwnReview(QString &apiKey)
+void ReviewsModel::getOwnReview(const QString &apiKey)
 {
     m_replyHandler = &m_getOwnReviewReplyHandler;
     m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
     OpenStoreNetworkManager::instance()->getReviews(m_requestSignature, m_appId, apiKey);
 }
 
-
 unsigned int ReviewsModel::reviewCount() const
 {
     return m_reviewCount;
 }
-
 
 bool ReviewsModel::sendReview(const QString &version, const QString &review, Ratings::Rating rating, const QString &apiKey, const bool &edit)
 {
     m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
     m_replyHandler = &m_reviewPostedHandler;
     bool success = OpenStoreNetworkManager::instance()->postReview(m_requestSignature, m_appId, version, review, rating, apiKey, edit);
-    if (!success) {
+    if (!success)
+    {
         qWarning() << Q_FUNC_INFO << "Posting review failed";
         return false;
     }
     return true;
 }
-
 
 void ReviewsModel::parseReply(OpenStoreReply reply)
 {
@@ -113,13 +108,15 @@ void ReviewsModel::parseReply(OpenStoreReply reply)
     QJsonParseError error;
     QJsonDocument jsonDocument = QJsonDocument::fromJson(reply.data, &error);
 
-    if (error.error != QJsonParseError::NoError) {
+    if (error.error != QJsonParseError::NoError)
+    {
         qWarning() << Q_FUNC_INFO << "Error parsing json";
         ReviewsModel::error(QString("Invalid response"));
         return;
     }
 
-    if (!jsonDocument.isObject()) {
+    if (!jsonDocument.isObject())
+    {
         qWarning() << Q_FUNC_INFO << "Error parsing json";
         ReviewsModel::error(QString("Invalid response"));
         return;
@@ -130,7 +127,8 @@ void ReviewsModel::parseReply(OpenStoreReply reply)
 
     bool success = jsonObject["success"].toBool();
 
-    if (!success) {
+    if (!success)
+    {
         QString message = jsonObject["message"].toString();
         ReviewsModel::error(message);
         return;
@@ -146,19 +144,18 @@ void ReviewsModel::onRefresh()
     OpenStoreNetworkManager::instance()->getReviews(m_requestSignature, m_appId);
 }
 
-
 void ReviewsModel::GetOwnReviewReplyHandler::handle(const QJsonObject &data, ReviewsModel &model)
 {
     QJsonArray reviews = data["reviews"].toArray();
-    if (reviews.count() > 0) {
-        ReviewItem review(reviews[0].toObject());
-        Q_EMIT model.ownReviewResponse(&review);
+    if (reviews.count() > 0)
+    {
+        Q_EMIT model.ownReviewResponse(reviews.first().toObject());
     }
-    else {
-        Q_EMIT model.ownReviewResponse(Q_NULLPTR);
+    else
+    {
+        Q_EMIT model.ownReviewResponse(QJsonObject());
     }
 }
-
 
 void ReviewsModel::GetReviewsResetHandler::handle(const QJsonObject &data, ReviewsModel &model)
 {
@@ -167,7 +164,8 @@ void ReviewsModel::GetReviewsResetHandler::handle(const QJsonObject &data, Revie
 
     model.beginResetModel();
     model.m_list.clear();
-    Q_FOREACH(const QJsonValue &reviewJson, reviews) {
+    Q_FOREACH (const QJsonValue &reviewJson, reviews)
+    {
         ReviewItem review(reviewJson.toObject());
         model.m_list.append(review);
     }
@@ -175,21 +173,20 @@ void ReviewsModel::GetReviewsResetHandler::handle(const QJsonObject &data, Revie
     Q_EMIT model.updated();
 }
 
-
 void ReviewsModel::GetReviewsAppendHandler::handle(const QJsonObject &data, ReviewsModel &model)
 {
     model.m_reviewCount = data["count"].toInt();
     QJsonArray reviews = data["reviews"].toArray();
 
     model.beginInsertRows(QModelIndex(), model.m_list.count(), model.m_list.count());
-    Q_FOREACH(const QJsonValue &reviewJson, reviews) {
+    Q_FOREACH (const QJsonValue &reviewJson, reviews)
+    {
         ReviewItem review(reviewJson.toObject());
         model.m_list.append(review);
     }
     model.endInsertRows();
     Q_EMIT model.updated();
 }
-
 
 void ReviewsModel::ReviewPostedHandler::handle(const QJsonObject &data, ReviewsModel &model)
 {

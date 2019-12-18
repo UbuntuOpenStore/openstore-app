@@ -51,6 +51,25 @@ private Q_SLOTS:
     void onRefresh();
 
 private:
+    struct IReplyHandling
+    {
+        virtual void dispatch(ReviewsModel & model, const QJsonObject &data) = 0;
+    } * m_replyHandling;
+
+    template <class T>
+    struct ReplyHandling: IReplyHandling
+    {
+        void dispatch(ReviewsModel & model, const QJsonObject &data)
+        {
+            model.handleReply(data, static_cast<T*>(this));
+        }
+    };
+
+    struct ReviewPosted: ReplyHandling<ReviewPosted> {} m_handleReviewPosted;
+    struct AppendReviews: ReplyHandling<AppendReviews> {} m_appendReviews;
+    struct ResetReviews: ReplyHandling<ResetReviews> {} m_resetReviews;
+    struct OwnReview: ReplyHandling<OwnReview> {} m_handleOwnReview;
+
     QString m_requestSignature;
 
     QList<ReviewItem> m_list;
@@ -58,36 +77,11 @@ private:
 
     int m_reviewCount;
 
-    class ReplyHandler
-    {
-    public:
-        virtual void handle(const QJsonObject &data, ReviewsModel &model) = 0;
-    } *m_replyHandler = Q_NULLPTR;
-
-    class GetOwnReviewReplyHandler : public ReplyHandler
-    {
-        void handle(const QJsonObject &data, ReviewsModel &model);
-    } m_getOwnReviewReplyHandler;
-
-    class GetReviewsResetHandler : public ReplyHandler
-    {
-        void handle(const QJsonObject &data, ReviewsModel &model);
-    } m_getReviewsResetHandler;
-
-    class GetReviewsAppendHandler : public ReplyHandler
-    {
-        void handle(const QJsonObject &data, ReviewsModel &model);
-    } m_getReviewsAppendHandler;
-
-    class ReviewPostedHandler : public ReplyHandler
-    {
-        void handle(const QJsonObject &data, ReviewsModel &model);
-    } m_reviewPostedHandler;
-
-    friend class ReviewPostedHandler;
-    friend class GetReviewsAppendHandler;
-    friend class GetReviewsResetHandler;
-    friend class GetOwnReviewReplyHandler;
+public:
+    void handleReply(const QJsonObject &data, const ReviewPosted *);
+    void handleReply(const QJsonObject &data, const AppendReviews *);
+    void handleReply(const QJsonObject &data, const ResetReviews *);
+    void handleReply(const QJsonObject &data, const OwnReview *);
 };
 
 #endif // REVIEWSMODEL_H

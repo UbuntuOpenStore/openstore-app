@@ -44,6 +44,8 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
         return item.appId;
     case RoleIcon:
         return item.icon;
+    case RoleRatings:
+        return QVariant::fromValue<Ratings>(*item.ratings);
     case RoleTagline:
         return item.tagline;
     case RoleInstalled:
@@ -60,6 +62,7 @@ QHash<int, QByteArray> SearchModel::roleNames() const
     roles.insert(RoleName, "name");
     roles.insert(RoleAppId, "appId");
     roles.insert(RoleIcon, "icon");
+    roles.insert(RoleRatings, "ratings");
     roles.insert(RoleTagline, "tagline");
     roles.insert(RoleInstalled, "installed");
     roles.insert(RoleUpdateAvailable, "updateAvailable");
@@ -148,6 +151,7 @@ void SearchModel::parseReply(OpenStoreReply reply)
         item.name = pkgMap.value("name").toString();
         item.tagline = pkgMap.value("tagline").toString();
         item.icon = pkgMap.value("icon").toString();
+        item.ratings = new Ratings(pkgMap.value("ratings").toMap());
 
         item.updateAvailable = bool(PackagesCache::instance()->getRemoteAppRevision(item.appId) > PackagesCache::instance()->getLocalAppRevision(item.appId));
         item.installed = !PlatformIntegration::instance()->appVersion(item.appId).isNull();

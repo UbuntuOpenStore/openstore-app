@@ -5,12 +5,14 @@
 #include <QUrl>
 
 #include "openstorenetworkmanager.h"
+#include "review.h"
 #include "package.h"
 
 struct SearchPackageItem {
     QString name;
     QString appId;
     QString icon;
+    QPointer<Ratings> ratings;
     QString tagline;
     bool installed;
     bool updateAvailable;
@@ -31,6 +33,7 @@ public:
         RoleName,
         RoleAppId,
         RoleIcon,
+        RoleRatings,
         RoleTagline,
         RoleInstalled,
         RoleUpdateAvailable,

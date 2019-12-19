@@ -8,13 +8,13 @@ ListItem {
 
     height: layout.height
 
-    /*RatingsRow {
+    RatingsRow {
         width: units.gu(12)
         anchors.bottom: parent.bottom
         anchors.left: parent.left
         anchors.leftMargin: units.gu(12)
         anchors.bottomMargin: units.gu(1.5)
-    }*/
+    }
 
     ListItemLayout {
         id: layout

@@ -9,15 +9,16 @@ class Ratings: public QObject
 {
     Q_OBJECT
     Q_ENUMS(Rating)
-    Q_PROPERTY(unsigned int thumbsUpCount MEMBER m_thumbsUpCount NOTIFY updated)
-    Q_PROPERTY(unsigned int thumbsDownCount MEMBER m_thumbsDownCount NOTIFY updated)
-    Q_PROPERTY(unsigned int neutralCount MEMBER m_neutralCount NOTIFY updated)
-    Q_PROPERTY(unsigned int happyCount MEMBER m_happyCount NOTIFY updated)
-    Q_PROPERTY(unsigned int buggyCount MEMBER m_buggyCount NOTIFY updated)
+    Q_PROPERTY(unsigned int thumbsUpCount READ thumbsUpCount NOTIFY updated)
+    Q_PROPERTY(unsigned int thumbsDownCount READ thumbsDownCount NOTIFY updated)
+    Q_PROPERTY(unsigned int neutralCount READ neutralCount NOTIFY updated)
+    Q_PROPERTY(unsigned int happyCount READ happyCount NOTIFY updated)
+    Q_PROPERTY(unsigned int buggyCount READ buggyCount NOTIFY updated)
 
 public:
     explicit Ratings(const QMap<QString, QVariant> &map, QObject * parent = Q_NULLPTR);
     explicit Ratings(QObject * parent = Q_NULLPTR);
+    explicit Ratings(const Ratings &ratings);
 
     enum Rating {
         RatingThumbsUp = 0,
@@ -29,6 +30,12 @@ public:
 
     static QString ratingToString(enum Rating rating);
     static Rating ratingFromString(const QString &rating);
+
+    unsigned int thumbsDownCount() const;
+    unsigned int thumbsUpCount() const;
+    unsigned int neutralCount() const;
+    unsigned int happyCount() const;
+    unsigned int buggyCount() const;
 
 Q_SIGNALS:
     void updated();
@@ -52,7 +59,6 @@ class ReviewItem: public QObject
 
 public:
     explicit ReviewItem(const QJsonObject &json, QObject * parent = Q_NULLPTR);
-    // TODO: can we add objects derived from QObject to QLists properly?
     explicit ReviewItem(const ReviewItem &review);
 
     class Comment
@@ -103,5 +109,6 @@ public:
 };
 
 Q_DECLARE_METATYPE(ReviewItem::Comment);
+Q_DECLARE_METATYPE(Ratings);
 
 #endif // REVIEW_H

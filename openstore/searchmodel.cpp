@@ -45,7 +45,7 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
     case RoleIcon:
         return item.icon;
     case RoleRatings:
-        return QVariant::fromValue<Ratings>(*item.ratings);
+        return QVariant::fromValue<Ratings*>(item.ratings);
     case RoleTagline:
         return item.tagline;
     case RoleInstalled:

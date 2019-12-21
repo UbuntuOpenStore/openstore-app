@@ -6,15 +6,7 @@ ListItem {
     property var appItem
     property bool showTicks: true
 
-    height: layout.height + units.gu(1)
-
-    RatingsRow {
-        width: appIconShape.width
-        anchors.bottom: parent.bottom
-        anchors.left: parent.left
-        anchors.leftMargin: units.gu(2)
-        anchors.bottomMargin: units.gu(0.6)
-    }
+    height: layout.height
 
     ListItemLayout {
         id: layout
@@ -23,18 +15,29 @@ ListItem {
         summary.text: rootItem.appItem.tagline
         summary.wrapMode: Text.WrapAtWordBoundaryOrAnywhere
 
-        UbuntuShape {
-            id: appIconShape
+        Column {
+            width: appIconShape.width
+            height: appIconShape.height + units.gu(1)
             SlotsLayout.position: SlotsLayout.Leading
-            aspect: UbuntuShape.Flat
-            image: Image {
-                source: rootItem.appItem.icon
-                sourceSize.width: parent.width
-				sourceSize.height: parent.height
-                height: parent.height
-                width: parent.width
+            spacing: units.gu(0.6)
+
+            UbuntuShape {
+                id: appIconShape
+                aspect: UbuntuShape.Flat
+                image: Image {
+                    source: rootItem.appItem.icon
+                    sourceSize.width: parent.width
+                    sourceSize.height: parent.height
+                    height: parent.height
+                    width: parent.width
+                }
+            }
+
+            RatingsRow {
+                width: appIconShape.width
             }
         }
+
         Icon {
             SlotsLayout.position: SlotsLayout.Trailing
             height: units.gu(2)

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-01 05:07+0000\n"
-"PO-Revision-Date: 2019-08-25 16:01+0000\n"
+"PO-Revision-Date: 2020-01-13 06:39+0000\n"
 "Last-Translator: Daniel Frańczak <danielfranczak5@wp.pl>\n"
 "Language-Team: Polish <https://translate.ubports.com/projects/openstore/"
 "openstore-app/pl/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.8\n"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
@@ -326,14 +326,16 @@ msgid ""
 "You are currently using a non-standard domain for the OpenStore. This is a "
 "development feature. The domain you are using is:"
 msgstr ""
+"Obecnie używasz niestandardowej domeny dla OpenStore. Jest to funkcja "
+"rozwojowa. Domena, której używasz to:"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:268
 msgid "Are you sure you want to continue?"
-msgstr ""
+msgstr "Jesteś pewien, że chcesz kontynuować?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:272
 msgid "Yes, I know what I'm doing"
-msgstr ""
+msgstr "Tak, wiem co robię"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:280
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:335
@@ -493,7 +495,7 @@ msgstr "Aplikacja"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
 msgid "Scope"
-msgstr "Soczewka"
+msgstr "Scope"
 
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:64

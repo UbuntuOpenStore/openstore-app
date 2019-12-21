@@ -6,14 +6,14 @@ ListItem {
     property var appItem
     property bool showTicks: true
 
-    height: layout.height
+    height: layout.height + units.gu(1)
 
     RatingsRow {
-        width: units.gu(12)
+        width: appIconShape.width
         anchors.bottom: parent.bottom
         anchors.left: parent.left
-        anchors.leftMargin: units.gu(12)
-        anchors.bottomMargin: units.gu(1.5)
+        anchors.leftMargin: units.gu(2)
+        anchors.bottomMargin: units.gu(0.6)
     }
 
     ListItemLayout {

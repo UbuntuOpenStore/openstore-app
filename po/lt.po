@@ -8,13 +8,18 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-01 05:07+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2020-01-19 01:00+0000\n"
+"Last-Translator: Moo <moose@mail.ru>\n"
+"Language-Team: Lithuanian <https://translate.ubports.com/projects/openstore/"
+"openstore-app/lt/>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
+"19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
+"1 : 2);\n"
+"X-Generator: Weblate 3.8\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:32
 msgid "App details"
@@ -24,7 +29,7 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:225
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:658
 msgid "Remove"
-msgstr ""
+msgstr "Šalinti"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:95
 msgid ""
@@ -34,7 +39,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:120
 msgid "Open"
-msgstr ""
+msgstr "Atverti"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:135
 msgid "Install stable version"
@@ -42,7 +47,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:138
 msgid "Upgrade"
-msgstr ""
+msgstr "Naujinti"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:141
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:361
@@ -51,7 +56,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:211
 msgid "This app is not compatible with your system."
-msgstr ""
+msgstr "Ši programėlė nėra suderinama su jūsų sistema."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:252
 msgid "This app has access to restricted system data, see below for details."
@@ -59,24 +64,24 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:276
 msgid "Description"
-msgstr ""
+msgstr "Aprašas"
 
 #. TRANSLATORS: Title of the changelog section
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:299
 msgid "What's New"
-msgstr ""
+msgstr "Kas naujo"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:318
 msgid "Packager/Publisher"
-msgstr ""
+msgstr "Pakuotojas/Leidėjas"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:319
 msgid "OpenStore team"
-msgstr ""
+msgstr "OpenStore komanda"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:327
 msgid "Installed version"
-msgstr ""
+msgstr "Įdiegta versija"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:336
 msgid "Latest available version"
@@ -96,7 +101,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:374
 msgid "License"
-msgstr ""
+msgstr "Licencija"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:375
 msgid "N/A"
@@ -129,15 +134,15 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:448
 msgid "Package contents"
-msgstr ""
+msgstr "Paketo turinys"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:528
 msgid "AppArmor profile"
-msgstr ""
+msgstr "AppArmor profilis"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:555
 msgid "Permissions"
-msgstr ""
+msgstr "Leidimai"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:574
@@ -166,52 +171,52 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:637
 msgid "Maybe later"
-msgstr ""
+msgstr "Galbūt, vėliau"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:650
 msgid "Remove package"
-msgstr ""
+msgstr "Šalinti paketą"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:651
 #, qt-format
 msgid "Do you want to remove %1?"
-msgstr ""
+msgstr "Ar norite pašalinti %1?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:667
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:369
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
-msgstr ""
+msgstr "Atsisakyti"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:684
 #, qt-format
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:689
 #, qt-format
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:694
 #, qt-format
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:697
 #, qt-format
 msgid "%1 bytes"
-msgstr ""
+msgstr "%1 baitų"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesPage.qml:24
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesTab.qml:90
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:36
 msgid "Categories"
-msgstr ""
+msgstr "Kategorijos"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:29
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:35
@@ -226,7 +231,7 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:136
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:56
 msgid "Update available"
-msgstr ""
+msgstr "Yra prieinamas atnaujinimas"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:137
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:56

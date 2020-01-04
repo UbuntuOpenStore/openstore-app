@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-01 05:07+0000\n"
-"PO-Revision-Date: 2019-10-13 21:55+0000\n"
+"PO-Revision-Date: 2020-01-19 01:00+0000\n"
 "Last-Translator: Tom Dom <thomas@patoel.nl>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/openstore/"
 "openstore-app/nl/>\n"
@@ -328,14 +328,16 @@ msgid ""
 "You are currently using a non-standard domain for the OpenStore. This is a "
 "development feature. The domain you are using is:"
 msgstr ""
+"Op dit moment gebruikt u een niet-standaard domein voor OpenStore. Dit is "
+"een ontwikkelaarsfunctie. Het domein dat u gebruikt is:"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:268
 msgid "Are you sure you want to continue?"
-msgstr ""
+msgstr "Weet je zeker dat u wilt doorgaan?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:272
 msgid "Yes, I know what I'm doing"
-msgstr ""
+msgstr "Ja, ik weet wat ik doe"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:280
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:335

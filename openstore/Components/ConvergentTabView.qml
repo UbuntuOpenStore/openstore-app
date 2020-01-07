@@ -17,7 +17,6 @@ Item {
     LeftNavigationBar {
         id: leftBar
         visible: rootItem.isWide && barVisible
-        theme: ThemeSettings { name: "Ubuntu.Components.Themes.SuruDark" }
         model: rootItem.model
         selectedIndex: rootItem.selectedIndex
         onTabThumbClicked: rootItem.selectedIndex = index

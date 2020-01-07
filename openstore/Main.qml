@@ -268,7 +268,6 @@ MainView {
             }
             Button {
                 text: i18n.tr("Get me out of here!")
-                color: UbuntuColors.red
                 onClicked: {
                     warningDialog.rejected();
                 }

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-01 05:07+0000\n"
-"PO-Revision-Date: 2019-10-28 13:36+0000\n"
+"PO-Revision-Date: 2020-01-19 01:00+0000\n"
 "Last-Translator: louies0623 <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
 "openstore/openstore-app/zh_Hant/>\n"
@@ -163,7 +163,7 @@ msgstr "贊助"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:623
 msgid "Would you like to support this app with a donation to the developer?"
-msgstr ""
+msgstr "您想透過向開發者贊助金錢來支持該應用程序式嗎？"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:629
 msgid "Donate now"
@@ -322,15 +322,15 @@ msgstr "注意"
 msgid ""
 "You are currently using a non-standard domain for the OpenStore. This is a "
 "development feature. The domain you are using is:"
-msgstr ""
+msgstr "您目前正在為 OpenStore 使用非標準網域，這是一個開發特質。 您正在使用的網域是："
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:268
 msgid "Are you sure you want to continue?"
-msgstr ""
+msgstr "您確定要繼續嗎？"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:272
 msgid "Yes, I know what I'm doing"
-msgstr ""
+msgstr "是的，我知道我在做什麼"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:280
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:335

@@ -67,20 +67,19 @@ Dialog {
 
     Label {
         id: errorHint
-        color: UbuntuColors.red
+        color: theme.palette.normal.negative
         text: i18n.tr("Authentication failed. Please retry")
         visible: false
     }
 
     Button {
         text: i18n.tr("Authenticate")
-        color: UbuntuColors.green
+        color: theme.palette.normal.positive
         onClicked: authenticationDialog.authenticate()
     }
 
     Button {
         text: i18n.tr("Cancel")
-        color: UbuntuColors.graphite
         onClicked: {
             authenticationDialog.aborted()
             PopupUtils.close(authenticationDialog)

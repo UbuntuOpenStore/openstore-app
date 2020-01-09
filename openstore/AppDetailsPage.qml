@@ -120,8 +120,10 @@ Page {
                         text: i18n.tr("Open")
                         visible: app.installed && app.containsApp && app.appId!="openstore.openstore-team"
                         color: installUpgradeButton.visible
-                            ? UbuntuColors.ash
-                            : UbuntuColors.green
+                            ? theme.name == "Ubuntu.Components.Themes.Ambiance"
+                                ? UbuntuColors.ash
+                                : UbuntuColors.graphite
+                            : theme.palette.normal.positive
 
                         onClicked: Qt.openUrlExternally(app.appLaunchUrl())
                     }
@@ -141,7 +143,7 @@ Page {
                             return i18n.tr("Install");
                         }
                         visible: !app.installed || (app.installed && app.updateAvailable) || app.isLocalVersionSideloaded
-                        color: app.isLocalVersionSideloaded ? UbuntuColors.blue : UbuntuColors.green
+                        color: app.isLocalVersionSideloaded ? theme.palette.selected.focus : theme.palette.normal.positive
                         onClicked: {
                             if(app.donateUrl && !app.installed)
                             {
@@ -224,7 +226,7 @@ Page {
                         Layout.maximumWidth: buttonsRow.width > units.gu(60) ? units.gu(24) : buttonsRow.width
                         text: i18n.tr("Remove")
                         visible: app.installed && !PackagesCache.updatingCache
-                        color: UbuntuColors.red
+                        color: theme.palette.normal.negative
                         onClicked: {
                             var popup = PopupUtils.open(removeQuestion, root, {pkgName: app.name || app.id});
                             popup.accepted.connect(function() {
@@ -250,7 +252,7 @@ Page {
                 ListItemLayout {
                     anchors.centerIn: parent
                     subtitle.text: i18n.tr("This app has access to restricted system data, see below for details.")
-                    subtitle.color: UbuntuColors.red
+                    subtitle.color: theme.palette.normal.negative
                     subtitle.maximumLineCount: Number.MAX_VALUE
                     subtitle.wrapMode: Text.WordWrap
 
@@ -527,7 +529,9 @@ Page {
 
                             title.text: i18n.tr("AppArmor profile")
                             subtitle.text: apparmorTemplate || "Ubuntu confined app"
-                            subtitle.color: apparmorTemplate.indexOf("unconfined") >= 0 ? UbuntuColors.red : theme.palette.normal.backgroundSecondaryText
+                            subtitle.color: apparmorTemplate.indexOf("unconfined") >= 0
+                                ? theme.palette.normal.negative
+                                : theme.palette.normal.backgroundSecondaryText
                             subtitle.maximumLineCount: Number.MAX_VALUE
                         }
 
@@ -627,7 +631,7 @@ Page {
 
             Button {
                 text: i18n.tr("Donate now")
-                color: UbuntuColors.green
+                color: theme.palette.normal.positive
                 onClicked: {
                     donatingdDialog.accepted()
                     PopupUtils.close(donatingdDialog)
@@ -656,7 +660,7 @@ Page {
 
             Button {
                 text: i18n.tr("Remove")
-                color: UbuntuColors.red
+                color: theme.palette.normal.negative
                 onClicked: {
                     removeQuestionDialog.accepted();
                     PopupUtils.close(removeQuestionDialog)

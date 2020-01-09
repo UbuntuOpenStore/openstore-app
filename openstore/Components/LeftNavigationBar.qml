@@ -19,7 +19,7 @@ StyledItem {
 
     Rectangle {
         anchors.fill: parent
-        color: rootItem.theme.palette.normal.foreground
+        color: rootItem.theme.palette.normal.background
     }
 
     Column {
@@ -33,10 +33,17 @@ StyledItem {
 
                 property bool isSelected: model.index == rootItem.selectedIndex
 
-                width: parent.width
+                width: parent.width - units.dp(1)
                 height: units.gu(8)
 
                 onClicked: rootItem.tabThumbClicked(model.index)
+
+                Rectangle {
+                    anchors.right: parent.right
+                    width: units.dp(2)
+                    height: parent.height
+                    color: isSelected ? theme.palette.selected.focus : theme.palette.normal.foreground
+                }
 
                 Rectangle {
                     anchors.fill: parent
@@ -51,8 +58,9 @@ StyledItem {
 
                     Icon {
                         anchors.horizontalCenter: parent.horizontalCenter
-                        width: units.gu(2.5); height: width
-                        color: isSelected ? UbuntuColors.blue : rootItem.theme.palette.selected.backgroundText
+                        width: units.gu(2.5)
+                        height: width
+                        color: isSelected ? theme.palette.selected.focus : theme.palette.normal.backgroundTertiaryText
                         name: modelData.iconName
 
                         Rectangle {
@@ -77,7 +85,7 @@ StyledItem {
                         horizontalAlignment: Text.AlignHCenter
                         textSize: Label.Small
                         text: modelData.name
-                        color: isSelected ? UbuntuColors.blue : rootItem.theme.palette.selected.backgroundText
+                        color: isSelected ? theme.palette.selected.focus : theme.palette.normal.backgroundTertiaryText
                     }
                 }
             }

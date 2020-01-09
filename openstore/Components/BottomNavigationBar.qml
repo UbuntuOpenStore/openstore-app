@@ -40,9 +40,17 @@ StyledItem {
                 property bool isSelected: model.index == rootItem.selectedIndex
 
                 width: parent.width / tabsRepeater.count
-                height: parent.height
+                height: parent.height - units.dp(1)
+                anchors.bottom: parent.bottom
 
                 onClicked: rootItem.tabThumbClicked(model.index)
+
+                Rectangle {
+                    anchors.top: parent.top
+                    width: parent.width
+                    height: units.dp(2)
+                    color: isSelected ? theme.palette.selected.focus : theme.palette.normal.foreground
+                }
 
                 Rectangle {
                     anchors.fill: parent
@@ -58,7 +66,7 @@ StyledItem {
                     Icon {
                         anchors.horizontalCenter: parent.horizontalCenter
                         width: units.gu(2.5); height: width
-                        color: isSelected ? UbuntuColors.blue : theme.palette.selected.backgroundText
+                        color: isSelected ? theme.palette.selected.focus : theme.palette.normal.backgroundTertiaryText
                         name: modelData.iconName
 
                         Rectangle {
@@ -83,7 +91,7 @@ StyledItem {
                         horizontalAlignment: Text.AlignHCenter
                         textSize: Label.Small
                         text: modelData.name
-                        color: isSelected ? UbuntuColors.blue : theme.palette.selected.backgroundText
+                        color: isSelected ? theme.palette.selected.focus : theme.palette.normal.backgroundTertiaryText
                     }
                 }
             }

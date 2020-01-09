@@ -21,7 +21,7 @@ ListItem {
             image: Image {
                 source: rootItem.appItem.icon
                 sourceSize.width: parent.width
-				sourceSize.height: parent.height
+                sourceSize.height: parent.height
                 height: parent.height
                 width: parent.width
             }
@@ -34,7 +34,7 @@ ListItem {
             implicitWidth: width
             visible: rootItem.appItem.installed && rootItem.showTicks
             name: "tick"
-            color: rootItem.appItem.updateAvailable ? UbuntuColors.orange : UbuntuColors.green
+            color: rootItem.appItem.updateAvailable ? theme.palette.selected.focus : theme.palette.normal.positive
         }
 
         ProgressionSlot {}

@@ -201,7 +201,7 @@ MainView {
                     iconName: "airplane-mode"
 
                     controlComponent: Button {
-                        color: UbuntuColors.green
+                        color: theme.palette.normal.positive
                         text: i18n.tr("Close OpenStore")
                         onClicked: Qt.quit()
                     }
@@ -270,7 +270,7 @@ MainView {
 
             Button {
                 text: i18n.tr("Yes, I know what I'm doing")
-                color: UbuntuColors.green
+                color: theme.palette.normal.positive
                 onClicked: {
                     warningDialog.accepted();
                 }
@@ -326,7 +326,7 @@ MainView {
 
             Button {
                 text: i18n.tr("Okay. Got it! I'll be careful.")
-                color: UbuntuColors.green
+                color: theme.palette.normal.positive
                 onClicked: {
                     warningDialog.accepted();
                 }
@@ -359,7 +359,7 @@ MainView {
 
             Button {
                 text: i18n.tr("Install")
-                color: UbuntuColors.green
+                color: theme.palette.normal.positive
                 visible: !PlatformIntegration.clickInstaller.busy
                 onClicked: {
                     installQuestionDialog.accepted()
@@ -389,7 +389,7 @@ MainView {
             title: i18n.tr("App installed")
             text: i18n.tr("The app has been installed successfully.")
             Button {
-                color: UbuntuColors.blue
+                color: theme.palette.normal.positive
                 text: i18n.tr("OK")
                 onClicked: PopupUtils.close(installedConfirmationDialog)
             }
@@ -402,7 +402,7 @@ MainView {
             title: i18n.tr("Installation failed")
             text: i18n.tr("The package could not be installed. Make sure it is a valid click package.")
             Button {
-                color: UbuntuColors.blue
+                color: theme.palette.normal.positive
                 text: i18n.tr("OK")
                 onClicked: PopupUtils.close(installationErrorDialog)
             }
@@ -417,7 +417,7 @@ MainView {
             title: i18n.tr("Installation failed (Error %1)").arg(errorCode)
             text: errorString
             Button {
-                color: UbuntuColors.blue
+                color: theme.palette.normal.positive
                 text: i18n.tr("OK")
                 onClicked: PopupUtils.close(timeoutErrorDialog)
             }

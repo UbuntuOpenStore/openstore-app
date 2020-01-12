@@ -121,8 +121,8 @@ Page {
                         visible: app.installed && app.containsApp && app.appId!="openstore.openstore-team"
                         color: installUpgradeButton.visible
                             ? theme.name == "Ubuntu.Components.Themes.Ambiance"
-                                ? UbuntuColors.ash
-                                : UbuntuColors.graphite
+                                ? UbuntuColors.graphite
+                                : UbuntuColors.ash
                             : theme.palette.normal.positive
 
                         onClicked: Qt.openUrlExternally(app.appLaunchUrl())

@@ -1,3 +1,4 @@
+# -- armhf --
 publish-armhf:
   stage: deploy
   image: clickable/ci-16.04-armhf
@@ -23,11 +24,25 @@ build-armhf:
       - build/arm-linux-gnueabihf/app/*.click
     expire_in: 1 week
 
+# -- arm64 --
 build-arm64:
   stage: build
   image: clickable/ci-16.04-arm64
   script:
     - clickable clean build
+  artifacts:
+    paths:
+      - build/aarch64-linux-gnu/app/*.click
+    expire_in: 1 week
+    
+publish-arm64:
+  stage: deploy
+  image: clickable/ci-16.04-arm64
+  only:
+    - tags
+  script:
+    - clickable clean build click-build
+    - clickable publish "$CI_COMMIT_MESSAGE"
   artifacts:
     paths:
       - build/aarch64-linux-gnu/app/*.click

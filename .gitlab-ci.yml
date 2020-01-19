@@ -5,7 +5,7 @@ publish-armhf:
   only:
     - tags
   script:
-    - clickable clean build click-build
+    - clickable clean build
     - clickable publish "$CI_COMMIT_MESSAGE"
   artifacts:
     paths:
@@ -34,15 +34,15 @@ build-arm64:
     paths:
       - build/aarch64-linux-gnu/app/*.click
     expire_in: 1 week
-    
+
 publish-arm64:
   stage: deploy
   image: clickable/ci-16.04-arm64
   only:
     - tags
   script:
-    - clickable clean build click-build
-    - clickable publish "$CI_COMMIT_MESSAGE"
+    - clickable clean build
+    - clickable publish
   artifacts:
     paths:
       - build/aarch64-linux-gnu/app/*.click

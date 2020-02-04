@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-09 05:56+0000\n"
-"PO-Revision-Date: 2020-01-27 01:21+0000\n"
+"PO-Revision-Date: 2020-02-06 20:21+0000\n"
 "Last-Translator: Mladen B <mladen074@gmail.com>\n"
 "Language-Team: Serbian <https://translate.ubports.com/projects/openstore/"
 "openstore-app/sr/>\n"
@@ -35,6 +35,8 @@ msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
 msgstr ""
+"Инсталирана верзија ове апликације није преузета са OpenStore сервера. "
+"Можете инсталирати последњу стабилну верзију кликом на дугме испод."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:120
 msgid "Open"
@@ -106,7 +108,7 @@ msgstr "Лиценца"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:377
 msgid "N/A"
-msgstr ""
+msgstr "N/A"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:387
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:106
@@ -152,11 +154,11 @@ msgstr "нису потребне специјалне дозволе"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:594
 msgid "Read paths"
-msgstr ""
+msgstr "Путање за читање"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:611
 msgid "Write paths"
-msgstr ""
+msgstr "Путање за писање"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:626
 msgid "Donating"
@@ -301,6 +303,8 @@ msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
 msgstr ""
+"Инсталиране верзије ових апликација нису преузете са OpenStore сервера, али "
+"стабилна верзија је доступна."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:106
 msgid "Update all"
@@ -324,6 +328,8 @@ msgid ""
 "You are currently using a non-standard domain for the OpenStore. This is a "
 "development feature. The domain you are using is:"
 msgstr ""
+"Тренутно користите нестандардни домен за OpenStore. Ово је развојна опција. "
+"Домен који користите је:"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:268
 msgid "Are you sure you want to continue?"
@@ -343,22 +349,28 @@ msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
 msgstr ""
+"OpenStore дозвољава инсталацију апликација које нису ограничене. Молимо Вас "
+"да поведете рачуна о могућим негативним последицама."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:310
 msgid ""
 "An unconfined application has the ability to break the system, reduce its "
 "performance and/or spy on you."
 msgstr ""
+"Апликација која није ограничена има могућност да поквари систем, смањи му "
+"перформансе или да шпијунира Ваше акције."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:317
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
 msgstr ""
+"Иако се трудимо да то спречимо тако што прегледамо све апликације, не можемо "
+"преузети одговорност ако нам нешто лоше промакне."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:324
 msgid "Use this at your own risk."
-msgstr ""
+msgstr "Користите ово на своју одговорност."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:328
 msgid "Okay. Got it! I'll be careful."
@@ -457,10 +469,12 @@ msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr ""
+"Уношењем своје шифре преузимате сву одговорност за приказ садржаја који није "
+"прикладан на радном месту."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:99
 msgid "About OpenStore"
-msgstr ""
+msgstr "Детаљи о OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:115
 msgid "Report an issue"
@@ -480,27 +494,27 @@ msgstr "Апликација"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
 msgid "Scope"
-msgstr ""
+msgstr "Подручје"
 
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:64
 msgid "URL Handler"
-msgstr ""
+msgstr "Управљач линковима"
 
 #. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:78
 msgid "Content Hub Handler"
-msgstr ""
+msgstr "Управљач Content Hub-а"
 
 #. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:92
 msgid "Push Helper"
-msgstr ""
+msgstr "Push Helper"
 
 #. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:106
 msgid "Accounts provider"
-msgstr ""
+msgstr "Провајдер за налоге"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:46
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:54

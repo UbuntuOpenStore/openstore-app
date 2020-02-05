@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-09 05:56+0000\n"
-"PO-Revision-Date: 2019-11-03 19:36+0000\n"
+"PO-Revision-Date: 2020-02-06 20:21+0000\n"
 "Last-Translator: Ege Öz <ege.oz@tutanota.com>\n"
 "Language-Team: Turkish <https://translate.ubports.com/projects/openstore/"
 "openstore-app/tr/>\n"
@@ -52,7 +52,7 @@ msgstr "Yükselt"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:143
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:361
 msgid "Install"
-msgstr "Yükle"
+msgstr "Kur"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:213
 msgid "This app is not compatible with your system."
@@ -75,7 +75,7 @@ msgstr "Neler yeni"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:320
 msgid "Packager/Publisher"
-msgstr "Paketleyici/Yayıncı"
+msgstr "Paketleyici/Yayımlayıcı"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:321
 msgid "OpenStore team"
@@ -161,7 +161,7 @@ msgstr "Yolları yazma"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:626
 msgid "Donating"
-msgstr ""
+msgstr "Bağış yapılıyor"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:627
 msgid "Would you like to support this app with a donation to the developer?"
@@ -327,14 +327,16 @@ msgid ""
 "You are currently using a non-standard domain for the OpenStore. This is a "
 "development feature. The domain you are using is:"
 msgstr ""
+"OpenStore için standart olmayan bir alan adı kullanmaktasınız. Bu bir "
+"geliştirici özelliğidir. Şu anda kullanmakta olduğunuz alan adı:"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:268
 msgid "Are you sure you want to continue?"
-msgstr ""
+msgstr "Devam etmek istediğinize emin misiniz?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:272
 msgid "Yes, I know what I'm doing"
-msgstr ""
+msgstr "Evet, ne yaptığımı biliyorum"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:280
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:335

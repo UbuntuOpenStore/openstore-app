@@ -194,10 +194,6 @@ void PackagesModel::refresh()
     //        qDebug() << "Finished refresh.";
 
     std::sort(m_list.begin(), m_list.end(), sortPackage);
-    Q_FOREACH (const LocalPackageItem &pkg, m_list)
-    {
-        qDebug() << pkg.name;
-    }
 
     endInsertRows();
 

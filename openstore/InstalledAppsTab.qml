@@ -76,13 +76,6 @@ Page {
             topMargin: scrollView.width == units.gu(80) ? units.gu(4) : 0
             bottomMargin: scrollView.width == units.gu(80) ? units.gu(4) : 0
 
-            /*
-            model: SortFilterModel {
-                id: sortedModel
-                sort.property: 'updateStatus'
-                model: appModel
-            }
-            */
             model: appModel
 
             // WORKAROUND: Fix for wrong grid unit size

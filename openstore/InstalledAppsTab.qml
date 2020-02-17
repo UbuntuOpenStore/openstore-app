@@ -66,6 +66,7 @@ Page {
             topMargin: parent.header ? parent.header.height : 0
             bottom: parent.bottom
             horizontalCenter: parent.horizontalCenter
+            bottomMargin: units.gu(2)
         }
 
         ListView {

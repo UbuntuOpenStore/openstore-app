@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-01 05:07+0000\n"
+"POT-Creation-Date: 2020-02-17 13:56+0000\n"
 "PO-Revision-Date: 2020-01-19 01:00+0000\n"
 "Last-Translator: louies0623 <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
@@ -277,39 +277,39 @@ msgid "Settings"
 msgstr "設置"
 
 #. TRANSLATORS: %1 is the number of installed apps
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:94
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:97
 #, qt-format
 msgid "Installed apps (%1)"
 msgstr "已安裝應用程式 (%1)"
 
 #. TRANSLATORS: %1 is the number of available app updates
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:98
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:101
 #, qt-format
 msgid "Available updates (%1)"
 msgstr "可用的更新 (%1)"
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:105
 #, qt-format
 msgid "Stable version available (%1)"
 msgstr "有可用的穩定版本 (%1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:105
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:108
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
 msgstr ""
 "此應用程式的已安裝版本不是來自 OpenStore 的伺服器，但有提供了穩定版本。"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:106
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:109
 msgid "Update all"
 msgstr "全部更新"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:191
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:194
 msgid "No apps found"
 msgstr "未找到應用程式"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:192
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:195
 msgid "No app has been installed from OpenStore yet."
 msgstr "尚未從 OpenStore 安裝任何應用程式。"
 
@@ -322,7 +322,9 @@ msgstr "注意"
 msgid ""
 "You are currently using a non-standard domain for the OpenStore. This is a "
 "development feature. The domain you are using is:"
-msgstr "您目前正在為 OpenStore 使用非標準網域，這是一個開發特質。 您正在使用的網域是："
+msgstr ""
+"您目前正在為 OpenStore 使用非標準網域，這是一個開發特質。 您正在使用的網域"
+"是："
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:268
 msgid "Are you sure you want to continue?"

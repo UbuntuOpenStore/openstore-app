@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chinese (Simplified) (OpenStore)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-09 05:56+0000\n"
+"POT-Creation-Date: 2020-02-17 13:56+0000\n"
 "PO-Revision-Date: 2019-12-03 17:38+0000\n"
 "Last-Translator: Sam Zhang <sammyok@163.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.ubports.com/projects/"
@@ -272,38 +272,38 @@ msgid "Settings"
 msgstr "设置"
 
 #. TRANSLATORS: %1 is the number of installed apps
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:94
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:97
 #, qt-format
 msgid "Installed apps (%1)"
 msgstr "已安装应用(%1)"
 
 #. TRANSLATORS: %1 is the number of available app updates
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:98
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:101
 #, qt-format
 msgid "Available updates (%1)"
 msgstr "可用的更新(%1)"
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:105
 #, qt-format
 msgid "Stable version available (%1)"
 msgstr "可用的稳定版  (%1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:105
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:108
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
 msgstr "已安装的应用不是来自 OpenStore 但有稳定版本可供下载。"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:106
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:109
 msgid "Update all"
 msgstr "全部更新"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:191
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:194
 msgid "No apps found"
 msgstr "未找到应用"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:192
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:195
 msgid "No app has been installed from OpenStore yet."
 msgstr "还没有从 OpenStore 安装任何应用。"
 

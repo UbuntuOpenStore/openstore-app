@@ -6,6 +6,7 @@
 
 #include <QJsonDocument>
 #include <QJsonArray>
+#include <algorithm>
 
 // For desktop file / scope settings parsing
 #include <QSettings>
@@ -15,10 +16,20 @@
 #define MODEL_START_REFRESH() m_ready = false; Q_EMIT readyChanged();
 #define MODEL_END_REFRESH() m_ready = true; Q_EMIT readyChanged();
 
-PackagesModel::PackagesModel(QAbstractListModel * parent)
-    : QAbstractListModel(parent)
-    , m_ready(false)
-    , m_appStoreUpdateAvailable(false)
+/*
+    Sort available updates first, then by name
+*/
+bool sortPackage(const LocalPackageItem &a, const LocalPackageItem &b)
+{
+    if (a.updateStatus == b.updateStatus) {
+        return (a.name.compare(b.name, Qt::CaseInsensitive) < 0);
+    }
+
+    return (a.updateStatus.compare(b.updateStatus) < 0);
+}
+
+PackagesModel::PackagesModel(QAbstractListModel *parent)
+    : QAbstractListModel(parent), m_ready(false), m_appStoreUpdateAvailable(false)
 {
     connect(PlatformIntegration::instance(), &PlatformIntegration::updated, this, &PackagesModel::refresh);
     connect(PackagesCache::instance(), &PackagesCache::updatingCacheChanged, this, &PackagesModel::refresh);
@@ -181,6 +192,12 @@ void PackagesModel::refresh()
         }
     }
     //        qDebug() << "Finished refresh.";
+
+    std::sort(m_list.begin(), m_list.end(), sortPackage);
+    Q_FOREACH (const LocalPackageItem &pkg, m_list)
+    {
+        qDebug() << pkg.name;
+    }
 
     endInsertRows();
 

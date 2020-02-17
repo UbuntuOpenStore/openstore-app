@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-01 05:07+0000\n"
+"POT-Creation-Date: 2020-02-17 13:56+0000\n"
 "PO-Revision-Date: 2020-01-14 11:22+0000\n"
 "Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
 "Language-Team: Catalan <https://translate.ubports.com/projects/openstore/"
@@ -280,24 +280,24 @@ msgid "Settings"
 msgstr "Paràmetres"
 
 #. TRANSLATORS: %1 is the number of installed apps
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:94
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:97
 #, qt-format
 msgid "Installed apps (%1)"
 msgstr "Aplicacions instal·lades (%1)"
 
 #. TRANSLATORS: %1 is the number of available app updates
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:98
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:101
 #, qt-format
 msgid "Available updates (%1)"
 msgstr "Actualitzacions disponibles (%1)"
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:105
 #, qt-format
 msgid "Stable version available (%1)"
 msgstr "Amb versió estable disponible (%1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:105
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:108
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
@@ -305,15 +305,15 @@ msgstr ""
 "La versió instal·lada de l'aplicació no ve del servidor de l'OpenStore però "
 "hi ha disponible una versió estable."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:106
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:109
 msgid "Update all"
 msgstr "Actualitza-ho tot"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:191
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:194
 msgid "No apps found"
 msgstr "No s'ha trobat cap resultat"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:192
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:195
 msgid "No app has been installed from OpenStore yet."
 msgstr "Encara no s'ha instal·lat cap aplicació de l'OpenStore."
 

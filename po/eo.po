@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-09 05:56+0000\n"
+"POT-Creation-Date: 2020-02-17 13:56+0000\n"
 "PO-Revision-Date: 2018-01-25 09:59+0000\n"
 "Last-Translator: Pablo F. <pablo.foche@gmail.com>\n"
 "Language-Team: Esperanto <https://translate.ubports.com/projects/openstore/"
@@ -281,24 +281,24 @@ msgid "Settings"
 msgstr "Agordoj"
 
 #. TRANSLATORS: %1 is the number of installed apps
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:94
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:97
 #, qt-format
 msgid "Installed apps (%1)"
 msgstr "Instalitaj aplikaĵoj (%1)"
 
 #. TRANSLATORS: %1 is the number of available app updates
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:98
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:101
 #, qt-format
 msgid "Available updates (%1)"
 msgstr "Disponeblaj ĝisdatigoj (%1)"
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:105
 #, qt-format
 msgid "Stable version available (%1)"
 msgstr ""
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:105
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:108
 #, fuzzy
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
@@ -308,16 +308,16 @@ msgstr ""
 "OpenStore. Vi povas instali la lastan stabilan ĝisdatigon premante sur la "
 "suban butonon."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:106
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:109
 #, fuzzy
 msgid "Update all"
 msgstr "Ĝisdatigo disponebla"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:191
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:194
 msgid "No apps found"
 msgstr "Neniu aplikaĵo trovita"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:192
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:195
 msgid "No app has been installed from OpenStore yet."
 msgstr "Neniu aplikaĵo instalita per OpenStore ankoraŭ."
 

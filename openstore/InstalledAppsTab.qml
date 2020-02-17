@@ -75,11 +75,14 @@ Page {
             topMargin: scrollView.width == units.gu(80) ? units.gu(4) : 0
             bottomMargin: scrollView.width == units.gu(80) ? units.gu(4) : 0
 
+            /*
             model: SortFilterModel {
                 id: sortedModel
                 sort.property: 'updateStatus'
                 model: appModel
             }
+            */
+            model: appModel
 
             // WORKAROUND: Fix for wrong grid unit size
             Component.onCompleted: root.flickable_responsive_scroll_fix(view)
@@ -91,7 +94,7 @@ Page {
                 text: {
                     if (section == 'none') {
                         // TRANSLATORS: %1 is the number of installed apps
-                        return i18n.tr("Installed apps (%1)").arg(sortedModel.count - appModel.updatesAvailableCount - appModel.downgradesAvailableCount);
+                        return i18n.tr("Installed apps (%1)").arg(appModel.count - appModel.updatesAvailableCount - appModel.downgradesAvailableCount);
                     }
                     else if (section == 'available') {
                         // TRANSLATORS: %1 is the number of available app updates
@@ -186,7 +189,7 @@ Page {
 
     Loader {
         anchors.centerIn: parent
-        active: sortedModel.count == 0
+        active: appModel.count == 0
         sourceComponent: Components.EmptyState {
             title: i18n.tr("No apps found")
             subTitle: i18n.tr("No app has been installed from OpenStore yet.")

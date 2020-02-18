@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-17 13:56+0000\n"
+"POT-Creation-Date: 2020-02-18 04:23+0000\n"
 "PO-Revision-Date: 2020-01-13 06:39+0000\n"
 "Last-Translator: Daniel Frańczak <danielfranczak5@wp.pl>\n"
 "Language-Team: Polish <https://translate.ubports.com/projects/openstore/"
@@ -26,12 +26,34 @@ msgid "App details"
 msgstr "Szczegóły aplikacji"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:39
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:227
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:662
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:242
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:677
 msgid "Remove"
 msgstr "Usuń"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:95
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:74
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:17
+#, fuzzy
+msgid "App"
+msgstr "Moje aplikacje"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:75
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:18
+msgid "Scope"
+msgstr "Scope"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:76
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:19
+msgid "Web App"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:77
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:20
+msgid "Web App+"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:110
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
@@ -39,177 +61,177 @@ msgstr ""
 "Zainstalowana wersja aplikacji nie zawiera serwera OpenStore. Możesz "
 "zainstalować najnowszą, stabilną wersję klikając przycisk poniżej."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:120
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:135
 msgid "Open"
 msgstr "Uruchom aplikację"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:137
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:152
 msgid "Install stable version"
 msgstr "Zainstaluj stabilną wersję"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:140
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:155
 msgid "Upgrade"
 msgstr "Aktualizuj"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:143
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:158
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:361
 msgid "Install"
 msgstr "Zainstaluj"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:213
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:228
 msgid "This app is not compatible with your system."
 msgstr "Ta aplikacja nie jest kompatybilna z Twoim systemem."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:254
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:269
 msgid "This app has access to restricted system data, see below for details."
 msgstr "Ta aplikacja posiada dostęp do danych systemowych, szczegóły poniżej."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:278
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:293
 msgid "Description"
 msgstr "Opis"
 
 #. TRANSLATORS: Title of the changelog section
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:301
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:316
 msgid "What's New"
 msgstr "Co nowego"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:320
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:335
 msgid "Packager/Publisher"
 msgstr "Programista/Wydawca"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:321
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:336
 msgid "OpenStore team"
 msgstr "Ekipa OpenStore"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:329
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:344
 msgid "Installed version"
 msgstr "Zainstalowana wersja"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:338
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:353
 msgid "Latest available version"
 msgstr "Najnowsza wersja"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:347
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:362
 msgid "First released"
 msgstr "Opublikowano"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:358
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:373
 msgid "Downloads of the latest version"
 msgstr "Liczba pobrań najnowszej wersji"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:367
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:382
 msgid "Total downloads"
 msgstr "Liczba pobrań wszystkich wersji"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:376
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:391
 msgid "License"
 msgstr "Licencja"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:377
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:392
 msgid "N/A"
 msgstr "B/D"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:387
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:402
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:106
 msgid "Source Code"
 msgstr "Kod źródłowy"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:400
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:415
 msgid "Get support for this app"
 msgstr "Zgłoś problemy, ulepszenia"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:413
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:428
 msgid "Donate to support this app"
 msgstr "Przekaż darowiznę na wsparcie tej aplikacji"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:429
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:444
 #, qt-format
 msgid "More from %1"
 msgstr "Więcej od %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:444
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:459
 #, qt-format
 msgid "Other apps in %1"
 msgstr "Inne aplikacje w kategorii %1"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:450
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:465
 msgid "Package contents"
 msgstr "Zawartość pakietu"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:530
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:545
 msgid "AppArmor profile"
 msgstr "Profil AppArmor"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:559
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:574
 msgid "Permissions"
 msgstr "Uprawnienia"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:578
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:593
 msgid "none required"
 msgstr "niewymagane"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:594
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:609
 msgid "Read paths"
 msgstr "Odczyt ścieżek"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:611
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:626
 msgid "Write paths"
 msgstr "Zapis ścieżek"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:626
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:641
 msgid "Donating"
 msgstr "Darowizna"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:627
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:642
 msgid "Would you like to support this app with a donation to the developer?"
 msgstr "Czy chcesz wesprzeć tę aplikację darowizną dla programisty?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:633
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:648
 msgid "Donate now"
 msgstr "Wpłać teraz"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:641
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:656
 msgid "Maybe later"
 msgstr "Może później"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:654
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:669
 msgid "Remove package"
 msgstr "Usuń pakiet"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:655
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:670
 #, qt-format
 msgid "Do you want to remove %1?"
 msgstr "Usunąć %1?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:671
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:686
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:369
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
 msgstr "Anuluj"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:688
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:703
 #, qt-format
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:693
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:708
 #, qt-format
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:698
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:713
 #, qt-format
 msgid "%1 kB"
 msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:701
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:716
 #, qt-format
 msgid "%1 bytes"
 msgstr "%1 bajtów"
@@ -279,24 +301,24 @@ msgid "Settings"
 msgstr "Ustawienia"
 
 #. TRANSLATORS: %1 is the number of installed apps
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:97
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:91
 #, qt-format
 msgid "Installed apps (%1)"
 msgstr "Zainstalowane aplikacje (%1)"
 
 #. TRANSLATORS: %1 is the number of available app updates
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:101
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:95
 #, qt-format
 msgid "Available updates (%1)"
 msgstr "Dostępne aktualizacje (%1)"
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:105
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:99
 #, qt-format
 msgid "Stable version available (%1)"
 msgstr "Dostępna stabilna wersja (%1)"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:108
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
@@ -304,15 +326,15 @@ msgstr ""
 "Zainstalowane wersje tych aplikacji nie pochodzą z OpenStore, ale dostępna "
 "jest stabilna wersja."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:109
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:103
 msgid "Update all"
 msgstr "Zaktualizuj wszystkie"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:194
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:188
 msgid "No apps found"
 msgstr "Brak wyników."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:195
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:189
 msgid "No app has been installed from OpenStore yet."
 msgstr "Nie ma aplikacji w tej kategorii."
 
@@ -492,10 +514,6 @@ msgstr "Zamknij"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:37
 msgid "Application"
 msgstr "Aplikacja"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
-msgid "Scope"
-msgstr "Scope"
 
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:64

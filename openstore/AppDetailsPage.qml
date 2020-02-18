@@ -69,7 +69,22 @@ Page {
                     anchors.fill: parent
                     title.text: app.name
                     subtitle.text: app.author
-                    summary.text: app.fileSize ? printSize(app.fileSize) : ''
+                    summary.text: {
+                        var translations = {
+                            'app': i18n.tr("App"),
+                            'scope': i18n.tr("Scope"),
+                            'webapp': i18n.tr("Web App"),
+                            'webapp+': i18n.tr("Web App+"),
+                        };
+
+                        var types = [];
+                        for (var i = 0; i < app.types.length; i++) {
+                            types.push(translations[app.types[i]]);
+                        }
+
+                        var filesize = app.fileSize ? '\n' + printSize(app.fileSize) : '';
+                        return types.join(', ') + filesize;
+                    }
 
                     UbuntuShape {
                         SlotsLayout.position: SlotsLayout.Leading

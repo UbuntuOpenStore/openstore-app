@@ -12,7 +12,21 @@ ListItem {
         id: layout
 
         title.text: rootItem.appItem.name
-        summary.text: rootItem.appItem.tagline
+        summary.text: {
+            var translations = {
+                'app': i18n.tr("App"),
+                'scope': i18n.tr("Scope"),
+                'webapp': i18n.tr("Web App"),
+                'webapp+': i18n.tr("Web App+"),
+            };
+
+            var types = [];
+            for (var i = 0; i < rootItem.appItem.types.length; i++) {
+                types.push(translations[rootItem.appItem.types[i]]);
+            }
+
+            return types.join(', ') + '\n' + rootItem.appItem.tagline
+        }
         summary.wrapMode: Text.WrapAtWordBoundaryOrAnywhere
 
         UbuntuShape {
@@ -26,6 +40,7 @@ ListItem {
                 width: parent.width
             }
         }
+
         Icon {
             SlotsLayout.position: SlotsLayout.Trailing
             height: units.gu(2)

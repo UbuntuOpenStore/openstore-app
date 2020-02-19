@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-18 04:23+0000\n"
+"POT-Creation-Date: 2020-02-19 05:43+0000\n"
 "PO-Revision-Date: 2020-02-06 20:21+0000\n"
 "Last-Translator: Ege Öz <ege.oz@tutanota.com>\n"
 "Language-Team: Turkish <https://translate.ubports.com/projects/openstore/"
@@ -24,8 +24,8 @@ msgid "App details"
 msgstr "Uygulama ayrıntıları"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:39
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:242
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:677
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:257
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:720
 msgid "Remove"
 msgstr "Kaldır"
 
@@ -51,7 +51,7 @@ msgstr ""
 msgid "Web App+"
 msgstr ""
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:110
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:112
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
@@ -59,180 +59,195 @@ msgstr ""
 "Bu uygulamanın yüklü sürümü OpenStore sunucusundan gelmiyor. En son kararlı "
 "güncellemeyi aşağıdaki düğmeye dokunarak yükleyebilirsiniz."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:135
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:137
 msgid "Open"
 msgstr "Açık"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:152
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:154
 msgid "Install stable version"
 msgstr "Stabil sürümü kur"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:155
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:157
 msgid "Upgrade"
 msgstr "Yükselt"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:158
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:361
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:160
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:691
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:296
 msgid "Install"
 msgstr "Kur"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:228
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:243
 msgid "This app is not compatible with your system."
 msgstr "Bu uygulama sisteminizle uyumlu değil."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:269
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:284
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
 "Bu uygulamanın kısıtlanmış sistem verilerine erişimi var, ayrıntılar için "
 "aşağıya bakın."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:293
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:308
 msgid "Description"
 msgstr "Açıklama"
 
 #. TRANSLATORS: Title of the changelog section
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:316
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:331
 msgid "What's New"
 msgstr "Neler yeni"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:335
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:350
 msgid "Packager/Publisher"
 msgstr "Paketleyici/Yayımlayıcı"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:336
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:351
 msgid "OpenStore team"
 msgstr "OpenStore takımı"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:344
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:359
 msgid "Installed version"
 msgstr "Kurulu sürüm"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:353
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:368
 msgid "Latest available version"
 msgstr "En son mevcut sürüm"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:362
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:377
 msgid "First released"
 msgstr "İlk yayınlanma"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:373
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:388
 msgid "Downloads of the latest version"
 msgstr "Son sürümün indirmeleri"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:382
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:397
 msgid "Total downloads"
 msgstr "Toplam indirmeler"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:391
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:406
 msgid "License"
 msgstr "Lisans"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:392
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:407
 msgid "N/A"
 msgstr "Bilinmeyen"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:402
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:417
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:106
 msgid "Source Code"
 msgstr "Kaynak Kodu"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:415
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:430
 msgid "Get support for this app"
 msgstr "Bu uygulama için destek al"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:428
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:443
 msgid "Donate to support this app"
 msgstr "Bu uygulamayı desteklemek için bağış yap"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:444
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:459
 #, qt-format
 msgid "More from %1"
 msgstr "%1 adlı kişiden daha fazlası"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:459
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:474
 #, qt-format
 msgid "Other apps in %1"
 msgstr "%1 içindeki diğer uygulamalar"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:465
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:480
 msgid "Package contents"
 msgstr "Paket içerikleri"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:545
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:560
 msgid "AppArmor profile"
 msgstr "AppArmor profili"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:574
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:589
 msgid "Permissions"
 msgstr "İzinler"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:593
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:608
 msgid "none required"
 msgstr "hiçbirine gerek yok"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:609
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:624
 msgid "Read paths"
 msgstr "Yamaları oku"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:626
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:641
 msgid "Write paths"
 msgstr "Yolları yazma"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:641
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:656
 msgid "Donating"
 msgstr "Bağış yapılıyor"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:642
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:657
 msgid "Would you like to support this app with a donation to the developer?"
 msgstr ""
 "Bu uygulamanın geliştiricisini bağış yaparak desteklemek ister misiniz?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:648
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:663
 msgid "Donate now"
 msgstr "Şimdi bağış yap"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:656
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:671
 msgid "Maybe later"
 msgstr "Belki sonra"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:669
-msgid "Remove package"
-msgstr "Paketi kaldır"
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:684
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:235
+msgid "Warning"
+msgstr "Uyarı"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:670
-#, qt-format
-msgid "Do you want to remove %1?"
-msgstr "%1 'i kaldırmak istiyor musunuz?"
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:685
+msgid ""
+"This app has access to restricted parts of the system and your data. While "
+"the OpenStore maintainers have reviewed the code for this app for safety, "
+"they are not responsible for anything bad that might happen to your device "
+"or data from installing this app."
+msgstr ""
 
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:686
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:369
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:699
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:729
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:304
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
 msgid "Cancel"
 msgstr "İptal"
 
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:712
+msgid "Remove package"
+msgstr "Paketi kaldır"
+
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:713
+#, qt-format
+msgid "Do you want to remove %1?"
+msgstr "%1 'i kaldırmak istiyor musunuz?"
+
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:703
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:746
 #, qt-format
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:708
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:751
 #, qt-format
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:713
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:756
 #, qt-format
 msgid "%1 kB"
 msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:716
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:759
 #, qt-format
 msgid "%1 bytes"
 msgstr "%1 bayt"
@@ -339,12 +354,7 @@ msgstr "Hiçbir uygulama bulunamadı"
 msgid "No app has been installed from OpenStore yet."
 msgstr "OpenStore'dan hiçbir uygulama henüz yüklenmedi."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:245
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:294
-msgid "Warning"
-msgstr "Uyarı"
-
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:254
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:244
 msgid ""
 "You are currently using a non-standard domain for the OpenStore. This is a "
 "development feature. The domain you are using is:"
@@ -352,85 +362,52 @@ msgstr ""
 "OpenStore için standart olmayan bir alan adı kullanmaktasınız. Bu bir "
 "geliştirici özelliğidir. Şu anda kullanmakta olduğunuz alan adı:"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:268
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:258
 msgid "Are you sure you want to continue?"
 msgstr "Devam etmek istediğinize emin misiniz?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:272
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:262
 msgid "Yes, I know what I'm doing"
 msgstr "Evet, ne yaptığımı biliyorum"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:280
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:335
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:270
 msgid "Get me out of here!"
 msgstr "Beni buradan çıkar!"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:303
-msgid ""
-"OpenStore allows installing unconfined applications. Please make sure that "
-"you know about the implications of that."
-msgstr ""
-"OpenStore, kısıtlanmamış uygulamaları yüklemeye izin verir. Lütfen bunun "
-"etkilerini bildiğinizden emin olun."
-
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:310
-msgid ""
-"An unconfined application has the ability to break the system, reduce its "
-"performance and/or spy on you."
-msgstr ""
-"Sınırsız bir uygulama, sistemi kırma, performansını düşürme ve / veya "
-"casusluk yapma imkânına sahiptir."
-
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:317
-msgid ""
-"While we are doing our best to prevent that by reviewing applications, we "
-"don't take any responsibility if something bad slips through."
-msgstr ""
-"Uygulamaları gözden geçirerek bunu önlemek için elimizden geleni yapıyor "
-"olmamıza rağmen, kötü bir şey geçtiğinde herhangi bir sorumluluk "
-"üstlenmiyoruz."
-
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:324
-msgid "Use this at your own risk."
-msgstr "Bunu kendi sorumluluğunuz altında kullanın."
-
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:328
-msgid "Okay. Got it! I'll be careful."
-msgstr "Tamam. Anladım! Dikkatli olacağım."
-
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:347
-msgid "Install app?"
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:282
+#, fuzzy
+msgid "Install unknown app?"
 msgstr "Uygulamayı yükle?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:348
-#, qt-format
-msgid "Do you want to install %1?"
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:283
+#, fuzzy, qt-format
+msgid "Do you want to install the unkown app %1?"
 msgstr "%1 yüklemek istiyor musunuz?"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:389
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:324
 msgid "App installed"
 msgstr "Uygulama kuruldu"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:390
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:325
 msgid "The app has been installed successfully."
 msgstr "Uygulama başarıyla yüklendi."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:393
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:406
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:421
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:328
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:341
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:356
 msgid "OK"
 msgstr "TAMAM"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:402
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:337
 msgid "Installation failed"
 msgstr "Yükleme başarısız"
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:403
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:338
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr "Paket yüklenemedi. Geçerli bir tıklama paketi olduğundan emin olun."
 
-#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:417
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:352
 #, qt-format
 msgid "Installation failed (Error %1)"
 msgstr "Yükleme başarısız (Hata %1)"
@@ -535,6 +512,34 @@ msgstr "Hesap sağlayıcı"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
 msgstr "Almak"
+
+#~ msgid ""
+#~ "OpenStore allows installing unconfined applications. Please make sure "
+#~ "that you know about the implications of that."
+#~ msgstr ""
+#~ "OpenStore, kısıtlanmamış uygulamaları yüklemeye izin verir. Lütfen bunun "
+#~ "etkilerini bildiğinizden emin olun."
+
+#~ msgid ""
+#~ "An unconfined application has the ability to break the system, reduce its "
+#~ "performance and/or spy on you."
+#~ msgstr ""
+#~ "Sınırsız bir uygulama, sistemi kırma, performansını düşürme ve / veya "
+#~ "casusluk yapma imkânına sahiptir."
+
+#~ msgid ""
+#~ "While we are doing our best to prevent that by reviewing applications, we "
+#~ "don't take any responsibility if something bad slips through."
+#~ msgstr ""
+#~ "Uygulamaları gözden geçirerek bunu önlemek için elimizden geleni yapıyor "
+#~ "olmamıza rağmen, kötü bir şey geçtiğinde herhangi bir sorumluluk "
+#~ "üstlenmiyoruz."
+
+#~ msgid "Use this at your own risk."
+#~ msgstr "Bunu kendi sorumluluğunuz altında kullanın."
+
+#~ msgid "Okay. Got it! I'll be careful."
+#~ msgstr "Tamam. Anladım! Dikkatli olacağım."
 
 #~ msgid "Developers"
 #~ msgstr "Geliştiriciler"

@@ -162,19 +162,32 @@ Page {
                         visible: !app.installed || (app.installed && app.updateAvailable) || app.isLocalVersionSideloaded
                         color: app.isLocalVersionSideloaded ? theme.palette.selected.focus : theme.palette.normal.positive
                         onClicked: {
-                            if(app.donateUrl && !app.installed)
-                            {
-                                var popupdonationPopup = PopupUtils.open(donatingPopup)
-                                popupdonationPopup.accepted.connect(function() {
-                                    app.install()
-                                    Qt.openUrlExternally(app.donateUrl)
-                                })
-                                popupdonationPopup.rejected.connect(function() {
-                                    app.install()
-                                })
+                            var isUnconfined = false;
+                            for (var i=0; i<app.hooksCount; ++i) {
+                                if (app.apparmorTemplate(i).indexOf("unconfined") >= 0) {
+                                    isUnconfined = true
+                                }
                             }
-                            else
-                                app.install()
+
+                            if (isUnconfined && !app.installed) {
+                                var popup = PopupUtils.open(unconfinedWarningPopup)
+                                popup.accepted.connect(function() {
+                                    app.install();
+                                });
+                            }
+                            else if (app.donateUrl && !app.installed) {
+                                var popup = PopupUtils.open(donatingPopup)
+                                popup.accepted.connect(function() {
+                                    app.install();
+                                    Qt.openUrlExternally(app.donateUrl);
+                                });
+                                popup.rejected.connect(function() {
+                                    app.install();
+                                });
+                            }
+                            else {
+                                app.install();
+                            }
                         }
                     }
                 }
@@ -639,7 +652,7 @@ Page {
     Component {
         id: donatingPopup
         Dialog {
-            id: donatingdDialog
+            id: donatingDialog
             title: i18n.tr("Donating")
             text: i18n.tr("Would you like to support this app with a donation to the developer?")
 
@@ -650,15 +663,43 @@ Page {
                 text: i18n.tr("Donate now")
                 color: theme.palette.normal.positive
                 onClicked: {
-                    donatingdDialog.accepted()
-                    PopupUtils.close(donatingdDialog)
+                    donatingDialog.accepted()
+                    PopupUtils.close(donatingDialog)
                 }
             }
             Button {
                 text: i18n.tr("Maybe later")
                 onClicked: {
-                    donatingdDialog.rejected();
-                    PopupUtils.close(donatingdDialog)
+                    donatingDialog.rejected();
+                    PopupUtils.close(donatingDialog)
+                }
+            }
+        }
+    }
+
+    Component {
+        id: unconfinedWarningPopup
+        Dialog {
+            id: unconfinedWarningDialog
+            title: i18n.tr("Warning")
+            text: i18n.tr("This app has access to restricted parts of the system and all of your data. While the OpenStore maintainers have reviewed the code for this app for safety, they are not responsible for anything bad that might happen to your device or data from installing this app.")
+
+            signal accepted()
+            signal rejected()
+
+            Button {
+                text: i18n.tr("Install")
+                color: theme.palette.normal.positive
+                onClicked: {
+                    unconfinedWarningDialog.accepted()
+                    PopupUtils.close(unconfinedWarningDialog)
+                }
+            }
+            Button {
+                text: i18n.tr("Cancel")
+                onClicked: {
+                    unconfinedWarningDialog.rejected();
+                    PopupUtils.close(unconfinedWarningDialog)
                 }
             }
         }

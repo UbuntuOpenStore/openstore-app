@@ -81,16 +81,6 @@ MainView {
                 Qt.quit();
             })
         }
-        else if (settings.firstStart) {
-            var popup = PopupUtils.open(warningComponent)
-            popup.accepted.connect(function() {
-                settings.firstStart = false;
-                PopupUtils.close(popup)
-            })
-            popup.rejected.connect(function() {
-                Qt.quit();
-            })
-        }
 
         var appIdToOpen = "";
         var appArgs = Qt.application.arguments;
@@ -285,67 +275,12 @@ MainView {
         }
     }
 
-
-    Component {
-        id: warningComponent
-
-        Dialog {
-            id: warningDialog
-            title: i18n.tr("Warning")
-
-            signal accepted();
-            signal rejected();
-
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                wrapMode: Text.WordWrap
-                maximumLineCount: Number.MAX_VALUE
-                text: i18n.tr("OpenStore allows installing unconfined applications. Please make sure that you know about the implications of that.")
-            }
-
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                wrapMode: Text.WordWrap
-                maximumLineCount: Number.MAX_VALUE
-                text: i18n.tr("An unconfined application has the ability to break the system, reduce its performance and/or spy on you.")
-            }
-
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                wrapMode: Text.WordWrap
-                maximumLineCount: Number.MAX_VALUE
-                text: i18n.tr("While we are doing our best to prevent that by reviewing applications, we don't take any responsibility if something bad slips through.")
-            }
-
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                wrapMode: Text.WordWrap
-                maximumLineCount: Number.MAX_VALUE
-                text: i18n.tr("Use this at your own risk.")
-            }
-
-            Button {
-                text: i18n.tr("Okay. Got it! I'll be careful.")
-                color: theme.palette.normal.positive
-                onClicked: {
-                    warningDialog.accepted();
-                }
-            }
-            Button {
-                text: i18n.tr("Get me out of here!")
-                onClicked: {
-                    warningDialog.rejected();
-                }
-            }
-        }
-    }
-
     Component {
         id: installQuestion
         Dialog {
             id: installQuestionDialog
-            title: i18n.tr("Install app?")
-            text: i18n.tr("Do you want to install %1?").arg(fileName)
+            title: i18n.tr("Install unknown app?")
+            text: i18n.tr("Do you want to install the unkown app %1?").arg(fileName)
 
             property string fileName
             signal accepted();

@@ -160,7 +160,7 @@ Page {
 
                     Label {
                         Layout.fillWidth: true
-                        visible: app.installed && app.containsApp && app.appId == "openstore.openstore-team" && !app.isLocalVersionSideloaded
+                        visible: app.installed && app.containsApp && app.appId == "openstore.openstore-team" && !app.isLocalVersionSideloaded && !app.updateAvailable
                         horizontalAlignment: Text.AlignHCenter
 
                         text: "🎉 " + i18n.tr("The OpenStore is installed!") + " ❤️"

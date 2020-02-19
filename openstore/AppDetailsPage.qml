@@ -27,6 +27,19 @@ Page {
     id: appDetailsPage
 
     property var app: null
+    property var restrictedPermissions: [
+        'bluetooth',
+        'calendar',
+        'contacts',
+        'debug',
+        'history',
+        'music_files',
+        'music_files_read',
+        'picture_files',
+        'picture_files_read',
+        'video_files',
+        'video_files_read',
+    ]
 
     header: PageHeader {
         title: app ? app.name : i18n.tr("App details")
@@ -487,7 +500,7 @@ Page {
                     height: hookDelLayout.height + units.gu(3)
 
                     property var hooks: app.hooks(index)
-                    property string permissions: app.permissions(index)
+                    property var permissions: app.permissions(index)
                     property string readpaths: app.readPaths(index)
                     property string writepaths: app.writePaths(index)
                     property string hookName: app.hookName(index)
@@ -549,40 +562,24 @@ Page {
                         ListItemLayout {
                             anchors { left: parent.left; right: parent.right }
                             anchors.leftMargin: units.gu(-2)
-                            height: units.gu(6)
-                            Icon {
-                                SlotsLayout.position: SlotsLayout.Leading
-                                width: units.gu(4); height: width
-                                name: "security-alert"
-                                visible: apparmorTemplate.indexOf("unconfined") >= 0
-                            }
-
-                            title.text: i18n.tr("AppArmor profile")
-                            subtitle.text: apparmorTemplate || "Ubuntu confined app"
-                            subtitle.color: apparmorTemplate.indexOf("unconfined") >= 0
-                                ? theme.palette.normal.negative
-                                : theme.palette.normal.backgroundSecondaryText
-                            subtitle.maximumLineCount: Number.MAX_VALUE
-                        }
-
-
-                        ListItemLayout {
-                            anchors { left: parent.left; right: parent.right }
-                            anchors.leftMargin: units.gu(-2)
-                            visible: permissions.length > 0
 
                             Icon {
-                                property var restrictedPerms: ["bluetooth", "calendar", "contacts", "debug", "history", "music_files", "picture_files", "video_files"]
                                 SlotsLayout.position: SlotsLayout.Leading
                                 width: units.gu(4); height: width
                                 name: "security-alert"
                                 visible: {
-                                    var length = restrictedPerms.length;
-                                    while(length--) {
-                                       if (permissions.indexOf(restrictedPerms[length]) > -1)
-                                           return true
+                                    if (apparmorTemplate.indexOf("unconfined") >= 0) {
+                                        return true;
                                     }
-                                    return false
+
+                                    var length = restrictedPermissions.length;
+                                    while(length--) {
+                                        if (permissions.indexOf(restrictedPermissions[length]) > -1) {
+                                           return true;
+                                        }
+                                    }
+
+                                    return false;
                                 }
                             }
 
@@ -590,22 +587,63 @@ Page {
                             subtitle.maximumLineCount: Number.MAX_VALUE
                             subtitle.wrapMode: Text.WordWrap
                             subtitle.text: {
-                                if (permissions) {
-                                    return permissions.replace("bluetooth", "<font color=\"#ED3146\">bluetooth</font>")
-                                                      .replace("calendar", "<font color=\"#ED3146\">calendar</font>")
-                                                      .replace("contacts", "<font color=\"#ED3146\">contacts</font>")
-                                                      .replace("debug", "<font color=\"#ED3146\">debug</font>")
-                                                      .replace("history", "<font color=\"#ED3146\">history</font>")
-                                                      .replace("music_files_read", "<font color=\"#ED3146\">music_files_read</font>")
-                                                      .replace("picture_files_read", "<font color=\"#ED3146\">music_files_read</font>")
-                                                      .replace("video_files_read", "<font color=\"#ED3146\">music_files_read</font>")
-                                                      .replace("music_files", "<font color=\"#ED3146\">music_files_read</font>")
-                                                      .replace("picture_files", "<font color=\"#ED3146\">music_files_read</font>")
-                                                      .replace("video_files", "<font color=\"#ED3146\">music_files_read</font>")
+                                var translations = {
+                                    accounts: i18n.tr("Accounts"),
+                                    audio: i18n.tr("Audio"),
+                                    bluetooth: i18n.tr("Bluetooth"),
+                                    calendar: i18n.tr("Calendar"),
+                                    camera: i18n.tr("Camera"),
+                                    connectivity: i18n.tr("Connectivity"),
+                                    contacts: i18n.tr("Contacts"),
+                                    content_exchange_source: i18n.tr("Content Exchange Source"),
+                                    content_exchange: i18n.tr("Content Exchange"),
+                                    debug: i18n.tr("Debug"),
+                                    history: i18n.tr("History"),
+                                    'in-app-purchases': i18n.tr("In App Purchases"),
+                                    'keep-display-on': i18n.tr("Keep Display On"),
+                                    location: i18n.tr("Location"),
+                                    microphone: i18n.tr("Microphone"),
+                                    music_files_read: i18n.tr("Read Music Files"),
+                                    music_files: i18n.tr("Music Files"),
+                                    networking: i18n.tr("Networking"),
+                                    picture_files_read: i18n.tr("Read Picture Files"),
+                                    picture_files: i18n.tr("Picture Files"),
+                                    'push-notification-client': i18n.tr("Push Notifications"),
+                                    sensors: i18n.tr("Sensors"),
+                                    usermetrics: i18n.tr("User Metrics"),
+                                    video_files_read: i18n.tr("Read Video Files"),
+                                    video_files: i18n.tr("Video Files"),
+                                    video: i18n.tr("Video"),
+                                    webview: i18n.tr("Webview"),
+                                };
+
+                                if (apparmorTemplate.indexOf("unconfined") >= 0) {
+                                    return '<font color=\"#ED3146\">' + i18n.tr("Full System Access") + '</font>';
                                 }
 
-                                // TRANSLATORS: this will show when an app doesn't need any special permissions
-                                return "<i>" + i18n.tr("none required") + "</i>"
+                                if (permissions.length === 0) {
+                                    // TRANSLATORS: this will show when an app doesn't need any special permissions
+                                    return "<i>" + i18n.tr("none required") + "</i>"
+                                }
+
+                                var translated = [];
+                                for (var i = 0; i < permissions.length; i++) {
+                                    var permission = permissions[i];
+                                    var isRestricted = restrictedPermissions.indexOf(permission) > -1;
+
+                                    if (translations[permission]) {
+                                        permission = translations[permission];
+                                    }
+
+                                    if (isRestricted) {
+                                        translated.push('<font color=\"#ED3146\">' + permission + '</font>');
+                                    }
+                                    else {
+                                        translated.push(permission);
+                                    }
+                                }
+
+                                return translated.join(', ');
                             }
                         }
 

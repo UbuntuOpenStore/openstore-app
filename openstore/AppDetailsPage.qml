@@ -158,6 +158,14 @@ Page {
                         onClicked: Qt.openUrlExternally(app.appLaunchUrl())
                     }
 
+                    Label {
+                        Layout.fillWidth: true
+                        visible: app.installed && app.containsApp && app.appId == "openstore.openstore-team" && !app.isLocalVersionSideloaded
+                        horizontalAlignment: Text.AlignHCenter
+
+                        text: "🎉 " + i18n.tr("The OpenStore is installed!") + " ❤️"
+                    }
+
                     Button {
                         id: installUpgradeButton
                         Layout.fillWidth: true

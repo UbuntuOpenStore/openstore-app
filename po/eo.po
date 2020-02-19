@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-19 05:43+0000\n"
+"POT-Creation-Date: 2020-02-19 13:25+0000\n"
 "PO-Revision-Date: 2018-01-25 09:59+0000\n"
 "Last-Translator: Pablo F. <pablo.foche@gmail.com>\n"
 "Language-Team: Esperanto <https://translate.ubports.com/projects/openstore/"
@@ -31,6 +31,7 @@ msgstr "Forigi"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:74
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:17
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:58
 #, fuzzy
 msgid "App"
 msgstr "Miaj aplikaĵoj"
@@ -38,16 +39,19 @@ msgstr "Miaj aplikaĵoj"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:75
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:18
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:59
 msgid "Scope"
 msgstr "Scope"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:76
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:19
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:60
 msgid "Web App"
 msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:77
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:20
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:61
 msgid "Web App+"
 msgstr ""
 
@@ -207,10 +211,10 @@ msgstr "Averto"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:685
 msgid ""
-"This app has access to restricted parts of the system and your data. While "
-"the OpenStore maintainers have reviewed the code for this app for safety, "
-"they are not responsible for anything bad that might happen to your device "
-"or data from installing this app."
+"This app has access to restricted parts of the system and all of your data. "
+"While the OpenStore maintainers have reviewed the code for this app for "
+"safety, they are not responsible for anything bad that might happen to your "
+"device or data from installing this app."
 msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:699
@@ -270,12 +274,12 @@ msgid "Search in OpenStore..."
 msgstr "Serĉi en OpenStore..."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:136
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:56
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:78
 msgid "Update available"
 msgstr "Ĝisdatigo disponebla"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:137
-#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:56
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:78
 msgid "✓ Installed"
 msgstr "✓ Instalita"
 

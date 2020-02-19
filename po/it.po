@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-18 04:23+0000\n"
-"PO-Revision-Date: 2020-01-22 12:20+0000\n"
+"PO-Revision-Date: 2020-02-19 14:21+0000\n"
 "Last-Translator: Mike <miguel2000@livecom.it>\n"
 "Language-Team: Italian <https://translate.ubports.com/projects/openstore/"
 "openstore-app/it/>\n"
@@ -32,9 +32,8 @@ msgstr "Rimuovi"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:74
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:17
-#, fuzzy
 msgid "App"
-msgstr "Le mie App"
+msgstr "App"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:75
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
@@ -45,12 +44,12 @@ msgstr "Scope"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:76
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:19
 msgid "Web App"
-msgstr ""
+msgstr "Web App"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:77
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:20
 msgid "Web App+"
-msgstr ""
+msgstr "Web App+"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:110
 msgid ""

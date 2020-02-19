@@ -22,7 +22,9 @@ ListItem {
 
             var types = [];
             for (var i = 0; i < rootItem.appItem.types.length; i++) {
-                types.push(translations[rootItem.appItem.types[i]]);
+                if (translations[rootItem.appItem.types[i]]) {
+                    types.push(translations[rootItem.appItem.types[i]]);
+                }
             }
 
             return types.join(', ') + '\n' + rootItem.appItem.tagline

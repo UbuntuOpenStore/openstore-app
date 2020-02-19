@@ -79,7 +79,9 @@ Page {
 
                         var types = [];
                         for (var i = 0; i < app.types.length; i++) {
-                            types.push(translations[app.types[i]]);
+                            if (translations[app.types[i]]) {
+                                types.push(translations[app.types[i]]);
+                            }
                         }
 
                         var filesize = app.fileSize ? '\n' + printSize(app.fileSize) : '';

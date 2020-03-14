@@ -43,11 +43,11 @@ Q_SIGNALS:
 private:
     static QMap<QString, Rating> & stringToRatingMap();
 
-    unsigned int m_thumbsUpCount;
-    unsigned int m_thumbsDownCount;
-    unsigned int m_neutralCount;
-    unsigned int m_happyCount;
-    unsigned int m_buggyCount;
+    unsigned int m_thumbsUpCount = 0;
+    unsigned int m_thumbsDownCount = 0;
+    unsigned int m_neutralCount = 0;
+    unsigned int m_happyCount = 0;
+    unsigned int m_buggyCount = 0;
 };
 
 typedef Ratings::Rating Rating;

@@ -51,25 +51,14 @@ private Q_SLOTS:
     void onRefresh();
 
 private:
-    struct IReplyHandling
-    {
-        virtual void dispatch(ReviewsModel & model, const QJsonObject &data) = 0;
-    } & m_replyHandling;
-
-    template <class T>
-    struct ReplyHandling: IReplyHandling
-    {
-        void dispatch(ReviewsModel & model, const QJsonObject &data)
-        {
-            model.handleReply(data, static_cast<T*>(this));
-        }
+    enum ReplyType {
+        HandleReviewPosted,
+        AppendReviews,
+        ResetReviews,
+        HandleOwnReview,
     };
 
-    struct HandleReviewPosted: ReplyHandling<HandleReviewPosted> {} m_handleReviewPosted;
-    struct AppendReviews: ReplyHandling<AppendReviews> {} m_appendReviews;
-    struct ResetReviews: ReplyHandling<ResetReviews> {} m_resetReviews;
-    struct HandleOwnReview: ReplyHandling<HandleOwnReview> {} m_handleOwnReview;
-
+    ReplyType m_replyType;
     QString m_requestSignature;
     QList<ReviewItem> m_list;
     QString m_appId;
@@ -77,10 +66,10 @@ private:
     bool m_loadMorePending;
 
 public:
-    void handleReply(const QJsonObject &, const HandleReviewPosted *);
-    void handleReply(const QJsonObject &data, const AppendReviews *);
-    void handleReply(const QJsonObject &data, const ResetReviews *);
-    void handleReply(const QJsonObject &data, const HandleOwnReview *);
+    void handleReviewPosted(const QJsonObject &);
+    void handleAppendReviews(const QJsonObject &data);
+    void handleResetReviews(const QJsonObject &data);
+    void handleOwnReview(const QJsonObject &data);
 };
 
 #endif // REVIEWSMODEL_H

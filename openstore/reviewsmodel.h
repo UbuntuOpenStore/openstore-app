@@ -73,7 +73,7 @@ private:
     QString m_requestSignature;
     QList<ReviewItem> m_list;
     QString m_appId;
-    int m_reviewCount;
+    int m_reviewCount = 0;
     bool m_loadMorePending;
 
 public:

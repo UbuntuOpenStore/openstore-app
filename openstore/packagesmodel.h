@@ -9,6 +9,7 @@ class PackageItem;
 struct LocalPackageItem {
     QString name;
     QString appId;
+    QString version;
     QString icon;
     bool updateAvailable;
     QString updateStatus;
@@ -30,6 +31,7 @@ public:
     enum Roles {
         RoleName,
         RoleAppId,
+        RoleVersion,
         RoleIcon,
         RoleUpdateAvailable,
         RoleUpdateStatus,
@@ -50,6 +52,7 @@ public:
 
     Q_INVOKABLE void refresh();
     Q_INVOKABLE QVariantMap get(int row);
+    Q_INVOKABLE QVariantMap getByAppId(const QString &appId);
 
 Q_SIGNALS:
     void countChanged();

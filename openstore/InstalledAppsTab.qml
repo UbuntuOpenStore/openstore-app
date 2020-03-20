@@ -16,6 +16,7 @@
 
 import QtQuick 2.4
 import Ubuntu.Components 1.3
+import Ubuntu.Connectivity 1.0
 import OpenStore 1.0
 import QtQuick.Layouts 1.1
 
@@ -163,18 +164,35 @@ Page {
                     }
                 }
 
+                function slot_packageFetchError(appId) {
+                    PackagesCache.packageDetailsReady.disconnect(slot_installedPackageDetailsReady);
+                    PackagesCache.packageFetchError.disconnect(slot_packageFetchError);
+
+                    bottomEdgeStack.clear();
+                    bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: appModel.getByAppId(appId) });
+                }
+
                 function slot_installedPackageDetailsReady(pkg) {
-                    PackagesCache.packageDetailsReady.disconnect(slot_installedPackageDetailsReady)
-                    bottomEdgeStack.clear()
-                    bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
+                    PackagesCache.packageDetailsReady.disconnect(slot_installedPackageDetailsReady);
+                    PackagesCache.packageFetchError.disconnect(slot_packageFetchError);
+
+                    bottomEdgeStack.clear();
+                    bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg });
                 }
 
                 onClicked: {
                     if (updating && currentApp == model.appId) {
                         PlatformIntegration.clickInstaller.abortInstallation()
                     } else {
-                        PackagesCache.packageDetailsReady.connect(slot_installedPackageDetailsReady)
-                        PackagesCache.getPackageDetails(model.appId)
+                        if (Connectivity.online) {
+                            PackagesCache.packageDetailsReady.connect(slot_installedPackageDetailsReady);
+                            PackagesCache.packageFetchError.connect(slot_packageFetchError);
+                            PackagesCache.getPackageDetails(model.appId);
+                        }
+                        else {
+                            bottomEdgeStack.clear();
+                            bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: appModel.getByAppId(model.appId) });
+                        }
                     }
                 }
             }

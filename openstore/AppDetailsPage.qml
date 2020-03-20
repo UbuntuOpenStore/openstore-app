@@ -781,37 +781,9 @@ Page {
         }
     }
 
-    Component {
+    Components.UninstallPopup {
         id: removeQuestion
-        Dialog {
-            id: removeQuestionDialog
-            title: i18n.tr("Remove package")
-            text: i18n.tr("Do you want to remove %1?").arg(pkgName)
-
-            property string pkgName
-            signal accepted();
-            signal rejected();
-
-            Button {
-                text: i18n.tr("Remove")
-                color: theme.palette.normal.negative
-                onClicked: {
-                    removeQuestionDialog.accepted();
-                    PopupUtils.close(removeQuestionDialog)
-                }
-            }
-
-            Button {
-                text: i18n.tr("Cancel")
-                onClicked: {
-                    removeQuestionDialog.rejected();
-                    PopupUtils.close(removeQuestionDialog)
-                }
-
-            }
-        }
     }
-
 
     function printSize(size) {
         var s

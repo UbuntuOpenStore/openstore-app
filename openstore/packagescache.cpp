@@ -59,6 +59,8 @@ void PackagesCache::getPackageDetails(const QString &appId)
 
             if (!replyMap.value("success").toBool() || !replyMap.contains("data")) {
                 qWarning() << Q_FUNC_INFO << "Error retriving info from" << reply.url;
+
+                Q_EMIT packageFetchError(appId);
                 return;
             }
 

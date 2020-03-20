@@ -31,7 +31,8 @@ public:
 
 Q_SIGNALS:
     void updatingCacheChanged();
-    void packageDetailsReady(PackageItem* pkg);
+    void packageDetailsReady(PackageItem *pkg);
+    void packageFetchError(QString appId);
 
 private Q_SLOTS:
     void updateCacheRevisions();

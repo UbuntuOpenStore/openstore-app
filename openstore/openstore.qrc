@@ -2,6 +2,7 @@
     <qresource prefix="/">
         <file>Main.qml</file>
         <file>AppDetailsPage.qml</file>
+        <file>AppLocalDetailsPage.qml</file>
         <file>DiscoverTab.qml</file>
         <file>CategoriesTab.qml</file>
         <file>FilteredAppView.qml</file>
@@ -24,5 +25,6 @@
         <file>AuthenticationHandler.qml</file>
         <file>PasswordDialog.qml</file>
         <file>Components/ScreenshotsCarousel.qml</file>
+        <file>Components/UninstallPopup.qml</file>
     </qresource>
 </RCC>

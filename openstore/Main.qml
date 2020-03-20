@@ -20,6 +20,7 @@ import OpenStore 1.0
 import QtQuick.Layouts 1.1
 import Qt.labs.settings 1.0
 import Ubuntu.Content 1.3
+import Ubuntu.Connectivity 1.0
 
 import "Components" as Components
 
@@ -33,10 +34,32 @@ MainView {
 
     property var mainPage
 
+    function slot_packageFetchError(appId) {
+        PackagesCache.packageDetailsReady.disconnect(slot_packageDetailsReady);
+        PackagesCache.packageFetchError.disconnect(slot_packageFetchError);
+
+        bottomEdgeStack.clear();
+        bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: appModel.getByAppId(appId) });
+    }
+
     function slot_packageDetailsReady(pkg) {
-        PackagesCache.packageDetailsReady.disconnect(slot_packageDetailsReady)
-        bottomEdgeStack.clear()
-        bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
+        PackagesCache.packageDetailsReady.disconnect(slot_packageDetailsReady);
+        PackagesCache.packageFetchError.disconnect(slot_packageFetchError);
+
+        bottomEdgeStack.clear();
+        bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg });
+    }
+
+    function openApp(appId) {
+        if (Connectivity.online) {
+            PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady);
+            PackagesCache.packageFetchError.connect(slot_packageFetchError);
+            PackagesCache.getPackageDetails(appId);
+        }
+        else {
+            bottomEdgeStack.clear();
+            bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: appModel.getByAppId(appId) });
+        }
     }
 
     function parseUrl(url) {
@@ -62,8 +85,7 @@ MainView {
         }
         else {
             console.log("Fetching package details for %1".arg(appId));
-            PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady);
-            PackagesCache.getPackageDetails(appId);
+            openApp(appId);
         }
     }
 
@@ -219,10 +241,7 @@ MainView {
                 anchors.topMargin: filteredAppPage.header.height
 
                 id: filteredAppView
-                onAppDetailsRequired: {
-                    PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady)
-                    PackagesCache.getPackageDetails(appId)
-                }
+                onAppDetailsRequired: openApp(appId)
             }
         }
     }

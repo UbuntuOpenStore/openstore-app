@@ -38,8 +38,11 @@ MainView {
         PackagesCache.packageDetailsReady.disconnect(slot_packageDetailsReady);
         PackagesCache.packageFetchError.disconnect(slot_packageFetchError);
 
-        bottomEdgeStack.clear();
-        bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: appModel.getByAppId(appId) });
+        var app = appModel.getByAppId(appId);
+        if (app.appId) {
+            bottomEdgeStack.clear();
+            bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
+        }
     }
 
     function slot_packageDetailsReady(pkg) {
@@ -57,8 +60,11 @@ MainView {
             PackagesCache.getPackageDetails(appId);
         }
         else {
-            bottomEdgeStack.clear();
-            bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: appModel.getByAppId(appId) });
+            var app = appModel.getByAppId(appId);
+            if (app.appId) {
+                bottomEdgeStack.clear();
+                bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
+            }
         }
     }
 

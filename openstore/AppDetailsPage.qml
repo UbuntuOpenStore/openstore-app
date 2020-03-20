@@ -41,6 +41,46 @@ Page {
         'video_files_read',
     ]
 
+    property bool isTrustedApp: {
+        if (app && app.appId) {
+            if (app.appId.startsWith('com.ubuntu.') && !app.appId.startsWith('com.ubuntu.developer.')) {
+                return true;
+            }
+
+            if (app.appId.startsWith('com.canonical.')) {
+                return true;
+            }
+
+            if (app.appId.startsWith('ubports.')) {
+                return true;
+            }
+
+            if (app.appId.startsWith('openstore.')) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    property bool canAccessUnconfinedLocations: {
+        for (var i=0; i<app.hooksCount; ++i) {
+            if (includesUnconfinedLocations(app.readPaths(i)))
+                return true
+            if (includesUnconfinedLocations(app.writePaths(i)))
+                return true
+        }
+        return false
+    }
+
+    property bool isUnconfined: {
+        for (var i=0; i<app.hooksCount; ++i) {
+            if (app.apparmorTemplate(i).indexOf("unconfined") >= 0)
+                return true
+        }
+        return false
+    }
+
     header: PageHeader {
         title: app ? app.name : i18n.tr("App details")
         enabled: !PlatformIntegration.clickInstaller.busy
@@ -183,14 +223,7 @@ Page {
                         visible: !app.installed || (app.installed && app.updateAvailable) || app.isLocalVersionSideloaded
                         color: app.isLocalVersionSideloaded ? theme.palette.selected.focus : theme.palette.normal.positive
                         onClicked: {
-                            var isUnconfined = false;
-                            for (var i=0; i<app.hooksCount; ++i) {
-                                if (app.apparmorTemplate(i).indexOf("unconfined") >= 0) {
-                                    isUnconfined = true
-                                }
-                            }
-
-                            if (isUnconfined && !app.installed) {
+                            if (isUnconfined && !isTrustedApp && !app.installed) {
                                 var popup = PopupUtils.open(unconfinedWarningPopup)
                                 popup.accepted.connect(function() {
                                     app.install();
@@ -289,20 +322,16 @@ Page {
             }
 
             ListItem {
-                visible: {
-                    for (var i=0; i<app.hooksCount; ++i) {
-                        if (includesUnconfinedLocations(app.readPaths(i)))
-                            return true
-                        if (includesUnconfinedLocations(app.writePaths(i)))
-                            return true
-                        if (app.apparmorTemplate(i).indexOf("unconfined") >= 0)
-                            return true
-                    }
-                    return false
-                }
+                visible: (canAccessUnconfinedLocations || isUnconfined) && !isTrustedApp
                 ListItemLayout {
                     anchors.centerIn: parent
-                    subtitle.text: i18n.tr("This app has access to restricted system data, see below for details.")
+                    subtitle.text: {
+                        if (isUnconfined) {
+                            return i18n.tr("This app has access to restricted parts of the system and all of your data, see below for details.");
+                        }
+
+                        return i18n.tr("This app has access to restricted system data, see below for details.");
+                    }
                     subtitle.color: theme.palette.normal.negative
                     subtitle.maximumLineCount: Number.MAX_VALUE
                     subtitle.wrapMode: Text.WordWrap

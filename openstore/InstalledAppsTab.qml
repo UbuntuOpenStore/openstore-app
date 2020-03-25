@@ -67,7 +67,6 @@ Page {
             topMargin: parent.header ? parent.header.height : 0
             bottom: parent.bottom
             horizontalCenter: parent.horizontalCenter
-            bottomMargin: units.gu(2)
         }
 
         ListView {
@@ -75,7 +74,7 @@ Page {
             anchors.fill: parent
 
             topMargin: scrollView.width == units.gu(80) ? units.gu(4) : 0
-            bottomMargin: scrollView.width == units.gu(80) ? units.gu(4) : 0
+            bottomMargin: scrollView.width == units.gu(80) ? units.gu(4) : units.gu(2)
 
             model: appModel
 
@@ -120,7 +119,7 @@ Page {
             }
 
             delegate: ListItem {
-                height: units.gu(6)
+                height: units.gu(7)
                 divider.anchors.leftMargin: units.gu(8)
 
                 ListItemLayout {

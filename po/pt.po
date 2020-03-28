@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-18 04:23+0000\n"
-"PO-Revision-Date: 2019-11-03 19:36+0000\n"
+"PO-Revision-Date: 2020-03-29 01:00+0000\n"
 "Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
 "Language-Team: Portuguese <https://translate.ubports.com/projects/openstore/"
 "openstore-app/pt/>\n"
@@ -32,9 +32,8 @@ msgstr "Remover"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:74
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:17
-#, fuzzy
 msgid "App"
-msgstr "As minhas aplicações"
+msgstr "Instaladas"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:75
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
@@ -45,12 +44,12 @@ msgstr "Scopes"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:76
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:19
 msgid "Web App"
-msgstr ""
+msgstr "Web App"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:77
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:20
 msgid "Web App+"
-msgstr ""
+msgstr "Web App+"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:110
 msgid ""
@@ -349,14 +348,16 @@ msgid ""
 "You are currently using a non-standard domain for the OpenStore. This is a "
 "development feature. The domain you are using is:"
 msgstr ""
+"Atualmente está a usar um domínio não-estandardizado para a OpenStore. Isto "
+"é uma funcionalidade em desenvolvimento. O domínio que está a usar é:"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:268
 msgid "Are you sure you want to continue?"
-msgstr ""
+msgstr "Deseja prosseguir?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:272
 msgid "Yes, I know what I'm doing"
-msgstr ""
+msgstr "Sim, sei o que estou a fazer"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:280
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:335

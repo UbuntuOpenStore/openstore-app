@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: Chinese (Simplified) (OpenStore)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-18 04:23+0000\n"
-"PO-Revision-Date: 2019-12-03 17:38+0000\n"
-"Last-Translator: Sam Zhang <sammyok@163.com>\n"
+"PO-Revision-Date: 2020-04-03 21:22+0000\n"
+"Last-Translator: Muge Niu <mugeniu12138@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.ubports.com/projects/"
 "openstore/openstore-app/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -26,9 +26,8 @@ msgstr "删除"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:74
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:17
-#, fuzzy
 msgid "App"
-msgstr "我的应用程序"
+msgstr "应用程序"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:75
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
@@ -39,12 +38,12 @@ msgstr "Scope"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:76
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:19
 msgid "Web App"
-msgstr ""
+msgstr "网页应用"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:77
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:20
 msgid "Web App+"
-msgstr ""
+msgstr "网页应用+"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:110
 msgid ""
@@ -338,20 +337,20 @@ msgstr "警告"
 msgid ""
 "You are currently using a non-standard domain for the OpenStore. This is a "
 "development feature. The domain you are using is:"
-msgstr ""
+msgstr "您目前正在为 OpenStore 使用非标准网域，这是一个开发特质。 您正在使用的网域是："
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:268
 msgid "Are you sure you want to continue?"
-msgstr ""
+msgstr "你确定要继续吗？"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:272
 msgid "Yes, I know what I'm doing"
-msgstr ""
+msgstr "是的，我知道我在做什么"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:280
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:335
 msgid "Get me out of here!"
-msgstr "把我弄出去 ！"
+msgstr "带我离开！"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:303
 msgid ""
@@ -369,13 +368,11 @@ msgstr "不受限制的应用程序有能力破坏系统，降低其性能和/�
 msgid ""
 "While we are doing our best to prevent that by reviewing applications, we "
 "don't take any responsibility if something bad slips through."
-msgstr ""
-"虽然我们正在以防止，通过查看应用程序，我们不承担任何责任如果东西坏溜了进来。"
-"虽然我们正在以防止，通过查看应用程序，我们不承担任何责任如果东西坏溜了进来。"
+msgstr "虽然我们正在尽最大努力通过审核申请来防止这种情况，但如果出现问题，我们不承担任何责任。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:324
 msgid "Use this at your own risk."
-msgstr "使用此您自担风险。"
+msgstr "使用此需要您自担风险。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:328
 msgid "Okay. Got it! I'll be careful."
@@ -392,7 +389,7 @@ msgstr "您想安装 %1 吗？"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:389
 msgid "App installed"
-msgstr "应用程序安装"
+msgstr "应用程序已安装"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:390
 msgid "The app has been installed successfully."

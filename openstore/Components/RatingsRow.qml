@@ -6,11 +6,13 @@ Row {
     id: ratingsRow
     width: parent.width
     height: units.gu(0.4)
+
+    // TODO explicity pass this info in
     readonly property int ratingCount: appItem.ratings.thumbsUpCount +
         appItem.ratings.happyCount +
         appItem.ratings.thumbsDownCount +
         appItem.ratings.buggyCount
-    readonly property var relativPositive: ratingCount > 0 ? 
+    readonly property var relativPositive: ratingCount > 0 ?
         (appItem.ratings.thumbsUpCount +
         appItem.ratings.happyCount) /
         ratingCount

@@ -55,6 +55,8 @@ Page {
                 var timer = new Timer()
                 timer.interval = 1000
                 timer.repeat = false
+
+                // TODO use this: https://gitlab.com/theopenstore/openstore-api/-/merge_requests/20
                 timer.triggered.connect(function () {
                     runJavaScript('document.querySelector(".p-button--neutral").click(); setTimeout(function(){window.location += "/apikey#"+ document.querySelectorAll(".apikey span")[1].innerHTML;},100);');
                 })

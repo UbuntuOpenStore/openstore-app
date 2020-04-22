@@ -75,7 +75,7 @@ ListItem {
          id: successPostDialog
          Dialog {
              id: dialogue
-             title: i18n.tr("Review has been posted")
+             title: i18n.tr("Your review has been posted")
              Rectangle {
                  height: units.gu(12)
                  color: "transparent"
@@ -98,7 +98,7 @@ ListItem {
          Dialog {
              id: dialogue
              readonly property var buttonWidth: (textArea.width - 4*units.gu(2)) / 5
-             title: ready ? i18n.tr("Post a rating") : i18n.tr("Loading...")
+             title: ready ? i18n.tr("Rate this app") : i18n.tr("Loading...")
              Component.onCompleted: reviews.getOwnReview(root.apiKey)
              property var ownReview: null
              property bool ready: false
@@ -123,7 +123,7 @@ ListItem {
                  id: textArea
                  readOnly: !ready
                  text: ownReview !== null ? ownReview.body : ""
-                 placeholderText: i18n.tr("(Optional) Write a review.")
+                 placeholderText: i18n.tr("(Optional) Write a review")
              }
              Label {
                  text: i18n.tr("%1/%2 characters").arg(textArea.text.length).arg(maxLength)

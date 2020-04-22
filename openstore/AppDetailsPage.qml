@@ -111,26 +111,31 @@ Page {
                     Components.ReviewItem {
                         reviewIcon: "👍"
                         reviewNumber: app.ratings.thumbsUpCount
+                        visible: app.ratings.thumbsUpCount > 0
                     }
 
                     Components.ReviewItem {
                         reviewIcon: "👎"
                         reviewNumber: app.ratings.thumbsDownCount
+                        visible: app.ratings.thumbsDownCount > 0
                     }
 
                     Components.ReviewItem {
                         reviewIcon: "🙂"
                         reviewNumber: app.ratings.happyCount
+                        visible: app.ratings.happyCount > 0
                     }
 
                     Components.ReviewItem {
                         reviewIcon: "😐"
                         reviewNumber: app.ratings.neutralCount
+                        visible: app.ratings.neutralCount > 0
                     }
 
                     Components.ReviewItem {
                         reviewIcon: "🐛"
                         reviewNumber: app.ratings.buggyCount
+                        visible: app.ratings.buggyCount > 0
                     }
                 }
             }

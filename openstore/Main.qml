@@ -20,6 +20,7 @@ import OpenStore 1.0
 import QtQuick.Layouts 1.1
 import Qt.labs.settings 1.0
 import Ubuntu.Content 1.3
+import Ubuntu.Connectivity 1.0
 
 import "Components" as Components
 
@@ -34,10 +35,38 @@ MainView {
     property var mainPage
     property alias apiKey: settings.apiKey
 
+    function slot_packageFetchError(appId) {
+        PackagesCache.packageDetailsReady.disconnect(slot_packageDetailsReady);
+        PackagesCache.packageFetchError.disconnect(slot_packageFetchError);
+
+        var app = appModel.getByAppId(appId);
+        if (app.appId) {
+            bottomEdgeStack.clear();
+            bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
+        }
+    }
+
     function slot_packageDetailsReady(pkg) {
-        PackagesCache.packageDetailsReady.disconnect(slot_packageDetailsReady)
-        bottomEdgeStack.clear()
-        bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
+        PackagesCache.packageDetailsReady.disconnect(slot_packageDetailsReady);
+        PackagesCache.packageFetchError.disconnect(slot_packageFetchError);
+
+        bottomEdgeStack.clear();
+        bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg });
+    }
+
+    function openApp(appId) {
+        if (Connectivity.online) {
+            PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady);
+            PackagesCache.packageFetchError.connect(slot_packageFetchError);
+            PackagesCache.getPackageDetails(appId);
+        }
+        else {
+            var app = appModel.getByAppId(appId);
+            if (app.appId) {
+                bottomEdgeStack.clear();
+                bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
+            }
+        }
     }
 
     function parseUrl(url) {
@@ -63,8 +92,7 @@ MainView {
         }
         else {
             console.log("Fetching package details for %1".arg(appId));
-            PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady);
-            PackagesCache.getPackageDetails(appId);
+            openApp(appId);
         }
     }
 
@@ -76,16 +104,6 @@ MainView {
         if (OpenStoreNetworkManager.isDifferentDomain) {
             var popup = PopupUtils.open(domainWarningComponent)
             popup.accepted.connect(function() {
-                PopupUtils.close(popup)
-            })
-            popup.rejected.connect(function() {
-                Qt.quit();
-            })
-        }
-        else if (settings.firstStart) {
-            var popup = PopupUtils.open(warningComponent)
-            popup.accepted.connect(function() {
-                settings.firstStart = false;
                 PopupUtils.close(popup)
             })
             popup.rejected.connect(function() {
@@ -203,7 +221,7 @@ MainView {
                     iconName: "airplane-mode"
 
                     controlComponent: Button {
-                        color: UbuntuColors.green
+                        color: theme.palette.normal.positive
                         text: i18n.tr("Close OpenStore")
                         onClicked: Qt.quit()
                     }
@@ -231,10 +249,7 @@ MainView {
                 anchors.topMargin: filteredAppPage.header.height
 
                 id: filteredAppView
-                onAppDetailsRequired: {
-                    PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady)
-                    PackagesCache.getPackageDetails(appId)
-                }
+                onAppDetailsRequired: openApp(appId)
             }
         }
     }
@@ -272,67 +287,12 @@ MainView {
 
             Button {
                 text: i18n.tr("Yes, I know what I'm doing")
-                color: UbuntuColors.green
+                color: theme.palette.normal.positive
                 onClicked: {
                     warningDialog.accepted();
                 }
             }
 
-            Button {
-                text: i18n.tr("Get me out of here!")
-                onClicked: {
-                    warningDialog.rejected();
-                }
-            }
-        }
-    }
-
-
-    Component {
-        id: warningComponent
-
-        Dialog {
-            id: warningDialog
-            title: i18n.tr("Warning")
-
-            signal accepted();
-            signal rejected();
-
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                wrapMode: Text.WordWrap
-                maximumLineCount: Number.MAX_VALUE
-                text: i18n.tr("OpenStore allows installing unconfined applications. Please make sure that you know about the implications of that.")
-            }
-
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                wrapMode: Text.WordWrap
-                maximumLineCount: Number.MAX_VALUE
-                text: i18n.tr("An unconfined application has the ability to break the system, reduce its performance and/or spy on you.")
-            }
-
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                wrapMode: Text.WordWrap
-                maximumLineCount: Number.MAX_VALUE
-                text: i18n.tr("While we are doing our best to prevent that by reviewing applications, we don't take any responsibility if something bad slips through.")
-            }
-
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                wrapMode: Text.WordWrap
-                maximumLineCount: Number.MAX_VALUE
-                text: i18n.tr("Use this at your own risk.")
-            }
-
-            Button {
-                text: i18n.tr("Okay. Got it! I'll be careful.")
-                color: UbuntuColors.green
-                onClicked: {
-                    warningDialog.accepted();
-                }
-            }
             Button {
                 text: i18n.tr("Get me out of here!")
                 onClicked: {
@@ -346,8 +306,8 @@ MainView {
         id: installQuestion
         Dialog {
             id: installQuestionDialog
-            title: i18n.tr("Install app?")
-            text: i18n.tr("Do you want to install %1?").arg(fileName)
+            title: i18n.tr("Install unknown app?")
+            text: i18n.tr("Do you want to install the unkown app %1?").arg(fileName)
 
             property string fileName
             signal accepted();
@@ -361,7 +321,7 @@ MainView {
 
             Button {
                 text: i18n.tr("Install")
-                color: UbuntuColors.green
+                color: theme.palette.normal.positive
                 visible: !PlatformIntegration.clickInstaller.busy
                 onClicked: {
                     installQuestionDialog.accepted()
@@ -391,7 +351,7 @@ MainView {
             title: i18n.tr("App installed")
             text: i18n.tr("The app has been installed successfully.")
             Button {
-                color: UbuntuColors.blue
+                color: theme.palette.normal.positive
                 text: i18n.tr("OK")
                 onClicked: PopupUtils.close(installedConfirmationDialog)
             }
@@ -404,7 +364,7 @@ MainView {
             title: i18n.tr("Installation failed")
             text: i18n.tr("The package could not be installed. Make sure it is a valid click package.")
             Button {
-                color: UbuntuColors.blue
+                color: theme.palette.normal.positive
                 text: i18n.tr("OK")
                 onClicked: PopupUtils.close(installationErrorDialog)
             }
@@ -419,7 +379,7 @@ MainView {
             title: i18n.tr("Installation failed (Error %1)").arg(errorCode)
             text: errorString
             Button {
-                color: UbuntuColors.blue
+                color: theme.palette.normal.positive
                 text: i18n.tr("OK")
                 onClicked: PopupUtils.close(timeoutErrorDialog)
             }

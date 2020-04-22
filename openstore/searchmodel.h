@@ -16,6 +16,7 @@ struct SearchPackageItem {
     QString tagline;
     bool installed;
     bool updateAvailable;
+    QStringList types;
 };
 
 class SearchModel : public QAbstractListModel
@@ -37,6 +38,7 @@ public:
         RoleTagline,
         RoleInstalled,
         RoleUpdateAvailable,
+        RoleTypes,
     };
 
     explicit SearchModel(QObject *parent = 0);

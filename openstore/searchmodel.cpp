@@ -34,7 +34,7 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
 {
     if (index.row() < 0 || index.row() > rowCount())
         return QVariant();
-        
+
     auto item = m_list.at(index.row());
 
     switch (role) {
@@ -52,6 +52,8 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
         return item.installed;
     case RoleUpdateAvailable:
         return item.updateAvailable;
+    case RoleTypes:
+        return item.types;
     }
     return QVariant();
 }
@@ -66,6 +68,7 @@ QHash<int, QByteArray> SearchModel::roleNames() const
     roles.insert(RoleTagline, "tagline");
     roles.insert(RoleInstalled, "installed");
     roles.insert(RoleUpdateAvailable, "updateAvailable");
+    roles.insert(RoleTypes, "types");
     return roles;
 }
 
@@ -102,7 +105,7 @@ void SearchModel::fetchMore(const QModelIndex &parent)
 
 
 void SearchModel::sendRequest(int skip)
-{   
+{
     m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
 
     if (!m_queryUrl.isEmpty()) {
@@ -151,11 +154,12 @@ void SearchModel::parseReply(OpenStoreReply reply)
         item.name = pkgMap.value("name").toString();
         item.tagline = pkgMap.value("tagline").toString();
         item.icon = pkgMap.value("icon").toString();
+        item.types = pkgMap.value("types").toStringList();
         item.ratings = new Ratings(pkgMap.value("ratings").toMap());
 
         item.updateAvailable = bool(PackagesCache::instance()->getRemoteAppRevision(item.appId) > PackagesCache::instance()->getLocalAppRevision(item.appId));
         item.installed = !PlatformIntegration::instance()->appVersion(item.appId).isNull();
-        
+
         m_list.append(item);
     }
 

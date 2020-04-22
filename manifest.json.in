@@ -1,6 +1,6 @@
 {
     "name": "openstore.openstore-team",
-    "description": "Alternative app store for hacks, developer tools and app previews.",
+    "description": "Official app store for Ubuntu Touch",
     "architecture": "@CLICK_ARCH@",
     "title": "OpenStore",
     "hooks": {
@@ -11,7 +11,7 @@
             "content-hub": "openstore/openstore-contenthub.json"
         }
     },
-    "version": "2.83",
+    "version": "2.95",
     "maintainer": "OpenStore Team <openstore-team@lists.launchpad.net>",
     "framework": "ubuntu-sdk-16.04"
 }

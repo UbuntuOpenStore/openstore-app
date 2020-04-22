@@ -108,7 +108,7 @@ public:
     bool channelMatchesOS() const {  return m_channels.contains(PlatformIntegration::instance()->systemCodename()); };
     bool frameworkMatchesOS() const { return PlatformIntegration::instance()->supportedFrameworks().contains(m_framework); };
 
-    Q_INVOKABLE QString permissions(int index) const { return m_hooks.at(index).permissions.join(", "); }
+    Q_INVOKABLE QStringList permissions(int index) const { return m_hooks.at(index).permissions; }
     Q_INVOKABLE Hooks hooks(int index) const { return m_hooks.at(index).hooks; }
     Q_INVOKABLE QString hookName(int index) { return m_hooks.at(index).name; }
     Q_INVOKABLE QString apparmorTemplate(int index) { return m_hooks.at(index).apparmorTemplate; }

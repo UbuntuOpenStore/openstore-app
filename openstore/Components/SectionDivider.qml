@@ -54,7 +54,7 @@ Item {
         }
 
         visible: !!text
-        color: UbuntuColors.green
+        color: theme.palette.normal.positive
         onClicked: buttonClicked()
     }
 }

@@ -27,6 +27,59 @@ Page {
     id: appDetailsPage
 
     property var app: null
+    property var restrictedPermissions: [
+        'bluetooth',
+        'calendar',
+        'contacts',
+        'debug',
+        'history',
+        'music_files',
+        'music_files_read',
+        'picture_files',
+        'picture_files_read',
+        'video_files',
+        'video_files_read',
+    ]
+
+    property bool isTrustedApp: {
+        if (app && app.appId) {
+            if (app.appId.startsWith('com.ubuntu.') && !app.appId.startsWith('com.ubuntu.developer.')) {
+                return true;
+            }
+
+            if (app.appId.startsWith('com.canonical.')) {
+                return true;
+            }
+
+            if (app.appId.startsWith('ubports.')) {
+                return true;
+            }
+
+            if (app.appId.startsWith('openstore.')) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    property bool canAccessUnconfinedLocations: {
+        for (var i=0; i<app.hooksCount; ++i) {
+            if (includesUnconfinedLocations(app.readPaths(i)))
+                return true
+            if (includesUnconfinedLocations(app.writePaths(i)))
+                return true
+        }
+        return false
+    }
+
+    property bool isUnconfined: {
+        for (var i=0; i<app.hooksCount; ++i) {
+            if (app.apparmorTemplate(i).indexOf("unconfined") >= 0)
+                return true
+        }
+        return false
+    }
 
     function getNumberShortForm(number) {
         if (number > 999999) {
@@ -80,7 +133,24 @@ Page {
                     anchors.fill: parent
                     title.text: app.name
                     subtitle.text: app.author
-                    summary.text: printSize(app.fileSize)
+                    summary.text: {
+                        var translations = {
+                            'app': i18n.tr("App"),
+                            'scope': i18n.tr("Scope"),
+                            'webapp': i18n.tr("Web App"),
+                            'webapp+': i18n.tr("Web App+"),
+                        };
+
+                        var types = [];
+                        for (var i = 0; i < app.types.length; i++) {
+                            if (translations[app.types[i]]) {
+                                types.push(translations[app.types[i]]);
+                            }
+                        }
+
+                        var filesize = app.fileSize ? '\n' + printSize(app.fileSize) : '';
+                        return types.join(', ') + filesize;
+                    }
 
                     UbuntuShape {
                         SlotsLayout.position: SlotsLayout.Leading
@@ -173,10 +243,20 @@ Page {
                         text: i18n.tr("Open")
                         visible: app.installed && app.containsApp && app.appId!="openstore.openstore-team"
                         color: installUpgradeButton.visible
-                            ? UbuntuColors.ash
-                            : UbuntuColors.green
+                            ? theme.name == "Ubuntu.Components.Themes.Ambiance"
+                                ? UbuntuColors.graphite
+                                : UbuntuColors.ash
+                            : theme.palette.normal.positive
 
                         onClicked: Qt.openUrlExternally(app.appLaunchUrl())
+                    }
+
+                    Label {
+                        Layout.fillWidth: true
+                        visible: app.installed && app.containsApp && app.appId == "openstore.openstore-team" && !app.isLocalVersionSideloaded && !app.updateAvailable
+                        horizontalAlignment: Text.AlignHCenter
+
+                        text: "🎉 " + i18n.tr("The OpenStore is installed!") + " ❤️"
                     }
 
                     Button {
@@ -194,21 +274,27 @@ Page {
                             return i18n.tr("Install");
                         }
                         visible: !app.installed || (app.installed && app.updateAvailable) || app.isLocalVersionSideloaded
-                        color: app.isLocalVersionSideloaded ? UbuntuColors.blue : UbuntuColors.green
+                        color: app.isLocalVersionSideloaded ? theme.palette.selected.focus : theme.palette.normal.positive
                         onClicked: {
-                            if(app.donateUrl && !app.installed)
-                            {
-                                var popupdonationPopup = PopupUtils.open(donatingPopup)
-                                popupdonationPopup.accepted.connect(function() {
-                                    app.install()
-                                    Qt.openUrlExternally(app.donateUrl)
-                                })
-                                popupdonationPopup.rejected.connect(function() {
-                                    app.install()
-                                })
+                            if (isUnconfined && !isTrustedApp && !app.installed) {
+                                var popup = PopupUtils.open(unconfinedWarningPopup)
+                                popup.accepted.connect(function() {
+                                    app.install();
+                                });
                             }
-                            else
-                                app.install()
+                            else if (app.donateUrl && !app.installed) {
+                                var popup = PopupUtils.open(donatingPopup)
+                                popup.accepted.connect(function() {
+                                    app.install();
+                                    Qt.openUrlExternally(app.donateUrl);
+                                });
+                                popup.rejected.connect(function() {
+                                    app.install();
+                                });
+                            }
+                            else {
+                                app.install();
+                            }
                         }
                     }
                 }
@@ -277,7 +363,7 @@ Page {
                         Layout.maximumWidth: buttonsRow.width > units.gu(60) ? units.gu(24) : buttonsRow.width
                         text: i18n.tr("Remove")
                         visible: app.installed && !PackagesCache.updatingCache
-                        color: UbuntuColors.red
+                        color: theme.palette.normal.negative
                         onClicked: {
                             var popup = PopupUtils.open(removeQuestion, root, {pkgName: app.name || app.id});
                             popup.accepted.connect(function() {
@@ -289,21 +375,17 @@ Page {
             }
 
             ListItem {
-                visible: {
-                    for (var i=0; i<app.hooksCount; ++i) {
-                        if (includesUnconfinedLocations(app.readPaths(i)))
-                            return true
-                        if (includesUnconfinedLocations(app.writePaths(i)))
-                            return true
-                        if (app.apparmorTemplate(i).indexOf("unconfined") >= 0)
-                            return true
-                    }
-                    return false
-                }
+                visible: (canAccessUnconfinedLocations || isUnconfined) && !isTrustedApp
                 ListItemLayout {
                     anchors.centerIn: parent
-                    subtitle.text: i18n.tr("This app has access to restricted system data, see below for details.")
-                    subtitle.color: UbuntuColors.red
+                    subtitle.text: {
+                        if (isUnconfined) {
+                            return i18n.tr("This app has access to restricted parts of the system and all of your data, see below for details.");
+                        }
+
+                        return i18n.tr("This app has access to restricted system data, see below for details.");
+                    }
+                    subtitle.color: theme.palette.normal.negative
                     subtitle.maximumLineCount: Number.MAX_VALUE
                     subtitle.wrapMode: Text.WordWrap
 
@@ -512,7 +594,7 @@ Page {
                     height: hookDelLayout.height + units.gu(3)
 
                     property var hooks: app.hooks(index)
-                    property string permissions: app.permissions(index)
+                    property var permissions: app.permissions(index)
                     property string readpaths: app.readPaths(index)
                     property string writepaths: app.writePaths(index)
                     property string hookName: app.hookName(index)
@@ -574,38 +656,24 @@ Page {
                         ListItemLayout {
                             anchors { left: parent.left; right: parent.right }
                             anchors.leftMargin: units.gu(-2)
-                            height: units.gu(6)
-                            Icon {
-                                SlotsLayout.position: SlotsLayout.Leading
-                                width: units.gu(4); height: width
-                                name: "security-alert"
-                                visible: apparmorTemplate.indexOf("unconfined") >= 0
-                            }
-
-                            title.text: i18n.tr("AppArmor profile")
-                            subtitle.text: apparmorTemplate || "Ubuntu confined app"
-                            subtitle.color: apparmorTemplate.indexOf("unconfined") >= 0 ? UbuntuColors.red : theme.palette.normal.backgroundSecondaryText
-                            subtitle.maximumLineCount: Number.MAX_VALUE
-                        }
-
-
-                        ListItemLayout {
-                            anchors { left: parent.left; right: parent.right }
-                            anchors.leftMargin: units.gu(-2)
-                            visible: permissions.length > 0
 
                             Icon {
-                                property var restrictedPerms: ["bluetooth", "calendar", "contacts", "debug", "history", "music_files", "picture_files", "video_files"]
                                 SlotsLayout.position: SlotsLayout.Leading
                                 width: units.gu(4); height: width
                                 name: "security-alert"
                                 visible: {
-                                    var length = restrictedPerms.length;
-                                    while(length--) {
-                                       if (permissions.indexOf(restrictedPerms[length]) > -1)
-                                           return true
+                                    if (apparmorTemplate.indexOf("unconfined") >= 0) {
+                                        return true;
                                     }
-                                    return false
+
+                                    var length = restrictedPermissions.length;
+                                    while(length--) {
+                                        if (permissions.indexOf(restrictedPermissions[length]) > -1) {
+                                           return true;
+                                        }
+                                    }
+
+                                    return false;
                                 }
                             }
 
@@ -613,22 +681,63 @@ Page {
                             subtitle.maximumLineCount: Number.MAX_VALUE
                             subtitle.wrapMode: Text.WordWrap
                             subtitle.text: {
-                                if (permissions) {
-                                    return permissions.replace("bluetooth", "<font color=\"#ED3146\">bluetooth</font>")
-                                                      .replace("calendar", "<font color=\"#ED3146\">calendar</font>")
-                                                      .replace("contacts", "<font color=\"#ED3146\">contacts</font>")
-                                                      .replace("debug", "<font color=\"#ED3146\">debug</font>")
-                                                      .replace("history", "<font color=\"#ED3146\">history</font>")
-                                                      .replace("music_files_read", "<font color=\"#ED3146\">music_files_read</font>")
-                                                      .replace("picture_files_read", "<font color=\"#ED3146\">music_files_read</font>")
-                                                      .replace("video_files_read", "<font color=\"#ED3146\">music_files_read</font>")
-                                                      .replace("music_files", "<font color=\"#ED3146\">music_files_read</font>")
-                                                      .replace("picture_files", "<font color=\"#ED3146\">music_files_read</font>")
-                                                      .replace("video_files", "<font color=\"#ED3146\">music_files_read</font>")
+                                var translations = {
+                                    accounts: i18n.tr("Accounts"),
+                                    audio: i18n.tr("Audio"),
+                                    bluetooth: i18n.tr("Bluetooth"),
+                                    calendar: i18n.tr("Calendar"),
+                                    camera: i18n.tr("Camera"),
+                                    connectivity: i18n.tr("Connectivity"),
+                                    contacts: i18n.tr("Contacts"),
+                                    content_exchange_source: i18n.tr("Content Exchange Source"),
+                                    content_exchange: i18n.tr("Content Exchange"),
+                                    debug: i18n.tr("Debug"),
+                                    history: i18n.tr("History"),
+                                    'in-app-purchases': i18n.tr("In App Purchases"),
+                                    'keep-display-on': i18n.tr("Keep Display On"),
+                                    location: i18n.tr("Location"),
+                                    microphone: i18n.tr("Microphone"),
+                                    music_files_read: i18n.tr("Read Music Files"),
+                                    music_files: i18n.tr("Music Files"),
+                                    networking: i18n.tr("Networking"),
+                                    picture_files_read: i18n.tr("Read Picture Files"),
+                                    picture_files: i18n.tr("Picture Files"),
+                                    'push-notification-client': i18n.tr("Push Notifications"),
+                                    sensors: i18n.tr("Sensors"),
+                                    usermetrics: i18n.tr("User Metrics"),
+                                    video_files_read: i18n.tr("Read Video Files"),
+                                    video_files: i18n.tr("Video Files"),
+                                    video: i18n.tr("Video"),
+                                    webview: i18n.tr("Webview"),
+                                };
+
+                                if (apparmorTemplate.indexOf("unconfined") >= 0) {
+                                    return '<font color=\"#ED3146\">' + i18n.tr("Full System Access") + '</font>';
                                 }
 
-                                // TRANSLATORS: this will show when an app doesn't need any special permissions
-                                return "<i>" + i18n.tr("none required") + "</i>"
+                                if (permissions.length === 0) {
+                                    // TRANSLATORS: this will show when an app doesn't need any special permissions
+                                    return "<i>" + i18n.tr("none required") + "</i>"
+                                }
+
+                                var translated = [];
+                                for (var i = 0; i < permissions.length; i++) {
+                                    var permission = permissions[i];
+                                    var isRestricted = restrictedPermissions.indexOf(permission) > -1;
+
+                                    if (translations[permission]) {
+                                        permission = translations[permission];
+                                    }
+
+                                    if (isRestricted) {
+                                        translated.push('<font color=\"#ED3146\">' + permission + '</font>');
+                                    }
+                                    else {
+                                        translated.push(permission);
+                                    }
+                                }
+
+                                return translated.join(', ');
                             }
                         }
 
@@ -675,7 +784,7 @@ Page {
     Component {
         id: donatingPopup
         Dialog {
-            id: donatingdDialog
+            id: donatingDialog
             title: i18n.tr("Donating")
             text: i18n.tr("Would you like to support this app with a donation to the developer?")
 
@@ -684,53 +793,54 @@ Page {
 
             Button {
                 text: i18n.tr("Donate now")
-                color: UbuntuColors.green
+                color: theme.palette.normal.positive
                 onClicked: {
-                    donatingdDialog.accepted()
-                    PopupUtils.close(donatingdDialog)
+                    donatingDialog.accepted()
+                    PopupUtils.close(donatingDialog)
                 }
             }
             Button {
                 text: i18n.tr("Maybe later")
                 onClicked: {
-                    donatingdDialog.rejected();
-                    PopupUtils.close(donatingdDialog)
+                    donatingDialog.rejected();
+                    PopupUtils.close(donatingDialog)
                 }
             }
         }
     }
 
     Component {
-        id: removeQuestion
+        id: unconfinedWarningPopup
         Dialog {
-            id: removeQuestionDialog
-            title: i18n.tr("Remove package")
-            text: i18n.tr("Do you want to remove %1?").arg(pkgName)
+            id: unconfinedWarningDialog
+            title: i18n.tr("Warning")
+            text: i18n.tr("This app has access to restricted parts of the system and all of your data. It has the potential break your system. While the OpenStore maintainers have reviewed the code for this app for safety, they are not responsible for anything bad that might happen to your device or data from installing this app.")
 
-            property string pkgName
-            signal accepted();
-            signal rejected();
+            signal accepted()
+            signal rejected()
 
             Button {
-                text: i18n.tr("Remove")
-                color: UbuntuColors.red
+                text: i18n.tr("I understand the risks")
+                color: theme.palette.normal.negative
                 onClicked: {
-                    removeQuestionDialog.accepted();
-                    PopupUtils.close(removeQuestionDialog)
+                    unconfinedWarningDialog.accepted()
+                    PopupUtils.close(unconfinedWarningDialog)
                 }
             }
 
             Button {
                 text: i18n.tr("Cancel")
                 onClicked: {
-                    removeQuestionDialog.rejected();
-                    PopupUtils.close(removeQuestionDialog)
+                    unconfinedWarningDialog.rejected();
+                    PopupUtils.close(unconfinedWarningDialog)
                 }
-
             }
         }
     }
 
+    Components.UninstallPopup {
+        id: removeQuestion
+    }
 
     function printSize(size) {
         var s

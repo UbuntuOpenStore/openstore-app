@@ -159,7 +159,7 @@ Page {
 
                         Button {
                             SlotsLayout.position: SlotsLayout.Last
-                            color: UbuntuColors.green
+                            color: theme.palette.normal.positive
                             text: i18n.tr("Details")
 
                             function slot_installedPackageDetailsReady(pkg) {

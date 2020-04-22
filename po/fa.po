@@ -8,42 +8,38 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-20 19:58+0000\n"
-"PO-Revision-Date: 2018-01-25 09:59+0000\n"
-"Last-Translator: Pablo F. <pablo.foche@gmail.com>\n"
-"Language-Team: Esperanto <https://translate.ubports.com/projects/openstore/"
-"openstore-app/eo/>\n"
-"Language: eo\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.15\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:85
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:33
 msgid "App details"
-msgstr "Aplikaĵaj detaloj"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:92
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:311
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:40
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/UninstallPopup.qml:33
 msgid "Remove"
-msgstr "Forigi"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:127
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:17
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:60
-#, fuzzy
 msgid "App"
-msgstr "Miaj aplikaĵoj"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:128
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:18
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:61
 msgid "Scope"
-msgstr "Scope"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:129
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:19
@@ -62,80 +58,71 @@ msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
 msgstr ""
-"La instalita versio de ĉi tiu aplikaĵo ne devenas de la servilo de "
-"OpenStore. Vi povas instali la lastan stabilan ĝisdatigon premante sur la "
-"suban butonon."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:190
 msgid "Open"
-msgstr "Malfermi"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:206
 msgid "The OpenStore is installed!"
 msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:215
-#, fuzzy
 msgid "Install stable version"
-msgstr "Instalita versio"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:218
 msgid "Upgrade"
-msgstr "Ĝisdatigi"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:221
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:315
 msgid "Install"
-msgstr "Instali"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:297
 msgid "This app is not compatible with your system."
 msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:330
-#, fuzzy
 msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
 msgstr ""
-"Ĉi tiu aplikaĵo havas aliron al restriktaj sistemaj datumoj, legu pliajn "
-"detalojn sube."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:333
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
-"Ĉi tiu aplikaĵo havas aliron al restriktaj sistemaj datumoj, legu pliajn "
-"detalojn sube."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:358
 msgid "Description"
-msgstr "Priskribo"
+msgstr ""
 
 #. TRANSLATORS: Title of the changelog section
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:381
 msgid "What's New"
-msgstr "Novaĵoj"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:400
 msgid "Packager/Publisher"
-msgstr "Pakaĵanto/Publikiganto"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:401
 msgid "OpenStore team"
-msgstr "Skipo de OpenStore"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:409
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:115
 msgid "Installed version"
-msgstr "Instalita versio"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:418
 msgid "Latest available version"
-msgstr "Lasta disponebla versio"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:427
 msgid "First released"
-msgstr "Unua publikigo"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:438
 msgid "Downloads of the latest version"
@@ -147,16 +134,16 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:456
 msgid "License"
-msgstr "Licenco"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:457
 msgid "N/A"
-msgstr "Ne disponebla"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:467
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:106
 msgid "Source Code"
-msgstr "Fonto-kodo"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:480
 msgid "Get support for this app"
@@ -170,26 +157,25 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:509
 #, qt-format
 msgid "More from %1"
-msgstr "Pli de %1"
+msgstr ""
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:524
 #, qt-format
 msgid "Other apps in %1"
-msgstr "Aliaj aplikaĵoj en %1"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:530
 msgid "Package contents"
-msgstr "Pakaĵ-enhavo"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:623
 msgid "Permissions"
-msgstr "Permesoj"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:628
-#, fuzzy
 msgid "Accounts"
-msgstr "Kontro-provizanto"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:629
 msgid "Audio"
@@ -220,9 +206,8 @@ msgid "Content Exchange Source"
 msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:636
-#, fuzzy
 msgid "Content Exchange"
-msgstr "Koncentrilo-enhava traktilo"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:637
 msgid "Debug"
@@ -241,9 +226,8 @@ msgid "Keep Display On"
 msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:641
-#, fuzzy
 msgid "Location"
-msgstr "Aplikaĵo"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:642
 msgid "Microphone"
@@ -304,15 +288,15 @@ msgstr ""
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:663
 msgid "none required"
-msgstr "neniu bezonata"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:699
 msgid "Read paths"
-msgstr "Lego-vojoj"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:716
 msgid "Write paths"
-msgstr "Skribo-vojoj"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:731
 msgid "Donating"
@@ -333,7 +317,7 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:759
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:254
 msgid "Warning"
-msgstr "Averto"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:760
 msgid ""
@@ -353,31 +337,31 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/UninstallPopup.qml:42
 msgid "Cancel"
-msgstr "Nuligi"
+msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:794
 #, qt-format
 msgid "%1 GB"
-msgstr "%1 GB"
+msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:799
 #, qt-format
 msgid "%1 MB"
-msgstr "%1 MB"
+msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:804
 #, qt-format
 msgid "%1 kB"
-msgstr "%1 kB"
+msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:807
 #, qt-format
 msgid "%1 bytes"
-msgstr "%1 bajtoj"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:95
 msgid "This app could not found in the OpenStore"
@@ -393,77 +377,77 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesTab.qml:90
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:36
 msgid "Categories"
-msgstr "Kategorioj"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:29
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:35
 msgid "Discover"
-msgstr "Malkovri"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:51
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:28
 msgid "Search in OpenStore..."
-msgstr "Serĉi en OpenStore..."
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:136
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:79
 msgid "Update available"
-msgstr "Ĝisdatigo disponebla"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:137
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:79
 msgid "✓ Installed"
-msgstr "✓ Instalita"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:156
 msgid "OpenStore update available"
-msgstr "Ĝisdatigo de OpenStore disponebla"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:157
 msgid "Update OpenStore now!"
-msgstr "Ĝisdatigu OpenStore nun!"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:163
 msgid "Details"
-msgstr "Detaloj"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
 msgid "Nothing here yet"
-msgstr "Nenio ĉi tie ankoraŭ"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
 msgid "No results found."
-msgstr "Neniu rezulto trovita."
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
 msgid "No app has been released in this category yet."
-msgstr "Neniu aplikaĵo estis publikigita en ĉi tiu kategorio ankoraŭ."
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
 msgid "Try with a different search."
-msgstr "Provu alian serĉon."
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:51
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:38
 msgid "My Apps"
-msgstr "Miaj aplikaĵoj"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:56
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:26
 msgid "Settings"
-msgstr "Agordoj"
+msgstr ""
 
 #. TRANSLATORS: %1 is the number of installed apps
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:92
 #, qt-format
 msgid "Installed apps (%1)"
-msgstr "Instalitaj aplikaĵoj (%1)"
+msgstr ""
 
 #. TRANSLATORS: %1 is the number of available app updates
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:96
 #, qt-format
 msgid "Available updates (%1)"
-msgstr "Disponeblaj ĝisdatigoj (%1)"
+msgstr ""
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:100
@@ -472,27 +456,22 @@ msgid "Stable version available (%1)"
 msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:103
-#, fuzzy
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
 msgstr ""
-"La instalita versio de ĉi tiu aplikaĵo ne devenas de la servilo de "
-"OpenStore. Vi povas instali la lastan stabilan ĝisdatigon premante sur la "
-"suban butonon."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:104
-#, fuzzy
 msgid "Update all"
-msgstr "Ĝisdatigo disponebla"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:206
 msgid "No apps found"
-msgstr "Neniu aplikaĵo trovita"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:207
 msgid "No app has been installed from OpenStore yet."
-msgstr "Neniu aplikaĵo instalita per OpenStore ankoraŭ."
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:263
 msgid ""
@@ -510,192 +489,151 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:289
 msgid "Get me out of here!"
-msgstr "Mi volas eliri!"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:301
-#, fuzzy
 msgid "Install unknown app?"
-msgstr "Ĉu instali aplikaĵon?"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:302
-#, fuzzy, qt-format
+#, qt-format
 msgid "Do you want to install the unkown app %1?"
-msgstr "Ĉu vi volas instali %1?"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:343
 msgid "App installed"
-msgstr "Aplikaĵo instalita"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:344
 msgid "The app has been installed successfully."
-msgstr "La aplikaĵo estis instalita sukcese."
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:347
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:360
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:375
 msgid "OK"
-msgstr "Jes"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:356
 msgid "Installation failed"
-msgstr "Instalado malsukcesis"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:357
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
-"La pakaĵo ne povis esti instalita. Certiĝu pri tio ke ĝi estas valida click-"
-"pakaĵo."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:371
 #, qt-format
 msgid "Installation failed (Error %1)"
-msgstr "Instalado malsukcesis (Eraro %1)"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:37
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15
 msgid "Search"
-msgstr "Serĉi"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:29
 msgid "Your passphrase is required to access restricted content"
-msgstr "Via pasfrazo estas bezonata por aliri restriktan enhavon"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:30
 msgid "Your passcode is required to access restricted content"
-msgstr "Via paskodo estas bezonata por aliri restriktan enhavon"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:39
 msgid "Authentication failed"
-msgstr "Aŭtentikigo malsukcesis"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
 msgid "Passphrase required"
-msgstr "Pasfrazo bezonata"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
 msgid "Passcode required"
-msgstr "Paskodo bezonata"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passphrase (default is 0000)"
-msgstr "pasfrazo (defaŭlta estas 0000)"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passcode (default is 0000)"
-msgstr "paskodo (defaŭlta estas 0000)"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:71
 msgid "Authentication failed. Please retry"
-msgstr "Autentikigo malsukcesis. Bv. reprovi"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:76
 msgid "Authenticate"
-msgstr "Autentikigi"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:58
 msgid "Parental control"
-msgstr "Gepatra kontrolilo"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:64
 msgid "Hide adult-oriented content"
-msgstr "Kaŝi adoltan enhavon"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:74
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr ""
-"Enigante vian pasvorton vi akceptas plenan respondecon pro aliro al adolta "
-"enhavo."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:99
 msgid "About OpenStore"
-msgstr "Pri OpenStore"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:115
 msgid "Report an issue"
-msgstr "Raporti problemon"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Back"
-msgstr "Reen"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
 msgid "Close"
-msgstr "Fermi"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:37
 msgid "Application"
-msgstr "Aplikaĵo"
+msgstr ""
 
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:64
 msgid "URL Handler"
-msgstr "URL-traktilo"
+msgstr ""
 
 #. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:78
 msgid "Content Hub Handler"
-msgstr "Koncentrilo-enhava traktilo"
+msgstr ""
 
 #. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:92
 msgid "Push Helper"
-msgstr "Puŝ-helpilo"
+msgstr ""
 
 #. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:106
 msgid "Accounts provider"
-msgstr "Kontro-provizanto"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:46
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:54
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
-msgstr "Elekti"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/UninstallPopup.qml:25
 msgid "Remove package"
-msgstr "Forigi pakaĵon"
+msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/UninstallPopup.qml:26
 #, qt-format
 msgid "Do you want to remove %1?"
-msgstr "Ĉu vi volas forigi %1?"
-
-#~ msgid "AppArmor profile"
-#~ msgstr "Profilo AppArmor"
-
-#~ msgid ""
-#~ "OpenStore allows installing unconfined applications. Please make sure "
-#~ "that you know about the implications of that."
-#~ msgstr ""
-#~ "OpenStore ebligas instali nelimigitajn aplikaĵojn. Bv. certiĝi pri tio ke "
-#~ "vi konas ĝiajn implikaĵojn."
-
-#~ msgid ""
-#~ "An unconfined application has the ability to break the system, reduce its "
-#~ "performance and/or spy on you."
-#~ msgstr ""
-#~ "Nelimigita aplikaĵo povus rompi la sistemon, redukti ĝian rapidecon kaj/"
-#~ "aŭ spioni vin."
-
-#~ msgid ""
-#~ "While we are doing our best to prevent that by reviewing applications, we "
-#~ "don't take any responsibility if something bad slips through."
-#~ msgstr ""
-#~ "Kvankam ni faras tion kion ni kapablas por eviti ĝin kontrolante la "
-#~ "aplikaĵojn, ni ne prenas sur ni la respondecon se io malbona okazas."
-
-#~ msgid "Use this at your own risk."
-#~ msgstr "Uzu ĉi tion sur via propra respondeco."
-
-#~ msgid "Okay. Got it! I'll be careful."
-#~ msgstr "Enorde. Mi komprenis! Mi estos zorgema."
-
-#~ msgid "Developers"
-#~ msgstr "Programistoj"
-
-#~ msgid "Manage your apps on OpenStore"
-#~ msgstr "Administru viajn aplikaĵojn en OpenStore"
+msgstr ""

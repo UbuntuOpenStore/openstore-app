@@ -6,6 +6,7 @@
 
 #include <QJsonDocument>
 #include <QJsonArray>
+#include <algorithm>
 
 // For desktop file / scope settings parsing
 #include <QSettings>
@@ -15,10 +16,20 @@
 #define MODEL_START_REFRESH() m_ready = false; Q_EMIT readyChanged();
 #define MODEL_END_REFRESH() m_ready = true; Q_EMIT readyChanged();
 
-PackagesModel::PackagesModel(QAbstractListModel * parent)
-    : QAbstractListModel(parent)
-    , m_ready(false)
-    , m_appStoreUpdateAvailable(false)
+/*
+    Sort available updates first, then by name
+*/
+bool sortPackage(const LocalPackageItem &a, const LocalPackageItem &b)
+{
+    if (a.updateStatus == b.updateStatus) {
+        return (a.name.compare(b.name, Qt::CaseInsensitive) < 0);
+    }
+
+    return (a.updateStatus.compare(b.updateStatus) < 0);
+}
+
+PackagesModel::PackagesModel(QAbstractListModel *parent)
+    : QAbstractListModel(parent), m_ready(false), m_appStoreUpdateAvailable(false)
 {
     connect(PlatformIntegration::instance(), &PlatformIntegration::updated, this, &PackagesModel::refresh);
     connect(PackagesCache::instance(), &PackagesCache::updatingCacheChanged, this, &PackagesModel::refresh);
@@ -32,6 +43,7 @@ QHash<int, QByteArray> PackagesModel::roleNames() const
 
     roles.insert(RoleName, "name");
     roles.insert(RoleAppId, "appId");
+    roles.insert(RoleVersion, "version");
     roles.insert(RoleIcon, "icon");
     roles.insert(RoleUpdateAvailable, "updateAvailable");
     roles.insert(RoleUpdateStatus, "updateStatus");
@@ -58,6 +70,8 @@ QVariant PackagesModel::data(const QModelIndex & index, int role) const
         return pkg.name;
     case RoleAppId:
         return pkg.appId;
+    case RoleVersion:
+        return pkg.version;
     case RoleIcon:
         return pkg.icon;
     case RoleUpdateAvailable:
@@ -117,6 +131,7 @@ void PackagesModel::refresh()
         LocalPackageItem pkgItem;
         pkgItem.appId = map.value("name").toString();
         pkgItem.name = map.value("title").toString();
+        pkgItem.version = map.value("version").toString();
         pkgItem.packageUrl = PackagesCache::instance()->getPackageUrl(pkgItem.appId);
 
         int remoteRevision = PackagesCache::instance()->getRemoteAppRevision(pkgItem.appId);
@@ -182,6 +197,8 @@ void PackagesModel::refresh()
     }
     //        qDebug() << "Finished refresh.";
 
+    std::sort(m_list.begin(), m_list.end(), sortPackage);
+
     endInsertRows();
 
     Q_EMIT updated();
@@ -201,4 +218,14 @@ QVariantMap PackagesModel::get(int row) {
     }
 
     return map;
+}
+
+QVariantMap PackagesModel::getByAppId(const QString &appId) {
+    for (int i = 0; i < m_list.count(); i++) {
+        if (m_list[i].appId == appId) {
+            return get(i);
+        }
+    }
+
+    return QVariantMap();
 }

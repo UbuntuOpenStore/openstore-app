@@ -34,6 +34,9 @@ MainView {
 
     property var mainPage
 
+    readonly property string appColorText: UbuntuColors.porcelain
+    readonly property string    appColor: "#292929"
+
     function slot_packageFetchError(appId) {
         PackagesCache.packageDetailsReady.disconnect(slot_packageDetailsReady);
         PackagesCache.packageFetchError.disconnect(slot_packageFetchError);
@@ -96,7 +99,7 @@ MainView {
     }
 
     Component.onCompleted: {
-        mainPage = pageStack.push(Qt.resolvedUrl("MainPage.qml"))
+        mainPage = pageStack.push(Qt.resolvedUrl("DiscoverTab.qml"))
 
         PlatformIntegration.update()
 

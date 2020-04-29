@@ -7,15 +7,16 @@
         <file>CategoriesTab.qml</file>
         <file>FilteredAppView.qml</file>
         <file>InstalledAppsTab.qml</file>
-        <file>Components/BottomNavigationBar.qml</file>
         <file>Components/EmptyState.qml</file>
         <file>Components/SectionDivider.qml</file>
         <file>MainPage.qml</file>
         <file>SearchTab.qml</file>
         <file>Components/HookIcon.qml</file>
-        <file>Components/LeftNavigationBar.qml</file>
-        <file>Components/ConvergentTabView.qml</file>
         <file>Components/BottomEdgePageStack.qml</file>
+        <file>Components/HeaderBase.qml</file>
+        <file>Components/HeaderMain.qml</file>
+        <file>Components/HighlightedApp.qml</file>
+        <file>Components/LabelCentered.qml</file>
         <file>Components/TextualButtonStyle.qml</file>
         <file>Components/OpenStoreCarousel.qml</file>
         <file>Components/PackageTile.qml</file>

@@ -47,16 +47,9 @@ Page {
         onPackageInstallationFailed: updateNextPackage()
     }
 
-    header: PageHeader {
-        title: i18n.tr("My Apps")
-
-        trailingActionBar {
-            actions: Action {
-                iconName: "settings"
-                text: i18n.tr("Settings")
-                onTriggered: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
-            }
-        }
+    header: Components.HeaderMain {
+        title: i18n.tr("Installed Apps")
+        flickable: view
     }
 
     ScrollView {
@@ -64,7 +57,6 @@ Page {
         width: Math.min(parent.width, units.gu(80))
         anchors {
             top: parent.top
-            topMargin: parent.header ? parent.header.height : 0
             bottom: parent.bottom
             horizontalCenter: parent.horizontalCenter
         }

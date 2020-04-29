@@ -11,13 +11,13 @@ Page {
     property alias searchField: searchField
     property alias queryUrl: view.queryUrl
 
-    header: PageHeader {
+    header: Components.HeaderBase {
         title: i18n.tr("Search")
         contents: TextField {
             id: searchField
             anchors.centerIn: parent
             width: Math.min(parent.width, units.gu(36))
-            
+
             // Disable predictive text
             inputMethodHints: Qt.ImhNoPredictiveText
 
@@ -37,7 +37,7 @@ Page {
         onAppDetailsRequired: {
             PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady)
             PackagesCache.getPackageDetails(appId)
-        }  
+        }
 
         Timer {
             id: searchTimer

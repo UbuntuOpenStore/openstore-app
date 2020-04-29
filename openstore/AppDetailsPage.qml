@@ -81,7 +81,7 @@ Page {
         return false
     }
 
-    header: PageHeader {
+    header: Components.HeaderBase {
         title: app ? app.name : i18n.tr("App details")
         enabled: !PlatformIntegration.clickInstaller.busy
 

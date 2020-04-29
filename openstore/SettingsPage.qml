@@ -22,7 +22,7 @@ import "Components" as Components
 Page {
     id: rootItem
 
-    header: PageHeader {
+    header: Components.HeaderBase {
         title: i18n.tr("Settings")
     }
 

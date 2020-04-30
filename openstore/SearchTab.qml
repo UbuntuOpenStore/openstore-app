@@ -50,4 +50,12 @@ Page {
             onTextChanged: searchTimer.restart()
         }
     }
+
+    Component.onCompleted: {
+        if (searchField.text == "") {
+            searchField.forceActiveFocus()
+        } else {
+            searchTimer.restart()
+        }
+    }
 }

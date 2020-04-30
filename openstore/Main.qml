@@ -387,6 +387,20 @@ MainView {
         }
     }
 
+    //Function from mainPage
+
+    function showCategory(name, id) {
+        pageStack.push(Qt.resolvedUrl("CategoriesTab.qml"))
+        categoryClicked(name, id)
+    }
+    function showSearch(text) {
+        pageStack.push(Qt.resolvedUrl("../SearchTab.qml"), {"searchText": text || ''});
+    }
+
+    function showSearchQuery(url) {
+        pageStack.push(Qt.resolvedUrl("../SearchTab.qml"), {"queryUrl": url || ''});
+    }
+
     // *** WORKAROUNDS ***
 
     // Placed in MainView for convenience.

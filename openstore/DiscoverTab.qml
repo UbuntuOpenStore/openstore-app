@@ -118,11 +118,38 @@ Page {
                     }
             */
                 }
+
+                ListItem {
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    width: parent.width
+                    //Used opacity to hide this until the model is ready. If visible is used, the ListView moves up on start
+                    opacity: highlightAppControl.ready ? 1 : 0
+
+                    ListItemLayout {
+                        anchors.fill: parent
+                        title.text: appModel.updatesAvailableCount > 0
+                            ? i18n.tr("Installed Apps") + i18n.tr(" (%1 update available)", " (%1 updates available)", appModel.updatesAvailableCount).arg(appModel.updatesAvailableCount)
+                            : i18n.tr("Installed Apps")
+                        title.color: theme.palette.normal.backgroundText
+                        ProgressionSlot {}
+
+                        Icon {
+                            name: "ubuntu-store-symbolic"
+                            SlotsLayout.position: SlotsLayout.Leading;
+                            width: units.gu(3)
+                            height: width
+                        }
+                    }
+
+                    onClicked: pageStack.push(Qt.resolvedUrl("InstalledAppsTab.qml"))
+                }
             }
 
             footer: ListItem {
+                id: footerItem
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: parent.width
+                visible: false
 
                 Rectangle {
                     width: parent.width
@@ -133,21 +160,19 @@ Page {
 
                 ListItemLayout {
                     anchors.fill: parent
-                    title.text: appModel.updatesAvailableCount > 0
-                        ? i18n.tr("Installed Apps") + i18n.tr(" (%1 update available)", " (%1 updates available)", appModel.updatesAvailableCount).arg(appModel.updatesAvailableCount)
-                        : i18n.tr("Installed Apps")
+                    title.text: i18n.tr("Browse Apps by Catergory")
                     title.color: theme.palette.normal.backgroundText
                     ProgressionSlot {}
 
                     Icon {
-                        name: "ubuntu-store-symbolic"
+                        name: "view-list-symbolic"
                         SlotsLayout.position: SlotsLayout.Leading;
                         width: units.gu(3)
                         height: width
                     }
                 }
 
-                onClicked: pageStack.push(Qt.resolvedUrl("InstalledAppsTab.qml"))
+                onClicked: pageStack.push(Qt.resolvedUrl("CategoriesTab.qml"))
             }
 
             model: discoverModel
@@ -157,13 +182,16 @@ Page {
                 title: model.name
                 subtitle: model.tagline
                 showProgression: model.queryUrl
-                onTitleClicked: if (model.queryUrl) { mainPage.showSearchQuery(model.queryUrl) }
+                onTitleClicked: if (model.queryUrl) { root.showSearchQuery(model.queryUrl) }
                 onAppTileClicked: bottomEdgeStack.push(Qt.resolvedUrl("../AppDetailsPage.qml"), { app: appItem })
 
                 viewModel: model.appIds
                 function packageInfoGetter(i) {
                     return discoverModel.getPackage(i)
                 }
+
+                //Show footer when delegate is ready
+                Component.onCompleted: view.footerItem.visible = true
             }
 
             //If we didn't get the app list on start, let's get it when we reconnect

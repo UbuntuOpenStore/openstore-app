@@ -501,7 +501,7 @@ Page {
                 enabled: !PlatformIntegration.clickInstaller.busy
                 onClicked: {
                     bottomEdgeStack.clear()
-                    mainPage.showSearch('author:' + app.author)
+                    root.showSearch('author:' + app.author)
                 }
                 ListItemLayout {
                     anchors.centerIn: parent
@@ -515,7 +515,7 @@ Page {
                 enabled: !PlatformIntegration.clickInstaller.busy
                 onClicked: {
                     bottomEdgeStack.clear()
-                    mainPage.showCategory(app.category, app.category)
+                    root.showCategory(app.category, app.category)
                 }
                 ListItemLayout {
                     anchors.centerIn: parent

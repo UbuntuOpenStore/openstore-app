@@ -14,6 +14,7 @@ class Ratings: public QObject
     Q_PROPERTY(unsigned int neutralCount READ neutralCount NOTIFY updated)
     Q_PROPERTY(unsigned int happyCount READ happyCount NOTIFY updated)
     Q_PROPERTY(unsigned int buggyCount READ buggyCount NOTIFY updated)
+    Q_PROPERTY(unsigned int totalCount READ totalCount NOTIFY updated)
 
 public:
     explicit Ratings(const QMap<QString, QVariant> &map, QObject * parent = Q_NULLPTR);
@@ -36,6 +37,7 @@ public:
     unsigned int neutralCount() const;
     unsigned int happyCount() const;
     unsigned int buggyCount() const;
+    unsigned int totalCount() const;
 
 Q_SIGNALS:
     void updated();

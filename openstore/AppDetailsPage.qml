@@ -171,6 +171,7 @@ Page {
             // Review
             ListItem {
                 height: units.gu(6)
+                visible: app.ratings.totalCount > 0
 
                 Row {
                     anchors.left: parent.left

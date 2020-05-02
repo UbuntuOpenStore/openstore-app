@@ -52,6 +52,11 @@ unsigned int Ratings::buggyCount() const
     return m_buggyCount;
 }
 
+unsigned int Ratings::totalCount() const
+{
+    return m_thumbsUpCount + m_thumbsDownCount + m_neutralCount + m_happyCount + m_buggyCount;
+}
+
 QString Ratings::ratingToString(enum Rating rating)
 {
     return stringToRatingMap().key(rating);

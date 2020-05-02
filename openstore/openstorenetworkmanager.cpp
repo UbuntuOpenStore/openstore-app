@@ -87,6 +87,12 @@ void OpenStoreNetworkManager::emitReplySignal(QNetworkReply *reply, const QStrin
     {
         disconnect(reply);
 
+        if (reply->error() != QNetworkReply::NoError)
+        {
+            // TODO add proper error handling
+            qWarning() << "network request failed with" << reply->errorString();
+        }
+
         OpenStoreReply r;
 
         r.signature = signature;

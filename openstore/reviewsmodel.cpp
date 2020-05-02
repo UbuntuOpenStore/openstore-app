@@ -113,7 +113,7 @@ void ReviewsModel::parseReply(OpenStoreReply reply)
 
     if (error.error != QJsonParseError::NoError)
     {
-        qWarning() << Q_FUNC_INFO << "Error parsing json";
+        qWarning() << Q_FUNC_INFO << "Error parsing json" << error.errorString();
         ReviewsModel::error(QString("Invalid response"));
         return;
     }

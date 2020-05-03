@@ -38,7 +38,7 @@ Column {
     property alias controlComponent: controlLoader.sourceComponent
 
     Item {
-        width: childrenRect.width
+        width: parent.width
         height: childrenRect.height
         Icon {
             id: emptyIcon

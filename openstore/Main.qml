@@ -29,10 +29,14 @@ MainView {
     applicationName: "openstore.openstore-team"
     anchorToKeyboard: true
 
-    width: units.gu(130)
+    //Width must be !isBigScreen for the PageStacks to resize correctly
+    width: units.gu(50)
     height: units.gu(75)
 
     property var mainPage
+    property bool isLandscape: width > height
+    property bool isBigScreen: width > units.gu(90)
+    property string mainStackPage
 
     readonly property string appColorText: UbuntuColors.porcelain
     readonly property string    appColor: "#292929"
@@ -99,8 +103,7 @@ MainView {
     }
 
     Component.onCompleted: {
-        mainPage = pageStack.push(Qt.resolvedUrl("DiscoverTab.qml"))
-
+        pageStack.push(Qt.resolvedUrl("DiscoverTab.qml"))
         PlatformIntegration.update()
 
         if (OpenStoreNetworkManager.isDifferentDomain) {
@@ -125,6 +128,7 @@ MainView {
     }
 
     property bool contentHubInstallInProgress: false
+
     Connections {
         target: ContentHub
 
@@ -196,10 +200,37 @@ MainView {
 
     PageStack {
         id: pageStack
+
+        width: isBigScreen && bottomEdgeStack.isStackVisible
+            ? parent.width - bottomEdgeStack.width
+            : 0 //Hack. Width must be inferior to the parent.width
+        anchors {
+            fill: isBigScreen && bottomEdgeStack.isStackVisible
+                ? undefined
+                : parent
+            left: parent.left
+            top: parent.top
+            bottom: parent.bottom
+        }
+
+        onDepthChanged: bottomEdgeStack.clear();
+        onCurrentPageChanged: mainStackPage = currentPage.objectName
     }
 
     Components.BottomEdgePageStack {
         id: bottomEdgeStack
+
+        width: isBigScreen && bottomEdgeStack.isStackVisible
+            ? units.gu(50)
+            : 0 //Hack. Width must be inferior to the parent.width
+        anchors {
+            fill: isBigScreen && bottomEdgeStack.isStackVisible
+                ? undefined
+                : parent
+            right: parent.right
+            top: parent.top
+            bottom: parent.bottom
+        }
     }
 
     /*
@@ -241,7 +272,7 @@ MainView {
             property alias filterString: filteredAppView.filterString
             property alias sortMode: filteredAppView.sortMode
             property alias category: filteredAppView.category
-            header: PageHeader {
+            header: Components.HeaderBase {
                 title: filteredAppPage.title
                 automaticHeight: false
             }
@@ -390,10 +421,17 @@ MainView {
     //Function from mainPage
 
     function showCategory(name, id) {
-        pageStack.push(Qt.resolvedUrl("CategoriesTab.qml"))
-        categoryClicked(name, id)
+        if (root.mainStackPage !== "discoverPage") {
+            pageStack.pop()
+        }
+        pageStack.push(Qt.resolvedUrl("CategoriesTab.qml"));
+        bottomEdgeStack.push(filteredAppPageComponent, {"title": name, "category": id});
+        //categoriesTab.categoryClicked(name, id)
     }
     function showSearch(text) {
+        if (root.mainStackPage !== "discoverPage") {
+            pageStack.pop()
+        }
         pageStack.push(Qt.resolvedUrl("../SearchTab.qml"), {"searchText": text || ''});
     }
 

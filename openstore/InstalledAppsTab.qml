@@ -54,19 +54,15 @@ Page {
 
     ScrollView {
         id: scrollView
-        width: Math.min(parent.width, units.gu(80))
+        width: parent.width
         anchors {
             top: parent.top
             bottom: parent.bottom
-            horizontalCenter: parent.horizontalCenter
         }
 
         ListView {
             id: view
             anchors.fill: parent
-
-            topMargin: scrollView.width == units.gu(80) ? units.gu(4) : 0
-            bottomMargin: scrollView.width == units.gu(80) ? units.gu(4) : units.gu(2)
 
             model: appModel
 

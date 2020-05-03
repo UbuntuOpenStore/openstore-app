@@ -25,6 +25,7 @@ import "Components" as Components
 
 Page {
     id: appDetailsPage
+    anchors.fill: parent
 
     property var app: null
     property var restrictedPermissions: [
@@ -515,13 +516,13 @@ Page {
                 enabled: !PlatformIntegration.clickInstaller.busy
                 onClicked: {
                     bottomEdgeStack.clear()
-                    root.showCategory(app.category, app.category)
+                    root.showCategory(localCat(app.category), app.category)
                 }
                 ListItemLayout {
                     anchors.centerIn: parent
                     // FIXME: app.category is not localized.
                     // TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-                    title.text: i18n.tr("Other apps in %1").arg(app.category)
+                    title.text: i18n.tr("Other apps in %1").arg(localCat(app.category))
                     ProgressionSlot {}
                 }
             }
@@ -821,5 +822,16 @@ Page {
         }
 
         return (j > 0)
+    }
+
+    function localCat(id) {
+        var localName = id;
+        for (var i=0; i < categoriesModel.rowCount(); i++) {
+            if (categoriesModel.data(categoriesModel.index(i,0),0) === id) {
+                localName = categoriesModel.data(categoriesModel.index(i,0),1)
+            }
+        }
+
+        return localName;
     }
 }

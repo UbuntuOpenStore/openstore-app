@@ -5,7 +5,8 @@ import OpenStore 1.0
 import "Components" as Components
 
 Page {
-    id: rootItem
+    id: searchPage
+    objectName: "searchPage"
 
     property alias searchText: searchField.text
     property alias searchField: searchField
@@ -32,7 +33,7 @@ Page {
     FilteredAppView {
         id: view
         anchors.fill: parent
-        anchors.topMargin: rootItem.header.height
+        anchors.topMargin: searchPage.header.height
 
         onAppDetailsRequired: {
             PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady)

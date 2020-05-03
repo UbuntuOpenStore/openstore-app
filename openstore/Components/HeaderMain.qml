@@ -27,6 +27,9 @@ HeaderBase {
 
                 onTriggered: {
                     Qt.inputMethod.hide();
+                    if (root.mainStackPage !== "discoverPage") {
+                        pageStack.pop()
+                    }
                     pageStack.push(Qt.resolvedUrl("../SettingsPage.qml"));
                 }
             },
@@ -37,6 +40,9 @@ HeaderBase {
 
                 onTriggered: {
                     Qt.inputMethod.hide();
+                    if (root.mainStackPage !== "discoverPage") {
+                        pageStack.pop()
+                    }
                     pageStack.push(Qt.resolvedUrl("../SearchTab.qml"));
                 }
             }

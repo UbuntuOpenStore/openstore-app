@@ -21,9 +21,11 @@ import OpenStore 1.0
 import "Components" as Components
 
 Page {
-    id: rootItem
+    id: discoverPage
+    objectName: "discoverPage"
 
     property DiscoverModel discoverModel: root.discoverModel
+    anchors.fill: parent
 
     header: Components.HeaderMain {
         id: mainHeader
@@ -141,38 +143,32 @@ Page {
                         }
                     }
 
-                    onClicked: pageStack.push(Qt.resolvedUrl("InstalledAppsTab.qml"))
+                    onClicked: pageStack.push(Qt.resolvedUrl("InstalledAppsTab.qml"), {})
                 }
-            }
 
-            footer: ListItem {
-                id: footerItem
-                anchors.horizontalCenter: parent.horizontalCenter
-                width: parent.width
-                visible: false
-
-                Rectangle {
+                ListItem {
+                    id: footerItem
+                    anchors.horizontalCenter: parent.horizontalCenter
                     width: parent.width
-                    height: units.dp(1)
-                    color: theme.palette.normal.base
-                    anchors.top: parent.top
-                }
+                    //Used opacity to hide this until the model is ready. If visible is used, the ListView moves up on start
+                    opacity: highlightAppControl.ready ? 1 : 0
 
-                ListItemLayout {
-                    anchors.fill: parent
-                    title.text: i18n.tr("Browse Apps by Catergory")
-                    title.color: theme.palette.normal.backgroundText
-                    ProgressionSlot {}
+                    ListItemLayout {
+                        anchors.fill: parent
+                        title.text: i18n.tr("Browse Apps by Catergory")
+                        title.color: theme.palette.normal.backgroundText
+                        ProgressionSlot {}
 
-                    Icon {
-                        name: "view-list-symbolic"
-                        SlotsLayout.position: SlotsLayout.Leading;
-                        width: units.gu(3)
-                        height: width
+                        Icon {
+                            name: "view-list-symbolic"
+                            SlotsLayout.position: SlotsLayout.Leading;
+                            width: units.gu(3)
+                            height: width
+                        }
                     }
-                }
 
-                onClicked: pageStack.push(Qt.resolvedUrl("CategoriesTab.qml"))
+                    onClicked: pageStack.push(Qt.resolvedUrl("CategoriesTab.qml"))
+                }
             }
 
             model: discoverModel
@@ -183,15 +179,13 @@ Page {
                 subtitle: model.tagline
                 showProgression: model.queryUrl
                 onTitleClicked: if (model.queryUrl) { root.showSearchQuery(model.queryUrl) }
+                //onAppTileClicked: bottomEdgeStack.push(Qt.resolvedUrl("../AppDetailsPage.qml"), { app: appItem })
                 onAppTileClicked: bottomEdgeStack.push(Qt.resolvedUrl("../AppDetailsPage.qml"), { app: appItem })
 
                 viewModel: model.appIds
                 function packageInfoGetter(i) {
                     return discoverModel.getPackage(i)
                 }
-
-                //Show footer when delegate is ready
-                Component.onCompleted: view.footerItem.visible = true
             }
 
             //If we didn't get the app list on start, let's get it when we reconnect

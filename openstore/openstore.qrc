@@ -9,7 +9,6 @@
         <file>InstalledAppsTab.qml</file>
         <file>Components/EmptyState.qml</file>
         <file>Components/SectionDivider.qml</file>
-        <file>MainPage.qml</file>
         <file>SearchTab.qml</file>
         <file>Components/HookIcon.qml</file>
         <file>Components/BottomEdgePageStack.qml</file>

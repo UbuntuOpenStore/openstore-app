@@ -1,5 +1,5 @@
 {
-  "template": "qmake",
+  "builder": "qmake",
   "kill": "openstore",
   "dependencies_target": [
     "libclick-0.4-dev",

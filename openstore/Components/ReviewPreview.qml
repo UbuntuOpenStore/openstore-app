@@ -26,6 +26,18 @@ ListItem {
     property var reviews
     readonly property int count: reviews.reviewCount
     readonly property int maxLength: 512
+    property var ownReview: null
+    property bool ready: false
+
+    Component.onCompleted: reviews.getOwnReview(root.apiKey)
+
+    Connections {
+        target: reviews
+        onOwnReviewResponse: {
+            ownReview = 'body' in review ? review : null
+            ready = true
+        }
+    }
 
     function getRatingEmoji(rating) {
         switch(rating) {
@@ -94,14 +106,12 @@ ListItem {
     }
 
     Component {
-         id: composeDialog
-         Dialog {
-             id: dialogue
-             readonly property var buttonWidth: (textArea.width - 4*units.gu(2)) / 5
-             title: ready ? i18n.tr("Rate this app") : i18n.tr("Loading...")
-             Component.onCompleted: reviews.getOwnReview(root.apiKey)
-             property var ownReview: null
-             property bool ready: false
+        id: composeDialog
+        Dialog {
+            id: dialogue
+            readonly property var buttonWidth: (textArea.width - 4*units.gu(2)) / 5
+            title: ready ? i18n.tr("Rate this app") : i18n.tr("Loading...")
+            Component.onCompleted: reviews.getOwnReview(root.apiKey)
 
             function postReview(rating, body) {
                 if (ownReview === null) {
@@ -112,39 +122,37 @@ ListItem {
                 }
             }
 
-             Connections {
-                 target: reviews
-                 onOwnReviewResponse: {
-                     ownReview = 'body' in review ? review : null
-                     ready = true
-                 }
-             }
-             TextArea {
-                 id: textArea
-                 readOnly: !ready
-                 text: ownReview !== null ? ownReview.body : ""
-                 placeholderText: i18n.tr("(Optional) Write a review")
-             }
-             Label {
-                 text: i18n.tr("%1/%2 characters").arg(textArea.text.length).arg(maxLength)
-                 textSize: Label.Small
-                 color: textArea.text.length > maxLength ? UbuntuColors.red : theme.palette.normal.base
-             }
-             Item {
-                 width: parent.width
-                 height: buttonWidth
-                 visible: !ready
-                 ActivityIndicator {
-                     running: !ready
-                     visible: !ready
-                     anchors.centerIn: parent
-                 }
-             }
-             Row {
-                 spacing: units.gu(2)
-                 anchors.horizontalCenter: parent.horizontalCenter
-                 visible: ready
-                 Button {
+            TextArea {
+                id: textArea
+                readOnly: !ready
+                text: ownReview !== null ? ownReview.body : ""
+                placeholderText: i18n.tr("(Optional) Write a review")
+            }
+
+            Label {
+                text: i18n.tr("%1/%2 characters").arg(textArea.text.length).arg(maxLength)
+                textSize: Label.Small
+                color: textArea.text.length > maxLength ? UbuntuColors.red : theme.palette.normal.base
+            }
+
+            Item {
+                width: parent.width
+                height: buttonWidth
+                visible: !ready
+
+                ActivityIndicator {
+                    running: !ready
+                    visible: !ready
+                    anchors.centerIn: parent
+                }
+            }
+
+            Row {
+                spacing: units.gu(2)
+                anchors.horizontalCenter: parent.horizontalCenter
+                visible: ready
+
+                Button {
                     color: theme.palette.normal.background
                     text: "👍"
                     width: buttonWidth
@@ -154,8 +162,9 @@ ListItem {
                         PopupUtils.close(dialogue)
                         postReview(0, textArea.displayText)
                     }
-                 }
-                 Button {
+                }
+
+                Button {
                     color: theme.palette.normal.background
                     text: "👎"
                     width: buttonWidth
@@ -165,8 +174,9 @@ ListItem {
                         PopupUtils.close(dialogue)
                         postReview(1, textArea.displayText)
                     }
-                 }
-                 Button {
+                }
+
+                Button {
                     color: theme.palette.normal.background
                     text: "🙂"
                     width: buttonWidth
@@ -176,8 +186,9 @@ ListItem {
                         PopupUtils.close(dialogue)
                         postReview(2, textArea.displayText)
                     }
-                 }
-                 Button {
+                }
+
+                Button {
                     color: theme.palette.normal.background
                     text: "😐"
                     width: buttonWidth
@@ -187,8 +198,9 @@ ListItem {
                         PopupUtils.close(dialogue)
                         postReview(3, textArea.displayText)
                     }
-                 }
-                 Button {
+                }
+
+                Button {
                     color: theme.palette.normal.background
                     text: "🐛"
                     width: buttonWidth
@@ -198,13 +210,14 @@ ListItem {
                         PopupUtils.close(dialogue)
                         postReview(4, textArea.displayText)
                     }
-                 }
-             }
-             Button {
-                 text: i18n.tr("Cancel")
-                 onClicked: PopupUtils.close(dialogue)
-             }
-         }
+                }
+            }
+
+            Button {
+                text: i18n.tr("Cancel")
+                onClicked: PopupUtils.close(dialogue)
+            }
+        }
     }
 
     Column {
@@ -235,7 +248,17 @@ ListItem {
             }
             Button {
                 id: addReviewButton
-                text: app.installed ? i18n.tr("Add review") : i18n.tr("Install to add review")
+                text: {
+                    if (app.installed) {
+                        if (ownReview) {
+                            return i18n.tr("Edit review");
+                        }
+
+                        return i18n.tr("Add review");
+                    }
+
+                    return i18n.tr("Install to add review");
+                }
                 visible: root.apiKey !== ""
                 onClicked: PopupUtils.open(composeDialog)
                 color: UbuntuColors.green

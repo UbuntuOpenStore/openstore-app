@@ -16,8 +16,8 @@
 
 import QtQuick 2.4
 import Ubuntu.Components 1.3
-import QtWebEngine 1.5
 import OpenStore 1.0
+import QtWebEngine 1.7
 
 Page {
     id: rootItem
@@ -31,40 +31,33 @@ Page {
 
     WebEngineView {
         id: webView
-        anchors.top: header.bottom
-        anchors.bottom: parent.bottom
-        anchors.left: parent.left
-        anchors.right: parent.right
+        anchors {
+            top: header.bottom
+            bottom: parent.bottom
+            left: parent.left
+            right: parent.right
+        }
+
         zoomFactor: units.gu(1) / 8
+
         url: baseUrl + "login"
+
         settings {
             localStorageEnabled: false
-         }
-         profile {
-             persistentCookiesPolicy: WebEngineProfile.NoPersistentCookies
-         }
-
-         property bool reloaded: false
+        }
+        profile {
+            offTheRecord: true
+            httpUserAgent: 'OpenStore App'
+        }
 
         onUrlChanged: {
-            if (url == baseUrl + "manage") {
-                webView.opacity = 0
-                function Timer() {
-                    return Qt.createQmlObject("import QtQuick 2.0; Timer {}", root)
-                }
-                var timer = new Timer()
-                timer.interval = 1000
-                timer.repeat = false
+            console.log(url);
 
-                // TODO use this: https://gitlab.com/theopenstore/openstore-api/-/merge_requests/20
-                timer.triggered.connect(function () {
-                    runJavaScript('document.querySelector(".p-button--neutral").click(); setTimeout(function(){window.location += "/apikey#"+ document.querySelectorAll(".apikey span")[1].innerHTML;},100);');
-                })
-                timer.start()
-            }
-            else if (("" + url).startsWith(baseUrl + "manage/apikey")) {
-                root.apiKey = ("" + url).replace(baseUrl + "manage/apikey#","")
-                bottomEdgeStack.pop()
+            var strUrl = url.toString();
+            var checkUrl = baseUrl + 'logged-in?apiKey=';
+            if (strUrl.indexOf(checkUrl) == 0) {
+                root.apiKey = strUrl.replace(checkUrl, '');
+                bottomEdgeStack.pop();
             }
         }
     }

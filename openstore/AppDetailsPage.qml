@@ -28,6 +28,8 @@ Page {
     anchors.fill: parent
 
     property var app: null
+    property var oldRating: null
+    property var newRating: null
     property var restrictedPermissions: [
         'bluetooth',
         'calendar',
@@ -80,6 +82,21 @@ Page {
                 return true
         }
         return false
+    }
+
+    // Adjust the rating when the user updates their review without making another network reqeust
+    function modifyRatingCount(rating, count) {
+        if (oldRating >= 0 && oldRating != newRating) {
+            if (oldRating == rating) {
+                return count - 1;
+            }
+
+            if (newRating == rating) {
+                return count + 1;
+            }
+        }
+
+        return count;
     }
 
     function getNumberShortForm(number) {
@@ -183,32 +200,32 @@ Page {
 
                     Components.ReviewItem {
                         reviewIcon: "../Assets/thumbup.svg"
-                        reviewNumber: app.ratings.thumbsUpCount
-                        enabled: app.ratings.thumbsUpCount > 0
+                        reviewNumber: modifyRatingCount(0, app.ratings.thumbsUpCount)
+                        enabled: modifyRatingCount(0, app.ratings.thumbsUpCount) > 0
                     }
 
                     Components.ReviewItem {
                         reviewIcon: "../Assets/thumbdown.svg"
-                        reviewNumber: app.ratings.thumbsDownCount
-                        enabled: app.ratings.thumbsDownCount > 0
+                        reviewNumber: modifyRatingCount(1, app.ratings.thumbsDownCount)
+                        enabled: modifyRatingCount(1, app.ratings.thumbsDownCount) > 0
                     }
 
                     Components.ReviewItem {
                         reviewIcon: "../Assets/happy.svg"
-                        reviewNumber: app.ratings.happyCount
-                        enabled: app.ratings.happyCount > 0
+                        reviewNumber: modifyRatingCount(3, app.ratings.happyCount)
+                        enabled: modifyRatingCount(3, app.ratings.happyCount) > 0
                     }
 
                     Components.ReviewItem {
                         reviewIcon: "../Assets/neutral.svg"
-                        reviewNumber: app.ratings.neutralCount
-                        enabled: app.ratings.neutralCount > 0
+                        reviewNumber: modifyRatingCount(2, app.ratings.neutralCount)
+                        enabled: modifyRatingCount(2, app.ratings.neutralCount) > 0
                     }
 
                     Components.ReviewItem {
                         reviewIcon: "../Assets/buggy.svg"
-                        reviewNumber: app.ratings.buggyCount
-                        enabled: app.ratings.buggyCount > 0
+                        reviewNumber: modifyRatingCount(4, app.ratings.buggyCount)
+                        enabled: modifyRatingCount(4, app.ratings.buggyCount) > 0
                     }
                 }
             }
@@ -428,6 +445,11 @@ Page {
 
             Components.ReviewPreview {
                 reviews: app.reviews
+
+                onReviewUpdated: {
+                    appDetailsPage.oldRating = oldRating;
+                    appDetailsPage.newRating = newRating;
+                }
             }
 
             ListItem {

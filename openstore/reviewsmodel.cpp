@@ -165,11 +165,12 @@ void ReviewsModel::handleOwnReview(const QJsonObject &data)
     QJsonArray reviews = data["reviews"].toArray();
     if (reviews.count() > 0)
     {
-        Q_EMIT ownReviewResponse(reviews.first().toObject());
+        QJsonObject review(reviews.first().toObject());
+        Q_EMIT ownReviewResponse(review, Ratings::ratingFromString(review["rating"].toString()));
     }
     else
     {
-        Q_EMIT ownReviewResponse(QJsonObject());
+        Q_EMIT ownReviewResponse(QJsonObject(), Ratings::Rating::RatingNeutral);
     }
 }
 

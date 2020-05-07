@@ -27,14 +27,21 @@ ListItem {
     readonly property int count: reviews.reviewCount
     readonly property int maxLength: 512
     property var ownReview: null
+    property var ownRating: null
     property bool ready: false
+
+    signal reviewUpdated(var oldRating, var newRating)
 
     Connections {
         target: reviews
 
         onOwnReviewResponse: {
-            ownReview = 'body' in review ? review : null
-            ready = true
+            ownReview = 'body' in review ? review : null;
+
+            if (!ready) {
+                ready = true;
+                ownRating = ownReview ? rating : null; // Only set this on the first load
+            }
         }
 
         onReviewPosted: PopupUtils.open(successPostDialog)
@@ -119,9 +126,11 @@ ListItem {
 
             function postReview(rating, body) {
                 if (ownReview === null) {
+                    reviewUpdated(null, rating);
                     app.review(body, rating, root.apiKey)
                 }
                 else {
+                    reviewUpdated(ownRating, rating);
                     app.editReview(body, rating, root.apiKey)
                 }
             }

@@ -44,7 +44,7 @@ Q_SIGNALS:
     void refresh();
     void error(QString text);
     void reviewPosted();
-    void ownReviewResponse(QJsonObject review);
+    void ownReviewResponse(QJsonObject review, int rating);
 
 private Q_SLOTS:
     void parseReply(OpenStoreReply reply);

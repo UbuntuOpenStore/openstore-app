@@ -41,13 +41,20 @@ ListItem {
 
     function getRatingEmoji(rating) {
         switch(rating) {
-            case 0: return "👍"
-            case 1: return "👎"
-            case 2: return "🙂"
-            case 3: return "😐"
-            case 4: return "🐛"
+            case 0:
+              return "../Assets/thumbup.svg"
+            case 1:
+              return "../Assets/thumbdown.svg"
+            case 2:
+              return "../Assets/happy.svg"
+            case 3:
+              return "../Assets/neutral.svg"
+            case 4:
+              return "../Assets/buggy.svg"
         }
-        return "😐"
+
+        console.log("DEBUGGING: getRatingEmoji returned unexpected rating", rating)
+        return "../Assets/neutral.svg"
     }
 
     property string errorText: i18n.tr("Something went wrong...")
@@ -294,11 +301,15 @@ ListItem {
                             UbuntuShape {
                                 width: units.gu(4)
                                 height: units.gu(4)
-                                aspect: UbuntuShape.DropShadow
-                                Label {
-                                    text: getRatingEmoji(review.rating)
-                                    textSize: Label.Large
+                                //aspect: UbuntuShape.DropShadow
+
+                                Icon {
+                                    width: units.gu(3)
+                                    height: width
                                     anchors.centerIn: parent
+                                    asynchronous: true
+                                    color: theme.palette.normal.baseText
+                                    source: getRatingEmoji(review.rating)
                                 }
                             }
                             Column {

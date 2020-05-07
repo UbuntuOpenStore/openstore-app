@@ -175,39 +175,40 @@ Page {
                 visible: app.ratings.totalCount > 0
 
                 Row {
-                    anchors.left: parent.left
-                    anchors.leftMargin: units.gu(2)
-                    anchors.verticalCenter: parent.verticalCenter
+                    anchors {
+                        horizontalCenter: parent.horizontalCenter
+                        verticalCenter: parent.verticalCenter
+                    }
                     spacing: units.gu(5)
 
                     Components.ReviewItem {
-                        reviewIcon: "👍"
+                        reviewIcon: "../Assets/thumbup.svg"
                         reviewNumber: app.ratings.thumbsUpCount
-                        visible: app.ratings.thumbsUpCount > 0
+                        enabled: app.ratings.thumbsUpCount > 0
                     }
 
                     Components.ReviewItem {
-                        reviewIcon: "👎"
+                        reviewIcon: "../Assets/thumbdown.svg"
                         reviewNumber: app.ratings.thumbsDownCount
-                        visible: app.ratings.thumbsDownCount > 0
+                        enabled: app.ratings.thumbsDownCount > 0
                     }
 
                     Components.ReviewItem {
-                        reviewIcon: "🙂"
+                        reviewIcon: "../Assets/happy.svg"
                         reviewNumber: app.ratings.happyCount
-                        visible: app.ratings.happyCount > 0
+                        enabled: app.ratings.happyCount > 0
                     }
 
                     Components.ReviewItem {
-                        reviewIcon: "😐"
+                        reviewIcon: "../Assets/neutral.svg"
                         reviewNumber: app.ratings.neutralCount
-                        visible: app.ratings.neutralCount > 0
+                        enabled: app.ratings.neutralCount > 0
                     }
 
                     Components.ReviewItem {
-                        reviewIcon: "🐛"
+                        reviewIcon: "../Assets/buggy.svg"
                         reviewNumber: app.ratings.buggyCount
-                        visible: app.ratings.buggyCount > 0
+                        enabled: app.ratings.buggyCount > 0
                     }
                 }
             }

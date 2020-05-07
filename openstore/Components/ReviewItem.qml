@@ -18,7 +18,11 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 
 Item {
-    width: units.gu(3); height: width
+    property bool enabled: true
+
+    width: units.gu(3)
+    height: width
+    opacity: enabled ? 1 : 0.4
 
     property string reviewIcon
     property int reviewNumber
@@ -28,10 +32,13 @@ Item {
         height: width
         spacing: units.gu(0.5)
 
-        Label {
-            width: units.gu(3); height: width
-            textSize: Label.Large
-            text: reviewIcon
+        Icon {
+            width: units.gu(3)
+            height: width
+            anchors.verticalCenter: parent.verticalCenter
+            asynchronous: true
+            color: theme.palette.normal.baseText
+            source: reviewIcon
         }
 
         Label {

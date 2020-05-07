@@ -30,5 +30,18 @@
         <file>Components/ScreenshotsCarousel.qml</file>
         <file>Components/ReviewItem.qml</file>
         <file>Components/UninstallPopup.qml</file>
+        <file>Components/MostRated.qml</file>
+        <file>Assets/buggy.svg</file>
+        <file>Assets/buggy-full.svg</file>
+        <file>Assets/happy.svg</file>
+        <file>Assets/happy-full.svg</file>
+        <file>Assets/neutral.svg</file>
+        <file>Assets/neutral-full.svg</file>
+        <file>Assets/thumbdown.svg</file>
+        <file>Assets/thumbdown-full.svg</file>
+        <file>Assets/thumbup.svg</file>
+        <file>Assets/thumbup-full.svg</file>
+        <file>Assets/thumbdown-general.svg</file>
+        <file>Assets/thumbup-general.svg</file>
     </qresource>
 </RCC>

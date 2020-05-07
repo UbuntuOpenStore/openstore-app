@@ -42,7 +42,7 @@ Column {
         rightMargin: units.gu(2)
 
         cacheBuffer: 0
-        clip: true
+        clip: false
 
         height: count > 0 ? rootItem.tilesWidth * 1.5 + units.gu(5) : 0
         visible: count > 0

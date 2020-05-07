@@ -51,9 +51,9 @@ ListItem {
               return "../Assets/thumbup.svg"
             case 1:
               return "../Assets/thumbdown.svg"
-            case 2:
-              return "../Assets/happy.svg"
             case 3:
+              return "../Assets/happy.svg"
+            case 2:
               return "../Assets/neutral.svg"
             case 4:
               return "../Assets/buggy.svg"
@@ -176,7 +176,7 @@ ListItem {
                     emoji: "../Assets/happy.svg"
                     onClicked: {
                         PopupUtils.close(dialogue)
-                        postReview(2, textArea.displayText)
+                        postReview(3, textArea.displayText)
                     }
                 }
 
@@ -184,7 +184,7 @@ ListItem {
                     emoji: "../Assets/neutral.svg"
                     onClicked: {
                         PopupUtils.close(dialogue)
-                        postReview(3, textArea.displayText)
+                        postReview(2, textArea.displayText)
                     }
                 }
 

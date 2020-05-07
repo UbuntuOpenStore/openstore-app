@@ -31,6 +31,7 @@
         <file>Components/ReviewItem.qml</file>
         <file>Components/UninstallPopup.qml</file>
         <file>Components/MostRated.qml</file>
+        <file>Components/ButtonEmoji.qml</file>
         <file>Assets/buggy.svg</file>
         <file>Assets/buggy-full.svg</file>
         <file>Assets/happy.svg</file>

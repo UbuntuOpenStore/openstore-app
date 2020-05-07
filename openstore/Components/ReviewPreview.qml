@@ -156,60 +156,40 @@ ListItem {
                 anchors.horizontalCenter: parent.horizontalCenter
                 visible: ready
 
-                Button {
-                    color: theme.palette.normal.background
-                    text: "👍"
-                    width: buttonWidth
-                    height: width
-                    enabled: textArea.text.length <= maxLength
+                ButtonEmoji {
+                    emoji: "../Assets/thumbup.svg"
                     onClicked: {
                         PopupUtils.close(dialogue)
                         postReview(0, textArea.displayText)
                     }
                 }
 
-                Button {
-                    color: theme.palette.normal.background
-                    text: "👎"
-                    width: buttonWidth
-                    height: width
-                    enabled: textArea.text.length <= maxLength
+                ButtonEmoji {
+                    emoji: "../Assets/thumbdown.svg"
                     onClicked: {
                         PopupUtils.close(dialogue)
                         postReview(1, textArea.displayText)
                     }
                 }
 
-                Button {
-                    color: theme.palette.normal.background
-                    text: "🙂"
-                    width: buttonWidth
-                    height: width
-                    enabled: textArea.text.length <= maxLength
+                ButtonEmoji {
+                    emoji: "../Assets/happy.svg"
                     onClicked: {
                         PopupUtils.close(dialogue)
                         postReview(2, textArea.displayText)
                     }
                 }
 
-                Button {
-                    color: theme.palette.normal.background
-                    text: "😐"
-                    width: buttonWidth
-                    height: width
-                    enabled: textArea.text.length <= maxLength
+                ButtonEmoji {
+                    emoji: "../Assets/neutral.svg"
                     onClicked: {
                         PopupUtils.close(dialogue)
                         postReview(3, textArea.displayText)
                     }
                 }
 
-                Button {
-                    color: theme.palette.normal.background
-                    text: "🐛"
-                    width: buttonWidth
-                    height: width
-                    enabled: textArea.text.length <= maxLength
+                ButtonEmoji {
+                    emoji: "../Assets/buggy.svg"
                     onClicked: {
                         PopupUtils.close(dialogue)
                         postReview(4, textArea.displayText)

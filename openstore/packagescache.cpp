@@ -51,7 +51,7 @@ void PackagesCache::getPackageDetails(const QString &appId)
             QJsonDocument jsonDoc = QJsonDocument::fromJson(reply.data, &error);
 
             if (error.error != QJsonParseError::NoError) {
-                qWarning() << Q_FUNC_INFO << "Error parsing json";
+                qWarning() << Q_FUNC_INFO << "Error parsing json" << error.errorString();
                 return;
             }
 
@@ -89,7 +89,7 @@ void PackagesCache::updateCacheRevisions()
         QJsonDocument jsonDoc = QJsonDocument::fromJson(reply.data, &error);
 
         if (error.error != QJsonParseError::NoError) {
-            qWarning() << Q_FUNC_INFO << "Error parsing json";
+            qWarning() << Q_FUNC_INFO << "Error parsing json" << error.errorString();
             return;
         }
 

@@ -41,6 +41,8 @@ MainView {
     readonly property string appColorText: UbuntuColors.porcelain
     readonly property string    appColor: "#292929"
 
+    property alias apiKey: settings.apiKey
+
     function slot_packageFetchError(appId) {
         PackagesCache.packageDetailsReady.disconnect(slot_packageDetailsReady);
         PackagesCache.packageFetchError.disconnect(slot_packageFetchError);
@@ -187,6 +189,7 @@ MainView {
         id: settings
         property bool firstStart: true
         property bool hideNsfw: true
+        property string apiKey: ""
 
         Component.onCompleted: OpenStoreNetworkManager.showNsfw = !settings.hideNsfw
     }

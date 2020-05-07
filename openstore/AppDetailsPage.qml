@@ -82,6 +82,16 @@ Page {
         return false
     }
 
+    function getNumberShortForm(number) {
+        if (number > 999999) {
+            return Math.floor(number/1000000) + "M"
+        }
+        else if (number > 999) {
+            return Math.floor(number/1000) + "K"
+        }
+        else return number + ""
+    }
+
     header: Components.HeaderBase {
         title: app ? app.name : i18n.tr("App details")
         enabled: !PlatformIntegration.clickInstaller.busy
@@ -118,6 +128,7 @@ Page {
 
             ListItem {
                 height: units.gu(16)
+                divider.visible: false
 
                 ListItemLayout {
                     anchors.fill: parent
@@ -154,6 +165,49 @@ Page {
                             sourceSize.height: parent.height
                             source: app ? app.icon : ""
                         }
+                    }
+                }
+            }
+
+            // Review
+            ListItem {
+                height: units.gu(6)
+                visible: app.ratings.totalCount > 0
+
+                Row {
+                    anchors.left: parent.left
+                    anchors.leftMargin: units.gu(2)
+                    anchors.verticalCenter: parent.verticalCenter
+                    spacing: units.gu(5)
+
+                    Components.ReviewItem {
+                        reviewIcon: "👍"
+                        reviewNumber: app.ratings.thumbsUpCount
+                        visible: app.ratings.thumbsUpCount > 0
+                    }
+
+                    Components.ReviewItem {
+                        reviewIcon: "👎"
+                        reviewNumber: app.ratings.thumbsDownCount
+                        visible: app.ratings.thumbsDownCount > 0
+                    }
+
+                    Components.ReviewItem {
+                        reviewIcon: "🙂"
+                        reviewNumber: app.ratings.happyCount
+                        visible: app.ratings.happyCount > 0
+                    }
+
+                    Components.ReviewItem {
+                        reviewIcon: "😐"
+                        reviewNumber: app.ratings.neutralCount
+                        visible: app.ratings.neutralCount > 0
+                    }
+
+                    Components.ReviewItem {
+                        reviewIcon: "🐛"
+                        reviewNumber: app.ratings.buggyCount
+                        visible: app.ratings.buggyCount > 0
                     }
                 }
             }
@@ -369,6 +423,10 @@ Page {
                         name: descLayout.showAll ? "go-up" : "go-down"
                     }
                 }
+            }
+
+            Components.ReviewPreview {
+                reviews: app.reviews
             }
 
             ListItem {

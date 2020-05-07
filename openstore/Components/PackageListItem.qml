@@ -31,15 +31,26 @@ ListItem {
         }
         summary.wrapMode: Text.WrapAtWordBoundaryOrAnywhere
 
-        UbuntuShape {
+        Column {
+            width: appIconShape.width
+            height: appIconShape.height + units.gu(1)
             SlotsLayout.position: SlotsLayout.Leading
-            aspect: UbuntuShape.Flat
-            image: Image {
-                source: rootItem.appItem.icon
-                sourceSize.width: parent.width
-                sourceSize.height: parent.height
-                height: parent.height
-                width: parent.width
+            spacing: units.gu(0.6)
+
+            UbuntuShape {
+                id: appIconShape
+                aspect: UbuntuShape.Flat
+                image: Image {
+                    source: rootItem.appItem.icon
+                    sourceSize.width: parent.width
+                    sourceSize.height: parent.height
+                    height: parent.height
+                    width: parent.width
+                }
+            }
+
+            RatingsRow {
+                width: appIconShape.width
             }
         }
 

@@ -44,6 +44,8 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
         return item.appId;
     case RoleIcon:
         return item.icon;
+    case RoleRatings:
+        return QVariant::fromValue<Ratings*>(item.ratings);
     case RoleTagline:
         return item.tagline;
     case RoleInstalled:
@@ -62,6 +64,7 @@ QHash<int, QByteArray> SearchModel::roleNames() const
     roles.insert(RoleName, "name");
     roles.insert(RoleAppId, "appId");
     roles.insert(RoleIcon, "icon");
+    roles.insert(RoleRatings, "ratings");
     roles.insert(RoleTagline, "tagline");
     roles.insert(RoleInstalled, "installed");
     roles.insert(RoleUpdateAvailable, "updateAvailable");
@@ -126,7 +129,7 @@ void SearchModel::parseReply(OpenStoreReply reply)
     QJsonDocument jsonDoc = QJsonDocument::fromJson(reply.data, &error);
 
     if (error.error != QJsonParseError::NoError) {
-        qWarning() << Q_FUNC_INFO << "Error parsing json";
+        qWarning() << Q_FUNC_INFO << "Error parsing json" << error.errorString();
         return;
     }
 
@@ -152,6 +155,7 @@ void SearchModel::parseReply(OpenStoreReply reply)
         item.tagline = pkgMap.value("tagline").toString();
         item.icon = pkgMap.value("icon").toString();
         item.types = pkgMap.value("types").toStringList();
+        item.ratings = new Ratings(pkgMap.value("ratings").toMap());
 
         item.updateAvailable = bool(PackagesCache::instance()->getRemoteAppRevision(item.appId) > PackagesCache::instance()->getLocalAppRevision(item.appId));
         item.installed = !PlatformIntegration::instance()->appVersion(item.appId).isNull();

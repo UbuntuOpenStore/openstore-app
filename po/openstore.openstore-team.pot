@@ -18,311 +18,314 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:86
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppLocalDetailsPage.qml:33
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:95
+#: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:33
 msgid "App details"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:93
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:312
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppLocalDetailsPage.qml:40
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Components/UninstallPopup.qml:33
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:102
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:365
+#: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:40
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/UninstallPopup.qml:33
 msgid "Remove"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:128
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Components/PackageListItem.qml:17
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Components/PackageTile.qml:60
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:138
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:17
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:70
 msgid "App"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:129
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Components/HookIcon.qml:50
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Components/PackageListItem.qml:18
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Components/PackageTile.qml:61
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:139
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:18
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:71
 msgid "Scope"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:130
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Components/PackageListItem.qml:19
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Components/PackageTile.qml:62
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:140
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:19
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:72
 msgid "Web App"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:131
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Components/PackageListItem.qml:20
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Components/PackageTile.qml:63
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:141
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:20
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:73
 msgid "Web App+"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:166
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:219
+
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:191
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Components/HighlightedApp.qml:100
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:244
 msgid "Open"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:207
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:260
 msgid "The OpenStore is installed!"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:216
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:269
 msgid "Install stable version"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:219
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:272
 msgid "Upgrade"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:222
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Main.qml:355
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:275
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:323
 msgid "Install"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:298
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:351
 msgid "This app is not compatible with your system."
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:331
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:384
+
 msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:334
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:387
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:359
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:412
+
 msgid "Description"
 msgstr ""
 
 #. TRANSLATORS: Title of the changelog section
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:382
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:439
 msgid "What's New"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:401
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:458
 msgid "Packager/Publisher"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:402
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:459
 msgid "OpenStore team"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:410
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppLocalDetailsPage.qml:115
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:467
+#: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:115
 msgid "Installed version"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:419
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:476
 msgid "Latest available version"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:428
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:485
 msgid "First released"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:439
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:496
 msgid "Downloads of the latest version"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:448
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:505
 msgid "Total downloads"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:457
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:514
 msgid "License"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:458
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:515
 msgid "N/A"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:468
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/SettingsPage.qml:106
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:525
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:138
 msgid "Source Code"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:481
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:538
 msgid "Get support for this app"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:494
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:551
+
 msgid "Donate to support this app"
 msgstr ""
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:510
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:567
 #, qt-format
 msgid "More from %1"
 msgstr ""
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:525
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:582
 #, qt-format
 msgid "Other apps in %1"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:531
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:588
 msgid "Package contents"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:624
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:681
 msgid "Permissions"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:629
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:686
 msgid "Accounts"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:630
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:687
 msgid "Audio"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:631
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:688
 msgid "Bluetooth"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:632
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:689
 msgid "Calendar"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:633
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:690
 msgid "Camera"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:634
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:691
 msgid "Connectivity"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:635
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:692
 msgid "Contacts"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:636
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:693
 msgid "Content Exchange Source"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:637
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:694
 msgid "Content Exchange"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:638
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:695
 msgid "Debug"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:639
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:696
 msgid "History"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:640
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:697
 msgid "In App Purchases"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:641
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:698
 msgid "Keep Display On"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:642
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:699
 msgid "Location"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:643
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:700
 msgid "Microphone"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:644
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:701
 msgid "Read Music Files"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:645
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:702
 msgid "Music Files"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:646
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:703
 msgid "Networking"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:647
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:704
 msgid "Read Picture Files"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:648
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:705
 msgid "Picture Files"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:649
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:706
 msgid "Push Notifications"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:650
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:707
 msgid "Sensors"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:651
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:708
 msgid "User Metrics"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:652
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:709
 msgid "Read Video Files"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:653
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:710
 msgid "Video Files"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:654
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:711
 msgid "Video"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:655
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:712
 msgid "Webview"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:659
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:716
 msgid "Full System Access"
 msgstr ""
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:664
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:721
 msgid "none required"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:700
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:757
 msgid "Read paths"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:717
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:774
 msgid "Write paths"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:732
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:789
 msgid "Donating"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:733
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:790
 msgid "Would you like to support this app with a donation to the developer?"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:739
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:796
 msgid "Donate now"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:747
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:804
 msgid "Maybe later"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:760
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Main.qml:294
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:817
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:262
 msgid "Warning"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:761
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:818
 msgid ""
 "This app has access to restricted parts of the system and all of your data. "
 "It has the potential break your system. While the OpenStore maintainers have "
@@ -331,37 +334,38 @@ msgid ""
 "app."
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:767
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:824
 msgid "I understand the risks"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:776
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Main.qml:363
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/PasswordDialog.qml:82
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Components/UninstallPopup.qml:42
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:833
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:331
+#: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:82
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:217
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/UninstallPopup.qml:42
 msgid "Cancel"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:795
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:852
 #, qt-format
 msgid "%1 GB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:800
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:857
 #, qt-format
 msgid "%1 MB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:805
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:862
 #, qt-format
 msgid "%1 kB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/AppDetailsPage.qml:808
+#: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:865
 #, qt-format
 msgid "%1 bytes"
 msgstr ""
@@ -380,9 +384,24 @@ msgstr ""
 msgid "Categories"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/DiscoverTab.qml:65
-#, qt-format
-msgid "by %1"
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:29
+#: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:35
+msgid "Discover"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:51
+#: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:28
+msgid "Search in OpenStore..."
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:136
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:89
+msgid "Update available"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:137
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:89
+msgid "✓ Installed"
 msgstr ""
 
 #: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/DiscoverTab.qml:97
@@ -423,92 +442,92 @@ msgid "Try with a different search."
 msgstr ""
 
 #. TRANSLATORS: %1 is the number of installed apps
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/InstalledAppsTab.qml:79
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:91
 #, qt-format
 msgid "Installed apps (%1)"
 msgstr ""
 
 #. TRANSLATORS: %1 is the number of available app updates
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/InstalledAppsTab.qml:83
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:95
 #, qt-format
 msgid "Available updates (%1)"
 msgstr ""
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/InstalledAppsTab.qml:87
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:99
 #, qt-format
 msgid "Stable version available (%1)"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/InstalledAppsTab.qml:90
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:102
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/InstalledAppsTab.qml:91
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:103
 msgid "Update all"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/InstalledAppsTab.qml:193
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:205
 msgid "No apps found"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/InstalledAppsTab.qml:194
+#: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:206
 msgid "No app has been installed from OpenStore yet."
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Main.qml:303
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:271
 msgid ""
 "You are currently using a non-standard domain for the OpenStore. This is a "
 "development feature. The domain you are using is:"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Main.qml:317
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:285
 msgid "Are you sure you want to continue?"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Main.qml:321
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:289
 msgid "Yes, I know what I'm doing"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Main.qml:329
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:297
 msgid "Get me out of here!"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Main.qml:341
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:309
 msgid "Install unknown app?"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Main.qml:342
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:310
 #, qt-format
 msgid "Do you want to install the unkown app %1?"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Main.qml:383
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:351
 msgid "App installed"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Main.qml:384
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:352
 msgid "The app has been installed successfully."
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Main.qml:387
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Main.qml:400
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Main.qml:415
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:355
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:368
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:383
 msgid "OK"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Main.qml:396
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:364
 msgid "Installation failed"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Main.qml:397
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:365
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Main.qml:411
+#: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:379
 #, qt-format
 msgid "Installation failed (Error %1)"
 msgstr ""
@@ -577,11 +596,20 @@ msgid ""
 "content."
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/SettingsPage.qml:99
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:88
+#: /home/brian/dev/openstore/openstore-app/openstore/SignInWebView.qml:29
+msgid "Sign in"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:104
+msgid "Sign out"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:131
 msgid "About OpenStore"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/SettingsPage.qml:115
+#: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:147
 msgid "Report an issue"
 msgstr ""
 
@@ -589,7 +617,9 @@ msgstr ""
 msgid "Back"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Components/BottomEdgePageStack.qml:84
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:92
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:80
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:102
 msgid "Close"
 msgstr ""
 
@@ -625,17 +655,55 @@ msgstr ""
 msgid "Accounts provider"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Components/PackageTile.qml:79
-msgid "Update available"
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:53
+msgid "Something went wrong..."
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Components/PackageTile.qml:79
-msgid "✓ Installed"
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:90
+msgid "Your review has been posted"
 msgstr ""
 
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Components/TextualButtonStyle.qml:46
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Components/TextualButtonStyle.qml:54
-#: /home/cibersheep/Ubuntu_Touch_Projects/openstore-app/openstore/Components/TextualButtonStyle.qml:60
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:113
+msgid "Rate this app"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:113
+msgid "Loading..."
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:129
+msgid "(Optional) Write a review"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:133
+#, qt-format
+msgid "%1/%2 characters"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:236
+#, qt-format
+msgid "%1 reviews"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:243
+msgid "Sign in to add review"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:254
+msgid "Edit review"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:257
+msgid "Add review"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:260
+msgid "Install to add review"
+msgstr ""
+
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:46
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:54
+#: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
 msgstr ""
 

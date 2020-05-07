@@ -29,13 +29,19 @@ ListItem {
     property var ownReview: null
     property bool ready: false
 
-    Component.onCompleted: reviews.getOwnReview(root.apiKey)
-
     Connections {
         target: reviews
+
         onOwnReviewResponse: {
             ownReview = 'body' in review ? review : null
             ready = true
+        }
+
+        onReviewPosted: PopupUtils.open(successPostDialog)
+
+        onError: {
+            errorText = text
+            PopupUtils.open(errorDialog)
         }
     }
 
@@ -58,15 +64,6 @@ ListItem {
     }
 
     property string errorText: i18n.tr("Something went wrong...")
-
-    Connections {
-        target: reviews
-        onReviewPosted: PopupUtils.open(successPostDialog)
-        onError: {
-            errorText = text
-            PopupUtils.open(errorDialog)
-        }
-    }
 
     Component {
          id: errorDialog
@@ -247,7 +244,7 @@ ListItem {
                 anchors.topMargin: units.gu(0.5)
             }
             Button {
-                text: i18n.tr("Sign in to add review")
+                text: i18n.tr("Sign in to review this app")
                 visible: root.apiKey === ""
                 onClicked: bottomEdgeStack.push(Qt.resolvedUrl("../SignInWebView.qml"))
                 anchors.right: parent.right
@@ -255,17 +252,7 @@ ListItem {
             }
             Button {
                 id: addReviewButton
-                text: {
-                    if (app.installed) {
-                        if (ownReview) {
-                            return i18n.tr("Edit review");
-                        }
-
-                        return i18n.tr("Add review");
-                    }
-
-                    return i18n.tr("Install to add review");
-                }
+                text: app.installed ? i18n.tr("Review app") : i18n.tr("Install to review this app")
                 visible: root.apiKey !== ""
                 onClicked: PopupUtils.open(composeDialog)
                 color: UbuntuColors.green

@@ -41,13 +41,14 @@ Page {
 
         zoomFactor: units.gu(1) / 8
 
-        url: baseUrl + "login"
+        url: baseUrl + "logged-in"
 
         settings {
             localStorageEnabled: false
         }
         profile {
             offTheRecord: true
+            persistentCookiesPolicy: WebEngineProfile.NoPersistentCookies
             httpUserAgent: 'OpenStore App'
         }
 
@@ -61,8 +62,6 @@ Page {
         ]
 
         onUrlChanged: {
-            console.log(url);
-
             var strUrl = url.toString();
             var checkUrl = baseUrl + 'logged-in?apiKey=';
             if (strUrl.indexOf(checkUrl) == 0) {

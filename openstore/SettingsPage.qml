@@ -133,7 +133,6 @@ Page {
 
                 ListItem {
                     visible: root.apiKey !== ""
-                    //Needs to open https://open-store.io/auth/logout to work properly
                     onClicked: root.apiKey = ""
                     ListItemLayout {
                         anchors.centerIn: parent

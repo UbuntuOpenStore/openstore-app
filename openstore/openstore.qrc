@@ -32,6 +32,7 @@
         <file>Components/UninstallPopup.qml</file>
         <file>Components/MostRated.qml</file>
         <file>Components/ButtonEmoji.qml</file>
+        <file>openstore.svg</file>
         <file>Assets/buggy.svg</file>
         <file>Assets/buggy-full.svg</file>
         <file>Assets/happy.svg</file>
@@ -44,5 +45,6 @@
         <file>Assets/thumbup-full.svg</file>
         <file>Assets/thumbdown-general.svg</file>
         <file>Assets/thumbup-general.svg</file>
+        <file>js/inject.js</file>
     </qresource>
 </RCC>

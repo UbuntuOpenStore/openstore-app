@@ -155,7 +155,7 @@ Page {
 
                     ListItemLayout {
                         anchors.fill: parent
-                        title.text: i18n.tr("Browse Apps by Catergory")
+                        title.text: i18n.tr("Browse Apps by Category")
                         title.color: theme.palette.normal.backgroundText
                         ProgressionSlot {}
 

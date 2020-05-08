@@ -59,9 +59,9 @@ UbuntuShape {
         }
 
         //There's more than one type with the same rating
-        else if (hC + tUC > bC + tDC) {
+        else if (hC + tUC > bC + tDC +  nC) {
             return "../Assets/thumbup-general.svg";
-        } else if (bC + tDC > hC + tUC) {
+        } else if (bC + tDC > hC + tUC +  nC) {
             return "../Assets/thumbdown-general.svg";
         } else
 

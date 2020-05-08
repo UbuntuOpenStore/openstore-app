@@ -19,12 +19,13 @@ import Ubuntu.Components 1.3
 import OpenStore 1.0
 import QtWebEngine 1.7
 
+import "Components" as Components
 Page {
     id: rootItem
 
     readonly property string baseUrl: OpenStoreNetworkManager.domain
 
-    header: PageHeader {
+    header: Components.HeaderBase {
         id: header
         title: i18n.tr("Sign in")
     }
@@ -50,6 +51,15 @@ Page {
             httpUserAgent: 'OpenStore App'
         }
 
+        //Remove website's header
+        userScripts: [
+            WebEngineScript {
+                sourceUrl: "js/inject.js"
+                injectionPoint: WebEngineScript.DocumentReady
+                worldId: WebEngineScript.MainWorld
+            }
+        ]
+
         onUrlChanged: {
             console.log(url);
 
@@ -61,6 +71,7 @@ Page {
             }
         }
     }
+
 
     ActivityIndicator {
         running: visible

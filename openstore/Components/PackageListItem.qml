@@ -31,27 +31,20 @@ ListItem {
         }
         summary.wrapMode: Text.WrapAtWordBoundaryOrAnywhere
 
-        Column {
-            width: appIconShape.width
-            height: appIconShape.height + units.gu(1)
+        UbuntuShape {
+            id: appIconShape
+            aspect: UbuntuShape.Flat
             SlotsLayout.position: SlotsLayout.Leading
-            spacing: units.gu(0.6)
 
-            UbuntuShape {
-                id: appIconShape
-                aspect: UbuntuShape.Flat
-                image: Image {
-                    source: rootItem.appItem.icon
-                    sourceSize.width: parent.width
-                    sourceSize.height: parent.height
-                    height: parent.height
-                    width: parent.width
-                }
+            image: Image {
+                source: rootItem.appItem.icon
+                sourceSize.width: parent.width
+                sourceSize.height: parent.height
+                height: parent.height
+                width: parent.width
             }
 
-            RatingsRow {
-                width: appIconShape.width
-            }
+            MostRated {}
         }
 
         Icon {

@@ -73,47 +73,31 @@ ListItem {
     property string errorText: i18n.tr("Something went wrong...")
 
     Component {
-         id: errorDialog
-         Dialog {
-             id: dialogue
-             title: reviewPreviewListItem.errorText
-             Rectangle {
-                 height: units.gu(12)
-                 color: "transparent"
-                 Icon {
-                     anchors.centerIn: parent
-                     width: units.gu(8)
-                     height: width
-                     name: "edit-clear"
-                 }
-             }
-             Button {
-                 text: i18n.tr("Close")
-                 onClicked: PopupUtils.close(dialogue)
-             }
-         }
+        id: errorDialog
+        Dialog {
+            id: dialogue
+            title: i18n.tr("Error Posting Review")
+            text: reviewPreviewListItem.errorText
+
+            Button {
+                text: i18n.tr("Close")
+                onClicked: PopupUtils.close(dialogue)
+            }
+        }
     }
 
     Component {
-         id: successPostDialog
-         Dialog {
-             id: dialogue
-             title: i18n.tr("Your review has been posted")
-             Rectangle {
-                 height: units.gu(12)
-                 color: "transparent"
-                 Icon {
-                     anchors.centerIn: parent
-                     width: units.gu(8)
-                     height: width
-                     name: "tick"
-                 }
-             }
-             Button {
-                 text: i18n.tr("Close")
-                 onClicked: PopupUtils.close(dialogue)
-             }
-         }
+        id: successPostDialog
+        Dialog {
+            id: dialogue
+            title: i18n.tr("Review Posted Correctly")
+            text: i18n.tr("Your review has been posted successfully.")
+
+            Button {
+                text: i18n.tr("Close")
+                onClicked: PopupUtils.close(dialogue)
+            }
+        }
     }
 
     Component {
@@ -206,6 +190,14 @@ ListItem {
                 }
             }
 
+            /* TODO: Show a button to update only the review without updating the rating
+            Button {
+                text: i18n.tr("Update")
+                visible: [Rating exists]
+                onClicked: PopupUtils.close(dialogue)
+            }
+            */
+
             Button {
                 text: i18n.tr("Cancel")
                 onClicked: PopupUtils.close(dialogue)
@@ -216,38 +208,47 @@ ListItem {
     Column {
         id: reviewPreviewColumn
 
-        width: reviewPreviewListItem.width - units.gu(4)
-        height: count > 0 ? units.gu(42) : addReviewButton.height + units.gu(4)
+        width: parent.width
+        height: count > 0
+            ? units.gu(42)
+            : addReviewButton.height
         anchors.top: parent.top
         anchors.left: parent.left
-        anchors.margins: units.gu(2)
 
-        Item {
+        ListItem {
+            id: addReviewButton
+            anchors.horizontalCenter: parent.horizontalCenter
             width: parent.width
-            height: addReviewButton.height + units.gu(count > 0 ? 2 : 1)
-            Label {
-                text: i18n.tr("%1 reviews").arg(getNumberShortForm(count))
-                textSize: Label.Large
-                anchors.left: parent.left
-                anchors.top: parent.top
-                anchors.topMargin: units.gu(0.5)
+            divider.visible: false
+
+            ListItemLayout {
+                property string reviewCountTxt: count > 0
+                    ? i18n.tr("%1 review. ","%1 reviews. ", count).arg(getNumberShortForm(count))
+                    : ""
+
+                anchors.fill: parent
+                title.text: app.installed
+                        ? root.apiKey === ""
+                            ? reviewCountTxt + i18n.tr("Sign in to review this app")
+                            : reviewCountTxt + i18n.tr("Review app")
+                        : reviewCountTxt + i18n.tr("Install this app to review it")
+
+
+                title.color: theme.palette.normal.backgroundText
+                ProgressionSlot {
+                    visible: app.installed
+                }
             }
-            Button {
-                text: i18n.tr("Sign in to review this app")
-                visible: root.apiKey === ""
-                onClicked: bottomEdgeStack.push(Qt.resolvedUrl("../SignInWebView.qml"))
-                anchors.right: parent.right
-                anchors.top: parent.top
-            }
-            Button {
-                id: addReviewButton
-                text: app.installed ? i18n.tr("Review app") : i18n.tr("Install to review this app")
-                visible: root.apiKey !== ""
-                onClicked: PopupUtils.open(composeDialog)
-                color: UbuntuColors.green
-                anchors.right: parent.right
-                anchors.top: parent.top
-                enabled: app.installed
+
+            // TODO: Check if the app is of the owner before showing Preview Dialog
+            onClicked: {
+                if (app.installed) {
+                    root.apiKey === ""
+                        ? bottomEdgeStack.push(Qt.resolvedUrl("../SignInWebView.qml"))
+                        : PopupUtils.open(composeDialog)
+                } else {
+                    console.log("App is not installed")
+                }
             }
         }
 
@@ -259,6 +260,9 @@ ListItem {
             orientation: ListView.Horizontal
             spacing: units.gu(2)
             onContentXChanged: if ( atXEnd ) reviews.loadMore()
+
+            model: reviews
+
             delegate: UbuntuShape {
                 property var review: model
                 height: reviewsListView.height - units.gu(4)
@@ -277,7 +281,6 @@ ListItem {
                             UbuntuShape {
                                 width: units.gu(4)
                                 height: units.gu(4)
-                                //aspect: UbuntuShape.DropShadow
 
                                 Icon {
                                     width: units.gu(3)
@@ -307,9 +310,6 @@ ListItem {
                     }
                 }
             }
-            model: reviews
         }
     }
-
-
 }

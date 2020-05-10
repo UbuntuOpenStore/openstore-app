@@ -117,6 +117,9 @@ ListItem {
                     reviewUpdated(ownRating, rating);
                     app.editReview(body, rating, root.apiKey)
                 }
+
+                //Reset bool to update current rating
+                ready = false
             }
 
             TextArea {
@@ -151,6 +154,7 @@ ListItem {
 
                 ButtonEmoji {
                     emoji: "../Assets/thumbup.svg"
+                    iconSelected: ownRating == 0
                     onClicked: {
                         PopupUtils.close(dialogue)
                         postReview(0, textArea.displayText)
@@ -159,6 +163,7 @@ ListItem {
 
                 ButtonEmoji {
                     emoji: "../Assets/thumbdown.svg"
+                    iconSelected: ownRating == 1
                     onClicked: {
                         PopupUtils.close(dialogue)
                         postReview(1, textArea.displayText)
@@ -167,6 +172,7 @@ ListItem {
 
                 ButtonEmoji {
                     emoji: "../Assets/happy.svg"
+                    iconSelected: ownRating == 3
                     onClicked: {
                         PopupUtils.close(dialogue)
                         postReview(3, textArea.displayText)
@@ -175,6 +181,7 @@ ListItem {
 
                 ButtonEmoji {
                     emoji: "../Assets/neutral.svg"
+                    iconSelected: ownRating == 2
                     onClicked: {
                         PopupUtils.close(dialogue)
                         postReview(2, textArea.displayText)
@@ -183,6 +190,7 @@ ListItem {
 
                 ButtonEmoji {
                     emoji: "../Assets/buggy.svg"
+                    iconSelected: ownRating == 4
                     onClicked: {
                         PopupUtils.close(dialogue)
                         postReview(4, textArea.displayText)
@@ -190,13 +198,16 @@ ListItem {
                 }
             }
 
-            /* TODO: Show a button to update only the review without updating the rating
             Button {
                 text: i18n.tr("Update")
-                visible: [Rating exists]
-                onClicked: PopupUtils.close(dialogue)
+                visible: ownRating
+                color: theme.palette.normal.positive
+
+                onClicked: {
+                    PopupUtils.close(dialogue)
+                    postReview(ownRating, textArea.displayText)
+                }
             }
-            */
 
             Button {
                 text: i18n.tr("Cancel")

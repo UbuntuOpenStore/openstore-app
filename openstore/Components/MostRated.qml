@@ -66,6 +66,5 @@ UbuntuShape {
         } else
 
         return "../Assets/neutral.svg";
-
     }
 }

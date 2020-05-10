@@ -19,6 +19,7 @@ import Ubuntu.Components 1.3
 
 Button {
     property alias emoji: icon.source
+    property bool iconSelected: false
 
     Icon {
         id: icon
@@ -26,10 +27,18 @@ Button {
         height: width
         anchors.centerIn: parent
         asynchronous: true
-        color: theme.palette.normal.baseText
+        color: iconSelected
+            ? theme.palette.normal.focus
+            : theme.name == "Ubuntu.Components.Themes.Ambiance"
+                ? "#FFFFFF"
+                : UbuntuColors.jet
     }
 
-    color: theme.palette.normal.background
+    color: iconSelected
+        ? theme.palette.normal.focusText
+        : theme.name == "Ubuntu.Components.Themes.Ambiance"
+            ? UbuntuColors.graphite
+            : UbuntuColors.ash
     width: buttonWidth
     height: width
     enabled: textArea.text.length <= maxLength

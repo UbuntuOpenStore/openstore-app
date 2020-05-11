@@ -1,5 +1,6 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
+import OpenStore 1.0
 
 UbuntuShape {
     // TODO explicity pass this info in
@@ -46,25 +47,20 @@ UbuntuShape {
         var tDC = appItem.ratings.thumbsDownCount;
         var tUC = appItem.ratings.thumbsUpCount;
 
-        if (bC > Math.max(hC, nC, tDC, tUC)) {
-            return "../Assets/buggy-full.svg";
-        } else if (hC > Math.max(bC, nC, tDC, tUC)) {
-            return "../Assets/happy-full.svg";
-        } else if (nC > Math.max(bC, hC, tDC, tUC)) {
+        //NEUTRAL: if neutral > positive && neutral > negative
+        //         or positive > negative && positive < (negative + 20%):
+        if (nC > Math.max(bC + tDC, hC + tUC) || ((hC + tUC >= bC + tDC) && (hC + tUC < (bC + tDC) * 1.2))) {
             return "../Assets/neutral-full.svg";
-        } else if (tDC > Math.max(bC, hC, nC, tUC)) {
-            return "../Assets/thumbdown-full.svg";
-        } else if (tUC > Math.max(bC, hC, nC, tDC)) {
-            return "../Assets/thumbup-full.svg";
-        }
 
-        //There's more than one type with the same rating
-        else if (hC + tUC > bC + tDC +  nC) {
-            return "../Assets/thumbup-general.svg";
-        } else if (bC + tDC > hC + tUC +  nC) {
-            return "../Assets/thumbdown-general.svg";
-        } else
+        //NEGATIVE: negative > positive
+        } else if (bC + tDC > hC + tUC) {
+            if (bC > tDC) return "../Assets/buggy-full.svg";
+            else if (bC < tDC) return "../Assets/thumbdown-full.svg";
+            else return "../Assets/thumbdown-general.svg";
 
-        return "../Assets/neutral.svg";
+        //POSITIVE: positive > negative
+        } else if (hC > tUC) return "../Assets/happy-full.svg";
+          else if (hC < tUC) return "../Assets/thumbup-full.svg";
+          else return "../Assets/thumbup-general.svg";
     }
 }

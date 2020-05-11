@@ -84,8 +84,9 @@ Page {
         return false
     }
 
-    // Adjust the rating when the user updates their review without making another network reqeust
+    // Adjust the rating when the user updates their review without making another network request
     function modifyRatingCount(rating, count) {
+
         if (oldRating >= 0 && oldRating != newRating) {
             if (oldRating == rating) {
                 return count - 1;

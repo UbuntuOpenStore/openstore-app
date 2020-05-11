@@ -178,8 +178,8 @@ Page {
                 title: model.name
                 subtitle: model.tagline
                 showProgression: model.queryUrl
+
                 onTitleClicked: if (model.queryUrl) { root.showSearchQuery(model.queryUrl) }
-                //onAppTileClicked: bottomEdgeStack.push(Qt.resolvedUrl("../AppDetailsPage.qml"), { app: appItem })
                 onAppTileClicked: bottomEdgeStack.push(Qt.resolvedUrl("../AppDetailsPage.qml"), { app: appItem })
 
                 viewModel: model.appIds

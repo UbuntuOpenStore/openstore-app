@@ -132,7 +132,7 @@ ListItem {
             Label {
                 text: i18n.tr("%1/%2 characters").arg(textArea.text.length).arg(maxLength)
                 textSize: Label.Small
-                color: textArea.text.length > maxLength ? UbuntuColors.red : theme.palette.normal.base
+                color: textArea.text.length > maxLength ? palette.theme.normal.negative : theme.palette.normal.base
             }
 
             Item {

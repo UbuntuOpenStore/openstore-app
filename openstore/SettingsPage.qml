@@ -225,6 +225,16 @@ Page {
                     ProgressionSlot {}
                 }
             }
+
+            ListItem {
+                onClicked: Qt.openUrlExternally("https://thenounproject.com/")
+                ListItemLayout {
+                    anchors.centerIn: parent
+                    title.text: i18n.tr("Additional Icons by")
+                    subtitle.text: "Explanaicon, Nikita Kozin, Xicons.co"
+                    ProgressionSlot {}
+                }
+            }
         }
     }
 }

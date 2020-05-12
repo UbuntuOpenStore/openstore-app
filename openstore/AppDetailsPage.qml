@@ -200,9 +200,10 @@ Page {
                     spacing: units.gu(5)
 
                     Components.ReviewItem {
+                        id: tup
                         reviewIcon: "../Assets/thumbup.svg"
                         reviewNumber: modifyRatingCount(0, app.ratings.thumbsUpCount)
-                        enabled: modifyRatingCount(0, app.ratings.thumbsUpCount) > 0
+                        enabled: modifyRatingCount(0, app.ratings.thumbsUpCount) > 0                                                                                                                                                                                                                                                                                           ; MouseArea {anchors.fill: parent; onClicked: tup.reviewIcon="../Assets/t-up.svg"}
                     }
 
                     Components.ReviewItem {

@@ -55,12 +55,10 @@ UbuntuShape {
         //NEGATIVE: negative > positive
         } else if (bC + tDC > hC + tUC) {
             if (bC > tDC) return "../Assets/buggy-full.svg";
-            else if (bC < tDC) return "../Assets/thumbdown-full.svg";
-            else return "../Assets/thumbdown-general.svg";
+            else return "../Assets/thumbdown-full.svg";
 
         //POSITIVE: positive > negative
         } else if (hC > tUC) return "../Assets/happy-full.svg";
-          else if (hC < tUC) return "../Assets/thumbup-full.svg";
-          else return "../Assets/thumbup-general.svg";
+          else return "../Assets/thumbup-full.svg";
     }
 }

@@ -42,8 +42,6 @@
         <file>Assets/thumbdown-full.svg</file>
         <file>Assets/thumbup.svg</file>
         <file>Assets/thumbup-full.svg</file>
-        <file>Assets/thumbdown-general.svg</file>
-        <file>Assets/thumbup-general.svg</file>
         <file>Assets/t-up.svg</file>
         <file>js/inject.js</file>
     </qresource>

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-09 05:56+0000\n"
-"PO-Revision-Date: 2020-03-03 14:22+0000\n"
+"PO-Revision-Date: 2020-05-15 12:24+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://translate.ubports.com/projects/openstore/"
 "openstore-app/cs/>\n"
@@ -267,7 +267,7 @@ msgstr "Dostupná aktualizace pro OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:157
 msgid "Update OpenStore now!"
-msgstr "Aktualizovat OpenStore nyní"
+msgstr "Aktualizovat OpenStore nyní!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:163
 msgid "Details"

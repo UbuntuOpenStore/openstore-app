@@ -20,7 +20,7 @@ import Ubuntu.Components 1.3
 Item {
     property bool enabled: true
 
-    width: units.gu(3)
+    width: units.gu(2.5)
     height: width
     opacity: enabled ? 1 : 0.4
 
@@ -28,25 +28,26 @@ Item {
     property string ratingColor
     property int reviewNumber
 
-    Row {
-        width: units.gu(3)
+    Column {
+        width: units.gu(2.5)
         height: width
         spacing: units.gu(0.5)
 
         Icon {
-            width: units.gu(3)
+            width: units.gu(2.5)
             height: width
-            anchors.verticalCenter: parent.verticalCenter
+            anchors.horizontalCenter: parent.horizontalCenter
             asynchronous: true
             color: ratingColor || theme.palette.normal.baseText
             source: reviewIcon
         }
 
         Label {
-            anchors.verticalCenter: parent.verticalCenter
-            width: units.gu(3)
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: units.gu(2)
             text: getNumberShortForm(reviewNumber)
             color: ratingColor || theme.palette.normal.baseText
+            horizontalAlignment: Text.AlignHCenter
         }
     }
 }

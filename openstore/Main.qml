@@ -35,7 +35,7 @@ MainView {
 
     property var mainPage
     property bool isLandscape: width > height
-    property bool isBigScreen: width > units.gu(90)
+    property bool isBigScreen: width > units.gu(70)
     property string mainStackPage
 
     readonly property string appColorText: UbuntuColors.porcelain
@@ -224,7 +224,7 @@ MainView {
         id: bottomEdgeStack
 
         width: isBigScreen && bottomEdgeStack.isStackVisible
-            ? units.gu(50)
+            ? units.gu(47)
             : 0 //Hack. Width must be inferior to the parent.width
         anchors {
             fill: isBigScreen && bottomEdgeStack.isStackVisible

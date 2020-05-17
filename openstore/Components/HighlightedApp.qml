@@ -22,6 +22,7 @@ Item {
     property alias appName: hAppName.text
     property alias appAuthor: hAppAut.text
     property alias appDesc: hAppDesc.text
+    property alias appRatings: ratingsRow.appRatings
 
     property bool ready: false
     //appStatus 0 n/a, 1 Update available, 2 installed
@@ -80,6 +81,14 @@ Item {
                     id: hAppAut
                     color: appColorText
                     textSize: Label.Medium
+                }
+
+                RatingsRow {
+                    id: ratingsRow
+                    visible: parent.width > units.gu(15)
+                    spacing: (parent.width - units.gu(12.5)) / 5
+                    anchors.left: parent.left
+                    anchors.right: parent.right
                 }
             }
 

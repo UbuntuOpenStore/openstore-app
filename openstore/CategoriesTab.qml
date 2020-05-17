@@ -31,7 +31,7 @@ Page {
         }
 
         //categoryView.__currentTmpIndex = id;
-        bottomEdgeStack.push(filteredAppPageComponent, pageProps);
+        pageStack.push(filteredAppPageComponent, pageProps);
     }
 
     header: Components.HeaderMain {
@@ -57,7 +57,7 @@ Page {
                 divider.anchors.leftMargin: units.gu(6.5)
                 onClicked: {
                     categoryView.__currentTmpIndex = model.index;
-                    bottomEdgeStack.clear();
+                    //bottomEdgeStack.clear();
                     categoryClicked(name, id)
                 }
                 ListItemLayout {

@@ -64,6 +64,7 @@ Page {
                     appName: highlightAppControl.appItem ? highlightAppControl.appItem.name : ''
                     appAuthor: highlightAppControl.appItem ? i18n.tr("by %1").arg(highlightAppControl.appItem.author) : ''
                     appDesc: highlightAppControl.appItem ? (highlightAppControl.appItem.tagline + " " + highlightAppControl.appItem.description) : ''
+                    appRatings: highlightAppControl.appItem ? highlightAppControl.appItem.ratings : ''
 
                     ActivityIndicator {
                         anchors.centerIn: parent

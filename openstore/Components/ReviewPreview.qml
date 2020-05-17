@@ -221,7 +221,7 @@ ListItem {
 
         width: parent.width
         height: count > 0
-            ? units.gu(42)
+            ? units.gu(32)
             : addReviewButton.height
         anchors.top: parent.top
         anchors.left: parent.left

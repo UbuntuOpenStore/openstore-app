@@ -14,7 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.4
+import QtQuick 2.9
 import Ubuntu.Components 1.3
 import Ubuntu.Components.ListItems 1.3
 import Ubuntu.Components.Popups 1.3
@@ -29,7 +29,7 @@ Page {
 
     property var app: null
 
-    header: PageHeader {
+    header: Components.HeaderBase {
         title: app ? app.name : i18n.tr("App details")
         enabled: !PlatformIntegration.clickInstaller.busy
 

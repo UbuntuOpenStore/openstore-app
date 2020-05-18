@@ -25,8 +25,11 @@ import "Components" as Components
 
 Page {
     id: appDetailsPage
+    anchors.fill: parent
 
     property var app: null
+    property var oldRating: null
+    property var newRating: null
     property var restrictedPermissions: [
         'bluetooth',
         'calendar',
@@ -81,7 +84,33 @@ Page {
         return false
     }
 
-    header: PageHeader {
+    // Adjust the rating when the user updates their review without making another network request
+    function modifyRatingCount(rating, count) {
+
+        if (oldRating >= 0 && oldRating != newRating) {
+            if (oldRating == rating) {
+                return count - 1;
+            }
+
+            if (newRating == rating) {
+                return count + 1;
+            }
+        }
+
+        return count;
+    }
+
+    function getNumberShortForm(number) {
+        if (number > 999999) {
+            return Math.floor(number/1000000) + "M"
+        }
+        else if (number > 999) {
+            return Math.floor(number/1000) + "K"
+        }
+        else return number + ""
+    }
+
+    header: Components.HeaderBase {
         title: app ? app.name : i18n.tr("App details")
         enabled: !PlatformIntegration.clickInstaller.busy
 
@@ -117,6 +146,7 @@ Page {
 
             ListItem {
                 height: units.gu(16)
+                divider.visible: false
 
                 ListItemLayout {
                     anchors.fill: parent
@@ -153,6 +183,51 @@ Page {
                             sourceSize.height: parent.height
                             source: app ? app.icon : ""
                         }
+                    }
+                }
+            }
+
+            // Review
+            ListItem {
+                height: units.gu(6)
+                visible: app.ratings.totalCount > 0
+
+                Row {
+                    anchors {
+                        horizontalCenter: parent.horizontalCenter
+                        verticalCenter: parent.verticalCenter
+                    }
+                    spacing: units.gu(5)
+
+                    Components.ReviewItem {
+                        id: tup
+                        reviewIcon: "../Assets/thumbup.svg"
+                        reviewNumber: modifyRatingCount(0, app.ratings.thumbsUpCount)
+                        enabled: modifyRatingCount(0, app.ratings.thumbsUpCount) > 0                                                                                                                                                                                                                                                                                           ; MouseArea {anchors.fill: parent; onClicked: tup.reviewIcon="../Assets/t-up.svg"}
+                    }
+
+                    Components.ReviewItem {
+                        reviewIcon: "../Assets/thumbdown.svg"
+                        reviewNumber: modifyRatingCount(1, app.ratings.thumbsDownCount)
+                        enabled: modifyRatingCount(1, app.ratings.thumbsDownCount) > 0
+                    }
+
+                    Components.ReviewItem {
+                        reviewIcon: "../Assets/happy.svg"
+                        reviewNumber: modifyRatingCount(3, app.ratings.happyCount)
+                        enabled: modifyRatingCount(3, app.ratings.happyCount) > 0
+                    }
+
+                    Components.ReviewItem {
+                        reviewIcon: "../Assets/neutral.svg"
+                        reviewNumber: modifyRatingCount(2, app.ratings.neutralCount)
+                        enabled: modifyRatingCount(2, app.ratings.neutralCount) > 0
+                    }
+
+                    Components.ReviewItem {
+                        reviewIcon: "../Assets/buggy.svg"
+                        reviewNumber: modifyRatingCount(4, app.ratings.buggyCount)
+                        enabled: modifyRatingCount(4, app.ratings.buggyCount) > 0
                     }
                 }
             }
@@ -370,6 +445,15 @@ Page {
                 }
             }
 
+            Components.ReviewPreview {
+                reviews: app.reviews
+
+                onReviewUpdated: {
+                    appDetailsPage.oldRating = oldRating;
+                    appDetailsPage.newRating = newRating;
+                }
+            }
+
             ListItem {
                 height: changelogLayout.height
                 visible: app.changelog
@@ -501,7 +585,7 @@ Page {
                 enabled: !PlatformIntegration.clickInstaller.busy
                 onClicked: {
                     bottomEdgeStack.clear()
-                    mainPage.showSearch('author:' + app.author)
+                    root.showSearch('author:' + app.author)
                 }
                 ListItemLayout {
                     anchors.centerIn: parent
@@ -515,13 +599,13 @@ Page {
                 enabled: !PlatformIntegration.clickInstaller.busy
                 onClicked: {
                     bottomEdgeStack.clear()
-                    mainPage.showCategory(app.category, app.category)
+                    root.showCategory(localCat(app.category), app.category)
                 }
                 ListItemLayout {
                     anchors.centerIn: parent
                     // FIXME: app.category is not localized.
                     // TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-                    title.text: i18n.tr("Other apps in %1").arg(app.category)
+                    title.text: i18n.tr("Other apps in %1").arg(localCat(app.category))
                     ProgressionSlot {}
                 }
             }
@@ -821,5 +905,16 @@ Page {
         }
 
         return (j > 0)
+    }
+
+    function localCat(id) {
+        var localName = id;
+        for (var i=0; i < categoriesModel.rowCount(); i++) {
+            if (categoriesModel.data(categoriesModel.index(i,0),0) === id) {
+                localName = categoriesModel.data(categoriesModel.index(i,0),1)
+            }
+        }
+
+        return localName;
     }
 }

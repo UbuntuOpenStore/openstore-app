@@ -32,6 +32,8 @@ AbstractButton {
                     }
                 }
             }
+
+            MostRated {}
         }
 
         ListItemLayout {

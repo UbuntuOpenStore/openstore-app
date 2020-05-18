@@ -47,34 +47,22 @@ Page {
         onPackageInstallationFailed: updateNextPackage()
     }
 
-    header: PageHeader {
-        title: i18n.tr("My Apps")
-
-        trailingActionBar {
-            actions: Action {
-                iconName: "settings"
-                text: i18n.tr("Settings")
-                onTriggered: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
-            }
-        }
+    header: Components.HeaderMain {
+        title: i18n.tr("Installed Apps")
+        flickable: view
     }
 
     ScrollView {
         id: scrollView
-        width: Math.min(parent.width, units.gu(80))
+        width: parent.width
         anchors {
             top: parent.top
-            topMargin: parent.header ? parent.header.height : 0
             bottom: parent.bottom
-            horizontalCenter: parent.horizontalCenter
         }
 
         ListView {
             id: view
             anchors.fill: parent
-
-            topMargin: scrollView.width == units.gu(80) ? units.gu(4) : 0
-            bottomMargin: scrollView.width == units.gu(80) ? units.gu(4) : units.gu(2)
 
             model: appModel
 

@@ -17,12 +17,12 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 
-AdaptivePageLayout {
-    id: rootItem
+import "Components" as Components
+Page {
+    id: categoriesTab
+    anchors.fill: parent
 
     signal categoryClicked(var name, var id)
-
-    property bool __isThereSecondPage
 
     onCategoryClicked: {
         var pageProps = {
@@ -30,100 +30,48 @@ AdaptivePageLayout {
             category: id
         }
 
-        var incubator = rootItem.addPageToNextColumn(rootItem.primaryPage, filteredAppPageComponent, pageProps)
-        if (incubator && incubator.status == Component.Loading) {
-            incubator.onStatusChanged = function(status) {
-                if (status == Component.Ready) {
-                    incubator.object.Component.destruction.connect(function() {
-                        __isThereSecondPage = false
-                    });
-                }
-            }
-        }
-
-        __isThereSecondPage = true
+        //categoryView.__currentTmpIndex = id;
+        pageStack.push(filteredAppPageComponent, pageProps);
     }
 
-    Component.onDestruction: tabView.barVisible = true
+    header: Components.HeaderMain {
+        title: i18n.tr("Categories")
+        flickable: categoryView
+    }
 
-    states: [
-        State {
-            when: __isThereSecondPage && rootItem.columns == 1
-            PropertyChanges {
-                target: tabView
-                barVisible: false
-            }
-        },
-        State {
-            when: !__isThereSecondPage || rootItem.columns != 1
-            PropertyChanges {
-                target: tabView
-                barVisible: true
-            }
-        }
-    ]
+    ScrollView {
+        anchors.fill: parent
 
-    layouts: [
-        PageColumnsLayout {
-            when: rootItem.width >= units.gu(90)
-            PageColumn {
-                maximumWidth: units.gu(50)
-                minimumWidth: units.gu(40)
-                preferredWidth: units.gu(40)
-            }
-            PageColumn {
-                fillWidth: true
-            }
-        },
-        PageColumnsLayout {
-            when: true
-            PageColumn {
-                fillWidth: true
-            }
-        }
-    ]
-
-    primaryPage: Page {
-        id: categoryListPage
-
-        header: PageHeader {
-            title: i18n.tr("Categories")
-        }
-
-        ScrollView {
+        UbuntuListView {
+            id: categoryView
             anchors.fill: parent
-            anchors.topMargin: categoryListPage.header.height
 
-            UbuntuListView {
-                id: categoryView
-                anchors.fill: parent
+            property int __currentTmpIndex: 0
+            currentIndex: __currentTmpIndex
 
-                property int __currentTmpIndex
-                currentIndex: rootItem.columns > 1 ? __currentTmpIndex : -1
+            // WORKAROUND: Fix for wrong grid unit size
+            Component.onCompleted: root.flickable_responsive_scroll_fix(categoryView);
 
-                // WORKAROUND: Fix for wrong grid unit size
-                Component.onCompleted: root.flickable_responsive_scroll_fix(categoryView)
+            model: categoriesModel
+            delegate: ListItem {
+                divider.anchors.leftMargin: units.gu(6.5)
+                onClicked: {
+                    categoryView.__currentTmpIndex = model.index;
+                    //bottomEdgeStack.clear();
+                    categoryClicked(name, id)
+                }
+                ListItemLayout {
+                    anchors.centerIn: parent
 
-                model: categoriesModel
-                delegate: ListItem {
-                    divider.anchors.leftMargin: units.gu(6.5)
-                    onClicked: {
-                        categoryView.__currentTmpIndex = model.index
-                        rootItem.categoryClicked(model.name, model.id)
+                    Image {
+                        SlotsLayout.position: SlotsLayout.Leading
+                        source: model.iconUrl
+                        width: units.gu(2.5); height: width
+                        sourceSize: Qt.size(width, height)
                     }
-                    ListItemLayout {
-                        anchors.centerIn: parent
 
-                        Image {
-                            SlotsLayout.position: SlotsLayout.Leading
-                            source: model.iconUrl
-                            width: units.gu(2.5); height: width
-                            sourceSize: Qt.size(width, height)
-                        }
-
-                        title.text: "%1 (%2)".arg(model.name).arg(model.count)
-                        ProgressionSlot {}
-                    }
+                    title.text: "%1 (%2)".arg(model.name).arg(model.count)
+                    ProgressionSlot {}
                 }
             }
         }

@@ -5,19 +5,20 @@ import OpenStore 1.0
 import "Components" as Components
 
 Page {
-    id: rootItem
+    id: searchPage
+    objectName: "searchPage"
 
     property alias searchText: searchField.text
     property alias searchField: searchField
     property alias queryUrl: view.queryUrl
 
-    header: PageHeader {
+    header: Components.HeaderBase {
         title: i18n.tr("Search")
         contents: TextField {
             id: searchField
             anchors.centerIn: parent
             width: Math.min(parent.width, units.gu(36))
-            
+
             // Disable predictive text
             inputMethodHints: Qt.ImhNoPredictiveText
 
@@ -32,12 +33,12 @@ Page {
     FilteredAppView {
         id: view
         anchors.fill: parent
-        anchors.topMargin: rootItem.header.height
+        anchors.topMargin: searchPage.header.height
 
         onAppDetailsRequired: {
             PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady)
             PackagesCache.getPackageDetails(appId)
-        }  
+        }
 
         Timer {
             id: searchTimer
@@ -48,6 +49,14 @@ Page {
         Connections {
             target: searchField
             onTextChanged: searchTimer.restart()
+        }
+    }
+
+    Component.onCompleted: {
+        if (searchField.text == "") {
+            searchField.forceActiveFocus()
+        } else {
+            searchTimer.restart()
         }
     }
 }

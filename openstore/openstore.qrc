@@ -7,24 +7,44 @@
         <file>CategoriesTab.qml</file>
         <file>FilteredAppView.qml</file>
         <file>InstalledAppsTab.qml</file>
-        <file>Components/BottomNavigationBar.qml</file>
         <file>Components/EmptyState.qml</file>
         <file>Components/SectionDivider.qml</file>
-        <file>MainPage.qml</file>
         <file>SearchTab.qml</file>
+        <file>SignInWebView.qml</file>
         <file>Components/HookIcon.qml</file>
-        <file>Components/LeftNavigationBar.qml</file>
-        <file>Components/ConvergentTabView.qml</file>
         <file>Components/BottomEdgePageStack.qml</file>
+        <file>Components/HeaderBase.qml</file>
+        <file>Components/HeaderMain.qml</file>
+        <file>Components/HighlightedApp.qml</file>
+        <file>Components/LabelCentered.qml</file>
         <file>Components/TextualButtonStyle.qml</file>
         <file>Components/OpenStoreCarousel.qml</file>
         <file>Components/PackageTile.qml</file>
         <file>Components/PackageListItem.qml</file>
         <file>Components/ScreenshotImage.qml</file>
+        <file>Components/ReviewPreview.qml</file>
         <file>SettingsPage.qml</file>
         <file>AuthenticationHandler.qml</file>
         <file>PasswordDialog.qml</file>
         <file>Components/ScreenshotsCarousel.qml</file>
+        <file>Components/ReviewItem.qml</file>
+        <file>Components/ReviewItemVertical.qml</file>
         <file>Components/UninstallPopup.qml</file>
+        <file>Components/MostRated.qml</file>
+        <file>Components/ButtonEmoji.qml</file>
+        <file>Components/RatingsRow.qml</file>
+        <file>openstore.svg</file>
+        <file>Assets/buggy.svg</file>
+        <file>Assets/buggy-full.svg</file>
+        <file>Assets/happy.svg</file>
+        <file>Assets/happy-full.svg</file>
+        <file>Assets/neutral.svg</file>
+        <file>Assets/neutral-full.svg</file>
+        <file>Assets/thumbdown.svg</file>
+        <file>Assets/thumbdown-full.svg</file>
+        <file>Assets/thumbup.svg</file>
+        <file>Assets/thumbup-full.svg</file>
+        <file>Assets/t-up.svg</file>
+        <file>js/inject.js</file>
     </qresource>
 </RCC>

@@ -21,52 +21,20 @@ import OpenStore 1.0
 import "Components" as Components
 
 Page {
-    id: rootItem
+    id: discoverPage
+    objectName: "discoverPage"
 
     property DiscoverModel discoverModel: root.discoverModel
+    anchors.fill: parent
 
-    header: PageHeader {
-        title: i18n.tr("Discover")
-        contents: Rectangle {
-            id: searchField
-            anchors.centerIn: parent
-            width: Math.min(parent.width, units.gu(36))
-            implicitHeight: units.gu(4)
-
-            Row {
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                    verticalCenter: parent.verticalCenter
-                    margins: units.gu(1)
-                }
-
-                spacing: units.gu(1)
-                Icon {
-                    width: units.gu(2); height: width
-                    name: "find"
-                }
-
-                Label {
-                    text: i18n.tr("Search in OpenStore...")
-                }
-            }
-
-            radius: units.dp(8)
-            color: "transparent"
-            border.width: units.dp(1)
-            border.color: "#cdcdcd"
-
-            MouseArea {
-                anchors.fill: parent
-                onClicked: mainPage.showSearch()
-            }
-        }
+    header: Components.HeaderMain {
+        id: mainHeader
+        title: i18n.tr('OpenStore')
+        flickable: view
     }
 
     ScrollView {
         anchors.fill: parent
-        anchors.topMargin: rootItem.header.height
 
         ListView {
             id: view
@@ -78,31 +46,25 @@ Page {
             header: Column {
                 width: parent.width
 
-                AbstractButton {
+                Components.HighlightedApp {
                     id: highlightAppControl
 
                     property var appItem: discoverModel.getPackage(discoverModel.highlightAppId)
-                    property bool ready: bannerImage.status === Image.Ready
 
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    width: Math.min(parent.width, units.gu(80))
-                    height: width * 0.5
+                    appStatus: {
+                        //TODO: More elegant way of doing this?
+                        if (highlightAppControl.appItem && highlightAppControl.appItem.installed)
+                            return highlightAppControl.appItem.updateAvailable ? 1 //Update available
+                                                                               : 2 //Installed
 
-                    onClicked: {
-                        if (highlightAppControl.ready) {
-                            var pageProps = { app: highlightAppControl.appItem }
-                            bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), pageProps)
-                        }
+                        return 0 //Not installed / not available
                     }
 
-                    Image {
-                        id: bannerImage
-                        anchors.fill: parent
-                        anchors.bottomMargin: units.gu(2)
-                        source: discoverModel.highlightBannerUrl || highlightAppControl.appItem.icon
-                        sourceSize: Qt.size(width, height)
-                        fillMode: Image.PreserveAspectCrop
-                    }
+                    imageUrl: discoverModel.highlightBannerUrl || highlightAppControl.appItem.icon
+                    appName: highlightAppControl.appItem ? highlightAppControl.appItem.name : ''
+                    appAuthor: highlightAppControl.appItem ? i18n.tr("by %1").arg(highlightAppControl.appItem.author) : ''
+                    appDesc: highlightAppControl.appItem ? (highlightAppControl.appItem.tagline + " " + highlightAppControl.appItem.description) : ''
+                    appRatings: highlightAppControl.appItem ? highlightAppControl.appItem.ratings : ''
 
                     ActivityIndicator {
                         anchors.centerIn: parent
@@ -110,79 +72,103 @@ Page {
                         running: visible
                     }
 
-                    Rectangle {
-                        anchors.fill: highlightAppLabels
-                        color: "black"
-                        opacity: 0.45
-                        visible: highlightAppControl.ready
-                    }
-
-                    ListItemLayout {
-                        id: highlightAppLabels
-                        anchors.bottom: parent.bottom
-                        anchors.bottomMargin: units.gu(2)
-
-                        title.text: highlightAppControl.appItem ? highlightAppControl.appItem.name : ''
-                        title.textSize: Label.Large
-                        title.font.weight: Font.Normal
-                        title.color: "white"
-
-                        subtitle.text: highlightAppControl.appItem ? (highlightAppControl.appItem.tagline || highlightAppControl.appItem.description) : ''
-                        subtitle.textSize: Label.Small
-                        subtitle.color: "white"
-
-                        summary.text: {
-                            if (highlightAppControl.appItem && highlightAppControl.appItem.installed)
-                                return highlightAppControl.appItem.updateAvailable ? i18n.tr("Update available").toUpperCase()
-                                                                                   : i18n.tr("✓ Installed").toUpperCase()
-
-                            return ""
+                    onButtonClicked: {
+                        //If we hide the whole Component we don't need to check if it's ready
+                        if (appStatus == 2) {
+                            Qt.openUrlExternally(highlightAppControl.appItem.appLaunchUrl());
+                        } else {
+                            var pageProps = { app: highlightAppControl.appItem }
+                            bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), pageProps)
                         }
-                        summary.textSize: Label.XSmall
-                        summary.color: "white"
+
                     }
                 }
 
                 ListItem {
                     id: appStoreUpdateAlert
                     anchors.horizontalCenter: parent.horizontalCenter
-                    width: Math.min(parent.width, units.gu(80))
+                    width: parent.width
                     divider.visible: false
                     enabled: visible    // Just for being sure everything works as expected
                     visible: appModel.appStoreUpdateAvailable
+                    color: theme.palette.normal.activity
 
                     ListItemLayout {
                         anchors.fill: parent
                         title.text: i18n.tr("OpenStore update available")
-                        subtitle.text: i18n.tr("Update OpenStore now!")
-                        subtitle.wrapMode: Text.WordWrap
+                        title.color: theme.palette.normal.activityText
+                        ProgressionSlot {}
+                    }
 
-                        Button {
-                            SlotsLayout.position: SlotsLayout.Last
-                            color: theme.palette.normal.positive
-                            text: i18n.tr("Details")
+                    function slot_installedPackageDetailsReady(pkg) {
+                        PackagesCache.packageDetailsReady.disconnect(slot_installedPackageDetailsReady)
+                        bottomEdgeStack.clear()
+                        bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
+                    }
 
-                            function slot_installedPackageDetailsReady(pkg) {
-                                PackagesCache.packageDetailsReady.disconnect(slot_installedPackageDetailsReady)
-                                bottomEdgeStack.clear()
-                                bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
-                            }
-
-                            onClicked: {
-                                PackagesCache.packageDetailsReady.connect(slot_installedPackageDetailsReady)
-                                PackagesCache.getPackageDetails(appModel.appStoreAppId)
-                            }
-                        }
+                    onClicked: {
+                        PackagesCache.packageDetailsReady.connect(slot_installedPackageDetailsReady)
+                        PackagesCache.getPackageDetails(appModel.appStoreAppId)
                     }
 
                     // WORKAROUND: appStoreUpdateAlert visibility is toggled after the whole page is layouted.
                     // This may result in the "Discover" tab being slightly scrolled down at start-up.
-                    Connections {
+            /*        Connections {
                         target: appStoreUpdateAlert
                         onVisibleChanged: {
                             view.positionViewAtBeginning()
                         }
                     }
+            */
+                }
+
+                ListItem {
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    width: parent.width
+                    //Used opacity to hide this until the model is ready. If visible is used, the ListView moves up on start
+                    opacity: highlightAppControl.ready ? 1 : 0
+
+                    ListItemLayout {
+                        anchors.fill: parent
+                        title.text: appModel.updatesAvailableCount > 0
+                            ? i18n.tr("Installed Apps") + i18n.tr(" (%1 update available)", " (%1 updates available)", appModel.updatesAvailableCount).arg(appModel.updatesAvailableCount)
+                            : i18n.tr("Installed Apps")
+                        title.color: theme.palette.normal.backgroundText
+                        ProgressionSlot {}
+
+                        Icon {
+                            name: "ubuntu-store-symbolic"
+                            SlotsLayout.position: SlotsLayout.Leading;
+                            width: units.gu(3)
+                            height: width
+                        }
+                    }
+
+                    onClicked: pageStack.push(Qt.resolvedUrl("InstalledAppsTab.qml"), {})
+                }
+
+                ListItem {
+                    id: footerItem
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    width: parent.width
+                    //Used opacity to hide this until the model is ready. If visible is used, the ListView moves up on start
+                    opacity: highlightAppControl.ready ? 1 : 0
+
+                    ListItemLayout {
+                        anchors.fill: parent
+                        title.text: i18n.tr("Browse Apps by Category")
+                        title.color: theme.palette.normal.backgroundText
+                        ProgressionSlot {}
+
+                        Icon {
+                            name: "view-list-symbolic"
+                            SlotsLayout.position: SlotsLayout.Leading;
+                            width: units.gu(3)
+                            height: width
+                        }
+                    }
+
+                    onClicked: pageStack.push(Qt.resolvedUrl("CategoriesTab.qml"))
                 }
             }
 
@@ -193,12 +179,25 @@ Page {
                 title: model.name
                 subtitle: model.tagline
                 showProgression: model.queryUrl
-                onTitleClicked: if (model.queryUrl) { mainPage.showSearchQuery(model.queryUrl) }
+
+                onTitleClicked: if (model.queryUrl) { root.showSearchQuery(model.queryUrl) }
                 onAppTileClicked: bottomEdgeStack.push(Qt.resolvedUrl("../AppDetailsPage.qml"), { app: appItem })
 
                 viewModel: model.appIds
                 function packageInfoGetter(i) {
                     return discoverModel.getPackage(i)
+                }
+            }
+
+            //If we didn't get the app list on start, let's get it when we reconnect
+            Connections {
+                target: OpenStoreNetworkManager
+
+                onNetworkAccessibleChanged: {
+                    if (OpenStoreNetworkManager.networkAccessible && discoverModel.rowCount() == 0) {
+                        console.log("Reconnected and App Model is empty. Try populate model again")
+                        discoverModel.refresh();
+                    }
                 }
             }
         }

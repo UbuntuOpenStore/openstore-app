@@ -170,6 +170,9 @@ void PackageItem::fillData(const QVariantMap &json)
         m_hooks = hooksList;
     }
 
+    m_reviews = new ReviewsModel(m_appId, this);
+    m_ratings = new Ratings(json["ratings"].toMap(), this);
+
     Q_EMIT updated();
 }
 
@@ -180,4 +183,14 @@ void PackageItem::updateLocalInfo(int localRevision, const QString &localVersion
 
     Q_EMIT updated();
     Q_EMIT installedChanged();
+}
+
+bool PackageItem::review(const QString &review, Rating rating, const QString &apiKey) const
+{
+    return m_reviews->sendReview(m_version, review, rating, apiKey, false);
+}
+
+bool PackageItem::editReview(const QString &review, Rating rating, const QString &apiKey) const
+{
+    return m_reviews->sendReview(m_version, review, rating, apiKey, true);
 }

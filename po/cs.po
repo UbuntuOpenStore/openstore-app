@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-09 05:56+0000\n"
-"PO-Revision-Date: 2020-05-15 12:24+0000\n"
+"PO-Revision-Date: 2020-05-18 17:52+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://translate.ubports.com/projects/openstore/"
 "openstore-app/cs/>\n"
@@ -174,11 +174,11 @@ msgstr "nevyžadovány"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:609
 msgid "Read paths"
-msgstr "Popisy umístění čtení"
+msgstr "Popisy umístění pro čtení"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:626
 msgid "Write paths"
-msgstr "Popisy umístění zápisu"
+msgstr "Popisy umístění pro zápis"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:641
 msgid "Donating"
@@ -233,7 +233,7 @@ msgstr "%1 kB"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:716
 #, qt-format
 msgid "%1 bytes"
-msgstr "%1 bytes"
+msgstr "%1 bajtů"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesPage.qml:24
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesTab.qml:90
@@ -283,7 +283,7 @@ msgstr "Nenalezeny žádné výsledky."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
 msgid "No app has been released in this category yet."
-msgstr "Zatím nebyly vydány žádné aplikace, spadající do této kategorie."
+msgstr "V této kategorii zatím nebyly vydány žádné aplikace."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
 msgid "Try with a different search."
@@ -322,8 +322,8 @@ msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
 msgstr ""
-"Instalovaná verze aplikace není ze serveru OpenStore. Je však dostupná "
-"stabilní verze."
+"Instalované verze těchto aplikací nepocházejí ze serveru OpenStore. Je však "
+"dostupná stabilní verze."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:103
 msgid "Update all"
@@ -335,7 +335,7 @@ msgstr "Nenalezeny žádné aplikace"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:189
 msgid "No app has been installed from OpenStore yet."
-msgstr "Z OpenStore zatím nebyly instalovány žádné aplikace."
+msgstr "Z OpenStore zatím nebyly nainstalovány žádné aplikace."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:245
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:294
@@ -347,7 +347,7 @@ msgid ""
 "You are currently using a non-standard domain for the OpenStore. This is a "
 "development feature. The domain you are using is:"
 msgstr ""
-"Aktuálně používáte nestandardní doménu pro OpenStore. Toto je vývojová "
+"V tuto chvíli používáte nestandardní doménu pro OpenStore. Toto je vývojová "
 "funkce. Používaná doména je:"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:268
@@ -368,9 +368,9 @@ msgid ""
 "OpenStore allows installing unconfined applications. Please make sure that "
 "you know about the implications of that."
 msgstr ""
-"OpenStore Vám umožňuje instalovat i aplikace, které jsou spouštěny přímo na "
-"systému, mimo bezpečnostní ohraničení. Ujistěte se, že víte jaké to může mít "
-"důsledky."
+"OpenStore vám umožňuje instalovat i aplikace, které jsou spouštěny přímo na "
+"systému, mimo bezpečnostní ohraničení. Ujistěte se, že víte jaké mohou mít "
+"mít důsledky."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:310
 msgid ""
@@ -433,7 +433,7 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:417
 #, qt-format
 msgid "Installation failed (Error %1)"
-msgstr "Instalace se nezdařila (Chyba %1)"
+msgstr "Instalace se nezdařila (chyba %1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/MainPage.qml:37
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:15

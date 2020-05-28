@@ -446,6 +446,7 @@ Page {
             }
 
             Components.ReviewPreview {
+                visible: app.channelMatchesOS
                 reviews: app.reviews
 
                 onReviewUpdated: {
@@ -496,6 +497,7 @@ Page {
             }
 
             ListItem {
+                visible: app.versionString
                 divider.visible: false
                 ListItemLayout {
                     anchors.centerIn: parent

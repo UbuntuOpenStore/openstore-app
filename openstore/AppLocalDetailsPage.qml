@@ -92,7 +92,7 @@ Page {
                     id: messageLayout
                     subtitle.text: {
                         if (Connectivity.online) {
-                            return i18n.tr("This app could not found in the OpenStore");
+                            return i18n.tr("This app could not be found in the OpenStore");
                         }
 
                         return i18n.tr("You are currently offline and the app details could not be fetched from the OpenStore");

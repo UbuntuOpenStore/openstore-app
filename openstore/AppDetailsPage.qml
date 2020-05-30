@@ -207,12 +207,6 @@ Page {
                     }
 
                     Components.ReviewItem {
-                        reviewIcon: "../Assets/thumbdown.svg"
-                        reviewNumber: modifyRatingCount(1, app.ratings.thumbsDownCount)
-                        enabled: modifyRatingCount(1, app.ratings.thumbsDownCount) > 0
-                    }
-
-                    Components.ReviewItem {
                         reviewIcon: "../Assets/happy.svg"
                         reviewNumber: modifyRatingCount(3, app.ratings.happyCount)
                         enabled: modifyRatingCount(3, app.ratings.happyCount) > 0
@@ -222,6 +216,12 @@ Page {
                         reviewIcon: "../Assets/neutral.svg"
                         reviewNumber: modifyRatingCount(2, app.ratings.neutralCount)
                         enabled: modifyRatingCount(2, app.ratings.neutralCount) > 0
+                    }
+
+                    Components.ReviewItem {
+                        reviewIcon: "../Assets/thumbdown.svg"
+                        reviewNumber: modifyRatingCount(1, app.ratings.thumbsDownCount)
+                        enabled: modifyRatingCount(1, app.ratings.thumbsDownCount) > 0
                     }
 
                     Components.ReviewItem {

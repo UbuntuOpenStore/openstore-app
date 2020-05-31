@@ -16,13 +16,6 @@ Row {
     }
 
     ReviewItemVertical {
-        reviewIcon: "../Assets/thumbdown.svg"
-        reviewNumber: appRatings.thumbsDownCount
-        enabled: appRatings.thumbsDownCount > 0
-        ratingColor: appColorText
-    }
-
-    ReviewItemVertical {
         reviewIcon: "../Assets/happy.svg"
         reviewNumber: appRatings.happyCount
         enabled: appRatings.happyCount > 0
@@ -33,6 +26,13 @@ Row {
         reviewIcon: "../Assets/neutral.svg"
         reviewNumber: appRatings.neutralCount
         enabled: appRatings.neutralCount > 0
+        ratingColor: appColorText
+    }
+
+    ReviewItemVertical {
+        reviewIcon: "../Assets/thumbdown.svg"
+        reviewNumber: appRatings.thumbsDownCount
+        enabled: appRatings.thumbsDownCount > 0
         ratingColor: appColorText
     }
 

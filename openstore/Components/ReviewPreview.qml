@@ -155,52 +155,37 @@ ListItem {
                 ButtonEmoji {
                     emoji: "../Assets/thumbup.svg"
                     iconSelected: ownRating == 0
-                    onClicked: {
-                        PopupUtils.close(dialogue)
-                        postReview(0, textArea.displayText)
-                    }
-                }
-
-                ButtonEmoji {
-                    emoji: "../Assets/thumbdown.svg"
-                    iconSelected: ownRating == 1
-                    onClicked: {
-                        PopupUtils.close(dialogue)
-                        postReview(1, textArea.displayText)
-                    }
+                    onClicked: ownRating = 0
                 }
 
                 ButtonEmoji {
                     emoji: "../Assets/happy.svg"
                     iconSelected: ownRating == 3
-                    onClicked: {
-                        PopupUtils.close(dialogue)
-                        postReview(3, textArea.displayText)
-                    }
+                    onClicked: ownRating = 3
                 }
 
                 ButtonEmoji {
                     emoji: "../Assets/neutral.svg"
                     iconSelected: ownRating == 2
-                    onClicked: {
-                        PopupUtils.close(dialogue)
-                        postReview(2, textArea.displayText)
-                    }
+                    onClicked: ownRating = 2
+                }
+
+                ButtonEmoji {
+                    emoji: "../Assets/thumbdown.svg"
+                    iconSelected: ownRating == 1
+                    onClicked: ownRating = 1
                 }
 
                 ButtonEmoji {
                     emoji: "../Assets/buggy.svg"
                     iconSelected: ownRating == 4
-                    onClicked: {
-                        PopupUtils.close(dialogue)
-                        postReview(4, textArea.displayText)
-                    }
+                    onClicked: ownRating = 4
                 }
             }
 
             Button {
-                text: i18n.tr("Update")
-                visible: ownRating
+                text: ownReview ? i18n.tr("Update") : i18n.tr('Submit')
+                enabled: ownRating != null
                 color: theme.palette.normal.positive
 
                 onClicked: {

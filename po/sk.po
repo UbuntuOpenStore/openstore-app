@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-18 04:23+0000\n"
-"PO-Revision-Date: 2020-03-01 01:00+0000\n"
-"Last-Translator: dano6 <dano.kutka@gmail.com>\n"
+"PO-Revision-Date: 2020-06-12 15:24+0000\n"
+"Last-Translator: Marek Lach Bc <mareklachbc@tutanota.com>\n"
 "Language-Team: Slovak <https://translate.ubports.com/projects/openstore/"
 "openstore-app/sk/>\n"
 "Language: sk\n"
@@ -38,7 +38,7 @@ msgstr "Aplikácia"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:18
 msgid "Scope"
-msgstr "Scope"
+msgstr "Rozsah"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:76
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:19
@@ -518,7 +518,7 @@ msgstr "URL Odkaz"
 #. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:78
 msgid "Content Hub Handler"
-msgstr "Správca štruktúr obsahu"
+msgstr "Spravovanie centier obsahu"
 
 #. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:92

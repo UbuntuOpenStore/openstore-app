@@ -1,7 +1,2 @@
-.bzr
-.git
 build
-build-pc
-*.user*
 .clickable
-.vscode

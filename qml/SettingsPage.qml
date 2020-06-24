@@ -97,7 +97,7 @@ Page {
                         radius: "medium"
 
                         source: Image {
-                            source: Qt.resolvedUrl("openstore.svg")
+                            source: Qt.resolvedUrl("Assets/openstore.svg")
                         }
                     }
 

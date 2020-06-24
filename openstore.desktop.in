@@ -2,7 +2,7 @@
 Name=OpenStore
 GenericName=Software Store
 Exec=openstore %u
-Icon=openstore/openstore.svg
+Icon=openstore.svg
 Terminal=false
 Type=Application
 X-Ubuntu-Touch=true

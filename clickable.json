@@ -1,5 +1,6 @@
 {
-  "builder": "qmake",
+  "clickable_minimum_required": "6.12.2",
+  "builder": "cmake",
   "kill": "openstore",
   "dependencies_target": [
     "libclick-0.4-dev",

@@ -33,7 +33,7 @@
         <file>Components/MostRated.qml</file>
         <file>Components/ButtonEmoji.qml</file>
         <file>Components/RatingsRow.qml</file>
-        <file>openstore.svg</file>
+        <file>Assets/openstore.svg</file>
         <file>Assets/buggy.svg</file>
         <file>Assets/buggy-full.svg</file>
         <file>Assets/happy.svg</file>

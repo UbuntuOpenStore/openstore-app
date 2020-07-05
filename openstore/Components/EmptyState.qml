@@ -38,13 +38,13 @@ Column {
     property alias controlComponent: controlLoader.sourceComponent
 
     Item {
-        width: childrenRect.width
+        width: parent.width
         height: childrenRect.height
         Icon {
             id: emptyIcon
             height: visible ? units.gu(10) : 0
             width: visible ? height : 0
-            color: "#BBBBBB"
+            color: theme.palette.normal.base
             visible: name || source
         }
         Row {

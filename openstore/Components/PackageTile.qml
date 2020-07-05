@@ -29,9 +29,11 @@ AbstractButton {
                     // until the image is loaded.
                     if (status == Image.Ready) {
                         rootItem.imageLoaded()
-                    }                     
+                    }
                 }
             }
+
+            MostRated {}
         }
 
         ListItemLayout {
@@ -49,7 +51,30 @@ AbstractButton {
             }
 
             subtitle {
-                text: rootItem.appItem.author
+                text: {
+                    // Show the author (like in the discover page) or the types if author isn't available (like in the filtered app list)
+
+                    if (rootItem.appItem.author) {
+                        return rootItem.appItem.author;
+                    }
+
+                    var translations = {
+                        'app': i18n.tr("App"),
+                        'scope': i18n.tr("Scope"),
+                        'webapp': i18n.tr("Web App"),
+                        'webapp+': i18n.tr("Web App+"),
+                    };
+
+                    var types = [];
+                    for (var i = 0; i < rootItem.appItem.types.length; i++) {
+                        if (translations[rootItem.appItem.types[i]]) {
+                            types.push(translations[rootItem.appItem.types[i]]);
+                        }
+                    }
+
+                    return types.join(', ');
+                }
+
                 textSize: Label.XSmall
             }
 

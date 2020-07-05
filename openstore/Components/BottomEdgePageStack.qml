@@ -3,9 +3,11 @@ import Ubuntu.Components 1.3
 
 Item {
     id: rootItem
+
     anchors.fill: parent
 
     property alias stack: internalStack
+    property alias isStackVisible: d.isStackVisible
 
     function push(page, properties) {
         var pageObject = internalStack.push(page, properties)
@@ -58,16 +60,6 @@ Item {
             when: !d.isStackVisible
             PropertyChanges { target: mainContainer; anchors.topMargin: rootItem.height }
         }
-
-        Behavior on anchors.topMargin {
-            NumberAnimation { easing.type: Easing.InOutQuad }
-        }
-
-    /*    InverseMouseArea {
-            anchors.fill: parent
-            onClicked: internalStack.clear()
-            enabled: visible
-        }*/
 
         Rectangle {
             anchors.fill: parent

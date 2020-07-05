@@ -25,10 +25,92 @@ import "Components" as Components
 
 Page {
     id: appDetailsPage
+    anchors.fill: parent
 
     property var app: null
+    property var oldRating: null
+    property var newRating: null
+    property var restrictedPermissions: [
+        'bluetooth',
+        'calendar',
+        'contacts',
+        'debug',
+        'history',
+        'music_files',
+        'music_files_read',
+        'picture_files',
+        'picture_files_read',
+        'video_files',
+        'video_files_read',
+    ]
 
-    header: PageHeader {
+    property bool isTrustedApp: {
+        if (app && app.appId) {
+            if (app.appId.startsWith('com.ubuntu.') && !app.appId.startsWith('com.ubuntu.developer.')) {
+                return true;
+            }
+
+            if (app.appId.startsWith('com.canonical.')) {
+                return true;
+            }
+
+            if (app.appId.startsWith('ubports.')) {
+                return true;
+            }
+
+            if (app.appId.startsWith('openstore.')) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    property bool canAccessUnconfinedLocations: {
+        for (var i=0; i<app.hooksCount; ++i) {
+            if (includesUnconfinedLocations(app.readPaths(i)))
+                return true
+            if (includesUnconfinedLocations(app.writePaths(i)))
+                return true
+        }
+        return false
+    }
+
+    property bool isUnconfined: {
+        for (var i=0; i<app.hooksCount; ++i) {
+            if (app.apparmorTemplate(i).indexOf("unconfined") >= 0)
+                return true
+        }
+        return false
+    }
+
+    // Adjust the rating when the user updates their review without making another network request
+    function modifyRatingCount(rating, count) {
+
+        if (oldRating >= 0 && oldRating != newRating) {
+            if (oldRating == rating) {
+                return count - 1;
+            }
+
+            if (newRating == rating) {
+                return count + 1;
+            }
+        }
+
+        return count;
+    }
+
+    function getNumberShortForm(number) {
+        if (number > 999999) {
+            return Math.floor(number/1000000) + "M"
+        }
+        else if (number > 999) {
+            return Math.floor(number/1000) + "K"
+        }
+        else return number + ""
+    }
+
+    header: Components.HeaderBase {
         title: app ? app.name : i18n.tr("App details")
         enabled: !PlatformIntegration.clickInstaller.busy
 
@@ -64,6 +146,7 @@ Page {
 
             ListItem {
                 height: units.gu(16)
+                divider.visible: false
 
                 ListItemLayout {
                     anchors.fill: parent
@@ -100,6 +183,51 @@ Page {
                             sourceSize.height: parent.height
                             source: app ? app.icon : ""
                         }
+                    }
+                }
+            }
+
+            // Review
+            ListItem {
+                height: units.gu(6)
+                visible: app.ratings.totalCount > 0
+
+                Row {
+                    anchors {
+                        horizontalCenter: parent.horizontalCenter
+                        verticalCenter: parent.verticalCenter
+                    }
+                    spacing: units.gu(5)
+
+                    Components.ReviewItem {
+                        id: tup
+                        reviewIcon: "../Assets/thumbup.svg"
+                        reviewNumber: modifyRatingCount(0, app.ratings.thumbsUpCount)
+                        enabled: modifyRatingCount(0, app.ratings.thumbsUpCount) > 0                                                                                                                                                                                                                                                                                           ; MouseArea {anchors.fill: parent; onClicked: tup.reviewIcon="../Assets/t-up.svg"}
+                    }
+
+                    Components.ReviewItem {
+                        reviewIcon: "../Assets/happy.svg"
+                        reviewNumber: modifyRatingCount(3, app.ratings.happyCount)
+                        enabled: modifyRatingCount(3, app.ratings.happyCount) > 0
+                    }
+
+                    Components.ReviewItem {
+                        reviewIcon: "../Assets/neutral.svg"
+                        reviewNumber: modifyRatingCount(2, app.ratings.neutralCount)
+                        enabled: modifyRatingCount(2, app.ratings.neutralCount) > 0
+                    }
+
+                    Components.ReviewItem {
+                        reviewIcon: "../Assets/thumbdown.svg"
+                        reviewNumber: modifyRatingCount(1, app.ratings.thumbsDownCount)
+                        enabled: modifyRatingCount(1, app.ratings.thumbsDownCount) > 0
+                    }
+
+                    Components.ReviewItem {
+                        reviewIcon: "../Assets/buggy.svg"
+                        reviewNumber: modifyRatingCount(4, app.ratings.buggyCount)
+                        enabled: modifyRatingCount(4, app.ratings.buggyCount) > 0
                     }
                 }
             }
@@ -145,6 +273,14 @@ Page {
                         onClicked: Qt.openUrlExternally(app.appLaunchUrl())
                     }
 
+                    Label {
+                        Layout.fillWidth: true
+                        visible: app.installed && app.containsApp && app.appId == "openstore.openstore-team" && !app.isLocalVersionSideloaded && !app.updateAvailable
+                        horizontalAlignment: Text.AlignHCenter
+
+                        text: "🎉 " + i18n.tr("The OpenStore is installed!") + " ❤️"
+                    }
+
                     Button {
                         id: installUpgradeButton
                         Layout.fillWidth: true
@@ -162,19 +298,25 @@ Page {
                         visible: !app.installed || (app.installed && app.updateAvailable) || app.isLocalVersionSideloaded
                         color: app.isLocalVersionSideloaded ? theme.palette.selected.focus : theme.palette.normal.positive
                         onClicked: {
-                            if(app.donateUrl && !app.installed)
-                            {
-                                var popupdonationPopup = PopupUtils.open(donatingPopup)
-                                popupdonationPopup.accepted.connect(function() {
-                                    app.install()
-                                    Qt.openUrlExternally(app.donateUrl)
-                                })
-                                popupdonationPopup.rejected.connect(function() {
-                                    app.install()
-                                })
+                            if (isUnconfined && !isTrustedApp && !app.installed) {
+                                var popup = PopupUtils.open(unconfinedWarningPopup)
+                                popup.accepted.connect(function() {
+                                    app.install();
+                                });
                             }
-                            else
-                                app.install()
+                            else if (app.donateUrl && !app.installed) {
+                                var popup = PopupUtils.open(donatingPopup)
+                                popup.accepted.connect(function() {
+                                    app.install();
+                                    Qt.openUrlExternally(app.donateUrl);
+                                });
+                                popup.rejected.connect(function() {
+                                    app.install();
+                                });
+                            }
+                            else {
+                                app.install();
+                            }
                         }
                     }
                 }
@@ -255,20 +397,16 @@ Page {
             }
 
             ListItem {
-                visible: {
-                    for (var i=0; i<app.hooksCount; ++i) {
-                        if (includesUnconfinedLocations(app.readPaths(i)))
-                            return true
-                        if (includesUnconfinedLocations(app.writePaths(i)))
-                            return true
-                        if (app.apparmorTemplate(i).indexOf("unconfined") >= 0)
-                            return true
-                    }
-                    return false
-                }
+                visible: (canAccessUnconfinedLocations || isUnconfined) && !isTrustedApp
                 ListItemLayout {
                     anchors.centerIn: parent
-                    subtitle.text: i18n.tr("This app has access to restricted system data, see below for details.")
+                    subtitle.text: {
+                        if (isUnconfined) {
+                            return i18n.tr("This app has access to restricted parts of the system and all of your data, see below for details.");
+                        }
+
+                        return i18n.tr("This app has access to restricted system data, see below for details.");
+                    }
                     subtitle.color: theme.palette.normal.negative
                     subtitle.maximumLineCount: Number.MAX_VALUE
                     subtitle.wrapMode: Text.WordWrap
@@ -304,6 +442,16 @@ Page {
                         visible: descLayout.subtitle.truncated
                         name: descLayout.showAll ? "go-up" : "go-down"
                     }
+                }
+            }
+
+            Components.ReviewPreview {
+                visible: app.channelMatchesOS
+                reviews: app.reviews
+
+                onReviewUpdated: {
+                    appDetailsPage.oldRating = oldRating;
+                    appDetailsPage.newRating = newRating;
                 }
             }
 
@@ -349,6 +497,7 @@ Page {
             }
 
             ListItem {
+                visible: app.versionString
                 divider.visible: false
                 ListItemLayout {
                     anchors.centerIn: parent
@@ -438,7 +587,7 @@ Page {
                 enabled: !PlatformIntegration.clickInstaller.busy
                 onClicked: {
                     bottomEdgeStack.clear()
-                    mainPage.showSearch('author:' + app.author)
+                    root.showSearch('author:' + app.author)
                 }
                 ListItemLayout {
                     anchors.centerIn: parent
@@ -452,13 +601,13 @@ Page {
                 enabled: !PlatformIntegration.clickInstaller.busy
                 onClicked: {
                     bottomEdgeStack.clear()
-                    mainPage.showCategory(app.category, app.category)
+                    root.showCategory(localCat(app.category), app.category)
                 }
                 ListItemLayout {
                     anchors.centerIn: parent
                     // FIXME: app.category is not localized.
                     // TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-                    title.text: i18n.tr("Other apps in %1").arg(app.category)
+                    title.text: i18n.tr("Other apps in %1").arg(localCat(app.category))
                     ProgressionSlot {}
                 }
             }
@@ -474,7 +623,7 @@ Page {
                     height: hookDelLayout.height + units.gu(3)
 
                     property var hooks: app.hooks(index)
-                    property string permissions: app.permissions(index)
+                    property var permissions: app.permissions(index)
                     property string readpaths: app.readPaths(index)
                     property string writepaths: app.writePaths(index)
                     property string hookName: app.hookName(index)
@@ -536,40 +685,24 @@ Page {
                         ListItemLayout {
                             anchors { left: parent.left; right: parent.right }
                             anchors.leftMargin: units.gu(-2)
-                            height: units.gu(6)
-                            Icon {
-                                SlotsLayout.position: SlotsLayout.Leading
-                                width: units.gu(4); height: width
-                                name: "security-alert"
-                                visible: apparmorTemplate.indexOf("unconfined") >= 0
-                            }
-
-                            title.text: i18n.tr("AppArmor profile")
-                            subtitle.text: apparmorTemplate || "Ubuntu confined app"
-                            subtitle.color: apparmorTemplate.indexOf("unconfined") >= 0
-                                ? theme.palette.normal.negative
-                                : theme.palette.normal.backgroundSecondaryText
-                            subtitle.maximumLineCount: Number.MAX_VALUE
-                        }
-
-
-                        ListItemLayout {
-                            anchors { left: parent.left; right: parent.right }
-                            anchors.leftMargin: units.gu(-2)
-                            visible: permissions.length > 0
 
                             Icon {
-                                property var restrictedPerms: ["bluetooth", "calendar", "contacts", "debug", "history", "music_files", "picture_files", "video_files"]
                                 SlotsLayout.position: SlotsLayout.Leading
                                 width: units.gu(4); height: width
                                 name: "security-alert"
                                 visible: {
-                                    var length = restrictedPerms.length;
-                                    while(length--) {
-                                       if (permissions.indexOf(restrictedPerms[length]) > -1)
-                                           return true
+                                    if (apparmorTemplate.indexOf("unconfined") >= 0) {
+                                        return true;
                                     }
-                                    return false
+
+                                    var length = restrictedPermissions.length;
+                                    while(length--) {
+                                        if (permissions.indexOf(restrictedPermissions[length]) > -1) {
+                                           return true;
+                                        }
+                                    }
+
+                                    return false;
                                 }
                             }
 
@@ -577,22 +710,63 @@ Page {
                             subtitle.maximumLineCount: Number.MAX_VALUE
                             subtitle.wrapMode: Text.WordWrap
                             subtitle.text: {
-                                if (permissions) {
-                                    return permissions.replace("bluetooth", "<font color=\"#ED3146\">bluetooth</font>")
-                                                      .replace("calendar", "<font color=\"#ED3146\">calendar</font>")
-                                                      .replace("contacts", "<font color=\"#ED3146\">contacts</font>")
-                                                      .replace("debug", "<font color=\"#ED3146\">debug</font>")
-                                                      .replace("history", "<font color=\"#ED3146\">history</font>")
-                                                      .replace("music_files_read", "<font color=\"#ED3146\">music_files_read</font>")
-                                                      .replace("picture_files_read", "<font color=\"#ED3146\">music_files_read</font>")
-                                                      .replace("video_files_read", "<font color=\"#ED3146\">music_files_read</font>")
-                                                      .replace("music_files", "<font color=\"#ED3146\">music_files_read</font>")
-                                                      .replace("picture_files", "<font color=\"#ED3146\">music_files_read</font>")
-                                                      .replace("video_files", "<font color=\"#ED3146\">music_files_read</font>")
+                                var translations = {
+                                    accounts: i18n.tr("Accounts"),
+                                    audio: i18n.tr("Audio"),
+                                    bluetooth: i18n.tr("Bluetooth"),
+                                    calendar: i18n.tr("Calendar"),
+                                    camera: i18n.tr("Camera"),
+                                    connectivity: i18n.tr("Connectivity"),
+                                    contacts: i18n.tr("Contacts"),
+                                    content_exchange_source: i18n.tr("Content Exchange Source"),
+                                    content_exchange: i18n.tr("Content Exchange"),
+                                    debug: i18n.tr("Debug"),
+                                    history: i18n.tr("History"),
+                                    'in-app-purchases': i18n.tr("In App Purchases"),
+                                    'keep-display-on': i18n.tr("Keep Display On"),
+                                    location: i18n.tr("Location"),
+                                    microphone: i18n.tr("Microphone"),
+                                    music_files_read: i18n.tr("Read Music Files"),
+                                    music_files: i18n.tr("Music Files"),
+                                    networking: i18n.tr("Networking"),
+                                    picture_files_read: i18n.tr("Read Picture Files"),
+                                    picture_files: i18n.tr("Picture Files"),
+                                    'push-notification-client': i18n.tr("Push Notifications"),
+                                    sensors: i18n.tr("Sensors"),
+                                    usermetrics: i18n.tr("User Metrics"),
+                                    video_files_read: i18n.tr("Read Video Files"),
+                                    video_files: i18n.tr("Video Files"),
+                                    video: i18n.tr("Video"),
+                                    webview: i18n.tr("Webview"),
+                                };
+
+                                if (apparmorTemplate.indexOf("unconfined") >= 0) {
+                                    return '<font color=\"#ED3146\">' + i18n.tr("Full System Access") + '</font>';
                                 }
 
-                                // TRANSLATORS: this will show when an app doesn't need any special permissions
-                                return "<i>" + i18n.tr("none required") + "</i>"
+                                if (permissions.length === 0) {
+                                    // TRANSLATORS: this will show when an app doesn't need any special permissions
+                                    return "<i>" + i18n.tr("none required") + "</i>"
+                                }
+
+                                var translated = [];
+                                for (var i = 0; i < permissions.length; i++) {
+                                    var permission = permissions[i];
+                                    var isRestricted = restrictedPermissions.indexOf(permission) > -1;
+
+                                    if (translations[permission]) {
+                                        permission = translations[permission];
+                                    }
+
+                                    if (isRestricted) {
+                                        translated.push('<font color=\"#ED3146\">' + permission + '</font>');
+                                    }
+                                    else {
+                                        translated.push(permission);
+                                    }
+                                }
+
+                                return translated.join(', ');
                             }
                         }
 
@@ -639,7 +813,7 @@ Page {
     Component {
         id: donatingPopup
         Dialog {
-            id: donatingdDialog
+            id: donatingDialog
             title: i18n.tr("Donating")
             text: i18n.tr("Would you like to support this app with a donation to the developer?")
 
@@ -650,51 +824,52 @@ Page {
                 text: i18n.tr("Donate now")
                 color: theme.palette.normal.positive
                 onClicked: {
-                    donatingdDialog.accepted()
-                    PopupUtils.close(donatingdDialog)
+                    donatingDialog.accepted()
+                    PopupUtils.close(donatingDialog)
                 }
             }
             Button {
                 text: i18n.tr("Maybe later")
                 onClicked: {
-                    donatingdDialog.rejected();
-                    PopupUtils.close(donatingdDialog)
+                    donatingDialog.rejected();
+                    PopupUtils.close(donatingDialog)
                 }
             }
         }
     }
 
     Component {
-        id: removeQuestion
+        id: unconfinedWarningPopup
         Dialog {
-            id: removeQuestionDialog
-            title: i18n.tr("Remove package")
-            text: i18n.tr("Do you want to remove %1?").arg(pkgName)
+            id: unconfinedWarningDialog
+            title: i18n.tr("Warning")
+            text: i18n.tr("This app has access to restricted parts of the system and all of your data. It has the potential break your system. While the OpenStore maintainers have reviewed the code for this app for safety, they are not responsible for anything bad that might happen to your device or data from installing this app.")
 
-            property string pkgName
-            signal accepted();
-            signal rejected();
+            signal accepted()
+            signal rejected()
 
             Button {
-                text: i18n.tr("Remove")
+                text: i18n.tr("I understand the risks")
                 color: theme.palette.normal.negative
                 onClicked: {
-                    removeQuestionDialog.accepted();
-                    PopupUtils.close(removeQuestionDialog)
+                    unconfinedWarningDialog.accepted()
+                    PopupUtils.close(unconfinedWarningDialog)
                 }
             }
 
             Button {
                 text: i18n.tr("Cancel")
                 onClicked: {
-                    removeQuestionDialog.rejected();
-                    PopupUtils.close(removeQuestionDialog)
+                    unconfinedWarningDialog.rejected();
+                    PopupUtils.close(unconfinedWarningDialog)
                 }
-
             }
         }
     }
 
+    Components.UninstallPopup {
+        id: removeQuestion
+    }
 
     function printSize(size) {
         var s
@@ -732,5 +907,16 @@ Page {
         }
 
         return (j > 0)
+    }
+
+    function localCat(id) {
+        var localName = id;
+        for (var i=0; i < categoriesModel.rowCount(); i++) {
+            if (categoriesModel.data(categoriesModel.index(i,0),0) === id) {
+                localName = categoriesModel.data(categoriesModel.index(i,0),1)
+            }
+        }
+
+        return localName;
     }
 }

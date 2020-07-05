@@ -6,8 +6,10 @@
 #include <QJsonDocument>
 #include <QDebug>
 #include <QDateTime>
+#include <QPointer>
 
 #include "platformintegration.h"
+#include "reviewsmodel.h"
 
 class PackageItem: public QObject
 {
@@ -45,6 +47,8 @@ class PackageItem: public QObject
     Q_PROPERTY(QStringList types READ types NOTIFY updated)
     Q_PROPERTY(bool channelMatchesOS READ channelMatchesOS NOTIFY updated)
     Q_PROPERTY(bool frameworkMatchesOS READ frameworkMatchesOS NOTIFY updated)
+    Q_PROPERTY(ReviewsModel * reviews MEMBER m_reviews NOTIFY updated)
+    Q_PROPERTY(Ratings * ratings MEMBER m_ratings NOTIFY updated)
 
     Q_ENUMS(Hook)
     Q_FLAGS(Hooks)
@@ -104,7 +108,7 @@ public:
     bool channelMatchesOS() const {  return m_channels.contains(PlatformIntegration::instance()->systemCodename()); };
     bool frameworkMatchesOS() const { return PlatformIntegration::instance()->supportedFrameworks().contains(m_framework); };
 
-    Q_INVOKABLE QString permissions(int index) const { return m_hooks.at(index).permissions.join(", "); }
+    Q_INVOKABLE QStringList permissions(int index) const { return m_hooks.at(index).permissions; }
     Q_INVOKABLE Hooks hooks(int index) const { return m_hooks.at(index).hooks; }
     Q_INVOKABLE QString hookName(int index) { return m_hooks.at(index).name; }
     Q_INVOKABLE QString apparmorTemplate(int index) { return m_hooks.at(index).apparmorTemplate; }
@@ -117,6 +121,8 @@ public:
     Q_INVOKABLE bool install() const;
     Q_INVOKABLE bool remove() const;
     Q_INVOKABLE QString appLaunchUrl() const;
+    Q_INVOKABLE bool review(const QString &text, Rating rating, const QString &apiKey) const;
+    Q_INVOKABLE bool editReview(const QString &text, Rating rating, const QString &apiKey) const;
 
 Q_SIGNALS:
     void updated();
@@ -157,6 +163,8 @@ private:
     QStringList m_channels;
     QStringList m_types;
     QString m_framework;
+    QPointer<ReviewsModel> m_reviews;
+    QPointer<Ratings> m_ratings;
 };
 
 #endif // PACKAGE_H

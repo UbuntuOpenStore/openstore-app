@@ -20,6 +20,7 @@ import OpenStore 1.0
 import QtQuick.Layouts 1.1
 import Qt.labs.settings 1.0
 import Ubuntu.Content 1.3
+import Ubuntu.Connectivity 1.0
 
 import "Components" as Components
 
@@ -28,15 +29,52 @@ MainView {
     applicationName: "openstore.openstore-team"
     anchorToKeyboard: true
 
-    width: units.gu(130)
+    //Width must be !isBigScreen for the PageStacks to resize correctly
+    width: units.gu(50)
     height: units.gu(75)
 
     property var mainPage
+    property bool isLandscape: width > height
+    property bool isBigScreen: width > units.gu(70)
+    property string mainStackPage
+
+    readonly property string appColorText: UbuntuColors.porcelain
+    readonly property string    appColor: "#292929"
+
+    property alias apiKey: settings.apiKey
+
+    function slot_packageFetchError(appId) {
+        PackagesCache.packageDetailsReady.disconnect(slot_packageDetailsReady);
+        PackagesCache.packageFetchError.disconnect(slot_packageFetchError);
+
+        var app = appModel.getByAppId(appId);
+        if (app.appId) {
+            bottomEdgeStack.clear();
+            bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
+        }
+    }
 
     function slot_packageDetailsReady(pkg) {
-        PackagesCache.packageDetailsReady.disconnect(slot_packageDetailsReady)
-        bottomEdgeStack.clear()
-        bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
+        PackagesCache.packageDetailsReady.disconnect(slot_packageDetailsReady);
+        PackagesCache.packageFetchError.disconnect(slot_packageFetchError);
+
+        bottomEdgeStack.clear();
+        bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg });
+    }
+
+    function openApp(appId) {
+        if (Connectivity.online) {
+            PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady);
+            PackagesCache.packageFetchError.connect(slot_packageFetchError);
+            PackagesCache.getPackageDetails(appId);
+        }
+        else {
+            var app = appModel.getByAppId(appId);
+            if (app.appId) {
+                bottomEdgeStack.clear();
+                bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
+            }
+        }
     }
 
     function parseUrl(url) {
@@ -62,29 +100,17 @@ MainView {
         }
         else {
             console.log("Fetching package details for %1".arg(appId));
-            PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady);
-            PackagesCache.getPackageDetails(appId);
+            openApp(appId);
         }
     }
 
     Component.onCompleted: {
-        mainPage = pageStack.push(Qt.resolvedUrl("MainPage.qml"))
-
+        pageStack.push(Qt.resolvedUrl("DiscoverTab.qml"))
         PlatformIntegration.update()
 
         if (OpenStoreNetworkManager.isDifferentDomain) {
             var popup = PopupUtils.open(domainWarningComponent)
             popup.accepted.connect(function() {
-                PopupUtils.close(popup)
-            })
-            popup.rejected.connect(function() {
-                Qt.quit();
-            })
-        }
-        else if (settings.firstStart) {
-            var popup = PopupUtils.open(warningComponent)
-            popup.accepted.connect(function() {
-                settings.firstStart = false;
                 PopupUtils.close(popup)
             })
             popup.rejected.connect(function() {
@@ -104,6 +130,7 @@ MainView {
     }
 
     property bool contentHubInstallInProgress: false
+
     Connections {
         target: ContentHub
 
@@ -162,6 +189,7 @@ MainView {
         id: settings
         property bool firstStart: true
         property bool hideNsfw: true
+        property string apiKey: ""
 
         Component.onCompleted: OpenStoreNetworkManager.showNsfw = !settings.hideNsfw
     }
@@ -175,10 +203,37 @@ MainView {
 
     PageStack {
         id: pageStack
+
+        width: isBigScreen && bottomEdgeStack.isStackVisible
+            ? parent.width - bottomEdgeStack.width
+            : 0 //Hack. Width must be inferior to the parent.width
+        anchors {
+            fill: isBigScreen && bottomEdgeStack.isStackVisible
+                ? undefined
+                : parent
+            left: parent.left
+            top: parent.top
+            bottom: parent.bottom
+        }
+
+        onDepthChanged: bottomEdgeStack.clear();
+        onCurrentPageChanged: mainStackPage = currentPage.objectName
     }
 
     Components.BottomEdgePageStack {
         id: bottomEdgeStack
+
+        width: isBigScreen && bottomEdgeStack.isStackVisible
+            ? units.gu(47)
+            : 0 //Hack. Width must be inferior to the parent.width
+        anchors {
+            fill: isBigScreen && bottomEdgeStack.isStackVisible
+                ? undefined
+                : parent
+            right: parent.right
+            top: parent.top
+            bottom: parent.bottom
+        }
     }
 
     /*
@@ -220,7 +275,7 @@ MainView {
             property alias filterString: filteredAppView.filterString
             property alias sortMode: filteredAppView.sortMode
             property alias category: filteredAppView.category
-            header: PageHeader {
+            header: Components.HeaderBase {
                 title: filteredAppPage.title
                 automaticHeight: false
             }
@@ -229,10 +284,7 @@ MainView {
                 anchors.topMargin: filteredAppPage.header.height
 
                 id: filteredAppView
-                onAppDetailsRequired: {
-                    PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady)
-                    PackagesCache.getPackageDetails(appId)
-                }
+                onAppDetailsRequired: openApp(appId)
             }
         }
     }
@@ -285,67 +337,12 @@ MainView {
         }
     }
 
-
-    Component {
-        id: warningComponent
-
-        Dialog {
-            id: warningDialog
-            title: i18n.tr("Warning")
-
-            signal accepted();
-            signal rejected();
-
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                wrapMode: Text.WordWrap
-                maximumLineCount: Number.MAX_VALUE
-                text: i18n.tr("OpenStore allows installing unconfined applications. Please make sure that you know about the implications of that.")
-            }
-
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                wrapMode: Text.WordWrap
-                maximumLineCount: Number.MAX_VALUE
-                text: i18n.tr("An unconfined application has the ability to break the system, reduce its performance and/or spy on you.")
-            }
-
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                wrapMode: Text.WordWrap
-                maximumLineCount: Number.MAX_VALUE
-                text: i18n.tr("While we are doing our best to prevent that by reviewing applications, we don't take any responsibility if something bad slips through.")
-            }
-
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                wrapMode: Text.WordWrap
-                maximumLineCount: Number.MAX_VALUE
-                text: i18n.tr("Use this at your own risk.")
-            }
-
-            Button {
-                text: i18n.tr("Okay. Got it! I'll be careful.")
-                color: theme.palette.normal.positive
-                onClicked: {
-                    warningDialog.accepted();
-                }
-            }
-            Button {
-                text: i18n.tr("Get me out of here!")
-                onClicked: {
-                    warningDialog.rejected();
-                }
-            }
-        }
-    }
-
     Component {
         id: installQuestion
         Dialog {
             id: installQuestionDialog
-            title: i18n.tr("Install app?")
-            text: i18n.tr("Do you want to install %1?").arg(fileName)
+            title: i18n.tr("Install unknown app?")
+            text: i18n.tr("Do you want to install the unkown app %1?").arg(fileName)
 
             property string fileName
             signal accepted();
@@ -422,6 +419,27 @@ MainView {
                 onClicked: PopupUtils.close(timeoutErrorDialog)
             }
         }
+    }
+
+    //Function from mainPage
+
+    function showCategory(name, id) {
+        if (root.mainStackPage !== "discoverPage") {
+            pageStack.pop()
+        }
+        pageStack.push(Qt.resolvedUrl("CategoriesTab.qml"));
+        bottomEdgeStack.push(filteredAppPageComponent, {"title": name, "category": id});
+        //categoriesTab.categoryClicked(name, id)
+    }
+    function showSearch(text) {
+        if (root.mainStackPage !== "discoverPage") {
+            pageStack.pop()
+        }
+        pageStack.push(Qt.resolvedUrl("../SearchTab.qml"), {"searchText": text || ''});
+    }
+
+    function showSearchQuery(url) {
+        pageStack.push(Qt.resolvedUrl("../SearchTab.qml"), {"queryUrl": url || ''});
     }
 
     // *** WORKAROUNDS ***

@@ -16,6 +16,7 @@
 
 import QtQuick 2.4
 import Ubuntu.Components 1.3
+import Ubuntu.Connectivity 1.0
 import OpenStore 1.0
 import QtQuick.Layouts 1.1
 
@@ -46,35 +47,22 @@ Page {
         onPackageInstallationFailed: updateNextPackage()
     }
 
-    header: PageHeader {
-        title: i18n.tr("My Apps")
-
-        trailingActionBar {
-            actions: Action {
-                iconName: "settings"
-                text: i18n.tr("Settings")
-                onTriggered: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
-            }
-        }
+    header: Components.HeaderMain {
+        title: i18n.tr("Installed Apps")
+        flickable: view
     }
 
     ScrollView {
         id: scrollView
-        width: Math.min(parent.width, units.gu(80))
+        width: parent.width
         anchors {
             top: parent.top
-            topMargin: parent.header ? parent.header.height : 0
             bottom: parent.bottom
-            horizontalCenter: parent.horizontalCenter
-            bottomMargin: units.gu(2)
         }
 
         ListView {
             id: view
             anchors.fill: parent
-
-            topMargin: scrollView.width == units.gu(80) ? units.gu(4) : 0
-            bottomMargin: scrollView.width == units.gu(80) ? units.gu(4) : 0
 
             model: appModel
 
@@ -119,7 +107,7 @@ Page {
             }
 
             delegate: ListItem {
-                height: units.gu(6)
+                height: units.gu(7)
                 divider.anchors.leftMargin: units.gu(8)
 
                 ListItemLayout {
@@ -163,18 +151,35 @@ Page {
                     }
                 }
 
+                function slot_packageFetchError(appId) {
+                    PackagesCache.packageDetailsReady.disconnect(slot_installedPackageDetailsReady);
+                    PackagesCache.packageFetchError.disconnect(slot_packageFetchError);
+
+                    bottomEdgeStack.clear();
+                    bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: appModel.getByAppId(appId) });
+                }
+
                 function slot_installedPackageDetailsReady(pkg) {
-                    PackagesCache.packageDetailsReady.disconnect(slot_installedPackageDetailsReady)
-                    bottomEdgeStack.clear()
-                    bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
+                    PackagesCache.packageDetailsReady.disconnect(slot_installedPackageDetailsReady);
+                    PackagesCache.packageFetchError.disconnect(slot_packageFetchError);
+
+                    bottomEdgeStack.clear();
+                    bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg });
                 }
 
                 onClicked: {
                     if (updating && currentApp == model.appId) {
                         PlatformIntegration.clickInstaller.abortInstallation()
                     } else {
-                        PackagesCache.packageDetailsReady.connect(slot_installedPackageDetailsReady)
-                        PackagesCache.getPackageDetails(model.appId)
+                        if (Connectivity.online) {
+                            PackagesCache.packageDetailsReady.connect(slot_installedPackageDetailsReady);
+                            PackagesCache.packageFetchError.connect(slot_packageFetchError);
+                            PackagesCache.getPackageDetails(model.appId);
+                        }
+                        else {
+                            bottomEdgeStack.clear();
+                            bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: appModel.getByAppId(model.appId) });
+                        }
                     }
                 }
             }

@@ -32,8 +32,10 @@ ListItem {
         summary.wrapMode: Text.WrapAtWordBoundaryOrAnywhere
 
         UbuntuShape {
-            SlotsLayout.position: SlotsLayout.Leading
+            id: appIconShape
             aspect: UbuntuShape.Flat
+            SlotsLayout.position: SlotsLayout.Leading
+
             image: Image {
                 source: rootItem.appItem.icon
                 sourceSize.width: parent.width
@@ -41,6 +43,8 @@ ListItem {
                 height: parent.height
                 width: parent.width
             }
+
+            MostRated {}
         }
 
         Icon {

@@ -7,6 +7,8 @@
 #include <QStandardPaths>
 #include <QUrlQuery>
 #include <QUuid>
+#include <QJsonObject>
+#include <QJsonDocument>
 
 #include <QDebug>
 
@@ -39,14 +41,16 @@ QString OpenStoreNetworkManager::generateNewSignature() const
     return QUuid::createUuid().toString();
 }
 
-QString OpenStoreNetworkManager::getUrl() const {
+QString OpenStoreNetworkManager::getUrl() const
+{
     return getUrl("");
 }
 
 QString OpenStoreNetworkManager::getUrl(QString route) const
 {
     QString base = qgetenv("OPENSTORE_API");
-    if (base.isEmpty()) {
+    if (base.isEmpty())
+    {
         base = API_BASEURL;
     }
 
@@ -79,8 +83,15 @@ QNetworkReply *OpenStoreNetworkManager::sendRequest(QNetworkRequest request)
 
 void OpenStoreNetworkManager::emitReplySignal(QNetworkReply *reply, const QString &signature)
 {
-     if (reply->isFinished()) {
+    if (reply->isFinished())
+    {
         disconnect(reply);
+
+        if (reply->error() != QNetworkReply::NoError)
+        {
+            // TODO add proper error handling
+            qWarning() << "network request failed with" << reply->errorString();
+        }
 
         OpenStoreReply r;
 
@@ -103,7 +114,8 @@ bool OpenStoreNetworkManager::getDiscover(const QString &signature)
         emitReplySignal(reply, signature);
     });
 
-    if (reply->isFinished()) {
+    if (reply->isFinished())
+    {
         disconnect(reply);
         emitReplySignal(reply, signature);
     }
@@ -135,10 +147,12 @@ bool OpenStoreNetworkManager::getSearch(const QString &signature, int skip, int 
     q.addQueryItem("sort", sort);
     q.addQueryItem("category", category);
 
-    if (filterString.startsWith("author:")) {
+    if (filterString.startsWith("author:"))
+    {
         q.addQueryItem("author", filterString.right(filterString.size() - 7));
     }
-    else {
+    else
+    {
         q.addQueryItem("search", filterString);
     }
 
@@ -192,6 +206,107 @@ bool OpenStoreNetworkManager::getRevisions(const QString &signature, const QStri
     url.setQuery(q);
 
     QNetworkReply *reply = sendRequest(QNetworkRequest(url));
+
+    connect(reply, &QNetworkReply::finished, [=]() {
+        emitReplySignal(reply, signature);
+    });
+
+    emitReplySignal(reply, signature);
+
+    return true;
+}
+
+bool OpenStoreNetworkManager::postReview(const QString &signature,
+                                         const QString &appId,
+                                         const QString &version,
+                                         const QString &review,
+                                         Ratings::Rating rating,
+                                         const QString &apikey,
+                                         const bool &edit)
+{
+    QJsonObject createReview{
+        {"body", review},
+        {"version", version},
+        {"rating", Ratings::ratingToString(rating)}};
+    QJsonDocument jsonDocument(createReview);
+
+    QUrl url(API_BASEURL + API_REVIEW_LIST_ENDPOINT.arg(appId));
+
+    QUrlQuery q(url);
+    q.addQueryItem("apikey", apikey);
+
+    url.setQuery(q);
+
+    QNetworkRequest request(url);
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+
+    QNetworkReply *reply;
+
+    if (edit)
+    {
+        reply = m_manager->put(request, jsonDocument.toJson());
+    }
+    else
+    {
+        reply = m_manager->post(request, jsonDocument.toJson());
+    }
+
+    connect(reply, &QNetworkReply::finished, [=]() {
+        emitReplySignal(reply, signature);
+    });
+
+    emitReplySignal(reply, signature);
+
+    return true;
+}
+
+bool OpenStoreNetworkManager::getReviews(const QString &signature,
+                                         const QString &appId)
+{
+    QUrl url(API_BASEURL + API_REVIEW_LIST_ENDPOINT.arg(appId));
+
+    QUrlQuery q(url);
+    q.addQueryItem("limit", "10");
+
+    url.setQuery(q);
+
+    return getReviewsByUrl(signature, url);
+}
+
+bool OpenStoreNetworkManager::getReviews(const QString &signature,
+                                         const QString &appId,
+                                         const QString &apiKey)
+{
+    QUrl url(API_BASEURL + API_REVIEW_LIST_ENDPOINT.arg(appId));
+
+    QUrlQuery q(url);
+    q.addQueryItem("filter", "apikey");
+    q.addQueryItem("apikey", apiKey);
+
+    url.setQuery(q);
+
+    return getReviewsByUrl(signature, url);
+}
+
+bool OpenStoreNetworkManager::getReviews(const QString &signature,
+                                         const QString &appId,
+                                         unsigned int limit,
+                                         qlonglong fromDate)
+{
+    QUrl url(API_BASEURL + API_REVIEW_LIST_ENDPOINT.arg(appId));
+
+    QUrlQuery q(url);
+    q.addQueryItem("limit", QString::number(limit));
+    q.addQueryItem("from", QString::number(fromDate));
+
+    url.setQuery(q);
+
+    return getReviewsByUrl(signature, url);
+}
+
+bool OpenStoreNetworkManager::getReviewsByUrl(const QString &signature, const QUrl &url)
+{
+    QNetworkReply *reply = m_manager->get(QNetworkRequest(url));
 
     connect(reply, &QNetworkReply::finished, [=]() {
         emitReplySignal(reply, signature);

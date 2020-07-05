@@ -51,7 +51,7 @@ void PackagesCache::getPackageDetails(const QString &appId)
             QJsonDocument jsonDoc = QJsonDocument::fromJson(reply.data, &error);
 
             if (error.error != QJsonParseError::NoError) {
-                qWarning() << Q_FUNC_INFO << "Error parsing json";
+                qWarning() << Q_FUNC_INFO << "Error parsing json" << error.errorString();
                 return;
             }
 
@@ -59,6 +59,8 @@ void PackagesCache::getPackageDetails(const QString &appId)
 
             if (!replyMap.value("success").toBool() || !replyMap.contains("data")) {
                 qWarning() << Q_FUNC_INFO << "Error retriving info from" << reply.url;
+
+                Q_EMIT packageFetchError(appId);
                 return;
             }
 
@@ -87,7 +89,7 @@ void PackagesCache::updateCacheRevisions()
         QJsonDocument jsonDoc = QJsonDocument::fromJson(reply.data, &error);
 
         if (error.error != QJsonParseError::NoError) {
-            qWarning() << Q_FUNC_INFO << "Error parsing json";
+            qWarning() << Q_FUNC_INFO << "Error parsing json" << error.errorString();
             return;
         }
 

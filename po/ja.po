@@ -15,24 +15,26 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.8\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:114
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:33
 msgid "App details"
-msgstr ""
+msgstr "アプリの詳細"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:121
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:386
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:40
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/UninstallPopup.qml:33
 msgid "Remove"
-msgstr ""
+msgstr "削除"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:157
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:17
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:62
 msgid "App"
-msgstr ""
+msgstr "アプリ"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:158
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
@@ -97,7 +99,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:433
 msgid "Description"
-msgstr ""
+msgstr "説明文"
 
 #. TRANSLATORS: Title of the changelog section
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:466
@@ -339,7 +341,7 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:198
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/UninstallPopup.qml:42
 msgid "Cancel"
-msgstr ""
+msgstr "キャンセル"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:880
@@ -603,7 +605,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:84
 msgid "Back"
-msgstr ""
+msgstr "戻る"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:84
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:83
@@ -708,7 +710,7 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:54
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:60
 msgid "Pick"
-msgstr ""
+msgstr "選択"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/UninstallPopup.qml:25
 msgid "Remove package"

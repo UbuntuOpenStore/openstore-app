@@ -15,18 +15,20 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.8\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:114
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:33
 msgid "App details"
-msgstr ""
+msgstr "جزئیات برنامه"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:121
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:386
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:40
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/UninstallPopup.qml:33
 msgid "Remove"
-msgstr ""
+msgstr "برداشتن"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:157
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:17
@@ -58,11 +60,13 @@ msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
 msgstr ""
+"نسخه نصب شده این برنامه از سرور OpenStore تهیه نمی شود. با ضربه زدن به دکمه "
+"زیر می توانید آخرین بروزرسانی پایدار را نصب کنید."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:265
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HighlightedApp.qml:109
 msgid "Open"
-msgstr ""
+msgstr "بازکردن"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:281
 msgid "The OpenStore is installed!"
@@ -70,20 +74,20 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:290
 msgid "Install stable version"
-msgstr ""
+msgstr "نصب نسخه پایدار"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:293
 msgid "Upgrade"
-msgstr ""
+msgstr "ارتقأ"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:296
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:358
 msgid "Install"
-msgstr ""
+msgstr "نصب"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:372
 msgid "This app is not compatible with your system."
-msgstr ""
+msgstr "این برنامه با سیستم شما سازگار نیست."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:405
 msgid ""
@@ -94,32 +98,34 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:408
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
+"این برنامه به داده های سیستم محدود دسترسی دارد ، برای جزئیات بیشتر به زیر "
+"مراجعه کنید."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:433
 msgid "Description"
-msgstr ""
+msgstr "شرح"
 
 #. TRANSLATORS: Title of the changelog section
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:466
 msgid "What's New"
-msgstr ""
+msgstr "چه خبر"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:485
 msgid "Packager/Publisher"
-msgstr ""
+msgstr "بسته / ناشر"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:486
 msgid "OpenStore team"
-msgstr ""
+msgstr "تیم OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:494
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:115
 msgid "Installed version"
-msgstr ""
+msgstr "نسخه نصب شده"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:504
 msgid "Latest available version"
-msgstr ""
+msgstr "آخرین نسخه موجود"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:513
 msgid "First released"

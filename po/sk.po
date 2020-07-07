@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Weblate 3.8\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:114
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:33
@@ -36,38 +36,40 @@ msgstr "Odstrániť"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:62
 #, fuzzy
 msgid "App"
-msgstr "Moje aplikácie"
+msgstr "Aplikácia"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:158
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:18
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:63
 msgid "Scope"
-msgstr "Rámec"
+msgstr "Rozsah"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:159
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:19
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:64
 msgid "Web App"
-msgstr ""
+msgstr "Webová aplikácia"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:160
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:20
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:65
 msgid "Web App+"
-msgstr ""
+msgstr "Webová aplikácia+"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:240
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
 msgstr ""
+"Inštalovaná verzia aplikácie nepochádza zo serveru OpenStore. Najnovšiu "
+"stabilnú aktualizáciu môžete nainštalovať klepnutím na tlačidlo nižšie."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:265
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HighlightedApp.qml:109
 #, fuzzy
 msgid "Open"
-msgstr "Otvor aplikáciu"
+msgstr "Otvoriť"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:281
 msgid "The OpenStore is installed!"
@@ -76,11 +78,11 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:290
 #, fuzzy
 msgid "Install stable version"
-msgstr "Nainštalovaná verzia"
+msgstr "Nainštalovať stabilnú verziu"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:293
 msgid "Upgrade"
-msgstr "Aktualizácia"
+msgstr "Aktualizovať"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:296
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:358
@@ -89,7 +91,7 @@ msgstr "Inštalovať"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:372
 msgid "This app is not compatible with your system."
-msgstr ""
+msgstr "Aplikácia nie je kompatibilná s vašim systémom."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:405
 #, fuzzy
@@ -138,11 +140,11 @@ msgstr "Prvé vydanie"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:524
 msgid "Downloads of the latest version"
-msgstr ""
+msgstr "Počet stiahnutí poslednej verzie"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:533
 msgid "Total downloads"
-msgstr ""
+msgstr "Celkový počet stiahnutí"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:542
 msgid "License"
@@ -159,11 +161,11 @@ msgstr "Zdrojový kód"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:566
 msgid "Get support for this app"
-msgstr ""
+msgstr "Zažiadať o podporu k aplikácii"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:579
 msgid "Donate to support this app"
-msgstr ""
+msgstr "Zaslať príspevok na podporu aplikácie"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:595
@@ -175,15 +177,15 @@ msgstr "Viac od %1"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:610
 #, qt-format
 msgid "Other apps in %1"
-msgstr "Iné apky v %1"
+msgstr "Ostatné aplikácie v %1"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:616
 msgid "Package contents"
-msgstr "Obsah balíčka"
+msgstr "Obsah balíčku"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:709
 msgid "Permissions"
-msgstr "Prístupy"
+msgstr "Oprávnenia"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:714
 #, fuzzy
@@ -303,31 +305,31 @@ msgstr ""
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:749
 msgid "none required"
-msgstr "žiadne"
+msgstr "nevyžadované"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:785
 msgid "Read paths"
-msgstr "Číta priečinky"
+msgstr "Čítať priečinky"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:802
 msgid "Write paths"
-msgstr "Zapisuje do priečinkov"
+msgstr "Zapisovať do priečinkov"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:817
 msgid "Donating"
-msgstr ""
+msgstr "Prispievať"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:818
 msgid "Would you like to support this app with a donation to the developer?"
-msgstr ""
+msgstr "Prajete prispieť a podporiť vývojára aplikácie?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:824
 msgid "Donate now"
-msgstr ""
+msgstr "Prispieť teraz"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:832
 msgid "Maybe later"
-msgstr ""
+msgstr "Možno neskôr"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:845
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:297
@@ -359,19 +361,19 @@ msgstr "Zrušiť"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:880
 #, qt-format
 msgid "%1 GB"
-msgstr "%1 GiB"
+msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:885
 #, qt-format
 msgid "%1 MB"
-msgstr "%1 MiB"
+msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:890
 #, qt-format
 msgid "%1 kB"
-msgstr "%1 kiB"
+msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:893
@@ -400,7 +402,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:98
 msgid "OpenStore update available"
-msgstr "Aktualizácia dostupná OpenStore"
+msgstr "Dostupná aktualizácia pre OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:134
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:135
@@ -427,7 +429,7 @@ msgstr "Zatiaľ tu nič nie je"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
 msgid "No results found."
-msgstr "Nič nenájdené."
+msgstr "Žiadne výsledky."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
 msgid "No app has been released in this category yet."
@@ -435,7 +437,7 @@ msgstr "V tejto kategórii ešte nič nie je."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
 msgid "Try with a different search."
-msgstr "Skús hľadať inak."
+msgstr "Skúste hľadať inak."
 
 #. TRANSLATORS: %1 is the number of installed apps
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:79
@@ -453,18 +455,20 @@ msgstr "Dostupné aktualizácie (%1)"
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:87
 #, qt-format
 msgid "Stable version available (%1)"
-msgstr ""
+msgstr "Dostupné stabilné verzie (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:90
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
 msgstr ""
+"Nainštalovaná verzia aplikácie nepochádza so serveru OpenStore. Je však "
+"dostupná stabilná verzia."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:91
 #, fuzzy
 msgid "Update all"
-msgstr "Aktualizácia dostupná"
+msgstr "Aktualizovať všetky"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:193
 msgid "No apps found"
@@ -472,21 +476,23 @@ msgstr "Nenájdené žiadne aplikácie"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:194
 msgid "No app has been installed from OpenStore yet."
-msgstr "Z OpenStore ešte nebolo nič naišntalované."
+msgstr "Z OpenStore zatiaľ neboli nainštalované žiadne aplikácie."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:306
 msgid ""
 "You are currently using a non-standard domain for the OpenStore. This is a "
 "development feature. The domain you are using is:"
 msgstr ""
+"Aktuálne používate neštandardnú doménu pre OpenStore. Toto je vývojová "
+"funkcia. Používaná doména je:"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:320
 msgid "Are you sure you want to continue?"
-msgstr ""
+msgstr "Ste si istý, že chcete pokračovať?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:324
 msgid "Yes, I know what I'm doing"
-msgstr ""
+msgstr "Áno, viem čo robím"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:332
 msgid "Get me out of here!"
@@ -504,17 +510,17 @@ msgstr "Chceš inštalovať %1?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:386
 msgid "App installed"
-msgstr "Apka nainštalovaná"
+msgstr "Aplikácia nainštalovaná"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:387
 msgid "The app has been installed successfully."
-msgstr "Apka bola úspešne nainštalovaná."
+msgstr "Aplikácia bola úspešne nainštalovaná."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:390
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:403
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:418
 msgid "OK"
-msgstr "Dobre"
+msgstr "OK"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:399
 msgid "Installation failed"
@@ -524,8 +530,8 @@ msgstr "Inštalácia zlyhala"
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
-"Balíček sa nepodarilo nainštalovať. Treba skontrolovať či je to platný \"klik"
-"\" balíček."
+"Balíček sa nepodarilo nainštalovať. Skontrolujte, či a jedná o platný \""
+"click\" balíček."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:414
 #, qt-format
@@ -534,42 +540,39 @@ msgstr "Inštalácia zlyhala (Error %1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:29
 msgid "Your passphrase is required to access restricted content"
-msgstr ""
+msgstr "Pre prístup do obmedzeného obsahu je potrebné heslo"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:30
 msgid "Your passcode is required to access restricted content"
-msgstr ""
+msgstr "Pre prístup do obmedzeného obsahu je potrebný číselný kód"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:39
-#, fuzzy
 msgid "Authentication failed"
-msgstr "Inštalácia zlyhala"
+msgstr "Overenie zlyhalo"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
-#, fuzzy
 msgid "Passphrase required"
-msgstr "žiadne"
+msgstr "Je vyžadované heslo"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
-#, fuzzy
 msgid "Passcode required"
-msgstr "žiadne"
+msgstr "Je vyžadovaný číselný kód"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passphrase (default is 0000)"
-msgstr ""
+msgstr "heslo (predvolené je 0000)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passcode (default is 0000)"
-msgstr ""
+msgstr "číselný kód (predvolený je 0000)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:71
 msgid "Authentication failed. Please retry"
-msgstr ""
+msgstr "Overenie zlyhalo. Skúste znova"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:76
 msgid "Authenticate"
-msgstr ""
+msgstr "Overiť"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:16
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HeaderMain.qml:39
@@ -601,26 +604,27 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:167
 msgid "Parental control"
-msgstr ""
+msgstr "Rodičovský dohľad"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:173
 msgid "Hide adult-oriented content"
-msgstr ""
+msgstr "Skryť obsah pre dospelých"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:183
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr ""
+"Zadaním hesla preberáte zodpovednosť za zobrazenie obsahu pre dospelých."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:208
 #, fuzzy
 msgid "About OpenStore"
-msgstr "OpenStore tím"
+msgstr "O OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:224
 msgid "Report an issue"
-msgstr ""
+msgstr "Zaslať hlásenie o chybe"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:233
 msgid "Additional Icons by"
@@ -658,7 +662,7 @@ msgstr "URL Odkaz"
 #. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:78
 msgid "Content Hub Handler"
-msgstr "Správca štruktúr obsahu"
+msgstr "Spravovanie centier obsahu"
 
 #. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:92

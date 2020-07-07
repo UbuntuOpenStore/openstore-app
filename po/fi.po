@@ -481,11 +481,11 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:320
 msgid "Are you sure you want to continue?"
-msgstr ""
+msgstr "Haluatko varmasti jatkaa?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:324
 msgid "Yes, I know what I'm doing"
-msgstr ""
+msgstr "Kyllä, tiedän mitä teen"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:332
 msgid "Get me out of here!"

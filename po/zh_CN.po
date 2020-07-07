@@ -31,7 +31,7 @@ msgstr "删除"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:62
 #, fuzzy
 msgid "App"
-msgstr "我的应用程序"
+msgstr "应用程序"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:158
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
@@ -44,13 +44,13 @@ msgstr "Scope"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:19
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:64
 msgid "Web App"
-msgstr ""
+msgstr "网页应用"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:160
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:20
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:65
 msgid "Web App+"
-msgstr ""
+msgstr "网页应用+"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:240
 msgid ""
@@ -466,19 +466,19 @@ msgstr "还没有从 OpenStore 安装任何应用。"
 msgid ""
 "You are currently using a non-standard domain for the OpenStore. This is a "
 "development feature. The domain you are using is:"
-msgstr ""
+msgstr "您目前正在为 OpenStore 使用非标准网域，这是一个开发特质。 您正在使用的网域是："
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:320
 msgid "Are you sure you want to continue?"
-msgstr ""
+msgstr "你确定要继续吗？"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:324
 msgid "Yes, I know what I'm doing"
-msgstr ""
+msgstr "是的，我知道我在做什么"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:332
 msgid "Get me out of here!"
-msgstr "把我弄出去 ！"
+msgstr "带我离开！"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:344
 #, fuzzy
@@ -492,7 +492,7 @@ msgstr "您想安装 %1 吗？"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:386
 msgid "App installed"
-msgstr "应用程序安装"
+msgstr "应用程序已安装"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:387
 msgid "The app has been installed successfully."

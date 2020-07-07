@@ -36,7 +36,7 @@ msgstr "Eliminar"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:62
 #, fuzzy
 msgid "App"
-msgstr "Mis aplicaciones"
+msgstr "Aplicación"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:158
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
@@ -49,13 +49,13 @@ msgstr "Scope"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:19
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:64
 msgid "Web App"
-msgstr ""
+msgstr "Aplicación web"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:160
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:20
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:65
 msgid "Web App+"
-msgstr ""
+msgstr "Aplicación web+"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:240
 msgid ""
@@ -479,8 +479,8 @@ msgid ""
 "You are currently using a non-standard domain for the OpenStore. This is a "
 "development feature. The domain you are using is:"
 msgstr ""
-"Actualmente está utilizando un dominio no estándar para el OpenStore. Esta "
-"es una característica de desarrollo. El dominio que está usando es:"
+"Actualmente está usando un dominio no estándar para el OpenStore. Esta es "
+"una característica de desarrollo. El dominio que está usando es:"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:320
 msgid "Are you sure you want to continue?"

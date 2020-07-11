@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-31 04:27+0000\n"
-"PO-Revision-Date: 2020-01-19 01:00+0000\n"
-"Last-Translator: Moo <moose@mail.ru>\n"
+"PO-Revision-Date: 2020-07-08 21:48+0000\n"
+"Last-Translator: Arunas <arunas@anakonda.lt>\n"
 "Language-Team: Lithuanian <https://translate.ubports.com/projects/openstore/"
 "openstore-app/lt/>\n"
 "Language: lt\n"
@@ -19,12 +19,12 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
 "19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
 "1 : 2);\n"
-"X-Generator: Weblate 3.8\n"
+"X-Generator: Weblate 3.11.3\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:114
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:33
 msgid "App details"
-msgstr ""
+msgstr "Informacija apie programą"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:121
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:386
@@ -37,32 +37,34 @@ msgstr "Šalinti"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:17
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:62
 msgid "App"
-msgstr ""
+msgstr "Programa"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:158
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:18
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:63
 msgid "Scope"
-msgstr ""
+msgstr "Taikymo sritis"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:159
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:19
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:64
 msgid "Web App"
-msgstr ""
+msgstr "Žiniatinklio programa"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:160
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:20
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:65
 msgid "Web App+"
-msgstr ""
+msgstr "Žiniatinklio programa plius"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:240
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
 msgstr ""
+"Įdiegta šios programos versija nėra iš „OpenStore“ serverio. Naujausią "
+"stabilų naujinimą galite įdiegti bakstelėdami žemiau esantį mygtuką."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:265
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HighlightedApp.qml:109
@@ -71,11 +73,11 @@ msgstr "Atverti"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:281
 msgid "The OpenStore is installed!"
-msgstr ""
+msgstr "„OpenStore“ įdiegta!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:290
 msgid "Install stable version"
-msgstr ""
+msgstr "Įdiekite stabilią versiją"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:293
 msgid "Upgrade"
@@ -84,7 +86,7 @@ msgstr "Naujinti"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:296
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:358
 msgid "Install"
-msgstr ""
+msgstr "Diegti"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:372
 msgid "This app is not compatible with your system."
@@ -95,10 +97,14 @@ msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
 msgstr ""
+"Ši programa turi prieigą prie ribotų sistemos dalių ir visų jūsų duomenų, "
+"išsamią informaciją rasite toliau."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:408
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
+"Ši programa turi prieigą prie ribotų sistemos duomenų, išsamiau žiūrėti "
+"toliau."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:433
 msgid "Description"
@@ -124,19 +130,19 @@ msgstr "Įdiegta versija"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:504
 msgid "Latest available version"
-msgstr ""
+msgstr "Naujausia galima versija"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:513
 msgid "First released"
-msgstr ""
+msgstr "Pirmą kartą išleistas"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:524
 msgid "Downloads of the latest version"
-msgstr ""
+msgstr "Naujausios versijos atsisiuntimai"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:533
 msgid "Total downloads"
-msgstr ""
+msgstr "Iš viso parsiųsta"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:542
 msgid "License"
@@ -144,32 +150,32 @@ msgstr "Licencija"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:543
 msgid "N/A"
-msgstr ""
+msgstr "Netinkamas"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:553
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:215
 msgid "Source Code"
-msgstr ""
+msgstr "Pirminis kodas"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:566
 msgid "Get support for this app"
-msgstr ""
+msgstr "Gaukite palaikymą šiai programai"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:579
 msgid "Donate to support this app"
-msgstr ""
+msgstr "Paremkite šią programą"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:595
 #, qt-format
 msgid "More from %1"
-msgstr ""
+msgstr "Daugiau iš %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:610
 #, qt-format
 msgid "Other apps in %1"
-msgstr ""
+msgstr "Kitos programos iš %1"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:616
 msgid "Package contents"
@@ -181,7 +187,7 @@ msgstr "Leidimai"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:714
 msgid "Accounts"
-msgstr ""
+msgstr "Paskyros"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:715
 msgid "Audio"
@@ -193,128 +199,128 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:717
 msgid "Calendar"
-msgstr ""
+msgstr "Kalendorius"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:718
 msgid "Camera"
-msgstr ""
+msgstr "Kamera"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:719
 msgid "Connectivity"
-msgstr ""
+msgstr "Ryšiai"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:720
 msgid "Contacts"
-msgstr ""
+msgstr "Kontaktai"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:721
 msgid "Content Exchange Source"
-msgstr ""
+msgstr "Turinio mainų šaltinis"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:722
 msgid "Content Exchange"
-msgstr ""
+msgstr "Turinio mainai"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:723
 msgid "Debug"
-msgstr ""
+msgstr "Derinti"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:724
 msgid "History"
-msgstr ""
+msgstr "Istorija"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:725
 msgid "In App Purchases"
-msgstr ""
+msgstr "Programų pirkimuose"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:726
 msgid "Keep Display On"
-msgstr ""
+msgstr "Laikykite ekraną įjungtą"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:727
 msgid "Location"
-msgstr ""
+msgstr "Vieta"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:728
 msgid "Microphone"
-msgstr ""
+msgstr "Mikrofonas"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:729
 msgid "Read Music Files"
-msgstr ""
+msgstr "Nuskaitykite muzikos failus"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:730
 msgid "Music Files"
-msgstr ""
+msgstr "Muzikos failai"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:731
 msgid "Networking"
-msgstr ""
+msgstr "Tinklai"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:732
 msgid "Read Picture Files"
-msgstr ""
+msgstr "Nuskaitykite paveikslėlių failus"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:733
 msgid "Picture Files"
-msgstr ""
+msgstr "Paveikslėlių failai"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:734
 msgid "Push Notifications"
-msgstr ""
+msgstr "\"Push\" pranešimai"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:735
 msgid "Sensors"
-msgstr ""
+msgstr "Jutikliai"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:736
 msgid "User Metrics"
-msgstr ""
+msgstr "Vartotojo metrika"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:737
 msgid "Read Video Files"
-msgstr ""
+msgstr "Nuskaitykite vaizdo failus"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:738
 msgid "Video Files"
-msgstr ""
+msgstr "Vaizdo failai"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:739
 msgid "Video"
-msgstr ""
+msgstr "Vaizdo įrašas"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:740
 msgid "Webview"
-msgstr ""
+msgstr "Internetinė peržiūra"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:744
 msgid "Full System Access"
-msgstr ""
+msgstr "Pilna prieiga prie sistemos"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:749
 msgid "none required"
-msgstr ""
+msgstr "nereikia"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:785
 msgid "Read paths"
-msgstr ""
+msgstr "Nuskaitykite kelius"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:802
 msgid "Write paths"
-msgstr ""
+msgstr "Įrašykite kelius"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:817
 msgid "Donating"
-msgstr ""
+msgstr "Paaukoti"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:818
 msgid "Would you like to support this app with a donation to the developer?"
-msgstr ""
+msgstr "Ar norėtumėte paremti šią programą padėdami kūrėjui?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:824
 msgid "Donate now"
-msgstr ""
+msgstr "Paaukokite dabar"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:832
 msgid "Maybe later"
@@ -323,7 +329,7 @@ msgstr "Galbūt, vėliau"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:845
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:297
 msgid "Warning"
-msgstr ""
+msgstr "Įspėjimas"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:846
 msgid ""
@@ -333,10 +339,14 @@ msgid ""
 "anything bad that might happen to your device or data from installing this "
 "app."
 msgstr ""
+"Ši programa turi prieigą prie ribotų sistemos dalių ir visų jūsų duomenų. "
+"Tai gali sugriauti jūsų sistemą. Nors „OpenStore“ prižiūrėtojai peržiūrėjo "
+"šios programos kodą dėl saugumo, jie nėra atsakingi už nieką, kas gali "
+"nutikti jūsų įrenginyje ar su Jūsų duomenis diegiant šią programą."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:852
 msgid "I understand the risks"
-msgstr ""
+msgstr "Aš suprantu riziką"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:861
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:366
@@ -372,13 +382,15 @@ msgstr "%1 baitų"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:95
 msgid "This app could not be found in the OpenStore"
-msgstr ""
+msgstr "Šios programos nepavyko rasti „OpenStore“"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:98
 msgid ""
 "You are currently offline and the app details could not be fetched from the "
 "OpenStore"
 msgstr ""
+"Šiuo metu esate neprisijungęs ir išsamios programos informacijos nepavyko "
+"gauti iš „OpenStore“"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesTab.qml:38
 msgid "Categories"
@@ -387,11 +399,11 @@ msgstr "Kategorijos"
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:65
 #, qt-format
 msgid "by %1"
-msgstr ""
+msgstr "pagal %1"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:98
 msgid "OpenStore update available"
-msgstr ""
+msgstr "Yra „OpenStore“ atnaujinimas"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:134
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:135
@@ -410,81 +422,85 @@ msgstr[2] "Yra prieinamas atnaujinimas"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:159
 msgid "Browse Apps by Category"
-msgstr ""
+msgstr "Ieškokite programų pagal kategorijas"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
 msgid "Nothing here yet"
-msgstr ""
+msgstr "Dar nieko nėra"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
 msgid "No results found."
-msgstr ""
+msgstr "Nieko nerasta."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
 msgid "No app has been released in this category yet."
-msgstr ""
+msgstr "Šioje kategorijoje dar nebuvo išleista nė viena programa."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
 msgid "Try with a different search."
-msgstr ""
+msgstr "Pabandykite atlikti kitokią paiešką."
 
 #. TRANSLATORS: %1 is the number of installed apps
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:79
 #, qt-format
 msgid "Installed apps (%1)"
-msgstr ""
+msgstr "Įdiegtos programos (%1)"
 
 #. TRANSLATORS: %1 is the number of available app updates
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:83
 #, qt-format
 msgid "Available updates (%1)"
-msgstr ""
+msgstr "Yra atnaujinimų (%1)"
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:87
 #, qt-format
 msgid "Stable version available (%1)"
-msgstr ""
+msgstr "Yra stabilios versijos (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:90
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
 msgstr ""
+"Įdiegtos šių programų versijos nebuvo iš „OpenStore“, tačiau yra prieinamos "
+"stabilios versijos."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:91
 msgid "Update all"
-msgstr ""
+msgstr "Atnaujinti viską"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:193
 msgid "No apps found"
-msgstr ""
+msgstr "Nerasta jokių programų"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:194
 msgid "No app has been installed from OpenStore yet."
-msgstr ""
+msgstr "Iš „OpenStore“ dar neįdiegta nė viena programa."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:306
 msgid ""
 "You are currently using a non-standard domain for the OpenStore. This is a "
 "development feature. The domain you are using is:"
 msgstr ""
+"Šiuo metu „OpenStore“ naudojate nestandartinį domeną. Tai yra vystymosi "
+"ypatybė. Jūsų naudojamas domenas yra:"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:320
 msgid "Are you sure you want to continue?"
-msgstr ""
+msgstr "Ar tikrai norite tęsti?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:324
 msgid "Yes, I know what I'm doing"
-msgstr ""
+msgstr "Taip, aš žinau, ką darau"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:332
 msgid "Get me out of here!"
-msgstr ""
+msgstr "Išmesk mane iš čia!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:344
 msgid "Install unknown app?"
-msgstr ""
+msgstr "Įdiegti nežinomą programą?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:345
 #, fuzzy, qt-format
@@ -493,154 +509,154 @@ msgstr "Ar norite pašalinti %1?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:386
 msgid "App installed"
-msgstr ""
+msgstr "Programa įdiegta"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:387
 msgid "The app has been installed successfully."
-msgstr ""
+msgstr "Programa sėkmingai įdiegta."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:390
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:403
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:418
 msgid "OK"
-msgstr ""
+msgstr "Gerai"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:399
 msgid "Installation failed"
-msgstr ""
+msgstr "Įdiegimas nepavyko"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:400
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
-msgstr ""
+msgstr "Nepavyko įdiegti paketo. Įsitikinkite, kad tai tikrai tas paketas."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:414
 #, qt-format
 msgid "Installation failed (Error %1)"
-msgstr ""
+msgstr "Įdiegti nepavyko (klaida %1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:29
 msgid "Your passphrase is required to access restricted content"
-msgstr ""
+msgstr "Reikalinga Jūsų slapta frazė norint pasiekti ribotą turinį"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:30
 msgid "Your passcode is required to access restricted content"
-msgstr ""
+msgstr "Reikalingas Jūsų slaptažodis norint pasiekti ribotą turinį"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:39
 msgid "Authentication failed"
-msgstr ""
+msgstr "Atpažinimas nepavyko"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
 msgid "Passphrase required"
-msgstr ""
+msgstr "Reikalinga slapta frazė"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
 msgid "Passcode required"
-msgstr ""
+msgstr "Reikalingas slaptažodis"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passphrase (default is 0000)"
-msgstr ""
+msgstr "slapta frazė (numatytoji reikšmė yra 0000)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:59
 msgid "passcode (default is 0000)"
-msgstr ""
+msgstr "slaptas kodas (numatytasis yra 0000)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:71
 msgid "Authentication failed. Please retry"
-msgstr ""
+msgstr "Atpažinti nepavyko Pabandykite dar kartą"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:76
 msgid "Authenticate"
-msgstr ""
+msgstr "Atpažinimas"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:16
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HeaderMain.qml:39
 msgid "Search"
-msgstr ""
+msgstr "Paieška"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:29
 msgid "Search in OpenStore..."
-msgstr ""
+msgstr "Paieška „OpenStore“ ..."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:27
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HeaderMain.qml:26
 msgid "Settings"
-msgstr ""
+msgstr "Nustatymai"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:114
-#, fuzzy
 msgid "OpenStore Account"
-msgstr "OpenStore komanda"
+msgstr "OpenStore paskyra"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:122
 #: /home/brian/dev/openstore/openstore-app/openstore/SignInWebView.qml:30
 msgid "Sign in"
-msgstr ""
+msgstr "Prisijungti"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:139
 msgid "Sign out"
-msgstr ""
+msgstr "Atsijungti"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:167
 msgid "Parental control"
-msgstr ""
+msgstr "Tėvų kontrolė"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:173
 msgid "Hide adult-oriented content"
-msgstr ""
+msgstr "Slėpti suaugusiesiems skirtą turinį"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:183
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr ""
+"Įvesdami slaptažodį, jūs prisiimate visą atsakomybę už NSFW turinio rodymą."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:208
 msgid "About OpenStore"
-msgstr ""
+msgstr "Apie „OpenStore“"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:224
 msgid "Report an issue"
-msgstr ""
+msgstr "Pranešti apie problemą"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:233
 msgid "Additional Icons by"
-msgstr ""
+msgstr "Papildomos piktogramos pagal"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:84
 msgid "Back"
-msgstr ""
+msgstr "Atgal"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:84
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:83
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:97
 msgid "Close"
-msgstr ""
+msgstr "Uždaryti"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HighlightedApp.qml:106
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:187
 msgid "Update"
-msgstr ""
+msgstr "Atnaujinti"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HighlightedApp.qml:112
 msgid "Details"
-msgstr ""
+msgstr "Išsami informacija"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:37
 msgid "Application"
-msgstr ""
+msgstr "Taikymas"
 
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:64
 msgid "URL Handler"
-msgstr ""
+msgstr "URL tvarkyklė"
 
 #. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:78
 msgid "Content Hub Handler"
-msgstr ""
+msgstr "Turinio centro tvarkyklė"
 
 #. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:92
@@ -650,7 +666,7 @@ msgstr ""
 #. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:106
 msgid "Accounts provider"
-msgstr ""
+msgstr "Sąskaitų teikėjas"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:81
 msgid "Update available"
@@ -658,40 +674,40 @@ msgstr "Yra prieinamas atnaujinimas"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:81
 msgid "✓ Installed"
-msgstr ""
+msgstr "✓ Įdiegta"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:73
 msgid "Something went wrong..."
-msgstr ""
+msgstr "Kažkas negerai ..."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:79
 msgid "Error Posting Review"
-msgstr ""
+msgstr "Klaida skelbiant atsiliepimą"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:93
 msgid "Review Posted Correctly"
-msgstr ""
+msgstr "Atsiliepimas paskelbtas teisingai"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:94
 msgid "Your review has been posted successfully."
-msgstr ""
+msgstr "Jūsų atsiliepimas sėkmingai paskelbtas."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:108
 msgid "Rate this app"
-msgstr ""
+msgstr "Įvertink šią aplikaciją"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:108
 msgid "Loading..."
-msgstr ""
+msgstr "Įkeliama..."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:129
 msgid "(Optional) Write a review"
-msgstr ""
+msgstr "(Nebūtina) Parašykite apžvalgą"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:133
 #, qt-format
 msgid "%1/%2 characters"
-msgstr ""
+msgstr "%1/%2 simboliai"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:222
 #, qt-format

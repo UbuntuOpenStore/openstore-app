@@ -23,6 +23,7 @@ import Ubuntu.Content 1.3
 import Ubuntu.Connectivity 1.0
 
 import "Components" as Components
+import "Dialogs" as Dialogs
 
 MainView {
     id: root
@@ -109,7 +110,7 @@ MainView {
         PlatformIntegration.update()
 
         if (OpenStoreNetworkManager.isDifferentDomain) {
-            var popup = PopupUtils.open(domainWarningComponent)
+            var popup = PopupUtils.open(domainWarningDialog)
             popup.accepted.connect(function() {
                 PopupUtils.close(popup)
             })
@@ -138,7 +139,7 @@ MainView {
             var filePath = String(transfer.items[0].url).replace('file://', '')
             print("Should import file", filePath)
             var fileName = filePath.split("/").pop();
-            var popup = PopupUtils.open(installQuestion, root, {fileName: fileName});
+            var popup = PopupUtils.open(installWarningDialog, root, {fileName: fileName});
             popup.accepted.connect(function() {
                 contentHubInstallInProgress = true;
                 PlatformIntegration.clickInstaller.installPackage(filePath, true)
@@ -236,38 +237,6 @@ MainView {
         }
     }
 
-    /*
-    Loader {
-        anchors.fill: parent
-        z: Number.MAX_VALUE
-        active: !OpenStoreNetworkManager.networkAccessible
-        sourceComponent: MouseArea {
-            // Capture all mouse/touch events beneath 'mainContainer'
-            anchors.fill: parent
-            onWheel: wheel.accepted = true  // wheel events are not captured by default
-
-            Rectangle {
-                anchors.fill: parent
-                color: root.backgroundColor
-
-                Components.EmptyState {
-                    title: i18n.tr("Slow or no internet connection available")
-                    subTitle: i18n.tr("Please check your internet settings and try again")
-                    iconName: "airplane-mode"
-
-                    controlComponent: Button {
-                        color: theme.palette.normal.positive
-                        text: i18n.tr("Close OpenStore")
-                        onClicked: Qt.quit()
-                    }
-
-                    anchors.centerIn: parent
-                }
-            }
-        }
-    }
-    */
-
     Component {
         id: filteredAppPageComponent
         Page {
@@ -289,94 +258,12 @@ MainView {
         }
     }
 
-    Component {
-        id: domainWarningComponent
-
-        Dialog {
-            id: warningDialog
-            title: i18n.tr("Warning")
-
-            signal accepted();
-            signal rejected();
-
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                wrapMode: Text.WordWrap
-                maximumLineCount: Number.MAX_VALUE
-                text: i18n.tr("You are currently using a non-standard domain for the OpenStore. This is a development feature. The domain you are using is:")
-            }
-
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                wrapMode: Text.WordWrap
-                maximumLineCount: Number.MAX_VALUE
-                text: OpenStoreNetworkManager.domain
-            }
-
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                wrapMode: Text.WordWrap
-                maximumLineCount: Number.MAX_VALUE
-                text: i18n.tr("Are you sure you want to continue?")
-            }
-
-            Button {
-                text: i18n.tr("Yes, I know what I'm doing")
-                color: theme.palette.normal.positive
-                onClicked: {
-                    warningDialog.accepted();
-                }
-            }
-
-            Button {
-                text: i18n.tr("Get me out of here!")
-                onClicked: {
-                    warningDialog.rejected();
-                }
-            }
-        }
+    Dialogs.DomainWarningDialog {
+        id: domainWarningDialog
     }
 
-    Component {
-        id: installQuestion
-        Dialog {
-            id: installQuestionDialog
-            title: i18n.tr("Install unknown app?")
-            text: i18n.tr("Do you want to install the unkown app %1?").arg(fileName)
-
-            property string fileName
-            signal accepted();
-            signal rejected();
-
-            ActivityIndicator {
-                anchors.horizontalCenter: parent.horizontalCenter
-                visible: running
-                running: PlatformIntegration.clickInstaller.busy
-            }
-
-            Button {
-                text: i18n.tr("Install")
-                color: theme.palette.normal.positive
-                visible: !PlatformIntegration.clickInstaller.busy
-                onClicked: {
-                    installQuestionDialog.accepted()
-                }
-            }
-            Button {
-                text: i18n.tr("Cancel")
-                visible: !PlatformIntegration.clickInstaller.busy
-                onClicked: {
-                    installQuestionDialog.rejected()
-                    PopupUtils.close(installQuestionDialog)
-                }
-            }
-
-            Connections {
-                target: PlatformIntegration.clickInstaller
-                onPackageInstalled: PopupUtils.close(installQuestionDialog)
-                onPackageInstallationFailed: PopupUtils.close(installQuestionDialog)
-            }
-        }
+    Dialogs.InstallWarningDialog {
+        id: installWarningDialog
     }
 
     Component {

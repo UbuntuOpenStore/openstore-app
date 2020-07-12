@@ -23,6 +23,7 @@ import QtQuick.Layouts 1.1
 import OpenStore 1.0
 
 import "Components" as Components
+import "Dialogs" as Dialogs
 
 Page {
     id: appLocalDetailsPage
@@ -119,7 +120,7 @@ Page {
         }
     }
 
-    Components.UninstallPopup {
+    Dialogs.UninstallDialog {
         id: removeQuestion
     }
 }

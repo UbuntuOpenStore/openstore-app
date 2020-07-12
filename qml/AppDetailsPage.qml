@@ -22,6 +22,7 @@ import QtQuick.Layouts 1.1
 import OpenStore 1.0
 
 import "Components" as Components
+import "Dialogs" as Dialogs
 
 Page {
     id: appDetailsPage
@@ -299,13 +300,13 @@ Page {
                         color: app.isLocalVersionSideloaded ? theme.palette.selected.focus : theme.palette.normal.positive
                         onClicked: {
                             if (isUnconfined && !isTrustedApp && !app.installed) {
-                                var popup = PopupUtils.open(unconfinedWarningPopup)
+                                var popup = PopupUtils.open(unconfinedWarningDialog)
                                 popup.accepted.connect(function() {
                                     app.install();
                                 });
                             }
                             else if (app.donateUrl && !app.installed) {
-                                var popup = PopupUtils.open(donatingPopup)
+                                var popup = PopupUtils.open(donationDialog)
                                 popup.accepted.connect(function() {
                                     app.install();
                                     Qt.openUrlExternally(app.donateUrl);
@@ -810,64 +811,15 @@ Page {
         }
     }
 
-    Component {
-        id: donatingPopup
-        Dialog {
-            id: donatingDialog
-            title: i18n.tr("Donating")
-            text: i18n.tr("Would you like to support this app with a donation to the developer?")
-
-            signal accepted()
-            signal rejected()
-
-            Button {
-                text: i18n.tr("Donate now")
-                color: theme.palette.normal.positive
-                onClicked: {
-                    donatingDialog.accepted()
-                    PopupUtils.close(donatingDialog)
-                }
-            }
-            Button {
-                text: i18n.tr("Maybe later")
-                onClicked: {
-                    donatingDialog.rejected();
-                    PopupUtils.close(donatingDialog)
-                }
-            }
-        }
+    Dialogs.DonationDialog {
+        id: donationDialog
     }
 
-    Component {
-        id: unconfinedWarningPopup
-        Dialog {
-            id: unconfinedWarningDialog
-            title: i18n.tr("Warning")
-            text: i18n.tr("This app has access to restricted parts of the system and all of your data. It has the potential break your system. While the OpenStore maintainers have reviewed the code for this app for safety, they are not responsible for anything bad that might happen to your device or data from installing this app.")
-
-            signal accepted()
-            signal rejected()
-
-            Button {
-                text: i18n.tr("I understand the risks")
-                color: theme.palette.normal.negative
-                onClicked: {
-                    unconfinedWarningDialog.accepted()
-                    PopupUtils.close(unconfinedWarningDialog)
-                }
-            }
-
-            Button {
-                text: i18n.tr("Cancel")
-                onClicked: {
-                    unconfinedWarningDialog.rejected();
-                    PopupUtils.close(unconfinedWarningDialog)
-                }
-            }
-        }
+    Dialogs.UnconfinedWarningDialog {
+        id: unconfinedWarningDialog
     }
 
-    Components.UninstallPopup {
+    Dialogs.UninstallDialog {
         id: removeQuestion
     }
 

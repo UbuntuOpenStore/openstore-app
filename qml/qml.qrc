@@ -24,7 +24,11 @@
         <file>Components/ScreenshotImage.qml</file>
         <file>Components/ScreenshotsCarousel.qml</file>
         <file>Components/SectionDivider.qml</file>
-        <file>Components/UninstallPopup.qml</file>
+        <file>Dialogs/UninstallDialog.qml</file>
+        <file>Dialogs/DomainWarningDialog.qml</file>
+        <file>Dialogs/InstallWarningDialog.qml</file>
+        <file>Dialogs/DonationDialog.qml</file>
+        <file>Dialogs/UnconfinedWarningDialog.qml</file>
         <file>DiscoverPage.qml</file>
         <file>FilteredAppList.qml</file>
         <file>InstalledAppsPage.qml</file>

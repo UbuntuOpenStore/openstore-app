@@ -12,7 +12,6 @@ set(
     discovermodel.cpp
     packagesmodel.cpp
     searchmodel.cpp
-    serviceregistry.cpp
     openstorenetworkmanager.cpp
     platformintegration.cpp
     package.cpp

@@ -1,6 +1,5 @@
 #include "platformintegration.h"
 #include "clickinstaller.h"
-#include "serviceregistry.h"
 
 #include <QJsonDocument>
 #include <QDebug>
@@ -23,9 +22,6 @@ PlatformIntegration::PlatformIntegration()
 
     m_installer = new ClickInstaller();
 
-    m_serviceRegistry = new ServiceRegistry();
-    m_serviceRegistry->setClickInstaller(m_installer);
-
     connect(m_installer, &ClickInstaller::busyChanged, [=]() {
        if (!m_installer->busy()) {
            this->update();
@@ -37,7 +33,6 @@ PlatformIntegration::PlatformIntegration()
 
 PlatformIntegration::~PlatformIntegration()
 {
-    delete m_serviceRegistry;
     delete m_installer;
 }
 

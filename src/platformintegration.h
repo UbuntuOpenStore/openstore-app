@@ -6,7 +6,6 @@
 #include <QVariantList>
 
 class ClickInstaller;
-class ServiceRegistry;
 
 class PlatformIntegration : public QObject
 {
@@ -52,8 +51,7 @@ private:
     QHash<QString, QString> m_installedAppIds; // appid, version
     QVariantList m_clickDb;
 
-    ClickInstaller* m_installer;
-    ServiceRegistry* m_serviceRegistry;
+    ClickInstaller *m_installer;
 };
 
 #endif // PLATFORMINTEGRATION_H

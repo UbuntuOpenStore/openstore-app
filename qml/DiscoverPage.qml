@@ -144,7 +144,7 @@ Page {
                         }
                     }
 
-                    onClicked: pageStack.push(Qt.resolvedUrl("InstalledAppsTab.qml"), {})
+                    onClicked: pageStack.push(Qt.resolvedUrl("InstalledAppsPage.qml"), {})
                 }
 
                 ListItem {
@@ -168,7 +168,7 @@ Page {
                         }
                     }
 
-                    onClicked: pageStack.push(Qt.resolvedUrl("CategoriesTab.qml"))
+                    onClicked: pageStack.push(Qt.resolvedUrl("CategoriesPage.qml"))
                 }
             }
 

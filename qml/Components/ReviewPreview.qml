@@ -240,7 +240,7 @@ ListItem {
             onClicked: {
                 if (app.installed) {
                     root.apiKey === ""
-                        ? bottomEdgeStack.push(Qt.resolvedUrl("../SignInWebView.qml"))
+                        ? bottomEdgeStack.push(Qt.resolvedUrl("../SignInPage.qml"))
                         : PopupUtils.open(composeDialog)
                 } else {
                     console.log("App is not installed")

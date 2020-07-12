@@ -30,7 +30,7 @@ Page {
         }
     }
 
-    FilteredAppView {
+    FilteredAppList {
         id: view
         anchors.fill: parent
         anchors.topMargin: searchPage.header.height

@@ -116,7 +116,7 @@ Page {
 
                 ListItem {
                     visible: root.apiKey === ""
-                    onClicked: bottomEdgeStack.push(Qt.resolvedUrl("SignInWebView.qml"))
+                    onClicked: bottomEdgeStack.push(Qt.resolvedUrl("./SignInPage.qml"))
                     ListItemLayout {
                         anchors.centerIn: parent
                         title.text: i18n.tr("Sign in")

@@ -19,7 +19,7 @@ import Ubuntu.Components 1.3
 
 import "Components" as Components
 Page {
-    id: categoriesTab
+    id: categoriesPage
     anchors.fill: parent
 
     signal categoryClicked(var name, var id)

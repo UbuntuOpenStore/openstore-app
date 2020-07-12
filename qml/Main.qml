@@ -105,7 +105,7 @@ MainView {
     }
 
     Component.onCompleted: {
-        pageStack.push(Qt.resolvedUrl("DiscoverTab.qml"))
+        pageStack.push(Qt.resolvedUrl("DiscoverPage.qml"))
         PlatformIntegration.update()
 
         if (OpenStoreNetworkManager.isDifferentDomain) {
@@ -272,18 +272,18 @@ MainView {
         id: filteredAppPageComponent
         Page {
             id: filteredAppPage
-            property alias filterString: filteredAppView.filterString
-            property alias sortMode: filteredAppView.sortMode
-            property alias category: filteredAppView.category
+            property alias filterString: filteredAppList.filterString
+            property alias sortMode: filteredAppList.sortMode
+            property alias category: filteredAppList.category
             header: Components.HeaderBase {
                 title: filteredAppPage.title
                 automaticHeight: false
             }
-            FilteredAppView {
+            FilteredAppList {
                 anchors.fill: parent
                 anchors.topMargin: filteredAppPage.header.height
 
-                id: filteredAppView
+                id: filteredAppList
                 onAppDetailsRequired: openApp(appId)
             }
         }
@@ -427,19 +427,19 @@ MainView {
         if (root.mainStackPage !== "discoverPage") {
             pageStack.pop()
         }
-        pageStack.push(Qt.resolvedUrl("CategoriesTab.qml"));
+        pageStack.push(Qt.resolvedUrl("CategoriesPage.qml"));
         bottomEdgeStack.push(filteredAppPageComponent, {"title": name, "category": id});
-        //categoriesTab.categoryClicked(name, id)
+        //CategoriesPage.categoryClicked(name, id)
     }
     function showSearch(text) {
         if (root.mainStackPage !== "discoverPage") {
             pageStack.pop()
         }
-        pageStack.push(Qt.resolvedUrl("../SearchTab.qml"), {"searchText": text || ''});
+        pageStack.push(Qt.resolvedUrl("../SearchPage.qml"), {"searchText": text || ''});
     }
 
     function showSearchQuery(url) {
-        pageStack.push(Qt.resolvedUrl("../SearchTab.qml"), {"queryUrl": url || ''});
+        pageStack.push(Qt.resolvedUrl("../SearchPage.qml"), {"queryUrl": url || ''});
     }
 
     // *** WORKAROUNDS ***

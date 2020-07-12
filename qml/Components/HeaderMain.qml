@@ -43,7 +43,7 @@ HeaderBase {
                     if (root.mainStackPage !== "discoverPage") {
                         pageStack.pop()
                     }
-                    pageStack.push(Qt.resolvedUrl("../SearchTab.qml"));
+                    pageStack.push(Qt.resolvedUrl("../SearchPage.qml"));
                 }
             }
         ]

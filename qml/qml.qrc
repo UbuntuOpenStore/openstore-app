@@ -3,7 +3,6 @@
         <file>Main.qml</file>
         <file>AppDetailsPage.qml</file>
         <file>AppLocalDetailsPage.qml</file>
-        <file>AuthenticationHandler.qml</file>
         <file>CategoriesPage.qml</file>
         <file>Components/BottomEdgePageStack.qml</file>
         <file>Components/ButtonEmoji.qml</file>
@@ -32,7 +31,6 @@
         <file>DiscoverPage.qml</file>
         <file>FilteredAppList.qml</file>
         <file>InstalledAppsPage.qml</file>
-        <file>PasswordDialog.qml</file>
         <file>SearchPage.qml</file>
         <file>SettingsPage.qml</file>
         <file>SignInPage.qml</file>

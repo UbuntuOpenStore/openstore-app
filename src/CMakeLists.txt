@@ -17,7 +17,6 @@ set(
     platformintegration.cpp
     package.cpp
     packagescache.cpp
-    pamauthentication.cpp
     cachingnetworkmanagerfactory.cpp
     reviewsmodel.cpp
     review.cpp

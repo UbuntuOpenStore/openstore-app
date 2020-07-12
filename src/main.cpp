@@ -30,7 +30,6 @@
 #include "discovermodel.h"
 #include "packagescache.h"
 #include "openstorenetworkmanager.h"
-#include "pamauthentication.h"
 #include "cachingnetworkmanagerfactory.h"
 #include "review.h"
 
@@ -68,7 +67,6 @@ int main(int argc, char *argv[])
     qmlRegisterType<CategoriesModel>("OpenStore", 1, 0, "CategoriesModel");
     qmlRegisterUncreatableType<PackageItem>("OpenStore", 1, 0, "PackageItem", "PackageItem is only available through AppModel, DiscoverModel, or SearchModel.");
 
-    qmlRegisterType<PamAuthentication>("OpenStore.PamAuthentication", 0, 1, "PamAuthentication");
     qmlRegisterType<Ratings>("OpenStore", 1, 0, "Ratings");
     qRegisterMetaType<Ratings::Rating>("Rating");
     QQuickView view;

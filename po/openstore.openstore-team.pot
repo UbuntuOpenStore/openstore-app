@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-12 04:23+0000\n"
+"POT-Creation-Date: 2020-07-12 04:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -133,7 +133,7 @@ msgstr ""
 msgid "N/A"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:554 ../qml/SettingsPage.qml:215
+#: ../qml/AppDetailsPage.qml:554 ../qml/SettingsPage.qml:216
 msgid "Source Code"
 msgstr ""
 
@@ -332,7 +332,7 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: ../qml/Components/HeaderMain.qml:26 ../qml/SettingsPage.qml:27
+#: ../qml/Components/HeaderMain.qml:26 ../qml/SettingsPage.qml:28
 msgid "Settings"
 msgstr ""
 
@@ -420,7 +420,7 @@ msgstr ""
 #: ../qml/Components/ReviewPreview.qml:198
 #: ../qml/Dialogs/InstallWarningDialog.qml:49
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
-#: ../qml/Dialogs/UninstallDialog.qml:42 ../qml/PasswordDialog.qml:82
+#: ../qml/Dialogs/UninstallDialog.qml:42
 msgid "Cancel"
 msgstr ""
 
@@ -611,80 +611,44 @@ msgstr ""
 msgid "Installation failed (Error %1)"
 msgstr ""
 
-#: ../qml/PasswordDialog.qml:29
-msgid "Your passphrase is required to access restricted content"
-msgstr ""
-
-#: ../qml/PasswordDialog.qml:30
-msgid "Your passcode is required to access restricted content"
-msgstr ""
-
-#: ../qml/PasswordDialog.qml:39
-msgid "Authentication failed"
-msgstr ""
-
-#: ../qml/PasswordDialog.qml:47
-msgid "Passcode required"
-msgstr ""
-
-#: ../qml/PasswordDialog.qml:47
-msgid "Passphrase required"
-msgstr ""
-
-#: ../qml/PasswordDialog.qml:59
-msgid "passcode (default is 0000)"
-msgstr ""
-
-#: ../qml/PasswordDialog.qml:59
-msgid "passphrase (default is 0000)"
-msgstr ""
-
-#: ../qml/PasswordDialog.qml:71
-msgid "Authentication failed. Please retry"
-msgstr ""
-
-#: ../qml/PasswordDialog.qml:76
-msgid "Authenticate"
-msgstr ""
-
 #: ../qml/SearchPage.qml:29
 msgid "Search in OpenStore..."
 msgstr ""
 
-#: ../qml/SettingsPage.qml:114
+#: ../qml/SettingsPage.qml:115
 msgid "OpenStore Account"
 msgstr ""
 
-#: ../qml/SettingsPage.qml:122 ../qml/SignInPage.qml:30
+#: ../qml/SettingsPage.qml:123 ../qml/SignInPage.qml:30
 msgid "Sign in"
 msgstr ""
 
-#: ../qml/SettingsPage.qml:139
+#: ../qml/SettingsPage.qml:140
 msgid "Sign out"
 msgstr ""
 
-#: ../qml/SettingsPage.qml:167
+#: ../qml/SettingsPage.qml:168
 msgid "Parental control"
 msgstr ""
 
-#: ../qml/SettingsPage.qml:173
+#: ../qml/SettingsPage.qml:174
 msgid "Hide adult-oriented content"
 msgstr ""
 
-#: ../qml/SettingsPage.qml:183
+#: ../qml/SettingsPage.qml:184
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr ""
 
-#: ../qml/SettingsPage.qml:208
+#: ../qml/SettingsPage.qml:209
 msgid "About OpenStore"
 msgstr ""
 
-#: ../qml/SettingsPage.qml:224
+#: ../qml/SettingsPage.qml:225
 msgid "Report an issue"
 msgstr ""
 
-#: ../qml/SettingsPage.qml:233
+#: ../qml/SettingsPage.qml:234
 msgid "Additional Icons by"
 msgstr ""

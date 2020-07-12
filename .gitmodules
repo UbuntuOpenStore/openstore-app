@@ -1,0 +1,3 @@
+[submodule "plugins/PamAuthentication"]
+	path = plugins/PamAuthentication
+	url = https://gitlab.com/theopenstore/pamauthentication.git

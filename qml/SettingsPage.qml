@@ -102,13 +102,10 @@ Page {
                         }
                     }
 
-                    /* TODO: This need to be exported in CMake or ¿pro? files
                     Label {
                         anchors.horizontalCenter: parent.horizontalCenter
-                        //TRANSLATORS: This is the name of the app (%1) + version number (v%2)
-                        text: i18n.tr("%1 v%2").arg("OpenStore").arg(Qt.application.version)
+                        text: "OpenStore v" + Qt.application.version
                     }
-                    */
                 }
 
                 Components.SectionDivider {

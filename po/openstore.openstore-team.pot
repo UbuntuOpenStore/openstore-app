@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-12 04:59+0000\n"
+"POT-Creation-Date: 2020-07-12 05:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -133,7 +133,7 @@ msgstr ""
 msgid "N/A"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:554 ../qml/SettingsPage.qml:216
+#: ../qml/AppDetailsPage.qml:554 ../qml/SettingsPage.qml:213
 msgid "Source Code"
 msgstr ""
 
@@ -615,40 +615,40 @@ msgstr ""
 msgid "Search in OpenStore..."
 msgstr ""
 
-#: ../qml/SettingsPage.qml:115
+#: ../qml/SettingsPage.qml:112
 msgid "OpenStore Account"
 msgstr ""
 
-#: ../qml/SettingsPage.qml:123 ../qml/SignInPage.qml:30
+#: ../qml/SettingsPage.qml:120 ../qml/SignInPage.qml:30
 msgid "Sign in"
 msgstr ""
 
-#: ../qml/SettingsPage.qml:140
+#: ../qml/SettingsPage.qml:137
 msgid "Sign out"
 msgstr ""
 
-#: ../qml/SettingsPage.qml:168
+#: ../qml/SettingsPage.qml:165
 msgid "Parental control"
 msgstr ""
 
-#: ../qml/SettingsPage.qml:174
+#: ../qml/SettingsPage.qml:171
 msgid "Hide adult-oriented content"
 msgstr ""
 
-#: ../qml/SettingsPage.qml:184
+#: ../qml/SettingsPage.qml:181
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr ""
 
-#: ../qml/SettingsPage.qml:209
+#: ../qml/SettingsPage.qml:206
 msgid "About OpenStore"
 msgstr ""
 
-#: ../qml/SettingsPage.qml:225
+#: ../qml/SettingsPage.qml:222
 msgid "Report an issue"
 msgstr ""
 
-#: ../qml/SettingsPage.qml:234
+#: ../qml/SettingsPage.qml:231
 msgid "Additional Icons by"
 msgstr ""

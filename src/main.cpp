@@ -54,6 +54,8 @@ int main(int argc, char *argv[])
     initTimer.start();
 
     QCoreApplication::setApplicationName(QStringLiteral("openstore.openstore-team"));
+    QCoreApplication::setApplicationVersion(QString(BUILD_VERSION));
+    qDebug() << "OpenStore" << QCoreApplication::applicationVersion();
 
     QGuiApplication app(argc, argv);
 

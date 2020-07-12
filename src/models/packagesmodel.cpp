@@ -1,8 +1,8 @@
 #include "packagesmodel.h"
-#include "package.h"
-#include "platformintegration.h"
-#include "openstorenetworkmanager.h"
-#include "packagescache.h"
+#include "../package.h"
+#include "../platformintegration.h"
+#include "../openstorenetworkmanager.h"
+#include "../packagescache.h"
 
 #include <QJsonDocument>
 #include <QJsonArray>

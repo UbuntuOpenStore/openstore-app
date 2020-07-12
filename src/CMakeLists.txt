@@ -7,17 +7,17 @@ add_definitions(-DQT_NO_KEYWORDS)
 set(
     SRC
     main.cpp
-    categoriesmodel.cpp
+    models/categoriesmodel.cpp
     clickinstaller.cpp
-    discovermodel.cpp
-    packagesmodel.cpp
-    searchmodel.cpp
+    models/discovermodel.cpp
+    models/packagesmodel.cpp
+    models/searchmodel.cpp
     openstorenetworkmanager.cpp
     platformintegration.cpp
     package.cpp
     packagescache.cpp
     cachingnetworkmanagerfactory.cpp
-    reviewsmodel.cpp
+    models/reviewsmodel.cpp
     review.cpp
 )
 

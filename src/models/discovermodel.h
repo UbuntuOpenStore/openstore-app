@@ -3,7 +3,7 @@
 
 #include <QAbstractListModel>
 
-#include "openstorenetworkmanager.h"
+#include "../openstorenetworkmanager.h"
 
 class QNetworkReply;
 class PackageItem;

@@ -1,7 +1,7 @@
 #include "discovermodel.h"
-#include "package.h"
-#include "platformintegration.h"
-#include "packagescache.h"
+#include "../package.h"
+#include "../platformintegration.h"
+#include "../packagescache.h"
 
 #include <QJsonDocument>
 #include <QDebug>

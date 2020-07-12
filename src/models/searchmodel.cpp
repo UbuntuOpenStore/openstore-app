@@ -1,6 +1,6 @@
 #include "searchmodel.h"
-#include "platformintegration.h"
-#include "packagescache.h"
+#include "../platformintegration.h"
+#include "../packagescache.h"
 
 #include <QJsonDocument>
 #include <QDebug>

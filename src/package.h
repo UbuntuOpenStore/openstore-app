@@ -9,7 +9,7 @@
 #include <QPointer>
 
 #include "platformintegration.h"
-#include "reviewsmodel.h"
+#include "models/reviewsmodel.h"
 
 class PackageItem: public QObject
 {

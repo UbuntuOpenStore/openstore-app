@@ -4,9 +4,9 @@
 #include <QAbstractListModel>
 #include <QUrl>
 
-#include "openstorenetworkmanager.h"
-#include "review.h"
-#include "package.h"
+#include "../openstorenetworkmanager.h"
+#include "../review.h"
+#include "../package.h"
 
 struct SearchPackageItem {
     QString name;

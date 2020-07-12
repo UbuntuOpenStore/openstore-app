@@ -2,7 +2,7 @@
 #define CATEGORIESMODEL_H
 
 #include <QAbstractListModel>
-#include "openstorenetworkmanager.h"
+#include "../openstorenetworkmanager.h"
 
 struct CategoryItem {
     QString id;

@@ -1,5 +1,5 @@
 #include "reviewsmodel.h"
-#include "review.h"
+#include "../review.h"
 
 #include <QJsonDocument>
 #include <QJsonObject>

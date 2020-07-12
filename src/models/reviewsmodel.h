@@ -3,8 +3,8 @@
 
 #include <QAbstractListModel>
 
-#include "openstorenetworkmanager.h"
-#include "review.h"
+#include "../openstorenetworkmanager.h"
+#include "../review.h"
 
 class QNetworkReply;
 

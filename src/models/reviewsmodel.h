@@ -52,15 +52,11 @@ private Q_SLOTS:
     void onRefresh();
 
 private:
-    enum ReplyType {
-        HandleReviewPosted,
-        AppendReviews,
-        ResetReviews,
-        HandleOwnReview,
-    };
+    QString m_postedSignature;
+    QString m_appendSignature;
+    QString m_resetSignature;
+    QString m_ownSignature;
 
-    ReplyType m_replyType;
-    QString m_requestSignature;
     QList<ReviewItem> m_list;
     QString m_appId;
     int m_reviewCount = 0;

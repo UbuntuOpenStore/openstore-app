@@ -52,7 +52,6 @@ private:
     QString m_requestSignature;
 
     QList<DiscoverCategoryItem> m_list;
-//    QHash<QString, PackageItem*> m_packages;    // Cache
 
     QUrl m_highlightBannerUrl;
     QString m_highlightAppId;

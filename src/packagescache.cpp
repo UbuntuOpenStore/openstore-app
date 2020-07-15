@@ -41,36 +41,25 @@ void PackagesCache::getPackageDetails(const QString &appId)
     if (contains(appId)) {
         Q_EMIT packageDetailsReady(get(appId));
     } else {
-        const QString &signature = OpenStoreNetworkManager::instance()->generateNewSignature();
+        const QString &requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
 
-        connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::newReply, [=](const OpenStoreReply &reply) {
-            if (reply.signature != signature)
+        connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::parsedReply, [=](const OpenStoreReply &reply) {
+            if (reply.signature != requestSignature)
                 return;
 
-            QJsonParseError error;
-            QJsonDocument jsonDoc = QJsonDocument::fromJson(reply.data, &error);
-
-            if (error.error != QJsonParseError::NoError) {
-                qWarning() << Q_FUNC_INFO << "Error parsing json" << error.errorString();
-                return;
-            }
-
-            QVariantMap replyMap = jsonDoc.toVariant().toMap();
-
-            if (!replyMap.value("success").toBool() || !replyMap.contains("data")) {
-                qWarning() << Q_FUNC_INFO << "Error retriving info from" << reply.url;
-
-                Q_EMIT packageFetchError(appId);
-                return;
-            }
-
-            QVariantMap pkg = replyMap.value("data").toMap();
+            QVariantMap pkg = reply.data.toMap();
 
             PackageItem* pkgItem = insert(appId, pkg);
             Q_EMIT packageDetailsReady(pkgItem);
         });
+        connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::error, [=](const QString &signature, const QString &error) {
+            if (signature != requestSignature)
+                return;
 
-        OpenStoreNetworkManager::instance()->getAppDetails(signature, appId);
+            Q_EMIT packageFetchError(appId);
+        });
+
+        OpenStoreNetworkManager::instance()->getAppDetails(requestSignature, appId);
     }
 }
 
@@ -81,30 +70,15 @@ void PackagesCache::updateCacheRevisions()
 
     //qDebug() << Q_FUNC_INFO << "called";
 
-    connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::newReply, [=](const OpenStoreReply &reply) {
+    connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::parsedReply, [=](const OpenStoreReply &reply) {
         if (reply.signature != m_signature)
             return;
-
-        QJsonParseError error;
-        QJsonDocument jsonDoc = QJsonDocument::fromJson(reply.data, &error);
-
-        if (error.error != QJsonParseError::NoError) {
-            qWarning() << Q_FUNC_INFO << "Error parsing json" << error.errorString();
-            return;
-        }
-
-        QVariantMap replyMap = jsonDoc.toVariant().toMap();
-
-        if (!replyMap.value("success").toBool() || !replyMap.contains("data")) {
-            qWarning() << Q_FUNC_INFO << "Response doesn't contain data";
-            return;
-        }
 
         m_localAppRevision.clear();
         m_remoteAppRevision.clear();
         m_packageUrls.clear();
 
-        QVariantList data = replyMap.value("data").toList();
+        QVariantList data = reply.data.toList();
         Q_FOREACH (QVariant d, data) {
             QVariantMap map = d.toMap();
             const QString &appId = map.value("id").toString();

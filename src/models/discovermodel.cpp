@@ -10,9 +10,7 @@ DiscoverModel::DiscoverModel(QObject *parent)
     : QAbstractListModel(parent)
 {
     connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::reloaded, this, &DiscoverModel::refresh);
-
-    connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::newReply,
-            this, &DiscoverModel::parseReply);
+    connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::parsedReply, this, &DiscoverModel::parseReply);
 
     refresh();
 }
@@ -71,22 +69,7 @@ void DiscoverModel::parseReply(OpenStoreReply reply)
     if (reply.signature != m_requestSignature)
         return;
 
-    QJsonParseError error;
-    QJsonDocument jsonDoc = QJsonDocument::fromJson(reply.data, &error);
-
-    if (error.error != QJsonParseError::NoError) {
-        qWarning() << Q_FUNC_INFO << "Error parsing json" << error.errorString();
-        return;
-    }
-
-    QVariantMap replyMap = jsonDoc.toVariant().toMap();
-
-    if (!replyMap.value("success").toBool() || !replyMap.contains("data")) {
-        qWarning() << Q_FUNC_INFO << "Server replied with error";
-        return;
-    }
-
-    QVariantMap data = replyMap.value("data").toMap();
+    QVariantMap data = reply.data.toMap();
 
     // Highlighted app data
     QVariantMap highlight = data.value("highlight").toMap();

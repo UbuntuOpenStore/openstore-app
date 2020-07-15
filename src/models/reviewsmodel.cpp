@@ -9,8 +9,8 @@
 ReviewsModel::ReviewsModel(const QString &appId, QObject *parent)
     : QAbstractListModel(parent), m_replyType(ReplyType::AppendReviews), m_appId(appId), m_loadMorePending(false)
 {
-    connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::newReply,
-            this, &ReviewsModel::parseReply);
+    connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::parsedReply, this, &ReviewsModel::parseReply);
+    connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::error, this, &ReviewsModel::parseError);
     connect(this, &ReviewsModel::refresh, this, &ReviewsModel::onRefresh);
 
     m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
@@ -94,12 +94,8 @@ bool ReviewsModel::sendReview(const QString &version, const QString &review, Rat
 {
     m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
     m_replyType = ReplyType::HandleReviewPosted;
-    bool success = OpenStoreNetworkManager::instance()->postReview(m_requestSignature, m_appId, version, review, rating, apiKey, edit);
-    if (!success)
-    {
-        qWarning() << Q_FUNC_INFO << "Posting review failed";
-        return false;
-    }
+    OpenStoreNetworkManager::instance()->postReview(m_requestSignature, m_appId, version, review, rating, apiKey, edit);
+
     return true;
 }
 
@@ -108,35 +104,7 @@ void ReviewsModel::parseReply(OpenStoreReply reply)
     if (reply.signature != m_requestSignature)
         return;
 
-    QJsonParseError error;
-    QJsonDocument jsonDocument = QJsonDocument::fromJson(reply.data, &error);
-
-    if (error.error != QJsonParseError::NoError)
-    {
-        qWarning() << Q_FUNC_INFO << "Error parsing json" << error.errorString();
-        ReviewsModel::error(QString("Invalid response"));
-        return;
-    }
-
-    if (!jsonDocument.isObject())
-    {
-        qWarning() << Q_FUNC_INFO << "Error parsing json";
-        ReviewsModel::error(QString("Invalid response"));
-        return;
-    }
-    QJsonObject jsonObject = jsonDocument.object();
-
-    QJsonObject data = jsonObject["data"].toObject();
-
-    bool success = jsonObject["success"].toBool();
-
-    if (!success)
-    {
-        QString message = jsonObject["message"].toString();
-        ReviewsModel::error(message);
-        return;
-    }
-
+    QJsonObject data = reply.data.toJsonObject();
     switch (m_replyType) {
         case ReplyType::AppendReviews:
             handleAppendReviews(data);
@@ -151,6 +119,13 @@ void ReviewsModel::parseReply(OpenStoreReply reply)
             handleOwnReview(data);
             break;
     }
+}
+
+void ReviewsModel::parseError(const QString &signature, const QString &error) {
+    if (signature != m_requestSignature)
+        return;
+
+    Q_EMIT ReviewsModel::error(error);
 }
 
 void ReviewsModel::onRefresh()

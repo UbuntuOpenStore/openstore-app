@@ -48,6 +48,7 @@ Q_SIGNALS:
 
 private Q_SLOTS:
     void parseReply(OpenStoreReply reply);
+    void parseError(const QString &signature, const QString &error);
     void onRefresh();
 
 private:

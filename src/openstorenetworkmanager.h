@@ -10,7 +10,7 @@
 
 
 struct OpenStoreReply {
-    QByteArray data;
+    QVariant data;
     QString signature;
     QUrl url;
 };
@@ -35,30 +35,31 @@ public:
     QString generateNewSignature() const;
 
 public Q_SLOTS:
-    bool getDiscover(const QString &signature);
-    bool getAppDetails(const QString &signature, const QString &appId);
-    bool getSearch(const QString &signature, int skip, int limit, const QString &filterString, const QString &category, const QString &sort);
-    bool getCategories(const QString &signature);
-    bool getUrl(const QString &signature, const QUrl &url);
-    bool getRevisions(const QString &signature, const QStringList &appIdsAtVersion);
-    bool postReview(const QString &signature, const QString &appId, const QString &version, const QString &review, Ratings::Rating rating, const QString &apiKey, const bool &edit);
-    bool getReviews(const QString &signature, const QString &appId);
-    bool getReviews(const QString &signature, const QString &appId, unsigned int limit, qlonglong fromDate);
-    bool getReviews(const QString &signature, const QString &appId, const QString &apiKey);
+    void getDiscover(const QString &signature);
+    void getAppDetails(const QString &signature, const QString &appId);
+    void getSearch(const QString &signature, int skip, int limit, const QString &filterString, const QString &category, const QString &sort);
+    void getCategories(const QString &signature);
+    void getByUrl(const QString &signature, const QUrl &url);
+    void getRevisions(const QString &signature, const QStringList &appIdsAtVersion);
+    void postReview(const QString &signature, const QString &appId, const QString &version, const QString &review, Ratings::Rating rating, const QString &apiKey, const bool &edit);
+    void getReviews(const QString &signature, const QString &appId);
+    void getReviews(const QString &signature, const QString &appId, unsigned int limit, qlonglong fromDate);
+    void getReviews(const QString &signature, const QString &appId, const QString &apiKey);
 
 Q_SIGNALS:
     void networkAccessibleChanged();
-    void newReply(const OpenStoreReply &reply);
+    void parsedReply(const OpenStoreReply &reply);
     void showNsfwChanged();
     void reloaded();
+    void error(const QString &signature, const QString &error);
 
 private Q_SLOTS:
     void deleteCache();
 
 private:
     QNetworkReply* sendRequest(QNetworkRequest request);
-    void emitReplySignal(QNetworkReply* reply, const QString &signature);
-    bool getReviewsByUrl(const QString &signature, const QUrl &url);
+    void parseReply(QNetworkReply *reply, const QString &signature);
+    void getReviewsByUrl(const QString &signature, const QUrl &url);
 
 private:
     QNetworkAccessManager* m_manager;

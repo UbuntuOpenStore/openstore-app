@@ -1,14 +1,10 @@
 #include "categoriesmodel.h"
 
-#include <QUrlQuery>
-#include <QNetworkRequest>
-#include <QJsonDocument>
-
 CategoriesModel::CategoriesModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_ready(false)
 {
-    connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::newReply, this, &CategoriesModel::parseReply);
+    connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::parsedReply, this, &CategoriesModel::parseReply);
     connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::reloaded, this, &CategoriesModel::update);
 
     update();
@@ -65,22 +61,7 @@ void CategoriesModel::parseReply(OpenStoreReply reply)
     if (reply.signature != m_requestSignature)
         return;
 
-    QJsonParseError error;
-    QJsonDocument jsonDoc = QJsonDocument::fromJson(reply.data, &error);
-
-    if (error.error != QJsonParseError::NoError) {
-        qWarning() << Q_FUNC_INFO << "Error parsing json" << error.errorString();
-        return;
-    }
-
-    QVariantMap replyMap = jsonDoc.toVariant().toMap();
-
-    if (!replyMap.value("success").toBool() || !replyMap.contains("data")) {
-        qWarning() << Q_FUNC_INFO << "Response doesn't contain data";
-        return;
-    }
-
-    QVariantList data = replyMap.value("data").toList();
+    QVariantList data = reply.data.toList();
 
     beginResetModel();
     m_list.clear();

@@ -202,31 +202,31 @@ Page {
 
                     Components.ReviewItem {
                         id: tup
-                        reviewIcon: "../Assets/thumbup.svg"
+                        reviewIcon: newRating === 0 ? "../Assets/thumbup-full.svg" : "../Assets/thumbup.svg"
                         reviewNumber: modifyRatingCount(0, app.ratings.thumbsUpCount)
                         enabled: modifyRatingCount(0, app.ratings.thumbsUpCount) > 0                                                                                                                                                                                                                                                                                           ; MouseArea {anchors.fill: parent; onClicked: tup.reviewIcon="../Assets/t-up.svg"}
                     }
 
                     Components.ReviewItem {
-                        reviewIcon: "../Assets/happy.svg"
+                        reviewIcon: newRating === 3 ? "../Assets/happy-full.svg" : "../Assets/happy.svg"
                         reviewNumber: modifyRatingCount(3, app.ratings.happyCount)
                         enabled: modifyRatingCount(3, app.ratings.happyCount) > 0
                     }
 
                     Components.ReviewItem {
-                        reviewIcon: "../Assets/neutral.svg"
+                        reviewIcon: newRating === 2 ? "../Assets/neutral-full.svg" : "../Assets/neutral.svg"
                         reviewNumber: modifyRatingCount(2, app.ratings.neutralCount)
                         enabled: modifyRatingCount(2, app.ratings.neutralCount) > 0
                     }
 
                     Components.ReviewItem {
-                        reviewIcon: "../Assets/thumbdown.svg"
+                        reviewIcon: newRating === 1 ? "../Assets/thumbdown-full.svg" : "../Assets/thumbdown.svg"
                         reviewNumber: modifyRatingCount(1, app.ratings.thumbsDownCount)
                         enabled: modifyRatingCount(1, app.ratings.thumbsDownCount) > 0
                     }
 
                     Components.ReviewItem {
-                        reviewIcon: "../Assets/buggy.svg"
+                        reviewIcon: newRating === 4 ? "../Assets/buggy-full.svg" : "../Assets/buggy.svg"
                         reviewNumber: modifyRatingCount(4, app.ratings.buggyCount)
                         enabled: modifyRatingCount(4, app.ratings.buggyCount) > 0
                     }

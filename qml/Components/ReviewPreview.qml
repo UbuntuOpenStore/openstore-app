@@ -23,14 +23,23 @@ import OpenStore 1.0
 ListItem {
     id: reviewPreviewListItem
     height: reviewPreviewColumn.height
+
     property var reviews
     readonly property int count: reviews.reviewCount
     readonly property int maxLength: 512
     property var ownReview: null
     property var ownRating: null
+    property var originalRating: null
     property bool ready: false
+    property bool first: true
 
     signal reviewUpdated(var oldRating, var newRating)
+
+    Component.onCompleted: {
+        if (root.apiKey) {
+            reviews.getOwnReview(root.apiKey);
+        }
+    }
 
     Connections {
         target: reviews
@@ -39,8 +48,15 @@ ListItem {
             ownReview = 'body' in review ? review : null;
 
             if (!ready) {
+                if (first) {
+                    originalRating = rating;
+                    ownRating = rating;
+                    reviewUpdated(rating, rating);
+
+                    first = false;
+                }
+
                 ready = true;
-                ownRating = ownReview ? rating : null; // Only set this on the first load
             }
         }
 
@@ -106,7 +122,7 @@ ListItem {
             id: dialogue
             readonly property var buttonWidth: (textArea.width - 4*units.gu(2)) / 5
             title: ready ? i18n.tr("Rate this app") : i18n.tr("Loading...")
-            Component.onCompleted: reviews.getOwnReview(root.apiKey)
+            Component.onCompleted: reviews.getOwnReview(root.apiKey);
 
             function postReview(rating, body) {
                 if (ownReview === null) {
@@ -114,7 +130,7 @@ ListItem {
                     app.review(body, rating, root.apiKey)
                 }
                 else {
-                    reviewUpdated(ownRating, rating);
+                    reviewUpdated(originalRating, rating);
                     app.editReview(body, rating, root.apiKey)
                 }
 
@@ -223,12 +239,21 @@ ListItem {
                     : ""
 
                 anchors.fill: parent
-                title.text: app.installed
-                        ? root.apiKey === ""
-                            ? reviewCountTxt + i18n.tr("Sign in to review this app")
-                            : reviewCountTxt + i18n.tr("Review app")
-                        : reviewCountTxt + i18n.tr("Install this app to review it")
+                title.text: {
+                    if (app.installed) {
+                        if (root.apiKey) {
+                            if (ownReview) {
+                                return reviewCountTxt + i18n.tr("Edit Review");
+                            }
 
+                            return reviewCountTxt + i18n.tr("Review app");
+                        }
+
+                        return reviewCountTxt + i18n.tr("Sign in to review this app");
+                    }
+
+                    return reviewCountTxt + i18n.tr("Install this app to review it");
+                }
 
                 title.color: theme.palette.normal.backgroundText
                 ProgressionSlot {

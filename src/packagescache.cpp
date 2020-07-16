@@ -53,9 +53,9 @@ PackageItem *PackagesCache::get(const QString &appId) const
     return m_cache.value(appId, Q_NULLPTR);
 }
 
-void PackagesCache::getPackageDetails(const QString &appId)
+void PackagesCache::getPackageDetails(const QString &appId, bool bust)
 {
-    if (contains(appId)) {
+    if (contains(appId) && !bust) {
         Q_EMIT packageDetailsReady(get(appId));
     } else {
         const QString &requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();

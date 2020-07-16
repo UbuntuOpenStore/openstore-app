@@ -39,6 +39,7 @@ public:
     explicit Ratings(const Ratings &ratings);
 
     enum Rating {
+        RatingNone = -1,
         RatingThumbsUp = 0,
         RatingThumbsDown = 1,
         RatingNeutral = 2,

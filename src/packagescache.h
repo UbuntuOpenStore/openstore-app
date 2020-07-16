@@ -44,7 +44,7 @@ public:
 
     int numberOfInstalledAppsInStore() const { return m_remoteAppRevision.count(); }
 
-    Q_INVOKABLE void getPackageDetails(const QString &appId);
+    Q_INVOKABLE void getPackageDetails(const QString &appId, bool bust = false);
 
 Q_SIGNALS:
     void updatingCacheChanged();

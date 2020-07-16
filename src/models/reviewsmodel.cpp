@@ -164,7 +164,7 @@ void ReviewsModel::handleOwnReview(const QJsonObject &data)
     }
     else
     {
-        Q_EMIT ownReviewResponse(QJsonObject(), Ratings::Rating::RatingNeutral);
+        Q_EMIT ownReviewResponse(QJsonObject(), Ratings::Rating::RatingNone);
     }
 }
 

@@ -30,8 +30,7 @@ Page {
     anchors.fill: parent
 
     property var app: null
-    property var oldRating: null
-    property var newRating: null
+    property var rating: null
     property var restrictedPermissions: [
         'bluetooth',
         'calendar',
@@ -86,22 +85,6 @@ Page {
         return false
     }
 
-    // Adjust the rating when the user updates their review without making another network request
-    function modifyRatingCount(rating, count) {
-
-        if (oldRating >= 0 && oldRating != newRating) {
-            if (oldRating == rating) {
-                return count - 1;
-            }
-
-            if (newRating == rating) {
-                return count + 1;
-            }
-        }
-
-        return count;
-    }
-
     function getNumberShortForm(number) {
         if (number > 999999) {
             return Math.floor(number/1000000) + "M"
@@ -110,6 +93,16 @@ Page {
             return Math.floor(number/1000) + "K"
         }
         else return number + ""
+    }
+
+    function appReloaded(pkg) {
+        PackagesCache.packageDetailsReady.disconnect(appReloaded);
+        app = pkg;
+    }
+
+    function reload() {
+        PackagesCache.packageDetailsReady.connect(appReloaded);
+        PackagesCache.getPackageDetails(app.appId, true);
     }
 
     header: Components.HeaderBase {
@@ -203,33 +196,33 @@ Page {
 
                     Components.ReviewItem {
                         id: tup
-                        reviewIcon: newRating === 0 ? "../Assets/thumbup-full.svg" : "../Assets/thumbup.svg"
-                        reviewNumber: modifyRatingCount(0, app.ratings.thumbsUpCount)
-                        enabled: modifyRatingCount(0, app.ratings.thumbsUpCount) > 0                                                                                                                                                                                                                                                                                           ; MouseArea {anchors.fill: parent; onClicked: tup.reviewIcon="../Assets/t-up.svg"}
+                        reviewIcon: rating === 0 ? "../Assets/thumbup-full.svg" : "../Assets/thumbup.svg"
+                        reviewNumber: app.ratings.thumbsUpCount
+                        enabled: app.ratings.thumbsUpCount > 0                                                                                                                                                                                                                                                                                           ; MouseArea {anchors.fill: parent; onClicked: tup.reviewIcon="../Assets/t-up.svg"}
                     }
 
                     Components.ReviewItem {
-                        reviewIcon: newRating === 3 ? "../Assets/happy-full.svg" : "../Assets/happy.svg"
-                        reviewNumber: modifyRatingCount(3, app.ratings.happyCount)
-                        enabled: modifyRatingCount(3, app.ratings.happyCount) > 0
+                        reviewIcon: rating === 3 ? "../Assets/happy-full.svg" : "../Assets/happy.svg"
+                        reviewNumber: app.ratings.happyCount
+                        enabled: app.ratings.happyCount > 0
                     }
 
                     Components.ReviewItem {
-                        reviewIcon: newRating === 2 ? "../Assets/neutral-full.svg" : "../Assets/neutral.svg"
-                        reviewNumber: modifyRatingCount(2, app.ratings.neutralCount)
-                        enabled: modifyRatingCount(2, app.ratings.neutralCount) > 0
+                        reviewIcon: rating === 2 ? "../Assets/neutral-full.svg" : "../Assets/neutral.svg"
+                        reviewNumber: app.ratings.neutralCount
+                        enabled: app.ratings.neutralCount > 0
                     }
 
                     Components.ReviewItem {
-                        reviewIcon: newRating === 1 ? "../Assets/thumbdown-full.svg" : "../Assets/thumbdown.svg"
-                        reviewNumber: modifyRatingCount(1, app.ratings.thumbsDownCount)
-                        enabled: modifyRatingCount(1, app.ratings.thumbsDownCount) > 0
+                        reviewIcon: rating === 1 ? "../Assets/thumbdown-full.svg" : "../Assets/thumbdown.svg"
+                        reviewNumber: app.ratings.thumbsDownCount
+                        enabled: app.ratings.thumbsDownCount > 0
                     }
 
                     Components.ReviewItem {
-                        reviewIcon: newRating === 4 ? "../Assets/buggy-full.svg" : "../Assets/buggy.svg"
-                        reviewNumber: modifyRatingCount(4, app.ratings.buggyCount)
-                        enabled: modifyRatingCount(4, app.ratings.buggyCount) > 0
+                        reviewIcon: rating === 4 ? "../Assets/buggy-full.svg" : "../Assets/buggy.svg"
+                        reviewNumber: app.ratings.buggyCount
+                        enabled: app.ratings.buggyCount > 0
                     }
                 }
             }
@@ -451,9 +444,12 @@ Page {
                 visible: app.channelMatchesOS
                 reviews: app.reviews
 
-                onReviewUpdated: {
-                    appDetailsPage.oldRating = oldRating;
-                    appDetailsPage.newRating = newRating;
+                onRatingUpdated: {
+                    appDetailsPage.rating = rating;
+                }
+
+                onReviewPosted: {
+                    reload();
                 }
             }
 

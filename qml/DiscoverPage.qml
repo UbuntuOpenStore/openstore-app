@@ -28,6 +28,12 @@ Page {
     property DiscoverModel discoverModel: root.discoverModel
     anchors.fill: parent
 
+    function slot_packageDetailsReady(pkg) {
+        PackagesCache.packageDetailsReady.disconnect(slot_packageDetailsReady)
+        bottomEdgeStack.clear()
+        bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
+    }
+
     header: Components.HeaderMain {
         id: mainHeader
         title: i18n.tr('OpenStore')
@@ -78,8 +84,8 @@ Page {
                         if (appStatus == 2) {
                             Qt.openUrlExternally(highlightAppControl.appItem.appLaunchUrl());
                         } else {
-                            var pageProps = { app: highlightAppControl.appItem }
-                            bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), pageProps)
+                            PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady)
+                            PackagesCache.getPackageDetails(highlightAppControl.appItem.appId)
                         }
 
                     }
@@ -101,14 +107,8 @@ Page {
                         ProgressionSlot {}
                     }
 
-                    function slot_installedPackageDetailsReady(pkg) {
-                        PackagesCache.packageDetailsReady.disconnect(slot_installedPackageDetailsReady)
-                        bottomEdgeStack.clear()
-                        bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
-                    }
-
                     onClicked: {
-                        PackagesCache.packageDetailsReady.connect(slot_installedPackageDetailsReady)
+                        PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady)
                         PackagesCache.getPackageDetails(localAppModel.appStoreAppId)
                     }
 
@@ -182,7 +182,10 @@ Page {
                 showProgression: model.queryUrl
 
                 onTitleClicked: if (model.queryUrl) { root.showSearchQuery(model.queryUrl) }
-                onAppTileClicked: bottomEdgeStack.push(Qt.resolvedUrl("../AppDetailsPage.qml"), { app: appItem })
+                onAppTileClicked: {
+                    PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady)
+                    PackagesCache.getPackageDetails(appItem.appId)
+                }
 
                 viewModel: model.appIds
                 function packageInfoGetter(i) {

@@ -20,7 +20,6 @@ import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import OpenStore 1.0
 
-
 ListItem {
     id: reviewPreviewListItem
     height: reviewPreviewColumn.height
@@ -30,11 +29,11 @@ ListItem {
     readonly property int maxLength: 512
     property var ownReview: null
     property var ownRating: null
-    property var originalRating: null
     property bool ready: false
     property bool first: true
 
-    signal reviewUpdated(var oldRating, var newRating)
+    signal ratingUpdated(var rating)
+    signal reviewPosted()
 
     Component.onCompleted: {
         if (root.apiKey) {
@@ -47,21 +46,20 @@ ListItem {
 
         onOwnReviewResponse: {
             ownReview = 'body' in review ? review : null;
+            ownRating = rating < 0 ? null : rating;
 
             if (!ready) {
-                if (first) {
-                    originalRating = rating;
-                    ownRating = rating;
-                    reviewUpdated(rating, rating);
-
-                    first = false;
-                }
+                ratingUpdated(rating);
 
                 ready = true;
             }
         }
 
-        onReviewPosted: PopupUtils.open(successPostDialog)
+        onReviewPosted: {
+            PopupUtils.open(successPostDialog)
+            reviewPreviewListItem.reviewPosted();
+            ratingUpdated(ownRating);
+        }
 
         onError: {
             errorText = text
@@ -127,11 +125,9 @@ ListItem {
 
             function postReview(rating, body) {
                 if (ownReview === null) {
-                    reviewUpdated(null, rating);
                     app.review(body, rating, root.apiKey)
                 }
                 else {
-                    reviewUpdated(originalRating, rating);
                     app.editReview(body, rating, root.apiKey)
                 }
 

@@ -1,7 +1,6 @@
 /*
  * Copyright (C) 2014, 2015, 2016 Canonical Ltd
- *
- * This file is part of Ubuntu Clock App
+ * Copyright (C) 2020 Brian Douglass
  *
  * Ubuntu Clock App is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 3 as

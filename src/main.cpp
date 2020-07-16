@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 - Michael Zanetti <michael.zanetti@ubuntu.com>
+ * Copyright (C) 2020 Brian Douglass
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -26,7 +27,7 @@
 #include "clickinstaller.h"
 #include "models/searchmodel.h"
 #include "models/categoriesmodel.h"
-#include "models/packagesmodel.h"
+#include "models/localpackagesmodel.h"
 #include "models/discovermodel.h"
 #include "packagescache.h"
 #include "openstorenetworkmanager.h"
@@ -63,11 +64,11 @@ int main(int argc, char *argv[])
     qmlRegisterSingletonType<PlatformIntegration>("OpenStore", 1, 0, "PlatformIntegration", registerPlatformIntegrationSingleton);
     qmlRegisterSingletonType<PackagesCache>("OpenStore", 1, 0, "PackagesCache", registerPackagesCacheSingleton);
     qmlRegisterUncreatableType<ClickInstaller>("OpenStore", 1, 0, "ClickInstaller", "Access ClickInstall from the PlatformIntegration singleton");
-    qmlRegisterType<PackagesModel>("OpenStore", 1, 0, "AppModel");
+    qmlRegisterType<LocalPackagesModel>("OpenStore", 1, 0, "LocalAppModel");
     qmlRegisterType<DiscoverModel>("OpenStore", 1, 0, "DiscoverModel");
     qmlRegisterType<SearchModel>("OpenStore", 1, 0, "SearchModel");
     qmlRegisterType<CategoriesModel>("OpenStore", 1, 0, "CategoriesModel");
-    qmlRegisterUncreatableType<PackageItem>("OpenStore", 1, 0, "PackageItem", "PackageItem is only available through AppModel, DiscoverModel, or SearchModel.");
+    qmlRegisterUncreatableType<PackageItem>("OpenStore", 1, 0, "PackageItem", "PackageItem is only available through LocalAppModel, DiscoverModel, or SearchModel.");
 
     qmlRegisterType<Ratings>("OpenStore", 1, 0, "Ratings");
     qRegisterMetaType<Ratings::Rating>("Rating");

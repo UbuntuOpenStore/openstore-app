@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 - Michael Zanetti <michael.zanetti@ubuntu.com>
+ * Copyright (C) 2020 Brian Douglass
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -13,6 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
@@ -48,7 +50,7 @@ MainView {
         PackagesCache.packageDetailsReady.disconnect(slot_packageDetailsReady);
         PackagesCache.packageFetchError.disconnect(slot_packageFetchError);
 
-        var app = appModel.getByAppId(appId);
+        var app = localAppModel.getByAppId(appId);
         if (app.appId) {
             bottomEdgeStack.clear();
             bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
@@ -70,7 +72,7 @@ MainView {
             PackagesCache.getPackageDetails(appId);
         }
         else {
-            var app = appModel.getByAppId(appId);
+            var app = localAppModel.getByAppId(appId);
             if (app.appId) {
                 bottomEdgeStack.clear();
                 bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
@@ -195,7 +197,7 @@ MainView {
         Component.onCompleted: OpenStoreNetworkManager.showNsfw = !settings.hideNsfw
     }
 
-    property QtObject appModel: AppModel {
+    property QtObject localAppModel: LocalAppModel {
         appStoreAppId: root.applicationName
     }
     property QtObject categoriesModel: CategoriesModel { }

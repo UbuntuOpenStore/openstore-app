@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2017 - Stefano Verzegnassi <verzegnassi.stefano@gmail.com>
+ * Copyright (C) 2020 Brian Douglass
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -90,7 +91,7 @@ Page {
                     width: parent.width
                     divider.visible: false
                     enabled: visible    // Just for being sure everything works as expected
-                    visible: appModel.appStoreUpdateAvailable
+                    visible: localAppModel.appStoreUpdateAvailable
                     color: theme.palette.normal.activity
 
                     ListItemLayout {
@@ -108,7 +109,7 @@ Page {
 
                     onClicked: {
                         PackagesCache.packageDetailsReady.connect(slot_installedPackageDetailsReady)
-                        PackagesCache.getPackageDetails(appModel.appStoreAppId)
+                        PackagesCache.getPackageDetails(localAppModel.appStoreAppId)
                     }
 
                     // WORKAROUND: appStoreUpdateAlert visibility is toggled after the whole page is layouted.
@@ -130,8 +131,8 @@ Page {
 
                     ListItemLayout {
                         anchors.fill: parent
-                        title.text: appModel.updatesAvailableCount > 0
-                            ? i18n.tr("Installed Apps") + i18n.tr(" (%1 update available)", " (%1 updates available)", appModel.updatesAvailableCount).arg(appModel.updatesAvailableCount)
+                        title.text: localAppModel.updatesAvailableCount > 0
+                            ? i18n.tr("Installed Apps") + i18n.tr(" (%1 update available)", " (%1 updates available)", localAppModel.updatesAvailableCount).arg(localAppModel.updatesAvailableCount)
                             : i18n.tr("Installed Apps")
                         title.color: theme.palette.normal.backgroundText
                         ProgressionSlot {}

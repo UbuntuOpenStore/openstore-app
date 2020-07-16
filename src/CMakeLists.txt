@@ -10,7 +10,7 @@ set(
     models/categoriesmodel.cpp
     clickinstaller.cpp
     models/discovermodel.cpp
-    models/packagesmodel.cpp
+    models/localpackagesmodel.cpp
     models/searchmodel.cpp
     openstorenetworkmanager.cpp
     platformintegration.cpp

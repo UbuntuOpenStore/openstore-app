@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2019 - Stefan Weng <stefwe@mailbox.org>
+ * Copyright (C) 2020 Brian Douglass
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

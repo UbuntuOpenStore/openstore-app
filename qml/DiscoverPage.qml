@@ -18,6 +18,7 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import OpenStore 1.0
+import Ubuntu.Connectivity 1.0
 
 import "Components" as Components
 
@@ -75,7 +76,7 @@ Page {
 
                     ActivityIndicator {
                         anchors.centerIn: parent
-                        visible: !highlightAppControl.ready
+                        visible: !highlightAppControl.ready && Connectivity.online
                         running: visible
                     }
 
@@ -87,7 +88,29 @@ Page {
                             PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady)
                             PackagesCache.getPackageDetails(highlightAppControl.appItem.appId)
                         }
+                    }
 
+                    Item {
+                        visible: !Connectivity.online && !highlightAppControl.ready
+                        anchors.fill: parent
+
+                        Icon {
+                            id: offlineIcon
+                            name: 'wifi-none'
+                            anchors.centerIn: parent
+                            width: units.gu(4)
+                            height: width
+                        }
+
+                        Label {
+                            anchors {
+                                horizontalCenter: offlineIcon.horizontalCenter
+                                top: offlineIcon.bottom
+                                topMargin: units.gu(1)
+                            }
+
+                            text: i18n.tr("You are currently offline")
+                        }
                     }
                 }
 
@@ -127,7 +150,7 @@ Page {
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: parent.width
                     //Used opacity to hide this until the model is ready. If visible is used, the ListView moves up on start
-                    opacity: highlightAppControl.ready ? 1 : 0
+                    opacity: highlightAppControl.ready || !Connectivity.online ? 1 : 0
 
                     ListItemLayout {
                         anchors.fill: parent

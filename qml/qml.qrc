@@ -28,6 +28,7 @@
         <file>Dialogs/InstallWarningDialog.qml</file>
         <file>Dialogs/DonationDialog.qml</file>
         <file>Dialogs/UnconfinedWarningDialog.qml</file>
+        <file>Dialogs/NegativeReviewDialog.qml</file>
         <file>DiscoverPage.qml</file>
         <file>FilteredAppList.qml</file>
         <file>InstalledAppsPage.qml</file>

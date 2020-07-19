@@ -20,6 +20,8 @@ import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import OpenStore 1.0
 
+import "../Dialogs" as Dialogs
+
 ListItem {
     id: reviewPreviewListItem
     height: reviewPreviewColumn.height
@@ -59,6 +61,9 @@ ListItem {
             PopupUtils.open(successPostDialog)
             reviewPreviewListItem.reviewPosted();
             ratingUpdated(ownRating);
+
+            //Reset bool to update current rating
+            ready = false
         }
 
         onError: {
@@ -122,18 +127,6 @@ ListItem {
             readonly property var buttonWidth: (textArea.width - 4*units.gu(2)) / 5
             title: ready ? i18n.tr("Rate this app") : i18n.tr("Loading...")
             Component.onCompleted: reviews.getOwnReview(root.apiKey);
-
-            function postReview(rating, body) {
-                if (ownReview === null) {
-                    app.review(body, rating, root.apiKey)
-                }
-                else {
-                    app.editReview(body, rating, root.apiKey)
-                }
-
-                //Reset bool to update current rating
-                ready = false
-            }
 
             TextArea {
                 id: textArea
@@ -202,8 +195,24 @@ ListItem {
                 color: theme.palette.normal.positive
 
                 onClicked: {
-                    PopupUtils.close(dialogue)
-                    postReview(ownRating, textArea.displayText)
+                    PopupUtils.close(dialogue);
+
+                    if ((ownRating == 1 || ownRating == 4) && app.supportUrl) {
+                        PopupUtils.open(negativeReviewDialog, root, {
+                            rating: ownRating,
+                            review: textArea.displayText,
+                            app: app,
+                            existing: ownReview !== null,
+                        });
+                        return;
+                    }
+
+                    if (ownReview === null) {
+                        app.review(textArea.displayText, ownRating, root.apiKey)
+                    }
+                    else {
+                        app.editReview(textArea.displayText, ownRating, root.apiKey)
+                    }
                 }
             }
 
@@ -329,5 +338,9 @@ ListItem {
                 }
             }
         }
+    }
+
+    Dialogs.NegativeReviewDialog {
+        id: negativeReviewDialog
     }
 }

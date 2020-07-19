@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-16 16:45+0000\n"
+"POT-Creation-Date: 2020-07-19 04:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -327,8 +327,8 @@ msgid "Back"
 msgstr ""
 
 #: ../qml/Components/BottomEdgePageStack.qml:101
-#: ../qml/Components/ReviewPreview.qml:98
-#: ../qml/Components/ReviewPreview.qml:112
+#: ../qml/Components/ReviewPreview.qml:103
+#: ../qml/Components/ReviewPreview.qml:117
 msgid "Close"
 msgstr ""
 
@@ -341,7 +341,7 @@ msgid "Search"
 msgstr ""
 
 #: ../qml/Components/HighlightedApp.qml:107
-#: ../qml/Components/ReviewPreview.qml:200
+#: ../qml/Components/ReviewPreview.qml:193
 msgid "Update"
 msgstr ""
 
@@ -381,68 +381,68 @@ msgstr ""
 msgid "✓ Installed"
 msgstr ""
 
-#: ../qml/Components/ReviewPreview.qml:88
+#: ../qml/Components/ReviewPreview.qml:93
 msgid "Something went wrong..."
 msgstr ""
 
-#: ../qml/Components/ReviewPreview.qml:94
+#: ../qml/Components/ReviewPreview.qml:99
 msgid "Error Posting Review"
 msgstr ""
 
-#: ../qml/Components/ReviewPreview.qml:108
+#: ../qml/Components/ReviewPreview.qml:113
 msgid "Review Posted Correctly"
 msgstr ""
 
-#: ../qml/Components/ReviewPreview.qml:109
+#: ../qml/Components/ReviewPreview.qml:114
 msgid "Your review has been posted successfully."
 msgstr ""
 
-#: ../qml/Components/ReviewPreview.qml:123
+#: ../qml/Components/ReviewPreview.qml:128
 msgid "Loading..."
 msgstr ""
 
-#: ../qml/Components/ReviewPreview.qml:123
+#: ../qml/Components/ReviewPreview.qml:128
 msgid "Rate this app"
 msgstr ""
 
-#: ../qml/Components/ReviewPreview.qml:142
+#: ../qml/Components/ReviewPreview.qml:135
 msgid "(Optional) Write a review"
 msgstr ""
 
-#: ../qml/Components/ReviewPreview.qml:146
+#: ../qml/Components/ReviewPreview.qml:139
 msgid "%1/%2 characters"
 msgstr ""
 
-#: ../qml/Components/ReviewPreview.qml:200
+#: ../qml/Components/ReviewPreview.qml:193
 msgid "Submit"
 msgstr ""
 
-#: ../qml/Components/ReviewPreview.qml:211
+#: ../qml/Components/ReviewPreview.qml:220
 #: ../qml/Dialogs/InstallWarningDialog.qml:49
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
 #: ../qml/Dialogs/UninstallDialog.qml:42
 msgid "Cancel"
 msgstr ""
 
-#: ../qml/Components/ReviewPreview.qml:235
+#: ../qml/Components/ReviewPreview.qml:244
 msgid "%1 review. "
 msgid_plural "%1 reviews. "
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../qml/Components/ReviewPreview.qml:243
+#: ../qml/Components/ReviewPreview.qml:252
 msgid "Edit Review"
 msgstr ""
 
-#: ../qml/Components/ReviewPreview.qml:246
+#: ../qml/Components/ReviewPreview.qml:255
 msgid "Review app"
 msgstr ""
 
-#: ../qml/Components/ReviewPreview.qml:249
+#: ../qml/Components/ReviewPreview.qml:258
 msgid "Sign in to review this app"
 msgstr ""
 
-#: ../qml/Components/ReviewPreview.qml:252
+#: ../qml/Components/ReviewPreview.qml:261
 msgid "Install this app to review it"
 msgstr ""
 
@@ -491,6 +491,24 @@ msgstr ""
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:28
 msgid "Do you want to install the unkown app %1?"
+msgstr ""
+
+#: ../qml/Dialogs/NegativeReviewDialog.qml:26
+msgid "Review confirmation"
+msgstr ""
+
+#: ../qml/Dialogs/NegativeReviewDialog.qml:27
+msgid ""
+"Would you like to contact the author or file a bug instead? By opening a "
+"discussion with the developer(s) you could be helping to improve this app."
+msgstr ""
+
+#: ../qml/Dialogs/NegativeReviewDialog.qml:37
+msgid "Get support"
+msgstr ""
+
+#: ../qml/Dialogs/NegativeReviewDialog.qml:47
+msgid "Post my review"
 msgstr ""
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:26

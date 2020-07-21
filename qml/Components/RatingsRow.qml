@@ -27,35 +27,35 @@ Row {
     ReviewItemVertical {
         id: tup
         reviewIcon: "../Assets/thumbup.svg"
-        reviewNumber: appRatings.thumbsUpCount
+        reviewNumber: appRatings.thumbsUpCount || 0
         enabled: appRatings.thumbsUpCount > 0
         ratingColor: appColorText                                                                                                                                                                                                                                                                                     ; MouseArea {anchors.fill: parent; onClicked: tup.reviewIcon="../Assets/t-up.svg"}
     }
 
     ReviewItemVertical {
         reviewIcon: "../Assets/happy.svg"
-        reviewNumber: appRatings.happyCount
+        reviewNumber: appRatings.happyCount || 0
         enabled: appRatings.happyCount > 0
         ratingColor: appColorText
     }
 
     ReviewItemVertical {
         reviewIcon: "../Assets/neutral.svg"
-        reviewNumber: appRatings.neutralCount
+        reviewNumber: appRatings.neutralCount || 0
         enabled: appRatings.neutralCount > 0
         ratingColor: appColorText
     }
 
     ReviewItemVertical {
         reviewIcon: "../Assets/thumbdown.svg"
-        reviewNumber: appRatings.thumbsDownCount
+        reviewNumber: appRatings.thumbsDownCount || 0
         enabled: appRatings.thumbsDownCount > 0
         ratingColor: appColorText
     }
 
     ReviewItemVertical {
         reviewIcon: "../Assets/buggy.svg"
-        reviewNumber: appRatings.buggyCount
+        reviewNumber: appRatings.buggyCount || 0
         enabled: appRatings.buggyCount > 0
         ratingColor: appColorText
     }

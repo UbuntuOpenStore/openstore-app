@@ -88,6 +88,27 @@ Page {
             }
 
             ListItem {
+                height: units.gu(8)
+                visible: !!app.appLaunchUrl && app.appId != "openstore.openstore-team"
+
+                RowLayout {
+                    id: buttonsRow
+                    anchors.fill: parent
+                    anchors.margins: units.gu(2)
+                    spacing: units.gu(2)
+
+                    Button {
+                        Layout.fillWidth: true
+                        Layout.maximumWidth: buttonsRow.width > units.gu(60) ? units.gu(24) : buttonsRow.width
+                        text: i18n.tr("Open")
+                        color: theme.palette.normal.positive
+
+                        onClicked: Qt.openUrlExternally(app.appLaunchUrl)
+                    }
+                }
+            }
+
+            ListItem {
                 height: messageLayout.height
                 ListItemLayout {
                     id: messageLayout

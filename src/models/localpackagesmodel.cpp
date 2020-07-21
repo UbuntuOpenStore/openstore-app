@@ -65,6 +65,7 @@ QHash<int, QByteArray> LocalPackagesModel::roleNames() const
     roles.insert(RoleUpdateAvailable, "updateAvailable");
     roles.insert(RoleUpdateStatus, "updateStatus");
     roles.insert(RolePackageUrl, "packageUrl");
+    roles.insert(RoleAppLaunchUrl, "appLaunchUrl");
 
     return roles;
 }
@@ -97,6 +98,8 @@ QVariant LocalPackagesModel::data(const QModelIndex & index, int role) const
         return pkg.updateStatus;
     case RolePackageUrl:
         return pkg.packageUrl;
+    case RoleAppLaunchUrl:
+        return pkg.appLaunchUrl;
 
     default:
         return QVariant();
@@ -144,12 +147,28 @@ void LocalPackagesModel::refresh()
     beginInsertRows(QModelIndex(), m_list.count(), m_list.count() + PackagesCache::instance()->numberOfInstalledAppsInStore() - 1);
     Q_FOREACH(const QVariant &pkg, clickDb) {
         QVariantMap map = pkg.toMap();
+        QString appId = map.value("name").toString();
+        QString version = map.value("version").toString();
+
+        QVariantMap hookMap = map.value("hooks").toMap();
+        QString appLaunchUrl;
+        Q_FOREACH (const QString &key, hookMap.keys())
+        {
+            QVariantMap hook = hookMap.value(key).toMap();
+            if (hook.keys().contains("desktop")) {
+                appLaunchUrl = QString("appid://%1/%2/%3")
+                    .arg(appId)
+                    .arg(key)
+                    .arg(version);
+            }
+        }
 
         LocalPackageItem pkgItem;
-        pkgItem.appId = map.value("name").toString();
+        pkgItem.appId = appId;
         pkgItem.name = map.value("title").toString();
-        pkgItem.version = map.value("version").toString();
+        pkgItem.version = version;
         pkgItem.packageUrl = PackagesCache::instance()->getPackageUrl(pkgItem.appId);
+        pkgItem.appLaunchUrl = appLaunchUrl;
 
         int remoteRevision = PackagesCache::instance()->getRemoteAppRevision(pkgItem.appId);
         int localRevision = PackagesCache::instance()->getLocalAppRevision(pkgItem.appId);

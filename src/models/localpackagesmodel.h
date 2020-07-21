@@ -31,6 +31,7 @@ struct LocalPackageItem {
     bool updateAvailable;
     QString updateStatus;
     QString packageUrl;
+    QString appLaunchUrl;
 };
 
 class LocalPackagesModel : public QAbstractListModel
@@ -53,6 +54,7 @@ public:
         RoleUpdateAvailable,
         RoleUpdateStatus,
         RolePackageUrl,
+        RoleAppLaunchUrl,
     };
 
     explicit LocalPackagesModel(QAbstractListModel *parent = 0);

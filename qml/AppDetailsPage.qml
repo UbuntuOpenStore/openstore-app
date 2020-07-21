@@ -481,7 +481,7 @@ Page {
                 ListItemLayout {
                     anchors.centerIn: parent
                     title.text: i18n.tr("Packager/Publisher")
-                    subtitle.text: app.maintainer || i18n.tr("OpenStore team")
+                    subtitle.text: app.maintainer || "None"
                 }
             }
 

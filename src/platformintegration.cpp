@@ -114,7 +114,7 @@ void PlatformIntegration::update()
         return;
     }
 
-    //     qDebug() << "loaded stuff" << jsond.toJson();
+    //qDebug() << "loaded stuff" << jsond.toJson();
     m_clickDb = jsond.toVariant().toList();
 
     //qDebug() << "building click list:";

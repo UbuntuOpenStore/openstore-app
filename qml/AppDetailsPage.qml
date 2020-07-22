@@ -178,6 +178,11 @@ Page {
                             sourceSize.height: parent.height
                             source: app ? app.icon : ""
                         }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: easterEggAnimation.start()
+                        }
                     }
                 }
             }
@@ -195,10 +200,9 @@ Page {
                     spacing: units.gu(5)
 
                     Components.ReviewItem {
-                        id: tup
                         reviewIcon: rating === 0 ? "../Assets/thumbup-full.svg" : "../Assets/thumbup.svg"
                         reviewNumber: app.ratings.thumbsUpCount
-                        enabled: app.ratings.thumbsUpCount > 0                                                                                                                                                                                                                                                                                           ; MouseArea {anchors.fill: parent; onClicked: tup.reviewIcon="../Assets/t-up.svg"}
+                        enabled: app.ratings.thumbsUpCount > 0
                     }
 
                     Components.ReviewItem {
@@ -807,6 +811,48 @@ Page {
             }
         }
     }
+
+    Item {
+        width: units.gu(6)
+
+        x: parent.width + width
+        y: units.gu(7)
+
+        NumberAnimation on x {
+            id: easterEggAnimation
+
+            from: parent.width
+            to: 0 - width
+            duration: 4000
+
+            running: false
+            alwaysRunToEnd: true
+        }
+
+        Icon {
+            width: units.gu(3)
+            height: width
+            source: '../Assets/t-up.svg'
+
+            anchors {
+                top: parent.top
+                left: parent.left
+            }
+        }
+
+        Icon {
+            width: units.gu(3)
+            height: width
+            source: '../Assets/t-up.svg'
+
+            anchors {
+                top: parent.top
+                right: parent.right
+            }
+        }
+    }
+
+
 
     Dialogs.DonationDialog {
         id: donationDialog

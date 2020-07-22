@@ -25,11 +25,10 @@ Row {
     anchors.horizontalCenter: parent.horizontalCenter
 
     ReviewItemVertical {
-        id: tup
         reviewIcon: "../Assets/thumbup.svg"
         reviewNumber: appRatings.thumbsUpCount || 0
         enabled: appRatings.thumbsUpCount > 0
-        ratingColor: appColorText                                                                                                                                                                                                                                                                                     ; MouseArea {anchors.fill: parent; onClicked: tup.reviewIcon="../Assets/t-up.svg"}
+        ratingColor: appColorText
     }
 
     ReviewItemVertical {

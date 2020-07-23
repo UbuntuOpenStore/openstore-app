@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2017 - Stefano Verzegnassi <verzegnassi.stefano@gmail.com>
+ * Copyright (C) 2020 Brian Douglass
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,7 +20,7 @@ import Ubuntu.Components 1.3
 
 import "Components" as Components
 Page {
-    id: categoriesTab
+    id: categoriesPage
     anchors.fill: parent
 
     signal categoryClicked(var name, var id)

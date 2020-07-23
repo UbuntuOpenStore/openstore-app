@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2017 - Stefano Verzegnassi <verzegnassi.stefano@gmail.com>
+ * Copyright (C) 2020 Brian Douglass
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -64,7 +65,7 @@ Page {
             id: view
             anchors.fill: parent
 
-            model: appModel
+            model: localAppModel
 
             // WORKAROUND: Fix for wrong grid unit size
             Component.onCompleted: root.flickable_responsive_scroll_fix(view)
@@ -76,15 +77,15 @@ Page {
                 text: {
                     if (section == 'none') {
                         // TRANSLATORS: %1 is the number of installed apps
-                        return i18n.tr("Installed apps (%1)").arg(appModel.count - appModel.updatesAvailableCount - appModel.downgradesAvailableCount);
+                        return i18n.tr("Installed apps (%1)").arg(localAppModel.count - localAppModel.updatesAvailableCount - localAppModel.downgradesAvailableCount);
                     }
                     else if (section == 'available') {
                         // TRANSLATORS: %1 is the number of available app updates
-                        return i18n.tr("Available updates (%1)").arg(appModel.updatesAvailableCount);
+                        return i18n.tr("Available updates (%1)").arg(localAppModel.updatesAvailableCount);
                     }
 
                     // TRANSLATORS: %1 is the number of apps that can be downgraded
-                    return i18n.tr("Stable version available (%1)".arg(appModel.downgradesAvailableCount));
+                    return i18n.tr("Stable version available (%1)".arg(localAppModel.downgradesAvailableCount));
                 }
 
                 subtext: (section == 'downgrade') ? i18n.tr("The installed versions of these apps did not come from the OpenStore but a stable version is available.") : '';
@@ -93,8 +94,8 @@ Page {
 
                 onButtonClicked: {
                     var updates = [];
-                    for (var i = 0; i < appModel.count; i++) {
-                        var app = appModel.get(i);
+                    for (var i = 0; i < localAppModel.count; i++) {
+                        var app = localAppModel.get(i);
 
                         if (app && app.updateStatus == 'available' && app.packageUrl) {
                             updates.push(app);
@@ -156,7 +157,7 @@ Page {
                     PackagesCache.packageFetchError.disconnect(slot_packageFetchError);
 
                     bottomEdgeStack.clear();
-                    bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: appModel.getByAppId(appId) });
+                    bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: localAppModel.getByAppId(appId) });
                 }
 
                 function slot_installedPackageDetailsReady(pkg) {
@@ -178,7 +179,7 @@ Page {
                         }
                         else {
                             bottomEdgeStack.clear();
-                            bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: appModel.getByAppId(model.appId) });
+                            bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: localAppModel.getByAppId(model.appId) });
                         }
                     }
                 }
@@ -188,7 +189,7 @@ Page {
 
     Loader {
         anchors.centerIn: parent
-        active: appModel.count == 0
+        active: localAppModel.count == 0
         sourceComponent: Components.EmptyState {
             title: i18n.tr("No apps found")
             subTitle: i18n.tr("No app has been installed from OpenStore yet.")

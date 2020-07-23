@@ -1,12 +1,29 @@
+/*
+ * Copyright (C) 2020 Brian Douglass
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; version 3.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
 #ifndef REVIEWSMODEL_H
 #define REVIEWSMODEL_H
 
 #include <QAbstractListModel>
 
-#include "openstorenetworkmanager.h"
-#include "review.h"
+#include "../openstorenetworkmanager.h"
+#include "../review.h"
 
-class QNetworkReply;
+    class QNetworkReply;
 
 class ReviewsModel : public QAbstractListModel
 {
@@ -48,18 +65,15 @@ Q_SIGNALS:
 
 private Q_SLOTS:
     void parseReply(OpenStoreReply reply);
+    void parseError(const QString &signature, const QString &error);
     void onRefresh();
 
 private:
-    enum ReplyType {
-        HandleReviewPosted,
-        AppendReviews,
-        ResetReviews,
-        HandleOwnReview,
-    };
+    QString m_postedSignature;
+    QString m_appendSignature;
+    QString m_resetSignature;
+    QString m_ownSignature;
 
-    ReplyType m_replyType;
-    QString m_requestSignature;
     QList<ReviewItem> m_list;
     QString m_appId;
     int m_reviewCount = 0;

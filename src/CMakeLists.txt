@@ -7,21 +7,21 @@ add_definitions(-DQT_NO_KEYWORDS)
 set(
     SRC
     main.cpp
-    categoriesmodel.cpp
+    models/categoriesmodel.cpp
     clickinstaller.cpp
-    discovermodel.cpp
-    packagesmodel.cpp
-    searchmodel.cpp
-    serviceregistry.cpp
+    models/discovermodel.cpp
+    models/localpackagesmodel.cpp
+    models/searchmodel.cpp
     openstorenetworkmanager.cpp
     platformintegration.cpp
     package.cpp
     packagescache.cpp
-    pamauthentication.cpp
     cachingnetworkmanagerfactory.cpp
-    reviewsmodel.cpp
+    models/reviewsmodel.cpp
     review.cpp
 )
+
+add_definitions(-DBUILD_VERSION="${BUILD_VERSION}")
 
 qt5_add_resources(QT_RESOURCES ../qml/qml.qrc)
 add_executable(${PROJECT_NAME} ${SRC} ${QT_RESOURCES})

@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2020 - Joan Cibersheep
+ * Copyright (C) 2020 Brian Douglass
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -43,7 +44,7 @@ HeaderBase {
                     if (root.mainStackPage !== "discoverPage") {
                         pageStack.pop()
                     }
-                    pageStack.push(Qt.resolvedUrl("../SearchTab.qml"));
+                    pageStack.push(Qt.resolvedUrl("../SearchPage.qml"));
                 }
             }
         ]

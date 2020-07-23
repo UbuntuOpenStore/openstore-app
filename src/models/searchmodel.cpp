@@ -1,18 +1,33 @@
+/*
+ * Copyright (C) 2020 Brian Douglass
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; version 3.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
 #include "searchmodel.h"
-#include "platformintegration.h"
-#include "packagescache.h"
+#include "../platformintegration.h"
+#include "../packagescache.h"
 
 #include <QJsonDocument>
 #include <QDebug>
 
 #define REQUEST_LIMIT 30
 
-SearchModel::SearchModel(QObject *parent)
+    SearchModel::SearchModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::newReply,
-            this, &SearchModel::parseReply);
-
+    connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::parsedReply, this, &SearchModel::parseReply);
     connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::reloaded, this, &SearchModel::update);
     connect(PlatformIntegration::instance(), &PlatformIntegration::updated, this, &SearchModel::refreshInstalledInfo);
 
@@ -109,7 +124,7 @@ void SearchModel::sendRequest(int skip)
     m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
 
     if (!m_queryUrl.isEmpty()) {
-        OpenStoreNetworkManager::instance()->getUrl(m_requestSignature, m_queryUrl);
+        OpenStoreNetworkManager::instance()->getByUrl(m_requestSignature, m_queryUrl);
     } else {
         if (m_filterString.isEmpty() && m_category.isEmpty()) {
             // Show latest app
@@ -125,23 +140,7 @@ void SearchModel::parseReply(OpenStoreReply reply)
     if (reply.signature != m_requestSignature)
         return;
 
-    QJsonParseError error;
-    QJsonDocument jsonDoc = QJsonDocument::fromJson(reply.data, &error);
-
-    if (error.error != QJsonParseError::NoError) {
-        qWarning() << Q_FUNC_INFO << "Error parsing json" << error.errorString();
-        return;
-    }
-
-    QVariantMap replyMap = jsonDoc.toVariant().toMap();
-
-    if (!replyMap.value("success").toBool() || !replyMap.contains("data")) {
-        qWarning() << Q_FUNC_INFO << "Error retriving info from" << reply.url;
-        return;
-    }
-
-    QVariantMap data = replyMap.value("data").toMap();
-
+    QVariantMap data = reply.data.toMap();
     QVariantList pkgList = data.value("packages").toList();
 
     beginInsertRows(QModelIndex(), m_list.count(), m_list.count() + pkgList.count() - 1);

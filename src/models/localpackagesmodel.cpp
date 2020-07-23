@@ -1,8 +1,25 @@
-#include "packagesmodel.h"
-#include "package.h"
-#include "platformintegration.h"
-#include "openstorenetworkmanager.h"
-#include "packagescache.h"
+/*
+ * Copyright (C) 2020 Brian Douglass
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; version 3.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+#include "localpackagesmodel.h"
+#include "../package.h"
+#include "../platformintegration.h"
+#include "../openstorenetworkmanager.h"
+#include "../packagescache.h"
 
 #include <QJsonDocument>
 #include <QJsonArray>
@@ -28,16 +45,16 @@ bool sortPackage(const LocalPackageItem &a, const LocalPackageItem &b)
     return (a.updateStatus.compare(b.updateStatus) < 0);
 }
 
-PackagesModel::PackagesModel(QAbstractListModel *parent)
+LocalPackagesModel::LocalPackagesModel(QAbstractListModel *parent)
     : QAbstractListModel(parent), m_ready(false), m_appStoreUpdateAvailable(false)
 {
-    connect(PlatformIntegration::instance(), &PlatformIntegration::updated, this, &PackagesModel::refresh);
-    connect(PackagesCache::instance(), &PackagesCache::updatingCacheChanged, this, &PackagesModel::refresh);
+    connect(PlatformIntegration::instance(), &PlatformIntegration::updated, this, &LocalPackagesModel::refresh);
+    connect(PackagesCache::instance(), &PackagesCache::updatingCacheChanged, this, &LocalPackagesModel::refresh);
 
     refresh();
 }
 
-QHash<int, QByteArray> PackagesModel::roleNames() const
+QHash<int, QByteArray> LocalPackagesModel::roleNames() const
 {
     QHash<int, QByteArray> roles;
 
@@ -48,17 +65,18 @@ QHash<int, QByteArray> PackagesModel::roleNames() const
     roles.insert(RoleUpdateAvailable, "updateAvailable");
     roles.insert(RoleUpdateStatus, "updateStatus");
     roles.insert(RolePackageUrl, "packageUrl");
+    roles.insert(RoleAppLaunchUrl, "appLaunchUrl");
 
     return roles;
 }
 
-int PackagesModel::rowCount(const QModelIndex & parent) const
+int LocalPackagesModel::rowCount(const QModelIndex & parent) const
 {
     Q_UNUSED(parent)
     return m_list.count();
 }
 
-QVariant PackagesModel::data(const QModelIndex & index, int role) const
+QVariant LocalPackagesModel::data(const QModelIndex & index, int role) const
 {
     if (index.row() < 0 || index.row() > rowCount())
         return QVariant();
@@ -80,13 +98,15 @@ QVariant PackagesModel::data(const QModelIndex & index, int role) const
         return pkg.updateStatus;
     case RolePackageUrl:
         return pkg.packageUrl;
+    case RoleAppLaunchUrl:
+        return pkg.appLaunchUrl;
 
     default:
         return QVariant();
     }
 }
 
-int PackagesModel::updatesAvailableCount() const
+int LocalPackagesModel::updatesAvailableCount() const
 {
     int result = 0;
 
@@ -99,7 +119,7 @@ int PackagesModel::updatesAvailableCount() const
     return result;
 }
 
-int PackagesModel::downgradesAvailableCount() const
+int LocalPackagesModel::downgradesAvailableCount() const
 {
     int result = 0;
 
@@ -112,7 +132,7 @@ int PackagesModel::downgradesAvailableCount() const
     return result;
 }
 
-void PackagesModel::refresh()
+void LocalPackagesModel::refresh()
 {
     //qDebug() << Q_FUNC_INFO << "called";
 
@@ -127,12 +147,28 @@ void PackagesModel::refresh()
     beginInsertRows(QModelIndex(), m_list.count(), m_list.count() + PackagesCache::instance()->numberOfInstalledAppsInStore() - 1);
     Q_FOREACH(const QVariant &pkg, clickDb) {
         QVariantMap map = pkg.toMap();
+        QString appId = map.value("name").toString();
+        QString version = map.value("version").toString();
+
+        QVariantMap hookMap = map.value("hooks").toMap();
+        QString appLaunchUrl;
+        Q_FOREACH (const QString &key, hookMap.keys())
+        {
+            QVariantMap hook = hookMap.value(key).toMap();
+            if (hook.keys().contains("desktop")) {
+                appLaunchUrl = QString("appid://%1/%2/%3")
+                    .arg(appId)
+                    .arg(key)
+                    .arg(version);
+            }
+        }
 
         LocalPackageItem pkgItem;
-        pkgItem.appId = map.value("name").toString();
+        pkgItem.appId = appId;
         pkgItem.name = map.value("title").toString();
-        pkgItem.version = map.value("version").toString();
+        pkgItem.version = version;
         pkgItem.packageUrl = PackagesCache::instance()->getPackageUrl(pkgItem.appId);
+        pkgItem.appLaunchUrl = appLaunchUrl;
 
         int remoteRevision = PackagesCache::instance()->getRemoteAppRevision(pkgItem.appId);
         int localRevision = PackagesCache::instance()->getLocalAppRevision(pkgItem.appId);
@@ -205,7 +241,7 @@ void PackagesModel::refresh()
     MODEL_END_REFRESH();
 }
 
-QVariantMap PackagesModel::get(int row) {
+QVariantMap LocalPackagesModel::get(int row) {
     QHash<int,QByteArray> names = roleNames();
     QHashIterator<int, QByteArray> ittr(names);
     QVariantMap map;
@@ -220,7 +256,7 @@ QVariantMap PackagesModel::get(int row) {
     return map;
 }
 
-QVariantMap PackagesModel::getByAppId(const QString &appId) {
+QVariantMap LocalPackagesModel::getByAppId(const QString &appId) {
     for (int i = 0; i < m_list.count(); i++) {
         if (m_list[i].appId == appId) {
             return get(i);

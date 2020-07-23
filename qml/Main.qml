@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 - Michael Zanetti <michael.zanetti@ubuntu.com>
+ * Copyright (C) 2020 Brian Douglass
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -13,6 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
@@ -23,6 +25,7 @@ import Ubuntu.Content 1.3
 import Ubuntu.Connectivity 1.0
 
 import "Components" as Components
+import "Dialogs" as Dialogs
 
 MainView {
     id: root
@@ -47,7 +50,7 @@ MainView {
         PackagesCache.packageDetailsReady.disconnect(slot_packageDetailsReady);
         PackagesCache.packageFetchError.disconnect(slot_packageFetchError);
 
-        var app = appModel.getByAppId(appId);
+        var app = localAppModel.getByAppId(appId);
         if (app.appId) {
             bottomEdgeStack.clear();
             bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
@@ -69,7 +72,7 @@ MainView {
             PackagesCache.getPackageDetails(appId);
         }
         else {
-            var app = appModel.getByAppId(appId);
+            var app = localAppModel.getByAppId(appId);
             if (app.appId) {
                 bottomEdgeStack.clear();
                 bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
@@ -105,11 +108,11 @@ MainView {
     }
 
     Component.onCompleted: {
-        pageStack.push(Qt.resolvedUrl("DiscoverTab.qml"))
+        pageStack.push(Qt.resolvedUrl("DiscoverPage.qml"))
         PlatformIntegration.update()
 
         if (OpenStoreNetworkManager.isDifferentDomain) {
-            var popup = PopupUtils.open(domainWarningComponent)
+            var popup = PopupUtils.open(domainWarningDialog)
             popup.accepted.connect(function() {
                 PopupUtils.close(popup)
             })
@@ -138,7 +141,7 @@ MainView {
             var filePath = String(transfer.items[0].url).replace('file://', '')
             print("Should import file", filePath)
             var fileName = filePath.split("/").pop();
-            var popup = PopupUtils.open(installQuestion, root, {fileName: fileName});
+            var popup = PopupUtils.open(installWarningDialog, root, {fileName: fileName});
             popup.accepted.connect(function() {
                 contentHubInstallInProgress = true;
                 PlatformIntegration.clickInstaller.installPackage(filePath, true)
@@ -194,7 +197,7 @@ MainView {
         Component.onCompleted: OpenStoreNetworkManager.showNsfw = !settings.hideNsfw
     }
 
-    property QtObject appModel: AppModel {
+    property QtObject localAppModel: LocalAppModel {
         appStoreAppId: root.applicationName
     }
     property QtObject categoriesModel: CategoriesModel { }
@@ -236,147 +239,33 @@ MainView {
         }
     }
 
-    /*
-    Loader {
-        anchors.fill: parent
-        z: Number.MAX_VALUE
-        active: !OpenStoreNetworkManager.networkAccessible
-        sourceComponent: MouseArea {
-            // Capture all mouse/touch events beneath 'mainContainer'
-            anchors.fill: parent
-            onWheel: wheel.accepted = true  // wheel events are not captured by default
-
-            Rectangle {
-                anchors.fill: parent
-                color: root.backgroundColor
-
-                Components.EmptyState {
-                    title: i18n.tr("Slow or no internet connection available")
-                    subTitle: i18n.tr("Please check your internet settings and try again")
-                    iconName: "airplane-mode"
-
-                    controlComponent: Button {
-                        color: theme.palette.normal.positive
-                        text: i18n.tr("Close OpenStore")
-                        onClicked: Qt.quit()
-                    }
-
-                    anchors.centerIn: parent
-                }
-            }
-        }
-    }
-    */
-
     Component {
         id: filteredAppPageComponent
         Page {
             id: filteredAppPage
-            property alias filterString: filteredAppView.filterString
-            property alias sortMode: filteredAppView.sortMode
-            property alias category: filteredAppView.category
+            property alias filterString: filteredAppList.filterString
+            property alias sortMode: filteredAppList.sortMode
+            property alias category: filteredAppList.category
             header: Components.HeaderBase {
                 title: filteredAppPage.title
                 automaticHeight: false
             }
-            FilteredAppView {
+            FilteredAppList {
                 anchors.fill: parent
                 anchors.topMargin: filteredAppPage.header.height
 
-                id: filteredAppView
+                id: filteredAppList
                 onAppDetailsRequired: openApp(appId)
             }
         }
     }
 
-    Component {
-        id: domainWarningComponent
-
-        Dialog {
-            id: warningDialog
-            title: i18n.tr("Warning")
-
-            signal accepted();
-            signal rejected();
-
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                wrapMode: Text.WordWrap
-                maximumLineCount: Number.MAX_VALUE
-                text: i18n.tr("You are currently using a non-standard domain for the OpenStore. This is a development feature. The domain you are using is:")
-            }
-
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                wrapMode: Text.WordWrap
-                maximumLineCount: Number.MAX_VALUE
-                text: OpenStoreNetworkManager.domain
-            }
-
-            Label {
-                anchors { left: parent.left; right: parent.right }
-                wrapMode: Text.WordWrap
-                maximumLineCount: Number.MAX_VALUE
-                text: i18n.tr("Are you sure you want to continue?")
-            }
-
-            Button {
-                text: i18n.tr("Yes, I know what I'm doing")
-                color: theme.palette.normal.positive
-                onClicked: {
-                    warningDialog.accepted();
-                }
-            }
-
-            Button {
-                text: i18n.tr("Get me out of here!")
-                onClicked: {
-                    warningDialog.rejected();
-                }
-            }
-        }
+    Dialogs.DomainWarningDialog {
+        id: domainWarningDialog
     }
 
-    Component {
-        id: installQuestion
-        Dialog {
-            id: installQuestionDialog
-            title: i18n.tr("Install unknown app?")
-            text: i18n.tr("Do you want to install the unkown app %1?").arg(fileName)
-
-            property string fileName
-            signal accepted();
-            signal rejected();
-
-            ActivityIndicator {
-                anchors.horizontalCenter: parent.horizontalCenter
-                visible: running
-                running: PlatformIntegration.clickInstaller.busy
-            }
-
-            Button {
-                text: i18n.tr("Install")
-                color: theme.palette.normal.positive
-                visible: !PlatformIntegration.clickInstaller.busy
-                onClicked: {
-                    installQuestionDialog.accepted()
-                }
-            }
-            Button {
-                text: i18n.tr("Cancel")
-                visible: !PlatformIntegration.clickInstaller.busy
-                onClicked: {
-                    installQuestionDialog.rejected()
-                    PopupUtils.close(installQuestionDialog)
-                }
-            }
-
-            Connections {
-                target: PlatformIntegration.clickInstaller
-                onPackageInstalled: PopupUtils.close(installQuestionDialog)
-                onPackageInstallationFailed: PopupUtils.close(installQuestionDialog)
-            }
-        }
+    Dialogs.InstallWarningDialog {
+        id: installWarningDialog
     }
 
     Component {
@@ -427,19 +316,19 @@ MainView {
         if (root.mainStackPage !== "discoverPage") {
             pageStack.pop()
         }
-        pageStack.push(Qt.resolvedUrl("CategoriesTab.qml"));
+        pageStack.push(Qt.resolvedUrl("CategoriesPage.qml"));
         bottomEdgeStack.push(filteredAppPageComponent, {"title": name, "category": id});
-        //categoriesTab.categoryClicked(name, id)
+        //CategoriesPage.categoryClicked(name, id)
     }
     function showSearch(text) {
         if (root.mainStackPage !== "discoverPage") {
             pageStack.pop()
         }
-        pageStack.push(Qt.resolvedUrl("../SearchTab.qml"), {"searchText": text || ''});
+        pageStack.push(Qt.resolvedUrl("../SearchPage.qml"), {"searchText": text || ''});
     }
 
     function showSearchQuery(url) {
-        pageStack.push(Qt.resolvedUrl("../SearchTab.qml"), {"queryUrl": url || ''});
+        pageStack.push(Qt.resolvedUrl("../SearchPage.qml"), {"queryUrl": url || ''});
     }
 
     // *** WORKAROUNDS ***

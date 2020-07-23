@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 - Michael Zanetti <michael.zanetti@ubuntu.com>
+ * Copyright (C) 2020 Brian Douglass
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,14 +23,14 @@ import QtQuick.Layouts 1.1
 import OpenStore 1.0
 
 import "Components" as Components
+import "Dialogs" as Dialogs
 
 Page {
     id: appDetailsPage
     anchors.fill: parent
 
     property var app: null
-    property var oldRating: null
-    property var newRating: null
+    property var rating: null
     property var restrictedPermissions: [
         'bluetooth',
         'calendar',
@@ -84,22 +85,6 @@ Page {
         return false
     }
 
-    // Adjust the rating when the user updates their review without making another network request
-    function modifyRatingCount(rating, count) {
-
-        if (oldRating >= 0 && oldRating != newRating) {
-            if (oldRating == rating) {
-                return count - 1;
-            }
-
-            if (newRating == rating) {
-                return count + 1;
-            }
-        }
-
-        return count;
-    }
-
     function getNumberShortForm(number) {
         if (number > 999999) {
             return Math.floor(number/1000000) + "M"
@@ -108,6 +93,16 @@ Page {
             return Math.floor(number/1000) + "K"
         }
         else return number + ""
+    }
+
+    function appReloaded(pkg) {
+        PackagesCache.packageDetailsReady.disconnect(appReloaded);
+        app = pkg;
+    }
+
+    function reload() {
+        PackagesCache.packageDetailsReady.connect(appReloaded);
+        PackagesCache.getPackageDetails(app.appId, true);
     }
 
     header: Components.HeaderBase {
@@ -183,6 +178,11 @@ Page {
                             sourceSize.height: parent.height
                             source: app ? app.icon : ""
                         }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: easterEggAnimation.start()
+                        }
                     }
                 }
             }
@@ -200,34 +200,33 @@ Page {
                     spacing: units.gu(5)
 
                     Components.ReviewItem {
-                        id: tup
-                        reviewIcon: "../Assets/thumbup.svg"
-                        reviewNumber: modifyRatingCount(0, app.ratings.thumbsUpCount)
-                        enabled: modifyRatingCount(0, app.ratings.thumbsUpCount) > 0                                                                                                                                                                                                                                                                                           ; MouseArea {anchors.fill: parent; onClicked: tup.reviewIcon="../Assets/t-up.svg"}
+                        reviewIcon: rating === 0 ? "../Assets/thumbup-full.svg" : "../Assets/thumbup.svg"
+                        reviewNumber: app.ratings.thumbsUpCount
+                        enabled: app.ratings.thumbsUpCount > 0
                     }
 
                     Components.ReviewItem {
-                        reviewIcon: "../Assets/happy.svg"
-                        reviewNumber: modifyRatingCount(3, app.ratings.happyCount)
-                        enabled: modifyRatingCount(3, app.ratings.happyCount) > 0
+                        reviewIcon: rating === 3 ? "../Assets/happy-full.svg" : "../Assets/happy.svg"
+                        reviewNumber: app.ratings.happyCount
+                        enabled: app.ratings.happyCount > 0
                     }
 
                     Components.ReviewItem {
-                        reviewIcon: "../Assets/neutral.svg"
-                        reviewNumber: modifyRatingCount(2, app.ratings.neutralCount)
-                        enabled: modifyRatingCount(2, app.ratings.neutralCount) > 0
+                        reviewIcon: rating === 2 ? "../Assets/neutral-full.svg" : "../Assets/neutral.svg"
+                        reviewNumber: app.ratings.neutralCount
+                        enabled: app.ratings.neutralCount > 0
                     }
 
                     Components.ReviewItem {
-                        reviewIcon: "../Assets/thumbdown.svg"
-                        reviewNumber: modifyRatingCount(1, app.ratings.thumbsDownCount)
-                        enabled: modifyRatingCount(1, app.ratings.thumbsDownCount) > 0
+                        reviewIcon: rating === 1 ? "../Assets/thumbdown-full.svg" : "../Assets/thumbdown.svg"
+                        reviewNumber: app.ratings.thumbsDownCount
+                        enabled: app.ratings.thumbsDownCount > 0
                     }
 
                     Components.ReviewItem {
-                        reviewIcon: "../Assets/buggy.svg"
-                        reviewNumber: modifyRatingCount(4, app.ratings.buggyCount)
-                        enabled: modifyRatingCount(4, app.ratings.buggyCount) > 0
+                        reviewIcon: rating === 4 ? "../Assets/buggy-full.svg" : "../Assets/buggy.svg"
+                        reviewNumber: app.ratings.buggyCount
+                        enabled: app.ratings.buggyCount > 0
                     }
                 }
             }
@@ -299,13 +298,13 @@ Page {
                         color: app.isLocalVersionSideloaded ? theme.palette.selected.focus : theme.palette.normal.positive
                         onClicked: {
                             if (isUnconfined && !isTrustedApp && !app.installed) {
-                                var popup = PopupUtils.open(unconfinedWarningPopup)
+                                var popup = PopupUtils.open(unconfinedWarningDialog)
                                 popup.accepted.connect(function() {
                                     app.install();
                                 });
                             }
                             else if (app.donateUrl && !app.installed) {
-                                var popup = PopupUtils.open(donatingPopup)
+                                var popup = PopupUtils.open(donationDialog)
                                 popup.accepted.connect(function() {
                                     app.install();
                                     Qt.openUrlExternally(app.donateUrl);
@@ -449,9 +448,12 @@ Page {
                 visible: app.channelMatchesOS
                 reviews: app.reviews
 
-                onReviewUpdated: {
-                    appDetailsPage.oldRating = oldRating;
-                    appDetailsPage.newRating = newRating;
+                onRatingUpdated: {
+                    appDetailsPage.rating = rating;
+                }
+
+                onReviewPosted: {
+                    reload();
                 }
             }
 
@@ -483,7 +485,7 @@ Page {
                 ListItemLayout {
                     anchors.centerIn: parent
                     title.text: i18n.tr("Packager/Publisher")
-                    subtitle.text: app.maintainer || i18n.tr("OpenStore team")
+                    subtitle.text: app.maintainer || "None"
                 }
             }
 
@@ -810,64 +812,57 @@ Page {
         }
     }
 
-    Component {
-        id: donatingPopup
-        Dialog {
-            id: donatingDialog
-            title: i18n.tr("Donating")
-            text: i18n.tr("Would you like to support this app with a donation to the developer?")
+    Item {
+        width: units.gu(6)
 
-            signal accepted()
-            signal rejected()
+        x: parent.width + width
+        y: units.gu(7)
 
-            Button {
-                text: i18n.tr("Donate now")
-                color: theme.palette.normal.positive
-                onClicked: {
-                    donatingDialog.accepted()
-                    PopupUtils.close(donatingDialog)
-                }
+        NumberAnimation on x {
+            id: easterEggAnimation
+
+            from: parent.width
+            to: 0 - width
+            duration: 4000
+
+            running: false
+            alwaysRunToEnd: true
+        }
+
+        Icon {
+            width: units.gu(3)
+            height: width
+            source: '../Assets/t-up.svg'
+
+            anchors {
+                top: parent.top
+                left: parent.left
             }
-            Button {
-                text: i18n.tr("Maybe later")
-                onClicked: {
-                    donatingDialog.rejected();
-                    PopupUtils.close(donatingDialog)
-                }
+        }
+
+        Icon {
+            width: units.gu(3)
+            height: width
+            source: '../Assets/t-up.svg'
+
+            anchors {
+                top: parent.top
+                right: parent.right
             }
         }
     }
 
-    Component {
-        id: unconfinedWarningPopup
-        Dialog {
-            id: unconfinedWarningDialog
-            title: i18n.tr("Warning")
-            text: i18n.tr("This app has access to restricted parts of the system and all of your data. It has the potential break your system. While the OpenStore maintainers have reviewed the code for this app for safety, they are not responsible for anything bad that might happen to your device or data from installing this app.")
 
-            signal accepted()
-            signal rejected()
 
-            Button {
-                text: i18n.tr("I understand the risks")
-                color: theme.palette.normal.negative
-                onClicked: {
-                    unconfinedWarningDialog.accepted()
-                    PopupUtils.close(unconfinedWarningDialog)
-                }
-            }
-
-            Button {
-                text: i18n.tr("Cancel")
-                onClicked: {
-                    unconfinedWarningDialog.rejected();
-                    PopupUtils.close(unconfinedWarningDialog)
-                }
-            }
-        }
+    Dialogs.DonationDialog {
+        id: donationDialog
     }
 
-    Components.UninstallPopup {
+    Dialogs.UnconfinedWarningDialog {
+        id: unconfinedWarningDialog
+    }
+
+    Dialogs.UninstallDialog {
         id: removeQuestion
     }
 

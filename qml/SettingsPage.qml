@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2017 Stefano Verzegnassi <verzegnassi.stefano@gmail.com>
+ * Copyright (C) 2020 Brian Douglass
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,6 +18,7 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Morph.Web 0.1
+import PamAuthentication 0.1
 
 import "Components" as Components
 
@@ -101,13 +103,10 @@ Page {
                         }
                     }
 
-                    /* TODO: This need to be exported in CMake or ¿pro? files
                     Label {
                         anchors.horizontalCenter: parent.horizontalCenter
-                        //TRANSLATORS: This is the name of the app (%1) + version number (v%2)
-                        text: i18n.tr("%1 v%2").arg("OpenStore").arg(Qt.application.version)
+                        text: "OpenStore v" + Qt.application.version
                     }
-                    */
                 }
 
                 Components.SectionDivider {
@@ -116,7 +115,7 @@ Page {
 
                 ListItem {
                     visible: root.apiKey === ""
-                    onClicked: bottomEdgeStack.push(Qt.resolvedUrl("SignInWebView.qml"))
+                    onClicked: bottomEdgeStack.push(Qt.resolvedUrl("./SignInPage.qml"))
                     ListItemLayout {
                         anchors.centerIn: parent
                         title.text: i18n.tr("Sign in")

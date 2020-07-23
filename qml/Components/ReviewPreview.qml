@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 - Michael Zanetti <michael.zanetti@ubuntu.com>
+ * Copyright (C) 2020 Brian Douglass
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,32 +20,51 @@ import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import OpenStore 1.0
 
+import "../Dialogs" as Dialogs
 
 ListItem {
     id: reviewPreviewListItem
     height: reviewPreviewColumn.height
+
     property var reviews
     readonly property int count: reviews.reviewCount
     readonly property int maxLength: 512
     property var ownReview: null
     property var ownRating: null
     property bool ready: false
+    property bool first: true
 
-    signal reviewUpdated(var oldRating, var newRating)
+    signal ratingUpdated(var rating)
+    signal reviewPosted()
+
+    Component.onCompleted: {
+        if (root.apiKey) {
+            reviews.getOwnReview(root.apiKey);
+        }
+    }
 
     Connections {
         target: reviews
 
         onOwnReviewResponse: {
             ownReview = 'body' in review ? review : null;
+            ownRating = rating < 0 ? null : rating;
 
             if (!ready) {
+                ratingUpdated(rating);
+
                 ready = true;
-                ownRating = ownReview ? rating : null; // Only set this on the first load
             }
         }
 
-        onReviewPosted: PopupUtils.open(successPostDialog)
+        onReviewPosted: {
+            PopupUtils.open(successPostDialog)
+            reviewPreviewListItem.reviewPosted();
+            ratingUpdated(ownRating);
+
+            //Reset bool to update current rating
+            ready = false
+        }
 
         onError: {
             errorText = text
@@ -106,21 +126,7 @@ ListItem {
             id: dialogue
             readonly property var buttonWidth: (textArea.width - 4*units.gu(2)) / 5
             title: ready ? i18n.tr("Rate this app") : i18n.tr("Loading...")
-            Component.onCompleted: reviews.getOwnReview(root.apiKey)
-
-            function postReview(rating, body) {
-                if (ownReview === null) {
-                    reviewUpdated(null, rating);
-                    app.review(body, rating, root.apiKey)
-                }
-                else {
-                    reviewUpdated(ownRating, rating);
-                    app.editReview(body, rating, root.apiKey)
-                }
-
-                //Reset bool to update current rating
-                ready = false
-            }
+            Component.onCompleted: reviews.getOwnReview(root.apiKey);
 
             TextArea {
                 id: textArea
@@ -189,8 +195,24 @@ ListItem {
                 color: theme.palette.normal.positive
 
                 onClicked: {
-                    PopupUtils.close(dialogue)
-                    postReview(ownRating, textArea.displayText)
+                    PopupUtils.close(dialogue);
+
+                    if ((ownRating == 1 || ownRating == 4) && app.supportUrl) {
+                        PopupUtils.open(negativeReviewDialog, root, {
+                            rating: ownRating,
+                            review: textArea.displayText,
+                            app: app,
+                            existing: ownReview !== null,
+                        });
+                        return;
+                    }
+
+                    if (ownReview === null) {
+                        app.review(textArea.displayText, ownRating, root.apiKey)
+                    }
+                    else {
+                        app.editReview(textArea.displayText, ownRating, root.apiKey)
+                    }
                 }
             }
 
@@ -223,12 +245,21 @@ ListItem {
                     : ""
 
                 anchors.fill: parent
-                title.text: app.installed
-                        ? root.apiKey === ""
-                            ? reviewCountTxt + i18n.tr("Sign in to review this app")
-                            : reviewCountTxt + i18n.tr("Review app")
-                        : reviewCountTxt + i18n.tr("Install this app to review it")
+                title.text: {
+                    if (app.installed) {
+                        if (root.apiKey) {
+                            if (ownReview) {
+                                return reviewCountTxt + i18n.tr("Edit Review");
+                            }
 
+                            return reviewCountTxt + i18n.tr("Review app");
+                        }
+
+                        return reviewCountTxt + i18n.tr("Sign in to review this app");
+                    }
+
+                    return reviewCountTxt + i18n.tr("Install this app to review it");
+                }
 
                 title.color: theme.palette.normal.backgroundText
                 ProgressionSlot {
@@ -240,7 +271,7 @@ ListItem {
             onClicked: {
                 if (app.installed) {
                     root.apiKey === ""
-                        ? bottomEdgeStack.push(Qt.resolvedUrl("../SignInWebView.qml"))
+                        ? bottomEdgeStack.push(Qt.resolvedUrl("../SignInPage.qml"))
                         : PopupUtils.open(composeDialog)
                 } else {
                     console.log("App is not installed")
@@ -307,5 +338,9 @@ ListItem {
                 }
             }
         }
+    }
+
+    Dialogs.NegativeReviewDialog {
+        id: negativeReviewDialog
     }
 }

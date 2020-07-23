@@ -1,11 +1,28 @@
+/*
+ * Copyright (C) 2020 Brian Douglass
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; version 3.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
 #ifndef DISCOVERMODEL_H
 #define DISCOVERMODEL_H
 
 #include <QAbstractListModel>
 
-#include "openstorenetworkmanager.h"
+#include "../openstorenetworkmanager.h"
 
-class QNetworkReply;
+    class QNetworkReply;
 class PackageItem;
 
 struct DiscoverCategoryItem {
@@ -52,7 +69,6 @@ private:
     QString m_requestSignature;
 
     QList<DiscoverCategoryItem> m_list;
-//    QHash<QString, PackageItem*> m_packages;    // Cache
 
     QUrl m_highlightBannerUrl;
     QString m_highlightAppId;

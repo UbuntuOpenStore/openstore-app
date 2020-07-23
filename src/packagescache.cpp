@@ -1,12 +1,29 @@
+/*
+ * Copyright (C) 2020 Brian Douglass
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; version 3.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
 #include "packagescache.h"
 #include "package.h"
 
 #include "platformintegration.h"
 #include "openstorenetworkmanager.h"
 
-Q_GLOBAL_STATIC(PackagesCache, s_packagesCache)
+    Q_GLOBAL_STATIC(PackagesCache, s_packagesCache)
 
-PackagesCache::PackagesCache()
+        PackagesCache::PackagesCache()
 {
     m_updatingCache = false;
     connect(PlatformIntegration::instance(), &PlatformIntegration::updated, this, &PackagesCache::updateCacheRevisions);
@@ -36,41 +53,30 @@ PackageItem *PackagesCache::get(const QString &appId) const
     return m_cache.value(appId, Q_NULLPTR);
 }
 
-void PackagesCache::getPackageDetails(const QString &appId)
+void PackagesCache::getPackageDetails(const QString &appId, bool bust)
 {
-    if (contains(appId)) {
+    if (contains(appId) && !bust) {
         Q_EMIT packageDetailsReady(get(appId));
     } else {
-        const QString &signature = OpenStoreNetworkManager::instance()->generateNewSignature();
+        const QString &requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
 
-        connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::newReply, [=](const OpenStoreReply &reply) {
-            if (reply.signature != signature)
+        connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::parsedReply, [=](const OpenStoreReply &reply) {
+            if (reply.signature != requestSignature)
                 return;
 
-            QJsonParseError error;
-            QJsonDocument jsonDoc = QJsonDocument::fromJson(reply.data, &error);
-
-            if (error.error != QJsonParseError::NoError) {
-                qWarning() << Q_FUNC_INFO << "Error parsing json" << error.errorString();
-                return;
-            }
-
-            QVariantMap replyMap = jsonDoc.toVariant().toMap();
-
-            if (!replyMap.value("success").toBool() || !replyMap.contains("data")) {
-                qWarning() << Q_FUNC_INFO << "Error retriving info from" << reply.url;
-
-                Q_EMIT packageFetchError(appId);
-                return;
-            }
-
-            QVariantMap pkg = replyMap.value("data").toMap();
+            QVariantMap pkg = reply.data.toMap();
 
             PackageItem* pkgItem = insert(appId, pkg);
             Q_EMIT packageDetailsReady(pkgItem);
         });
+        connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::error, [=](const QString &signature, const QString &error) {
+            if (signature != requestSignature)
+                return;
 
-        OpenStoreNetworkManager::instance()->getAppDetails(signature, appId);
+            Q_EMIT packageFetchError(appId);
+        });
+
+        OpenStoreNetworkManager::instance()->getAppDetails(requestSignature, appId);
     }
 }
 
@@ -81,30 +87,15 @@ void PackagesCache::updateCacheRevisions()
 
     //qDebug() << Q_FUNC_INFO << "called";
 
-    connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::newReply, [=](const OpenStoreReply &reply) {
+    connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::parsedReply, [=](const OpenStoreReply &reply) {
         if (reply.signature != m_signature)
             return;
-
-        QJsonParseError error;
-        QJsonDocument jsonDoc = QJsonDocument::fromJson(reply.data, &error);
-
-        if (error.error != QJsonParseError::NoError) {
-            qWarning() << Q_FUNC_INFO << "Error parsing json" << error.errorString();
-            return;
-        }
-
-        QVariantMap replyMap = jsonDoc.toVariant().toMap();
-
-        if (!replyMap.value("success").toBool() || !replyMap.contains("data")) {
-            qWarning() << Q_FUNC_INFO << "Response doesn't contain data";
-            return;
-        }
 
         m_localAppRevision.clear();
         m_remoteAppRevision.clear();
         m_packageUrls.clear();
 
-        QVariantList data = replyMap.value("data").toList();
+        QVariantList data = reply.data.toList();
         Q_FOREACH (QVariant d, data) {
             QVariantMap map = d.toMap();
             const QString &appId = map.value("id").toString();

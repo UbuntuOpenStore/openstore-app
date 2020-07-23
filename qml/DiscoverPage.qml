@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2017 - Stefano Verzegnassi <verzegnassi.stefano@gmail.com>
+ * Copyright (C) 2020 Brian Douglass
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,6 +18,7 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import OpenStore 1.0
+import Ubuntu.Connectivity 1.0
 
 import "Components" as Components
 
@@ -26,6 +28,12 @@ Page {
 
     property DiscoverModel discoverModel: root.discoverModel
     anchors.fill: parent
+
+    function slot_packageDetailsReady(pkg) {
+        PackagesCache.packageDetailsReady.disconnect(slot_packageDetailsReady)
+        bottomEdgeStack.clear()
+        bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
+    }
 
     header: Components.HeaderMain {
         id: mainHeader
@@ -68,7 +76,7 @@ Page {
 
                     ActivityIndicator {
                         anchors.centerIn: parent
-                        visible: !highlightAppControl.ready
+                        visible: !highlightAppControl.ready && Connectivity.online
                         running: visible
                     }
 
@@ -77,10 +85,32 @@ Page {
                         if (appStatus == 2) {
                             Qt.openUrlExternally(highlightAppControl.appItem.appLaunchUrl());
                         } else {
-                            var pageProps = { app: highlightAppControl.appItem }
-                            bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), pageProps)
+                            PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady)
+                            PackagesCache.getPackageDetails(highlightAppControl.appItem.appId)
+                        }
+                    }
+
+                    Item {
+                        visible: !Connectivity.online && !highlightAppControl.ready
+                        anchors.fill: parent
+
+                        Icon {
+                            id: offlineIcon
+                            name: 'wifi-none'
+                            anchors.centerIn: parent
+                            width: units.gu(4)
+                            height: width
                         }
 
+                        Label {
+                            anchors {
+                                horizontalCenter: offlineIcon.horizontalCenter
+                                top: offlineIcon.bottom
+                                topMargin: units.gu(1)
+                            }
+
+                            text: i18n.tr("You are currently offline")
+                        }
                     }
                 }
 
@@ -90,7 +120,7 @@ Page {
                     width: parent.width
                     divider.visible: false
                     enabled: visible    // Just for being sure everything works as expected
-                    visible: appModel.appStoreUpdateAvailable
+                    visible: localAppModel.appStoreUpdateAvailable
                     color: theme.palette.normal.activity
 
                     ListItemLayout {
@@ -100,15 +130,9 @@ Page {
                         ProgressionSlot {}
                     }
 
-                    function slot_installedPackageDetailsReady(pkg) {
-                        PackagesCache.packageDetailsReady.disconnect(slot_installedPackageDetailsReady)
-                        bottomEdgeStack.clear()
-                        bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
-                    }
-
                     onClicked: {
-                        PackagesCache.packageDetailsReady.connect(slot_installedPackageDetailsReady)
-                        PackagesCache.getPackageDetails(appModel.appStoreAppId)
+                        PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady)
+                        PackagesCache.getPackageDetails(localAppModel.appStoreAppId)
                     }
 
                     // WORKAROUND: appStoreUpdateAlert visibility is toggled after the whole page is layouted.
@@ -126,12 +150,12 @@ Page {
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: parent.width
                     //Used opacity to hide this until the model is ready. If visible is used, the ListView moves up on start
-                    opacity: highlightAppControl.ready ? 1 : 0
+                    opacity: highlightAppControl.ready || !Connectivity.online ? 1 : 0
 
                     ListItemLayout {
                         anchors.fill: parent
-                        title.text: appModel.updatesAvailableCount > 0
-                            ? i18n.tr("Installed Apps") + i18n.tr(" (%1 update available)", " (%1 updates available)", appModel.updatesAvailableCount).arg(appModel.updatesAvailableCount)
+                        title.text: localAppModel.updatesAvailableCount > 0
+                            ? i18n.tr("Installed Apps") + i18n.tr(" (%1 update available)", " (%1 updates available)", localAppModel.updatesAvailableCount).arg(localAppModel.updatesAvailableCount)
                             : i18n.tr("Installed Apps")
                         title.color: theme.palette.normal.backgroundText
                         ProgressionSlot {}
@@ -144,7 +168,7 @@ Page {
                         }
                     }
 
-                    onClicked: pageStack.push(Qt.resolvedUrl("InstalledAppsTab.qml"), {})
+                    onClicked: pageStack.push(Qt.resolvedUrl("InstalledAppsPage.qml"), {})
                 }
 
                 ListItem {
@@ -168,7 +192,7 @@ Page {
                         }
                     }
 
-                    onClicked: pageStack.push(Qt.resolvedUrl("CategoriesTab.qml"))
+                    onClicked: pageStack.push(Qt.resolvedUrl("CategoriesPage.qml"))
                 }
             }
 
@@ -181,7 +205,10 @@ Page {
                 showProgression: model.queryUrl
 
                 onTitleClicked: if (model.queryUrl) { root.showSearchQuery(model.queryUrl) }
-                onAppTileClicked: bottomEdgeStack.push(Qt.resolvedUrl("../AppDetailsPage.qml"), { app: appItem })
+                onAppTileClicked: {
+                    PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady)
+                    PackagesCache.getPackageDetails(appItem.appId)
+                }
 
                 viewModel: model.appIds
                 function packageInfoGetter(i) {

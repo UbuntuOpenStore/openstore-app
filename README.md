@@ -16,6 +16,7 @@ project on the [UBports Weblate instance](https://translate.ubports.com/projects
 ## Development
 
 * Setup [clickable](https://github.com/bhdouglass/clickable)
+* Initialize submodules, run `git submodule update --init --recursive`
 * From the root directory of this repo, run `clickable`
 * The app will be compiled and launched on your phone
 * Profit!

@@ -109,3 +109,4 @@ add_custom_target(${PROJECT_NAME}_FILES ALL SOURCES ${PROJECT_SRC_FILES})
 
 add_subdirectory(po)
 add_subdirectory(src)
+add_subdirectory(plugins)

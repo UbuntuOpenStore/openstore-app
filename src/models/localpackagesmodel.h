@@ -1,10 +1,27 @@
-#ifndef PACKAGESMODEL_H
-#define PACKAGESMODEL_H
+/*
+ * Copyright (C) 2020 Brian Douglass
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; version 3.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+#ifndef LOCALPACKAGESMODEL_H
+#define LOCALPACKAGESMODEL_H
 
 #include <QAbstractListModel>
 #include <QJsonObject>
 
-class PackageItem;
+    class PackageItem;
 
 struct LocalPackageItem {
     QString name;
@@ -14,12 +31,13 @@ struct LocalPackageItem {
     bool updateAvailable;
     QString updateStatus;
     QString packageUrl;
+    QString appLaunchUrl;
 };
 
-class PackagesModel : public QAbstractListModel
+class LocalPackagesModel : public QAbstractListModel
 {
     Q_OBJECT
-    Q_DISABLE_COPY(PackagesModel)
+    Q_DISABLE_COPY(LocalPackagesModel)
     Q_PROPERTY(int count READ rowCount NOTIFY updated)
     Q_PROPERTY(bool ready READ ready NOTIFY readyChanged)
     Q_PROPERTY(int updatesAvailableCount READ updatesAvailableCount NOTIFY updated)
@@ -36,9 +54,10 @@ public:
         RoleUpdateAvailable,
         RoleUpdateStatus,
         RolePackageUrl,
+        RoleAppLaunchUrl,
     };
 
-    explicit PackagesModel(QAbstractListModel *parent = 0);
+    explicit LocalPackagesModel(QAbstractListModel *parent = 0);
 
     QHash<int, QByteArray> roleNames() const Q_DECL_OVERRIDE;
     int rowCount(const QModelIndex & parent = QModelIndex()) const Q_DECL_OVERRIDE;
@@ -68,4 +87,4 @@ private:
     bool m_appStoreUpdateAvailable;
 };
 
-#endif // PACKAGESMODEL_H
+#endif // LOCALPACKAGESMODEL_H

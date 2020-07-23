@@ -5,7 +5,8 @@ publish-armhf:
   only:
     - tags
   script:
-    - clickable clean build
+    - git submodule update --init --recursive
+    - clickable build
     - clickable publish "$CI_COMMIT_MESSAGE"
   artifacts:
     paths:
@@ -18,7 +19,8 @@ build-armhf:
   except:
     - tags
   script:
-    - clickable clean build
+    - git submodule update --init --recursive
+    - clickable build
   artifacts:
     paths:
       - build/arm-linux-gnueabihf/app/*.click
@@ -29,7 +31,8 @@ build-arm64:
   stage: build
   image: clickable/ci-16.04-arm64
   script:
-    - clickable clean build
+    - git submodule update --init --recursive
+    - clickable build
   artifacts:
     paths:
       - build/aarch64-linux-gnu/app/*.click
@@ -41,7 +44,8 @@ publish-arm64:
   only:
     - tags
   script:
-    - clickable clean build
+    - git submodule update --init --recursive
+    - clickable build
     - clickable publish
   artifacts:
     paths:

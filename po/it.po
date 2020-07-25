@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-31 04:27+0000\n"
-"PO-Revision-Date: 2020-07-07 19:22+0000\n"
+"PO-Revision-Date: 2020-07-25 18:07+0000\n"
 "Last-Translator: Mike <miguel2000@livecom.it>\n"
 "Language-Team: Italian <https://translate.ubports.com/projects/openstore/"
 "openstore-app/it/>\n"
@@ -216,9 +216,8 @@ msgid "Content Exchange Source"
 msgstr "Sorgente di Scambio di Contenuto"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:722
-#, fuzzy
 msgid "Content Exchange"
-msgstr "Gestore del servizio Content Hub"
+msgstr "Scambio di Contenuto"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:723
 msgid "Debug"
@@ -415,7 +414,7 @@ msgstr[1] " (%1 aggiornament1 disponibile)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:159
 msgid "Browse Apps by Category"
-msgstr ""
+msgstr "Sfoglia le app per categoria"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
 msgid "Nothing here yet"
@@ -587,11 +586,11 @@ msgstr "Account OpenStore"
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:122
 #: /home/brian/dev/openstore/openstore-app/openstore/SignInWebView.qml:30
 msgid "Sign in"
-msgstr ""
+msgstr "Accedi"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:139
 msgid "Sign out"
-msgstr ""
+msgstr "Esci"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:167
 msgid "Parental control"

@@ -1,4 +1,3 @@
-# -- armhf --
 publish-armhf:
   stage: deploy
   image: clickable/ci-16.04-armhf
@@ -26,10 +25,11 @@ build-armhf:
       - build/arm-linux-gnueabihf/app/*.click
     expire_in: 1 week
 
-# -- arm64 --
 build-arm64:
   stage: build
   image: clickable/ci-16.04-arm64
+  except:
+    - tags
   script:
     - git submodule update --init --recursive
     - clickable build

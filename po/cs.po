@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-31 04:27+0000\n"
-"PO-Revision-Date: 2020-07-17 21:25+0000\n"
+"PO-Revision-Date: 2020-07-29 15:05+0000\n"
 "Last-Translator: Milan Korecký <milan.korecky@gmail.com>\n"
 "Language-Team: Czech <https://translate.ubports.com/projects/openstore/"
 "openstore-app/cs/>\n"
@@ -336,7 +336,7 @@ msgid ""
 "app."
 msgstr ""
 "Tato aplikace má přístup k běžně zakázaným částem systému a ke všem vašim "
-"datům a může Váš ystém poškodit.  Přestože správci OpenStore provedli "
+"datům a může Váš ystém poškodit. Přestože správci OpenStore provedli "
 "kontrolu kódu aplikace z důvodu bezpečnosti, nenesou odpovědnost za možné "
 "škody na Vašem zařízení a datech při instalaci této aplikace."
 
@@ -393,7 +393,7 @@ msgstr "Kategorie"
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:65
 #, qt-format
 msgid "by %1"
-msgstr "v  %1"
+msgstr "v %1"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:98
 msgid "OpenStore update available"
@@ -723,7 +723,7 @@ msgstr "Ohodnotit aplikaci"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:230
 msgid "Install this app to review it"
-msgstr "Instalovat aplikaci a ohodnotit ji"
+msgstr "Pro hodnocení aplikace je třeba ji nejprve nainstalovat"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:46
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:54

@@ -1,53 +1,53 @@
-publish-armhf:
-  stage: deploy
-  image: clickable/ci-16.04-armhf
-  only:
-    - tags
-  script:
-    - git submodule update --init --recursive
-    - clickable build
-    - clickable publish "$CI_COMMIT_MESSAGE"
+build-arm64:
   artifacts:
-    paths:
-      - build/arm-linux-gnueabihf/app/*.click
     expire_in: 1 week
+    paths:
+    - build/aarch64-linux-gnu/app/*.click
+  image: clickable/ci-16.04-arm64
+  rules:
+  - if: $CI_COMMIT_TAG == null
+  script:
+  - git submodule update --init --recursive
+  - clickable clean-build
+  stage: build
 
 build-armhf:
-  stage: build
+  artifacts:
+    expire_in: 1 week
+    paths:
+    - build/arm-linux-gnueabihf/app/*.click
   image: clickable/ci-16.04-armhf
-  except:
-    - tags
+  rules:
+  - if: $CI_COMMIT_TAG == null
   script:
-    - git submodule update --init --recursive
-    - clickable build
-  artifacts:
-    paths:
-      - build/arm-linux-gnueabihf/app/*.click
-    expire_in: 1 week
-
-build-arm64:
+  - git submodule update --init --recursive
+  - clickable clean-build
   stage: build
-  image: clickable/ci-16.04-arm64
-  except:
-    - tags
-  script:
-    - git submodule update --init --recursive
-    - clickable build
-  artifacts:
-    paths:
-      - build/aarch64-linux-gnu/app/*.click
-    expire_in: 1 week
 
 publish-arm64:
-  stage: deploy
-  image: clickable/ci-16.04-arm64
-  only:
-    - tags
-  script:
-    - git submodule update --init --recursive
-    - clickable build
-    - clickable publish
   artifacts:
-    paths:
-      - build/aarch64-linux-gnu/app/*.click
     expire_in: 1 week
+    paths:
+    - build/aarch64-linux-gnu/app/*.click
+  image: clickable/ci-16.04-arm64
+  rules:
+  - if: $CI_COMMIT_TAG
+  script:
+  - git submodule update --init --recursive
+  - clickable clean-build
+  - clickable publish
+  stage: deploy
+
+publish-armhf:
+  artifacts:
+    expire_in: 1 week
+    paths:
+    - build/arm-linux-gnueabihf/app/*.click
+  image: clickable/ci-16.04-armhf
+  rules:
+  - if: $CI_COMMIT_TAG
+  script:
+  - git submodule update --init --recursive
+  - clickable clean-build
+  - clickable publish "$CI_COMMIT_MESSAGE"
+  stage: deploy

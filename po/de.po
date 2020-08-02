@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-31 04:27+0000\n"
-"PO-Revision-Date: 2020-07-23 20:37+0000\n"
-"Last-Translator: Daniel Frost <one@frostinfo.de>\n"
+"PO-Revision-Date: 2020-08-02 17:21+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: German <https://translate.ubports.com/projects/openstore/"
 "openstore-app/de/>\n"
 "Language: de\n"
@@ -43,7 +43,7 @@ msgstr "App"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:18
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:63
 msgid "Scope"
-msgstr "Scope"
+msgstr "Anwendungsbereich"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:159
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:19
@@ -62,8 +62,8 @@ msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
 msgstr ""
-"Die installierte Version dieser App kommt nicht vom OpenStore Server. Das "
-"neuste stabile Update kann über den Button unten installiert werden."
+"Die installierte Version dieser Anwendung stammt nicht vom OpenStore-Server. "
+"Sie können das neuste stabile Update über den Knopf unten installieren."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:265
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HighlightedApp.qml:109
@@ -72,7 +72,7 @@ msgstr "Öffnen"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:281
 msgid "The OpenStore is installed!"
-msgstr "Die OpenStore App ist installiert!"
+msgstr "Der OpenStore ist installiert!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:290
 msgid "Install stable version"

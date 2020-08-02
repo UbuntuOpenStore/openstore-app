@@ -430,6 +430,8 @@ Page {
                     id: descLayout
                     property bool showAll: false
                     title.text: app.tagline || i18n.tr("Description")
+                    title.wrapMode: Text.WordWrap
+                    title.maximumLineCount: 2
                     subtitle.text: app.description
                     subtitle.textSize: Label.Small
                     subtitle.wrapMode: Text.WordWrap

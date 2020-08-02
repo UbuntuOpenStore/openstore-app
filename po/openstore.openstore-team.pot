@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-27 18:04+0000\n"
+"POT-Creation-Date: 2020-08-02 04:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -94,214 +94,214 @@ msgid "Description"
 msgstr ""
 
 #. TRANSLATORS: Title of the changelog section
-#: ../qml/AppDetailsPage.qml:468
+#: ../qml/AppDetailsPage.qml:471
 msgid "What's New"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:487
+#: ../qml/AppDetailsPage.qml:490
 msgid "Packager/Publisher"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:496 ../qml/AppLocalDetailsPage.qml:137
+#: ../qml/AppDetailsPage.qml:499 ../qml/AppLocalDetailsPage.qml:137
 msgid "Installed version"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:506
+#: ../qml/AppDetailsPage.qml:509
 msgid "Latest available version"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:515
+#: ../qml/AppDetailsPage.qml:518
 msgid "First released"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:526
+#: ../qml/AppDetailsPage.qml:529
 msgid "Downloads of the latest version"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:535
+#: ../qml/AppDetailsPage.qml:538
 msgid "Total downloads"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:544
+#: ../qml/AppDetailsPage.qml:547
 msgid "License"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:545
+#: ../qml/AppDetailsPage.qml:548
 msgid "N/A"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:555 ../qml/SettingsPage.qml:214
+#: ../qml/AppDetailsPage.qml:558 ../qml/SettingsPage.qml:214
 msgid "Source Code"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:568
+#: ../qml/AppDetailsPage.qml:571
 msgid "Get support for this app"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:581
+#: ../qml/AppDetailsPage.qml:584
 msgid "Donate to support this app"
 msgstr ""
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
-#: ../qml/AppDetailsPage.qml:597
+#: ../qml/AppDetailsPage.qml:600
 msgid "More from %1"
 msgstr ""
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: ../qml/AppDetailsPage.qml:612
+#: ../qml/AppDetailsPage.qml:615
 msgid "Other apps in %1"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:618
+#: ../qml/AppDetailsPage.qml:621
 msgid "Package contents"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:711
+#: ../qml/AppDetailsPage.qml:714
 msgid "Permissions"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:716
+#: ../qml/AppDetailsPage.qml:719
 msgid "Accounts"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:717
+#: ../qml/AppDetailsPage.qml:720
 msgid "Audio"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:718
+#: ../qml/AppDetailsPage.qml:721
 msgid "Bluetooth"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:719
+#: ../qml/AppDetailsPage.qml:722
 msgid "Calendar"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:720
+#: ../qml/AppDetailsPage.qml:723
 msgid "Camera"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:721
+#: ../qml/AppDetailsPage.qml:724
 msgid "Connectivity"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:722
+#: ../qml/AppDetailsPage.qml:725
 msgid "Contacts"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:723
+#: ../qml/AppDetailsPage.qml:726
 msgid "Content Exchange Source"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:724
+#: ../qml/AppDetailsPage.qml:727
 msgid "Content Exchange"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:725
+#: ../qml/AppDetailsPage.qml:728
 msgid "Debug"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:726
+#: ../qml/AppDetailsPage.qml:729
 msgid "History"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:727
+#: ../qml/AppDetailsPage.qml:730
 msgid "In App Purchases"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:728
+#: ../qml/AppDetailsPage.qml:731
 msgid "Keep Display On"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:729
+#: ../qml/AppDetailsPage.qml:732
 msgid "Location"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:730
+#: ../qml/AppDetailsPage.qml:733
 msgid "Microphone"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:731
+#: ../qml/AppDetailsPage.qml:734
 msgid "Read Music Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:732
+#: ../qml/AppDetailsPage.qml:735
 msgid "Music Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:733
+#: ../qml/AppDetailsPage.qml:736
 msgid "Networking"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:734
+#: ../qml/AppDetailsPage.qml:737
 msgid "Read Picture Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:735
+#: ../qml/AppDetailsPage.qml:738
 msgid "Picture Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:736
+#: ../qml/AppDetailsPage.qml:739
 msgid "Push Notifications"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:737
+#: ../qml/AppDetailsPage.qml:740
 msgid "Sensors"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:738
+#: ../qml/AppDetailsPage.qml:741
 msgid "User Metrics"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:739
+#: ../qml/AppDetailsPage.qml:742
 msgid "Read Video Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:740
+#: ../qml/AppDetailsPage.qml:743
 msgid "Video Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:741
+#: ../qml/AppDetailsPage.qml:744
 msgid "Video"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:742
+#: ../qml/AppDetailsPage.qml:745
 msgid "Webview"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:746
+#: ../qml/AppDetailsPage.qml:749
 msgid "Full System Access"
 msgstr ""
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: ../qml/AppDetailsPage.qml:751
+#: ../qml/AppDetailsPage.qml:754
 msgid "none required"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:787
+#: ../qml/AppDetailsPage.qml:790
 msgid "Read paths"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:804
+#: ../qml/AppDetailsPage.qml:807
 msgid "Write paths"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: ../qml/AppDetailsPage.qml:875
+#: ../qml/AppDetailsPage.qml:878
 msgid "%1 GB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: ../qml/AppDetailsPage.qml:880
+#: ../qml/AppDetailsPage.qml:883
 msgid "%1 MB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: ../qml/AppDetailsPage.qml:885
+#: ../qml/AppDetailsPage.qml:888
 msgid "%1 kB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: ../qml/AppDetailsPage.qml:888
+#: ../qml/AppDetailsPage.qml:891
 msgid "%1 bytes"
 msgstr ""
 

@@ -152,10 +152,6 @@ QStringList PlatformIntegration::getSupportedFrameworks()
 
 QString PlatformIntegration::getSupportedArchitecture()
 {
-#ifdef DESKTOP_DEBUG_BUILD
-    // Force "armhf", so we can see all the apps in the store
-    return QString("armhf");
-#else
     QProcess dpkg;
     dpkg.setProgram("dpkg");
     dpkg.setArguments(QStringList() << "--print-architecture");
@@ -173,7 +169,6 @@ QString PlatformIntegration::getSupportedArchitecture()
     qDebug() << Q_FUNC_INFO << "Device architecture is:" << output;
 
     return output;
-#endif
 }
 
 QString PlatformIntegration::getSystemLocale()
@@ -208,10 +203,6 @@ QString PlatformIntegration::getSystemLocale()
 
 QString PlatformIntegration::getSystemCodename()
 {
-#ifdef DESKTOP_DEBUG_BUILD
-    // Force "vivid", so we can see all the apps in the store
-    return QString("vivid");
-#else
     QProcess lsb_release;
     lsb_release.setProgram("lsb_release");
     lsb_release.setArguments(QStringList() << "-c");
@@ -230,5 +221,4 @@ QString PlatformIntegration::getSystemCodename()
     qDebug() << Q_FUNC_INFO << "OS codename is:" << output;
 
     return output;
-#endif
 }

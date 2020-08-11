@@ -2,7 +2,7 @@ build-arm64:
   artifacts:
     expire_in: 1 week
     paths:
-    - build/aarch64-linux-gnu/app/*.click
+    - build/*/app/*.click
   image: clickable/ci-16.04-arm64
   rules:
   - if: $CI_COMMIT_TAG == null
@@ -15,8 +15,21 @@ build-armhf:
   artifacts:
     expire_in: 1 week
     paths:
-    - build/arm-linux-gnueabihf/app/*.click
+    - build/*/app/*.click
   image: clickable/ci-16.04-armhf
+  rules:
+  - if: $CI_COMMIT_TAG == null
+  script:
+  - git submodule update --init --recursive
+  - clickable clean-build
+  stage: build
+
+build-amd64:
+  artifacts:
+    expire_in: 1 week
+    paths:
+    - build/*/app/*.click
+  image: clickable/ci-16.04-amd64
   rules:
   - if: $CI_COMMIT_TAG == null
   script:
@@ -28,7 +41,7 @@ publish-arm64:
   artifacts:
     expire_in: 1 week
     paths:
-    - build/aarch64-linux-gnu/app/*.click
+    - build/*/app/*.click
   image: clickable/ci-16.04-arm64
   rules:
   - if: $CI_COMMIT_TAG
@@ -42,8 +55,22 @@ publish-armhf:
   artifacts:
     expire_in: 1 week
     paths:
-    - build/arm-linux-gnueabihf/app/*.click
+    - build/*/app/*.click
   image: clickable/ci-16.04-armhf
+  rules:
+  - if: $CI_COMMIT_TAG
+  script:
+  - git submodule update --init --recursive
+  - clickable clean-build
+  - clickable publish "$CI_COMMIT_MESSAGE"
+  stage: deploy
+
+publish-amd64:
+  artifacts:
+    expire_in: 1 week
+    paths:
+    - build/*/app/*.click
+  image: clickable/ci-16.04-amd64
   rules:
   - if: $CI_COMMIT_TAG
   script:

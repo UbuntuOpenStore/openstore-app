@@ -163,7 +163,7 @@ void OpenStoreNetworkManager::getAppDetails(const QString &signature, const QStr
     parseReply(reply, signature);
 }
 
-void OpenStoreNetworkManager::getSearch(const QString &signature, int skip, int limit, const QString &filterString, const QString &category, const QString &sort)
+void OpenStoreNetworkManager::getSearch(const QString &signature, int skip, int limit, const QString &filterString, const QString &category, const QString &sort, const QString &filterType)
 {
     QUrl url(getUrl(API_SEARCH_ENDPOINT));
 
@@ -172,8 +172,9 @@ void OpenStoreNetworkManager::getSearch(const QString &signature, int skip, int 
     q.addQueryItem("limit", QString::number(limit));
     q.addQueryItem("sort", sort);
     q.addQueryItem("category", category);
+    q.addQueryItem("type", filterType);
 
-    if (filterString.startsWith("author:"))
+        if (filterString.startsWith("author:"))
     {
         q.addQueryItem("author", filterString.right(filterString.size() - 7));
     }

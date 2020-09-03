@@ -53,7 +53,7 @@ public:
 public Q_SLOTS:
     void getDiscover(const QString &signature);
     void getAppDetails(const QString &signature, const QString &appId);
-    void getSearch(const QString &signature, int skip, int limit, const QString &filterString, const QString &category, const QString &sort);
+    void getSearch(const QString &signature, int skip, int limit, const QString &filterString, const QString &category, const QString &sort, const QString &filterType);
     void getCategories(const QString &signature);
     void getByUrl(const QString &signature, const QUrl &url);
     void getRevisions(const QString &signature, const QStringList &appIdsAtVersion);

@@ -17,9 +17,11 @@
 
 import QtQuick 2.4
 import Ubuntu.Components 1.3
+import Ubuntu.Components.Popups 1.3
 import OpenStore 1.0
 
 import "Components" as Components
+import "Dialogs" as Dialogs
 
 Page {
     id: searchPage
@@ -44,6 +46,30 @@ Page {
                 name: "find"
             }
             placeholderText: i18n.tr("Search in OpenStore...")
+        }
+
+        trailingActionBar {
+            actions: [
+                Action {
+                    iconName: 'filters'
+                    text: i18n.tr('Filters')
+
+                    onTriggered: {
+                        var popup = PopupUtils.open(filterDialog, searchPage, {
+                            selectedSort: view.sortMode ? view.sortMode : 'relevance',
+                            selectedType: view.filterType,
+                        });
+                        popup.accepted.connect(function(selectedSort, selectedType) {
+                            PopupUtils.close(popup);
+                            view.sortMode = selectedSort;
+                            view.filterType = selectedType;
+                        });
+                        popup.rejected.connect(function(selectedSort, selectedType) {
+                            PopupUtils.close(popup);
+                        });
+                    }
+                }
+            ]
         }
     }
 
@@ -75,5 +101,9 @@ Page {
         } else {
             searchTimer.restart()
         }
+    }
+
+    Dialogs.FilterDialog {
+        id: filterDialog
     }
 }

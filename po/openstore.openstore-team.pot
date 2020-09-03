@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-08 03:27+0000\n"
+"POT-Creation-Date: 2020-09-03 04:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -333,7 +333,7 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: ../qml/Components/HeaderMain.qml:40 ../qml/SearchPage.qml:33
+#: ../qml/Components/HeaderMain.qml:40 ../qml/SearchPage.qml:35
 msgid "Search"
 msgstr ""
 
@@ -414,7 +414,7 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: ../qml/Components/ReviewPreview.qml:220
+#: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:143
 #: ../qml/Dialogs/InstallWarningDialog.qml:49
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
 #: ../qml/Dialogs/UninstallDialog.qml:42
@@ -480,6 +480,70 @@ msgstr ""
 
 #: ../qml/Dialogs/DonationDialog.qml:40
 msgid "Maybe later"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:26
+msgid "Filters and Sorting"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:38
+msgid "Sort By"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:45 ../qml/Dialogs/FilterDialog.qml:65
+msgid "Relevance"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:46
+msgid "Most Popular"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:47
+msgid "Least Popular"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:48
+msgid "Title (A-Z)"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:49
+msgid "Title (Z-A)"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:50
+msgid "Newest"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:51
+msgid "Oldest"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:52
+msgid "Latest Update"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:53
+msgid "Oldest Update"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:91
+msgid "Type"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:98 ../qml/Dialogs/FilterDialog.qml:112
+msgid "All Types"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:99
+msgid "Apps"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:100
+msgid "Web Apps"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:135
+msgid "Apply"
 msgstr ""
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:27
@@ -560,19 +624,19 @@ msgstr ""
 msgid "Browse Apps by Category"
 msgstr ""
 
-#: ../qml/FilteredAppList.qml:107
+#: ../qml/FilteredAppList.qml:109
 msgid "No results found."
 msgstr ""
 
-#: ../qml/FilteredAppList.qml:107
+#: ../qml/FilteredAppList.qml:109
 msgid "Nothing here yet"
 msgstr ""
 
-#: ../qml/FilteredAppList.qml:108
+#: ../qml/FilteredAppList.qml:110
 msgid "No app has been released in this category yet."
 msgstr ""
 
-#: ../qml/FilteredAppList.qml:108
+#: ../qml/FilteredAppList.qml:110
 msgid "Try with a different search."
 msgstr ""
 
@@ -609,32 +673,36 @@ msgstr ""
 msgid "No app has been installed from OpenStore yet."
 msgstr ""
 
-#: ../qml/Main.qml:275
+#: ../qml/Main.qml:260 ../qml/SearchPage.qml:55
+msgid "Filters"
+msgstr ""
+
+#: ../qml/Main.qml:307
 msgid "App installed"
 msgstr ""
 
-#: ../qml/Main.qml:276
+#: ../qml/Main.qml:308
 msgid "The app has been installed successfully."
 msgstr ""
 
-#: ../qml/Main.qml:279 ../qml/Main.qml:292 ../qml/Main.qml:307
+#: ../qml/Main.qml:311 ../qml/Main.qml:324 ../qml/Main.qml:339
 msgid "OK"
 msgstr ""
 
-#: ../qml/Main.qml:288
+#: ../qml/Main.qml:320
 msgid "Installation failed"
 msgstr ""
 
-#: ../qml/Main.qml:289
+#: ../qml/Main.qml:321
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 
-#: ../qml/Main.qml:303
+#: ../qml/Main.qml:335
 msgid "Installation failed (Error %1)"
 msgstr ""
 
-#: ../qml/SearchPage.qml:46
+#: ../qml/SearchPage.qml:48
 msgid "Search in OpenStore..."
 msgstr ""
 

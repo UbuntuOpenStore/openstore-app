@@ -241,21 +241,53 @@ MainView {
 
     Component {
         id: filteredAppPageComponent
+
         Page {
             id: filteredAppPage
+
             property alias filterString: filteredAppList.filterString
             property alias sortMode: filteredAppList.sortMode
             property alias category: filteredAppList.category
+
             header: Components.HeaderBase {
                 title: filteredAppPage.title
                 automaticHeight: false
+
+                trailingActionBar {
+                    actions: [
+                        Action {
+                            iconName: 'filters'
+                            text: i18n.tr('Filters')
+
+                            onTriggered: {
+                                var popup = PopupUtils.open(filterDialog, filteredAppPage, {
+                                    selectedSort: filteredAppList.sortMode ? filteredAppList.sortMode : 'name',
+                                    selectedType: filteredAppList.filterType,
+                                });
+                                popup.accepted.connect(function(selectedSort, selectedType) {
+                                    PopupUtils.close(popup);
+                                    filteredAppList.sortMode = selectedSort;
+                                    filteredAppList.filterType = selectedType;
+                                });
+                                popup.rejected.connect(function(selectedSort, selectedType) {
+                                    PopupUtils.close(popup);
+                                });
+                            }
+                        }
+                    ]
+                }
             }
+
             FilteredAppList {
                 anchors.fill: parent
                 anchors.topMargin: filteredAppPage.header.height
 
                 id: filteredAppList
                 onAppDetailsRequired: openApp(appId)
+            }
+
+            Dialogs.FilterDialog {
+                id: filterDialog
             }
         }
     }

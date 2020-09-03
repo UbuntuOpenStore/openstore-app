@@ -44,6 +44,7 @@ class SearchModel : public QAbstractListModel
     Q_PROPERTY(QString filterString MEMBER m_filterString NOTIFY filterStringChanged)
     Q_PROPERTY(QString category MEMBER m_category NOTIFY categoryChanged)
     Q_PROPERTY(QString sortMode MEMBER m_sortMode NOTIFY sortModeChanged)
+    Q_PROPERTY(QString filterType MEMBER m_filterType NOTIFY filterTypeChanged)
     Q_PROPERTY(QUrl queryUrl MEMBER m_queryUrl NOTIFY queryUrlChanged)
 
 public:
@@ -71,6 +72,8 @@ Q_SIGNALS:
     void categoryChanged();
     void queryUrlChanged();
     void sortModeChanged();
+    void filterTypeChanged();
+
     void updated();
 
 protected:
@@ -87,6 +90,7 @@ private:
     QString m_filterString;
     QString m_category;
     QString m_sortMode;
+    QString m_filterType;
     QUrl m_queryUrl;
 
     bool m_fetchedAll;

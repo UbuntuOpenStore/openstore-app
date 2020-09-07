@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-03 04:54+0000\n"
+"POT-Creation-Date: 2020-09-07 04:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -742,4 +742,9 @@ msgstr ""
 
 #: ../qml/SettingsPage.qml:232
 msgid "Additional Icons by"
+msgstr ""
+
+#: openstore.desktop.in.h:1
+msgid ""
+"software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr ""

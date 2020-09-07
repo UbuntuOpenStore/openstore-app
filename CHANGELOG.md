@@ -1,5 +1,10 @@
 # OpenStore App Changelog
 
+## v3.2.0
+
+- Added sorting apps
+- Added filtering apps by type
+
 ## v3.1.6
 
 - Updated translations, thank you translators!

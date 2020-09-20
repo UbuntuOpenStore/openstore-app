@@ -25,7 +25,7 @@ Component {
     Dialog {
         id: installQuestionDialog
         title: i18n.tr("Install unknown app?")
-        text: i18n.tr("Do you want to install the unkown app %1?").arg(fileName)
+        text: i18n.tr("Do you want to install the unknown app %1?").arg(fileName)
 
         property string fileName
         signal accepted();

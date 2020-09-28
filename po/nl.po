@@ -502,7 +502,7 @@ msgstr "App installeren?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:345
 #, fuzzy, qt-format
-msgid "Do you want to install the unkown app %1?"
+msgid "Do you want to install the unknown app %1?"
 msgstr "Wil je %1 installeren?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:386

@@ -1,5 +1,9 @@
 # OpenStore App Changelog
 
+## v3.2.1
+
+- Fixed typo
+
 ## v3.2.0
 
 - Added sorting apps

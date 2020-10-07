@@ -1,5 +1,9 @@
 # OpenStore App Changelog
 
+## v3.2.2
+
+- Updated translations, thank you translators!
+
 ## v3.2.1
 
 - Fixed typo

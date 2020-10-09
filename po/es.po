@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-31 04:27+0000\n"
-"PO-Revision-Date: 2020-07-25 18:07+0000\n"
-"Last-Translator: Daniel Frost <one@frostinfo.de>\n"
+"PO-Revision-Date: 2020-10-09 22:52+0000\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://translate.ubports.com/projects/openstore/"
 "openstore-app/es/>\n"
 "Language: es\n"
@@ -482,7 +482,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:320
 msgid "Are you sure you want to continue?"
-msgstr "¿Seguro que quiere continuar?"
+msgstr "¿Confirma que quiere continuar?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:324
 msgid "Yes, I know what I'm doing"
@@ -490,7 +490,7 @@ msgstr "Sí, sé lo que hago"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:332
 msgid "Get me out of here!"
-msgstr "¡Sácame de aquí!"
+msgstr "Salir de aquí"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:344
 #, fuzzy

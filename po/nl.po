@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-31 04:27+0000\n"
-"PO-Revision-Date: 2020-09-28 14:25+0000\n"
+"PO-Revision-Date: 2020-10-19 13:17+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/openstore/"
 "openstore-app/nl/>\n"
@@ -215,7 +215,7 @@ msgstr "Contactpersonen"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:721
 msgid "Content Exchange Source"
-msgstr "Inhoudsuitwisseling"
+msgstr "Inhoudsuitwisselingsbron"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:722
 msgid "Content Exchange"

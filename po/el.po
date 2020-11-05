@@ -1,0 +1,778 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the openstore.openstore-team package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: openstore.openstore-team\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-28 02:35+0000\n"
+"PO-Revision-Date: 2020-11-01 16:14+0000\n"
+"Last-Translator: George Kitsopoulos <gkitsopoulos@tutanota.com>\n"
+"Language-Team: Greek <https://translate.ubports.com/projects/openstore/"
+"openstore-app/el/>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.11.3\n"
+
+#: ../qml/AppDetailsPage.qml:109 ../qml/AppLocalDetailsPage.qml:34
+msgid "App details"
+msgstr "Λεπτομέρειες εφαρμογής"
+
+#: ../qml/AppDetailsPage.qml:116 ../qml/AppDetailsPage.qml:385
+#: ../qml/AppLocalDetailsPage.qml:41 ../qml/Dialogs/UninstallDialog.qml:33
+msgid "Remove"
+msgstr "Αφαίρεση"
+
+#: ../qml/AppDetailsPage.qml:152 ../qml/Components/PackageListItem.qml:34
+#: ../qml/Components/PackageTile.qml:79
+msgid "App"
+msgstr "Εφαρμογή"
+
+#: ../qml/AppDetailsPage.qml:153 ../qml/Components/HookIcon.qml:67
+#: ../qml/Components/PackageListItem.qml:35
+#: ../qml/Components/PackageTile.qml:80
+msgid "Scope"
+msgstr "Σκοπός"
+
+#: ../qml/AppDetailsPage.qml:154 ../qml/Components/PackageListItem.qml:36
+#: ../qml/Components/PackageTile.qml:81
+msgid "Web App"
+msgstr "Εφαρμογή Ιστού"
+
+#: ../qml/AppDetailsPage.qml:155 ../qml/Components/PackageListItem.qml:37
+#: ../qml/Components/PackageTile.qml:82
+msgid "Web App+"
+msgstr "Εφαρμογή Ιστού+"
+
+#: ../qml/AppDetailsPage.qml:239
+msgid ""
+"The installed version of this app doesn't come from the OpenStore server. "
+"You can install the latest stable update by tapping the button below."
+msgstr ""
+"Η εγκατεστημένη έκδοση αυτής της εφαρμογής δεν προέρχεται από το διακομιστή "
+"OpenStore. Μπορείτε να εγκαταστήσετε την πιο πρόσφατη σταθερή ενημέρωση "
+"πατώντας το παρακάτω κουμπί."
+
+#: ../qml/AppDetailsPage.qml:264 ../qml/AppLocalDetailsPage.qml:103
+#: ../qml/Components/HighlightedApp.qml:110
+msgid "Open"
+msgstr "Άνοιγμα"
+
+#: ../qml/AppDetailsPage.qml:280
+msgid "The OpenStore is installed!"
+msgstr "Το OpenStore είναι εγκατεστημένο!"
+
+#: ../qml/AppDetailsPage.qml:289
+msgid "Install stable version"
+msgstr "Εγκαταστήστε τη σταθερή έκδοση"
+
+#: ../qml/AppDetailsPage.qml:292
+msgid "Upgrade"
+msgstr "Αναβάθμιση"
+
+#: ../qml/AppDetailsPage.qml:295 ../qml/Dialogs/InstallWarningDialog.qml:41
+msgid "Install"
+msgstr "Εγκατάσταση"
+
+#: ../qml/AppDetailsPage.qml:371
+msgid "This app is not compatible with your system."
+msgstr "Αυτή η εφαρμογή δεν είναι συμβατή με το σύστημά σας."
+
+#: ../qml/AppDetailsPage.qml:404
+msgid ""
+"This app has access to restricted parts of the system and all of your data, "
+"see below for details."
+msgstr ""
+"Αυτή η εφαρμογή έχει πρόσβαση σε περιορισμένα μέρη του συστήματος και σε όλα "
+"τα δεδομένα σας, ανατρέξτε παρακάτω για λεπτομέρειες."
+
+#: ../qml/AppDetailsPage.qml:407
+msgid "This app has access to restricted system data, see below for details."
+msgstr ""
+"Αυτή η εφαρμογή έχει πρόσβαση σε περιορισμένα δεδομένα συστήματος, ανατρέξτε "
+"παρακάτω για λεπτομέρειες."
+
+#: ../qml/AppDetailsPage.qml:432
+msgid "Description"
+msgstr "Περιγραφή"
+
+#. TRANSLATORS: Title of the changelog section
+#: ../qml/AppDetailsPage.qml:470
+msgid "What's New"
+msgstr "Τι Είναι Καινούργιο"
+
+#: ../qml/AppDetailsPage.qml:489
+msgid "Packager/Publisher"
+msgstr "Packager/Εκδότης"
+
+#: ../qml/AppDetailsPage.qml:498 ../qml/AppLocalDetailsPage.qml:137
+msgid "Installed version"
+msgstr "Εγκατεστημένη έκδοση"
+
+#: ../qml/AppDetailsPage.qml:508
+msgid "Latest available version"
+msgstr "Τελευταία διαθέσιμη έκδοση"
+
+#: ../qml/AppDetailsPage.qml:517
+msgid "First released"
+msgstr "Κυκλοφόρησε για πρώτη φορά"
+
+#: ../qml/AppDetailsPage.qml:528
+msgid "Downloads of the latest version"
+msgstr "Λήψεις της τελευταίας έκδοσης"
+
+#: ../qml/AppDetailsPage.qml:537
+msgid "Total downloads"
+msgstr "Σύνολο λήψεων"
+
+#: ../qml/AppDetailsPage.qml:546
+msgid "License"
+msgstr "Άδεια"
+
+#: ../qml/AppDetailsPage.qml:547
+msgid "N/A"
+msgstr "Μη διαθέσιμο"
+
+#: ../qml/AppDetailsPage.qml:557 ../qml/SettingsPage.qml:214
+msgid "Source Code"
+msgstr "Πηγαίος Κώδικας"
+
+#: ../qml/AppDetailsPage.qml:570
+msgid "Get support for this app"
+msgstr "Λάβετε υποστήριξη για αυτήν την εφαρμογή"
+
+#: ../qml/AppDetailsPage.qml:583
+msgid "Donate to support this app"
+msgstr "Δωρίστε για να υποστηρίξετε αυτήν την εφαρμογή"
+
+#. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
+#: ../qml/AppDetailsPage.qml:599
+msgid "More from %1"
+msgstr "Περισσότερα από %1"
+
+#. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
+#: ../qml/AppDetailsPage.qml:614
+msgid "Other apps in %1"
+msgstr "Άλλες εφαρμογές σε %1"
+
+#: ../qml/AppDetailsPage.qml:620
+msgid "Package contents"
+msgstr "Περιεχόμενα πακέτου"
+
+#: ../qml/AppDetailsPage.qml:713
+msgid "Permissions"
+msgstr "Άδειες"
+
+#: ../qml/AppDetailsPage.qml:718
+msgid "Accounts"
+msgstr "Λογαριασμοί"
+
+#: ../qml/AppDetailsPage.qml:719
+msgid "Audio"
+msgstr "Ήχος"
+
+#: ../qml/AppDetailsPage.qml:720
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#: ../qml/AppDetailsPage.qml:721
+msgid "Calendar"
+msgstr "Ημερολόγιο"
+
+#: ../qml/AppDetailsPage.qml:722
+msgid "Camera"
+msgstr "Κάμερα"
+
+#: ../qml/AppDetailsPage.qml:723
+msgid "Connectivity"
+msgstr "Συνδεσιμότητα"
+
+#: ../qml/AppDetailsPage.qml:724
+msgid "Contacts"
+msgstr "Επαφές"
+
+#: ../qml/AppDetailsPage.qml:725
+msgid "Content Exchange Source"
+msgstr "Πηγή Ανταλλαγής Περιεχομένου"
+
+#: ../qml/AppDetailsPage.qml:726
+msgid "Content Exchange"
+msgstr "Ανταλλαγή Περιεχομένου"
+
+#: ../qml/AppDetailsPage.qml:727
+msgid "Debug"
+msgstr "Αποσφαλμάτωση"
+
+#: ../qml/AppDetailsPage.qml:728
+msgid "History"
+msgstr "Ιστορικό"
+
+#: ../qml/AppDetailsPage.qml:729
+msgid "In App Purchases"
+msgstr "Αγορές Εντός Εφαρμογής"
+
+#: ../qml/AppDetailsPage.qml:730
+msgid "Keep Display On"
+msgstr "Διατηρήστε την οθόνη ενεργή"
+
+#: ../qml/AppDetailsPage.qml:731
+msgid "Location"
+msgstr "Τοποθεσία"
+
+#: ../qml/AppDetailsPage.qml:732
+msgid "Microphone"
+msgstr "Μικρόφωνο"
+
+#: ../qml/AppDetailsPage.qml:733
+msgid "Read Music Files"
+msgstr "Ανάγνωση Μουσικών Αρχείων"
+
+#: ../qml/AppDetailsPage.qml:734
+msgid "Music Files"
+msgstr "Μουσικά Αρχεία"
+
+#: ../qml/AppDetailsPage.qml:735
+msgid "Networking"
+msgstr "Δικτύωση"
+
+#: ../qml/AppDetailsPage.qml:736
+msgid "Read Picture Files"
+msgstr "Ανάγνωση Αρχείων Εικόνων"
+
+#: ../qml/AppDetailsPage.qml:737
+msgid "Picture Files"
+msgstr "Αρχεία Εικόνων"
+
+#: ../qml/AppDetailsPage.qml:738
+msgid "Push Notifications"
+msgstr "Ειδοποιήσεις Προώθησης"
+
+#: ../qml/AppDetailsPage.qml:739
+msgid "Sensors"
+msgstr "Αισθητήρες"
+
+#: ../qml/AppDetailsPage.qml:740
+msgid "User Metrics"
+msgstr "Μετρήσεις Χρηστών"
+
+#: ../qml/AppDetailsPage.qml:741
+msgid "Read Video Files"
+msgstr "Ανάγνωση Αρχείων Βίντεο"
+
+#: ../qml/AppDetailsPage.qml:742
+msgid "Video Files"
+msgstr "Αρχεία Βίντεο"
+
+#: ../qml/AppDetailsPage.qml:743
+msgid "Video"
+msgstr "Βίντεο"
+
+#: ../qml/AppDetailsPage.qml:744
+msgid "Webview"
+msgstr "Webview"
+
+#: ../qml/AppDetailsPage.qml:748
+msgid "Full System Access"
+msgstr "Πλήρης Πρόσβαση Συστήματος"
+
+#. TRANSLATORS: this will show when an app doesn't need any special permissions
+#: ../qml/AppDetailsPage.qml:753
+msgid "none required"
+msgstr "κανένα δεν απαιτείται"
+
+#: ../qml/AppDetailsPage.qml:789
+msgid "Read paths"
+msgstr "Διαβάζει μονοπάτια"
+
+#: ../qml/AppDetailsPage.qml:806
+msgid "Write paths"
+msgstr "Γράφει μονοπάτια"
+
+#. TRANSLATORS: %1 is the size of a file, expressed in GB
+#: ../qml/AppDetailsPage.qml:877
+msgid "%1 GB"
+msgstr "%1 GB"
+
+#. TRANSLATORS: %1 is the size of a file, expressed in MB
+#: ../qml/AppDetailsPage.qml:882
+msgid "%1 MB"
+msgstr "%1 MB"
+
+#. TRANSLATORS: %1 is the size of a file, expressed in kB
+#: ../qml/AppDetailsPage.qml:887
+msgid "%1 kB"
+msgstr "%1 kB"
+
+#. TRANSLATORS: %1 is the size of a file, expressed in bytes
+#: ../qml/AppDetailsPage.qml:890
+msgid "%1 bytes"
+msgstr "%1 bytes"
+
+#: ../qml/AppLocalDetailsPage.qml:117
+msgid "This app could not be found in the OpenStore"
+msgstr "Δεν ήταν δυνατή η εύρεση αυτής της εφαρμογής στο OpenStore"
+
+#: ../qml/AppLocalDetailsPage.qml:120
+msgid ""
+"You are currently offline and the app details could not be fetched from the "
+"OpenStore"
+msgstr ""
+"Αυτήν τη στιγμή είστε εκτός σύνδεσης και δεν ήταν δυνατή η ανάκτηση των "
+"λεπτομερειών της εφαρμογής από το OpenStore"
+
+#: ../qml/CategoriesPage.qml:39
+msgid "Categories"
+msgstr "Κατηγορίες"
+
+#: ../qml/Components/BottomEdgePageStack.qml:101
+msgid "Back"
+msgstr "Πίσω"
+
+#: ../qml/Components/BottomEdgePageStack.qml:101
+#: ../qml/Components/ReviewPreview.qml:103
+#: ../qml/Components/ReviewPreview.qml:117
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#: ../qml/Components/HeaderMain.qml:27 ../qml/SettingsPage.qml:29
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#: ../qml/Components/HeaderMain.qml:40 ../qml/SearchPage.qml:35
+msgid "Search"
+msgstr "Αναζήτηση"
+
+#: ../qml/Components/HighlightedApp.qml:107
+#: ../qml/Components/ReviewPreview.qml:193
+msgid "Update"
+msgstr "Ενημέρωση"
+
+#: ../qml/Components/HighlightedApp.qml:113
+msgid "Details"
+msgstr "Λεπτομέρειες"
+
+#: ../qml/Components/HookIcon.qml:54
+msgid "Application"
+msgstr "Εφαρμογή"
+
+#. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
+#: ../qml/Components/HookIcon.qml:81
+msgid "URL Handler"
+msgstr "Διαχειριστής διευθύνσεων URL"
+
+#. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
+#: ../qml/Components/HookIcon.qml:95
+msgid "Content Hub Handler"
+msgstr "Διαχειριστής Περιεχομένου"
+
+#. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
+#: ../qml/Components/HookIcon.qml:109
+msgid "Push Helper"
+msgstr "Βοηθός Push"
+
+#. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
+#: ../qml/Components/HookIcon.qml:123
+msgid "Accounts provider"
+msgstr "Πάροχος λογαριασμών"
+
+#: ../qml/Components/PackageTile.qml:98
+msgid "Update available"
+msgstr "Διαθέσιμη ενημέρωση"
+
+#: ../qml/Components/PackageTile.qml:98
+msgid "✓ Installed"
+msgstr "✓ Εγκατεστημένο"
+
+#: ../qml/Components/ReviewPreview.qml:93
+msgid "Something went wrong..."
+msgstr "Κάτι πήγε στραβά..."
+
+#: ../qml/Components/ReviewPreview.qml:99
+msgid "Error Posting Review"
+msgstr "Σφάλμα Δημοσίευσης Κριτικής"
+
+#: ../qml/Components/ReviewPreview.qml:113
+msgid "Review Posted Correctly"
+msgstr "Η Κριτική Δημοσιεύτηκε Σωστά"
+
+#: ../qml/Components/ReviewPreview.qml:114
+msgid "Your review has been posted successfully."
+msgstr "Η κριτική σας δημοσιεύτηκε με επιτυχία."
+
+#: ../qml/Components/ReviewPreview.qml:128
+msgid "Loading..."
+msgstr "Φόρτωση..."
+
+#: ../qml/Components/ReviewPreview.qml:128
+msgid "Rate this app"
+msgstr "Βαθμολόγησε αυτήν την εφαρμογή"
+
+#: ../qml/Components/ReviewPreview.qml:135
+msgid "(Optional) Write a review"
+msgstr "(Προαιρετικό) Γράψτε μια κριτική"
+
+#: ../qml/Components/ReviewPreview.qml:139
+msgid "%1/%2 characters"
+msgstr "%1/%2 χαρακτήρες"
+
+#: ../qml/Components/ReviewPreview.qml:193
+msgid "Submit"
+msgstr "Υποβολή"
+
+#: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:143
+#: ../qml/Dialogs/InstallWarningDialog.qml:49
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
+#: ../qml/Dialogs/UninstallDialog.qml:42
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#: ../qml/Components/ReviewPreview.qml:244
+msgid "%1 review. "
+msgid_plural "%1 reviews. "
+msgstr[0] "%1 κριτική. "
+msgstr[1] "%1 κριτικές. "
+
+#: ../qml/Components/ReviewPreview.qml:252
+msgid "Edit Review"
+msgstr "Επεξεργασία Κριτικής"
+
+#: ../qml/Components/ReviewPreview.qml:255
+msgid "Review app"
+msgstr "Κριτική εφαρμογής"
+
+#: ../qml/Components/ReviewPreview.qml:258
+msgid "Sign in to review this app"
+msgstr "Συνδεθείτε για να γράψετε κριτική για αυτή την εφαρμογή"
+
+#: ../qml/Components/ReviewPreview.qml:261
+msgid "Install this app to review it"
+msgstr "Εγκαταστήστε αυτήν την εφαρμογή για να γράψετε κριτική"
+
+#: ../qml/Dialogs/DomainWarningDialog.qml:26
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:25
+msgid "Warning"
+msgstr "Προειδοποίηση"
+
+#: ../qml/Dialogs/DomainWarningDialog.qml:35
+msgid ""
+"You are currently using a non-standard domain for the OpenStore. This is a "
+"development feature. The domain you are using is:"
+msgstr ""
+"Αυτήν τη στιγμή χρησιμοποιείτε έναν μη τυπικό τομέα για το OpenStore. Αυτό "
+"είναι ένα χαρακτηριστικό ανάπτυξης. Ο τομέας που χρησιμοποιείτε είναι:"
+
+#: ../qml/Dialogs/DomainWarningDialog.qml:49
+msgid "Are you sure you want to continue?"
+msgstr "Είστε σίγουροι ότι θέλετε να συνεχίσετε;"
+
+#: ../qml/Dialogs/DomainWarningDialog.qml:53
+msgid "Yes, I know what I'm doing"
+msgstr "Ναι, γνωρίζω τι κάνω"
+
+#: ../qml/Dialogs/DomainWarningDialog.qml:61
+msgid "Get me out of here!"
+msgstr "Βγάλε με από εδώ!"
+
+#: ../qml/Dialogs/DonationDialog.qml:25
+msgid "Donating"
+msgstr "Δωρίζω"
+
+#: ../qml/Dialogs/DonationDialog.qml:26
+msgid "Would you like to support this app with a donation to the developer?"
+msgstr ""
+"Θέλετε να υποστηρίξετε αυτήν την εφαρμογή με μια δωρεά στον προγραμματιστή;"
+
+#: ../qml/Dialogs/DonationDialog.qml:32
+msgid "Donate now"
+msgstr "Δωρίστε τώρα"
+
+#: ../qml/Dialogs/DonationDialog.qml:40
+msgid "Maybe later"
+msgstr "Ίσως αργότερα"
+
+#: ../qml/Dialogs/FilterDialog.qml:26
+msgid "Filters and Sorting"
+msgstr "Φίλτρα και Ταξινόμηση"
+
+#: ../qml/Dialogs/FilterDialog.qml:38
+msgid "Sort By"
+msgstr "Ταξινόμηση Κατά"
+
+#: ../qml/Dialogs/FilterDialog.qml:45 ../qml/Dialogs/FilterDialog.qml:65
+msgid "Relevance"
+msgstr "Σχετικότητα"
+
+#: ../qml/Dialogs/FilterDialog.qml:46
+msgid "Most Popular"
+msgstr "Πιο Δημοφιλή"
+
+#: ../qml/Dialogs/FilterDialog.qml:47
+msgid "Least Popular"
+msgstr "Λιγότερο Δημοφιλή"
+
+#: ../qml/Dialogs/FilterDialog.qml:48
+msgid "Title (A-Z)"
+msgstr "Τίτλος (A-Z)"
+
+#: ../qml/Dialogs/FilterDialog.qml:49
+msgid "Title (Z-A)"
+msgstr "Τίτλος (Z-A)"
+
+#: ../qml/Dialogs/FilterDialog.qml:50
+msgid "Newest"
+msgstr "Νεότερα"
+
+#: ../qml/Dialogs/FilterDialog.qml:51
+msgid "Oldest"
+msgstr "Παλαιότερα"
+
+#: ../qml/Dialogs/FilterDialog.qml:52
+msgid "Latest Update"
+msgstr "Τελευταία Ενημέρωση"
+
+#: ../qml/Dialogs/FilterDialog.qml:53
+msgid "Oldest Update"
+msgstr "Παλαιότερη Ενημέρωση"
+
+#: ../qml/Dialogs/FilterDialog.qml:91
+msgid "Type"
+msgstr "Τύπος"
+
+#: ../qml/Dialogs/FilterDialog.qml:98 ../qml/Dialogs/FilterDialog.qml:112
+msgid "All Types"
+msgstr "Όλοι οι Τύποι"
+
+#: ../qml/Dialogs/FilterDialog.qml:99
+msgid "Apps"
+msgstr "Εφαρμογές"
+
+#: ../qml/Dialogs/FilterDialog.qml:100
+msgid "Web Apps"
+msgstr "Εφαρμογές Δικτύου"
+
+#: ../qml/Dialogs/FilterDialog.qml:135
+msgid "Apply"
+msgstr "Εφαρμογή"
+
+#: ../qml/Dialogs/InstallWarningDialog.qml:27
+msgid "Install unknown app?"
+msgstr "Εγκατάσταση άγνωστης εφαρμογής;"
+
+#: ../qml/Dialogs/InstallWarningDialog.qml:28
+msgid "Do you want to install the unknown app %1?"
+msgstr "Θέλετε να εγκαταστήσετε την άγνωστη εφαρμογή %1;"
+
+#: ../qml/Dialogs/NegativeReviewDialog.qml:26
+msgid "Review confirmation"
+msgstr "Ελέγξτε την επιβεβαίωση"
+
+#: ../qml/Dialogs/NegativeReviewDialog.qml:27
+msgid ""
+"Would you like to contact the author or file a bug instead? By opening a "
+"discussion with the developer(s) you could be helping to improve this app."
+msgstr ""
+"Θα θέλατε να επικοινωνήσετε με τον συντάκτη ή να υποβάλετε ένα σφάλμα; "
+"Ανοίγοντας μια συζήτηση με τον/τους προγραμματιστή(ές), θα μπορούσατε να "
+"βοηθήσετε στη βελτίωση αυτής της εφαρμογής."
+
+#: ../qml/Dialogs/NegativeReviewDialog.qml:37
+msgid "Get support"
+msgstr "Λάβετε Υποστήριξη"
+
+#: ../qml/Dialogs/NegativeReviewDialog.qml:47
+msgid "Post my review"
+msgstr "Δημοσίευση της κριτικής μου"
+
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
+msgid ""
+"This app has access to restricted parts of the system and all of your data. "
+"It has the potential break your system. While the OpenStore maintainers have "
+"reviewed the code for this app for safety, they are not responsible for "
+"anything bad that might happen to your device or data from installing this "
+"app."
+msgstr ""
+"Αυτή η εφαρμογή έχει πρόσβαση σε περιορισμένα μέρη του συστήματος και σε όλα "
+"τα δεδομένα σας. Έχει τη δυνατότητα να σπάσει το σύστημά σας. Ενώ οι "
+"συντηρητές του OpenStore έχουν ελέγξει τον κώδικα για αυτήν την εφαρμογή για "
+"ασφάλεια, δεν είναι υπεύθυνοι για οτιδήποτε κακό μπορεί να συμβεί στη "
+"συσκευή σας ή δεδομένα από την εγκατάσταση αυτής της εφαρμογής."
+
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
+msgid "I understand the risks"
+msgstr "Καταλαβαίνω τους κινδύνους"
+
+#: ../qml/Dialogs/UninstallDialog.qml:25
+msgid "Remove package"
+msgstr "Αφαίρεση πακέτου"
+
+#: ../qml/Dialogs/UninstallDialog.qml:26
+msgid "Do you want to remove %1?"
+msgstr "Θέλετε να αφαιρέσετε το %1;"
+
+#: ../qml/DiscoverPage.qml:40
+msgid "OpenStore"
+msgstr "OpenStore"
+
+#: ../qml/DiscoverPage.qml:73
+msgid "by %1"
+msgstr "κατά %1"
+
+#: ../qml/DiscoverPage.qml:112
+msgid "You are currently offline"
+msgstr "Αυτήν τη στιγμή είστε εκτός σύνδεσης"
+
+#: ../qml/DiscoverPage.qml:128
+msgid "OpenStore update available"
+msgstr "Διατίθεται ενημέρωση OpenStore"
+
+#: ../qml/DiscoverPage.qml:158
+msgid " (%1 update available)"
+msgid_plural " (%1 updates available)"
+msgstr[0] " (%1 ενημέρωση διαθέσιμη)"
+msgstr[1] " (%1 ενημερώσεις διαθέσιμες)"
+
+#: ../qml/DiscoverPage.qml:158 ../qml/DiscoverPage.qml:159
+#: ../qml/InstalledAppsPage.qml:52
+msgid "Installed Apps"
+msgstr "Εγκατεστημένες Εφαρμογές"
+
+#: ../qml/DiscoverPage.qml:183
+msgid "Browse Apps by Category"
+msgstr "Αναζήτηση Εφαρμογών ανά Κατηγορία"
+
+#: ../qml/FilteredAppList.qml:109
+msgid "No results found."
+msgstr "Δεν βρέθηκαν αποτελέσματα."
+
+#: ../qml/FilteredAppList.qml:109
+msgid "Nothing here yet"
+msgstr "Τίποτα εδώ ακόμα"
+
+#: ../qml/FilteredAppList.qml:110
+msgid "No app has been released in this category yet."
+msgstr "Δεν έχει κυκλοφορήσει καμία εφαρμογή σε αυτήν την κατηγορία ακόμη."
+
+#: ../qml/FilteredAppList.qml:110
+msgid "Try with a different search."
+msgstr "Δοκιμάστε με διαφορετική αναζήτηση."
+
+#. TRANSLATORS: %1 is the number of installed apps
+#: ../qml/InstalledAppsPage.qml:80
+msgid "Installed apps (%1)"
+msgstr "Εγκατεστημένες εφαρμογές (%1)"
+
+#. TRANSLATORS: %1 is the number of available app updates
+#: ../qml/InstalledAppsPage.qml:84
+msgid "Available updates (%1)"
+msgstr "Διαθέσιμες ενημερώσεις (%1)"
+
+#. TRANSLATORS: %1 is the number of apps that can be downgraded
+#: ../qml/InstalledAppsPage.qml:88
+msgid "Stable version available (%1)"
+msgstr "Διαθέσιμη σταθερή έκδοση (%1)"
+
+#: ../qml/InstalledAppsPage.qml:91
+msgid ""
+"The installed versions of these apps did not come from the OpenStore but a "
+"stable version is available."
+msgstr ""
+"Οι εγκατεστημένες εκδόσεις αυτών των εφαρμογών δεν προήλθαν από το OpenStore "
+"αλλά είναι διαθέσιμη μια σταθερή έκδοση."
+
+#: ../qml/InstalledAppsPage.qml:92
+msgid "Update all"
+msgstr "Ενημέρωση όλων"
+
+#: ../qml/InstalledAppsPage.qml:194
+msgid "No apps found"
+msgstr "Δεν βρέθηκαν εφαρμογές"
+
+#: ../qml/InstalledAppsPage.qml:195
+msgid "No app has been installed from OpenStore yet."
+msgstr "Δεν έχει εγκατασταθεί καμία εφαρμογή από το OpenStore ακόμα."
+
+#: ../qml/Main.qml:260 ../qml/SearchPage.qml:55
+msgid "Filters"
+msgstr "Φίλτρα"
+
+#: ../qml/Main.qml:307
+msgid "App installed"
+msgstr "Η εφαρμογή εγκαταστάθηκε"
+
+#: ../qml/Main.qml:308
+msgid "The app has been installed successfully."
+msgstr "Η εφαρμογή εγκαταστάθηκε με επιτυχία."
+
+#: ../qml/Main.qml:311 ../qml/Main.qml:324 ../qml/Main.qml:339
+msgid "OK"
+msgstr "Εντάξει"
+
+#: ../qml/Main.qml:320
+msgid "Installation failed"
+msgstr "Η εγκατάσταση απέτυχε"
+
+#: ../qml/Main.qml:321
+msgid ""
+"The package could not be installed. Make sure it is a valid click package."
+msgstr ""
+"Δεν ήταν δυνατή η εγκατάσταση του πακέτου. Βεβαιωθείτε ότι είναι ένα έγκυρο "
+"πακέτο κλικ."
+
+#: ../qml/Main.qml:335
+msgid "Installation failed (Error %1)"
+msgstr "Η εγκατάσταση απέτυχε (Σφάλμα %1)"
+
+#: ../qml/SearchPage.qml:48
+msgid "Search in OpenStore..."
+msgstr "Αναζήτηση στο OpenStore ..."
+
+#: ../qml/SettingsPage.qml:113
+msgid "OpenStore Account"
+msgstr "Λογαριασμός OpenStore"
+
+#: ../qml/SettingsPage.qml:121 ../qml/SignInPage.qml:31
+msgid "Sign in"
+msgstr "Συνδεθείτε"
+
+#: ../qml/SettingsPage.qml:138
+msgid "Sign out"
+msgstr "Αποσύνδεση"
+
+#: ../qml/SettingsPage.qml:166
+msgid "Parental control"
+msgstr "Γονικός έλεγχος"
+
+#: ../qml/SettingsPage.qml:172
+msgid "Hide adult-oriented content"
+msgstr "Απόκρυψη περιεχομένου για ενηλίκους"
+
+#: ../qml/SettingsPage.qml:182
+msgid ""
+"By typing your password you take full responsibility for showing NSFW "
+"content."
+msgstr ""
+"Πληκτρολογώντας τον κωδικό πρόσβασής σας, έχετε πλήρη ευθύνη για την "
+"εμφάνιση περιεχομένου NSFW."
+
+#: ../qml/SettingsPage.qml:207
+msgid "About OpenStore"
+msgstr "Σχετικά με το OpenStore"
+
+#: ../qml/SettingsPage.qml:223
+msgid "Report an issue"
+msgstr "Αναφέρετε ένα πρόβλημα"
+
+#: ../qml/SettingsPage.qml:232
+msgid "Additional Icons by"
+msgstr "Πρόσθετα εικονίδια από"
+
+#: openstore.desktop.in.h:1
+msgid ""
+"software;apps;applications;programs;store;market;play;click;discover;install;"
+msgstr ""
+"software;apps;applications;programs;store;market;play;click;discover;install;"

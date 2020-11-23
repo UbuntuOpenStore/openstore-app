@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-28 02:35+0000\n"
-"PO-Revision-Date: 2020-11-21 23:26+0000\n"
+"PO-Revision-Date: 2020-11-23 05:41+0000\n"
 "Last-Translator: abidin <abidin24@tutanota.com>\n"
 "Language-Team: Arabic <https://translate.ubports.com/projects/openstore/"
 "openstore-app/ar/>\n"
@@ -377,35 +377,35 @@ msgstr ""
 #. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
 #: ../qml/Components/HookIcon.qml:123
 msgid "Accounts provider"
-msgstr ""
+msgstr "موفر الحسابات"
 
 #: ../qml/Components/PackageTile.qml:98
 msgid "Update available"
-msgstr ""
+msgstr "يتوفر تحديث"
 
 #: ../qml/Components/PackageTile.qml:98
 msgid "✓ Installed"
-msgstr ""
+msgstr "✓ ثُبت"
 
 #: ../qml/Components/ReviewPreview.qml:93
 msgid "Something went wrong..."
-msgstr ""
+msgstr "حدث خطأ ما…"
 
 #: ../qml/Components/ReviewPreview.qml:99
 msgid "Error Posting Review"
-msgstr ""
+msgstr "خطأ أثناء نشر المراجعة"
 
 #: ../qml/Components/ReviewPreview.qml:113
 msgid "Review Posted Correctly"
-msgstr ""
+msgstr "نُشرت المراجعة بشكل صحيح"
 
 #: ../qml/Components/ReviewPreview.qml:114
 msgid "Your review has been posted successfully."
-msgstr ""
+msgstr "نُشرت مراجعتك بنجاح."
 
 #: ../qml/Components/ReviewPreview.qml:128
 msgid "Loading..."
-msgstr ""
+msgstr "يحمل…"
 
 #: ../qml/Components/ReviewPreview.qml:128
 msgid "Rate this app"
@@ -413,15 +413,15 @@ msgstr ""
 
 #: ../qml/Components/ReviewPreview.qml:135
 msgid "(Optional) Write a review"
-msgstr ""
+msgstr "اكتب مراجعة (اختياري)"
 
 #: ../qml/Components/ReviewPreview.qml:139
 msgid "%1/%2 characters"
-msgstr ""
+msgstr "%1/%2 محرف"
 
 #: ../qml/Components/ReviewPreview.qml:193
 msgid "Submit"
-msgstr "ارفع"
+msgstr "أرسل"
 
 #: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:143
 #: ../qml/Dialogs/InstallWarningDialog.qml:49
@@ -433,33 +433,33 @@ msgstr "ألغ"
 #: ../qml/Components/ReviewPreview.qml:244
 msgid "%1 review. "
 msgid_plural "%1 reviews. "
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
+msgstr[0] "بدون مراجعات. "
+msgstr[1] "مراجعة واحدة. "
+msgstr[2] "مراجعتان. "
+msgstr[3] "%1 مراجعات. "
+msgstr[4] "%1 مراجعة. "
+msgstr[5] "%1 مراجعة. "
 
 #: ../qml/Components/ReviewPreview.qml:252
 msgid "Edit Review"
-msgstr ""
+msgstr "حرر المراجعة"
 
 #: ../qml/Components/ReviewPreview.qml:255
 msgid "Review app"
-msgstr ""
+msgstr "اكتب مراجعة عن التطبيق"
 
 #: ../qml/Components/ReviewPreview.qml:258
 msgid "Sign in to review this app"
-msgstr ""
+msgstr "لِج لتكتب مراجعة عن التطبيق"
 
 #: ../qml/Components/ReviewPreview.qml:261
 msgid "Install this app to review it"
-msgstr ""
+msgstr "ثبت هذا التطبيق لتكتب مراجعة عنه"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:26
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:25
 msgid "Warning"
-msgstr ""
+msgstr "تحذير"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:35
 msgid ""

@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-31 04:27+0000\n"
-"PO-Revision-Date: 2020-07-25 18:07+0000\n"
-"Last-Translator: Daniel Frost <one@frostinfo.de>\n"
+"PO-Revision-Date: 2020-11-23 19:04+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://translate.ubports.com/projects/openstore/"
 "openstore-app/fi/>\n"
 "Language: fi\n"
@@ -34,9 +34,8 @@ msgstr "Poista"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:157
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:17
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:62
-#, fuzzy
 msgid "App"
-msgstr "Asennetut"
+msgstr "Sovellus"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:158
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
@@ -49,7 +48,7 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:19
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:64
 msgid "Web App"
-msgstr ""
+msgstr "Web-sovellus"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:160
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:20
@@ -72,7 +71,7 @@ msgstr "Avaa"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:281
 msgid "The OpenStore is installed!"
-msgstr ""
+msgstr "OpenStore on asennettu!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:290
 msgid "Install stable version"
@@ -92,13 +91,12 @@ msgid "This app is not compatible with your system."
 msgstr "Tämä sovellus ei ole yhteensopiva käyttämäsi järjestelmän kanssa."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:405
-#, fuzzy
 msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
 msgstr ""
-"Tällä sovelluksella on pääsy rajoitettuihin järjestelmätietoihin, katso "
-"yksityiskohdat alempana."
+"Tällä sovelluksella on pääsy rajoitettuihin osiin järjestelmästä ja kaikkiin "
+"tietoihisi, katso yksityiskohdat alempana."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:408
 msgid "This app has access to restricted system data, see below for details."
@@ -186,33 +184,32 @@ msgid "Permissions"
 msgstr "Käyttöoikeudet"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:714
-#, fuzzy
 msgid "Accounts"
-msgstr "Tilien tarjoaja"
+msgstr "Tilit"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:715
 msgid "Audio"
-msgstr ""
+msgstr "Ääni"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:716
 msgid "Bluetooth"
-msgstr ""
+msgstr "Bluetooth"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:717
 msgid "Calendar"
-msgstr ""
+msgstr "Kalenteri"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:718
 msgid "Camera"
-msgstr ""
+msgstr "Kamera"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:719
 msgid "Connectivity"
-msgstr ""
+msgstr "Yhdistettävyys"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:720
 msgid "Contacts"
-msgstr ""
+msgstr "Yhteystiedot"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:721
 msgid "Content Exchange Source"
@@ -224,52 +221,51 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:723
 msgid "Debug"
-msgstr ""
+msgstr "Vianjäljitys"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:724
 msgid "History"
-msgstr ""
+msgstr "Historia"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:725
 msgid "In App Purchases"
-msgstr ""
+msgstr "Sovelluksen sisäiset ostot"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:726
 msgid "Keep Display On"
-msgstr ""
+msgstr "Pidä näyttö päällä"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:727
-#, fuzzy
 msgid "Location"
-msgstr "Sovellus"
+msgstr "Sijainti"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:728
 msgid "Microphone"
-msgstr ""
+msgstr "Mikrofoni"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:729
 msgid "Read Music Files"
-msgstr ""
+msgstr "Lue musiikkitiedostot"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:730
 msgid "Music Files"
-msgstr ""
+msgstr "Musiikkitiedostot"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:731
 msgid "Networking"
-msgstr ""
+msgstr "Verkko"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:732
 msgid "Read Picture Files"
-msgstr ""
+msgstr "Lue kuvatiedostot"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:733
 msgid "Picture Files"
-msgstr ""
+msgstr "Kuvatiedostot"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:734
 msgid "Push Notifications"
-msgstr ""
+msgstr "Push-ilmoitukset"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:735
 msgid "Sensors"
@@ -281,15 +277,15 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:737
 msgid "Read Video Files"
-msgstr ""
+msgstr "Lue videotiedostot"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:738
 msgid "Video Files"
-msgstr ""
+msgstr "Videotiedostot"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:739
 msgid "Video"
-msgstr ""
+msgstr "Video"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:740
 msgid "Webview"
@@ -297,7 +293,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:744
 msgid "Full System Access"
-msgstr ""
+msgstr "Täysi pääsy järjestelmään"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:749
@@ -344,7 +340,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:852
 msgid "I understand the risks"
-msgstr ""
+msgstr "Ymmärrän riskit"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:861
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:366
@@ -380,13 +376,15 @@ msgstr "%1 tavua"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:95
 msgid "This app could not be found in the OpenStore"
-msgstr ""
+msgstr "Tätä sovellusta ei löytynyt OpenStoresta"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:98
 msgid ""
 "You are currently offline and the app details could not be fetched from the "
 "OpenStore"
 msgstr ""
+"Olet yhteydettömässä tilassa, eikä sovelluksen tietoja voitu noutaa "
+"OpenStoresta"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesTab.qml:38
 msgid "Categories"
@@ -408,15 +406,15 @@ msgid "Installed Apps"
 msgstr "Asennetut sovellukset"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:134
-#, fuzzy, qt-format
+#, qt-format
 msgid " (%1 update available)"
 msgid_plural " (%1 updates available)"
-msgstr[0] "Päivitys saatavilla"
-msgstr[1] "Päivitys saatavilla"
+msgstr[0] " (%1 päivitys saatavilla)"
+msgstr[1] " (%1 päivitystä saatavilla)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:159
 msgid "Browse Apps by Category"
-msgstr ""
+msgstr "Selaa sovelluksia luokittain"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
 msgid "Nothing here yet"
@@ -491,14 +489,13 @@ msgid "Get me out of here!"
 msgstr "Haluan pois täältä!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:344
-#, fuzzy
 msgid "Install unknown app?"
-msgstr "Asennetaanko sovellus?"
+msgstr "Asennetaanko tuntematon sovellus?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:345
-#, fuzzy, qt-format
+#, qt-format
 msgid "Do you want to install the unknown app %1?"
-msgstr "Haluatko asentaa %1?"
+msgstr "Haluatko asentaa tuntemattoman sovelluksen %1?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:386
 msgid "App installed"
@@ -580,18 +577,17 @@ msgid "Settings"
 msgstr "Asetukset"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:114
-#, fuzzy
 msgid "OpenStore Account"
-msgstr "OpenStore-tiimi"
+msgstr "OpenStore-tili"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:122
 #: /home/brian/dev/openstore/openstore-app/openstore/SignInWebView.qml:30
 msgid "Sign in"
-msgstr ""
+msgstr "Kirjaudu sisään"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:139
 msgid "Sign out"
-msgstr ""
+msgstr "Kirjaudu ulos"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:167
 msgid "Parental control"
@@ -633,9 +629,8 @@ msgstr "Sulje"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HighlightedApp.qml:106
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:187
-#, fuzzy
 msgid "Update"
-msgstr "Päivitä kaikki"
+msgstr "Päivitä"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HighlightedApp.qml:112
 msgid "Details"
@@ -675,59 +670,55 @@ msgstr "✓ Asennettu"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:73
 msgid "Something went wrong..."
-msgstr ""
+msgstr "Jokin meni pieleen..."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:79
 msgid "Error Posting Review"
-msgstr ""
+msgstr "Arvostelun lähetys epäonnistui"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:93
 msgid "Review Posted Correctly"
-msgstr ""
+msgstr "Arvostelu lähetettiin onnistuneesti"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:94
-#, fuzzy
 msgid "Your review has been posted successfully."
-msgstr "Sovellus on asennettu onnistuneesti."
+msgstr "Arvostelusi lähetettiin onnistuneesti."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:108
-#, fuzzy
 msgid "Rate this app"
-msgstr "Lahjoita tukeaksesi tätä sovellusta"
+msgstr "Arvostele tämä sovellus"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:108
 msgid "Loading..."
-msgstr ""
+msgstr "Ladataan..."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:129
 msgid "(Optional) Write a review"
-msgstr ""
+msgstr "(Valinnainen) Kirjoita arvostelu"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:133
 #, qt-format
 msgid "%1/%2 characters"
-msgstr ""
+msgstr "%1/%2 merkkiä"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:222
 #, qt-format
 msgid "%1 review. "
 msgid_plural "%1 reviews. "
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 arvostelu. "
+msgstr[1] "%1 arvostelua. "
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:228
 msgid "Sign in to review this app"
-msgstr ""
+msgstr "Kirjaudu arvostellaksesi sovelluksen"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:229
-#, fuzzy
 msgid "Review app"
-msgstr "Lahjoita tukeaksesi tätä sovellusta"
+msgstr "Arvostele sovellus"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:230
-#, fuzzy
 msgid "Install this app to review it"
-msgstr "Asennus epäonnistui"
+msgstr "Asenna sovellus arvostellaksesi sen"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:46
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/TextualButtonStyle.qml:54

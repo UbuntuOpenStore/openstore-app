@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-28 02:35+0000\n"
-"PO-Revision-Date: 2020-11-23 05:41+0000\n"
+"PO-Revision-Date: 2020-12-08 00:56+0000\n"
 "Last-Translator: abidin <abidin24@tutanota.com>\n"
 "Language-Team: Arabic <https://translate.ubports.com/projects/openstore/"
 "openstore-app/ar/>\n"
@@ -137,7 +137,7 @@ msgstr "الرخصة"
 
 #: ../qml/AppDetailsPage.qml:547
 msgid "N/A"
-msgstr ""
+msgstr "لا شيء"
 
 #: ../qml/AppDetailsPage.qml:557 ../qml/SettingsPage.qml:214
 msgid "Source Code"
@@ -145,7 +145,7 @@ msgstr "الشيفرة المصدرية"
 
 #: ../qml/AppDetailsPage.qml:570
 msgid "Get support for this app"
-msgstr ""
+msgstr "احصل على دعم لهذا التطبيق"
 
 #: ../qml/AppDetailsPage.qml:583
 msgid "Donate to support this app"
@@ -154,7 +154,7 @@ msgstr "تبرع لدعم التطبيق"
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
 #: ../qml/AppDetailsPage.qml:599
 msgid "More from %1"
-msgstr ""
+msgstr "مزيد من تطبيقات %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
 #: ../qml/AppDetailsPage.qml:614
@@ -362,12 +362,12 @@ msgstr "التطبيق"
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: ../qml/Components/HookIcon.qml:81
 msgid "URL Handler"
-msgstr ""
+msgstr "مناول عنوان الرابط"
 
 #. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
 #: ../qml/Components/HookIcon.qml:95
 msgid "Content Hub Handler"
-msgstr ""
+msgstr "مناول Content Hub"
 
 #. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
 #: ../qml/Components/HookIcon.qml:109
@@ -409,7 +409,7 @@ msgstr "يحمل…"
 
 #: ../qml/Components/ReviewPreview.qml:128
 msgid "Rate this app"
-msgstr ""
+msgstr "قيّم التطبيق"
 
 #: ../qml/Components/ReviewPreview.qml:135
 msgid "(Optional) Write a review"
@@ -469,35 +469,35 @@ msgstr ""
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:49
 msgid "Are you sure you want to continue?"
-msgstr ""
+msgstr "هل تريد المتابعة؟"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:53
 msgid "Yes, I know what I'm doing"
-msgstr ""
+msgstr "نعم، أدري ما أفعل"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:61
 msgid "Get me out of here!"
-msgstr ""
+msgstr "أخرجني من هنا!"
 
 #: ../qml/Dialogs/DonationDialog.qml:25
 msgid "Donating"
-msgstr ""
+msgstr "يتبرع"
 
 #: ../qml/Dialogs/DonationDialog.qml:26
 msgid "Would you like to support this app with a donation to the developer?"
-msgstr ""
+msgstr "هل تريد دعم هذا المطور بالتبرع؟"
 
 #: ../qml/Dialogs/DonationDialog.qml:32
 msgid "Donate now"
-msgstr ""
+msgstr "تبرع الآن"
 
 #: ../qml/Dialogs/DonationDialog.qml:40
 msgid "Maybe later"
-msgstr ""
+msgstr "ربما لاحقًا"
 
 #: ../qml/Dialogs/FilterDialog.qml:26
 msgid "Filters and Sorting"
-msgstr ""
+msgstr "المرشحات والفرز"
 
 #: ../qml/Dialogs/FilterDialog.qml:38
 msgid "Sort By"
@@ -509,27 +509,27 @@ msgstr "وظيفة تمييزية"
 
 #: ../qml/Dialogs/FilterDialog.qml:46
 msgid "Most Popular"
-msgstr ""
+msgstr "الأكثر شهرة"
 
 #: ../qml/Dialogs/FilterDialog.qml:47
 msgid "Least Popular"
-msgstr ""
+msgstr "الأقل شهرة"
 
 #: ../qml/Dialogs/FilterDialog.qml:48
 msgid "Title (A-Z)"
-msgstr ""
+msgstr "العنوان (A-Z)"
 
 #: ../qml/Dialogs/FilterDialog.qml:49
 msgid "Title (Z-A)"
-msgstr ""
+msgstr "العنوان (A-Z)"
 
 #: ../qml/Dialogs/FilterDialog.qml:50
 msgid "Newest"
-msgstr ""
+msgstr "الأحدث"
 
 #: ../qml/Dialogs/FilterDialog.qml:51
 msgid "Oldest"
-msgstr ""
+msgstr "الأقدم"
 
 #: ../qml/Dialogs/FilterDialog.qml:52
 msgid "Latest Update"
@@ -541,31 +541,31 @@ msgstr ""
 
 #: ../qml/Dialogs/FilterDialog.qml:91
 msgid "Type"
-msgstr ""
+msgstr "النوع"
 
 #: ../qml/Dialogs/FilterDialog.qml:98 ../qml/Dialogs/FilterDialog.qml:112
 msgid "All Types"
-msgstr ""
+msgstr "كل الأنواع"
 
 #: ../qml/Dialogs/FilterDialog.qml:99
 msgid "Apps"
-msgstr ""
+msgstr "تطبيقات"
 
 #: ../qml/Dialogs/FilterDialog.qml:100
 msgid "Web Apps"
-msgstr ""
+msgstr "تطبيقات الويب"
 
 #: ../qml/Dialogs/FilterDialog.qml:135
 msgid "Apply"
-msgstr ""
+msgstr "طبّق"
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:27
 msgid "Install unknown app?"
-msgstr ""
+msgstr "أتريد تثبيت تطبيق مجهول؟"
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:28
 msgid "Do you want to install the unknown app %1?"
-msgstr ""
+msgstr "أتريد تثبيت التطبيق المجهول %1؟"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:26
 msgid "Review confirmation"
@@ -579,11 +579,11 @@ msgstr ""
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:37
 msgid "Get support"
-msgstr ""
+msgstr "احصل على الدعم"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:47
 msgid "Post my review"
-msgstr ""
+msgstr "انشر مراجعتي"
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
 msgid ""
@@ -596,15 +596,15 @@ msgstr ""
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
 msgid "I understand the risks"
-msgstr ""
+msgstr "اتفهم المخاطر"
 
 #: ../qml/Dialogs/UninstallDialog.qml:25
 msgid "Remove package"
-msgstr ""
+msgstr "أزل حزمة"
 
 #: ../qml/Dialogs/UninstallDialog.qml:26
 msgid "Do you want to remove %1?"
-msgstr ""
+msgstr "أتريد إزالة %1؟"
 
 #: ../qml/DiscoverPage.qml:40
 msgid "OpenStore"
@@ -612,46 +612,46 @@ msgstr ""
 
 #: ../qml/DiscoverPage.qml:73
 msgid "by %1"
-msgstr ""
+msgstr "طوره %1"
 
 #: ../qml/DiscoverPage.qml:112
 msgid "You are currently offline"
-msgstr ""
+msgstr "انت غير متصل حاليًا"
 
 #: ../qml/DiscoverPage.qml:128
 msgid "OpenStore update available"
-msgstr ""
+msgstr "يتوفر تحديث لـ OpenStore"
 
 #: ../qml/DiscoverPage.qml:158
 msgid " (%1 update available)"
 msgid_plural " (%1 updates available)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
+msgstr[0] " (لا تتوفر تحديثات)"
+msgstr[1] " (يتوفر تحديث واحد("
+msgstr[2] " (يتوفر تحديثان)"
+msgstr[3] " (تتوفر %1 تحديثات)"
+msgstr[4] " (يتوافر %1 تحديثًا)"
+msgstr[5] " (يتوفر %1 تحديث)"
 
 #: ../qml/DiscoverPage.qml:158 ../qml/DiscoverPage.qml:159
 #: ../qml/InstalledAppsPage.qml:52
 msgid "Installed Apps"
-msgstr ""
+msgstr "التطبيقات المثبتة"
 
 #: ../qml/DiscoverPage.qml:183
 msgid "Browse Apps by Category"
-msgstr ""
+msgstr "تصفح التطبيقات حسب التصنيف"
 
 #: ../qml/FilteredAppList.qml:109
 msgid "No results found."
-msgstr ""
+msgstr "لم يُعثر على نتائج."
 
 #: ../qml/FilteredAppList.qml:109
 msgid "Nothing here yet"
-msgstr ""
+msgstr "لا شيء هنا"
 
 #: ../qml/FilteredAppList.qml:110
 msgid "No app has been released in this category yet."
-msgstr ""
+msgstr "لم تصدر تطبيقات بهذا التصنيف."
 
 #: ../qml/FilteredAppList.qml:110
 msgid "Try with a different search."
@@ -660,17 +660,17 @@ msgstr ""
 #. TRANSLATORS: %1 is the number of installed apps
 #: ../qml/InstalledAppsPage.qml:80
 msgid "Installed apps (%1)"
-msgstr ""
+msgstr "التطبيقات المثبتة (%1)"
 
 #. TRANSLATORS: %1 is the number of available app updates
 #: ../qml/InstalledAppsPage.qml:84
 msgid "Available updates (%1)"
-msgstr ""
+msgstr "التحديثات المتوفرة (%1)"
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
 #: ../qml/InstalledAppsPage.qml:88
 msgid "Stable version available (%1)"
-msgstr ""
+msgstr "النُسخ المستقرة المتوفرة (%1)"
 
 #: ../qml/InstalledAppsPage.qml:91
 msgid ""
@@ -680,11 +680,11 @@ msgstr ""
 
 #: ../qml/InstalledAppsPage.qml:92
 msgid "Update all"
-msgstr ""
+msgstr "حدّث الكل"
 
 #: ../qml/InstalledAppsPage.qml:194
 msgid "No apps found"
-msgstr ""
+msgstr "لم يُعثر على تطبيقات"
 
 #: ../qml/InstalledAppsPage.qml:195
 msgid "No app has been installed from OpenStore yet."
@@ -692,48 +692,48 @@ msgstr ""
 
 #: ../qml/Main.qml:260 ../qml/SearchPage.qml:55
 msgid "Filters"
-msgstr ""
+msgstr "المرشحات"
 
 #: ../qml/Main.qml:307
 msgid "App installed"
-msgstr ""
+msgstr "التطبيق مثبت"
 
 #: ../qml/Main.qml:308
 msgid "The app has been installed successfully."
-msgstr ""
+msgstr "ثُبت التطبيق بنجاح."
 
 #: ../qml/Main.qml:311 ../qml/Main.qml:324 ../qml/Main.qml:339
 msgid "OK"
-msgstr ""
+msgstr "موافق"
 
 #: ../qml/Main.qml:320
 msgid "Installation failed"
-msgstr ""
+msgstr "فشل التثبيت"
 
 #: ../qml/Main.qml:321
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
-msgstr ""
+msgstr "تعذر تثبيت الحزمة. تأكد أنها حزمة click صالحة."
 
 #: ../qml/Main.qml:335
 msgid "Installation failed (Error %1)"
-msgstr ""
+msgstr "فشل التثبيت (خطأ %1)"
 
 #: ../qml/SearchPage.qml:48
 msgid "Search in OpenStore..."
-msgstr ""
+msgstr "ابحث في OpenStore…"
 
 #: ../qml/SettingsPage.qml:113
 msgid "OpenStore Account"
-msgstr ""
+msgstr "حساب OpenStore"
 
 #: ../qml/SettingsPage.qml:121 ../qml/SignInPage.qml:31
 msgid "Sign in"
-msgstr ""
+msgstr "لِج"
 
 #: ../qml/SettingsPage.qml:138
 msgid "Sign out"
-msgstr ""
+msgstr "اخرج"
 
 #: ../qml/SettingsPage.qml:166
 msgid "Parental control"
@@ -741,7 +741,7 @@ msgstr ""
 
 #: ../qml/SettingsPage.qml:172
 msgid "Hide adult-oriented content"
-msgstr ""
+msgstr "إخف المحتوى الوجه للكبار"
 
 #: ../qml/SettingsPage.qml:182
 msgid ""
@@ -751,17 +751,17 @@ msgstr ""
 
 #: ../qml/SettingsPage.qml:207
 msgid "About OpenStore"
-msgstr ""
+msgstr "حول OpenStore"
 
 #: ../qml/SettingsPage.qml:223
 msgid "Report an issue"
-msgstr ""
+msgstr "ابلغ عن علة"
 
 #: ../qml/SettingsPage.qml:232
 msgid "Additional Icons by"
-msgstr ""
+msgstr "الأيقونات الاضافية وفرها"
 
 #: openstore.desktop.in.h:1
 msgid ""
 "software;apps;applications;programs;store;market;play;click;discover;install;"
-msgstr ""
+msgstr "برمجية;تطبيق;تطبيقات;برنامج;متجر;سوق;ثبت;أزل;حدث;لعب;اكتشف;"

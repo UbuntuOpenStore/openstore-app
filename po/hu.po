@@ -1,0 +1,774 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the openstore.openstore-team package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: openstore.openstore-team\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-28 02:35+0000\n"
+"PO-Revision-Date: 2021-01-14 22:02+0000\n"
+"Last-Translator: Adam <padamyno@gmail.com>\n"
+"Language-Team: Hungarian <https://translate.ubports.com/projects/openstore/"
+"openstore-app/hu/>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.11.3\n"
+
+#: ../qml/AppDetailsPage.qml:109 ../qml/AppLocalDetailsPage.qml:34
+msgid "App details"
+msgstr "Alkalmazás részletei"
+
+#: ../qml/AppDetailsPage.qml:116 ../qml/AppDetailsPage.qml:385
+#: ../qml/AppLocalDetailsPage.qml:41 ../qml/Dialogs/UninstallDialog.qml:33
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#: ../qml/AppDetailsPage.qml:152 ../qml/Components/PackageListItem.qml:34
+#: ../qml/Components/PackageTile.qml:79
+msgid "App"
+msgstr "App"
+
+#: ../qml/AppDetailsPage.qml:153 ../qml/Components/HookIcon.qml:67
+#: ../qml/Components/PackageListItem.qml:35
+#: ../qml/Components/PackageTile.qml:80
+msgid "Scope"
+msgstr "Szkóp"
+
+#: ../qml/AppDetailsPage.qml:154 ../qml/Components/PackageListItem.qml:36
+#: ../qml/Components/PackageTile.qml:81
+msgid "Web App"
+msgstr "WebApp"
+
+#: ../qml/AppDetailsPage.qml:155 ../qml/Components/PackageListItem.qml:37
+#: ../qml/Components/PackageTile.qml:82
+msgid "Web App+"
+msgstr "WebApp+"
+
+#: ../qml/AppDetailsPage.qml:239
+msgid ""
+"The installed version of this app doesn't come from the OpenStore server. "
+"You can install the latest stable update by tapping the button below."
+msgstr ""
+"Az alkalmalmazás telepített verziója nem az OpenStore szerveréről származik. "
+"Telepítheti a legfrissebb stabil frissítést az alábbi gomb megnyomásával."
+
+#: ../qml/AppDetailsPage.qml:264 ../qml/AppLocalDetailsPage.qml:103
+#: ../qml/Components/HighlightedApp.qml:110
+msgid "Open"
+msgstr "Megnyitás"
+
+#: ../qml/AppDetailsPage.qml:280
+msgid "The OpenStore is installed!"
+msgstr "Az OpenStore telepítve!"
+
+#: ../qml/AppDetailsPage.qml:289
+msgid "Install stable version"
+msgstr "Stabil verzió telepítése"
+
+#: ../qml/AppDetailsPage.qml:292
+msgid "Upgrade"
+msgstr "Frissítés"
+
+#: ../qml/AppDetailsPage.qml:295 ../qml/Dialogs/InstallWarningDialog.qml:41
+msgid "Install"
+msgstr "Telepítés"
+
+#: ../qml/AppDetailsPage.qml:371
+msgid "This app is not compatible with your system."
+msgstr "Az alkalmazás nem kompatíbilis ezzel a rendszerrel."
+
+#: ../qml/AppDetailsPage.qml:404
+msgid ""
+"This app has access to restricted parts of the system and all of your data, "
+"see below for details."
+msgstr ""
+"Az alkalmazás hozzáfér a rendszer számára fenntartot területhez és az Ön "
+"összes adatához. Részletek alább."
+
+#: ../qml/AppDetailsPage.qml:407
+msgid "This app has access to restricted system data, see below for details."
+msgstr ""
+"Az alkalmazás hozzáfér a rendszer számára fenntartott területhez. Részletek "
+"alább."
+
+#: ../qml/AppDetailsPage.qml:432
+msgid "Description"
+msgstr "Leírás"
+
+#. TRANSLATORS: Title of the changelog section
+#: ../qml/AppDetailsPage.qml:470
+msgid "What's New"
+msgstr "Újdonságok"
+
+#: ../qml/AppDetailsPage.qml:489
+msgid "Packager/Publisher"
+msgstr "Csomagoló/Kiadó"
+
+#: ../qml/AppDetailsPage.qml:498 ../qml/AppLocalDetailsPage.qml:137
+msgid "Installed version"
+msgstr "Telepített verzó"
+
+#: ../qml/AppDetailsPage.qml:508
+msgid "Latest available version"
+msgstr "Legfrissebb elérhető verzió"
+
+#: ../qml/AppDetailsPage.qml:517
+msgid "First released"
+msgstr "Első megjelenés"
+
+#: ../qml/AppDetailsPage.qml:528
+msgid "Downloads of the latest version"
+msgstr "Legújabb verziót letöltötték"
+
+#: ../qml/AppDetailsPage.qml:537
+msgid "Total downloads"
+msgstr "Összes letöltés"
+
+#: ../qml/AppDetailsPage.qml:546
+msgid "License"
+msgstr "Licensz"
+
+#: ../qml/AppDetailsPage.qml:547
+msgid "N/A"
+msgstr "N/A"
+
+#: ../qml/AppDetailsPage.qml:557 ../qml/SettingsPage.qml:214
+msgid "Source Code"
+msgstr "Forráskód"
+
+#: ../qml/AppDetailsPage.qml:570
+msgid "Get support for this app"
+msgstr "Közreműködés a fejlesztésben"
+
+#: ../qml/AppDetailsPage.qml:583
+msgid "Donate to support this app"
+msgstr "Felajánlás a fejlesztők számára"
+
+#. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
+#: ../qml/AppDetailsPage.qml:599
+msgid "More from %1"
+msgstr "Mégtöbb tőle: %1"
+
+#. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
+#: ../qml/AppDetailsPage.qml:614
+msgid "Other apps in %1"
+msgstr "Mégtöbb alkalmazás a(z) %1 kategóriában"
+
+#: ../qml/AppDetailsPage.qml:620
+msgid "Package contents"
+msgstr "Csomag tartalma"
+
+#: ../qml/AppDetailsPage.qml:713
+msgid "Permissions"
+msgstr "Jogosultságok"
+
+#: ../qml/AppDetailsPage.qml:718
+msgid "Accounts"
+msgstr "Fiókok"
+
+#: ../qml/AppDetailsPage.qml:719
+msgid "Audio"
+msgstr "Hang"
+
+#: ../qml/AppDetailsPage.qml:720
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#: ../qml/AppDetailsPage.qml:721
+msgid "Calendar"
+msgstr "Naptár"
+
+#: ../qml/AppDetailsPage.qml:722
+msgid "Camera"
+msgstr "Kamera"
+
+#: ../qml/AppDetailsPage.qml:723
+msgid "Connectivity"
+msgstr "Hálózati kapcsolatok"
+
+#: ../qml/AppDetailsPage.qml:724
+msgid "Contacts"
+msgstr "Névjegyek"
+
+#: ../qml/AppDetailsPage.qml:725
+msgid "Content Exchange Source"
+msgstr "Tartalom-csere Forrás"
+
+#: ../qml/AppDetailsPage.qml:726
+msgid "Content Exchange"
+msgstr "Tartalom-csere"
+
+#: ../qml/AppDetailsPage.qml:727
+msgid "Debug"
+msgstr "Hibakeresés"
+
+#: ../qml/AppDetailsPage.qml:728
+msgid "History"
+msgstr "Előzmények"
+
+#: ../qml/AppDetailsPage.qml:729
+msgid "In App Purchases"
+msgstr "Alkalmazáson belüli vásárlások"
+
+#: ../qml/AppDetailsPage.qml:730
+msgid "Keep Display On"
+msgstr "Kijelző ébrentartása"
+
+#: ../qml/AppDetailsPage.qml:731
+msgid "Location"
+msgstr "Tartózkodási hely"
+
+#: ../qml/AppDetailsPage.qml:732
+msgid "Microphone"
+msgstr "Mikrofon"
+
+#: ../qml/AppDetailsPage.qml:733
+msgid "Read Music Files"
+msgstr "Zenei fájlok olvasása"
+
+#: ../qml/AppDetailsPage.qml:734
+msgid "Music Files"
+msgstr "Zenei fájlok"
+
+#: ../qml/AppDetailsPage.qml:735
+msgid "Networking"
+msgstr "Hálózatok"
+
+#: ../qml/AppDetailsPage.qml:736
+msgid "Read Picture Files"
+msgstr "Képfájlok olvasása"
+
+#: ../qml/AppDetailsPage.qml:737
+msgid "Picture Files"
+msgstr "Képfájlok"
+
+#: ../qml/AppDetailsPage.qml:738
+msgid "Push Notifications"
+msgstr "Push értesítések"
+
+#: ../qml/AppDetailsPage.qml:739
+msgid "Sensors"
+msgstr "Szenzorok"
+
+#: ../qml/AppDetailsPage.qml:740
+msgid "User Metrics"
+msgstr "Felhasználói metrika"
+
+#: ../qml/AppDetailsPage.qml:741
+msgid "Read Video Files"
+msgstr "Videófájlok olvasása"
+
+#: ../qml/AppDetailsPage.qml:742
+msgid "Video Files"
+msgstr "Videófájlok"
+
+#: ../qml/AppDetailsPage.qml:743
+msgid "Video"
+msgstr "Videó"
+
+#: ../qml/AppDetailsPage.qml:744
+msgid "Webview"
+msgstr "Webview"
+
+#: ../qml/AppDetailsPage.qml:748
+msgid "Full System Access"
+msgstr "Teljes Rendszerhozzáérés"
+
+#. TRANSLATORS: this will show when an app doesn't need any special permissions
+#: ../qml/AppDetailsPage.qml:753
+msgid "none required"
+msgstr "nem szükséges semmi"
+
+#: ../qml/AppDetailsPage.qml:789
+msgid "Read paths"
+msgstr "Elérési útvonalak olvasása"
+
+#: ../qml/AppDetailsPage.qml:806
+msgid "Write paths"
+msgstr "Elérési útvonalak írása"
+
+#. TRANSLATORS: %1 is the size of a file, expressed in GB
+#: ../qml/AppDetailsPage.qml:877
+msgid "%1 GB"
+msgstr "%1 GB"
+
+#. TRANSLATORS: %1 is the size of a file, expressed in MB
+#: ../qml/AppDetailsPage.qml:882
+msgid "%1 MB"
+msgstr "%1 MB"
+
+#. TRANSLATORS: %1 is the size of a file, expressed in kB
+#: ../qml/AppDetailsPage.qml:887
+msgid "%1 kB"
+msgstr "%1 kB"
+
+#. TRANSLATORS: %1 is the size of a file, expressed in bytes
+#: ../qml/AppDetailsPage.qml:890
+msgid "%1 bytes"
+msgstr "%1 bájt"
+
+#: ../qml/AppLocalDetailsPage.qml:117
+msgid "This app could not be found in the OpenStore"
+msgstr "Az alkalmazás nem található az OpenStore-ban"
+
+#: ../qml/AppLocalDetailsPage.qml:120
+msgid ""
+"You are currently offline and the app details could not be fetched from the "
+"OpenStore"
+msgstr ""
+"Jelenleg offline módban van, ezért az alkalmazás adatai nem elérhetők "
+"OpenStore-ból"
+
+#: ../qml/CategoriesPage.qml:39
+msgid "Categories"
+msgstr "Kategóriák"
+
+#: ../qml/Components/BottomEdgePageStack.qml:101
+msgid "Back"
+msgstr "Vissza"
+
+#: ../qml/Components/BottomEdgePageStack.qml:101
+#: ../qml/Components/ReviewPreview.qml:103
+#: ../qml/Components/ReviewPreview.qml:117
+msgid "Close"
+msgstr "Bezárás"
+
+#: ../qml/Components/HeaderMain.qml:27 ../qml/SettingsPage.qml:29
+msgid "Settings"
+msgstr "Beállítások"
+
+#: ../qml/Components/HeaderMain.qml:40 ../qml/SearchPage.qml:35
+msgid "Search"
+msgstr "Keresés"
+
+#: ../qml/Components/HighlightedApp.qml:107
+#: ../qml/Components/ReviewPreview.qml:193
+msgid "Update"
+msgstr "Frissítés"
+
+#: ../qml/Components/HighlightedApp.qml:113
+msgid "Details"
+msgstr "Részletek"
+
+#: ../qml/Components/HookIcon.qml:54
+msgid "Application"
+msgstr "Alkalmazás"
+
+#. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
+#: ../qml/Components/HookIcon.qml:81
+msgid "URL Handler"
+msgstr "URL Kezelője"
+
+#. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
+#: ../qml/Components/HookIcon.qml:95
+msgid "Content Hub Handler"
+msgstr "Tartalomszolgáltató Kezelője"
+
+#. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
+#: ../qml/Components/HookIcon.qml:109
+msgid "Push Helper"
+msgstr "Push Helper"
+
+#. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
+#: ../qml/Components/HookIcon.qml:123
+msgid "Accounts provider"
+msgstr "Tartalomszolgáltató"
+
+#: ../qml/Components/PackageTile.qml:98
+msgid "Update available"
+msgstr "Fissítés elérhető"
+
+#: ../qml/Components/PackageTile.qml:98
+msgid "✓ Installed"
+msgstr "✓ Telepítve"
+
+#: ../qml/Components/ReviewPreview.qml:93
+msgid "Something went wrong..."
+msgstr "Valami nem működik..."
+
+#: ../qml/Components/ReviewPreview.qml:99
+msgid "Error Posting Review"
+msgstr "Hiba történt a beküldés során"
+
+#: ../qml/Components/ReviewPreview.qml:113
+msgid "Review Posted Correctly"
+msgstr "Értékelés elküldve"
+
+#: ../qml/Components/ReviewPreview.qml:114
+msgid "Your review has been posted successfully."
+msgstr "Az értékelése sikeresen feltöltésre került."
+
+#: ../qml/Components/ReviewPreview.qml:128
+msgid "Loading..."
+msgstr "Betöltés..."
+
+#: ../qml/Components/ReviewPreview.qml:128
+msgid "Rate this app"
+msgstr "Alkalmazás értékelése"
+
+#: ../qml/Components/ReviewPreview.qml:135
+msgid "(Optional) Write a review"
+msgstr "(Opcionális) Értékelés írása"
+
+#: ../qml/Components/ReviewPreview.qml:139
+msgid "%1/%2 characters"
+msgstr "%1/%2 karakter"
+
+#: ../qml/Components/ReviewPreview.qml:193
+msgid "Submit"
+msgstr "Küldés"
+
+#: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:143
+#: ../qml/Dialogs/InstallWarningDialog.qml:49
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
+#: ../qml/Dialogs/UninstallDialog.qml:42
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: ../qml/Components/ReviewPreview.qml:244
+msgid "%1 review. "
+msgid_plural "%1 reviews. "
+msgstr[0] "%1 értékelés. "
+msgstr[1] "%1 értékelés. "
+
+#: ../qml/Components/ReviewPreview.qml:252
+msgid "Edit Review"
+msgstr "Értékelés módosítása"
+
+#: ../qml/Components/ReviewPreview.qml:255
+msgid "Review app"
+msgstr "Alkalmazás értékelése"
+
+#: ../qml/Components/ReviewPreview.qml:258
+msgid "Sign in to review this app"
+msgstr "Jelentkezzen be az értékeléshez"
+
+#: ../qml/Components/ReviewPreview.qml:261
+msgid "Install this app to review it"
+msgstr "Telepítse az értékeléshez"
+
+#: ../qml/Dialogs/DomainWarningDialog.qml:26
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:25
+msgid "Warning"
+msgstr "Figyelem"
+
+#: ../qml/Dialogs/DomainWarningDialog.qml:35
+msgid ""
+"You are currently using a non-standard domain for the OpenStore. This is a "
+"development feature. The domain you are using is:"
+msgstr ""
+"Az OpenStore számára egy non-stantard domain van használatban. Ez egy "
+"fejlesztői lehetőség. Az Ön által használt domain:"
+
+#: ../qml/Dialogs/DomainWarningDialog.qml:49
+msgid "Are you sure you want to continue?"
+msgstr "Szeretné folytatni?"
+
+#: ../qml/Dialogs/DomainWarningDialog.qml:53
+msgid "Yes, I know what I'm doing"
+msgstr "Igen, tudom mit csinálok"
+
+#: ../qml/Dialogs/DomainWarningDialog.qml:61
+msgid "Get me out of here!"
+msgstr "Ments ki innen!"
+
+#: ../qml/Dialogs/DonationDialog.qml:25
+msgid "Donating"
+msgstr "Felajánlás"
+
+#: ../qml/Dialogs/DonationDialog.qml:26
+msgid "Would you like to support this app with a donation to the developer?"
+msgstr "Szeretné támogatni az alkalmazás fejlesztőit?"
+
+#: ../qml/Dialogs/DonationDialog.qml:32
+msgid "Donate now"
+msgstr "Támogatás most"
+
+#: ../qml/Dialogs/DonationDialog.qml:40
+msgid "Maybe later"
+msgstr "Talán később"
+
+#: ../qml/Dialogs/FilterDialog.qml:26
+msgid "Filters and Sorting"
+msgstr "Szűrők és Rendezés"
+
+#: ../qml/Dialogs/FilterDialog.qml:38
+msgid "Sort By"
+msgstr "Rendezés"
+
+#: ../qml/Dialogs/FilterDialog.qml:45 ../qml/Dialogs/FilterDialog.qml:65
+msgid "Relevance"
+msgstr "Relevancia"
+
+#: ../qml/Dialogs/FilterDialog.qml:46
+msgid "Most Popular"
+msgstr "Legkedveltebb"
+
+#: ../qml/Dialogs/FilterDialog.qml:47
+msgid "Least Popular"
+msgstr "Legkevésbé kedvelt"
+
+#: ../qml/Dialogs/FilterDialog.qml:48
+msgid "Title (A-Z)"
+msgstr "Név (A-Z)"
+
+#: ../qml/Dialogs/FilterDialog.qml:49
+msgid "Title (Z-A)"
+msgstr "Név (Z-A)"
+
+#: ../qml/Dialogs/FilterDialog.qml:50
+msgid "Newest"
+msgstr "Legújabb"
+
+#: ../qml/Dialogs/FilterDialog.qml:51
+msgid "Oldest"
+msgstr "Legrégebbi"
+
+#: ../qml/Dialogs/FilterDialog.qml:52
+msgid "Latest Update"
+msgstr "Legfrissebb"
+
+#: ../qml/Dialogs/FilterDialog.qml:53
+msgid "Oldest Update"
+msgstr "Legrégebben frissítve"
+
+#: ../qml/Dialogs/FilterDialog.qml:91
+msgid "Type"
+msgstr "Típus"
+
+#: ../qml/Dialogs/FilterDialog.qml:98 ../qml/Dialogs/FilterDialog.qml:112
+msgid "All Types"
+msgstr "Összes típus"
+
+#: ../qml/Dialogs/FilterDialog.qml:99
+msgid "Apps"
+msgstr "Appok"
+
+#: ../qml/Dialogs/FilterDialog.qml:100
+msgid "Web Apps"
+msgstr "WebAppok"
+
+#: ../qml/Dialogs/FilterDialog.qml:135
+msgid "Apply"
+msgstr "Alkalmaz"
+
+#: ../qml/Dialogs/InstallWarningDialog.qml:27
+msgid "Install unknown app?"
+msgstr "Ismeretlen alkalmazás telepítése?"
+
+#: ../qml/Dialogs/InstallWarningDialog.qml:28
+msgid "Do you want to install the unknown app %1?"
+msgstr "Szeretné telepíteni ezt az ismeretlen alkalmazást: %1?"
+
+#: ../qml/Dialogs/NegativeReviewDialog.qml:26
+msgid "Review confirmation"
+msgstr "Értékelés jóváhagyása"
+
+#: ../qml/Dialogs/NegativeReviewDialog.qml:27
+msgid ""
+"Would you like to contact the author or file a bug instead? By opening a "
+"discussion with the developer(s) you could be helping to improve this app."
+msgstr ""
+"Szeretne kapcsolatba lépni a szerzőkkel, vagy hibát jelenteni? Ha vitatémát "
+"nyit a fejlesztő (fejlesztők) relé, hozzájárulhat az alkalmazás "
+"fejlesztéséhez."
+
+#: ../qml/Dialogs/NegativeReviewDialog.qml:37
+msgid "Get support"
+msgstr "Támogatás kérése"
+
+#: ../qml/Dialogs/NegativeReviewDialog.qml:47
+msgid "Post my review"
+msgstr "Értékelés beküldése"
+
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
+msgid ""
+"This app has access to restricted parts of the system and all of your data. "
+"It has the potential break your system. While the OpenStore maintainers have "
+"reviewed the code for this app for safety, they are not responsible for "
+"anything bad that might happen to your device or data from installing this "
+"app."
+msgstr ""
+"Az alkalmazás hozzáfér a rendszer számáta fenntartott területhez és az Ön "
+"öszes adatához. A rendszerre nézve ez egy potenciális veszélyforrás. Mivel "
+"OpenStore karbantartók nem tekintették át a alkalmazást biztonsági "
+"szempontok alapján, így nem tehetők felelőssé az esetlegesen bekövetkezett "
+"károkért vagy adatvesztésért."
+
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
+msgid "I understand the risks"
+msgstr "Megértettem a kockázatokat"
+
+#: ../qml/Dialogs/UninstallDialog.qml:25
+msgid "Remove package"
+msgstr "Csomag eltávolítása"
+
+#: ../qml/Dialogs/UninstallDialog.qml:26
+msgid "Do you want to remove %1?"
+msgstr "El kívánja távolítani: %1?"
+
+#: ../qml/DiscoverPage.qml:40
+msgid "OpenStore"
+msgstr "OpenStore"
+
+#: ../qml/DiscoverPage.qml:73
+msgid "by %1"
+msgstr "%1 által"
+
+#: ../qml/DiscoverPage.qml:112
+msgid "You are currently offline"
+msgstr "Jelenleg offline módban van"
+
+#: ../qml/DiscoverPage.qml:128
+msgid "OpenStore update available"
+msgstr "OpenStore frissítés elérhető"
+
+#: ../qml/DiscoverPage.qml:158
+msgid " (%1 update available)"
+msgid_plural " (%1 updates available)"
+msgstr[0] " (%1 frissítés elérhető)"
+msgstr[1] " (%1 frissítés elérhető)"
+
+#: ../qml/DiscoverPage.qml:158 ../qml/DiscoverPage.qml:159
+#: ../qml/InstalledAppsPage.qml:52
+msgid "Installed Apps"
+msgstr "Telepített alkalmazás"
+
+#: ../qml/DiscoverPage.qml:183
+msgid "Browse Apps by Category"
+msgstr "Böngészés kategóriák szerint"
+
+#: ../qml/FilteredAppList.qml:109
+msgid "No results found."
+msgstr "Nincs találat."
+
+#: ../qml/FilteredAppList.qml:109
+msgid "Nothing here yet"
+msgstr "Itt még nincs semmi"
+
+#: ../qml/FilteredAppList.qml:110
+msgid "No app has been released in this category yet."
+msgstr "Ebben a kategóriában még nincsenek alkalmazások."
+
+#: ../qml/FilteredAppList.qml:110
+msgid "Try with a different search."
+msgstr "Próbálkozzon másik kereséssel."
+
+#. TRANSLATORS: %1 is the number of installed apps
+#: ../qml/InstalledAppsPage.qml:80
+msgid "Installed apps (%1)"
+msgstr "%1 telepített alkalmazás"
+
+#. TRANSLATORS: %1 is the number of available app updates
+#: ../qml/InstalledAppsPage.qml:84
+msgid "Available updates (%1)"
+msgstr "Elérhető frissítések (%1)"
+
+#. TRANSLATORS: %1 is the number of apps that can be downgraded
+#: ../qml/InstalledAppsPage.qml:88
+msgid "Stable version available (%1)"
+msgstr "Stabil verzió elérhető (%1)"
+
+#: ../qml/InstalledAppsPage.qml:91
+msgid ""
+"The installed versions of these apps did not come from the OpenStore but a "
+"stable version is available."
+msgstr ""
+"Ezen alkalmazások telepített verziói nem az OpenStore-ból származnak, de van "
+"elérhető stabil verziójuk onnan."
+
+#: ../qml/InstalledAppsPage.qml:92
+msgid "Update all"
+msgstr "Összes frissítése"
+
+#: ../qml/InstalledAppsPage.qml:194
+msgid "No apps found"
+msgstr "Nem találató alkalmazás"
+
+#: ../qml/InstalledAppsPage.qml:195
+msgid "No app has been installed from OpenStore yet."
+msgstr "Még nincs az OpenStore-ból telepített alkalmazás."
+
+#: ../qml/Main.qml:260 ../qml/SearchPage.qml:55
+msgid "Filters"
+msgstr "Szűrők"
+
+#: ../qml/Main.qml:307
+msgid "App installed"
+msgstr "Alkalmazás telepítve"
+
+#: ../qml/Main.qml:308
+msgid "The app has been installed successfully."
+msgstr "Az alkamazás sikeresen telepítésre került."
+
+#: ../qml/Main.qml:311 ../qml/Main.qml:324 ../qml/Main.qml:339
+msgid "OK"
+msgstr "OK"
+
+#: ../qml/Main.qml:320
+msgid "Installation failed"
+msgstr "Telepítés sikertelen"
+
+#: ../qml/Main.qml:321
+msgid ""
+"The package could not be installed. Make sure it is a valid click package."
+msgstr ""
+"A csomag nem telepíthető. Győződjön meg róla, hogy ez egy hiteles csomag."
+
+#: ../qml/Main.qml:335
+msgid "Installation failed (Error %1)"
+msgstr "Telepítés sikertelen (Hiba %1)"
+
+#: ../qml/SearchPage.qml:48
+msgid "Search in OpenStore..."
+msgstr "Keresés az OpenStore-ban..."
+
+#: ../qml/SettingsPage.qml:113
+msgid "OpenStore Account"
+msgstr "OpenStore Fiók"
+
+#: ../qml/SettingsPage.qml:121 ../qml/SignInPage.qml:31
+msgid "Sign in"
+msgstr "Bejelentkezés"
+
+#: ../qml/SettingsPage.qml:138
+msgid "Sign out"
+msgstr "Kijelentkezés"
+
+#: ../qml/SettingsPage.qml:166
+msgid "Parental control"
+msgstr "Szülői felügyelet"
+
+#: ../qml/SettingsPage.qml:172
+msgid "Hide adult-oriented content"
+msgstr "Felnőtt tartalom elrejtése"
+
+#: ../qml/SettingsPage.qml:182
+msgid ""
+"By typing your password you take full responsibility for showing NSFW "
+"content."
+msgstr "Jelszava megadása után teljes hozzáférést kap az NSFW tartalmakhoz is."
+
+#: ../qml/SettingsPage.qml:207
+msgid "About OpenStore"
+msgstr "Az OpenStore-ról"
+
+#: ../qml/SettingsPage.qml:223
+msgid "Report an issue"
+msgstr "Hiba jelentése"
+
+#: ../qml/SettingsPage.qml:232
+msgid "Additional Icons by"
+msgstr "További ikonok általa:"
+
+#: openstore.desktop.in.h:1
+msgid ""
+"software;apps;applications;programs;store;market;play;click;discover;install;"
+msgstr ""
+"szoftver;appok;alkalmazások;programok;áruház;piac;játék;klikk;felfedezés;tele"
+"pítés;"

@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-31 04:27+0000\n"
-"PO-Revision-Date: 2020-07-25 18:07+0000\n"
-"Last-Translator: Daniel Frost <one@frostinfo.de>\n"
+"PO-Revision-Date: 2021-02-05 05:13+0000\n"
+"Last-Translator: Rondy Andersson <rondarius@vivaldi.net>\n"
 "Language-Team: Swedish <https://translate.ubports.com/projects/openstore/"
 "openstore-app/sv/>\n"
 "Language: sv\n"
@@ -34,9 +34,8 @@ msgstr "Ta bort"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:157
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:17
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:62
-#, fuzzy
 msgid "App"
-msgstr "Mina Appar"
+msgstr "App"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:158
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:50
@@ -49,13 +48,13 @@ msgstr "Scope"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:19
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:64
 msgid "Web App"
-msgstr ""
+msgstr "Web App"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:160
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:20
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:65
 msgid "Web App+"
-msgstr ""
+msgstr "Web App+"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:240
 msgid ""
@@ -73,12 +72,11 @@ msgstr "Öppna"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:281
 msgid "The OpenStore is installed!"
-msgstr ""
+msgstr "OpenStore är installerad!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:290
-#, fuzzy
 msgid "Install stable version"
-msgstr "Installerad version"
+msgstr "Installera stabil version"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:293
 msgid "Upgrade"
@@ -91,15 +89,15 @@ msgstr "Installera"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:372
 msgid "This app is not compatible with your system."
-msgstr ""
+msgstr "Denna app är inte kompatibel med ditt system."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:405
-#, fuzzy
 msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
 msgstr ""
-"Denna app har tillgång till begränsad systemdata, se nedan för detaljer."
+"Denna app har tillgång till begränsade delar av systemet och all din data, "
+"se längre ner för detaljer."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:408
 msgid "This app has access to restricted system data, see below for details."
@@ -138,11 +136,11 @@ msgstr "Först utgiven"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:524
 msgid "Downloads of the latest version"
-msgstr ""
+msgstr "Nedladdningar av den senaste versionen"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:533
 msgid "Total downloads"
-msgstr ""
+msgstr "Totalt antal nedladdningar"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:542
 msgid "License"
@@ -159,11 +157,11 @@ msgstr "Källkod"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:566
 msgid "Get support for this app"
-msgstr ""
+msgstr "Få support för den här appen"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:579
 msgid "Donate to support this app"
-msgstr ""
+msgstr "Donera för att stödja utvecklingen av appen"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:595
@@ -186,119 +184,116 @@ msgid "Permissions"
 msgstr "Tillstånd"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:714
-#, fuzzy
 msgid "Accounts"
-msgstr "Konto leverantör"
+msgstr "Konton"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:715
 msgid "Audio"
-msgstr ""
+msgstr "Audio"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:716
 msgid "Bluetooth"
-msgstr ""
+msgstr "Blåtand"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:717
 msgid "Calendar"
-msgstr ""
+msgstr "Kalender"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:718
 msgid "Camera"
-msgstr ""
+msgstr "Kamera"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:719
 msgid "Connectivity"
-msgstr ""
+msgstr "Anslutningar"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:720
 msgid "Contacts"
-msgstr ""
+msgstr "Kontakter"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:721
 msgid "Content Exchange Source"
-msgstr ""
+msgstr "Källa för Informationsutbyte"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:722
-#, fuzzy
 msgid "Content Exchange"
-msgstr "Innehålls navs Hanterare"
+msgstr "Informationsutbyte"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:723
 msgid "Debug"
-msgstr ""
+msgstr "Felsöka"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:724
 msgid "History"
-msgstr ""
+msgstr "Historik"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:725
 msgid "In App Purchases"
-msgstr ""
+msgstr "Köp i App"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:726
 msgid "Keep Display On"
-msgstr ""
+msgstr "Behåll Skärmen På"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:727
-#, fuzzy
 msgid "Location"
-msgstr "Applikation"
+msgstr "Plats"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:728
 msgid "Microphone"
-msgstr ""
+msgstr "Mikrofon"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:729
 msgid "Read Music Files"
-msgstr ""
+msgstr "Läs in Musik Filer"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:730
 msgid "Music Files"
-msgstr ""
+msgstr "Musik Filer"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:731
 msgid "Networking"
-msgstr ""
+msgstr "Nätverkssamarbete"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:732
 msgid "Read Picture Files"
-msgstr ""
+msgstr "Läs in Bild Filer"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:733
 msgid "Picture Files"
-msgstr ""
+msgstr "Bild Filer"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:734
 msgid "Push Notifications"
-msgstr ""
+msgstr "Push-meddelanden"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:735
 msgid "Sensors"
-msgstr ""
+msgstr "Sensorer"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:736
 msgid "User Metrics"
-msgstr ""
+msgstr "Användar Metrik"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:737
 msgid "Read Video Files"
-msgstr ""
+msgstr "Läs in Video Filer"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:738
 msgid "Video Files"
-msgstr ""
+msgstr "Video Filer"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:739
 msgid "Video"
-msgstr ""
+msgstr "Video"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:740
 msgid "Webview"
-msgstr ""
+msgstr "Webbvy"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:744
 msgid "Full System Access"
-msgstr ""
+msgstr "Åtkomst till Hela Systemet"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:749
@@ -315,19 +310,19 @@ msgstr "Skriv sökvägar"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:817
 msgid "Donating"
-msgstr ""
+msgstr "Donera"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:818
 msgid "Would you like to support this app with a donation to the developer?"
-msgstr ""
+msgstr "Vill du stödja den här appen med en donation till utvecklaren?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:824
 msgid "Donate now"
-msgstr ""
+msgstr "Donera nu"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:832
 msgid "Maybe later"
-msgstr ""
+msgstr "Kanske senare"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:845
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:297
@@ -342,10 +337,15 @@ msgid ""
 "anything bad that might happen to your device or data from installing this "
 "app."
 msgstr ""
+"Denna app har tillgång till begränsade delar av systemet och all din data. "
+"Det kan potentiellt krascha systemet. Medans Underhålls arbetarna av "
+"OpenStore har granskat koden för den här appen för säkerhetsbrister, de kan "
+"inte hållas ansvariga ifall något dåligt händer med din enhet eller din data "
+"genom att installera denna app."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:852
 msgid "I understand the risks"
-msgstr ""
+msgstr "Jag förstår riskerna"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:861
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:366
@@ -381,13 +381,15 @@ msgstr "%1 bytes"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:95
 msgid "This app could not be found in the OpenStore"
-msgstr ""
+msgstr "Denna app gick inte att hitta i OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:98
 msgid ""
 "You are currently offline and the app details could not be fetched from the "
 "OpenStore"
 msgstr ""
+"du är för närvarande nedkopplad och app beskrivningen kunde inte hämtas från "
+"OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesTab.qml:38
 msgid "Categories"
@@ -396,7 +398,7 @@ msgstr "Kategorier"
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:65
 #, qt-format
 msgid "by %1"
-msgstr ""
+msgstr "med %1"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:98
 msgid "OpenStore update available"
@@ -409,15 +411,15 @@ msgid "Installed Apps"
 msgstr "Installerade appar"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:134
-#, fuzzy, qt-format
+#, qt-format
 msgid " (%1 update available)"
 msgid_plural " (%1 updates available)"
-msgstr[0] "Tillgänglig uppdatering"
-msgstr[1] "Tillgänglig uppdatering"
+msgstr[0] " (%1 Tillgänglig uppdatering)"
+msgstr[1] " (%1 Tillgängliga uppdateringar)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:159
 msgid "Browse Apps by Category"
-msgstr ""
+msgstr "Bläddra bland Appar via Kategorier"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
 msgid "Nothing here yet"
@@ -451,22 +453,19 @@ msgstr "Tillgängliga uppdateringar (%1)"
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:87
 #, qt-format
 msgid "Stable version available (%1)"
-msgstr ""
+msgstr "Stabil version tillgänglig (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:90
-#, fuzzy
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
 msgstr ""
-"Den installerade versionen kommer inte från Openstores servrar. Du kan "
-"installera den senaste stabila uppdateringen genom att klicka på knappen "
-"nedanför."
+"Den installerade versionen av dessa appar kommer inte från OpenStore men en "
+"stabil version finns tillgänglig."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:91
-#, fuzzy
 msgid "Update all"
-msgstr "Tillgänglig uppdatering"
+msgstr "Uppdatera alla"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:193
 msgid "No apps found"
@@ -484,25 +483,24 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:320
 msgid "Are you sure you want to continue?"
-msgstr ""
+msgstr "Är du säker på att du vill fortsätta?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:324
 msgid "Yes, I know what I'm doing"
-msgstr ""
+msgstr "Ja, jag vet vad jag göra"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:332
 msgid "Get me out of here!"
 msgstr "Ta mig härifrån!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:344
-#, fuzzy
 msgid "Install unknown app?"
-msgstr "Installera app?"
+msgstr "Installera en okänd app?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:345
-#, fuzzy, qt-format
+#, qt-format
 msgid "Do you want to install the unknown app %1?"
-msgstr "Vill du installera %1?"
+msgstr "Vill du installera den okända appen %1?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:386
 msgid "App installed"
@@ -585,18 +583,17 @@ msgid "Settings"
 msgstr "Inställningar"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:114
-#, fuzzy
 msgid "OpenStore Account"
-msgstr "OpenStore team"
+msgstr "OpenStore Konto"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:122
 #: /home/brian/dev/openstore/openstore-app/openstore/SignInWebView.qml:30
 msgid "Sign in"
-msgstr ""
+msgstr "Logga in"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:139
 msgid "Sign out"
-msgstr ""
+msgstr "Logga ut"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:167
 msgid "Parental control"
@@ -624,7 +621,7 @@ msgstr "Rapportera ett problem"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:233
 msgid "Additional Icons by"
-msgstr ""
+msgstr "Ytterligare ikoner efter"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/BottomEdgePageStack.qml:84
 msgid "Back"
@@ -638,9 +635,8 @@ msgstr "Stäng"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HighlightedApp.qml:106
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:187
-#, fuzzy
 msgid "Update"
-msgstr "Tillgänglig uppdatering"
+msgstr "Uppdatera"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HighlightedApp.qml:112
 msgid "Details"
@@ -680,7 +676,7 @@ msgstr "✓ Installerad"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:73
 msgid "Something went wrong..."
-msgstr ""
+msgstr "Något gick fel..."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:79
 msgid "Error Posting Review"

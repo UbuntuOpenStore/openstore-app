@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-31 04:27+0000\n"
-"PO-Revision-Date: 2021-01-18 20:29+0000\n"
-"Last-Translator: Ivan Semkin <ivan@semkin.ru>\n"
+"PO-Revision-Date: 2021-01-31 11:27+0000\n"
+"Last-Translator: ierihon <idekovets@mail.ru>\n"
 "Language-Team: Russian <https://translate.ubports.com/projects/openstore/"
 "openstore-app/ru/>\n"
 "Language: ru\n"
@@ -90,7 +90,7 @@ msgstr "Установить"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:372
 msgid "This app is not compatible with your system."
-msgstr "Это приложение не совместимо с вашей системой."
+msgstr "Это приложение несовместимо с вашей системой."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:405
 msgid ""
@@ -291,7 +291,7 @@ msgstr "Видео"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:740
 msgid "Webview"
-msgstr "Webview"
+msgstr "Просмотр веб-контента"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:744
 msgid "Full System Access"

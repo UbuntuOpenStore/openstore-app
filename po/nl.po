@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-31 04:27+0000\n"
-"PO-Revision-Date: 2020-10-19 13:17+0000\n"
+"PO-Revision-Date: 2021-03-18 17:21+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/openstore/"
 "openstore-app/nl/>\n"
@@ -183,7 +183,7 @@ msgstr "Pakketinhoud"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:709
 msgid "Permissions"
-msgstr "Machtigingen"
+msgstr "Bevoegdheden"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:714
 msgid "Accounts"

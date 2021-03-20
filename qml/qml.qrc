@@ -12,6 +12,7 @@
         <file>Components/HighlightedApp.qml</file>
         <file>Components/HookIcon.qml</file>
         <file>Components/LabelCentered.qml</file>
+        <file>Components/LineDivider.qml</file>
         <file>Components/MostRated.qml</file>
         <file>Components/OpenStoreCarousel.qml</file>
         <file>Components/PackageListItem.qml</file>

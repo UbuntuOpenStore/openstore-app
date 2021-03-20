@@ -22,7 +22,6 @@ Row {
     property var appRatings
 
     width: parent.width
-    anchors.horizontalCenter: parent.horizontalCenter
 
     ReviewItemVertical {
         reviewIcon: "../Assets/thumbup.svg"

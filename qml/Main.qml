@@ -225,6 +225,7 @@ MainView {
 
     Components.BottomEdgePageStack {
         id: bottomEdgeStack
+        showDivider: isBigScreen && bottomEdgeStack.isStackVisible
 
         width: isBigScreen && bottomEdgeStack.isStackVisible
             ? units.gu(47)

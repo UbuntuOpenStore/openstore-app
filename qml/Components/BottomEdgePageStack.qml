@@ -25,6 +25,7 @@ Item {
 
     property alias stack: internalStack
     property alias isStackVisible: d.isStackVisible
+    property bool showDivider: false
 
     function push(page, properties) {
         var pageObject = internalStack.push(page, properties)
@@ -107,5 +108,13 @@ Item {
                 }
             }
         }
+    }
+
+    Rectangle {
+        height: parent.height
+        width: units.dp(1)
+        anchors.left: parent.left
+        visible: showDivider
+        color: theme.palette.normal.base
     }
 }

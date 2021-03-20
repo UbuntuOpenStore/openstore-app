@@ -548,6 +548,8 @@ Page {
                 }
             }
 
+            Components.LineDivider {}
+
             ListItem {
                 visible: !!app.source
                 onClicked: Qt.openUrlExternally(app.source)

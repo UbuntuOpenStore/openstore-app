@@ -87,9 +87,12 @@ Item {
                 RatingsRow {
                     id: ratingsRow
                     visible: parent.width > units.gu(15)
-                    spacing: (parent.width - units.gu(12.5)) / 5
-                    anchors.left: parent.left
-                    anchors.right: parent.right
+                    spacing: (parent.width - units.gu(12.5)) / 6
+
+                    anchors {
+                        leftMargin: spacing
+                        left: parent.left
+                    }
                 }
             }
 

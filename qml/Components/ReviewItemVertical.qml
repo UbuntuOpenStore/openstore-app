@@ -32,6 +32,7 @@ Item {
     Column {
         width: units.gu(2.5)
         height: width
+        anchors.horizontalCenter: parent.horizontalCenter
         spacing: units.gu(0.5)
 
         Icon {

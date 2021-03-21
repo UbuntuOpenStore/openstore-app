@@ -81,15 +81,60 @@ MainView {
     }
 
     function parseUrl(url) {
-        var result = "";
+        //decodeURI doesn't get this right
+        url = url.replace("%3A",":")
+        url = decodeURI(url)
+        var result = undefined;
+        var appName = "";
+        var author = "";
+        var search = "";
+        var sort = "";
+        var category = "";
+        var type = "";
         if (url.match(/^(openstore|http[s]?):\/\/(open-store\.io\/app\/)?.*/)) {
             if (url[url.length - 1] == '/') {
                 url = url.substr(0, url.length - 1);
             }
 
-            // Get last part of path as ID to open, and strip the /
-            result = url.substr(url.lastIndexOf("/") + 1);
+            if (!!url.match("search=")) {
+                //Searches can be https://open-store.io/?sort=Sorting&type=AppType&category=Category&search=Word or sentence
+                // or https://open-store.io/?sort=relevance&search=author:Name Surname
+                if (!!url.match("search=")) {
+                    search = url.match(/search=.+?(?=&)/) || url.match(/search=.+$/)
+                    search = search[0].slice(7)
+                }
+                if (!!url.match("author:")) {
+                    author = url.match(/author:.+?(?=&)/) || url.match(/author:.+$/)
+                    author = author[0].slice(7)
+                }
+                if (!!url.match("sort=")) {
+                    sort = url.match(/sort=.+?(?=&)/) || url.match(/sort=.+$/)
+                    sort = sort[0].slice(5)
+                }
+                if (!!url.match("category=")) {
+                    category = url.match(/category=.+?(?=&)/) || url.match(/category=.+$/)
+                    category = category[0].slice(9)
+                }
+                if (!!url.match("type=")) {
+                    type = url.match(/type=.+?(?=&)/) || url.match(/type=.+$/)
+                    type = type[0].slice(5)
+                }
+            } else {
+                // Get last part of path as ID to open, and strip the /
+                appName = url.substr(url.lastIndexOf("/") + 1);
+            }
         }
+
+        result = {
+            "search"  : search,
+            "author"  : author,
+            "sort"    : sort,
+            "category": category,
+            "type"    : type,
+            "appName" : appName
+        }
+
+        console.log("Result", JSON.stringify(result))
 
         return result;
     }
@@ -127,8 +172,10 @@ MainView {
             appIdToOpen = parseUrl(appArgs[i]);
         }
 
-        if (appIdToOpen != "") {
-            loadAppId(appIdToOpen);
+        if (!!appIdToOpen.appName) {
+            loadAppId(appIdToOpen.appName);
+        } else if (!!appIdToOpen.author) {
+            root.showSearch('author:' + appIdToOpen.author)
         }
     }
 
@@ -153,8 +200,10 @@ MainView {
         target: UriHandler
         onOpened: {
             var appIdToOpen = parseUrl(uris[0]);
-            if (appIdToOpen) {
-                loadAppId(appIdToOpen);
+            if (!!appIdToOpen.appName) {
+                loadAppId(appIdToOpen.appName);
+            } else if (!!appIdToOpen.author) {
+                root.showSearch('author:' + appIdToOpen.author)
             }
         }
     }

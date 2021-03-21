@@ -1,5 +1,11 @@
 # OpenStore App Changelog
 
+## v3.2.8
+
+- Visual tweaks
+- Fixed author searches not opening in the app correctly
+- Translation update, thank you translators!
+
 ## v3.2.7
 
 - Translation update, thank you translators!

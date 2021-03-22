@@ -1,5 +1,9 @@
 # OpenStore App Changelog
 
+## v3.2.9
+
+- Fixed crash when still using OTA-15
+
 ## v3.2.8
 
 - Visual tweaks

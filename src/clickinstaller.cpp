@@ -53,6 +53,9 @@ int ClickInstaller::downloadProgress() const
 
 void ClickInstaller::installPackage(const QString &packageUrl, const bool isLocalInstall)
 {
+    m_isLocalInstall = isLocalInstall;
+    Q_EMIT isLocalInstallChanged();
+
 //    qDebug() << "should install package" << packageUrl;
     if (busy()) {
         //qDebug() << "already busy. won't install" << packageUrl;
@@ -62,9 +65,6 @@ void ClickInstaller::installPackage(const QString &packageUrl, const bool isLoca
         fetchPackage(packageUrl);
         return;
     }
-
-    m_isLocalInstall = isLocalInstall;
-    Q_EMIT isLocalInstallChanged();
 
     QString localPath = packageUrl;
     localPath.remove(QRegExp("$file://"));

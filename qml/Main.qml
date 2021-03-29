@@ -81,6 +81,11 @@ MainView {
     }
 
     function parseUrl(url) {
+        //Don't parse app values
+        if (url == "openstore" || url == "%u") {
+            return
+        }
+
         //decodeURI doesn't get this right
         url = url.replace("%3A",":")
         url = decodeURI(url)

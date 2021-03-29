@@ -1,5 +1,9 @@
 # OpenStore App Changelog
 
+## v3.2.10
+
+- Fixed install progress bar not showing
+
 ## v3.2.9
 
 - Fixed crash when still using OTA-15

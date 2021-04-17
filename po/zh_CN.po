@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: Chinese (Simplified) (OpenStore)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-31 04:27+0000\n"
-"PO-Revision-Date: 2020-12-01 04:26+0000\n"
-"Last-Translator: Sam Zhang <sammyok@163.com>\n"
+"PO-Revision-Date: 2021-04-17 18:25+0000\n"
+"Last-Translator: Enceka <enceka@yeah.net>\n"
 "Language-Team: Chinese (Simplified) <https://translate.ubports.com/projects/"
 "openstore/openstore-app/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -86,7 +86,6 @@ msgid "This app is not compatible with your system."
 msgstr "此应用与你的系统不兼容。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:405
-#, fuzzy
 msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
@@ -176,7 +175,6 @@ msgid "Permissions"
 msgstr "权限"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:714
-#, fuzzy
 msgid "Accounts"
 msgstr "帐号提供商"
 
@@ -479,12 +477,11 @@ msgid "Get me out of here!"
 msgstr "带我离开！"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:344
-#, fuzzy
 msgid "Install unknown app?"
-msgstr "安装应用程序吗？"
+msgstr "安装未知的应用程序吗？"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:345
-#, fuzzy, qt-format
+#, qt-format
 msgid "Do you want to install the unknown app %1?"
 msgstr "您想安装 %1 吗？"
 

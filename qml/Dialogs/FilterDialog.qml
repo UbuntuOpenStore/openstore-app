@@ -64,6 +64,8 @@ Component {
             id: sortBy
             text: i18n.tr('Relevance')
 
+            onClicked: sortBy.expanded = !sortBy.expanded
+
             ListView {
                 model: sortModel
 
@@ -110,6 +112,8 @@ Component {
         ComboButton {
             id: type
             text: i18n.tr('All Types')
+
+            onClicked: type.expanded = !type.expanded
 
             ListView {
                 model: typeModel

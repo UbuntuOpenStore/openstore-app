@@ -136,7 +136,7 @@ void ClickInstaller::installLocalPackage(const QString &packageFilePath)
 void ClickInstaller::installerFinished(int exitCode, QProcess::ExitStatus exitStatus)
 {
     qDebug() << "installing finished" << exitCode << exitStatus;
-    qDebug() << "stdout:" << m_installerProcess->readAll();
+    qDebug() << "stdout:" << QString::fromUtf8(m_installerProcess->readAll());
     m_installerProcess->deleteLater();
     m_installerProcess = 0;
     Q_EMIT busyChanged();
@@ -145,8 +145,6 @@ void ClickInstaller::installerFinished(int exitCode, QProcess::ExitStatus exitSt
     } else {
         Q_EMIT packageInstallationFailed();
     }
-
-    QProcess::execute("dbus-send", QStringList() << "/com/canonical/unity/scopes" << "com.canonical.unity.scopes.InvalidateResults" << "string:clickscope");
 }
 
 void ClickInstaller::processStatusChanged(QProcess::ProcessState state)

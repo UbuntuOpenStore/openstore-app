@@ -177,9 +177,9 @@ MainView {
             appIdToOpen = parseUrl(appArgs[i]);
         }
 
-        if (!!appIdToOpen.appName) {
+        if (appIdToOpen && !!appIdToOpen.appName) {
             loadAppId(appIdToOpen.appName);
-        } else if (!!appIdToOpen.author) {
+        } else if (appIdToOpen && !!appIdToOpen.author) {
             root.showSearch('author:' + appIdToOpen.author)
         }
     }
@@ -205,9 +205,9 @@ MainView {
         target: UriHandler
         onOpened: {
             var appIdToOpen = parseUrl(uris[0]);
-            if (!!appIdToOpen.appName) {
+            if (appIdToOpen && !!appIdToOpen.appName) {
                 loadAppId(appIdToOpen.appName);
-            } else if (!!appIdToOpen.author) {
+            } else if (appIdToOpen && !!appIdToOpen.author) {
                 root.showSearch('author:' + appIdToOpen.author)
             }
         }

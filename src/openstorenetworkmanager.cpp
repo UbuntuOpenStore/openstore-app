@@ -26,6 +26,7 @@
 #include <QUuid>
 #include <QJsonObject>
 #include <QJsonDocument>
+#include <QJsonValue>
 
 #include <QDebug>
 
@@ -96,6 +97,19 @@ QNetworkReply *OpenStoreNetworkManager::sendRequest(QNetworkRequest request)
     // qDebug() << "Firing request for" << request.url();
 
     return m_manager->get(request);
+}
+
+QNetworkReply *OpenStoreNetworkManager::postRequest(QNetworkRequest request, QJsonObject query)
+{
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+
+    query.insert("frameworks", PlatformIntegration::instance()->supportedFrameworks().join(','));
+    query.insert("architecture", PlatformIntegration::instance()->supportedArchitecture());
+    query.insert("lang", PlatformIntegration::instance()->systemLocale());
+    query.insert("nsfw", QString(m_showNsfw ? "" : "false"));
+    query.insert("channel", PlatformIntegration::instance()->systemCodename());
+
+    return m_manager->post(request, QJsonDocument(query).toJson());
 }
 
 void OpenStoreNetworkManager::parseReply(QNetworkReply *reply, const QString &signature)
@@ -206,11 +220,10 @@ void OpenStoreNetworkManager::getRevisions(const QString &signature, const QStri
 {
     QUrl url(getUrl(API_REVISION_ENDPOINT));
 
-    QUrlQuery q(url);
-    q.addQueryItem("apps", appIdsAtVersion.join(","));
-    url.setQuery(q);
+    QJsonObject q;
+    q.insert("apps", QJsonValue::fromVariant(appIdsAtVersion));
 
-    QNetworkReply *reply = sendRequest(QNetworkRequest(url));
+    QNetworkReply *reply = postRequest(QNetworkRequest(url), q);
     parseReply(reply, signature);
 }
 

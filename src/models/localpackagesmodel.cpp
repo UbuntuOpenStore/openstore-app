@@ -25,7 +25,7 @@
 #include <QJsonArray>
 #include <algorithm>
 
-// For desktop file / scope settings parsing
+// For desktop file parsing
 #include <QSettings>
 #include <QFileInfo>
 #include <QDir>
@@ -193,7 +193,6 @@ void LocalPackagesModel::refresh()
                 const QVariantMap &h = hooks.value(hook).toMap();
 
                 const QString &desktop = h.value("desktop").toString();
-                const QString &scope = h.value("scope").toString();
                 if (!desktop.isEmpty()) {
                     //        qDebug() << "Getting icon from .desktop file.";
                     const QString &desktopFile = directory + QDir::separator() + desktop;
@@ -201,20 +200,6 @@ void LocalPackagesModel::refresh()
                     pkgItem.icon = directory + QDir::separator() + appInfo.value("Desktop Entry/Icon").toString();
                     //        qDebug() << pkgItem.icon;
                     break;
-                } else if (!scope.isEmpty()) {
-                    //        qDebug() << "Getting icon from scope.";
-                    const QString &scopeFile = directory + QDir::separator() + scope + QDir::separator() + pkgItem.appId + "_" + scope + ".ini";
-                    QSettings appInfo(scopeFile, QSettings::IniFormat);
-                    QFileInfo fileInfo(scopeFile);
-
-                    const QString &possibleIconFile = appInfo.value("ScopeConfig/Icon").toString();
-
-                    if (!possibleIconFile.isEmpty()) {
-                        pkgItem.icon = fileInfo.absolutePath() + QDir::separator() + appInfo.value("ScopeConfig/Icon").toString();
-                        //        qDebug() << pkgItem.icon;
-                        break;
-                    }
-                    //        qDebug() << "Icon not found in scope.";
                 }
             }
 

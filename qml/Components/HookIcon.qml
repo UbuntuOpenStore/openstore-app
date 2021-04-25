@@ -61,19 +61,6 @@ Icon {
                         Icon {
                             Layout.preferredHeight: units.gu(4)
                             Layout.preferredWidth: units.gu(4)
-                            name: "search"
-                        }
-                        Label {
-                            text: i18n.tr("Scope")
-                            Layout.fillWidth: true
-                        }
-                    }
-                    RowLayout {
-                        width: parent.width
-                        spacing: units.gu(1)
-                        Icon {
-                            Layout.preferredHeight: units.gu(4)
-                            Layout.preferredWidth: units.gu(4)
                             name: "stock_website"
                         }
                         Label {

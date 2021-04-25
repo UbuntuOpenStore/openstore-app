@@ -77,7 +77,6 @@ AbstractButton {
 
                     var translations = {
                         'app': i18n.tr("App"),
-                        'scope': i18n.tr("Scope"),
                         'webapp': i18n.tr("Web App"),
                         'webapp+': i18n.tr("Web App+"),
                     };

@@ -166,9 +166,6 @@ void PackageItem::fillData(const QVariantMap &json)
             if (hookMap.value(hook).toMap().contains("desktop")) {
                 hookStruct.hooks |= PackageItem::HookDesktop;
             }
-            if (hookMap.value(hook).toMap().contains("scope")) {
-                hookStruct.hooks |= PackageItem::HookScope;
-            }
             if (hookMap.value(hook).toMap().contains("content-hub")) {
                 hookStruct.hooks |= PackageItem::HookContentHub;
             }

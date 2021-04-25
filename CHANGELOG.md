@@ -1,5 +1,11 @@
 # OpenStore App Changelog
 
+## v3.2.11
+
+- Fixed broken app when there are too many apps installed
+- Fixed tap area for filters
+- Various bug fixes
+
 ## v3.2.10
 
 - Fixed install progress bar not showing

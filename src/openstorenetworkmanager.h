@@ -22,6 +22,7 @@
 
 #include <QObject>
 #include <QNetworkAccessManager>
+#include <QJsonObject>
 
 #include <QUrlQuery>
 
@@ -74,6 +75,7 @@ private Q_SLOTS:
 
 private:
     QNetworkReply* sendRequest(QNetworkRequest request);
+    QNetworkReply* postRequest(QNetworkRequest request, QJsonObject query);
     void parseReply(QNetworkReply *reply, const QString &signature);
     void getReviewsByUrl(const QString &signature, const QUrl &url);
 

@@ -149,7 +149,6 @@ Page {
                     summary.text: {
                         var translations = {
                             'app': i18n.tr("App"),
-                            'scope': i18n.tr("Scope"),
                             'webapp': i18n.tr("Web App"),
                             'webapp+': i18n.tr("Web App+"),
                         };
@@ -654,12 +653,6 @@ Page {
                                 Layout.preferredWidth: units.gu(4)
                                 name: "stock_application"
                                 visible: (hooks & PackageItem.HookDesktop)
-                            }
-                            Components.HookIcon {
-                                Layout.preferredHeight: units.gu(4)
-                                Layout.preferredWidth: units.gu(4)
-                                name: "search"
-                                visible: (hooks & PackageItem.HookScope)
                             }
                             Components.HookIcon {
                                 Layout.preferredHeight: units.gu(4)

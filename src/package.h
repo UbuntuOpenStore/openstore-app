@@ -73,7 +73,6 @@ public:
     enum Hook {
         HookNone = 0,
         HookDesktop = 1,
-        HookScope = 2,
         HookAccountService = 4,
         HookUrls = 8,
         HookContentHub = 16,

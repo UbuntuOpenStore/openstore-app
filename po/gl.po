@@ -1,0 +1,769 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the openstore.openstore-team package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: openstore.openstore-team\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-25 20:06+0000\n"
+"PO-Revision-Date: 2021-05-19 14:49+0000\n"
+"Last-Translator: Davidrebolomaga <davidre345@hotmail.com>\n"
+"Language-Team: Galician <https://translate.ubports.com/projects/openstore/"
+"openstore-app/gl/>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.11.3\n"
+
+#: ../qml/AppDetailsPage.qml:108 ../qml/AppLocalDetailsPage.qml:34
+msgid "App details"
+msgstr "Detalles do aplicativo"
+
+#: ../qml/AppDetailsPage.qml:115 ../qml/AppDetailsPage.qml:383
+#: ../qml/AppLocalDetailsPage.qml:41 ../qml/Dialogs/UninstallDialog.qml:33
+msgid "Remove"
+msgstr "Eliminar"
+
+#: ../qml/AppDetailsPage.qml:151 ../qml/Components/PackageListItem.qml:34
+#: ../qml/Components/PackageTile.qml:79
+msgid "App"
+msgstr "Aplicativo"
+
+#: ../qml/AppDetailsPage.qml:152 ../qml/Components/PackageListItem.qml:35
+#: ../qml/Components/PackageTile.qml:80
+msgid "Web App"
+msgstr "Aplicativo web"
+
+#: ../qml/AppDetailsPage.qml:153 ../qml/Components/PackageListItem.qml:36
+#: ../qml/Components/PackageTile.qml:81
+msgid "Web App+"
+msgstr "Aplicativo web+"
+
+#: ../qml/AppDetailsPage.qml:237
+msgid ""
+"The installed version of this app doesn't come from the OpenStore server. "
+"You can install the latest stable update by tapping the button below."
+msgstr ""
+"A versión instalada do aplicativo non vén do servidor de OpenStore. Pode "
+"instalar a última actualización <<estable>> premendo no botón abaixo."
+
+#: ../qml/AppDetailsPage.qml:262 ../qml/AppLocalDetailsPage.qml:103
+#: ../qml/Components/HighlightedApp.qml:113
+msgid "Open"
+msgstr "Abrir"
+
+#: ../qml/AppDetailsPage.qml:278
+msgid "The OpenStore is installed!"
+msgstr "O OpenStore está instalado!"
+
+#: ../qml/AppDetailsPage.qml:287
+msgid "Install stable version"
+msgstr "Instalar a versión estable"
+
+#: ../qml/AppDetailsPage.qml:290
+msgid "Upgrade"
+msgstr "Actualizar"
+
+#: ../qml/AppDetailsPage.qml:293 ../qml/Dialogs/InstallWarningDialog.qml:41
+msgid "Install"
+msgstr "Instalar"
+
+#: ../qml/AppDetailsPage.qml:369
+msgid "This app is not compatible with your system."
+msgstr "Este aplicativo non é compatible co teu sistema."
+
+#: ../qml/AppDetailsPage.qml:402
+msgid ""
+"This app has access to restricted parts of the system and all of your data, "
+"see below for details."
+msgstr ""
+"Este aplicativo ten acceso a partes restrinxidas do sistema e a todos os "
+"teus datos, vexa abaixo os detalles."
+
+#: ../qml/AppDetailsPage.qml:405
+msgid "This app has access to restricted system data, see below for details."
+msgstr ""
+"O aplicativo ten acceso aos datos do sistema restrinxidos, vexa abaixo os "
+"detalles."
+
+#: ../qml/AppDetailsPage.qml:430
+msgid "Description"
+msgstr "Descrición"
+
+#. TRANSLATORS: Title of the changelog section
+#: ../qml/AppDetailsPage.qml:468
+msgid "What's New"
+msgstr "Novidades"
+
+#: ../qml/AppDetailsPage.qml:487
+msgid "Packager/Publisher"
+msgstr "Desenvolvedor/Publicador"
+
+#: ../qml/AppDetailsPage.qml:496 ../qml/AppLocalDetailsPage.qml:137
+msgid "Installed version"
+msgstr "Versión instalada"
+
+#: ../qml/AppDetailsPage.qml:506
+msgid "Latest available version"
+msgstr "A última versión dispoñible"
+
+#: ../qml/AppDetailsPage.qml:515
+msgid "First released"
+msgstr "Primeira liberada"
+
+#: ../qml/AppDetailsPage.qml:526
+msgid "Downloads of the latest version"
+msgstr "Descargas da últiam versión"
+
+#: ../qml/AppDetailsPage.qml:535
+msgid "Total downloads"
+msgstr "Descargas totais"
+
+#: ../qml/AppDetailsPage.qml:544
+msgid "License"
+msgstr "Licenza"
+
+#: ../qml/AppDetailsPage.qml:545
+msgid "N/A"
+msgstr "N/A"
+
+#: ../qml/AppDetailsPage.qml:557 ../qml/SettingsPage.qml:214
+msgid "Source Code"
+msgstr "Código fonte"
+
+#: ../qml/AppDetailsPage.qml:570
+msgid "Get support for this app"
+msgstr "Consiga apoio para este aplicativo"
+
+#: ../qml/AppDetailsPage.qml:583
+msgid "Donate to support this app"
+msgstr "Doe para apoiar este aplicativo"
+
+#. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
+#: ../qml/AppDetailsPage.qml:599
+msgid "More from %1"
+msgstr "Máis de %1"
+
+#. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
+#: ../qml/AppDetailsPage.qml:614
+msgid "Other apps in %1"
+msgstr "Outros aplicativos en %1"
+
+#: ../qml/AppDetailsPage.qml:620
+msgid "Package contents"
+msgstr "Contido do paquete"
+
+#: ../qml/AppDetailsPage.qml:707
+msgid "Permissions"
+msgstr "Permisos"
+
+#: ../qml/AppDetailsPage.qml:712
+msgid "Accounts"
+msgstr "Contas"
+
+#: ../qml/AppDetailsPage.qml:713
+msgid "Audio"
+msgstr "Audio"
+
+#: ../qml/AppDetailsPage.qml:714
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#: ../qml/AppDetailsPage.qml:715
+msgid "Calendar"
+msgstr "Calendario"
+
+#: ../qml/AppDetailsPage.qml:716
+msgid "Camera"
+msgstr "Cámara"
+
+#: ../qml/AppDetailsPage.qml:717
+msgid "Connectivity"
+msgstr "Conectividade"
+
+#: ../qml/AppDetailsPage.qml:718
+msgid "Contacts"
+msgstr "Contactos"
+
+#: ../qml/AppDetailsPage.qml:719
+msgid "Content Exchange Source"
+msgstr "Fonte de intercambio de contidos"
+
+#: ../qml/AppDetailsPage.qml:720
+msgid "Content Exchange"
+msgstr "Intercambio de contidos"
+
+#: ../qml/AppDetailsPage.qml:721
+msgid "Debug"
+msgstr "Depuración"
+
+#: ../qml/AppDetailsPage.qml:722
+msgid "History"
+msgstr "Historial"
+
+#: ../qml/AppDetailsPage.qml:723
+msgid "In App Purchases"
+msgstr "Compras dentro do aplicativo"
+
+#: ../qml/AppDetailsPage.qml:724
+msgid "Keep Display On"
+msgstr "Manteña a pantalla acendida"
+
+#: ../qml/AppDetailsPage.qml:725
+msgid "Location"
+msgstr "Localización"
+
+#: ../qml/AppDetailsPage.qml:726
+msgid "Microphone"
+msgstr "Micrófono"
+
+#: ../qml/AppDetailsPage.qml:727
+msgid "Read Music Files"
+msgstr "Ler os ficheiros de música"
+
+#: ../qml/AppDetailsPage.qml:728
+msgid "Music Files"
+msgstr "Ficheiros de música"
+
+#: ../qml/AppDetailsPage.qml:729
+msgid "Networking"
+msgstr "Conectividade"
+
+#: ../qml/AppDetailsPage.qml:730
+msgid "Read Picture Files"
+msgstr "Ler ficheiros de imaxe"
+
+#: ../qml/AppDetailsPage.qml:731
+msgid "Picture Files"
+msgstr "Ficheiros de imaxe"
+
+#: ../qml/AppDetailsPage.qml:732
+msgid "Push Notifications"
+msgstr "Notificacións"
+
+#: ../qml/AppDetailsPage.qml:733
+msgid "Sensors"
+msgstr "Sensores"
+
+#: ../qml/AppDetailsPage.qml:734
+msgid "User Metrics"
+msgstr "Métricas do usuario"
+
+#: ../qml/AppDetailsPage.qml:735
+msgid "Read Video Files"
+msgstr "Ler ficheiros de vídeo"
+
+#: ../qml/AppDetailsPage.qml:736
+msgid "Video Files"
+msgstr "Ficheiros de vídeo"
+
+#: ../qml/AppDetailsPage.qml:737
+msgid "Video"
+msgstr "Vídeo"
+
+#: ../qml/AppDetailsPage.qml:738
+msgid "Webview"
+msgstr "Vista web"
+
+#: ../qml/AppDetailsPage.qml:742
+msgid "Full System Access"
+msgstr "Acceso total ao sistema"
+
+#. TRANSLATORS: this will show when an app doesn't need any special permissions
+#: ../qml/AppDetailsPage.qml:747
+msgid "none required"
+msgstr "Ningunha necesaria"
+
+#: ../qml/AppDetailsPage.qml:783
+msgid "Read paths"
+msgstr "Ler rutas"
+
+#: ../qml/AppDetailsPage.qml:800
+msgid "Write paths"
+msgstr "Escribir rutas"
+
+#. TRANSLATORS: %1 is the size of a file, expressed in GB
+#: ../qml/AppDetailsPage.qml:871
+msgid "%1 GB"
+msgstr "%1 Gb"
+
+#. TRANSLATORS: %1 is the size of a file, expressed in MB
+#: ../qml/AppDetailsPage.qml:876
+msgid "%1 MB"
+msgstr "%1 Mb"
+
+#. TRANSLATORS: %1 is the size of a file, expressed in kB
+#: ../qml/AppDetailsPage.qml:881
+msgid "%1 kB"
+msgstr "%1 kB"
+
+#. TRANSLATORS: %1 is the size of a file, expressed in bytes
+#: ../qml/AppDetailsPage.qml:884
+msgid "%1 bytes"
+msgstr "%1 bytes"
+
+#: ../qml/AppLocalDetailsPage.qml:117
+msgid "This app could not be found in the OpenStore"
+msgstr "Este aplicativo non puido ser atopada na OpenStore"
+
+#: ../qml/AppLocalDetailsPage.qml:120
+msgid ""
+"You are currently offline and the app details could not be fetched from the "
+"OpenStore"
+msgstr ""
+"Está actualmente desligado e os detalles do aplicativo non poden ser obtidos "
+"a través da OpenStore"
+
+#: ../qml/CategoriesPage.qml:39
+msgid "Categories"
+msgstr "Categorías"
+
+#: ../qml/Components/BottomEdgePageStack.qml:102
+msgid "Back"
+msgstr "Atrás"
+
+#: ../qml/Components/BottomEdgePageStack.qml:102
+#: ../qml/Components/ReviewPreview.qml:103
+#: ../qml/Components/ReviewPreview.qml:117
+msgid "Close"
+msgstr "Pechar"
+
+#: ../qml/Components/HeaderMain.qml:27 ../qml/SettingsPage.qml:29
+msgid "Settings"
+msgstr "Configuración"
+
+#: ../qml/Components/HeaderMain.qml:40 ../qml/SearchPage.qml:35
+msgid "Search"
+msgstr "Buscar"
+
+#: ../qml/Components/HighlightedApp.qml:110
+#: ../qml/Components/ReviewPreview.qml:193
+msgid "Update"
+msgstr "Actualizar"
+
+#: ../qml/Components/HighlightedApp.qml:116
+msgid "Details"
+msgstr "Detalles"
+
+#: ../qml/Components/HookIcon.qml:54
+msgid "Application"
+msgstr "Aplicativo"
+
+#. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
+#: ../qml/Components/HookIcon.qml:68
+msgid "URL Handler"
+msgstr "Xestor de URL"
+
+#. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
+#: ../qml/Components/HookIcon.qml:82
+msgid "Content Hub Handler"
+msgstr "Xestor do centro de contidos"
+
+#. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
+#: ../qml/Components/HookIcon.qml:96
+msgid "Push Helper"
+msgstr "Asistente de Push"
+
+#. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
+#: ../qml/Components/HookIcon.qml:110
+msgid "Accounts provider"
+msgstr "Fornecedor de contas"
+
+#: ../qml/Components/PackageTile.qml:97
+msgid "Update available"
+msgstr "Actualización dispoñible"
+
+#: ../qml/Components/PackageTile.qml:97
+msgid "✓ Installed"
+msgstr "✓ Instalada"
+
+#: ../qml/Components/ReviewPreview.qml:93
+msgid "Something went wrong..."
+msgstr "Algo non foi ben..."
+
+#: ../qml/Components/ReviewPreview.qml:99
+msgid "Error Posting Review"
+msgstr "Erro ao publicar o comentario"
+
+#: ../qml/Components/ReviewPreview.qml:113
+msgid "Review Posted Correctly"
+msgstr "Publicouse o comentario correctamente"
+
+#: ../qml/Components/ReviewPreview.qml:114
+msgid "Your review has been posted successfully."
+msgstr "O se ucomentario publicouse correctamente."
+
+#: ../qml/Components/ReviewPreview.qml:128
+msgid "Loading..."
+msgstr "Cargando..."
+
+#: ../qml/Components/ReviewPreview.qml:128
+msgid "Rate this app"
+msgstr "Puntúe o noso aplicativo"
+
+#: ../qml/Components/ReviewPreview.qml:135
+msgid "(Optional) Write a review"
+msgstr "(Opcional) Escriba un comentario"
+
+#: ../qml/Components/ReviewPreview.qml:139
+msgid "%1/%2 characters"
+msgstr "%1/%2 caracteres"
+
+#: ../qml/Components/ReviewPreview.qml:193
+msgid "Submit"
+msgstr "Enviar"
+
+#: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:147
+#: ../qml/Dialogs/InstallWarningDialog.qml:49
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
+#: ../qml/Dialogs/UninstallDialog.qml:42
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ../qml/Components/ReviewPreview.qml:244
+msgid "%1 review. "
+msgid_plural "%1 reviews. "
+msgstr[0] "%1 comentario. "
+msgstr[1] "%1 comentarios. "
+
+#: ../qml/Components/ReviewPreview.qml:252
+msgid "Edit Review"
+msgstr "Editar comentario"
+
+#: ../qml/Components/ReviewPreview.qml:255
+msgid "Review app"
+msgstr "Comentar aplicativo"
+
+#: ../qml/Components/ReviewPreview.qml:258
+msgid "Sign in to review this app"
+msgstr "Inicie sesión para comentar este aplicativo"
+
+#: ../qml/Components/ReviewPreview.qml:261
+msgid "Install this app to review it"
+msgstr "Instalar o aplicativo para comentalo"
+
+#: ../qml/Dialogs/DomainWarningDialog.qml:26
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:25
+msgid "Warning"
+msgstr "Aviso"
+
+#: ../qml/Dialogs/DomainWarningDialog.qml:35
+msgid ""
+"You are currently using a non-standard domain for the OpenStore. This is a "
+"development feature. The domain you are using is:"
+msgstr ""
+"Estás utilizando un dominio que non está estandarizado por OpenStore. Isto é "
+"unha funcionalidade en desenvolvemento. O dominio que está a usar é:"
+
+#: ../qml/Dialogs/DomainWarningDialog.qml:49
+msgid "Are you sure you want to continue?"
+msgstr "Ten a certeza de que quere continuar?"
+
+#: ../qml/Dialogs/DomainWarningDialog.qml:53
+msgid "Yes, I know what I'm doing"
+msgstr "Si, sei o que estou facendo"
+
+#: ../qml/Dialogs/DomainWarningDialog.qml:61
+msgid "Get me out of here!"
+msgstr "Saír de aquí!"
+
+#: ../qml/Dialogs/DonationDialog.qml:25
+msgid "Donating"
+msgstr "Doando"
+
+#: ../qml/Dialogs/DonationDialog.qml:26
+msgid "Would you like to support this app with a donation to the developer?"
+msgstr "Querería apoiar este aplicativo cunha doazón para o desenvolvedor?"
+
+#: ../qml/Dialogs/DonationDialog.qml:32
+msgid "Donate now"
+msgstr "Doar agora"
+
+#: ../qml/Dialogs/DonationDialog.qml:40
+msgid "Maybe later"
+msgstr "Máis tarde"
+
+#: ../qml/Dialogs/FilterDialog.qml:26
+msgid "Filters and Sorting"
+msgstr "Filtros e ordenar"
+
+#: ../qml/Dialogs/FilterDialog.qml:38
+msgid "Sort By"
+msgstr "Ordenar por"
+
+#: ../qml/Dialogs/FilterDialog.qml:45 ../qml/Dialogs/FilterDialog.qml:65
+msgid "Relevance"
+msgstr "Relevancia"
+
+#: ../qml/Dialogs/FilterDialog.qml:46
+msgid "Most Popular"
+msgstr "Máis popular"
+
+#: ../qml/Dialogs/FilterDialog.qml:47
+msgid "Least Popular"
+msgstr "Menos popular"
+
+#: ../qml/Dialogs/FilterDialog.qml:48
+msgid "Title (A-Z)"
+msgstr "Título (A-Z)"
+
+#: ../qml/Dialogs/FilterDialog.qml:49
+msgid "Title (Z-A)"
+msgstr "Título (Z-A)"
+
+#: ../qml/Dialogs/FilterDialog.qml:50
+msgid "Newest"
+msgstr "O máis recente"
+
+#: ../qml/Dialogs/FilterDialog.qml:51
+msgid "Oldest"
+msgstr "O máis antigo"
+
+#: ../qml/Dialogs/FilterDialog.qml:52
+msgid "Latest Update"
+msgstr "A actualización máis recente"
+
+#: ../qml/Dialogs/FilterDialog.qml:53
+msgid "Oldest Update"
+msgstr "A actualización máis antiga"
+
+#: ../qml/Dialogs/FilterDialog.qml:93
+msgid "Type"
+msgstr "Tipo"
+
+#: ../qml/Dialogs/FilterDialog.qml:100 ../qml/Dialogs/FilterDialog.qml:114
+msgid "All Types"
+msgstr "Todos os tipos"
+
+#: ../qml/Dialogs/FilterDialog.qml:101
+msgid "Apps"
+msgstr "Aplicativos"
+
+#: ../qml/Dialogs/FilterDialog.qml:102
+msgid "Web Apps"
+msgstr "Aplicativos web"
+
+#: ../qml/Dialogs/FilterDialog.qml:139
+msgid "Apply"
+msgstr "Aplicar"
+
+#: ../qml/Dialogs/InstallWarningDialog.qml:27
+msgid "Install unknown app?"
+msgstr "Instalar aplicativo descoñecido?"
+
+#: ../qml/Dialogs/InstallWarningDialog.qml:28
+msgid "Do you want to install the unknown app %1?"
+msgstr "Tes a certeza de querer instalar o aplicativo descoñecido %1?"
+
+#: ../qml/Dialogs/NegativeReviewDialog.qml:26
+msgid "Review confirmation"
+msgstr "Confirmación do comentario"
+
+#: ../qml/Dialogs/NegativeReviewDialog.qml:27
+msgid ""
+"Would you like to contact the author or file a bug instead? By opening a "
+"discussion with the developer(s) you could be helping to improve this app."
+msgstr ""
+"Querería contactar co autor ou enviar un informe de erro? Abrindo unha "
+"discursión co desenvolvedor(es), poderás ser axudado para mellorar o "
+"aplicativo."
+
+#: ../qml/Dialogs/NegativeReviewDialog.qml:37
+msgid "Get support"
+msgstr "Obter axuda"
+
+#: ../qml/Dialogs/NegativeReviewDialog.qml:47
+msgid "Post my review"
+msgstr "Enviar o meu comentario"
+
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
+msgid ""
+"This app has access to restricted parts of the system and all of your data. "
+"It has the potential break your system. While the OpenStore maintainers have "
+"reviewed the code for this app for safety, they are not responsible for "
+"anything bad that might happen to your device or data from installing this "
+"app."
+msgstr ""
+"Este aplicativo ten acceso a partes restrinxidas do sistema e a todos os "
+"seus datos. Pode danar o seu sistema. Mentres os programadores do OpenStore "
+"analizan o código deste aplicativo por seguranza, eles non son responsables "
+"de nada prexudicial que poida acontecer ao seu dispositivo ou aos datos "
+"cando instale este aplicativo."
+
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
+msgid "I understand the risks"
+msgstr "Entendo os riscos"
+
+#: ../qml/Dialogs/UninstallDialog.qml:25
+msgid "Remove package"
+msgstr "Eliminar paquete"
+
+#: ../qml/Dialogs/UninstallDialog.qml:26
+msgid "Do you want to remove %1?"
+msgstr "Quere eliminar %1?"
+
+#: ../qml/DiscoverPage.qml:40
+msgid "OpenStore"
+msgstr "OpenStore"
+
+#: ../qml/DiscoverPage.qml:73
+msgid "by %1"
+msgstr "por %1"
+
+#: ../qml/DiscoverPage.qml:112
+msgid "You are currently offline"
+msgstr "Actualmente estás desconectado"
+
+#: ../qml/DiscoverPage.qml:128
+msgid "OpenStore update available"
+msgstr "A actualización de OpenStore está dispoñible"
+
+#: ../qml/DiscoverPage.qml:158
+msgid " (%1 update available)"
+msgid_plural " (%1 updates available)"
+msgstr[0] " (%1 actualización dispoñible)"
+msgstr[1] " (%1 actualizacións dispoñibles)"
+
+#: ../qml/DiscoverPage.qml:158 ../qml/DiscoverPage.qml:159
+#: ../qml/InstalledAppsPage.qml:52
+msgid "Installed Apps"
+msgstr "Aplicativos instalados"
+
+#: ../qml/DiscoverPage.qml:183
+msgid "Browse Apps by Category"
+msgstr "Navegar por categoría"
+
+#: ../qml/FilteredAppList.qml:109
+msgid "No results found."
+msgstr "Non se atoparon resultados."
+
+#: ../qml/FilteredAppList.qml:109
+msgid "Nothing here yet"
+msgstr "Non hai nada aquí aínda"
+
+#: ../qml/FilteredAppList.qml:110
+msgid "No app has been released in this category yet."
+msgstr "Sen ningún aplicativo nesta categoría."
+
+#: ../qml/FilteredAppList.qml:110
+msgid "Try with a different search."
+msgstr "Inténteo cunha busca diferente."
+
+#. TRANSLATORS: %1 is the number of installed apps
+#: ../qml/InstalledAppsPage.qml:80
+msgid "Installed apps (%1)"
+msgstr "Aplicativos instalados (%1)"
+
+#. TRANSLATORS: %1 is the number of available app updates
+#: ../qml/InstalledAppsPage.qml:84
+msgid "Available updates (%1)"
+msgstr "Actualizacións dispoñibles (%1)"
+
+#. TRANSLATORS: %1 is the number of apps that can be downgraded
+#: ../qml/InstalledAppsPage.qml:88
+msgid "Stable version available (%1)"
+msgstr "Versión estable dispoñible (%1)"
+
+#: ../qml/InstalledAppsPage.qml:91
+msgid ""
+"The installed versions of these apps did not come from the OpenStore but a "
+"stable version is available."
+msgstr ""
+"As versións instaladas non povén da OpenStore, mais unha versión estable "
+"está dispoñible."
+
+#: ../qml/InstalledAppsPage.qml:92
+msgid "Update all"
+msgstr "Actualizar todo"
+
+#: ../qml/InstalledAppsPage.qml:194
+msgid "No apps found"
+msgstr "Non se atoparon aplicativos"
+
+#: ../qml/InstalledAppsPage.qml:195
+msgid "No app has been installed from OpenStore yet."
+msgstr "Aínda sen aplicativos instalados desde a OpenStore."
+
+#: ../qml/Main.qml:315 ../qml/SearchPage.qml:55
+msgid "Filters"
+msgstr "Filtros"
+
+#: ../qml/Main.qml:362
+msgid "App installed"
+msgstr "Aplicativo instalado"
+
+#: ../qml/Main.qml:363
+msgid "The app has been installed successfully."
+msgstr "O aplicativo foi instalado con éxito."
+
+#: ../qml/Main.qml:366 ../qml/Main.qml:379 ../qml/Main.qml:394
+msgid "OK"
+msgstr "Aceptar"
+
+#: ../qml/Main.qml:375
+msgid "Installation failed"
+msgstr "Fallou a instalación"
+
+#: ../qml/Main.qml:376
+msgid ""
+"The package could not be installed. Make sure it is a valid click package."
+msgstr "O paquete non pode ser instalado. Asegúrese que é un paquete válido."
+
+#: ../qml/Main.qml:390
+msgid "Installation failed (Error %1)"
+msgstr "Fallou a instalación (Erro %1)"
+
+#: ../qml/SearchPage.qml:48
+msgid "Search in OpenStore..."
+msgstr "Buscar en OpenStore..."
+
+#: ../qml/SettingsPage.qml:113
+msgid "OpenStore Account"
+msgstr "Conta de OpenStore"
+
+#: ../qml/SettingsPage.qml:121 ../qml/SignInPage.qml:31
+msgid "Sign in"
+msgstr "Iniciar sesión"
+
+#: ../qml/SettingsPage.qml:138
+msgid "Sign out"
+msgstr "Pechar sesión"
+
+#: ../qml/SettingsPage.qml:166
+msgid "Parental control"
+msgstr "Control parental"
+
+#: ../qml/SettingsPage.qml:172
+msgid "Hide adult-oriented content"
+msgstr "Agochar contido para adultos"
+
+#: ../qml/SettingsPage.qml:182
+msgid ""
+"By typing your password you take full responsibility for showing NSFW "
+"content."
+msgstr ""
+"Ao escribir o seu contrasinal, asume toda a responsabilidade por ser "
+"mostrado contido Adulto."
+
+#: ../qml/SettingsPage.qml:207
+msgid "About OpenStore"
+msgstr "Sobre OpenStore"
+
+#: ../qml/SettingsPage.qml:223
+msgid "Report an issue"
+msgstr "Reportar un erro"
+
+#: ../qml/SettingsPage.qml:232
+msgid "Additional Icons by"
+msgstr "Iconas adicionais por"
+
+#: openstore.desktop.in.h:1
+msgid ""
+"software;apps;applications;programs;store;market;play;click;discover;install;"
+msgstr ""
+"programa;aplicativo;aplicativos;programas;almacenamento;mercado;reproducir;pr"
+"emer;descubrir;instalar;"

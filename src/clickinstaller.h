@@ -21,6 +21,7 @@
 #include <QObject>
 #include <QProcess>
 #include <QFile>
+#include <QDBusInterface>
 
     class QNetworkReply;
 class QNetworkAccessManager;
@@ -70,6 +71,9 @@ private:
     QFile m_file;
 
     bool m_isLocalInstall;
+
+    QDBusConnection m_bus;
+    QDBusInterface m_iface;
 };
 
 #endif // CLICKINSTALLER_H

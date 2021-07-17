@@ -1,5 +1,10 @@
 # OpenStore App Changelog
 
+## v3.3.0
+
+- Updated to install apps on Ubuntu 20.04
+- Translation update, thank you translators!
+
 ## v3.2.11
 
 - Fixed broken app when there are too many apps installed

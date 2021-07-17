@@ -24,11 +24,14 @@
 #include <QUrl>
 #include <QFile>
 #include <QFileSystemWatcher>
+#include <QDBusReply>
 
 ClickInstaller::ClickInstaller(QObject *parent) :
     QObject(parent),
     m_installerProcess(0),
-    m_download(0)
+    m_download(0),
+    m_bus(QDBusConnection::systemBus()),
+    m_iface("com.lomiri.click", "/com/lomiri/click", "com.lomiri.click", m_bus)
 {
     m_nam = new QNetworkAccessManager(this);
 }
@@ -78,10 +81,20 @@ void ClickInstaller::removePackage(const QString &appId, const QString &version)
     }
     qDebug() << "starting package removal:" << appId << version;
 
-    m_installerProcess = new QProcess(this);
-    connect(m_installerProcess, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(installerFinished(int,QProcess::ExitStatus)));
-    connect(m_installerProcess, SIGNAL(stateChanged(QProcess::ProcessState)), this, SLOT(processStatusChanged(QProcess::ProcessState)));
-    m_installerProcess->start("pkcon", QStringList() << "remove" << appId + ";" + version + ";all;local:click");
+    if (m_iface.isValid()) {
+        auto reply = m_iface.call("Remove", appId);
+        if (reply.type() == QDBusMessage::ErrorMessage) {
+            qCritical() << "Error removing package" << appId;
+            Q_EMIT packageInstallationFailed();
+        } else {
+            Q_EMIT packageInstalled();
+        }
+    } else {
+        m_installerProcess = new QProcess(this);
+        connect(m_installerProcess, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(installerFinished(int,QProcess::ExitStatus)));
+        connect(m_installerProcess, SIGNAL(stateChanged(QProcess::ProcessState)), this, SLOT(processStatusChanged(QProcess::ProcessState)));
+        m_installerProcess->start("pkcon", QStringList() << "remove" << appId + ";" + version + ";all;local:click");
+    }
     Q_EMIT busyChanged();
 }
 
@@ -126,10 +139,20 @@ void ClickInstaller::installLocalPackage(const QString &packageFilePath)
     }
     qDebug() << "starting installer:" << packageFilePath;
 
-    m_installerProcess = new QProcess(this);
-    connect(m_installerProcess, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(installerFinished(int,QProcess::ExitStatus)));
-    connect(m_installerProcess, SIGNAL(stateChanged(QProcess::ProcessState)), this, SLOT(processStatusChanged(QProcess::ProcessState)));
-    m_installerProcess->start("pkcon", QStringList() << "install-local" << "--allow-untrusted" << packageFilePath);
+    if (m_iface.isValid()) {
+        auto reply = m_iface.call("Install", packageFilePath);
+        if (reply.type() == QDBusMessage::ErrorMessage) {
+            qCritical() << "Error Installing package" << packageFilePath;
+            Q_EMIT packageInstallationFailed();
+        } else {
+            Q_EMIT packageInstalled();
+        }
+    } else {
+        m_installerProcess = new QProcess(this);
+        connect(m_installerProcess, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(installerFinished(int,QProcess::ExitStatus)));
+        connect(m_installerProcess, SIGNAL(stateChanged(QProcess::ProcessState)), this, SLOT(processStatusChanged(QProcess::ProcessState)));
+        m_installerProcess->start("pkcon", QStringList() << "install-local" << "--allow-untrusted" << packageFilePath);
+    }
     Q_EMIT busyChanged();
 }
 

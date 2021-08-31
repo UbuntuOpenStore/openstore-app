@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-31 04:27+0000\n"
-"PO-Revision-Date: 2021-02-15 17:03+0000\n"
+"PO-Revision-Date: 2021-08-31 04:16+0000\n"
 "Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
 "Language-Team: Portuguese <https://translate.ubports.com/projects/openstore/"
 "openstore-app/pt/>\n"
@@ -116,7 +116,7 @@ msgstr "Novidades"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:485
 msgid "Packager/Publisher"
-msgstr "Desenvolvedor/Publicador"
+msgstr "Programador / Editor"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:486
 msgid "OpenStore team"

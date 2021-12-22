@@ -1,5 +1,10 @@
 # OpenStore App Changelog
 
+## v3.3.2
+
+- Removed the ability to accidentally uninstall the OpenStore app
+- Updated the warning when installing external click apps
+
 ## v3.3.1
 
 - Translation update, thank you translators!

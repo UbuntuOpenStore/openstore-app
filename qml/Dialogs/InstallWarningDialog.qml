@@ -25,7 +25,7 @@ Component {
     Dialog {
         id: installQuestionDialog
         title: i18n.tr("Install unknown app?")
-        text: i18n.tr("Do you want to install the unknown app %1?").arg(fileName)
+        text: i18n.tr("Do you want to install the unknown app %1? Installing apps from outside the OpenStore is not recommended and can potentially harm your system. Only install this app if you got it from a trusted source.").arg(fileName)
 
         property string fileName
         signal accepted();
@@ -38,13 +38,14 @@ Component {
         }
 
         Button {
-            text: i18n.tr("Install")
+            text: i18n.tr("I understand the risks")
             color: theme.palette.normal.positive
             visible: !PlatformIntegration.clickInstaller.busy
             onClicked: {
                 installQuestionDialog.accepted()
             }
         }
+
         Button {
             text: i18n.tr("Cancel")
             visible: !PlatformIntegration.clickInstaller.busy

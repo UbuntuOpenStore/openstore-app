@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-25 20:06+0000\n"
+"POT-Creation-Date: 2021-12-22 15:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,7 +65,7 @@ msgstr ""
 msgid "Upgrade"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:293 ../qml/Dialogs/InstallWarningDialog.qml:41
+#: ../qml/AppDetailsPage.qml:293
 msgid "Install"
 msgstr ""
 
@@ -409,7 +409,7 @@ msgid "Submit"
 msgstr ""
 
 #: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:147
-#: ../qml/Dialogs/InstallWarningDialog.qml:49
+#: ../qml/Dialogs/InstallWarningDialog.qml:50
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
 #: ../qml/Dialogs/UninstallDialog.qml:42
 msgid "Cancel"
@@ -545,7 +545,15 @@ msgid "Install unknown app?"
 msgstr ""
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:28
-msgid "Do you want to install the unknown app %1?"
+msgid ""
+"Do you want to install the unknown app %1? Installing apps from outside the "
+"OpenStore is not recommended and can potentially harm your system. Only "
+"install this app if you got it from a trusted source."
+msgstr ""
+
+#: ../qml/Dialogs/InstallWarningDialog.qml:41
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
+msgid "I understand the risks"
 msgstr ""
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:26
@@ -573,10 +581,6 @@ msgid ""
 "reviewed the code for this app for safety, they are not responsible for "
 "anything bad that might happen to your device or data from installing this "
 "app."
-msgstr ""
-
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
-msgid "I understand the risks"
 msgstr ""
 
 #: ../qml/Dialogs/UninstallDialog.qml:25

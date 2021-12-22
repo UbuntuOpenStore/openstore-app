@@ -113,7 +113,7 @@ Page {
             actions: Action {
                 iconName: "delete"
                 text: i18n.tr("Remove")
-                visible: app.installed
+                visible: app.installed && app.appId != "openstore.openstore-team"
 
                 onTriggered: {
                     var popup = PopupUtils.open(removeQuestion, root, {pkgName: app.name || app.id});

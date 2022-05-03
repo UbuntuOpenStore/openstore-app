@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-31 04:27+0000\n"
-"PO-Revision-Date: 2021-03-14 03:13+0000\n"
+"PO-Revision-Date: 2022-05-03 04:46+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://translate.ubports.com/projects/"
 "openstore/openstore-app/nb_NO/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:114
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:33
 msgid "App details"
-msgstr "App detaljer"
+msgstr "Programdetaljer"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:121
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:386
@@ -48,21 +48,22 @@ msgstr "Søkefelt"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:19
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:64
 msgid "Web App"
-msgstr "Web app"
+msgstr "Nett-program"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:160
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:20
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:65
 msgid "Web App+"
-msgstr "Web app+"
+msgstr "Nett-program+"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:240
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
 msgstr ""
-"Den installerte versjonen av appen kommer ikke fra OpenStore serveren. Du "
-"kan installere den nyeste stabile versjonen ved å trykke på knappen nedenfor."
+"Den installerte versjonen av programmet kommer ikke fra OpenStore-tjeneren. "
+"Du kan installere den nyeste stabile versjonen ved å trykke på knappen "
+"nedenfor."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:265
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HighlightedApp.qml:109
@@ -75,20 +76,20 @@ msgstr "OpenStore er installert!"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:290
 msgid "Install stable version"
-msgstr "Installér den stabile versjonen"
+msgstr "Installer den stabile versjonen"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:293
 msgid "Upgrade"
-msgstr "Oppgradér"
+msgstr "Oppgrader"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:296
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:358
 msgid "Install"
-msgstr "Installér"
+msgstr "Installer"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:372
 msgid "This app is not compatible with your system."
-msgstr "Denne appen er ikke kompatibel med systemet."
+msgstr "Dette programmet er ikke kompatibel med systemet."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:405
 msgid ""
@@ -101,7 +102,7 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:408
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
-"Denne appen har tilgang til tilgangsbegrensede systemdata. Se detaljer "
+"Dette programmet har tilgang til tilgangsbegrensede systemdata. Se detaljer "
 "nedenfor."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:433
@@ -115,11 +116,11 @@ msgstr "Nytt"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:485
 msgid "Packager/Publisher"
-msgstr "Utgiver"
+msgstr "Sammenpakker/utgiver"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:486
 msgid "OpenStore team"
-msgstr "OpenStore teamet"
+msgstr "OpenStore-laget"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:494
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:115
@@ -136,11 +137,11 @@ msgstr "Først utgitt"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:524
 msgid "Downloads of the latest version"
-msgstr "Nedlastinger av nyeste versjon"
+msgstr "Nedlastninger av nyeste versjon"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:533
 msgid "Total downloads"
-msgstr "Totalt antall nedlastinger"
+msgstr "Totalt antall nedlastninger"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:542
 msgid "License"
@@ -157,23 +158,23 @@ msgstr "Kildekode"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:566
 msgid "Get support for this app"
-msgstr "Få hjelp med denne appen"
+msgstr "Få hjelp med dette programmet"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:579
 msgid "Donate to support this app"
-msgstr "Gi pengestøtte til utvikling av denne appen"
+msgstr "Gi pengestøtte til utvikling av dette programmet"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:595
 #, qt-format
 msgid "More from %1"
-msgstr "Flere fra %1"
+msgstr "Mer fra %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:610
 #, qt-format
 msgid "Other apps in %1"
-msgstr "Andre apper i %1"
+msgstr "Andre programmer i %1"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:616
 msgid "Package contents"
@@ -205,7 +206,7 @@ msgstr "Kamera"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:719
 msgid "Connectivity"
-msgstr "Tilkobling"
+msgstr "Tilknytning"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:720
 msgid "Contacts"
@@ -221,7 +222,7 @@ msgstr "Innholdsutveksling"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:723
 msgid "Debug"
-msgstr "Feilsøk"
+msgstr "Avlus"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:724
 msgid "History"
@@ -229,7 +230,7 @@ msgstr "Historikk"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:725
 msgid "In App Purchases"
-msgstr "Kjøp i programmer"
+msgstr "Kjøpsmuligheter i programmer"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:726
 msgid "Keep Display On"
@@ -388,8 +389,8 @@ msgid ""
 "You are currently offline and the app details could not be fetched from the "
 "OpenStore"
 msgstr ""
-"Du er for øyeblikket frakoblet, og appopplysningene kunne ikke hentes fra "
-"OpenStore"
+"Du er for øyeblikket frakoblet, og programopplysningene kunne ikke hentes "
+"fra OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesTab.qml:38
 msgid "Categories"
@@ -427,11 +428,11 @@ msgstr "Ingenting her ennå"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
 msgid "No results found."
-msgstr "Ingen treff."
+msgstr "Resultatløst."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
 msgid "No app has been released in this category yet."
-msgstr "Ingen apper utgitt i denne kategorien foreløpig."
+msgstr "Ingen programmer utgitt i denne kategorien foreløpig."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
 msgid "Try with a different search."
@@ -441,13 +442,13 @@ msgstr "Prøv med nytt søk."
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:79
 #, qt-format
 msgid "Installed apps (%1)"
-msgstr "Installerte apper (%1)"
+msgstr "Installerte programmer (%1)"
 
 #. TRANSLATORS: %1 is the number of available app updates
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:83
 #, qt-format
 msgid "Available updates (%1)"
-msgstr "Tilgjengelige oppdateringer (%1)"
+msgstr "Tilgjengelige oppgraderinger (%1)"
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:87
@@ -460,27 +461,27 @@ msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
 msgstr ""
-"De installerte versjonene av disse appene kom ikke fra OpenStore men stabile "
-"versjoner er tilgjengelige."
+"De installerte versjonene av disse programmene kom ikke fra OpenStore, men "
+"stabile versjoner er tilgjengelige."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:91
 msgid "Update all"
-msgstr "Oppdatér alle"
+msgstr "Installer alle"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:193
 msgid "No apps found"
-msgstr "Ingen apper funnet"
+msgstr "Fant ingen programmer"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:194
 msgid "No app has been installed from OpenStore yet."
-msgstr "Ingen installerte apper fra OpenStore."
+msgstr "Ingen installerte programmer fra OpenStore."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:306
 msgid ""
 "You are currently using a non-standard domain for the OpenStore. This is a "
 "development feature. The domain you are using is:"
 msgstr ""
-"Du benytter i øyeblikket ikke et standard domene til OpenStore. Dette er et "
+"Du benytter i øyeblikket ikke et standard-domene til OpenStore. Dette er et "
 "utviklervalg. Domenet du benytter er:"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:320
@@ -506,11 +507,11 @@ msgstr "Ønsker du å installere det ukjente programmet «%1»?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:386
 msgid "App installed"
-msgstr "App installert"
+msgstr "Installert"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:387
 msgid "The app has been installed successfully."
-msgstr "Installasjonen var vellykket."
+msgstr "Programmet ble installert."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:390
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:403
@@ -520,21 +521,22 @@ msgstr "OK"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:399
 msgid "Installation failed"
-msgstr "Installasjonen feilet"
+msgstr "Installasjonen mislyktes"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:400
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
-"Appen kunne ikke installeres. Forsikre deg om at det er en gyldig click "
+"Programmet kunne ikke installeres. Forsikre deg om at det er en gyldig click-"
 "pakke."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:414
 #, qt-format
 msgid "Installation failed (Error %1)"
-msgstr "Installasjonen feilet (Error %1)"
+msgstr "Installasjonen mislyktes (feil %1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:29
+#, fuzzy
 msgid "Your passphrase is required to access restricted content"
 msgstr ""
 "Din adgangssetning må oppgis for å få tilgang til tilgangsbegrenset innhold"
@@ -546,7 +548,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:39
 msgid "Authentication failed"
-msgstr "Autentisering feilet"
+msgstr "Identitetsbekreftelse mislyktes"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
 msgid "Passphrase required"
@@ -566,11 +568,11 @@ msgstr "adgangskode (forvalg er 0000)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:71
 msgid "Authentication failed. Please retry"
-msgstr "Autentisering feilet. Vennligst prøv på nytt"
+msgstr "Identitetsbekreftelse mislyktes. Prøv på nytt."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:76
 msgid "Authenticate"
-msgstr "Autentisér"
+msgstr "Identitetsbekreft"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SearchTab.qml:16
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HeaderMain.qml:39
@@ -612,7 +614,7 @@ msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr ""
-"Ved å oppgi ditt passord tar du fullt ansvar for visning av innhold som er "
+"Ved å oppgi passordet ditt tar du fullt ansvar for visning av innhold som er "
 "uegnet på arbeidsplassen."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:208
@@ -648,12 +650,12 @@ msgstr "Detaljer"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:37
 msgid "Application"
-msgstr "Applikasjon"
+msgstr "Program"
 
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:64
 msgid "URL Handler"
-msgstr "URL håndtering"
+msgstr "Nettadressehåndtering"
 
 #. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:78
@@ -663,7 +665,7 @@ msgstr "Innholdsnavhåndterer"
 #. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:92
 msgid "Push Helper"
-msgstr "Push hjelper"
+msgstr "Push-hjelper"
 
 #. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:106
@@ -687,10 +689,12 @@ msgid "Error Posting Review"
 msgstr "Klarte ikke å publisere vurdering"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:93
+#, fuzzy
 msgid "Review Posted Correctly"
 msgstr "Vurdering innsendt"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:94
+#, fuzzy
 msgid "Your review has been posted successfully."
 msgstr "Din anmeldelse har blitt postet."
 
@@ -700,7 +704,7 @@ msgstr "Vurder dette programmet"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:108
 msgid "Loading..."
-msgstr "Laster..."
+msgstr "Laster inn …"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:129
 msgid "(Optional) Write a review"
@@ -724,7 +728,7 @@ msgstr "Logg inn for å vurdere dette programmet"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:229
 msgid "Review app"
-msgstr "Vurder program"
+msgstr "Vurder programmet"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:230
 msgid "Install this app to review it"
@@ -737,6 +741,7 @@ msgid "Pick"
 msgstr "Velg"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/UninstallPopup.qml:25
+#, fuzzy
 msgid "Remove package"
 msgstr "Fjern program"
 

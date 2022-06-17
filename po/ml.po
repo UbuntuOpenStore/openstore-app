@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-22 15:24+0000\n"
-"PO-Revision-Date: 2022-05-29 10:36+0000\n"
+"PO-Revision-Date: 2022-06-17 23:20+0000\n"
 "Last-Translator: Quilty weavy <quiltywea@gmail.com>\n"
 "Language-Team: Malayalam <https://translate.ubports.com/projects/openstore/"
 "openstore-app/ml/>\n"
@@ -36,18 +36,21 @@ msgstr "ആപ്ലിക്കേഷൻ"
 #: ../qml/AppDetailsPage.qml:152 ../qml/Components/PackageListItem.qml:35
 #: ../qml/Components/PackageTile.qml:80
 msgid "Web App"
-msgstr ""
+msgstr "വെബ് ആപ്പ്"
 
 #: ../qml/AppDetailsPage.qml:153 ../qml/Components/PackageListItem.qml:36
 #: ../qml/Components/PackageTile.qml:81
 msgid "Web App+"
-msgstr ""
+msgstr "വെബ് ആപ്പ്+"
 
 #: ../qml/AppDetailsPage.qml:237
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
 msgstr ""
+"ഈ ആപ്പിന്റെ ഇൻസ്റ്റാൾ ചെയ്ത പതിപ്പ് OpenStore സെർവറിൽ നിന്ന് വരുന്നതല്ല. "
+"ചുവടെയുള്ള ബട്ടൺ ടാപ്പുചെയ്യുന്നതിലൂടെ നിങ്ങൾക്ക് ഏറ്റവും പുതിയ സ്ഥിരതയുള്ള "
+"അപ്‌ഡേറ്റ് ഇൻസ്റ്റാൾ ചെയ്യാൻ കഴിയും."
 
 #: ../qml/AppDetailsPage.qml:262 ../qml/AppLocalDetailsPage.qml:103
 #: ../qml/Components/HighlightedApp.qml:113
@@ -56,11 +59,11 @@ msgstr "തുറക്കുക"
 
 #: ../qml/AppDetailsPage.qml:278
 msgid "The OpenStore is installed!"
-msgstr ""
+msgstr "ഓപ്പൺസ്റ്റോർ ഇൻസ്റ്റാൾ ചെയ്തു!"
 
 #: ../qml/AppDetailsPage.qml:287
 msgid "Install stable version"
-msgstr ""
+msgstr "സ്ഥിരമായ പതിപ്പ് ഇൻസ്റ്റാൾ ചെയ്യുക"
 
 #: ../qml/AppDetailsPage.qml:290
 msgid "Upgrade"
@@ -68,7 +71,7 @@ msgstr "നവീകരിക്കുക"
 
 #: ../qml/AppDetailsPage.qml:293
 msgid "Install"
-msgstr ""
+msgstr "സ്ഥാപിക്കുക"
 
 #: ../qml/AppDetailsPage.qml:369
 msgid "This app is not compatible with your system."
@@ -79,6 +82,8 @@ msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
 msgstr ""
+"ഈ ആപ്പിന് സിസ്റ്റത്തിന്റെ നിയന്ത്രിത ഭാഗങ്ങളിലേക്കും നിങ്ങളുടെ എല്ലാ "
+"ഡാറ്റയിലേക്കും ആക്‌സസ് ഉണ്ട്, വിശദാംശങ്ങൾക്ക് ചുവടെ കാണുക."
 
 #: ../qml/AppDetailsPage.qml:405
 msgid "This app has access to restricted system data, see below for details."
@@ -105,19 +110,19 @@ msgstr "ഇൻസ്റ്റാൾ ചെയ്ത പതിപ്പ്"
 
 #: ../qml/AppDetailsPage.qml:506
 msgid "Latest available version"
-msgstr ""
+msgstr "ലഭ്യമായ ഏറ്റവും പുതിയ പതിപ്പ്"
 
 #: ../qml/AppDetailsPage.qml:515
 msgid "First released"
-msgstr ""
+msgstr "ആദ്യം പുറത്തിറങ്ങി"
 
 #: ../qml/AppDetailsPage.qml:526
 msgid "Downloads of the latest version"
-msgstr ""
+msgstr "ഏറ്റവും പുതിയ പതിപ്പിന്റെ ഡൗൺലോഡുകൾ"
 
 #: ../qml/AppDetailsPage.qml:535
 msgid "Total downloads"
-msgstr ""
+msgstr "ആകെ ഡൗൺലോഡുകൾ"
 
 #: ../qml/AppDetailsPage.qml:544
 msgid "License"
@@ -142,12 +147,12 @@ msgstr "ഈ ആപ്പിനെ പിന്തുണയ്ക്കാൻ സ
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
 #: ../qml/AppDetailsPage.qml:599
 msgid "More from %1"
-msgstr ""
+msgstr "% 1-ൽ നിന്ന് കൂടുതൽ"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
 #: ../qml/AppDetailsPage.qml:614
 msgid "Other apps in %1"
-msgstr ""
+msgstr "% 1-ലെ മറ്റ് ആപ്പുകൾ"
 
 #: ../qml/AppDetailsPage.qml:620
 msgid "Package contents"
@@ -195,15 +200,15 @@ msgstr "ഉള്ളടക്ക കൈമാറ്റം"
 
 #: ../qml/AppDetailsPage.qml:721
 msgid "Debug"
-msgstr ""
+msgstr "ഡീബഗ് ചെയ്യുക"
 
 #: ../qml/AppDetailsPage.qml:722
 msgid "History"
-msgstr ""
+msgstr "ചരിത്രം"
 
 #: ../qml/AppDetailsPage.qml:723
 msgid "In App Purchases"
-msgstr ""
+msgstr "ആപ്പ് വാങ്ങലുകളിൽ"
 
 #: ../qml/AppDetailsPage.qml:724
 msgid "Keep Display On"

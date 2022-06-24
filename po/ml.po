@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-22 15:24+0000\n"
-"PO-Revision-Date: 2022-06-17 23:20+0000\n"
+"PO-Revision-Date: 2022-06-24 23:29+0000\n"
 "Last-Translator: Quilty weavy <quiltywea@gmail.com>\n"
 "Language-Team: Malayalam <https://translate.ubports.com/projects/openstore/"
 "openstore-app/ml/>\n"
@@ -212,100 +212,100 @@ msgstr "ആപ്പ് വാങ്ങലുകളിൽ"
 
 #: ../qml/AppDetailsPage.qml:724
 msgid "Keep Display On"
-msgstr ""
+msgstr "ഡിസ്പ്ലേ ഓണാക്കി സൂക്ഷിക്കുക"
 
 #: ../qml/AppDetailsPage.qml:725
 msgid "Location"
-msgstr ""
+msgstr "സ്ഥാനം"
 
 #: ../qml/AppDetailsPage.qml:726
 msgid "Microphone"
-msgstr ""
+msgstr "മൈക്രോഫോൺ"
 
 #: ../qml/AppDetailsPage.qml:727
 msgid "Read Music Files"
-msgstr ""
+msgstr "സംഗീത ഫയലുകൾ വായിക്കുക"
 
 #: ../qml/AppDetailsPage.qml:728
 msgid "Music Files"
-msgstr ""
+msgstr "സംഗീത ഫയലുകൾ"
 
 #: ../qml/AppDetailsPage.qml:729
 msgid "Networking"
-msgstr ""
+msgstr "നെറ്റ്വർക്കിംഗ്"
 
 #: ../qml/AppDetailsPage.qml:730
 msgid "Read Picture Files"
-msgstr ""
+msgstr "ചിത്ര ഫയലുകൾ വായിക്കുക"
 
 #: ../qml/AppDetailsPage.qml:731
 msgid "Picture Files"
-msgstr ""
+msgstr "ചിത്ര ഫയലുകൾ"
 
 #: ../qml/AppDetailsPage.qml:732
 msgid "Push Notifications"
-msgstr ""
+msgstr "പുഷ് അറിയിപ്പുകൾ"
 
 #: ../qml/AppDetailsPage.qml:733
 msgid "Sensors"
-msgstr ""
+msgstr "സെൻസറുകൾ"
 
 #: ../qml/AppDetailsPage.qml:734
 msgid "User Metrics"
-msgstr ""
+msgstr "ഉപയോക്തൃ മെട്രിക്സ്"
 
 #: ../qml/AppDetailsPage.qml:735
 msgid "Read Video Files"
-msgstr ""
+msgstr "വീഡിയോ ഫയലുകൾ വായിക്കുക"
 
 #: ../qml/AppDetailsPage.qml:736
 msgid "Video Files"
-msgstr ""
+msgstr "വീഡിയോ ഫയലുകൾ"
 
 #: ../qml/AppDetailsPage.qml:737
 msgid "Video"
-msgstr ""
+msgstr "വീഡിയോ"
 
 #: ../qml/AppDetailsPage.qml:738
 msgid "Webview"
-msgstr ""
+msgstr "വെബ്വ്യൂ"
 
 #: ../qml/AppDetailsPage.qml:742
 msgid "Full System Access"
-msgstr ""
+msgstr "മുഴുവൻ സിസ്റ്റം ആക്സസ്"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
 #: ../qml/AppDetailsPage.qml:747
 msgid "none required"
-msgstr ""
+msgstr "ഒന്നും ആവശ്യമില്ല"
 
 #: ../qml/AppDetailsPage.qml:783
 msgid "Read paths"
-msgstr ""
+msgstr "പാതകൾ വായിക്കുക"
 
 #: ../qml/AppDetailsPage.qml:800
 msgid "Write paths"
-msgstr ""
+msgstr "പാതകൾ എഴുതുക"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
 #: ../qml/AppDetailsPage.qml:871
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
 #: ../qml/AppDetailsPage.qml:876
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
 #: ../qml/AppDetailsPage.qml:881
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
 #: ../qml/AppDetailsPage.qml:884
 msgid "%1 bytes"
-msgstr ""
+msgstr "%1 ബൈറ്റുകൾ"
 
 #: ../qml/AppLocalDetailsPage.qml:117
 msgid "This app could not be found in the OpenStore"

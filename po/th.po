@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-25 20:06+0000\n"
-"PO-Revision-Date: 2021-10-09 19:59+0000\n"
-"Last-Translator: Wannaphong Phatthiyaphaibun <wannaphong@yahoo.com>\n"
+"PO-Revision-Date: 2022-07-06 07:14+0000\n"
+"Last-Translator: PPNplus <ppnplus@protonmail.com>\n"
 "Language-Team: Thai <https://translate.ubports.com/projects/openstore/"
 "openstore-app/th/>\n"
 "Language: th\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../qml/AppDetailsPage.qml:108 ../qml/AppLocalDetailsPage.qml:34
 msgid "App details"
-msgstr "รายละเอียดแอพ"
+msgstr "รายละเอียดแอป"
 
 #: ../qml/AppDetailsPage.qml:115 ../qml/AppDetailsPage.qml:383
 #: ../qml/AppLocalDetailsPage.qml:41 ../qml/Dialogs/UninstallDialog.qml:33
@@ -31,12 +31,12 @@ msgstr "ลบ"
 #: ../qml/AppDetailsPage.qml:151 ../qml/Components/PackageListItem.qml:34
 #: ../qml/Components/PackageTile.qml:79
 msgid "App"
-msgstr "แอพ"
+msgstr "แอป"
 
 #: ../qml/AppDetailsPage.qml:152 ../qml/Components/PackageListItem.qml:35
 #: ../qml/Components/PackageTile.qml:80
 msgid "Web App"
-msgstr "เว็บแอพ"
+msgstr "เว็บแอป"
 
 #: ../qml/AppDetailsPage.qml:153 ../qml/Components/PackageListItem.qml:36
 #: ../qml/Components/PackageTile.qml:81
@@ -74,19 +74,19 @@ msgstr "ติดตั้ง"
 
 #: ../qml/AppDetailsPage.qml:369
 msgid "This app is not compatible with your system."
-msgstr "แอพนี้เข้ากันไม่ได้กับระบบของคุณ"
+msgstr "แอปนี้เข้ากันไม่ได้กับระบบของคุณ"
 
 #: ../qml/AppDetailsPage.qml:402
 msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
 msgstr ""
-"แอพนี้มีสิทธิ์เข้าถึงส่วนที่จำกัดของระบบและข้อมูลทั้งหมดของคุณ "
+"แอปนี้มีสิทธิ์เข้าถึงส่วนที่จำกัดของระบบและข้อมูลทั้งหมดของคุณ "
 "ดูรายละเอียดด้านล่าง"
 
 #: ../qml/AppDetailsPage.qml:405
 msgid "This app has access to restricted system data, see below for details."
-msgstr "แอพนี้มีสิทธิ์เข้าถึงข้อมูลระบบที่จำกัด โปรดดูรายละเอียดด้านล่าง"
+msgstr "แอปนี้มีสิทธิ์เข้าถึงข้อมูลระบบที่จำกัด โปรดดูรายละเอียดด้านล่าง"
 
 #: ../qml/AppDetailsPage.qml:430
 msgid "Description"
@@ -111,7 +111,7 @@ msgstr "รุ่นล่าสุดที่มีอยู่"
 
 #: ../qml/AppDetailsPage.qml:515
 msgid "First released"
-msgstr "เปิดตัวครั้งแรก"
+msgstr "ออกครั้งแรก"
 
 #: ../qml/AppDetailsPage.qml:526
 msgid "Downloads of the latest version"
@@ -123,7 +123,7 @@ msgstr "ดาวน์โหลดทั้งหมด"
 
 #: ../qml/AppDetailsPage.qml:544
 msgid "License"
-msgstr "ใบอนุญาต"
+msgstr "สัญญาอนุญาต"
 
 #: ../qml/AppDetailsPage.qml:545
 msgid "N/A"
@@ -135,21 +135,21 @@ msgstr "รหัสต้นฉบับ"
 
 #: ../qml/AppDetailsPage.qml:570
 msgid "Get support for this app"
-msgstr "รับการสนับสนุนจากแอพนี้"
+msgstr "รับความช่วยเหลือจากแอปนี้"
 
 #: ../qml/AppDetailsPage.qml:583
 msgid "Donate to support this app"
-msgstr "บริจาคให้แก่แอพนี้"
+msgstr "บริจาคเพื่อสนับสนุนแอปนี้"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
 #: ../qml/AppDetailsPage.qml:599
 msgid "More from %1"
-msgstr "ย้ายจาก %1"
+msgstr "เพิ่มเติมจาก %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
 #: ../qml/AppDetailsPage.qml:614
 msgid "Other apps in %1"
-msgstr "แอพอื่น ๆ ใน %1"
+msgstr "แอปอื่น ๆ ใน %1"
 
 #: ../qml/AppDetailsPage.qml:620
 msgid "Package contents"
@@ -189,15 +189,15 @@ msgstr "ติดต่อ"
 
 #: ../qml/AppDetailsPage.qml:719
 msgid "Content Exchange Source"
-msgstr ""
+msgstr "แหล่งแลกเปลี่ยนข้อมูล"
 
 #: ../qml/AppDetailsPage.qml:720
 msgid "Content Exchange"
-msgstr ""
+msgstr "ศูนย์แลกเปลี่ยนข้อมูล"
 
 #: ../qml/AppDetailsPage.qml:721
 msgid "Debug"
-msgstr ""
+msgstr "ดีบั๊ก"
 
 #: ../qml/AppDetailsPage.qml:722
 msgid "History"
@@ -205,15 +205,15 @@ msgstr "ประวัติ"
 
 #: ../qml/AppDetailsPage.qml:723
 msgid "In App Purchases"
-msgstr ""
+msgstr "การซื้อภายในแอป"
 
 #: ../qml/AppDetailsPage.qml:724
 msgid "Keep Display On"
-msgstr ""
+msgstr "เปิดหน้าจอทิ้งไว้"
 
 #: ../qml/AppDetailsPage.qml:725
 msgid "Location"
-msgstr ""
+msgstr "ตำแหน่งที่ตั้ง"
 
 #: ../qml/AppDetailsPage.qml:726
 msgid "Microphone"
@@ -221,31 +221,31 @@ msgstr "ไมโครโฟน"
 
 #: ../qml/AppDetailsPage.qml:727
 msgid "Read Music Files"
-msgstr ""
+msgstr "อ่านไฟล์เพลง"
 
 #: ../qml/AppDetailsPage.qml:728
 msgid "Music Files"
-msgstr ""
+msgstr "ไฟล์เพลง"
 
 #: ../qml/AppDetailsPage.qml:729
 msgid "Networking"
-msgstr ""
+msgstr "เครือข่าย"
 
 #: ../qml/AppDetailsPage.qml:730
 msgid "Read Picture Files"
-msgstr ""
+msgstr "อ่านไฟล์รูปภาพ"
 
 #: ../qml/AppDetailsPage.qml:731
 msgid "Picture Files"
-msgstr ""
+msgstr "ไฟล์รูปภาพ"
 
 #: ../qml/AppDetailsPage.qml:732
 msgid "Push Notifications"
-msgstr ""
+msgstr "การแจ้งเตือนพุช"
 
 #: ../qml/AppDetailsPage.qml:733
 msgid "Sensors"
-msgstr ""
+msgstr "เซ็นเซอร์"
 
 #: ../qml/AppDetailsPage.qml:734
 msgid "User Metrics"
@@ -253,101 +253,101 @@ msgstr ""
 
 #: ../qml/AppDetailsPage.qml:735
 msgid "Read Video Files"
-msgstr ""
+msgstr "อ่านไฟล์วิดีโอ"
 
 #: ../qml/AppDetailsPage.qml:736
 msgid "Video Files"
-msgstr ""
+msgstr "ไฟล์วิดีโอ"
 
 #: ../qml/AppDetailsPage.qml:737
 msgid "Video"
-msgstr ""
+msgstr "วิดีโอ"
 
 #: ../qml/AppDetailsPage.qml:738
 msgid "Webview"
-msgstr ""
+msgstr "Webview"
 
 #: ../qml/AppDetailsPage.qml:742
 msgid "Full System Access"
-msgstr ""
+msgstr "เข้าถึงระบบเต็มรูปแบบ"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
 #: ../qml/AppDetailsPage.qml:747
 msgid "none required"
-msgstr ""
+msgstr "ไม่มี"
 
 #: ../qml/AppDetailsPage.qml:783
 msgid "Read paths"
-msgstr ""
+msgstr "อ่านเส้นทางไฟล์"
 
 #: ../qml/AppDetailsPage.qml:800
 msgid "Write paths"
-msgstr ""
+msgstr "เขียนเส้นทางไฟล์"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
 #: ../qml/AppDetailsPage.qml:871
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
 #: ../qml/AppDetailsPage.qml:876
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
 #: ../qml/AppDetailsPage.qml:881
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
 #: ../qml/AppDetailsPage.qml:884
 msgid "%1 bytes"
-msgstr ""
+msgstr "%1 ไบต์"
 
 #: ../qml/AppLocalDetailsPage.qml:117
 msgid "This app could not be found in the OpenStore"
-msgstr ""
+msgstr "ไม่พบแอปนี้ใน OpenStore"
 
 #: ../qml/AppLocalDetailsPage.qml:120
 msgid ""
 "You are currently offline and the app details could not be fetched from the "
 "OpenStore"
-msgstr ""
+msgstr "คุณไม่ได้เชื่อมต่ออินเทอร์เน็ต จึงไม่สามารถดึงข้อมูลแอปจาก OpenStore"
 
 #: ../qml/CategoriesPage.qml:39
 msgid "Categories"
-msgstr ""
+msgstr "หมวดหมู่"
 
 #: ../qml/Components/BottomEdgePageStack.qml:102
 msgid "Back"
-msgstr ""
+msgstr "ย้อนกลับ"
 
 #: ../qml/Components/BottomEdgePageStack.qml:102
 #: ../qml/Components/ReviewPreview.qml:103
 #: ../qml/Components/ReviewPreview.qml:117
 msgid "Close"
-msgstr ""
+msgstr "ปิด"
 
 #: ../qml/Components/HeaderMain.qml:27 ../qml/SettingsPage.qml:29
 msgid "Settings"
-msgstr ""
+msgstr "การตั้งค่า"
 
 #: ../qml/Components/HeaderMain.qml:40 ../qml/SearchPage.qml:35
 msgid "Search"
-msgstr ""
+msgstr "ค้นหา"
 
 #: ../qml/Components/HighlightedApp.qml:110
 #: ../qml/Components/ReviewPreview.qml:193
 msgid "Update"
-msgstr ""
+msgstr "อัปเดต"
 
 #: ../qml/Components/HighlightedApp.qml:116
 msgid "Details"
-msgstr ""
+msgstr "รายละเอียด"
 
 #: ../qml/Components/HookIcon.qml:54
 msgid "Application"
-msgstr ""
+msgstr "แอปพลิเคชัน"
 
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: ../qml/Components/HookIcon.qml:68
@@ -371,11 +371,11 @@ msgstr ""
 
 #: ../qml/Components/PackageTile.qml:97
 msgid "Update available"
-msgstr ""
+msgstr "มีอัปเดต"
 
 #: ../qml/Components/PackageTile.qml:97
 msgid "✓ Installed"
-msgstr ""
+msgstr "✓ ติดตั้งแล้ว"
 
 #: ../qml/Components/ReviewPreview.qml:93
 msgid "Something went wrong..."
@@ -407,18 +407,18 @@ msgstr ""
 
 #: ../qml/Components/ReviewPreview.qml:139
 msgid "%1/%2 characters"
-msgstr ""
+msgstr "%1/%2 ตัวอักษร"
 
 #: ../qml/Components/ReviewPreview.qml:193
 msgid "Submit"
-msgstr ""
+msgstr "ส่ง"
 
 #: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:147
 #: ../qml/Dialogs/InstallWarningDialog.qml:49
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
 #: ../qml/Dialogs/UninstallDialog.qml:42
 msgid "Cancel"
-msgstr ""
+msgstr "ยกเลิก"
 
 #: ../qml/Components/ReviewPreview.qml:244
 msgid "%1 review. "
@@ -444,7 +444,7 @@ msgstr ""
 #: ../qml/Dialogs/DomainWarningDialog.qml:26
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:25
 msgid "Warning"
-msgstr ""
+msgstr "คำเตือน"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:35
 msgid ""
@@ -458,15 +458,15 @@ msgstr ""
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:53
 msgid "Yes, I know what I'm doing"
-msgstr ""
+msgstr "ใช่ ฉันเข้าใจว่าฉันทำอะไรอยู่"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:61
 msgid "Get me out of here!"
-msgstr ""
+msgstr "พาฉันออกจากที่นี่!"
 
 #: ../qml/Dialogs/DonationDialog.qml:25
 msgid "Donating"
-msgstr ""
+msgstr "การบริจาค"
 
 #: ../qml/Dialogs/DonationDialog.qml:26
 msgid "Would you like to support this app with a donation to the developer?"

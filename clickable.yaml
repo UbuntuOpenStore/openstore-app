@@ -1,0 +1,7 @@
+clickable_minimum_required: 7.4.0
+builder: cmake
+kill: openstore
+ignore_review_warnings: true
+dependencies_target:
+  - libclick-0.4-dev
+  - libpam0g-dev

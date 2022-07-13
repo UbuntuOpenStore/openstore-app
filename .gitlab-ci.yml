@@ -8,7 +8,7 @@ build-arm64:
   - if: $CI_COMMIT_TAG == null
   script:
   - git submodule update --init --recursive
-  - clickable clean-build
+  - clickable build --clean
   stage: build
 
 build-armhf:
@@ -21,7 +21,7 @@ build-armhf:
   - if: $CI_COMMIT_TAG == null
   script:
   - git submodule update --init --recursive
-  - clickable clean-build
+  - clickable build --clean
   stage: build
 
 build-amd64:
@@ -34,7 +34,7 @@ build-amd64:
   - if: $CI_COMMIT_TAG == null
   script:
   - git submodule update --init --recursive
-  - clickable clean-build
+  - clickable build --clean
   stage: build
 
 publish-arm64:
@@ -47,7 +47,7 @@ publish-arm64:
   - if: $CI_COMMIT_TAG
   script:
   - git submodule update --init --recursive
-  - clickable clean-build
+  - clickable build --clean
   - clickable publish
   stage: deploy
 
@@ -61,7 +61,7 @@ publish-armhf:
   - if: $CI_COMMIT_TAG
   script:
   - git submodule update --init --recursive
-  - clickable clean-build
+  - clickable build --clean
   - clickable publish "$CI_COMMIT_MESSAGE"
   stage: deploy
 
@@ -75,6 +75,6 @@ publish-amd64:
   - if: $CI_COMMIT_TAG
   script:
   - git submodule update --init --recursive
-  - clickable clean-build
+  - clickable build --clean
   - clickable publish "$CI_COMMIT_MESSAGE"
   stage: deploy

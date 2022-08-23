@@ -76,6 +76,8 @@ Item {
                     id: hAppName
                     color: appColorText
                     textSize: Label.Large
+                    maximumLineCount: 2
+                    elide: Text.ElideRight
                 }
 
                 LabelCentered {

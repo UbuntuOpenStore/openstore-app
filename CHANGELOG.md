@@ -1,5 +1,9 @@
 # OpenStore App Changelog
 
+## v3.3.4
+
+- Fixed the highlighted app's name pushing other UI elements out of the way
+
 ## v3.3.3
 
 - Translation update, thank you translators!

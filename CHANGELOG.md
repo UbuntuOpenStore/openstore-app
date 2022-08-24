@@ -1,5 +1,9 @@
 # OpenStore App Changelog
 
+## v3.3.5
+
+- Fixed the highlighted app's author name pushing other UI elements out of the way
+
 ## v3.3.4
 
 - Fixed the highlighted app's name pushing other UI elements out of the way

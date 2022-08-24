@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-23 21:10+0000\n"
+"POT-Creation-Date: 2022-08-24 13:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,7 +49,7 @@ msgid ""
 msgstr ""
 
 #: ../qml/AppDetailsPage.qml:262 ../qml/AppLocalDetailsPage.qml:103
-#: ../qml/Components/HighlightedApp.qml:115
+#: ../qml/Components/HighlightedApp.qml:117
 msgid "Open"
 msgstr ""
 
@@ -331,12 +331,12 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: ../qml/Components/HighlightedApp.qml:112
+#: ../qml/Components/HighlightedApp.qml:114
 #: ../qml/Components/ReviewPreview.qml:193
 msgid "Update"
 msgstr ""
 
-#: ../qml/Components/HighlightedApp.qml:118
+#: ../qml/Components/HighlightedApp.qml:120
 msgid "Details"
 msgstr ""
 

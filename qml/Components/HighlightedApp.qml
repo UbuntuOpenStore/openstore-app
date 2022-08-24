@@ -84,6 +84,8 @@ Item {
                     id: hAppAut
                     color: appColorText
                     textSize: Label.Medium
+                    maximumLineCount: 1
+                    elide: Text.ElideRight
                 }
 
                 RatingsRow {

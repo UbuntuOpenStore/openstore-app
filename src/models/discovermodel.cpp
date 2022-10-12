@@ -72,6 +72,8 @@ PackageItem* DiscoverModel::getPackage(const QString &appId)
 
 void DiscoverModel::refresh()
 {
+    m_ready = false;
+
     // Safety is the number one priority
     beginResetModel();
     m_list.clear();
@@ -93,7 +95,7 @@ void DiscoverModel::parseReply(OpenStoreReply reply)
     m_highlightBannerUrl = highlight.value("image").toUrl();
     m_highlightAppId = highlight.value("id").toString();
 
-    if (!PackagesCache::instance()->contains(m_highlightAppId)) {
+    if (!m_highlightAppId.isEmpty() && !PackagesCache::instance()->contains(m_highlightAppId)) {
         PackagesCache::instance()->insert(m_highlightAppId, highlight.value("app").toMap());
     }
 
@@ -122,5 +124,6 @@ void DiscoverModel::parseReply(OpenStoreReply reply)
         }
     }
 
+    m_ready = true;
     Q_EMIT updated();
 }

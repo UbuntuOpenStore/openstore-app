@@ -59,6 +59,9 @@ Page {
 
                     property var appItem: discoverModel.getPackage(discoverModel.highlightAppId)
 
+                    // Hide when discover is loaded, but there is no highlighted app
+                    visible: !discoverModel.ready || (discoverModel.ready && highlightAppControl.appItem !== null)
+
                     appStatus: {
                         //TODO: More elegant way of doing this?
                         if (highlightAppControl.appItem && highlightAppControl.appItem.installed)
@@ -76,7 +79,22 @@ Page {
 
                     ActivityIndicator {
                         anchors.centerIn: parent
-                        visible: !highlightAppControl.ready && Connectivity.online
+                        //visible: !highlightAppControl.ready && Connectivity.online
+                        visible: {
+                            if (!Connectivity.online) {
+                                return false;
+                            }
+                            if (highlightAppControl.ready) {
+                                return false;
+                            }
+
+                            // Discover was loaded, but there is no highlighted app
+                            if (discoverModel.ready && !highlightAppControl.appItem) {
+                                return false;
+                            }
+
+                            return true;
+                        }
                         running: visible
                     }
 
@@ -150,7 +168,7 @@ Page {
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: parent.width
                     //Used opacity to hide this until the model is ready. If visible is used, the ListView moves up on start
-                    opacity: highlightAppControl.ready || !Connectivity.online ? 1 : 0
+                    opacity: highlightAppControl.ready || (discoverModel.ready && highlightAppControl.appItem === null) || !Connectivity.online ? 1 : 0
 
                     ListItemLayout {
                         anchors.fill: parent
@@ -176,7 +194,7 @@ Page {
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: parent.width
                     //Used opacity to hide this until the model is ready. If visible is used, the ListView moves up on start
-                    opacity: highlightAppControl.ready ? 1 : 0
+                    opacity: highlightAppControl.ready || (discoverModel.ready && highlightAppControl.appItem === null) ? 1 : 0
 
                     ListItemLayout {
                         anchors.fill: parent

@@ -108,7 +108,7 @@ Item {
         sourceComponent: Components.EmptyState {
             title: rootItem.filterProperty == "category" ? i18n.tr("Nothing here yet") : i18n.tr("No results found.").arg(rootItem.filterPattern)
             subTitle: rootItem.filterProperty == "category" ? i18n.tr("No app has been released in this category yet.") : i18n.tr("Try with a different search.")
-            iconName: rootItem.filterProperty == "category" ? "ubuntu-store-symbolic" : "search"
+            iconName: rootItem.filterProperty == "category" ? "ubuntu-store-symbolic" : "find"
             anchors.centerIn: parent
         }
     }

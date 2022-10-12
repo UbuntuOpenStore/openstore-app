@@ -140,7 +140,7 @@ void OpenStoreNetworkManager::parseReply(QNetworkReply *reply, const QString &si
         QVariantMap replyMap = jsonDoc.toVariant().toMap();
         if (!replyMap.value("success").toBool() && !replyMap.value("message").toString().isEmpty())
         {
-            qWarning() << Q_FUNC_INFO << replyMap.value("message").toString();
+            qWarning() << Q_FUNC_INFO << "Error from api" << replyMap.value("message").toString() << reply->url();
             Q_EMIT error(signature, replyMap.value("message").toString());
             reply->deleteLater();
             return;

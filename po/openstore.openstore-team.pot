@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-24 13:59+0000\n"
+"POT-Creation-Date: 2022-10-12 04:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -313,6 +313,10 @@ msgstr ""
 msgid "Categories"
 msgstr ""
 
+#: ../qml/CategoriesPage.qml:84
+msgid "Nothing to see here yet!"
+msgstr ""
+
 #: ../qml/Components/BottomEdgePageStack.qml:102
 msgid "Back"
 msgstr ""
@@ -344,17 +348,17 @@ msgstr ""
 msgid "Application"
 msgstr ""
 
-#. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
+#. TRANSLATORS: This is a platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: ../qml/Components/HookIcon.qml:68
 msgid "URL Handler"
 msgstr ""
 
-#. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
+#. TRANSLATORS: This is a platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
 #: ../qml/Components/HookIcon.qml:82
 msgid "Content Hub Handler"
 msgstr ""
 
-#. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
+#. TRANSLATORS: This is a platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
 #: ../qml/Components/HookIcon.qml:96
 msgid "Push Helper"
 msgstr ""
@@ -595,30 +599,30 @@ msgstr ""
 msgid "OpenStore"
 msgstr ""
 
-#: ../qml/DiscoverPage.qml:73
+#: ../qml/DiscoverPage.qml:76
 msgid "by %1"
 msgstr ""
 
-#: ../qml/DiscoverPage.qml:112
+#: ../qml/DiscoverPage.qml:130
 msgid "You are currently offline"
 msgstr ""
 
-#: ../qml/DiscoverPage.qml:128
+#: ../qml/DiscoverPage.qml:146
 msgid "OpenStore update available"
 msgstr ""
 
-#: ../qml/DiscoverPage.qml:158
+#: ../qml/DiscoverPage.qml:176
 msgid " (%1 update available)"
 msgid_plural " (%1 updates available)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../qml/DiscoverPage.qml:158 ../qml/DiscoverPage.qml:159
+#: ../qml/DiscoverPage.qml:176 ../qml/DiscoverPage.qml:177
 #: ../qml/InstalledAppsPage.qml:52
 msgid "Installed Apps"
 msgstr ""
 
-#: ../qml/DiscoverPage.qml:183
+#: ../qml/DiscoverPage.qml:201
 msgid "Browse Apps by Category"
 msgstr ""
 

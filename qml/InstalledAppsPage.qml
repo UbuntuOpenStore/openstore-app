@@ -197,4 +197,16 @@ Page {
             anchors.centerIn: parent
         }
     }
+
+    Connections {
+        target: localAppModel
+        onCountChanged: {
+            console.log(localAppModel.count);
+            console.log(localAppModel.get(0));
+        }
+        onReadyChanged: {
+            console.log(localAppModel.count);
+            console.log(localAppModel.get(0));
+        }
+    }
 }

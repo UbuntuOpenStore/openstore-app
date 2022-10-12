@@ -79,7 +79,7 @@ void ClickInstaller::removePackage(const QString &appId, const QString &version)
     if (m_installerProcess) {
         return;
     }
-    qDebug() << "starting package removal:" << appId << version;
+    qDebug() << "starting package removal:" << appId << version << m_iface.isValid();
 
     if (m_iface.isValid()) {
         auto reply = m_iface.call("Remove", appId);
@@ -137,7 +137,7 @@ void ClickInstaller::installLocalPackage(const QString &packageFilePath)
     if (m_installerProcess) {
         return;
     }
-    qDebug() << "starting installer:" << packageFilePath;
+    qDebug() << "starting installer:" << packageFilePath << m_iface.isValid();
 
     if (m_iface.isValid()) {
         auto reply = m_iface.call("Install", packageFilePath);

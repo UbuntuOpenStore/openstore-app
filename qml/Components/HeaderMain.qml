@@ -35,7 +35,7 @@ HeaderBase {
                 }
             },
             Action {
-                iconName: "search"
+                iconName: "find"
                 shortcut: "Ctrl+f"
                 text: i18n.tr("Search")
 

@@ -77,4 +77,12 @@ Page {
             }
         }
     }
+
+    Label {
+        visible: categoriesModel.ready && categoriesModel.rowCount() === 0
+        anchors.fill: parent
+        text: i18n.tr("Nothing to see here yet!")
+        horizontalAlignment: Label.AlignHCenter
+        verticalAlignment: Label.AlignVCenter
+    }
 }

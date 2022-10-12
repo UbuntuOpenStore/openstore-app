@@ -64,7 +64,7 @@ Icon {
                             name: "stock_website"
                         }
                         Label {
-                            // TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
+                            // TRANSLATORS: This is a platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
                             text: i18n.tr("URL Handler")
                             Layout.fillWidth: true
                         }
@@ -78,7 +78,7 @@ Icon {
                             name: "share"
                         }
                         Label {
-                            // TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
+                            // TRANSLATORS: This is a platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
                             text: i18n.tr("Content Hub Handler")
                             Layout.fillWidth: true
                         }
@@ -92,7 +92,7 @@ Icon {
                             name: "notification"
                         }
                         Label {
-                            // TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
+                            // TRANSLATORS: This is a platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
                             text: i18n.tr("Push Helper")
                             Layout.fillWidth: true
                         }

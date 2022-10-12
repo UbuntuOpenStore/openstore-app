@@ -37,6 +37,7 @@ class DiscoverModel : public QAbstractListModel
     Q_OBJECT
     Q_PROPERTY(QUrl highlightBannerUrl READ highlightBannerUrl NOTIFY updated)
     Q_PROPERTY(QString highlightAppId READ highlightAppId NOTIFY updated)
+    Q_PROPERTY(bool ready READ ready NOTIFY updated)
 
 public:
     enum Roles {
@@ -50,6 +51,7 @@ public:
 
     QUrl highlightBannerUrl() const { return m_highlightBannerUrl; }
     QString highlightAppId() const { return m_highlightAppId; }
+    bool ready() const { return m_ready; }
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
     QVariant data(const QModelIndex &index, int role) const Q_DECL_OVERRIDE;
@@ -72,6 +74,7 @@ private:
 
     QUrl m_highlightBannerUrl;
     QString m_highlightAppId;
+    bool m_ready = false;
 };
 
 #endif // DISCOVERMODEL_H

@@ -134,7 +134,7 @@ int LocalPackagesModel::downgradesAvailableCount() const
 
 void LocalPackagesModel::refresh()
 {
-    //qDebug() << Q_FUNC_INFO << "called";
+    qDebug() << Q_FUNC_INFO << "called";
 
     MODEL_START_REFRESH();
 
@@ -149,6 +149,7 @@ void LocalPackagesModel::refresh()
         QVariantMap map = pkg.toMap();
         QString appId = map.value("name").toString();
         QString version = map.value("version").toString();
+        qDebug() << Q_FUNC_INFO << appId;
 
         QVariantMap hookMap = map.value("hooks").toMap();
         QString appLaunchUrl;

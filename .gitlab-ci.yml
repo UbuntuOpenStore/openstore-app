@@ -22,7 +22,7 @@ build-arm64-focal:
   rules:
     - if: $CI_COMMIT_TAG == null
   script:
-    - bash ./focal-build.sh build --arch arm64
+    - bash ./focal-build.sh build
   stage: build
 
 build-armhf-xenial:
@@ -40,7 +40,7 @@ build-armhf-focal:
   rules:
     - if: $CI_COMMIT_TAG == null
   script:
-    - bash ./focal-build.sh build --arch armhf
+    - bash ./focal-build.sh build
   stage: build
 
 build-amd64-xenial:
@@ -58,7 +58,7 @@ build-amd64-focal:
   rules:
     - if: $CI_COMMIT_TAG == null
   script:
-    - bash ./focal-build.sh build --arch amd64
+    - bash ./focal-build.sh build
   stage: build
 
 publish-arm64-xenial:
@@ -77,7 +77,7 @@ publish-arm64-focal:
   rules:
     - if: $CI_COMMIT_TAG
   script:
-    - bash ./focal-build.sh build --arch arm64
+    - bash ./focal-build.sh build
     - CLICKABLE_FRAMEWORK=ubuntu-sdk-20.04 clickable publish
   stage: deploy
 
@@ -93,11 +93,11 @@ publish-armhf-xenial:
 
 publish-armhf-focal:
   extends: .artifacts
-  image: clickable/ci-16.04-armhf
+  image: clickable/ci-20.04-armhf
   rules:
     - if: $CI_COMMIT_TAG
   script:
-    - bash ./focal-build.sh build --arch armhf
+    - bash ./focal-build.sh build
     - CLICKABLE_FRAMEWORK=ubuntu-sdk-20.04 clickable publish
   stage: deploy
 
@@ -113,10 +113,10 @@ publish-amd64-xenial:
 
 publish-amd64-focal:
   extends: .artifacts
-  image: clickable/ci-16.04-amd64
+  image: clickable/ci-20.04-amd64
   rules:
     - if: $CI_COMMIT_TAG
   script:
-    - bash ./focal-build.sh build --arch amd64
+    - bash ./focal-build.sh build
     - CLICKABLE_FRAMEWORK=ubuntu-sdk-20.04 clickable publish
   stage: deploy

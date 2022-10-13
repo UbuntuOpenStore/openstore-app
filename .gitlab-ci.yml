@@ -1,80 +1,122 @@
-build-arm64:
+.artifacts:
   artifacts:
     expire_in: 1 week
     paths:
     - build/*/app/*.click
+
+before_script:
+  - git submodule update --init --recursive
+
+build-arm64-xenial:
+  extends: .artifacts
   image: clickable/ci-16.04-arm64
   rules:
-  - if: $CI_COMMIT_TAG == null
+    - if: $CI_COMMIT_TAG == null
   script:
-  - git submodule update --init --recursive
-  - clickable build --clean
+    - clickable build
   stage: build
 
-build-armhf:
-  artifacts:
-    expire_in: 1 week
-    paths:
-    - build/*/app/*.click
+build-arm64-focal:
+  extends: .artifacts
+  image: clickable/ci-20.04-arm64
+  rules:
+    - if: $CI_COMMIT_TAG == null
+  script:
+    - bash ./focal-build.sh build --arch arm64
+  stage: build
+
+build-armhf-xenial:
+  extends: .artifacts
   image: clickable/ci-16.04-armhf
   rules:
-  - if: $CI_COMMIT_TAG == null
+    - if: $CI_COMMIT_TAG == null
   script:
-  - git submodule update --init --recursive
-  - clickable build --clean
+    - clickable build
   stage: build
 
-build-amd64:
-  artifacts:
-    expire_in: 1 week
-    paths:
-    - build/*/app/*.click
+build-armhf-focal:
+  extends: .artifacts
+  image: clickable/ci-20.04-armhf
+  rules:
+    - if: $CI_COMMIT_TAG == null
+  script:
+    - bash ./focal-build.sh build --arch armhf
+  stage: build
+
+build-amd64-xenial:
+  extends: .artifacts
   image: clickable/ci-16.04-amd64
   rules:
-  - if: $CI_COMMIT_TAG == null
+    - if: $CI_COMMIT_TAG == null
   script:
-  - git submodule update --init --recursive
-  - clickable build --clean
+    - clickable build
   stage: build
 
-publish-arm64:
-  artifacts:
-    expire_in: 1 week
-    paths:
-    - build/*/app/*.click
+build-amd64-focal:
+  extends: .artifacts
+  image: clickable/ci-20.04-amd64
+  rules:
+    - if: $CI_COMMIT_TAG == null
+  script:
+    - bash ./focal-build.sh build --arch amd64
+  stage: build
+
+publish-arm64-xenial:
+  extends: .artifacts
   image: clickable/ci-16.04-arm64
   rules:
-  - if: $CI_COMMIT_TAG
+    - if: $CI_COMMIT_TAG
   script:
-  - git submodule update --init --recursive
-  - clickable build --clean
-  - clickable publish
+    - clickable build
+    - clickable publish "$CI_COMMIT_MESSAGE"
   stage: deploy
 
-publish-armhf:
-  artifacts:
-    expire_in: 1 week
-    paths:
-    - build/*/app/*.click
+publish-arm64-focal:
+  extends: .artifacts
+  image: clickable/ci-20.04-arm64
+  rules:
+    - if: $CI_COMMIT_TAG
+  script:
+    - bash ./focal-build.sh build --arch arm64
+    - CLICKABLE_FRAMEWORK=ubuntu-sdk-20.04 clickable publish
+  stage: deploy
+
+publish-armhf-xenial:
+  extends: .artifacts
   image: clickable/ci-16.04-armhf
   rules:
-  - if: $CI_COMMIT_TAG
+    - if: $CI_COMMIT_TAG
   script:
-  - git submodule update --init --recursive
-  - clickable build --clean
-  - clickable publish "$CI_COMMIT_MESSAGE"
+    - clickable build
+    - clickable publish
   stage: deploy
 
-publish-amd64:
-  artifacts:
-    expire_in: 1 week
-    paths:
-    - build/*/app/*.click
+publish-armhf-focal:
+  extends: .artifacts
+  image: clickable/ci-16.04-armhf
+  rules:
+    - if: $CI_COMMIT_TAG
+  script:
+    - bash ./focal-build.sh build --arch armhf
+    - CLICKABLE_FRAMEWORK=ubuntu-sdk-20.04 clickable publish
+  stage: deploy
+
+publish-amd64-xenial:
+  extends: .artifacts
   image: clickable/ci-16.04-amd64
   rules:
-  - if: $CI_COMMIT_TAG
+    - if: $CI_COMMIT_TAG
   script:
-  - git submodule update --init --recursive
-  - clickable build --clean
-  - clickable publish "$CI_COMMIT_MESSAGE"
+    - clickable build
+    - clickable publish
+  stage: deploy
+
+publish-amd64-focal:
+  extends: .artifacts
+  image: clickable/ci-16.04-amd64
+  rules:
+    - if: $CI_COMMIT_TAG
+  script:
+    - bash ./focal-build.sh build --arch amd64
+    - CLICKABLE_FRAMEWORK=ubuntu-sdk-20.04 clickable publish
   stage: deploy

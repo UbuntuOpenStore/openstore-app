@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-12 04:30+0000\n"
+"POT-Creation-Date: 2022-10-13 04:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,7 +48,7 @@ msgid ""
 "You can install the latest stable update by tapping the button below."
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:262 ../qml/AppLocalDetailsPage.qml:103
+#: ../qml/AppDetailsPage.qml:262 ../qml/AppLocalDetailsPage.qml:104
 #: ../qml/Components/HighlightedApp.qml:117
 msgid "Open"
 msgstr ""
@@ -96,7 +96,7 @@ msgstr ""
 msgid "Packager/Publisher"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:496 ../qml/AppLocalDetailsPage.qml:137
+#: ../qml/AppDetailsPage.qml:496 ../qml/AppLocalDetailsPage.qml:138
 msgid "Installed version"
 msgstr ""
 
@@ -299,11 +299,11 @@ msgstr ""
 msgid "%1 bytes"
 msgstr ""
 
-#: ../qml/AppLocalDetailsPage.qml:117
+#: ../qml/AppLocalDetailsPage.qml:118
 msgid "This app could not be found in the OpenStore"
 msgstr ""
 
-#: ../qml/AppLocalDetailsPage.qml:120
+#: ../qml/AppLocalDetailsPage.qml:121
 msgid ""
 "You are currently offline and the app details could not be fetched from the "
 "OpenStore"

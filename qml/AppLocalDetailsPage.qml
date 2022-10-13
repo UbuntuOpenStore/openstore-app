@@ -39,6 +39,7 @@ Page {
             actions: Action {
                 iconName: "delete"
                 text: i18n.tr("Remove")
+                visible: app.appId != "openstore.openstore-team"
 
                 onTriggered: {
                     // TODO share removeQuestion popup

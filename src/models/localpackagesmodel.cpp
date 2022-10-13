@@ -134,13 +134,12 @@ int LocalPackagesModel::downgradesAvailableCount() const
 
 void LocalPackagesModel::refresh()
 {
-    qDebug() << Q_FUNC_INFO << "called";
+    // qDebug() << Q_FUNC_INFO << "refresh called";
 
     MODEL_START_REFRESH();
 
     beginResetModel();
     m_list.clear();
-    endResetModel();
 
     const QVariantList &clickDb = PlatformIntegration::instance()->clickDb();
 
@@ -149,7 +148,6 @@ void LocalPackagesModel::refresh()
         QVariantMap map = pkg.toMap();
         QString appId = map.value("name").toString();
         QString version = map.value("version").toString();
-        qDebug() << Q_FUNC_INFO << appId;
 
         QVariantMap hookMap = map.value("hooks").toMap();
         QString appLaunchUrl;
@@ -222,6 +220,7 @@ void LocalPackagesModel::refresh()
     std::sort(m_list.begin(), m_list.end(), sortPackage);
 
     endInsertRows();
+    endResetModel();
 
     Q_EMIT updated();
     MODEL_END_REFRESH();

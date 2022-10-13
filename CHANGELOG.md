@@ -1,5 +1,9 @@
 # OpenStore App Changelog
 
+## v3.3.6
+
+- Fixes to run on Focal devices
+
 ## v3.3.5
 
 - Fixed the highlighted app's author name pushing other UI elements out of the way

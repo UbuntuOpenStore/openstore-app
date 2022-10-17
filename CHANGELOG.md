@@ -1,5 +1,9 @@
 # OpenStore App Changelog
 
+## v3.3.7
+
+- Fixed the Focal build
+
 ## v3.3.6
 
 - Fixes to run on Focal devices

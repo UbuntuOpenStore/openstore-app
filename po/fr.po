@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-31 04:27+0000\n"
-"PO-Revision-Date: 2020-07-25 18:07+0000\n"
-"Last-Translator: Daniel Frost <one@frostinfo.de>\n"
-"Language-Team: French <https://translate.ubports.com/projects/openstore/"
+"PO-Revision-Date: 2022-11-18 23:49+0000\n"
+"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.11.3\n"
+"X-Generator: Weblate 4.15-dev\n"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:114
@@ -43,7 +43,7 @@ msgstr "Application"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:18
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:63
 msgid "Scope"
-msgstr "Scope"
+msgstr "Champ d'application"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:159
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:19
@@ -73,7 +73,7 @@ msgstr "Ouvrir"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:281
 msgid "The OpenStore is installed!"
-msgstr "L'OpenStore est installé !"
+msgstr "L'OpenStore est installé !"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:290
 msgid "Install stable version"
@@ -169,7 +169,7 @@ msgstr "Faire un don pour soutenir cette application"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:595
 #, qt-format
 msgid "More from %1"
-msgstr "A propos de %1"
+msgstr "À propos de %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:610
@@ -183,7 +183,7 @@ msgstr "Contenus du paquet"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:709
 msgid "Permissions"
-msgstr "Permissions"
+msgstr "Autorisations"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:714
 msgid "Accounts"
@@ -207,7 +207,7 @@ msgstr "Caméra"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:719
 msgid "Connectivity"
-msgstr "Connexion"
+msgstr "Connectivité"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:720
 msgid "Contacts"
@@ -219,7 +219,7 @@ msgstr "Source d'échange de contenu"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:722
 msgid "Content Exchange"
-msgstr "Échange de de contenus"
+msgstr "Échange de contenus"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:723
 msgid "Debug"
@@ -491,19 +491,19 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:320
 msgid "Are you sure you want to continue?"
-msgstr "Êtes-vous sûr de vouloir continuer ?"
+msgstr "Êtes-vous sûr·e de vouloir continuer ?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:324
 msgid "Yes, I know what I'm doing"
-msgstr "Oui, je sais ce que je fait"
+msgstr "Oui, je sais ce que je fais"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:332
 msgid "Get me out of here!"
-msgstr "Sortez-moi d'ici !"
+msgstr "Sortez-moi d'ici !"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:344
 msgid "Install unknown app?"
-msgstr "Installer une application inconnue ?"
+msgstr "Installer une application inconnue ?"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:345
 #, qt-format
@@ -570,7 +570,7 @@ msgstr "Code d'accès (0000 par défaut)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:71
 msgid "Authentication failed. Please retry"
-msgstr "Échec de l'authentification. Veuillez réessayer."
+msgstr "Échec de l'authentification. Veuillez réessayer"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:76
 msgid "Authenticate"
@@ -601,7 +601,7 @@ msgstr "Se connecter"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:139
 msgid "Sign out"
-msgstr "Déconnexion"
+msgstr "Se déconnecter"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:167
 msgid "Parental control"

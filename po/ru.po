@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-31 04:27+0000\n"
-"PO-Revision-Date: 2022-11-19 23:47+0000\n"
+"PO-Revision-Date: 2022-11-20 12:16+0000\n"
 "Last-Translator: Артём Котлубай Сергеевич <artemkotlubai@yandex.ru>\n"
 "Language-Team: Russian <https://translate.ubports.com/projects/openstore/"
 "openstore-app/ru/>\n"
@@ -24,7 +24,7 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:114
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:33
 msgid "App details"
-msgstr "О программе"
+msgstr "О приложении"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:121
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:386
@@ -50,13 +50,13 @@ msgstr "Линза (Scope)"
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:19
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:64
 msgid "Web App"
-msgstr "Веб-приложение"
+msgstr "Сетевое приложение"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:160
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:20
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:65
 msgid "Web App+"
-msgstr "Веб-приложение+"
+msgstr "Сетевое приложение+"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:240
 msgid ""
@@ -97,14 +97,14 @@ msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
 msgstr ""
-"У данного приложения, есть доступ к закрытой информации системы. Детали "
-"смотрите ниже."
+"Это приложение имеет доступ к ограниченным частям системы и ко всем вашим "
+"данным, подробности см. ниже."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:408
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
-"У данного приложения, есть доступ к закрытой информации системы. Детали "
-"смотрите ниже."
+"Это приложение имеет доступ к ограниченным системным данным, подробности см. "
+"ниже."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:433
 msgid "Description"
@@ -134,7 +134,7 @@ msgstr "Последняя доступная версия"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:513
 msgid "First released"
-msgstr "Дата первой публикации"
+msgstr "Впервые выпущено"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:524
 msgid "Downloads of the latest version"
@@ -175,7 +175,7 @@ msgstr "Больше от %1"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:610
 #, qt-format
 msgid "Other apps in %1"
-msgstr "Другие программы в %1"
+msgstr "Другие приложения в %1"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:616
 msgid "Package contents"
@@ -348,7 +348,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:852
 msgid "I understand the risks"
-msgstr "Я понимаю риски"
+msgstr "Я понимаю последствия"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:861
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:366
@@ -384,7 +384,7 @@ msgstr "%1 байт"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:95
 msgid "This app could not be found in the OpenStore"
-msgstr "Такая программа не найдена в OpenStore"
+msgstr "Такое приложение не найдено в OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:98
 msgid ""
@@ -439,7 +439,7 @@ msgstr "В этой категории ещё не было выпущено п�
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
 msgid "Try with a different search."
-msgstr "Попробуйте изменить параметры поиска."
+msgstr "Попробуйте изменить настройки поиска."
 
 #. TRANSLATORS: %1 is the number of installed apps
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:79
@@ -484,8 +484,8 @@ msgid ""
 "You are currently using a non-standard domain for the OpenStore. This is a "
 "development feature. The domain you are using is:"
 msgstr ""
-"Сейчас вы используете нестандартное доменное имя для OpenStore. Эта опция - "
-"для разработчиков. Имя, которое Вы используете:"
+"Сейчас вы используете нестандартное доменное имя для OpenStore. Эта "
+"настройка для разработчиков. Имя, которое Вы используете:"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:320
 msgid "Are you sure you want to continue?"
@@ -520,7 +520,7 @@ msgstr "Приложение успешно установлено."
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:403
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:418
 msgid "OK"
-msgstr "OK"
+msgstr "ОК"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:399
 msgid "Installation failed"
@@ -538,14 +538,12 @@ msgstr "Не удалось произвести установку (Ошибк�
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:29
 msgid "Your passphrase is required to access restricted content"
-msgstr ""
-"Для разблокирования доступа к контенту с ограничениями необходим ваш пароль"
+msgstr "Для открытия доступа к содержимому с ограничениями необходим ваш пароль"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:30
 msgid "Your passcode is required to access restricted content"
 msgstr ""
-"Для разблокирования доступа к контенту с ограничениями необходим ваш код "
-"доступа"
+"Для открытия доступа к содержимому с ограничениями необходим ваш код доступа"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:39
 msgid "Authentication failed"
@@ -591,7 +589,7 @@ msgstr "Настройки"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:114
 msgid "OpenStore Account"
-msgstr "Аккаунт OpenStore"
+msgstr "Учётная запись OpenStore"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:122
 #: /home/brian/dev/openstore/openstore-app/openstore/SignInWebView.qml:30
@@ -608,7 +606,7 @@ msgstr "Родительский контроль"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:173
 msgid "Hide adult-oriented content"
-msgstr "Прятать материалы только для взрослых"
+msgstr "Прятать содержимое только для взрослых"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:183
 msgid ""
@@ -616,7 +614,7 @@ msgid ""
 "content."
 msgstr ""
 "Вводя пароль, вы берёте на себя полную ответственность за отображение "
-"материалов для взрослых."
+"содержимого для взрослых."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:208
 msgid "About OpenStore"
@@ -647,7 +645,7 @@ msgstr "Обновить"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HighlightedApp.qml:112
 msgid "Details"
-msgstr "Дополнительная информация"
+msgstr "Подробности"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:37
 msgid "Application"
@@ -656,12 +654,12 @@ msgstr "Приложение"
 #. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:64
 msgid "URL Handler"
-msgstr "Обработчик URL"
+msgstr "Обработчик сетевых адресов"
 
 #. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:78
 msgid "Content Hub Handler"
-msgstr "Центр обработки контента"
+msgstr "Центр обработки содержания"
 
 #. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HookIcon.qml:92
@@ -687,15 +685,15 @@ msgstr "Что-то пошло не так..."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:79
 msgid "Error Posting Review"
-msgstr "Ошибка публикации отзыва"
+msgstr "Ошибка размещения отзыва"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:93
 msgid "Review Posted Correctly"
-msgstr "Отзыв опубликован"
+msgstr "Отзыв размещён"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:94
 msgid "Your review has been posted successfully."
-msgstr "Ваш отзыв был успешно опубликован."
+msgstr "Ваш отзыв был успешно размещён."
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/ReviewPreview.qml:108
 msgid "Rate this app"

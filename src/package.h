@@ -49,6 +49,7 @@
     Q_PROPERTY(QString source READ source NOTIFY updated)
     Q_PROPERTY(QString donateUrl READ donateUrl NOTIFY updated)
     Q_PROPERTY(QString supportUrl READ supportUrl NOTIFY updated)
+    Q_PROPERTY(QString translationUrl READ translationUrl NOTIFY updated)
     Q_PROPERTY(QString license READ license NOTIFY updated)
     Q_PROPERTY(QString latestDownloads READ latestDownloads NOTIFY updated)
     Q_PROPERTY(QString totalDownloads READ totalDownloads NOTIFY updated)
@@ -63,7 +64,6 @@
     Q_PROPERTY(QStringList channels READ channels NOTIFY updated)
     Q_PROPERTY(QStringList types READ types NOTIFY updated)
     Q_PROPERTY(bool channelMatchesOS READ channelMatchesOS NOTIFY updated)
-    Q_PROPERTY(bool frameworkMatchesOS READ frameworkMatchesOS NOTIFY updated)
     Q_PROPERTY(ReviewsModel * reviews MEMBER m_reviews NOTIFY updated)
     Q_PROPERTY(Ratings * ratings MEMBER m_ratings NOTIFY updated)
 
@@ -110,6 +110,7 @@ public:
     QString source() const { return m_source; }
     QString donateUrl() const { return m_donateUrl; }
     QString supportUrl() const { return m_supportUrl; }
+    QString translationUrl() const { return m_translationUrl; }
     QString license() const { return m_license; }
     QString latestDownloads() const { return m_latestDownloads; }
     QString totalDownloads() const { return m_totalDownloads; }
@@ -122,7 +123,6 @@ public:
     QStringList channels() const { return m_channels; }
     QStringList types() const { return m_types; }
     bool channelMatchesOS() const {  return m_channels.contains(PlatformIntegration::instance()->systemCodename()); };
-    bool frameworkMatchesOS() const { return PlatformIntegration::instance()->supportedFrameworks().contains(m_framework); };
 
     Q_INVOKABLE QStringList permissions(int index) const { return m_hooks.at(index).permissions; }
     Q_INVOKABLE Hooks hooks(int index) const { return m_hooks.at(index).hooks; }
@@ -166,6 +166,7 @@ private:
     QString m_source;
     QString m_donateUrl;
     QString m_supportUrl;
+    QString m_translationUrl;
     QString m_license;
     QString m_latestDownloads;
     QString m_totalDownloads;
@@ -178,7 +179,6 @@ private:
     QDateTime m_updatedDate;
     QStringList m_channels;
     QStringList m_types;
-    QString m_framework;
     QPointer<ReviewsModel> m_reviews;
     QPointer<Ratings> m_ratings;
 };

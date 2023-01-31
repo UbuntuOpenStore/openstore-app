@@ -230,7 +230,7 @@ Page {
             }
 
             ListItem {
-                visible: app.isLocalVersionSideloaded && app.channelMatchesOS && app.frameworkMatchesOS
+                visible: app.isLocalVersionSideloaded && app.channelMatchesOS
                 height: sideloadedLayout.height
                 ListItemLayout {
                     id: sideloadedLayout
@@ -582,6 +582,19 @@ Page {
 
                     title.text: i18n.tr("Donate to support this app")
                     subtitle.text: app.donateUrl
+
+                    ProgressionSlot {}
+                }
+            }
+
+            ListItem {
+                visible: !!app.translationUrl
+                onClicked: Qt.openUrlExternally(app.translationUrl)
+                ListItemLayout {
+                    anchors.centerIn: parent
+
+                    title.text: i18n.tr("Help translate this app")
+                    subtitle.text: app.translationUrl
 
                     ProgressionSlot {}
                 }

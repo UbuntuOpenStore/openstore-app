@@ -112,6 +112,7 @@ void PackageItem::fillData(const QVariantMap &json)
     m_source = json.value("source").toString();
     m_donateUrl = json.value("donate_url").toString();
     m_supportUrl = json.value("support_url").toString();
+    m_translationUrl = json.value("translation_url").toString();
     m_license = json.value("license").toString();
     m_latestDownloads = json.value("latestDownloads").toString();
     m_totalDownloads= json.value("totalDownloads").toString();
@@ -131,8 +132,6 @@ void PackageItem::fillData(const QVariantMap &json)
     if (json.contains("manifest") && json.value("manifest").toMap().contains("hooks")) {
         QVariantMap manifest = json.value("manifest").toMap();
         QVariantMap hookMap = manifest.value("hooks").toMap();
-
-        m_framework = manifest.value("framework").toString();
 
         Q_FOREACH (const QString & hook, hookMap.keys()) {
             PackageItem::HookStruct hookStruct;

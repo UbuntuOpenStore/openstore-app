@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-17 13:51+0000\n"
+"POT-Creation-Date: 2023-01-31 05:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -136,166 +136,170 @@ msgstr ""
 msgid "Donate to support this app"
 msgstr ""
 
+#: ../qml/AppDetailsPage.qml:596
+msgid "Help translate this app"
+msgstr ""
+
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
-#: ../qml/AppDetailsPage.qml:599
+#: ../qml/AppDetailsPage.qml:612
 msgid "More from %1"
 msgstr ""
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: ../qml/AppDetailsPage.qml:614
+#: ../qml/AppDetailsPage.qml:627
 msgid "Other apps in %1"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:620
+#: ../qml/AppDetailsPage.qml:633
 msgid "Package contents"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:707
+#: ../qml/AppDetailsPage.qml:720
 msgid "Permissions"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:712
+#: ../qml/AppDetailsPage.qml:725
 msgid "Accounts"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:713
+#: ../qml/AppDetailsPage.qml:726
 msgid "Audio"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:714
+#: ../qml/AppDetailsPage.qml:727
 msgid "Bluetooth"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:715
+#: ../qml/AppDetailsPage.qml:728
 msgid "Calendar"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:716
+#: ../qml/AppDetailsPage.qml:729
 msgid "Camera"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:717
+#: ../qml/AppDetailsPage.qml:730
 msgid "Connectivity"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:718
+#: ../qml/AppDetailsPage.qml:731
 msgid "Contacts"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:719
+#: ../qml/AppDetailsPage.qml:732
 msgid "Content Exchange Source"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:720
+#: ../qml/AppDetailsPage.qml:733
 msgid "Content Exchange"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:721
+#: ../qml/AppDetailsPage.qml:734
 msgid "Debug"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:722
+#: ../qml/AppDetailsPage.qml:735
 msgid "History"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:723
+#: ../qml/AppDetailsPage.qml:736
 msgid "In App Purchases"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:724
+#: ../qml/AppDetailsPage.qml:737
 msgid "Keep Display On"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:725
+#: ../qml/AppDetailsPage.qml:738
 msgid "Location"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:726
+#: ../qml/AppDetailsPage.qml:739
 msgid "Microphone"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:727
+#: ../qml/AppDetailsPage.qml:740
 msgid "Read Music Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:728
+#: ../qml/AppDetailsPage.qml:741
 msgid "Music Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:729
+#: ../qml/AppDetailsPage.qml:742
 msgid "Networking"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:730
+#: ../qml/AppDetailsPage.qml:743
 msgid "Read Picture Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:731
+#: ../qml/AppDetailsPage.qml:744
 msgid "Picture Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:732
+#: ../qml/AppDetailsPage.qml:745
 msgid "Push Notifications"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:733
+#: ../qml/AppDetailsPage.qml:746
 msgid "Sensors"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:734
+#: ../qml/AppDetailsPage.qml:747
 msgid "User Metrics"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:735
+#: ../qml/AppDetailsPage.qml:748
 msgid "Read Video Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:736
+#: ../qml/AppDetailsPage.qml:749
 msgid "Video Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:737
+#: ../qml/AppDetailsPage.qml:750
 msgid "Video"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:738
+#: ../qml/AppDetailsPage.qml:751
 msgid "Webview"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:742
+#: ../qml/AppDetailsPage.qml:755
 msgid "Full System Access"
 msgstr ""
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: ../qml/AppDetailsPage.qml:747
+#: ../qml/AppDetailsPage.qml:760
 msgid "none required"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:783
+#: ../qml/AppDetailsPage.qml:796
 msgid "Read paths"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:800
+#: ../qml/AppDetailsPage.qml:813
 msgid "Write paths"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: ../qml/AppDetailsPage.qml:871
+#: ../qml/AppDetailsPage.qml:884
 msgid "%1 GB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: ../qml/AppDetailsPage.qml:876
+#: ../qml/AppDetailsPage.qml:889
 msgid "%1 MB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: ../qml/AppDetailsPage.qml:881
+#: ../qml/AppDetailsPage.qml:894
 msgid "%1 kB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: ../qml/AppDetailsPage.qml:884
+#: ../qml/AppDetailsPage.qml:897
 msgid "%1 bytes"
 msgstr ""
 

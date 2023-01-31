@@ -28,9 +28,9 @@
 #include <gio/gio.h>
 #include <glib.h>
 
-    Q_GLOBAL_STATIC(PlatformIntegration, s_platformIntegration)
+PlatformIntegration *PlatformIntegration::m_instance = nullptr;
 
-        PlatformIntegration::PlatformIntegration()
+PlatformIntegration::PlatformIntegration()
 {
     m_supportedFrameworks = getSupportedFrameworks();
     m_supportedArchitecture = getSupportedArchitecture();
@@ -51,11 +51,6 @@
 PlatformIntegration::~PlatformIntegration()
 {
     delete m_installer;
-}
-
-PlatformIntegration *PlatformIntegration::instance()
-{
-    return s_platformIntegration();
 }
 
 void PlatformIntegration::update()

@@ -42,7 +42,13 @@ class OpenStoreNetworkManager : public QObject
 
 public:
     explicit OpenStoreNetworkManager();
-    static OpenStoreNetworkManager* instance();
+
+    static OpenStoreNetworkManager* instance() {
+        if (!m_instance) {
+            m_instance = new OpenStoreNetworkManager();
+        }
+        return m_instance;
+    }
 
     bool networkAccessible() const { return m_manager->networkAccessible() != QNetworkAccessManager::NotAccessible; }
     bool isDifferentDomain() const;
@@ -82,6 +88,8 @@ private:
 private:
     QNetworkAccessManager* m_manager;
     bool m_showNsfw;
+
+    static OpenStoreNetworkManager* m_instance;
 };
 
 #endif // OPENSTORENETWORKMANAGER_H

@@ -30,7 +30,13 @@ class PackagesCache : public QObject
 
 public:
     PackagesCache();
-    static PackagesCache* instance();
+
+    static PackagesCache* instance() {
+        if (!m_instance) {
+            m_instance = new PackagesCache();
+        }
+        return m_instance;
+    }
 
     bool updatingCache() const { return m_updatingCache; }
 
@@ -62,6 +68,8 @@ private:
 
     QString m_signature;
     bool m_updatingCache;
+
+    static PackagesCache *m_instance;
 };
 
 #endif // PACKAGESCACHE_H

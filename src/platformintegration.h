@@ -33,7 +33,12 @@ public:
     PlatformIntegration();
     ~PlatformIntegration();
 
-    static PlatformIntegration* instance();
+    static PlatformIntegration* instance() {
+        if (!m_instance) {
+            m_instance = new PlatformIntegration();
+        }
+        return m_instance;
+    }
 
     ClickInstaller* clickInstaller() const { return m_installer; }
 
@@ -69,6 +74,8 @@ private:
     QVariantList m_clickDb;
 
     ClickInstaller *m_installer;
+
+    static PlatformIntegration* m_instance;
 };
 
 #endif // PLATFORMINTEGRATION_H

@@ -21,17 +21,12 @@
 #include "platformintegration.h"
 #include "openstorenetworkmanager.h"
 
-    Q_GLOBAL_STATIC(PackagesCache, s_packagesCache)
+PackagesCache *PackagesCache::m_instance = nullptr;
 
-        PackagesCache::PackagesCache()
+PackagesCache::PackagesCache()
 {
     m_updatingCache = false;
     connect(PlatformIntegration::instance(), &PlatformIntegration::updated, this, &PackagesCache::updateCacheRevisions);
-}
-
-PackagesCache *PackagesCache::instance()
-{
-    return s_packagesCache();
 }
 
 bool PackagesCache::contains(const QString &appId) const

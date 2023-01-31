@@ -30,9 +30,9 @@
 
 #include <QDebug>
 
-    Q_GLOBAL_STATIC(OpenStoreNetworkManager, s_openStoreNetworkManager)
+OpenStoreNetworkManager *OpenStoreNetworkManager::m_instance = nullptr;
 
-        OpenStoreNetworkManager::OpenStoreNetworkManager()
+OpenStoreNetworkManager::OpenStoreNetworkManager()
 {
     m_manager = new QNetworkAccessManager(this);
     connect(m_manager, &QNetworkAccessManager::networkAccessibleChanged, this, &OpenStoreNetworkManager::networkAccessibleChanged);
@@ -47,11 +47,6 @@
     m_manager->setCache(diskCache);
 
     deleteCache();
-}
-
-OpenStoreNetworkManager *OpenStoreNetworkManager::instance()
-{
-    return s_openStoreNetworkManager();
 }
 
 QString OpenStoreNetworkManager::generateNewSignature() const

@@ -59,11 +59,12 @@ void ClickInstaller::installPackage(const QString &packageUrl, const bool isLoca
     m_isLocalInstall = isLocalInstall;
     Q_EMIT isLocalInstallChanged();
 
-//    qDebug() << "should install package" << packageUrl;
+    //qDebug() << "should install package" << packageUrl;
     if (busy()) {
         //qDebug() << "already busy. won't install" << packageUrl;
         return;
     }
+
     if (packageUrl.startsWith("http://") || packageUrl.startsWith("https://")) {
         fetchPackage(packageUrl);
         return;
@@ -186,7 +187,7 @@ void ClickInstaller::slotDownloadProgress()
 void ClickInstaller::downloadFinished()
 {
     qDebug() << "finished" << m_download->error();
-    if (m_download->error() == QNetworkReply::NoError) {
+    if (m_download->error() != QNetworkReply::NoError) {
         qDebug() << m_download->errorString() << m_download->attribute(QNetworkRequest::RedirectionTargetAttribute);
     }
 
@@ -215,9 +216,9 @@ void ClickInstaller::downloadFinished()
         fetchPackage(m_download->attribute(QNetworkRequest::RedirectionTargetAttribute).toUrl().toString());
     } else {
         qDebug() << "Package fetched. Starting installation";
+        m_download = 0;
         installLocalPackage(m_file.fileName());
         Q_EMIT downloadProgressChanged();
-        m_download = 0;
         Q_EMIT busyChanged();
     }
 }

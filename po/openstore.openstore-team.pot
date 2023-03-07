@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-03 04:36+0000\n"
+"POT-Creation-Date: 2023-03-07 04:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,13 +32,12 @@ msgstr ""
 msgid "App"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:152 ../qml/Components/PackageListItem.qml:35
-#: ../qml/Components/PackageTile.qml:80
+#: ../qml/AppDetailsPage.qml:152 ../qml/Components/PackageListItem.qml:36
+#: ../qml/Components/PackageTile.qml:81
 msgid "Web App"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:153 ../qml/Components/PackageListItem.qml:36
-#: ../qml/Components/PackageTile.qml:81
+#: ../qml/AppDetailsPage.qml:153
 msgid "Web App+"
 msgstr ""
 
@@ -372,6 +371,11 @@ msgstr ""
 msgid "Accounts provider"
 msgstr ""
 
+#: ../qml/Components/PackageListItem.qml:35
+#: ../qml/Components/PackageTile.qml:80
+msgid "Bookmark"
+msgstr ""
+
 #: ../qml/Components/PackageTile.qml:97
 msgid "Update available"
 msgstr ""
@@ -416,7 +420,7 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:147
+#: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:148
 #: ../qml/Dialogs/InstallWarningDialog.qml:50
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
 #: ../qml/Dialogs/UninstallDialog.qml:42
@@ -532,7 +536,7 @@ msgstr ""
 msgid "Type"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:100 ../qml/Dialogs/FilterDialog.qml:114
+#: ../qml/Dialogs/FilterDialog.qml:100 ../qml/Dialogs/FilterDialog.qml:115
 msgid "All Types"
 msgstr ""
 
@@ -541,10 +545,14 @@ msgid "Apps"
 msgstr ""
 
 #: ../qml/Dialogs/FilterDialog.qml:102
+msgid "Bookmarks"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:103
 msgid "Web Apps"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:139
+#: ../qml/Dialogs/FilterDialog.qml:140
 msgid "Apply"
 msgstr ""
 
@@ -622,7 +630,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: ../qml/DiscoverPage.qml:176 ../qml/DiscoverPage.qml:177
-#: ../qml/InstalledAppsPage.qml:53
+#: ../qml/InstalledAppsPage.qml:52
 msgid "Installed Apps"
 msgstr ""
 
@@ -647,35 +655,35 @@ msgid "Try with a different search."
 msgstr ""
 
 #. TRANSLATORS: %1 is the number of installed apps
-#: ../qml/InstalledAppsPage.qml:81
+#: ../qml/InstalledAppsPage.qml:80
 msgid "Installed apps (%1)"
 msgstr ""
 
 #. TRANSLATORS: %1 is the number of available app updates
-#: ../qml/InstalledAppsPage.qml:85
+#: ../qml/InstalledAppsPage.qml:84
 msgid "Available updates (%1)"
 msgstr ""
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
-#: ../qml/InstalledAppsPage.qml:89
+#: ../qml/InstalledAppsPage.qml:88
 msgid "Stable version available (%1)"
 msgstr ""
 
-#: ../qml/InstalledAppsPage.qml:92
+#: ../qml/InstalledAppsPage.qml:91
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
 msgstr ""
 
-#: ../qml/InstalledAppsPage.qml:93
+#: ../qml/InstalledAppsPage.qml:92
 msgid "Update all"
 msgstr ""
 
-#: ../qml/InstalledAppsPage.qml:196
+#: ../qml/InstalledAppsPage.qml:194
 msgid "No apps found"
 msgstr ""
 
-#: ../qml/InstalledAppsPage.qml:197
+#: ../qml/InstalledAppsPage.qml:195
 msgid "No app has been installed from OpenStore yet."
 msgstr ""
 

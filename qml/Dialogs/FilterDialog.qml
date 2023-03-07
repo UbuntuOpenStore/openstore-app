@@ -99,7 +99,8 @@ Component {
             Component.onCompleted: {
                 typeModel.append({ label: i18n.tr('All Types'), value: '' });
                 typeModel.append({ label: i18n.tr('Apps'), value: 'app' });
-                typeModel.append({ label: i18n.tr('Web Apps'), value: 'webapp' });
+                typeModel.append({ label: i18n.tr('Bookmarks'), value: 'webapp' });
+                typeModel.append({ label: i18n.tr('Web Apps'), value: 'webapp+' });
 
                 for (var i = 0; i < typeModel.count; i++) {
                     if (typeModel.get(i).value == selectedType) {

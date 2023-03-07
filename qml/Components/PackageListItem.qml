@@ -32,8 +32,8 @@ ListItem {
         summary.text: {
             var translations = {
                 'app': i18n.tr("App"),
-                'webapp': i18n.tr("Web App"),
-                'webapp+': i18n.tr("Web App+"),
+                'webapp': i18n.tr("Bookmark"),
+                'webapp+': i18n.tr("Web App"),
             };
 
             var types = [];

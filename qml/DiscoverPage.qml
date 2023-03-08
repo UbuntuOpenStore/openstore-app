@@ -73,7 +73,7 @@ Page {
 
                     imageUrl: discoverModel.highlightBannerUrl || highlightAppControl.appItem.icon
                     appName: highlightAppControl.appItem ? highlightAppControl.appItem.name : ''
-                    appAuthor: highlightAppControl.appItem ? i18n.tr("by %1").arg(highlightAppControl.appItem.author) : ''
+                    appPublisher: highlightAppControl.appItem ? i18n.tr("by %1").arg(highlightAppControl.appItem.publisher) : ''
                     appDesc: highlightAppControl.appItem ? (highlightAppControl.appItem.tagline + " " + highlightAppControl.appItem.description) : ''
                     appRatings: highlightAppControl.appItem ? highlightAppControl.appItem.ratings : ''
 

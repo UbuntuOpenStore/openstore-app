@@ -69,10 +69,10 @@ AbstractButton {
 
             subtitle {
                 text: {
-                    // Show the author (like in the discover page) or the types if author isn't available (like in the filtered app list)
+                    // Show the publisher (like in the discover page) or the types if publisher isn't available (like in the filtered app list)
 
-                    if (rootItem.appItem.author) {
-                        return rootItem.appItem.author;
+                    if (rootItem.appItem.publisher) {
+                        return rootItem.appItem.publisher;
                     }
 
                     var translations = {

@@ -34,7 +34,7 @@
     Q_PROPERTY(QString name READ name NOTIFY updated)
     Q_PROPERTY(QString icon READ icon NOTIFY updated)
     Q_PROPERTY(QString appId READ appId NOTIFY updated)
-    Q_PROPERTY(QString author READ author NOTIFY updated)
+    Q_PROPERTY(QString publisher READ publisher NOTIFY updated)
     Q_PROPERTY(QString tagline READ tagline NOTIFY updated)
     Q_PROPERTY(QString description READ description NOTIFY updated)
     Q_PROPERTY(QString category READ category NOTIFY updated)
@@ -94,7 +94,7 @@ public:
 
     QString appId() const { return m_appId; }
     QString name() const { return m_name; }
-    QString author() const { return m_author; }
+    QString publisher() const { return m_publisher; }
     QString icon() const { return m_icon; }
     QString tagline() const { return m_tagline; }
     QString description() const { return m_description; }
@@ -154,7 +154,7 @@ private:
     QString m_appId;
     QString m_name;
     QString m_icon;
-    QString m_author;
+    QString m_publisher;
     QString m_tagline;
     QString m_description;
     QString m_category;

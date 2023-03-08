@@ -145,7 +145,7 @@ Page {
                 ListItemLayout {
                     anchors.fill: parent
                     title.text: app.name
-                    subtitle.text: app.author
+                    subtitle.text: app.publisher
                     summary.text: {
                         var translations = {
                             'app': i18n.tr("App"),
@@ -604,12 +604,12 @@ Page {
                 enabled: !PlatformIntegration.clickInstaller.busy
                 onClicked: {
                     bottomEdgeStack.clear()
-                    root.showSearch('author:' + app.author)
+                    root.showSearch('publisher:' + app.publisher)
                 }
                 ListItemLayout {
                     anchors.centerIn: parent
-                    // TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
-                    title.text: i18n.tr("More from %1").arg(app.author)
+                    // TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
+                    title.text: i18n.tr("More from %1").arg(app.publisher)
                     ProgressionSlot {}
                 }
             }

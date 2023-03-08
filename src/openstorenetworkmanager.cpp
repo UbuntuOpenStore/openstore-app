@@ -183,9 +183,9 @@ void OpenStoreNetworkManager::getSearch(const QString &signature, int skip, int 
     q.addQueryItem("category", category);
     q.addQueryItem("type", filterType);
 
-        if (filterString.startsWith("author:"))
+    if (filterString.startsWith("publisher:"))
     {
-        q.addQueryItem("author", filterString.right(filterString.size() - 7));
+        q.addQueryItem("publisher", filterString.right(filterString.size() - 10));
     }
     else
     {

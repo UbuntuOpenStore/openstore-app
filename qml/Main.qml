@@ -91,7 +91,7 @@ MainView {
         url = decodeURI(url)
         var result = undefined;
         var appName = "";
-        var author = "";
+        var publisher = "";
         var search = "";
         var sort = "";
         var category = "";
@@ -103,14 +103,18 @@ MainView {
 
             if (!!url.match("search=")) {
                 //Searches can be https://open-store.io/?sort=Sorting&type=AppType&category=Category&search=Word or sentence
-                // or https://open-store.io/?sort=relevance&search=author:Name Surname
+                // or https://open-store.io/?sort=relevance&search=publisher:Name Surname
                 if (!!url.match("search=")) {
                     search = url.match(/search=.+?(?=&)/) || url.match(/search=.+$/)
                     search = search[0].slice(7)
                 }
                 if (!!url.match("author:")) {
-                    author = url.match(/author:.+?(?=&)/) || url.match(/author:.+$/)
-                    author = author[0].slice(7)
+                    publisher = url.match(/author:.+?(?=&)/) || url.match(/author:.+$/)
+                    publisher = publisher[0].slice(7)
+                }
+                if (!!url.match("publisher:")) {
+                    publisher = url.match(/publisher:.+?(?=&)/) || url.match(/publisher:.+$/)
+                    publisher = publisher[0].slice(7)
                 }
                 if (!!url.match("sort=")) {
                     sort = url.match(/sort=.+?(?=&)/) || url.match(/sort=.+$/)
@@ -132,7 +136,7 @@ MainView {
 
         result = {
             "search"  : search,
-            "author"  : author,
+            "publisher" : publisher,
             "sort"    : sort,
             "category": category,
             "type"    : type,
@@ -179,8 +183,8 @@ MainView {
 
         if (appIdToOpen && !!appIdToOpen.appName) {
             loadAppId(appIdToOpen.appName);
-        } else if (appIdToOpen && !!appIdToOpen.author) {
-            root.showSearch('author:' + appIdToOpen.author)
+        } else if (appIdToOpen && !!appIdToOpen.publisher) {
+            root.showSearch('publisher:' + appIdToOpen.publisher)
         }
     }
 
@@ -207,8 +211,8 @@ MainView {
             var appIdToOpen = parseUrl(uris[0]);
             if (appIdToOpen && !!appIdToOpen.appName) {
                 loadAppId(appIdToOpen.appName);
-            } else if (appIdToOpen && !!appIdToOpen.author) {
-                root.showSearch('author:' + appIdToOpen.author)
+            } else if (appIdToOpen && !!appIdToOpen.publisher) {
+                root.showSearch('publisher:' + appIdToOpen.publisher)
             }
         }
     }

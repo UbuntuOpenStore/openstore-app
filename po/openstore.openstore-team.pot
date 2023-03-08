@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-07 04:30+0000\n"
+"POT-Creation-Date: 2023-03-08 05:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,13 +32,14 @@ msgstr ""
 msgid "App"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:152 ../qml/Components/PackageListItem.qml:36
-#: ../qml/Components/PackageTile.qml:81
-msgid "Web App"
+#: ../qml/AppDetailsPage.qml:152 ../qml/Components/PackageListItem.qml:35
+#: ../qml/Components/PackageTile.qml:80
+msgid "Bookmark"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:153
-msgid "Web App+"
+#: ../qml/AppDetailsPage.qml:153 ../qml/Components/PackageListItem.qml:36
+#: ../qml/Components/PackageTile.qml:81
+msgid "Web App"
 msgstr ""
 
 #: ../qml/AppDetailsPage.qml:237
@@ -139,7 +140,7 @@ msgstr ""
 msgid "Help translate this app"
 msgstr ""
 
-#. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
+#. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
 #: ../qml/AppDetailsPage.qml:612
 msgid "More from %1"
 msgstr ""
@@ -371,11 +372,6 @@ msgstr ""
 msgid "Accounts provider"
 msgstr ""
 
-#: ../qml/Components/PackageListItem.qml:35
-#: ../qml/Components/PackageTile.qml:80
-msgid "Bookmark"
-msgstr ""
-
 #: ../qml/Components/PackageTile.qml:97
 msgid "Update available"
 msgstr ""
@@ -578,7 +574,7 @@ msgstr ""
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:27
 msgid ""
-"Would you like to contact the author or file a bug instead? By opening a "
+"Would you like to contact the publisher or file a bug instead? By opening a "
 "discussion with the developer(s) you could be helping to improve this app."
 msgstr ""
 
@@ -687,32 +683,32 @@ msgstr ""
 msgid "No app has been installed from OpenStore yet."
 msgstr ""
 
-#: ../qml/Main.qml:315 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:319 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr ""
 
-#: ../qml/Main.qml:362
+#: ../qml/Main.qml:366
 msgid "App installed"
 msgstr ""
 
-#: ../qml/Main.qml:363
+#: ../qml/Main.qml:367
 msgid "The app has been installed successfully."
 msgstr ""
 
-#: ../qml/Main.qml:366 ../qml/Main.qml:379 ../qml/Main.qml:394
+#: ../qml/Main.qml:370 ../qml/Main.qml:383 ../qml/Main.qml:398
 msgid "OK"
 msgstr ""
 
-#: ../qml/Main.qml:375
+#: ../qml/Main.qml:379
 msgid "Installation failed"
 msgstr ""
 
-#: ../qml/Main.qml:376
+#: ../qml/Main.qml:380
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 
-#: ../qml/Main.qml:390
+#: ../qml/Main.qml:394
 msgid "Installation failed (Error %1)"
 msgstr ""
 

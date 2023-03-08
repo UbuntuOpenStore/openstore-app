@@ -24,7 +24,7 @@ Component {
     Dialog {
         id: negativeReivewQuestionDialog
         title: i18n.tr("Review confirmation")
-        text: i18n.tr("Would you like to contact the author or file a bug instead? By opening a discussion with the developer(s) you could be helping to improve this app.")
+        text: i18n.tr("Would you like to contact the publisher or file a bug instead? By opening a discussion with the developer(s) you could be helping to improve this app.")
 
         property int rating
         property string review

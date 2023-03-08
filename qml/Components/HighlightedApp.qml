@@ -21,7 +21,7 @@ import Ubuntu.Components 1.3
 Item {
     property alias imageUrl: highlightedAppImg.source
     property alias appName: hAppName.text
-    property alias appAuthor: hAppAut.text
+    property alias appPublisher: hAppPublisher.text
     property alias appDesc: hAppDesc.text
     property alias appRatings: ratingsRow.appRatings
 
@@ -81,7 +81,7 @@ Item {
                 }
 
                 LabelCentered {
-                    id: hAppAut
+                    id: hAppPublisher
                     color: appColorText
                     textSize: Label.Medium
                     maximumLineCount: 1

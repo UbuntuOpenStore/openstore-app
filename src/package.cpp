@@ -87,7 +87,7 @@ void PackageItem::fillData(const QVariantMap &json)
 
     m_icon = json.value("icon").toString();
     m_name = json.value("name").toString();
-    m_author = json.value("author").toString();
+    m_publisher = json.value("publisher").toString();
 
     QList<QVariant> downloads = json.value("downloads").toList();
     m_version = json.value("version").toString();

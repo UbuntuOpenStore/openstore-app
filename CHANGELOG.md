@@ -1,5 +1,14 @@
 # OpenStore App Changelog
 
+## v3.4.0
+
+- Updated "Author" to "Publisher"
+- Changed "Webapp" to "BookMark" and "Webapp+" to "Web App"
+- Fixed the update all button for Focal
+- Added support for Translation links for apps
+- Fixed crash when the app was closing
+- Translation update, thank you translators!
+
 ## v3.3.7
 
 - Fixed the Focal build

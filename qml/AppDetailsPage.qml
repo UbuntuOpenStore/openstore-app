@@ -146,6 +146,7 @@ Page {
                     anchors.fill: parent
                     title.text: app.name
                     subtitle.text: app.publisher
+                    summary.maximumLineCount: 3
                     summary.text: {
                         var translations = {
                             'app': i18n.tr("App"),
@@ -160,8 +161,9 @@ Page {
                             }
                         }
 
-                        var filesize = app.fileSize ? '\n' + printSize(app.fileSize) : '';
-                        return types.join(', ') + filesize;
+                        var installedSize = app.installedSize ? '\n' + i18n.tr('Install Size: ') + printSize(app.installedSize) : '';
+                        var downloadSize = app.downloadSize ? '\n' + i18n.tr('Download Size: ') + printSize(app.downloadSize) : '';
+                        return types.join(', ') + installedSize + downloadSize;
                     }
 
                     UbuntuShape {
@@ -334,7 +336,7 @@ Page {
 
                     ProgressBar {
                         Layout.fillWidth: true
-                        maximumValue: app ? app.fileSize : 0
+                        maximumValue: app ? app.downloadSize : 0
                         value: PlatformIntegration.clickInstaller.downloadProgress
                         indeterminate: PlatformIntegration.clickInstaller.downloadProgress == 0 || PackagesCache.updatingCache
                     }
@@ -346,7 +348,7 @@ Page {
                         action: Action {
                             iconName: "close"
                             onTriggered: PlatformIntegration.clickInstaller.abortInstallation()
-                            enabled: PlatformIntegration.clickInstaller.downloadProgress < app.fileSize
+                            enabled: PlatformIntegration.clickInstaller.downloadProgress < app.downloadSize
                         }
                         Rectangle {
                             color: "#cdcdcd"

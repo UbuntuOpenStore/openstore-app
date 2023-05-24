@@ -54,7 +54,8 @@
     Q_PROPERTY(QString latestDownloads READ latestDownloads NOTIFY updated)
     Q_PROPERTY(QString totalDownloads READ totalDownloads NOTIFY updated)
     Q_PROPERTY(QString maintainer READ maintainer NOTIFY updated)
-    Q_PROPERTY(int fileSize READ fileSize NOTIFY updated)
+    Q_PROPERTY(int installedSize READ installedSize NOTIFY updated)
+    Q_PROPERTY(int downloadSize READ downloadSize NOTIFY updated)
     Q_PROPERTY(bool installed READ installed NOTIFY updated)
     Q_PROPERTY(int hooksCount READ hooksCount NOTIFY updated)
     Q_PROPERTY(bool containsApp READ containsApp NOTIFY updated)
@@ -115,8 +116,10 @@ public:
     QString latestDownloads() const { return m_latestDownloads; }
     QString totalDownloads() const { return m_totalDownloads; }
     QString maintainer() const { return m_maintainer; }
-    int fileSize() const { return m_fileSize; }
-    void setFileSize(int fileSize) { m_fileSize = fileSize; }
+    int installedSize() const { return m_installedSize; }
+    void setinstalledSize(int installedSize) { m_installedSize = installedSize; }
+    int downloadSize() const { return m_downloadSize; }
+    void setDownloadSize(int downloadSize) { m_downloadSize = downloadSize; }
     bool installed() const { return !m_installedVersion.isNull(); }
     QDateTime publishedDate() const { return m_publishedDate; }
     QDateTime updatedDate() const { return m_updatedDate; }
@@ -171,7 +174,8 @@ private:
     QString m_latestDownloads;
     QString m_totalDownloads;
     QString m_maintainer;
-    int m_fileSize;
+    int m_installedSize;
+    int m_downloadSize;
     int m_installedRevision;
     QString m_installedVersion;
     QList<HookStruct> m_hooks;

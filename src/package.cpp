@@ -105,7 +105,9 @@ void PackageItem::fillData(const QVariantMap &json)
             m_version = downloadData.value("version").toString();
             m_revision = downloadData.value("revision").toInt();
             m_packageUrl = downloadData.value("download_url").toString();
-            m_fileSize = json.value("filesize").toInt();
+
+            m_installedSize = downloadData.value("installedSize").toInt();
+            m_downloadSize = downloadData.value("downloadSize").toInt();
         }
     }
 

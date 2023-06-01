@@ -1,5 +1,9 @@
 # OpenStore App Changelog
 
+## v3.5.0
+
+- Added display install size and download size
+
 ## v3.4.0
 
 - Updated "Author" to "Publisher"

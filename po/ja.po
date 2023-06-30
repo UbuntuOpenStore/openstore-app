@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-31 04:27+0000\n"
-"PO-Revision-Date: 2023-06-15 00:47+0000\n"
-"Last-Translator: NPL <alterlinuxer@gmail.com>\n"
+"PO-Revision-Date: 2023-06-30 23:53+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Japanese <https://translate.ubports.com/projects/openstore/"
 "openstore-app/ja/>\n"
 "Language: ja\n"
@@ -48,19 +48,21 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:19
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:64
 msgid "Web App"
-msgstr ""
+msgstr "ウェブアプリ"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:160
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageListItem.qml:20
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/PackageTile.qml:65
 msgid "Web App+"
-msgstr ""
+msgstr "ウェブアプリ+"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:240
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
 msgstr ""
+"このアプリのインストールされたバージョンは、OpenStoreのサーバーからではありません。下のボタンをタップすると、最新の安定版アップデートをインストー"
+"ルすることができます。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:265
 #: /home/brian/dev/openstore/openstore-app/openstore/Components/HighlightedApp.qml:109
@@ -73,11 +75,11 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:290
 msgid "Install stable version"
-msgstr ""
+msgstr "安定版のインストール"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:293
 msgid "Upgrade"
-msgstr ""
+msgstr "アップグレード"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:296
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:358
@@ -86,17 +88,17 @@ msgstr "インストール"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:372
 msgid "This app is not compatible with your system."
-msgstr ""
+msgstr "このアプリはあなたのシステムには対応していません。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:405
 msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
-msgstr ""
+msgstr "このアプリは、システムの制限された部分とすべてのデータにアクセスする必要があります。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:408
 msgid "This app has access to restricted system data, see below for details."
-msgstr ""
+msgstr "このアプリは制限されたシステムデータへのアクセスを必要としており、詳細は以下を参照してください。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:433
 msgid "Description"
@@ -113,16 +115,16 @@ msgstr "作成者/公開者"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:486
 msgid "OpenStore team"
-msgstr ""
+msgstr "OpenStoreチーム"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:494
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:115
 msgid "Installed version"
-msgstr ""
+msgstr "インストールされているバージョン"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:504
 msgid "Latest available version"
-msgstr ""
+msgstr "利用可能な最新バージョン"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:513
 msgid "First released"
@@ -130,11 +132,11 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:524
 msgid "Downloads of the latest version"
-msgstr ""
+msgstr "最新バージョンをダウンロード"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:533
 msgid "Total downloads"
-msgstr ""
+msgstr "合計ダウンロード"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:542
 msgid "License"
@@ -147,15 +149,15 @@ msgstr ""
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:553
 #: /home/brian/dev/openstore/openstore-app/openstore/SettingsPage.qml:215
 msgid "Source Code"
-msgstr ""
+msgstr "ソースコード"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:566
 msgid "Get support for this app"
-msgstr ""
+msgstr "このアプリのサポートを受ける"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:579
 msgid "Donate to support this app"
-msgstr ""
+msgstr "このアプリを支援するために寄付する"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:595
@@ -230,8 +232,9 @@ msgid "Keep Display On"
 msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:727
+#, fuzzy
 msgid "Location"
-msgstr ""
+msgstr "位置情報"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:728
 #, fuzzy
@@ -248,8 +251,9 @@ msgid "Music Files"
 msgstr "音楽ファイル"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:731
+#, fuzzy
 msgid "Networking"
-msgstr ""
+msgstr "ネットワーク"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:732
 msgid "Read Picture Files"
@@ -265,11 +269,11 @@ msgstr "プッシュ通知"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:735
 msgid "Sensors"
-msgstr ""
+msgstr "センサー"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:736
 msgid "User Metrics"
-msgstr ""
+msgstr "ユーザーメトリクス"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:737
 msgid "Read Video Files"
@@ -277,15 +281,15 @@ msgstr "動画ファイルの読み込み"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:738
 msgid "Video Files"
-msgstr ""
+msgstr "動画ファイル"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:739
 msgid "Video"
-msgstr ""
+msgstr "動画"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:740
 msgid "Webview"
-msgstr ""
+msgstr "Webview"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:744
 msgid "Full System Access"
@@ -293,37 +297,41 @@ msgstr "完全なシステムアクセス"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:749
+#, fuzzy
 msgid "none required"
-msgstr ""
+msgstr "リクエストなし"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:785
+#, fuzzy
 msgid "Read paths"
-msgstr ""
+msgstr "パスの読み込み"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:802
+#, fuzzy
 msgid "Write paths"
-msgstr ""
+msgstr "パスの書き込み"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:817
 msgid "Donating"
-msgstr ""
+msgstr "寄付"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:818
+#, fuzzy
 msgid "Would you like to support this app with a donation to the developer?"
-msgstr ""
+msgstr "このアプリの開発者に寄付をして支援しますか？"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:824
 msgid "Donate now"
-msgstr ""
+msgstr "今すぐ寄付する"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:832
 msgid "Maybe later"
-msgstr ""
+msgstr "あとで"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:845
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:297
 msgid "Warning"
-msgstr ""
+msgstr "警告"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:846
 msgid ""
@@ -350,39 +358,39 @@ msgstr "キャンセル"
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:880
 #, qt-format
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:885
 #, qt-format
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:890
 #, qt-format
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
 #: /home/brian/dev/openstore/openstore-app/openstore/AppDetailsPage.qml:893
 #, qt-format
 msgid "%1 bytes"
-msgstr ""
+msgstr "%1 bytes"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:95
 msgid "This app could not be found in the OpenStore"
-msgstr ""
+msgstr "このアプリをOpenStoreで見つけることができませんでした"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/AppLocalDetailsPage.qml:98
 msgid ""
 "You are currently offline and the app details could not be fetched from the "
 "OpenStore"
-msgstr ""
+msgstr "現在オフラインであるためOpenStoreからアプリの詳細を取得することことができませんでした"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/CategoriesTab.qml:38
 msgid "Categories"
-msgstr ""
+msgstr "カテゴリー"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:65
 #, qt-format
@@ -391,76 +399,77 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:98
 msgid "OpenStore update available"
-msgstr ""
+msgstr "OpenStoreのアップデートが利用可能です"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:134
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:135
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:51
 msgid "Installed Apps"
-msgstr ""
+msgstr "インストールされているアプリ"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:134
 #, qt-format
 msgid " (%1 update available)"
 msgid_plural " (%1 updates available)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] " (%1件のアップデートが利用可能)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/DiscoverTab.qml:159
+#, fuzzy
 msgid "Browse Apps by Category"
-msgstr ""
+msgstr "カテゴリーからアプリを閲覧"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
 msgid "Nothing here yet"
-msgstr ""
+msgstr "ここにはまだ何もありません"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:106
 msgid "No results found."
-msgstr ""
+msgstr "結果が見つかりません。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
 msgid "No app has been released in this category yet."
-msgstr ""
+msgstr "このカテゴリーではまだアプリがリリースされていません。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/FilteredAppView.qml:107
+#, fuzzy
 msgid "Try with a different search."
-msgstr ""
+msgstr "別の検索で試してみてください。"
 
 #. TRANSLATORS: %1 is the number of installed apps
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:79
 #, qt-format
 msgid "Installed apps (%1)"
-msgstr ""
+msgstr "インストールされているアプリ (%1)"
 
 #. TRANSLATORS: %1 is the number of available app updates
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:83
 #, qt-format
 msgid "Available updates (%1)"
-msgstr ""
+msgstr "利用可能なアップデート (%1)"
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:87
 #, qt-format
 msgid "Stable version available (%1)"
-msgstr ""
+msgstr "安定版が利用可能 (%1)"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:90
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
-msgstr ""
+msgstr "これらのアプリのインストールされたバージョンはOpenStoreで提供されたものではありませんが、安定版が利用可能です。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:91
 msgid "Update all"
-msgstr ""
+msgstr "すべてアップデート"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:193
 msgid "No apps found"
-msgstr ""
+msgstr "アプリが見つかりません"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/InstalledAppsTab.qml:194
 msgid "No app has been installed from OpenStore yet."
-msgstr ""
+msgstr "まだOpenStoreからインストールされたアプリはありません。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:306
 msgid ""
@@ -469,12 +478,13 @@ msgid ""
 msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:320
+#, fuzzy
 msgid "Are you sure you want to continue?"
-msgstr ""
+msgstr "続行しますか？"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:324
 msgid "Yes, I know what I'm doing"
-msgstr ""
+msgstr "はい、何をしようとしているかわかっています"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:332
 msgid "Get me out of here!"
@@ -482,40 +492,40 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:344
 msgid "Install unknown app?"
-msgstr ""
+msgstr "不明なアプリをインストールしますか？"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:345
 #, qt-format
 msgid "Do you want to install the unknown app %1?"
-msgstr ""
+msgstr "不明なアプリである %1 をインストールしますか？"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:386
 msgid "App installed"
-msgstr ""
+msgstr "アプリがインストールされました"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:387
 msgid "The app has been installed successfully."
-msgstr ""
+msgstr "アプリのインストールに成功しました。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:390
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:403
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:418
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:399
 msgid "Installation failed"
-msgstr ""
+msgstr "インストールに失敗"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:400
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
-msgstr ""
+msgstr "パッケージをインストールできませんでした。有効なクリックパッケージであることを確認してください。"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/Main.qml:414
 #, qt-format
 msgid "Installation failed (Error %1)"
-msgstr ""
+msgstr "インストール失敗 (エラー %1 )"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:29
 msgid "Your passphrase is required to access restricted content"
@@ -527,7 +537,7 @@ msgstr ""
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:39
 msgid "Authentication failed"
-msgstr ""
+msgstr "認証に失敗"
 
 #: /home/brian/dev/openstore/openstore-app/openstore/PasswordDialog.qml:47
 msgid "Passphrase required"

@@ -8,17 +8,17 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-31 21:47+0000\n"
-"PO-Revision-Date: 2020-07-07 19:22+0000\n"
-"Last-Translator: Daniel Frańczak <danielfranczak5@wp.pl>\n"
-"Language-Team: Polish <https://translate.ubports.com/projects/openstore/"
+"PO-Revision-Date: 2024-03-16 20:02+0000\n"
+"Last-Translator: Eryk Michalak <gnu.ewm@protonmail.com>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.11.3\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.5-dev\n"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
 #: ../qml/AppDetailsPage.qml:108 ../qml/AppLocalDetailsPage.qml:34
@@ -38,7 +38,7 @@ msgstr "Aplikacja"
 #: ../qml/AppDetailsPage.qml:153 ../qml/Components/PackageListItem.qml:35
 #: ../qml/Components/PackageTile.qml:80
 msgid "Bookmark"
-msgstr ""
+msgstr "Zakładka"
 
 #: ../qml/AppDetailsPage.qml:154 ../qml/Components/PackageListItem.qml:36
 #: ../qml/Components/PackageTile.qml:81
@@ -46,14 +46,12 @@ msgid "Web App"
 msgstr "Aplikacja internetowa"
 
 #: ../qml/AppDetailsPage.qml:164
-#, fuzzy
-#| msgid "Install"
 msgid "Install Size: "
-msgstr "Zainstaluj"
+msgstr "Rozmiar instalacji: "
 
 #: ../qml/AppDetailsPage.qml:165
 msgid "Download Size: "
-msgstr ""
+msgstr "Rozmiar pobierania: "
 
 #: ../qml/AppDetailsPage.qml:239
 msgid ""
@@ -154,10 +152,8 @@ msgid "Donate to support this app"
 msgstr "Przekaż darowiznę na wsparcie tej aplikacji"
 
 #: ../qml/AppDetailsPage.qml:598
-#, fuzzy
-#| msgid "Rate this app"
 msgid "Help translate this app"
-msgstr "Oceń tę aplikację"
+msgstr "Pomóż w tłumaczeniu tej aplikacji"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
 #: ../qml/AppDetailsPage.qml:614
@@ -338,10 +334,8 @@ msgid "Categories"
 msgstr "Kategorie"
 
 #: ../qml/CategoriesPage.qml:84
-#, fuzzy
-#| msgid "Nothing here yet"
 msgid "Nothing to see here yet!"
-msgstr "Niczego nie znaleziono"
+msgstr "Niczego nie znaleziono!"
 
 #: ../qml/Components/BottomEdgePageStack.qml:102
 msgid "Back"
@@ -436,7 +430,7 @@ msgstr "%1/%2 znaków"
 
 #: ../qml/Components/ReviewPreview.qml:193
 msgid "Submit"
-msgstr ""
+msgstr "Prześlij"
 
 #: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:148
 #: ../qml/Dialogs/InstallWarningDialog.qml:50
@@ -454,7 +448,7 @@ msgstr[2] "%1 opinii "
 
 #: ../qml/Components/ReviewPreview.qml:252
 msgid "Edit Review"
-msgstr ""
+msgstr "Edytuj recenzję"
 
 #: ../qml/Components/ReviewPreview.qml:255
 msgid "Review app"
@@ -511,19 +505,19 @@ msgstr "Może później"
 
 #: ../qml/Dialogs/FilterDialog.qml:26
 msgid "Filters and Sorting"
-msgstr ""
+msgstr "Filtrowanie i sortowanie"
 
 #: ../qml/Dialogs/FilterDialog.qml:38
 msgid "Sort By"
-msgstr ""
+msgstr "Sortuj według"
 
 #: ../qml/Dialogs/FilterDialog.qml:45 ../qml/Dialogs/FilterDialog.qml:65
 msgid "Relevance"
-msgstr ""
+msgstr "Trafność"
 
 #: ../qml/Dialogs/FilterDialog.qml:46
 msgid "Most Popular"
-msgstr ""
+msgstr "Najpopularniejsze"
 
 #: ../qml/Dialogs/FilterDialog.qml:47
 msgid "Least Popular"
@@ -531,59 +525,51 @@ msgstr ""
 
 #: ../qml/Dialogs/FilterDialog.qml:48
 msgid "Title (A-Z)"
-msgstr ""
+msgstr "Nazwa (A-Z)"
 
 #: ../qml/Dialogs/FilterDialog.qml:49
 msgid "Title (Z-A)"
-msgstr ""
+msgstr "Nazwa (Z-A)"
 
 #: ../qml/Dialogs/FilterDialog.qml:50
 msgid "Newest"
-msgstr ""
+msgstr "Najnowsza"
 
 #: ../qml/Dialogs/FilterDialog.qml:51
 msgid "Oldest"
-msgstr ""
+msgstr "Najstarsza"
 
 #: ../qml/Dialogs/FilterDialog.qml:52
-#, fuzzy
-#| msgid "Update"
 msgid "Latest Update"
-msgstr "Zaktualizuj"
+msgstr "Ostatnio zaktualizowane"
 
 #: ../qml/Dialogs/FilterDialog.qml:53
-#, fuzzy
-#| msgid "Update"
 msgid "Oldest Update"
-msgstr "Zaktualizuj"
+msgstr "Najdawniej aktualizowane"
 
 #: ../qml/Dialogs/FilterDialog.qml:93
 msgid "Type"
-msgstr ""
+msgstr "Typ"
 
 #: ../qml/Dialogs/FilterDialog.qml:100 ../qml/Dialogs/FilterDialog.qml:115
 msgid "All Types"
-msgstr ""
+msgstr "Wszystkie typy"
 
 #: ../qml/Dialogs/FilterDialog.qml:101
-#, fuzzy
-#| msgid "My Apps"
 msgid "Apps"
-msgstr "Moje aplikacje"
+msgstr "Aplikacje"
 
 #: ../qml/Dialogs/FilterDialog.qml:102
 msgid "Bookmarks"
-msgstr ""
+msgstr "Zakładki"
 
 #: ../qml/Dialogs/FilterDialog.qml:103
-#, fuzzy
-#| msgid "Web App"
 msgid "Web Apps"
-msgstr "Aplikacja internetowa"
+msgstr "Aplikacje internetowe"
 
 #: ../qml/Dialogs/FilterDialog.qml:140
 msgid "Apply"
-msgstr ""
+msgstr "Zastosuj"
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:27
 msgid "Install unknown app?"
@@ -603,7 +589,7 @@ msgstr "Rozumiem ryzyko"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:26
 msgid "Review confirmation"
-msgstr ""
+msgstr "Potwierdzenie recenzji"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:27
 msgid ""
@@ -612,14 +598,12 @@ msgid ""
 msgstr ""
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:37
-#, fuzzy
-#| msgid "Get support for this app"
 msgid "Get support"
-msgstr "Zgłoś problemy, ulepszenia"
+msgstr "Uzyskaj wsparcie"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:47
 msgid "Post my review"
-msgstr ""
+msgstr "Opublikuj recenzję"
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
 msgid ""
@@ -644,10 +628,8 @@ msgid "Do you want to remove %1?"
 msgstr "Usunąć %1?"
 
 #: ../qml/DiscoverPage.qml:40
-#, fuzzy
-#| msgid "OpenStore team"
 msgid "OpenStore"
-msgstr "Ekipa OpenStore"
+msgstr "OpenStore"
 
 #: ../qml/DiscoverPage.qml:76
 msgid "by %1"
@@ -655,7 +637,7 @@ msgstr "przez %1"
 
 #: ../qml/DiscoverPage.qml:130
 msgid "You are currently offline"
-msgstr ""
+msgstr "Obecnie nie masz połączenia z internetem"
 
 #: ../qml/DiscoverPage.qml:146
 msgid "OpenStore update available"
@@ -730,7 +712,7 @@ msgstr "Nie ma aplikacji w tej kategorii."
 
 #: ../qml/Main.qml:319 ../qml/SearchPage.qml:55
 msgid "Filters"
-msgstr ""
+msgstr "Filtry"
 
 #: ../qml/Main.qml:366
 msgid "App installed"

@@ -1,5 +1,9 @@
 # OpenStore App Changelog
 
+## v3.5.1
+
+- Translation update, thank you translators!
+
 ## v3.5.0
 
 - Added display install size and download size

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-28 02:35+0000\n"
+"POT-Creation-Date: 2023-05-31 21:47+0000\n"
 "PO-Revision-Date: 2021-05-24 15:19+0000\n"
 "Last-Translator: Abdellatif Oussaid <oussaid.abdellatif@gmail.com>\n"
 "Language-Team: Arabic <https://translate.ubports.com/projects/openstore/"
@@ -20,11 +20,11 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Weblate 3.11.3\n"
 
-#: ../qml/AppDetailsPage.qml:109 ../qml/AppLocalDetailsPage.qml:34
+#: ../qml/AppDetailsPage.qml:108 ../qml/AppLocalDetailsPage.qml:34
 msgid "App details"
 msgstr "تفاصيل التطبيق"
 
-#: ../qml/AppDetailsPage.qml:116 ../qml/AppDetailsPage.qml:385
+#: ../qml/AppDetailsPage.qml:115 ../qml/AppDetailsPage.qml:385
 #: ../qml/AppLocalDetailsPage.qml:41 ../qml/Dialogs/UninstallDialog.qml:33
 msgid "Remove"
 msgstr "أزل"
@@ -34,21 +34,25 @@ msgstr "أزل"
 msgid "App"
 msgstr "تطبيق"
 
-#: ../qml/AppDetailsPage.qml:153 ../qml/Components/HookIcon.qml:67
-#: ../qml/Components/PackageListItem.qml:35
+#: ../qml/AppDetailsPage.qml:153 ../qml/Components/PackageListItem.qml:35
 #: ../qml/Components/PackageTile.qml:80
-msgid "Scope"
-msgstr "نطاق"
+msgid "Bookmark"
+msgstr ""
 
 #: ../qml/AppDetailsPage.qml:154 ../qml/Components/PackageListItem.qml:36
 #: ../qml/Components/PackageTile.qml:81
 msgid "Web App"
 msgstr "تطبيق ويب"
 
-#: ../qml/AppDetailsPage.qml:155 ../qml/Components/PackageListItem.qml:37
-#: ../qml/Components/PackageTile.qml:82
-msgid "Web App+"
-msgstr "تطبيق ويب+"
+#: ../qml/AppDetailsPage.qml:164
+#, fuzzy
+#| msgid "Install"
+msgid "Install Size: "
+msgstr "ثبت"
+
+#: ../qml/AppDetailsPage.qml:165
+msgid "Download Size: "
+msgstr ""
 
 #: ../qml/AppDetailsPage.qml:239
 msgid ""
@@ -58,8 +62,8 @@ msgstr ""
 "لم تثبت هذا التطبيق من خادم OpenStore. لتثبيت آخر إصدار مستقر أنقر الزر "
 "أدناه."
 
-#: ../qml/AppDetailsPage.qml:264 ../qml/AppLocalDetailsPage.qml:103
-#: ../qml/Components/HighlightedApp.qml:110
+#: ../qml/AppDetailsPage.qml:264 ../qml/AppLocalDetailsPage.qml:104
+#: ../qml/Components/HighlightedApp.qml:117
 msgid "Open"
 msgstr "افتح"
 
@@ -75,7 +79,7 @@ msgstr "ثبت الإصدار المستقر"
 msgid "Upgrade"
 msgstr "رقي"
 
-#: ../qml/AppDetailsPage.qml:295 ../qml/Dialogs/InstallWarningDialog.qml:41
+#: ../qml/AppDetailsPage.qml:295
 msgid "Install"
 msgstr "ثبت"
 
@@ -110,7 +114,7 @@ msgstr "ما الجديد"
 msgid "Packager/Publisher"
 msgstr "المنتج/الناشر"
 
-#: ../qml/AppDetailsPage.qml:498 ../qml/AppLocalDetailsPage.qml:137
+#: ../qml/AppDetailsPage.qml:498 ../qml/AppLocalDetailsPage.qml:138
 msgid "Installed version"
 msgstr "الإصدار المثبت"
 
@@ -138,186 +142,192 @@ msgstr "الرخصة"
 msgid "N/A"
 msgstr "لا شيء"
 
-#: ../qml/AppDetailsPage.qml:557 ../qml/SettingsPage.qml:214
+#: ../qml/AppDetailsPage.qml:559 ../qml/SettingsPage.qml:214
 msgid "Source Code"
 msgstr "الشيفرة المصدرية"
 
-#: ../qml/AppDetailsPage.qml:570
+#: ../qml/AppDetailsPage.qml:572
 msgid "Get support for this app"
 msgstr "احصل على دعم لهذا التطبيق"
 
-#: ../qml/AppDetailsPage.qml:583
+#: ../qml/AppDetailsPage.qml:585
 msgid "Donate to support this app"
 msgstr "تبرع لدعم التطبيق"
 
-#. TRANSLATORS: This is the button that shows a list of all the packages from the same author. %1 is the name of the author.
-#: ../qml/AppDetailsPage.qml:599
+#: ../qml/AppDetailsPage.qml:598
+#, fuzzy
+#| msgid "Rate this app"
+msgid "Help translate this app"
+msgstr "قيّم التطبيق"
+
+#. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
+#: ../qml/AppDetailsPage.qml:614
 msgid "More from %1"
 msgstr "مزيد من تطبيقات %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: ../qml/AppDetailsPage.qml:614
+#: ../qml/AppDetailsPage.qml:629
 msgid "Other apps in %1"
 msgstr "اعرض مزيد من تطبيقات %1"
 
-#: ../qml/AppDetailsPage.qml:620
+#: ../qml/AppDetailsPage.qml:635
 msgid "Package contents"
 msgstr "محتويات الحزمة"
 
-#: ../qml/AppDetailsPage.qml:713
+#: ../qml/AppDetailsPage.qml:722
 msgid "Permissions"
 msgstr "الأذون"
 
-#: ../qml/AppDetailsPage.qml:718
+#: ../qml/AppDetailsPage.qml:727
 msgid "Accounts"
 msgstr "الحسابات"
 
-#: ../qml/AppDetailsPage.qml:719
+#: ../qml/AppDetailsPage.qml:728
 msgid "Audio"
 msgstr "الصوت"
 
-#: ../qml/AppDetailsPage.qml:720
+#: ../qml/AppDetailsPage.qml:729
 msgid "Bluetooth"
 msgstr "بلوتوث"
 
-#: ../qml/AppDetailsPage.qml:721
+#: ../qml/AppDetailsPage.qml:730
 msgid "Calendar"
 msgstr "التقويم"
 
-#: ../qml/AppDetailsPage.qml:722
+#: ../qml/AppDetailsPage.qml:731
 msgid "Camera"
 msgstr "كاميرا"
 
-#: ../qml/AppDetailsPage.qml:723
+#: ../qml/AppDetailsPage.qml:732
 msgid "Connectivity"
 msgstr "التوصيل"
 
-#: ../qml/AppDetailsPage.qml:724
+#: ../qml/AppDetailsPage.qml:733
 msgid "Contacts"
 msgstr "جهات الاتصال"
 
-#: ../qml/AppDetailsPage.qml:725
+#: ../qml/AppDetailsPage.qml:734
 msgid "Content Exchange Source"
 msgstr "مصدر تبادل المحتويات"
 
-#: ../qml/AppDetailsPage.qml:726
+#: ../qml/AppDetailsPage.qml:735
 msgid "Content Exchange"
 msgstr "تبادل المحتوى"
 
-#: ../qml/AppDetailsPage.qml:727
+#: ../qml/AppDetailsPage.qml:736
 msgid "Debug"
 msgstr "نقِّح"
 
-#: ../qml/AppDetailsPage.qml:728
+#: ../qml/AppDetailsPage.qml:737
 msgid "History"
 msgstr "التأريخ"
 
-#: ../qml/AppDetailsPage.qml:729
+#: ../qml/AppDetailsPage.qml:738
 msgid "In App Purchases"
 msgstr "شراء داخل التطبيق"
 
-#: ../qml/AppDetailsPage.qml:730
+#: ../qml/AppDetailsPage.qml:739
 msgid "Keep Display On"
 msgstr "ابق الشاشة مفتوحة"
 
-#: ../qml/AppDetailsPage.qml:731
+#: ../qml/AppDetailsPage.qml:740
 msgid "Location"
 msgstr "الموقع"
 
-#: ../qml/AppDetailsPage.qml:732
+#: ../qml/AppDetailsPage.qml:741
 msgid "Microphone"
 msgstr "ميكروفون"
 
-#: ../qml/AppDetailsPage.qml:733
+#: ../qml/AppDetailsPage.qml:742
 msgid "Read Music Files"
 msgstr "اقرأ ملفات الموسيقى"
 
-#: ../qml/AppDetailsPage.qml:734
+#: ../qml/AppDetailsPage.qml:743
 msgid "Music Files"
 msgstr "ملفات موسيقية"
 
-#: ../qml/AppDetailsPage.qml:735
+#: ../qml/AppDetailsPage.qml:744
 msgid "Networking"
 msgstr "الشبكة"
 
-#: ../qml/AppDetailsPage.qml:736
+#: ../qml/AppDetailsPage.qml:745
 msgid "Read Picture Files"
 msgstr "اقرأ ملفات الصور"
 
-#: ../qml/AppDetailsPage.qml:737
+#: ../qml/AppDetailsPage.qml:746
 msgid "Picture Files"
 msgstr "ملفات الصور"
 
-#: ../qml/AppDetailsPage.qml:738
+#: ../qml/AppDetailsPage.qml:747
 msgid "Push Notifications"
 msgstr "ادفع التنبيهات"
 
-#: ../qml/AppDetailsPage.qml:739
+#: ../qml/AppDetailsPage.qml:748
 msgid "Sensors"
 msgstr "المستشعرات"
 
-#: ../qml/AppDetailsPage.qml:740
+#: ../qml/AppDetailsPage.qml:749
 msgid "User Metrics"
 msgstr "مقاييس المستخدم"
 
-#: ../qml/AppDetailsPage.qml:741
+#: ../qml/AppDetailsPage.qml:750
 msgid "Read Video Files"
 msgstr "اقرأ ملفات الفيديو"
 
-#: ../qml/AppDetailsPage.qml:742
+#: ../qml/AppDetailsPage.qml:751
 msgid "Video Files"
 msgstr "ملفات الفيديو"
 
-#: ../qml/AppDetailsPage.qml:743
+#: ../qml/AppDetailsPage.qml:752
 msgid "Video"
 msgstr "فيديو"
 
-#: ../qml/AppDetailsPage.qml:744
+#: ../qml/AppDetailsPage.qml:753
 msgid "Webview"
 msgstr "عرض الويب"
 
-#: ../qml/AppDetailsPage.qml:748
+#: ../qml/AppDetailsPage.qml:757
 msgid "Full System Access"
 msgstr "نفاذ كامل للنظام"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: ../qml/AppDetailsPage.qml:753
+#: ../qml/AppDetailsPage.qml:762
 msgid "none required"
 msgstr "غير مطلوب"
 
-#: ../qml/AppDetailsPage.qml:789
+#: ../qml/AppDetailsPage.qml:798
 msgid "Read paths"
 msgstr "اقرأ المسارات"
 
-#: ../qml/AppDetailsPage.qml:806
+#: ../qml/AppDetailsPage.qml:815
 msgid "Write paths"
 msgstr "اكتب المسارات"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: ../qml/AppDetailsPage.qml:877
+#: ../qml/AppDetailsPage.qml:886
 msgid "%1 GB"
 msgstr "%1 جيغا"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: ../qml/AppDetailsPage.qml:882
+#: ../qml/AppDetailsPage.qml:891
 msgid "%1 MB"
 msgstr "%1 ميغا"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: ../qml/AppDetailsPage.qml:887
+#: ../qml/AppDetailsPage.qml:896
 msgid "%1 kB"
 msgstr "%1 كيلو"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: ../qml/AppDetailsPage.qml:890
+#: ../qml/AppDetailsPage.qml:899
 msgid "%1 bytes"
 msgstr "%1 بايت"
 
-#: ../qml/AppLocalDetailsPage.qml:117
+#: ../qml/AppLocalDetailsPage.qml:118
 msgid "This app could not be found in the OpenStore"
 msgstr "تعذر العثور على التطبيق في OpenStore"
 
-#: ../qml/AppLocalDetailsPage.qml:120
+#: ../qml/AppLocalDetailsPage.qml:121
 msgid ""
 "You are currently offline and the app details could not be fetched from the "
 "OpenStore"
@@ -327,11 +337,17 @@ msgstr "لا يمكن جلب تفاصيل التطبيق مادمت غير مت�
 msgid "Categories"
 msgstr "تصنيفات"
 
-#: ../qml/Components/BottomEdgePageStack.qml:101
+#: ../qml/CategoriesPage.qml:84
+#, fuzzy
+#| msgid "Nothing here yet"
+msgid "Nothing to see here yet!"
+msgstr "لا شيء هنا"
+
+#: ../qml/Components/BottomEdgePageStack.qml:102
 msgid "Back"
 msgstr "للخلف"
 
-#: ../qml/Components/BottomEdgePageStack.qml:101
+#: ../qml/Components/BottomEdgePageStack.qml:102
 #: ../qml/Components/ReviewPreview.qml:103
 #: ../qml/Components/ReviewPreview.qml:117
 msgid "Close"
@@ -345,12 +361,12 @@ msgstr "الإعدادات"
 msgid "Search"
 msgstr "ابحث"
 
-#: ../qml/Components/HighlightedApp.qml:107
+#: ../qml/Components/HighlightedApp.qml:114
 #: ../qml/Components/ReviewPreview.qml:193
 msgid "Update"
 msgstr "حدّث"
 
-#: ../qml/Components/HighlightedApp.qml:113
+#: ../qml/Components/HighlightedApp.qml:120
 msgid "Details"
 msgstr "التفاصيل"
 
@@ -358,31 +374,31 @@ msgstr "التفاصيل"
 msgid "Application"
 msgstr "التطبيق"
 
-#. TRANSLATORS: This is an Ubuntu platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
-#: ../qml/Components/HookIcon.qml:81
+#. TRANSLATORS: This is a platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
+#: ../qml/Components/HookIcon.qml:68
 msgid "URL Handler"
 msgstr "مناول عنوان الرابط"
 
-#. TRANSLATORS: This is an Ubuntu platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
-#: ../qml/Components/HookIcon.qml:95
+#. TRANSLATORS: This is a platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
+#: ../qml/Components/HookIcon.qml:82
 msgid "Content Hub Handler"
 msgstr "مناول Content Hub"
 
-#. TRANSLATORS: This is an Ubuntu platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
-#: ../qml/Components/HookIcon.qml:109
+#. TRANSLATORS: This is a platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
+#: ../qml/Components/HookIcon.qml:96
 msgid "Push Helper"
 msgstr "دفع"
 
 #. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
-#: ../qml/Components/HookIcon.qml:123
+#: ../qml/Components/HookIcon.qml:110
 msgid "Accounts provider"
 msgstr "موفر الحسابات"
 
-#: ../qml/Components/PackageTile.qml:98
+#: ../qml/Components/PackageTile.qml:97
 msgid "Update available"
 msgstr "يتوفر تحديث"
 
-#: ../qml/Components/PackageTile.qml:98
+#: ../qml/Components/PackageTile.qml:97
 msgid "✓ Installed"
 msgstr "✓ ثُبت"
 
@@ -422,8 +438,8 @@ msgstr "%1/%2 محرف"
 msgid "Submit"
 msgstr "أرسل"
 
-#: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:143
-#: ../qml/Dialogs/InstallWarningDialog.qml:49
+#: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:148
+#: ../qml/Dialogs/InstallWarningDialog.qml:50
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
 #: ../qml/Dialogs/UninstallDialog.qml:42
 msgid "Cancel"
@@ -465,8 +481,8 @@ msgid ""
 "You are currently using a non-standard domain for the OpenStore. This is a "
 "development feature. The domain you are using is:"
 msgstr ""
-"أنت تستخدم حاليًا نطاقًا غير معتمد لـ OpenStore. هذه ميزة قيد التطوير. "
-"المجال الذي تستخدمه هو:"
+"أنت تستخدم حاليًا نطاقًا غير معتمد لـ OpenStore. هذه ميزة قيد التطوير. المجال "
+"الذي تستخدمه هو:"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:49
 msgid "Are you sure you want to continue?"
@@ -540,23 +556,27 @@ msgstr "اخر تحديث"
 msgid "Oldest Update"
 msgstr "اقدم تحديث"
 
-#: ../qml/Dialogs/FilterDialog.qml:91
+#: ../qml/Dialogs/FilterDialog.qml:93
 msgid "Type"
 msgstr "النوع"
 
-#: ../qml/Dialogs/FilterDialog.qml:98 ../qml/Dialogs/FilterDialog.qml:112
+#: ../qml/Dialogs/FilterDialog.qml:100 ../qml/Dialogs/FilterDialog.qml:115
 msgid "All Types"
 msgstr "كل الأنواع"
 
-#: ../qml/Dialogs/FilterDialog.qml:99
+#: ../qml/Dialogs/FilterDialog.qml:101
 msgid "Apps"
 msgstr "تطبيقات"
 
-#: ../qml/Dialogs/FilterDialog.qml:100
+#: ../qml/Dialogs/FilterDialog.qml:102
+msgid "Bookmarks"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:103
 msgid "Web Apps"
 msgstr "تطبيقات الويب"
 
-#: ../qml/Dialogs/FilterDialog.qml:135
+#: ../qml/Dialogs/FilterDialog.qml:140
 msgid "Apply"
 msgstr "طبّق"
 
@@ -565,20 +585,32 @@ msgid "Install unknown app?"
 msgstr "أتريد تثبيت تطبيق مجهول؟"
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:28
-msgid "Do you want to install the unknown app %1?"
-msgstr "أتريد تثبيت التطبيق المجهول %1؟"
+msgid ""
+"Do you want to install the unknown app %1? Installing apps from outside the "
+"OpenStore is not recommended and can potentially harm your system. Only "
+"install this app if you got it from a trusted source."
+msgstr ""
+
+#: ../qml/Dialogs/InstallWarningDialog.qml:41
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
+msgid "I understand the risks"
+msgstr "اتفهم المخاطر"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:26
 msgid "Review confirmation"
 msgstr "تاكيد الراجعة"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:27
+#, fuzzy
+#| msgid ""
+#| "Would you like to contact the author or file a bug instead? By opening a "
+#| "discussion with the developer(s) you could be helping to improve this app."
 msgid ""
-"Would you like to contact the author or file a bug instead? By opening a "
+"Would you like to contact the publisher or file a bug instead? By opening a "
 "discussion with the developer(s) you could be helping to improve this app."
 msgstr ""
-"هل ترغب في الاتصال بالمؤلف أو الإبلاغ عن خطأ بدلاً من ذلك؟ من خلال فتح "
-"مناقشة مع المطور (المطورين) ، قد تساعد في تحسين هذا التطبيق."
+"هل ترغب في الاتصال بالمؤلف أو الإبلاغ عن خطأ بدلاً من ذلك؟ من خلال فتح مناقشة "
+"مع المطور (المطورين) ، قد تساعد في تحسين هذا التطبيق."
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:37
 msgid "Get support"
@@ -601,10 +633,6 @@ msgstr ""
 "التطبيق من أجل الأمان ، فهم ليسوا مسؤولين عن أي شيء سيء قد يحدث لجهازك أو "
 "بياناتك من تثبيت هذا التطبيق."
 
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
-msgid "I understand the risks"
-msgstr "اتفهم المخاطر"
-
 #: ../qml/Dialogs/UninstallDialog.qml:25
 msgid "Remove package"
 msgstr "أزل حزمة"
@@ -617,19 +645,19 @@ msgstr "أتريد إزالة %1؟"
 msgid "OpenStore"
 msgstr "السوق المفتوح"
 
-#: ../qml/DiscoverPage.qml:73
+#: ../qml/DiscoverPage.qml:76
 msgid "by %1"
 msgstr "طوره %1"
 
-#: ../qml/DiscoverPage.qml:112
+#: ../qml/DiscoverPage.qml:130
 msgid "You are currently offline"
 msgstr "انت غير متصل حاليًا"
 
-#: ../qml/DiscoverPage.qml:128
+#: ../qml/DiscoverPage.qml:146
 msgid "OpenStore update available"
 msgstr "يتوفر تحديث لـ OpenStore"
 
-#: ../qml/DiscoverPage.qml:158
+#: ../qml/DiscoverPage.qml:176
 msgid " (%1 update available)"
 msgid_plural " (%1 updates available)"
 msgstr[0] " (لا تتوفر تحديثات)"
@@ -639,12 +667,12 @@ msgstr[3] " (تتوفر %1 تحديثات)"
 msgstr[4] " (يتوافر %1 تحديثًا)"
 msgstr[5] " (يتوفر %1 تحديث)"
 
-#: ../qml/DiscoverPage.qml:158 ../qml/DiscoverPage.qml:159
+#: ../qml/DiscoverPage.qml:176 ../qml/DiscoverPage.qml:177
 #: ../qml/InstalledAppsPage.qml:52
 msgid "Installed Apps"
 msgstr "التطبيقات المثبتة"
 
-#: ../qml/DiscoverPage.qml:183
+#: ../qml/DiscoverPage.qml:201
 msgid "Browse Apps by Category"
 msgstr "تصفح التطبيقات حسب التصنيف"
 
@@ -698,32 +726,32 @@ msgstr "لم يُعثر على تطبيقات"
 msgid "No app has been installed from OpenStore yet."
 msgstr "لم يتم تثبيت أي تطبيق من OpenStore حتى الآن."
 
-#: ../qml/Main.qml:260 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:319 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr "المرشحات"
 
-#: ../qml/Main.qml:307
+#: ../qml/Main.qml:366
 msgid "App installed"
 msgstr "التطبيق مثبت"
 
-#: ../qml/Main.qml:308
+#: ../qml/Main.qml:367
 msgid "The app has been installed successfully."
 msgstr "ثُبت التطبيق بنجاح."
 
-#: ../qml/Main.qml:311 ../qml/Main.qml:324 ../qml/Main.qml:339
+#: ../qml/Main.qml:370 ../qml/Main.qml:383 ../qml/Main.qml:398
 msgid "OK"
 msgstr "موافق"
 
-#: ../qml/Main.qml:320
+#: ../qml/Main.qml:379
 msgid "Installation failed"
 msgstr "فشل التثبيت"
 
-#: ../qml/Main.qml:321
+#: ../qml/Main.qml:380
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr "تعذر تثبيت الحزمة. تأكد أنها حزمة click صالحة."
 
-#: ../qml/Main.qml:335
+#: ../qml/Main.qml:394
 msgid "Installation failed (Error %1)"
 msgstr "فشل التثبيت (خطأ %1)"
 
@@ -775,3 +803,12 @@ msgstr "الأيقونات الاضافية وفرها"
 msgid ""
 "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr "برمجية;تطبيق;تطبيقات;برنامج;متجر;سوق;ثبت;أزل;حدث;لعب;اكتشف;"
+
+#~ msgid "Scope"
+#~ msgstr "نطاق"
+
+#~ msgid "Web App+"
+#~ msgstr "تطبيق ويب+"
+
+#~ msgid "Do you want to install the unknown app %1?"
+#~ msgstr "أتريد تثبيت التطبيق المجهول %1؟"

@@ -11,7 +11,7 @@ Please report any bugs/features/requests in our [bug tracker](https://gitlab.com
 ## Translations
 
 If you would like to help out with translations head over to the OpenStore
-project on the [UBports Weblate instance](https://translate.ubports.com/projects/openstore/openstore-app/).
+project on the [Weblate](https://hosted.weblate.org/projects/open-store-io/openstore-app/).
 
 ## Donations
 

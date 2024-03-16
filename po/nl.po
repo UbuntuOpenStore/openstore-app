@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-31 21:47+0000\n"
-"PO-Revision-Date: 2022-02-17 15:02+0000\n"
+"PO-Revision-Date: 2024-03-16 20:02+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
-"Language-Team: Dutch <https://translate.ubports.com/projects/openstore/"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.11.3\n"
+"X-Generator: Weblate 5.5-dev\n"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
 #: ../qml/AppDetailsPage.qml:108 ../qml/AppLocalDetailsPage.qml:34
@@ -37,7 +37,7 @@ msgstr "App"
 #: ../qml/AppDetailsPage.qml:153 ../qml/Components/PackageListItem.qml:35
 #: ../qml/Components/PackageTile.qml:80
 msgid "Bookmark"
-msgstr ""
+msgstr "Bladwijzer"
 
 #: ../qml/AppDetailsPage.qml:154 ../qml/Components/PackageListItem.qml:36
 #: ../qml/Components/PackageTile.qml:81
@@ -129,11 +129,11 @@ msgstr "Eerste publicatie"
 
 #: ../qml/AppDetailsPage.qml:528
 msgid "Downloads of the latest version"
-msgstr "Aantal downloads van de nieuwste versie"
+msgstr "Aantal downloads van nieuwste versie"
 
 #: ../qml/AppDetailsPage.qml:537
 msgid "Total downloads"
-msgstr "Totaal aantal downloads"
+msgstr "Totaalaantal downloads"
 
 #: ../qml/AppDetailsPage.qml:546
 msgid "License"
@@ -265,7 +265,7 @@ msgstr "Pushmeldingen"
 
 #: ../qml/AppDetailsPage.qml:748
 msgid "Sensors"
-msgstr "Sensors"
+msgstr "Sensoren"
 
 #: ../qml/AppDetailsPage.qml:749
 msgid "User Metrics"
@@ -289,7 +289,7 @@ msgstr "Webweergave"
 
 #: ../qml/AppDetailsPage.qml:757
 msgid "Full System Access"
-msgstr "Ongelimiteerde systeemtoegang"
+msgstr "Onbeperkte systeemtoegang"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
 #: ../qml/AppDetailsPage.qml:762
@@ -439,7 +439,7 @@ msgstr "%1/%2 tekens"
 
 #: ../qml/Components/ReviewPreview.qml:193
 msgid "Submit"
-msgstr ""
+msgstr "Publiceren"
 
 #: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:148
 #: ../qml/Dialogs/InstallWarningDialog.qml:50
@@ -525,11 +525,11 @@ msgstr ""
 
 #: ../qml/Dialogs/FilterDialog.qml:46
 msgid "Most Popular"
-msgstr ""
+msgstr "Populairst"
 
 #: ../qml/Dialogs/FilterDialog.qml:47
 msgid "Least Popular"
-msgstr ""
+msgstr "Minst populair"
 
 #: ../qml/Dialogs/FilterDialog.qml:48
 msgid "Title (A-Z)"
@@ -575,7 +575,7 @@ msgstr "Mijn apps"
 
 #: ../qml/Dialogs/FilterDialog.qml:102
 msgid "Bookmarks"
-msgstr ""
+msgstr "Bladwijzers"
 
 #: ../qml/Dialogs/FilterDialog.qml:103
 #, fuzzy

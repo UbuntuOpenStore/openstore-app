@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-31 21:47+0000\n"
 "PO-Revision-Date: 2024-03-16 20:01+0000\n"
-"Last-Translator: Adam Havelka <adam@uxes.cz>\n"
+"Last-Translator: Jozef Mlich <jmlich83@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/cs/>\n"
 "Language: cs\n"
@@ -123,7 +123,7 @@ msgstr "Poprvé vydáno"
 
 #: ../qml/AppDetailsPage.qml:528
 msgid "Downloads of the latest version"
-msgstr "Počet stažení nejnovější verze"
+msgstr "Stáhnout nejnovější verzi"
 
 #: ../qml/AppDetailsPage.qml:537
 msgid "Total downloads"
@@ -139,7 +139,7 @@ msgstr "Nedostupné"
 
 #: ../qml/AppDetailsPage.qml:559 ../qml/SettingsPage.qml:214
 msgid "Source Code"
-msgstr "Zdrojové kódy"
+msgstr "Zdrojový kód"
 
 #: ../qml/AppDetailsPage.qml:572
 msgid "Get support for this app"
@@ -331,10 +331,8 @@ msgid "Categories"
 msgstr "Kategorie"
 
 #: ../qml/CategoriesPage.qml:84
-#, fuzzy
-#| msgid "Nothing here yet"
 msgid "Nothing to see here yet!"
-msgstr "Zatím tu nic není"
+msgstr "Zatím tu nic není!"
 
 #: ../qml/Components/BottomEdgePageStack.qml:102
 msgid "Back"
@@ -539,16 +537,12 @@ msgid "Oldest"
 msgstr "Nejstarší"
 
 #: ../qml/Dialogs/FilterDialog.qml:52
-#, fuzzy
-#| msgid "Update"
 msgid "Latest Update"
-msgstr "Aktualizovat"
+msgstr "Poslední aktualizace"
 
 #: ../qml/Dialogs/FilterDialog.qml:53
-#, fuzzy
-#| msgid "Update"
 msgid "Oldest Update"
-msgstr "Aktualizovat"
+msgstr "Nejstarší aktualizace"
 
 #: ../qml/Dialogs/FilterDialog.qml:93
 msgid "Type"
@@ -559,20 +553,16 @@ msgid "All Types"
 msgstr "Všechny typy"
 
 #: ../qml/Dialogs/FilterDialog.qml:101
-#, fuzzy
-#| msgid "My Apps"
 msgid "Apps"
-msgstr "Moje aplikace"
+msgstr "Aplikace"
 
 #: ../qml/Dialogs/FilterDialog.qml:102
 msgid "Bookmarks"
 msgstr "Záložky"
 
 #: ../qml/Dialogs/FilterDialog.qml:103
-#, fuzzy
-#| msgid "Web App"
 msgid "Web Apps"
-msgstr "Webová aplikace"
+msgstr "Webové aplikace"
 
 #: ../qml/Dialogs/FilterDialog.qml:140
 msgid "Apply"
@@ -588,6 +578,9 @@ msgid ""
 "OpenStore is not recommended and can potentially harm your system. Only "
 "install this app if you got it from a trusted source."
 msgstr ""
+"Chcete nainstalovat neznámou aplikaci %1? Instalace aplikací, které nejsou z "
+"OpenStore, není doporučené a může poškodit Váš systém. Instalujte pouze "
+"aplikace z důvěryhodných zdrojů."
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:41
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
@@ -596,13 +589,15 @@ msgstr "Rozumím rizikům"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:26
 msgid "Review confirmation"
-msgstr ""
+msgstr "Potvrzení recenze"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:27
 msgid ""
 "Would you like to contact the publisher or file a bug instead? By opening a "
 "discussion with the developer(s) you could be helping to improve this app."
 msgstr ""
+"Chcete kontaktovat výrobce nebo nahlásit chybu? Otevřením diskuse s vývojáři "
+"můžete pomoci zlepšovat tuto aplikaci."
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:37
 msgid "Get support"
@@ -794,7 +789,7 @@ msgstr "Další ikony od"
 #: openstore.desktop.in.h:1
 msgid ""
 "software;apps;applications;programs;store;market;play;click;discover;install;"
-msgstr ""
+msgstr "software;aplikace;programy;obchod;click;balíčky;objevovat;instalace"
 
 #~ msgid "Scope"
 #~ msgstr "Scope"

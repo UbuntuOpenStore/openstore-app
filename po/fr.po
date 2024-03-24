@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-31 21:47+0000\n"
-"PO-Revision-Date: 2024-03-24 00:02+0000\n"
+"PO-Revision-Date: 2024-03-25 14:01+0000\n"
 "Last-Translator: Steve <steve.kueffer.ch@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/fr/>\n"
@@ -46,7 +46,7 @@ msgstr "Application Web"
 
 #: ../qml/AppDetailsPage.qml:164
 msgid "Install Size: "
-msgstr "Taille de l'installation: "
+msgstr "Taille de l'installation : "
 
 #: ../qml/AppDetailsPage.qml:165
 msgid "Download Size: "
@@ -736,7 +736,7 @@ msgstr "L'application a été installée avec succès."
 
 #: ../qml/Main.qml:370 ../qml/Main.qml:383 ../qml/Main.qml:398
 msgid "OK"
-msgstr "Valider"
+msgstr "OK"
 
 #: ../qml/Main.qml:379
 msgid "Installation failed"
@@ -801,8 +801,8 @@ msgstr "Icônes supplémentaires par"
 msgid ""
 "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr ""
-"logiciels;apps;applications;programmes;boutique;marché;jouer;cliquer;découvri"
-"r;installer;"
+"logiciels ;apps ;applications ;programmes ;boutique ;marché ;jouer ;cliquer ;"
+"découvrir ;installer ;"
 
 #~ msgid "Scope"
 #~ msgstr "Champ d'application"

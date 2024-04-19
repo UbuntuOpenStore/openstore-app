@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-31 21:47+0000\n"
-"PO-Revision-Date: 2024-03-16 20:02+0000\n"
+"PO-Revision-Date: 2024-04-20 10:07+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/nl/>\n"
@@ -45,14 +45,12 @@ msgid "Web App"
 msgstr "Webapp"
 
 #: ../qml/AppDetailsPage.qml:164
-#, fuzzy
-#| msgid "Install"
 msgid "Install Size: "
-msgstr "Installeren"
+msgstr "Installatiegrootte: "
 
 #: ../qml/AppDetailsPage.qml:165
 msgid "Download Size: "
-msgstr ""
+msgstr "Downloadgrootte: "
 
 #: ../qml/AppDetailsPage.qml:239
 msgid ""
@@ -156,10 +154,8 @@ msgid "Donate to support this app"
 msgstr "Doneer om deze app te ondersteunen"
 
 #: ../qml/AppDetailsPage.qml:598
-#, fuzzy
-#| msgid "Rate this app"
 msgid "Help translate this app"
-msgstr "Beoordeel deze app"
+msgstr "Helpen met vertalen"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
 #: ../qml/AppDetailsPage.qml:614
@@ -341,10 +337,8 @@ msgid "Categories"
 msgstr "Categorieën"
 
 #: ../qml/CategoriesPage.qml:84
-#, fuzzy
-#| msgid "Nothing here yet"
 msgid "Nothing to see here yet!"
-msgstr "Hier is nog niks te vinden"
+msgstr "Hier is nog niks te vinden!"
 
 #: ../qml/Components/BottomEdgePageStack.qml:102
 msgid "Back"
@@ -456,7 +450,7 @@ msgstr[1] "%1 recensies. "
 
 #: ../qml/Components/ReviewPreview.qml:252
 msgid "Edit Review"
-msgstr ""
+msgstr "Recensie bewerken"
 
 #: ../qml/Components/ReviewPreview.qml:255
 msgid "Review app"
@@ -513,15 +507,15 @@ msgstr "Misschien later"
 
 #: ../qml/Dialogs/FilterDialog.qml:26
 msgid "Filters and Sorting"
-msgstr ""
+msgstr "Filters en sortering"
 
 #: ../qml/Dialogs/FilterDialog.qml:38
 msgid "Sort By"
-msgstr ""
+msgstr "Sorteren op"
 
 #: ../qml/Dialogs/FilterDialog.qml:45 ../qml/Dialogs/FilterDialog.qml:65
 msgid "Relevance"
-msgstr ""
+msgstr "Relevantie"
 
 #: ../qml/Dialogs/FilterDialog.qml:46
 msgid "Most Popular"
@@ -533,59 +527,51 @@ msgstr "Minst populair"
 
 #: ../qml/Dialogs/FilterDialog.qml:48
 msgid "Title (A-Z)"
-msgstr ""
+msgstr "Titel (A-Z)"
 
 #: ../qml/Dialogs/FilterDialog.qml:49
 msgid "Title (Z-A)"
-msgstr ""
+msgstr "Titel (Z-A)"
 
 #: ../qml/Dialogs/FilterDialog.qml:50
 msgid "Newest"
-msgstr ""
+msgstr "Nieuwste"
 
 #: ../qml/Dialogs/FilterDialog.qml:51
 msgid "Oldest"
-msgstr ""
+msgstr "Oudste"
 
 #: ../qml/Dialogs/FilterDialog.qml:52
-#, fuzzy
-#| msgid "Update"
 msgid "Latest Update"
-msgstr "Update"
+msgstr "Recentste update"
 
 #: ../qml/Dialogs/FilterDialog.qml:53
-#, fuzzy
-#| msgid "Update"
 msgid "Oldest Update"
-msgstr "Update"
+msgstr "Oudste update"
 
 #: ../qml/Dialogs/FilterDialog.qml:93
 msgid "Type"
-msgstr ""
+msgstr "Soort app"
 
 #: ../qml/Dialogs/FilterDialog.qml:100 ../qml/Dialogs/FilterDialog.qml:115
 msgid "All Types"
-msgstr ""
+msgstr "Alle soorten"
 
 #: ../qml/Dialogs/FilterDialog.qml:101
-#, fuzzy
-#| msgid "My Apps"
 msgid "Apps"
-msgstr "Mijn apps"
+msgstr "Apps"
 
 #: ../qml/Dialogs/FilterDialog.qml:102
 msgid "Bookmarks"
 msgstr "Bladwijzers"
 
 #: ../qml/Dialogs/FilterDialog.qml:103
-#, fuzzy
-#| msgid "Web App"
 msgid "Web Apps"
-msgstr "Webapp"
+msgstr "Webapps"
 
 #: ../qml/Dialogs/FilterDialog.qml:140
 msgid "Apply"
-msgstr ""
+msgstr "Toepassen"
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:27
 msgid "Install unknown app?"
@@ -597,6 +583,9 @@ msgid ""
 "OpenStore is not recommended and can potentially harm your system. Only "
 "install this app if you got it from a trusted source."
 msgstr ""
+"Weet je zeker dat je ‘%1’ wilt installeren? Installatie buiten OpenStore om "
+"wordt afgeraden en kan mogelijk leiden tot systeembeschadiging. Installeer "
+"zulke apps alléén als de bron 100% betrouwbaar is."
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:41
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
@@ -605,23 +594,23 @@ msgstr "Ik begrijp en neem het risico"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:26
 msgid "Review confirmation"
-msgstr ""
+msgstr "Bevestigen"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:27
 msgid ""
 "Would you like to contact the publisher or file a bug instead? By opening a "
 "discussion with the developer(s) you could be helping to improve this app."
 msgstr ""
+"Wil je contact opnemen met de uitgever of een bug melden? Door het gesprek "
+"met de ontwikkelaar(s) aan te gaan help je om de app beter te maken."
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:37
-#, fuzzy
-#| msgid "Get support for this app"
 msgid "Get support"
-msgstr "Ondersteuning bij deze app"
+msgstr "Ondersteuning verkrijgen"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:47
 msgid "Post my review"
-msgstr ""
+msgstr "Recensie plaatsen"
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
 msgid ""
@@ -645,10 +634,8 @@ msgid "Do you want to remove %1?"
 msgstr "Wil je %1 verwijderen?"
 
 #: ../qml/DiscoverPage.qml:40
-#, fuzzy
-#| msgid "OpenStore team"
 msgid "OpenStore"
-msgstr "OpenStore-team"
+msgstr "OpenStore"
 
 #: ../qml/DiscoverPage.qml:76
 msgid "by %1"
@@ -656,7 +643,7 @@ msgstr "van %1"
 
 #: ../qml/DiscoverPage.qml:130
 msgid "You are currently offline"
-msgstr ""
+msgstr "Er is geen internetverbinding"
 
 #: ../qml/DiscoverPage.qml:146
 msgid "OpenStore update available"
@@ -730,7 +717,7 @@ msgstr "Je hebt nog geen apps geïnstalleerd via OpenStore."
 
 #: ../qml/Main.qml:319 ../qml/SearchPage.qml:55
 msgid "Filters"
-msgstr ""
+msgstr "Filters"
 
 #: ../qml/Main.qml:366
 msgid "App installed"
@@ -806,6 +793,8 @@ msgstr "Aanvullende pictogrammen van"
 msgid ""
 "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr ""
+"software;apps;applicaties;programma's;toepassingen;winkel;markt;spelen;click;"
+"ontdekken;installeren;"
 
 #~ msgid "Scope"
 #~ msgstr "Scope"

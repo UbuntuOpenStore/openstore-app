@@ -8,20 +8,20 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-31 21:47+0000\n"
-"PO-Revision-Date: 2022-03-25 13:45+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
-"Language-Team: Swedish <https://translate.ubports.com/projects/openstore/"
+"PO-Revision-Date: 2024-04-29 01:07+0000\n"
+"Last-Translator: Kristoffer Grundström <swedishsailfishosuser@tutanota.com>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.11.3\n"
+"X-Generator: Weblate 5.5.1\n"
 
 #: ../qml/AppDetailsPage.qml:108 ../qml/AppLocalDetailsPage.qml:34
 msgid "App details"
-msgstr "Detaljer"
+msgstr "Detaljer för appen"
 
 #: ../qml/AppDetailsPage.qml:115 ../qml/AppDetailsPage.qml:385
 #: ../qml/AppLocalDetailsPage.qml:41 ../qml/Dialogs/UninstallDialog.qml:33
@@ -36,7 +36,7 @@ msgstr "App"
 #: ../qml/AppDetailsPage.qml:153 ../qml/Components/PackageListItem.qml:35
 #: ../qml/Components/PackageTile.qml:80
 msgid "Bookmark"
-msgstr ""
+msgstr "Bokmärk"
 
 #: ../qml/AppDetailsPage.qml:154 ../qml/Components/PackageListItem.qml:36
 #: ../qml/Components/PackageTile.qml:81
@@ -44,14 +44,12 @@ msgid "Web App"
 msgstr "Webb App"
 
 #: ../qml/AppDetailsPage.qml:164
-#, fuzzy
-#| msgid "Install"
 msgid "Install Size: "
-msgstr "Installera"
+msgstr "Storlek för installationen: "
 
 #: ../qml/AppDetailsPage.qml:165
 msgid "Download Size: "
-msgstr ""
+msgstr "Storlek för hämtningen: "
 
 #: ../qml/AppDetailsPage.qml:239
 msgid ""
@@ -127,11 +125,11 @@ msgstr "Först utgiven"
 
 #: ../qml/AppDetailsPage.qml:528
 msgid "Downloads of the latest version"
-msgstr "Nedladdningar av den senaste versionen"
+msgstr "Hämtningar av den senaste versionen"
 
 #: ../qml/AppDetailsPage.qml:537
 msgid "Total downloads"
-msgstr "Totalt antal nedladdningar"
+msgstr "Totalt antal hämtningar"
 
 #: ../qml/AppDetailsPage.qml:546
 msgid "License"
@@ -154,10 +152,8 @@ msgid "Donate to support this app"
 msgstr "Donera för att stödja utvecklingen av appen"
 
 #: ../qml/AppDetailsPage.qml:598
-#, fuzzy
-#| msgid "Rate this app"
 msgid "Help translate this app"
-msgstr "Betygsätt denna app"
+msgstr "Hjälp till att översätta den här appen"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
 #: ../qml/AppDetailsPage.qml:614
@@ -339,10 +335,8 @@ msgid "Categories"
 msgstr "Kategorier"
 
 #: ../qml/CategoriesPage.qml:84
-#, fuzzy
-#| msgid "Nothing here yet"
 msgid "Nothing to see here yet!"
-msgstr "Inget här än"
+msgstr "Det finns ingenting att se här än!"
 
 #: ../qml/Components/BottomEdgePageStack.qml:102
 msgid "Back"
@@ -437,7 +431,7 @@ msgstr "%1/%2 tecken"
 
 #: ../qml/Components/ReviewPreview.qml:193
 msgid "Submit"
-msgstr ""
+msgstr "Skicka"
 
 #: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:148
 #: ../qml/Dialogs/InstallWarningDialog.qml:50
@@ -511,79 +505,75 @@ msgstr "Kanske senare"
 
 #: ../qml/Dialogs/FilterDialog.qml:26
 msgid "Filters and Sorting"
-msgstr ""
+msgstr "Filter och Sortering"
 
 #: ../qml/Dialogs/FilterDialog.qml:38
 msgid "Sort By"
-msgstr ""
+msgstr "Sortera efter"
 
 #: ../qml/Dialogs/FilterDialog.qml:45 ../qml/Dialogs/FilterDialog.qml:65
 msgid "Relevance"
-msgstr ""
+msgstr "Relevans"
 
 #: ../qml/Dialogs/FilterDialog.qml:46
 msgid "Most Popular"
-msgstr ""
+msgstr "Mest populärt"
 
 #: ../qml/Dialogs/FilterDialog.qml:47
 msgid "Least Popular"
-msgstr ""
+msgstr "Minst populärt"
 
 #: ../qml/Dialogs/FilterDialog.qml:48
 msgid "Title (A-Z)"
-msgstr ""
+msgstr "Titel (A-Z)"
 
 #: ../qml/Dialogs/FilterDialog.qml:49
 msgid "Title (Z-A)"
-msgstr ""
+msgstr "Titel (Z-A)"
 
 #: ../qml/Dialogs/FilterDialog.qml:50
 msgid "Newest"
-msgstr ""
+msgstr "Nyaste"
 
 #: ../qml/Dialogs/FilterDialog.qml:51
 msgid "Oldest"
-msgstr ""
+msgstr "Äldsta"
 
 #: ../qml/Dialogs/FilterDialog.qml:52
 #, fuzzy
 #| msgid "Update"
 msgid "Latest Update"
-msgstr "Uppdatera"
+msgstr "Senaste uppdatering"
 
 #: ../qml/Dialogs/FilterDialog.qml:53
 #, fuzzy
 #| msgid "Update"
 msgid "Oldest Update"
-msgstr "Uppdatera"
+msgstr "Äldsta uppdatering"
 
 #: ../qml/Dialogs/FilterDialog.qml:93
 msgid "Type"
-msgstr ""
+msgstr "Typ"
 
 #: ../qml/Dialogs/FilterDialog.qml:100 ../qml/Dialogs/FilterDialog.qml:115
 msgid "All Types"
-msgstr ""
+msgstr "Alla typer"
 
 #: ../qml/Dialogs/FilterDialog.qml:101
-#, fuzzy
-#| msgid "My Apps"
 msgid "Apps"
-msgstr "Mina Appar"
+msgstr "Appar"
 
 #: ../qml/Dialogs/FilterDialog.qml:102
 msgid "Bookmarks"
-msgstr ""
+msgstr "Bokmärken"
 
 #: ../qml/Dialogs/FilterDialog.qml:103
-#, fuzzy
-#| msgid "Web App"
 msgid "Web Apps"
-msgstr "Webb App"
+msgstr "Webb-appar"
 
 #: ../qml/Dialogs/FilterDialog.qml:140
 msgid "Apply"
-msgstr ""
+msgstr "Verkställ"
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:27
 msgid "Install unknown app?"
@@ -595,6 +585,9 @@ msgid ""
 "OpenStore is not recommended and can potentially harm your system. Only "
 "install this app if you got it from a trusted source."
 msgstr ""
+"Vill du installera den okända appen %1? Att installera appar utanför "
+"OpenStore är inte rekommenderat och kan potentiellt skada ditt system. "
+"Installera endast den här appen om du har fått den från en pålitlig källa."
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:41
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
@@ -602,24 +595,29 @@ msgid "I understand the risks"
 msgstr "Jag förstår riskerna"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:26
+#, fuzzy
 msgid "Review confirmation"
-msgstr ""
+msgstr "Granska bekräftelse"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:27
 msgid ""
 "Would you like to contact the publisher or file a bug instead? By opening a "
 "discussion with the developer(s) you could be helping to improve this app."
 msgstr ""
+"Skulle du vilja kontakta utgivaren eller rapportera en bugg istället? Genom "
+"att öppna en diskussion med utvecklaren/arna så kan du hjälpa till att "
+"förbättra den här appen."
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:37
 #, fuzzy
 #| msgid "Get support for this app"
 msgid "Get support"
-msgstr "Få support för den här appen"
+msgstr "Skaffa support"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:47
+#, fuzzy
 msgid "Post my review"
-msgstr ""
+msgstr "Publicera min granskning"
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
 msgid ""
@@ -644,10 +642,8 @@ msgid "Do you want to remove %1?"
 msgstr "Vill du ta bort %1?"
 
 #: ../qml/DiscoverPage.qml:40
-#, fuzzy
-#| msgid "OpenStore team"
 msgid "OpenStore"
-msgstr "OpenStore team"
+msgstr "OpenStore"
 
 #: ../qml/DiscoverPage.qml:76
 msgid "by %1"
@@ -655,7 +651,7 @@ msgstr "med %1"
 
 #: ../qml/DiscoverPage.qml:130
 msgid "You are currently offline"
-msgstr ""
+msgstr "Du är för närvarande inte uppkopplad"
 
 #: ../qml/DiscoverPage.qml:146
 msgid "OpenStore update available"
@@ -729,7 +725,7 @@ msgstr "Inga appar har installerats från OpenStore än."
 
 #: ../qml/Main.qml:319 ../qml/SearchPage.qml:55
 msgid "Filters"
-msgstr ""
+msgstr "Filter"
 
 #: ../qml/Main.qml:366
 msgid "App installed"
@@ -751,7 +747,7 @@ msgstr "Installationen misslyckades"
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
-"Paketet kunde inte installeras. Säkerställ att det är  ett giltigt click "
+"Paketet kunde inte installeras. Säkerställ att det är ett giltigt click-"
 "paket."
 
 #: ../qml/Main.qml:394
@@ -803,9 +799,12 @@ msgid "Additional Icons by"
 msgstr "Ytterligare ikoner efter"
 
 #: openstore.desktop.in.h:1
+#, fuzzy
 msgid ""
 "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr ""
+"mjukvara;appar;applikationer;program;butik;marknadsplats;spela;klicka;upptäck"
+";installera;"
 
 #~ msgid "Scope"
 #~ msgstr "Scope"

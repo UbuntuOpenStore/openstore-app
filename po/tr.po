@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-31 21:47+0000\n"
-"PO-Revision-Date: 2024-01-19 22:00+0000\n"
-"Last-Translator: Özgür KEYSAN <ozgurkeysan@gmail.com>\n"
+"PO-Revision-Date: 2024-05-29 07:09+0000\n"
+"Last-Translator: Ali Beyaz <alipolatbeyaz@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/tr/>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 #: ../qml/AppDetailsPage.qml:108 ../qml/AppLocalDetailsPage.qml:34
 msgid "App details"
@@ -36,7 +36,7 @@ msgstr "Uygulamalar"
 #: ../qml/AppDetailsPage.qml:153 ../qml/Components/PackageListItem.qml:35
 #: ../qml/Components/PackageTile.qml:80
 msgid "Bookmark"
-msgstr ""
+msgstr "Yer imi"
 
 #: ../qml/AppDetailsPage.qml:154 ../qml/Components/PackageListItem.qml:36
 #: ../qml/Components/PackageTile.qml:81
@@ -44,14 +44,12 @@ msgid "Web App"
 msgstr "İnternet Uygulamaları"
 
 #: ../qml/AppDetailsPage.qml:164
-#, fuzzy
-#| msgid "Install"
 msgid "Install Size: "
-msgstr "Kur"
+msgstr "Kurulum Boyutu: "
 
 #: ../qml/AppDetailsPage.qml:165
 msgid "Download Size: "
-msgstr ""
+msgstr "İndirme Boyutu: "
 
 #: ../qml/AppDetailsPage.qml:239
 msgid ""
@@ -87,13 +85,12 @@ msgid "This app is not compatible with your system."
 msgstr "Bu uygulama sisteminizle uyumlu değil."
 
 #: ../qml/AppDetailsPage.qml:404
-#, fuzzy
 msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
 msgstr ""
-"Bu uygulamanın kısıtlanmış sistem verilerine erişimi var, ayrıntılar için "
-"aşağıya bakın."
+"Bu uygulamanın sistemin kısıtlı bölümlerine ve tüm verilerinize erişimi "
+"vardır; ayrıntılar için aşağıya bakın."
 
 #: ../qml/AppDetailsPage.qml:407
 msgid "This app has access to restricted system data, see below for details."
@@ -155,9 +152,8 @@ msgid "Donate to support this app"
 msgstr "Bu uygulamayı desteklemek için bağış yap"
 
 #: ../qml/AppDetailsPage.qml:598
-#, fuzzy
 msgid "Help translate this app"
-msgstr "Bu uygulamayı desteklemek için bağış yap"
+msgstr "Bu uygulamanın tercüme edilmesine yardım edin"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
 #: ../qml/AppDetailsPage.qml:614
@@ -178,9 +174,8 @@ msgid "Permissions"
 msgstr "İzinler"
 
 #: ../qml/AppDetailsPage.qml:727
-#, fuzzy
 msgid "Accounts"
-msgstr "Hesap sağlayıcı"
+msgstr "Hesaplar"
 
 #: ../qml/AppDetailsPage.qml:728
 msgid "Audio"
@@ -208,12 +203,11 @@ msgstr "Kişiler"
 
 #: ../qml/AppDetailsPage.qml:734
 msgid "Content Exchange Source"
-msgstr ""
+msgstr "İçerik Değişim Kaynağı"
 
 #: ../qml/AppDetailsPage.qml:735
-#, fuzzy
 msgid "Content Exchange"
-msgstr "İçerik İşleyici"
+msgstr "İçerik Değişimi"
 
 #: ../qml/AppDetailsPage.qml:736
 msgid "Debug"
@@ -224,7 +218,6 @@ msgid "History"
 msgstr "Tarih"
 
 #: ../qml/AppDetailsPage.qml:738
-#, fuzzy
 msgid "In App Purchases"
 msgstr "Uygulama İçi Satın Alma"
 
@@ -270,7 +263,7 @@ msgstr "Sensörler"
 
 #: ../qml/AppDetailsPage.qml:749
 msgid "User Metrics"
-msgstr ""
+msgstr "Kullanıcı Metrikleri"
 
 #: ../qml/AppDetailsPage.qml:750
 msgid "Read Video Files"
@@ -327,23 +320,21 @@ msgstr "%1 bayt"
 
 #: ../qml/AppLocalDetailsPage.qml:118
 msgid "This app could not be found in the OpenStore"
-msgstr ""
+msgstr "Bu uygulama OpenStore'da bulunamadı"
 
 #: ../qml/AppLocalDetailsPage.qml:121
 msgid ""
 "You are currently offline and the app details could not be fetched from the "
 "OpenStore"
-msgstr ""
+msgstr "Şu anda çevrimdışısınız ve uygulama ayrıntıları OpenStore'dan alınamadı"
 
 #: ../qml/CategoriesPage.qml:39
 msgid "Categories"
 msgstr "Kategoriler"
 
 #: ../qml/CategoriesPage.qml:84
-#, fuzzy
-#| msgid "Nothing here yet"
 msgid "Nothing to see here yet!"
-msgstr "Henüz bir şey yok"
+msgstr "Henüz burada görülecek bir şey yok!"
 
 #: ../qml/Components/BottomEdgePageStack.qml:102
 msgid "Back"
@@ -365,9 +356,8 @@ msgstr "Ara"
 
 #: ../qml/Components/HighlightedApp.qml:114
 #: ../qml/Components/ReviewPreview.qml:193
-#, fuzzy
 msgid "Update"
-msgstr "Hepsini güncelle"
+msgstr "Güncelle"
 
 #: ../qml/Components/HighlightedApp.qml:120
 msgid "Details"
@@ -407,41 +397,39 @@ msgstr "✓ Yüklü"
 
 #: ../qml/Components/ReviewPreview.qml:93
 msgid "Something went wrong..."
-msgstr ""
+msgstr "Bir şeyler ters gitti..."
 
 #: ../qml/Components/ReviewPreview.qml:99
 msgid "Error Posting Review"
-msgstr ""
+msgstr "Yorum gönderilirken hata oluştu"
 
 #: ../qml/Components/ReviewPreview.qml:113
 msgid "Review Posted Correctly"
-msgstr ""
+msgstr "Yorum doğru şekilde gönderildi"
 
 #: ../qml/Components/ReviewPreview.qml:114
-#, fuzzy
 msgid "Your review has been posted successfully."
-msgstr "Uygulama başarıyla yüklendi."
+msgstr "Yorumunuz başarıyla gönderildi."
 
 #: ../qml/Components/ReviewPreview.qml:128
 msgid "Loading..."
-msgstr ""
+msgstr "Yükleniyor..."
 
 #: ../qml/Components/ReviewPreview.qml:128
-#, fuzzy
 msgid "Rate this app"
-msgstr "Bu uygulamayı desteklemek için bağış yap"
+msgstr "Bu uygulamayı derecelendirin"
 
 #: ../qml/Components/ReviewPreview.qml:135
 msgid "(Optional) Write a review"
-msgstr ""
+msgstr "(İsteğe bağlı) Yorum yazın"
 
 #: ../qml/Components/ReviewPreview.qml:139
 msgid "%1/%2 characters"
-msgstr ""
+msgstr "%1/%2 karakter"
 
 #: ../qml/Components/ReviewPreview.qml:193
 msgid "Submit"
-msgstr ""
+msgstr "Gönder"
 
 #: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:148
 #: ../qml/Dialogs/InstallWarningDialog.qml:50
@@ -453,26 +441,24 @@ msgstr "İptal"
 #: ../qml/Components/ReviewPreview.qml:244
 msgid "%1 review. "
 msgid_plural "%1 reviews. "
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 yorum "
+msgstr[1] "%1 yorum "
 
 #: ../qml/Components/ReviewPreview.qml:252
 msgid "Edit Review"
-msgstr ""
+msgstr "Yorumu Düzenle"
 
 #: ../qml/Components/ReviewPreview.qml:255
-#, fuzzy
 msgid "Review app"
-msgstr "Bu uygulamayı desteklemek için bağış yap"
+msgstr "Uygulamayı değerlendirin"
 
 #: ../qml/Components/ReviewPreview.qml:258
 msgid "Sign in to review this app"
-msgstr ""
+msgstr "Bu uygulamayı değerlendirmek için oturum açın"
 
 #: ../qml/Components/ReviewPreview.qml:261
-#, fuzzy
 msgid "Install this app to review it"
-msgstr "Yükleme başarısız"
+msgstr "Değerlendirmek için bu uygulamayı yükleyin"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:26
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:25
@@ -518,82 +504,75 @@ msgstr "Belki sonra"
 
 #: ../qml/Dialogs/FilterDialog.qml:26
 msgid "Filters and Sorting"
-msgstr ""
+msgstr "Filtreler ve Sıralama"
 
 #: ../qml/Dialogs/FilterDialog.qml:38
 msgid "Sort By"
-msgstr ""
+msgstr "Şuna göre sırala"
 
 #: ../qml/Dialogs/FilterDialog.qml:45 ../qml/Dialogs/FilterDialog.qml:65
 msgid "Relevance"
-msgstr ""
+msgstr "Alaka düzeyi"
 
 #: ../qml/Dialogs/FilterDialog.qml:46
 msgid "Most Popular"
-msgstr ""
+msgstr "En Popüler"
 
 #: ../qml/Dialogs/FilterDialog.qml:47
 msgid "Least Popular"
-msgstr ""
+msgstr "En Az Popüler"
 
 #: ../qml/Dialogs/FilterDialog.qml:48
 msgid "Title (A-Z)"
-msgstr ""
+msgstr "Başlık (A-Z)"
 
 #: ../qml/Dialogs/FilterDialog.qml:49
 msgid "Title (Z-A)"
-msgstr ""
+msgstr "Başlık (Z-A)"
 
 #: ../qml/Dialogs/FilterDialog.qml:50
 msgid "Newest"
-msgstr ""
+msgstr "En yeni"
 
 #: ../qml/Dialogs/FilterDialog.qml:51
 msgid "Oldest"
-msgstr ""
+msgstr "En eski"
 
 #: ../qml/Dialogs/FilterDialog.qml:52
-#, fuzzy
 msgid "Latest Update"
-msgstr "Hepsini güncelle"
+msgstr "Son Güncelleme"
 
 #: ../qml/Dialogs/FilterDialog.qml:53
-#, fuzzy
 msgid "Oldest Update"
-msgstr "Hepsini güncelle"
+msgstr "En Eski Güncelleme"
 
 #: ../qml/Dialogs/FilterDialog.qml:93
 msgid "Type"
-msgstr ""
+msgstr "Tür"
 
 #: ../qml/Dialogs/FilterDialog.qml:100 ../qml/Dialogs/FilterDialog.qml:115
 msgid "All Types"
-msgstr ""
+msgstr "Tüm Türler"
 
 #: ../qml/Dialogs/FilterDialog.qml:101
-#, fuzzy
-#| msgid "My Apps"
 msgid "Apps"
-msgstr "Uygulamalarım"
+msgstr "Uygulamalar"
 
 #: ../qml/Dialogs/FilterDialog.qml:102
 msgid "Bookmarks"
-msgstr ""
+msgstr "Yer imleri"
 
 #: ../qml/Dialogs/FilterDialog.qml:103
-#, fuzzy
-#| msgid "Web App"
 msgid "Web Apps"
-msgstr "İnternet Uygulamaları"
+msgstr "Web Uygulamaları"
 
 #: ../qml/Dialogs/FilterDialog.qml:140
 msgid "Apply"
-msgstr ""
+msgstr "Uygula"
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:27
-#, fuzzy
 msgid "Install unknown app?"
-msgstr "Uygulamayı yükle?"
+msgstr "Bilinmeyen uygulama yüklensin mi?"
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:28
 msgid ""
@@ -601,6 +580,9 @@ msgid ""
 "OpenStore is not recommended and can potentially harm your system. Only "
 "install this app if you got it from a trusted source."
 msgstr ""
+"Bilinmeyen %1 uygulamasını yüklemek istiyor musunuz? Uygulamaların OpenStore "
+"dışından yüklenmesi önerilmez ve sisteminize zarar verme potansiyeline "
+"sahiptir. Bu uygulamayı yalnızca güvenilir bir kaynaktan aldıysanız yükleyin."
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:41
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
@@ -609,23 +591,24 @@ msgstr "Riskleri Anladım"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:26
 msgid "Review confirmation"
-msgstr ""
+msgstr "Değerlendirme onayı"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:27
 msgid ""
 "Would you like to contact the publisher or file a bug instead? By opening a "
 "discussion with the developer(s) you could be helping to improve this app."
 msgstr ""
+"Yayıncıyla iletişime geçmek mi yoksa bunun yerine bir hata bildirmek mi "
+"istersiniz? Geliştirici(ler) ile bir tartışma açarak bu uygulamanın "
+"iyileştirilmesine yardımcı olabilirsiniz."
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:37
-#, fuzzy
-#| msgid "Get support for this app"
 msgid "Get support"
-msgstr "Bu uygulama için destek al"
+msgstr "Destek al"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:47
 msgid "Post my review"
-msgstr ""
+msgstr "Yorumumu yayınla"
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
 msgid ""
@@ -635,6 +618,11 @@ msgid ""
 "anything bad that might happen to your device or data from installing this "
 "app."
 msgstr ""
+"Bu uygulamanın sistemin kısıtlı bölümlerine ve tüm verilerinize erişimi "
+"vardır. Sisteminizi bozma potansiyeline sahiptir. OpenStore yöneticileri "
+"güvenlik açısından bu uygulamanın kodunu incelemiş olsalar da, bu "
+"uygulamanın yüklenmesi nedeniyle cihazınızda veya verilerinizde meydana "
+"gelebilecek herhangi bir kötü durumdan sorumlu değildirler."
 
 #: ../qml/Dialogs/UninstallDialog.qml:25
 msgid "Remove package"
@@ -645,29 +633,26 @@ msgid "Do you want to remove %1?"
 msgstr "%1 'i kaldırmak istiyor musunuz?"
 
 #: ../qml/DiscoverPage.qml:40
-#, fuzzy
-#| msgid "OpenStore team"
 msgid "OpenStore"
-msgstr "OpenStore takımı"
+msgstr "OpenStore"
 
 #: ../qml/DiscoverPage.qml:76
 msgid "by %1"
-msgstr ""
+msgstr "%1 tarafından"
 
 #: ../qml/DiscoverPage.qml:130
 msgid "You are currently offline"
-msgstr ""
+msgstr "Şu anda çevrimdışısınız"
 
 #: ../qml/DiscoverPage.qml:146
 msgid "OpenStore update available"
 msgstr "OpenStore güncellemesi mevcut"
 
 #: ../qml/DiscoverPage.qml:176
-#, fuzzy
 msgid " (%1 update available)"
 msgid_plural " (%1 updates available)"
-msgstr[0] "Güncelleme mevcut"
-msgstr[1] "Güncelleme mevcut"
+msgstr[0] " (%1 güncelleme mevcut)"
+msgstr[1] " (%1 güncelleme mevcut)"
 
 #: ../qml/DiscoverPage.qml:176 ../qml/DiscoverPage.qml:177
 #: ../qml/InstalledAppsPage.qml:52
@@ -731,7 +716,7 @@ msgstr "OpenStore'dan hiçbir uygulama henüz yüklenmedi."
 
 #: ../qml/Main.qml:319 ../qml/SearchPage.qml:55
 msgid "Filters"
-msgstr ""
+msgstr "Filtreler"
 
 #: ../qml/Main.qml:366
 msgid "App installed"
@@ -763,17 +748,16 @@ msgid "Search in OpenStore..."
 msgstr "OpenStore'da ara..."
 
 #: ../qml/SettingsPage.qml:113
-#, fuzzy
 msgid "OpenStore Account"
-msgstr "OpenStore takımı"
+msgstr "OpenStore Hesabı"
 
 #: ../qml/SettingsPage.qml:121 ../qml/SignInPage.qml:31
 msgid "Sign in"
-msgstr ""
+msgstr "Giriş yap"
 
 #: ../qml/SettingsPage.qml:138
 msgid "Sign out"
-msgstr ""
+msgstr "Çıkış yap"
 
 #: ../qml/SettingsPage.qml:166
 msgid "Parental control"
@@ -799,12 +783,13 @@ msgstr "Sorun bildir"
 
 #: ../qml/SettingsPage.qml:232
 msgid "Additional Icons by"
-msgstr ""
+msgstr "Ek simgeleri sağlayan"
 
 #: openstore.desktop.in.h:1
 msgid ""
 "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr ""
+"software;apps;applications;programs;store;market;play;click;discover;install;"
 
 #~ msgid "Scope"
 #~ msgstr "Scope"

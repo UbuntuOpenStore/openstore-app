@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-31 21:47+0000\n"
-"PO-Revision-Date: 2024-05-29 07:09+0000\n"
+"PO-Revision-Date: 2024-06-02 07:09+0000\n"
 "Last-Translator: Ali Beyaz <alipolatbeyaz@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/tr/>\n"
@@ -31,7 +31,7 @@ msgstr "Kaldır"
 #: ../qml/AppDetailsPage.qml:152 ../qml/Components/PackageListItem.qml:34
 #: ../qml/Components/PackageTile.qml:79
 msgid "App"
-msgstr "Uygulamalar"
+msgstr "Uygulama"
 
 #: ../qml/AppDetailsPage.qml:153 ../qml/Components/PackageListItem.qml:35
 #: ../qml/Components/PackageTile.qml:80
@@ -57,16 +57,16 @@ msgid ""
 "You can install the latest stable update by tapping the button below."
 msgstr ""
 "Bu uygulamanın yüklü sürümü OpenStore sunucusundan gelmiyor. En son kararlı "
-"güncellemeyi aşağıdaki düğmeye dokunarak yükleyebilirsiniz."
+"güncellemeyi aşağıdaki butona dokunarak yükleyebilirsiniz."
 
 #: ../qml/AppDetailsPage.qml:264 ../qml/AppLocalDetailsPage.qml:104
 #: ../qml/Components/HighlightedApp.qml:117
 msgid "Open"
-msgstr "Açık"
+msgstr "Aç"
 
 #: ../qml/AppDetailsPage.qml:280
 msgid "The OpenStore is installed!"
-msgstr "OpenStore Kuruldu!"
+msgstr "OpenStore kuruldu!"
 
 #: ../qml/AppDetailsPage.qml:289
 msgid "Install stable version"
@@ -117,7 +117,7 @@ msgstr "Kurulu sürüm"
 
 #: ../qml/AppDetailsPage.qml:508
 msgid "Latest available version"
-msgstr "En son mevcut sürüm"
+msgstr "Son sürüm"
 
 #: ../qml/AppDetailsPage.qml:517
 msgid "First released"
@@ -137,7 +137,7 @@ msgstr "Lisans"
 
 #: ../qml/AppDetailsPage.qml:547
 msgid "N/A"
-msgstr "Bilinmeyen"
+msgstr "N/A"
 
 #: ../qml/AppDetailsPage.qml:559 ../qml/SettingsPage.qml:214
 msgid "Source Code"
@@ -158,12 +158,12 @@ msgstr "Bu uygulamanın tercüme edilmesine yardım edin"
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
 #: ../qml/AppDetailsPage.qml:614
 msgid "More from %1"
-msgstr "%1 adlı kişiden daha fazlası"
+msgstr "%1'den daha fazlası"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
 #: ../qml/AppDetailsPage.qml:629
 msgid "Other apps in %1"
-msgstr "%1 içindeki diğer uygulamalar"
+msgstr "%1 kategorisindeki diğer uygulamalar"
 
 #: ../qml/AppDetailsPage.qml:635
 msgid "Package contents"
@@ -215,7 +215,7 @@ msgstr "Hata Ayıklama"
 
 #: ../qml/AppDetailsPage.qml:737
 msgid "History"
-msgstr "Tarih"
+msgstr "Geçmiş"
 
 #: ../qml/AppDetailsPage.qml:738
 msgid "In App Purchases"
@@ -235,19 +235,19 @@ msgstr "Mikrofon"
 
 #: ../qml/AppDetailsPage.qml:742
 msgid "Read Music Files"
-msgstr "Müzik Dosyalarını Oku"
+msgstr "Müzik Dosyalarını Okuma"
 
 #: ../qml/AppDetailsPage.qml:743
 msgid "Music Files"
-msgstr "Müzikler"
+msgstr "Müzik Dosyaları"
 
 #: ../qml/AppDetailsPage.qml:744
 msgid "Networking"
-msgstr "Bağlantı Oluşturma"
+msgstr "Ağ araçları"
 
 #: ../qml/AppDetailsPage.qml:745
 msgid "Read Picture Files"
-msgstr "Resim Dosyaları Okunuyor"
+msgstr "Resim Dosyalarını  Okuma"
 
 #: ../qml/AppDetailsPage.qml:746
 msgid "Picture Files"
@@ -255,7 +255,7 @@ msgstr "Resim Dosyaları"
 
 #: ../qml/AppDetailsPage.qml:747
 msgid "Push Notifications"
-msgstr "Bildirimleri Aç"
+msgstr "Bildirimler"
 
 #: ../qml/AppDetailsPage.qml:748
 msgid "Sensors"
@@ -267,7 +267,7 @@ msgstr "Kullanıcı Metrikleri"
 
 #: ../qml/AppDetailsPage.qml:750
 msgid "Read Video Files"
-msgstr "Video Dosyaları Okunuyor"
+msgstr "Video Dosyalarını Okuma"
 
 #: ../qml/AppDetailsPage.qml:751
 msgid "Video Files"
@@ -288,11 +288,11 @@ msgstr "Tam Sistem Erişimi"
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
 #: ../qml/AppDetailsPage.qml:762
 msgid "none required"
-msgstr "hiçbirine gerek yok"
+msgstr "hiçbiri gerekli değil"
 
 #: ../qml/AppDetailsPage.qml:798
 msgid "Read paths"
-msgstr "Yamaları oku"
+msgstr "Yolları okuma"
 
 #: ../qml/AppDetailsPage.qml:815
 msgid "Write paths"
@@ -458,7 +458,7 @@ msgstr "Bu uygulamayı değerlendirmek için oturum açın"
 
 #: ../qml/Components/ReviewPreview.qml:261
 msgid "Install this app to review it"
-msgstr "Değerlendirmek için bu uygulamayı yükleyin"
+msgstr "Değerlendirebilmek için bu uygulamayı yükleyin"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:26
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:25
@@ -470,8 +470,8 @@ msgid ""
 "You are currently using a non-standard domain for the OpenStore. This is a "
 "development feature. The domain you are using is:"
 msgstr ""
-"OpenStore için standart olmayan bir alan adı kullanmaktasınız. Bu bir "
-"geliştirici özelliğidir. Şu anda kullanmakta olduğunuz alan adı:"
+"OpenStore için standart olmayan bir domain kullanmaktasınız. Bu bir "
+"geliştirici özelliğidir. Şu anda kullanmakta olduğunuz domain:"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:49
 msgid "Are you sure you want to continue?"
@@ -512,7 +512,7 @@ msgstr "Şuna göre sırala"
 
 #: ../qml/Dialogs/FilterDialog.qml:45 ../qml/Dialogs/FilterDialog.qml:65
 msgid "Relevance"
-msgstr "Alaka düzeyi"
+msgstr "Alaka Düzeyi"
 
 #: ../qml/Dialogs/FilterDialog.qml:46
 msgid "Most Popular"
@@ -532,11 +532,11 @@ msgstr "Başlık (Z-A)"
 
 #: ../qml/Dialogs/FilterDialog.qml:50
 msgid "Newest"
-msgstr "En yeni"
+msgstr "En Yeni"
 
 #: ../qml/Dialogs/FilterDialog.qml:51
 msgid "Oldest"
-msgstr "En eski"
+msgstr "En Eski"
 
 #: ../qml/Dialogs/FilterDialog.qml:52
 msgid "Latest Update"
@@ -582,12 +582,13 @@ msgid ""
 msgstr ""
 "Bilinmeyen %1 uygulamasını yüklemek istiyor musunuz? Uygulamaların OpenStore "
 "dışından yüklenmesi önerilmez ve sisteminize zarar verme potansiyeline "
-"sahiptir. Bu uygulamayı yalnızca güvenilir bir kaynaktan aldıysanız yükleyin."
+"sahiptir. Bu uygulamayı yalnızca güvenilir bir kaynaktan edindiyseniz "
+"yükleyin."
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:41
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
 msgid "I understand the risks"
-msgstr "Riskleri Anladım"
+msgstr "Riskleri anladım"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:26
 msgid "Review confirmation"
@@ -657,11 +658,11 @@ msgstr[1] " (%1 güncelleme mevcut)"
 #: ../qml/DiscoverPage.qml:176 ../qml/DiscoverPage.qml:177
 #: ../qml/InstalledAppsPage.qml:52
 msgid "Installed Apps"
-msgstr "Kurulu uygulama"
+msgstr "Yüklü Uygulamalar"
 
 #: ../qml/DiscoverPage.qml:201
 msgid "Browse Apps by Category"
-msgstr "Uygulama Kategorilerine Göz At"
+msgstr "Kategorilere Göre Uygulamalara Göz Atın"
 
 #: ../qml/FilteredAppList.qml:109
 msgid "No results found."
@@ -682,25 +683,25 @@ msgstr "Farklı bir arama yapmayı deneyin."
 #. TRANSLATORS: %1 is the number of installed apps
 #: ../qml/InstalledAppsPage.qml:80
 msgid "Installed apps (%1)"
-msgstr "(%1) Kurulu uygulama"
+msgstr "(%1) kurulu uygulama"
 
 #. TRANSLATORS: %1 is the number of available app updates
 #: ../qml/InstalledAppsPage.qml:84
 msgid "Available updates (%1)"
-msgstr "(%1) Güncelleme var"
+msgstr "(%1) güncelleme var"
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
 #: ../qml/InstalledAppsPage.qml:88
 msgid "Stable version available (%1)"
-msgstr "Stabil sürümü olan uygulamalar (%1)"
+msgstr "(%1) stabil sürümü olan uygulamalar"
 
 #: ../qml/InstalledAppsPage.qml:91
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
 msgstr ""
-"Bu uygulamanın yüklü sürümü OpenStore' dan gelmemekte. Ama stabil bir sürümü "
-"bulunmakta."
+"Bu uygulamaların yüklü sürümleri OpenStore'dan gelmemiştir ancak kararlı bir "
+"sürümü mevcuttur."
 
 #: ../qml/InstalledAppsPage.qml:92
 msgid "Update all"
@@ -712,7 +713,7 @@ msgstr "Hiçbir uygulama bulunamadı"
 
 #: ../qml/InstalledAppsPage.qml:195
 msgid "No app has been installed from OpenStore yet."
-msgstr "OpenStore'dan hiçbir uygulama henüz yüklenmedi."
+msgstr "OpenStore'dan henüz hiçbir uygulama yüklenmedi."
 
 #: ../qml/Main.qml:319 ../qml/SearchPage.qml:55
 msgid "Filters"
@@ -728,7 +729,7 @@ msgstr "Uygulama başarıyla yüklendi."
 
 #: ../qml/Main.qml:370 ../qml/Main.qml:383 ../qml/Main.qml:398
 msgid "OK"
-msgstr "TAMAM"
+msgstr "OK"
 
 #: ../qml/Main.qml:379
 msgid "Installation failed"
@@ -737,7 +738,7 @@ msgstr "Yükleme başarısız"
 #: ../qml/Main.qml:380
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
-msgstr "Paket yüklenemedi. Geçerli bir tıklama paketi olduğundan emin olun."
+msgstr "Paket yüklenemedi. Geçerli bir click paketi olduğundan emin olun."
 
 #: ../qml/Main.qml:394
 msgid "Installation failed (Error %1)"

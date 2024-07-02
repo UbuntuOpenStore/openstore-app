@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-31 21:47+0000\n"
-"PO-Revision-Date: 2021-06-14 01:05+0000\n"
-"Last-Translator: Ito Rimai <ItoRimai@foxmail.com>\n"
-"Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
-"openstore/openstore-app/zh_Hant/>\n"
+"PO-Revision-Date: 2024-07-03 05:09+0000\n"
+"Last-Translator: hugoalh <hugoalh@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
+"open-store-io/openstore-app/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.11.3\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #: ../qml/AppDetailsPage.qml:108 ../qml/AppLocalDetailsPage.qml:34
 msgid "App details"
@@ -36,7 +36,7 @@ msgstr "應用程式"
 #: ../qml/AppDetailsPage.qml:153 ../qml/Components/PackageListItem.qml:35
 #: ../qml/Components/PackageTile.qml:80
 msgid "Bookmark"
-msgstr ""
+msgstr "書籤"
 
 #: ../qml/AppDetailsPage.qml:154 ../qml/Components/PackageListItem.qml:36
 #: ../qml/Components/PackageTile.qml:81
@@ -44,14 +44,12 @@ msgid "Web App"
 msgstr "網路程式"
 
 #: ../qml/AppDetailsPage.qml:164
-#, fuzzy
-#| msgid "Install"
 msgid "Install Size: "
-msgstr "安裝"
+msgstr "安裝大小： "
 
 #: ../qml/AppDetailsPage.qml:165
 msgid "Download Size: "
-msgstr ""
+msgstr "下載大小： "
 
 #: ../qml/AppDetailsPage.qml:239
 msgid ""
@@ -123,11 +121,11 @@ msgstr "最先發佈"
 
 #: ../qml/AppDetailsPage.qml:528
 msgid "Downloads of the latest version"
-msgstr "最新版本下載"
+msgstr "最新版本的下載"
 
 #: ../qml/AppDetailsPage.qml:537
 msgid "Total downloads"
-msgstr "下載次數"
+msgstr "下載總計"
 
 #: ../qml/AppDetailsPage.qml:546
 msgid "License"
@@ -139,7 +137,7 @@ msgstr "沒有"
 
 #: ../qml/AppDetailsPage.qml:559 ../qml/SettingsPage.qml:214
 msgid "Source Code"
-msgstr "源碼"
+msgstr "原始碼"
 
 #: ../qml/AppDetailsPage.qml:572
 msgid "Get support for this app"
@@ -150,10 +148,8 @@ msgid "Donate to support this app"
 msgstr "贊助來支援此應用程式"
 
 #: ../qml/AppDetailsPage.qml:598
-#, fuzzy
-#| msgid "Rate this app"
 msgid "Help translate this app"
-msgstr "為這個應用程式評分"
+msgstr "幫助翻譯此應用程式"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
 #: ../qml/AppDetailsPage.qml:614
@@ -333,10 +329,8 @@ msgid "Categories"
 msgstr "分類"
 
 #: ../qml/CategoriesPage.qml:84
-#, fuzzy
-#| msgid "Nothing here yet"
 msgid "Nothing to see here yet!"
-msgstr "這裡沒有任何東西"
+msgstr "這裏還沒有甚麼好看的！"
 
 #: ../qml/Components/BottomEdgePageStack.qml:102
 msgid "Back"
@@ -431,7 +425,7 @@ msgstr "%1/%2 個字符"
 
 #: ../qml/Components/ReviewPreview.qml:193
 msgid "Submit"
-msgstr ""
+msgstr "提交"
 
 #: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:148
 #: ../qml/Dialogs/InstallWarningDialog.qml:50
@@ -447,7 +441,7 @@ msgstr[0] "%1 評論 "
 
 #: ../qml/Components/ReviewPreview.qml:252
 msgid "Edit Review"
-msgstr ""
+msgstr "編輯評論"
 
 #: ../qml/Components/ReviewPreview.qml:255
 msgid "Review app"
@@ -504,79 +498,71 @@ msgstr "之後再說"
 
 #: ../qml/Dialogs/FilterDialog.qml:26
 msgid "Filters and Sorting"
-msgstr ""
+msgstr "過濾器和排序"
 
 #: ../qml/Dialogs/FilterDialog.qml:38
 msgid "Sort By"
-msgstr ""
+msgstr "排序方式"
 
 #: ../qml/Dialogs/FilterDialog.qml:45 ../qml/Dialogs/FilterDialog.qml:65
 msgid "Relevance"
-msgstr ""
+msgstr "關聯性"
 
 #: ../qml/Dialogs/FilterDialog.qml:46
 msgid "Most Popular"
-msgstr ""
+msgstr "最受歡迎"
 
 #: ../qml/Dialogs/FilterDialog.qml:47
 msgid "Least Popular"
-msgstr ""
+msgstr "最不受歡迎"
 
 #: ../qml/Dialogs/FilterDialog.qml:48
 msgid "Title (A-Z)"
-msgstr ""
+msgstr "標題（A-Z）"
 
 #: ../qml/Dialogs/FilterDialog.qml:49
 msgid "Title (Z-A)"
-msgstr ""
+msgstr "標題（Z-A）"
 
 #: ../qml/Dialogs/FilterDialog.qml:50
 msgid "Newest"
-msgstr ""
+msgstr "最新"
 
 #: ../qml/Dialogs/FilterDialog.qml:51
 msgid "Oldest"
-msgstr ""
+msgstr "最舊"
 
 #: ../qml/Dialogs/FilterDialog.qml:52
-#, fuzzy
-#| msgid "Update"
 msgid "Latest Update"
-msgstr "更新"
+msgstr "最新更新"
 
 #: ../qml/Dialogs/FilterDialog.qml:53
-#, fuzzy
-#| msgid "Update"
 msgid "Oldest Update"
-msgstr "更新"
+msgstr "最舊更新"
 
 #: ../qml/Dialogs/FilterDialog.qml:93
 msgid "Type"
-msgstr ""
+msgstr "類型"
 
 #: ../qml/Dialogs/FilterDialog.qml:100 ../qml/Dialogs/FilterDialog.qml:115
 msgid "All Types"
-msgstr ""
+msgstr "所有類型"
 
 #: ../qml/Dialogs/FilterDialog.qml:101
-#, fuzzy
-#| msgid "My Apps"
 msgid "Apps"
-msgstr "我的應用程式"
+msgstr "應用程式"
 
 #: ../qml/Dialogs/FilterDialog.qml:102
 msgid "Bookmarks"
-msgstr ""
+msgstr "書籤"
 
 #: ../qml/Dialogs/FilterDialog.qml:103
-#, fuzzy
-#| msgid "Web App"
 msgid "Web Apps"
-msgstr "網路程式"
+msgstr "網路應用程式"
 
 #: ../qml/Dialogs/FilterDialog.qml:140
 msgid "Apply"
-msgstr ""
+msgstr "套用"
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:27
 msgid "Install unknown app?"
@@ -605,14 +591,12 @@ msgid ""
 msgstr ""
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:37
-#, fuzzy
-#| msgid "Get support for this app"
 msgid "Get support"
-msgstr "獲得對這個應用程式的支援"
+msgstr "獲得支援"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:47
 msgid "Post my review"
-msgstr ""
+msgstr "發佈我的評論"
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
 msgid ""
@@ -635,10 +619,8 @@ msgid "Do you want to remove %1?"
 msgstr "您想要刪除 %1 嗎？"
 
 #: ../qml/DiscoverPage.qml:40
-#, fuzzy
-#| msgid "OpenStore team"
 msgid "OpenStore"
-msgstr "OpenStore 團隊"
+msgstr "OpenStore"
 
 #: ../qml/DiscoverPage.qml:76
 msgid "by %1"
@@ -646,7 +628,7 @@ msgstr "來自 %1"
 
 #: ../qml/DiscoverPage.qml:130
 msgid "You are currently offline"
-msgstr ""
+msgstr "你目前離線"
 
 #: ../qml/DiscoverPage.qml:146
 msgid "OpenStore update available"
@@ -718,7 +700,7 @@ msgstr "尚未從 OpenStore 安裝任何應用程式。"
 
 #: ../qml/Main.qml:319 ../qml/SearchPage.qml:55
 msgid "Filters"
-msgstr ""
+msgstr "過濾器"
 
 #: ../qml/Main.qml:366
 msgid "App installed"
@@ -791,6 +773,8 @@ msgstr "附加圖示來自"
 msgid ""
 "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr ""
+"software;apps;applications;programs;store;market;play;click;discover;install;"
+"軟體;應用程式;程式;商店;市場;播放;點擊;發現;安裝;"
 
 #~ msgid "Scope"
 #~ msgstr "觀查"

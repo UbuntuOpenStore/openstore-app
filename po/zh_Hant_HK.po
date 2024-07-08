@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-31 21:47+0000\n"
-"PO-Revision-Date: 2020-07-25 18:07+0000\n"
-"Last-Translator: Daniel Frost <one@frostinfo.de>\n"
-"Language-Team: Chinese (Traditional, Hong Kong) <https://translate.ubports."
-"com/projects/openstore/openstore-app/zh_Hant_HK/>\n"
+"PO-Revision-Date: 2024-07-09 08:09+0000\n"
+"Last-Translator: Ricky From Hong Kong <lamricky11@hotmail.com>\n"
+"Language-Team: Chinese (Traditional, Hong Kong) <https://hosted.weblate.org/"
+"projects/open-store-io/openstore-app/zh_Hant_HK/>\n"
 "Language: zh_Hant_HK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.11.3\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #: ../qml/AppDetailsPage.qml:108 ../qml/AppLocalDetailsPage.qml:34
 msgid "App details"
@@ -657,10 +657,9 @@ msgid "OpenStore update available"
 msgstr "OpenStore 有可用嘅更新"
 
 #: ../qml/DiscoverPage.qml:176
-#, fuzzy
 msgid " (%1 update available)"
 msgid_plural " (%1 updates available)"
-msgstr[0] "有可用嘅更新"
+msgstr[0] " （有%1個可用嘅更新）"
 
 #: ../qml/DiscoverPage.qml:176 ../qml/DiscoverPage.qml:177
 #: ../qml/InstalledAppsPage.qml:52

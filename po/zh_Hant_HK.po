@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-31 21:47+0000\n"
-"PO-Revision-Date: 2024-07-09 08:09+0000\n"
+"PO-Revision-Date: 2024-07-23 09:09+0000\n"
 "Last-Translator: Ricky From Hong Kong <lamricky11@hotmail.com>\n"
 "Language-Team: Chinese (Traditional, Hong Kong) <https://hosted.weblate.org/"
 "projects/open-store-io/openstore-app/zh_Hant_HK/>\n"
@@ -338,10 +338,8 @@ msgid "Categories"
 msgstr "分類"
 
 #: ../qml/CategoriesPage.qml:84
-#, fuzzy
-#| msgid "Nothing here yet"
 msgid "Nothing to see here yet!"
-msgstr "呢度冇任何嘢"
+msgstr "呢度無嘢好睇！"
 
 #: ../qml/Components/BottomEdgePageStack.qml:102
 msgid "Back"

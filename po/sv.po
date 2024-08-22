@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-31 21:47+0000\n"
-"PO-Revision-Date: 2024-04-29 01:07+0000\n"
+"PO-Revision-Date: 2024-08-23 01:09+0000\n"
 "Last-Translator: Kristoffer Grundström <swedishsailfishosuser@tutanota.com>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/sv/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.1\n"
+"X-Generator: Weblate 5.7\n"
 
 #: ../qml/AppDetailsPage.qml:108 ../qml/AppLocalDetailsPage.qml:34
 msgid "App details"
@@ -448,7 +448,7 @@ msgstr[1] "%1 recensioner. "
 
 #: ../qml/Components/ReviewPreview.qml:252
 msgid "Edit Review"
-msgstr ""
+msgstr "Redigera omdöme"
 
 #: ../qml/Components/ReviewPreview.qml:255
 msgid "Review app"
@@ -540,16 +540,12 @@ msgid "Oldest"
 msgstr "Äldsta"
 
 #: ../qml/Dialogs/FilterDialog.qml:52
-#, fuzzy
-#| msgid "Update"
 msgid "Latest Update"
-msgstr "Senaste uppdatering"
+msgstr "Senaste uppdateringen"
 
 #: ../qml/Dialogs/FilterDialog.qml:53
-#, fuzzy
-#| msgid "Update"
 msgid "Oldest Update"
-msgstr "Äldsta uppdatering"
+msgstr "Äldsta uppdateringen"
 
 #: ../qml/Dialogs/FilterDialog.qml:93
 msgid "Type"
@@ -595,9 +591,8 @@ msgid "I understand the risks"
 msgstr "Jag förstår riskerna"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:26
-#, fuzzy
 msgid "Review confirmation"
-msgstr "Granska bekräftelse"
+msgstr "Bekräftelse för omdöme"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:27
 msgid ""
@@ -609,15 +604,12 @@ msgstr ""
 "förbättra den här appen."
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:37
-#, fuzzy
-#| msgid "Get support for this app"
 msgid "Get support"
-msgstr "Skaffa support"
+msgstr "Få hjälp"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:47
-#, fuzzy
 msgid "Post my review"
-msgstr "Publicera min granskning"
+msgstr "Publicera mitt omdöme"
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
 msgid ""

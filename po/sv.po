@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-31 21:47+0000\n"
-"PO-Revision-Date: 2024-08-23 01:09+0000\n"
+"PO-Revision-Date: 2024-09-03 18:09+0000\n"
 "Last-Translator: Kristoffer Grundström <swedishsailfishosuser@tutanota.com>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/sv/>\n"
@@ -17,16 +17,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.7\n"
+"X-Generator: Weblate 5.8-dev\n"
 
 #: ../qml/AppDetailsPage.qml:108 ../qml/AppLocalDetailsPage.qml:34
 msgid "App details"
-msgstr "Detaljer för appen"
+msgstr "Appens detaljer"
 
 #: ../qml/AppDetailsPage.qml:115 ../qml/AppDetailsPage.qml:385
 #: ../qml/AppLocalDetailsPage.qml:41 ../qml/Dialogs/UninstallDialog.qml:33
 msgid "Remove"
-msgstr "Ta bort"
+msgstr "Radera"
 
 #: ../qml/AppDetailsPage.qml:152 ../qml/Components/PackageListItem.qml:34
 #: ../qml/Components/PackageTile.qml:79
@@ -41,7 +41,7 @@ msgstr "Bokmärk"
 #: ../qml/AppDetailsPage.qml:154 ../qml/Components/PackageListItem.qml:36
 #: ../qml/Components/PackageTile.qml:81
 msgid "Web App"
-msgstr "Webb App"
+msgstr "Webb-app"
 
 #: ../qml/AppDetailsPage.qml:164
 msgid "Install Size: "
@@ -56,7 +56,7 @@ msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
 msgstr ""
-"Den installerade versionen kommer inte från Openstores servrar. Du kan "
+"Den installerade versionen kommer inte från OpenStore's server. Du kan "
 "installera den senaste stabila uppdateringen genom att klicka på knappen "
 "nedanför."
 
@@ -83,20 +83,20 @@ msgstr "Installera"
 
 #: ../qml/AppDetailsPage.qml:371
 msgid "This app is not compatible with your system."
-msgstr "Denna app är inte kompatibel med ditt system."
+msgstr "Den här appen är inte kompatibel med ditt system."
 
 #: ../qml/AppDetailsPage.qml:404
 msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
 msgstr ""
-"Denna app har tillgång till begränsade delar av systemet och all din data, "
-"se längre ner för detaljer."
+"Den här appen har tillgång till begränsade delar av systemet och all din "
+"data, se längre ner för detaljer."
 
 #: ../qml/AppDetailsPage.qml:407
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
-"Denna app har tillgång till begränsad systemdata, se nedan för detaljer."
+"Den här appen har tillgång till begränsad system-data, se nedan för detaljer."
 
 #: ../qml/AppDetailsPage.qml:432
 msgid "Description"
@@ -105,7 +105,7 @@ msgstr "Beskrivning"
 #. TRANSLATORS: Title of the changelog section
 #: ../qml/AppDetailsPage.qml:470
 msgid "What's New"
-msgstr "Vad som är nytt"
+msgstr "Det här är nytt"
 
 #: ../qml/AppDetailsPage.qml:489
 msgid "Packager/Publisher"
@@ -448,7 +448,7 @@ msgstr[1] "%1 recensioner. "
 
 #: ../qml/Components/ReviewPreview.qml:252
 msgid "Edit Review"
-msgstr "Redigera omdöme"
+msgstr "Redigera förhandsgranskning"
 
 #: ../qml/Components/ReviewPreview.qml:255
 msgid "Review app"
@@ -791,7 +791,6 @@ msgid "Additional Icons by"
 msgstr "Ytterligare ikoner efter"
 
 #: openstore.desktop.in.h:1
-#, fuzzy
 msgid ""
 "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr ""

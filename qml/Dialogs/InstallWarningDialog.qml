@@ -27,28 +27,39 @@ Component {
         title: i18n.tr("Install unknown app?")
         text: i18n.tr("Do you want to install the unknown app %1? Installing apps from outside the OpenStore is not recommended and can potentially harm your system. Only install this app if you got it from a trusted source.").arg(fileName)
 
+        property bool wasAccepted: false
         property string fileName
         signal accepted();
         signal rejected();
 
+        // We can't use PlatformIntegration.clickInstaller.busy
+        // because app immediately freezes once the installation process starts
+        // then we delay the installation to let UI changes take effect first
+        Timer {
+            id: delayedAccepted
+            interval: 1
+            onTriggered: accepted()
+        }
+
         ActivityIndicator {
             anchors.horizontalCenter: parent.horizontalCenter
             visible: running
-            running: PlatformIntegration.clickInstaller.busy
+            running: installQuestionDialog.wasAccepted
         }
 
         Button {
             text: i18n.tr("I understand the risks")
             color: theme.palette.normal.positive
-            visible: !PlatformIntegration.clickInstaller.busy
+            visible: !installQuestionDialog.wasAccepted
             onClicked: {
-                installQuestionDialog.accepted()
+                installQuestionDialog.wasAccepted = true
+                delayedAccepted.restart()
             }
         }
 
         Button {
             text: i18n.tr("Cancel")
-            visible: !PlatformIntegration.clickInstaller.busy
+            visible: !installQuestionDialog.wasAccepted
             onClicked: {
                 installQuestionDialog.rejected()
                 PopupUtils.close(installQuestionDialog)

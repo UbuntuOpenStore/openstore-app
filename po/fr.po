@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-31 21:47+0000\n"
+"POT-Creation-Date: 2024-10-24 04:30+0000\n"
 "PO-Revision-Date: 2024-03-25 14:01+0000\n"
 "Last-Translator: Steve <steve.kueffer.ch@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/open-store-io/"
@@ -436,7 +436,7 @@ msgid "Submit"
 msgstr "Valider"
 
 #: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:148
-#: ../qml/Dialogs/InstallWarningDialog.qml:50
+#: ../qml/Dialogs/InstallWarningDialog.qml:61
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
 #: ../qml/Dialogs/UninstallDialog.qml:42
 msgid "Cancel"
@@ -589,7 +589,7 @@ msgstr ""
 "et peut potentiellement endommager votre système. N'installez cette "
 "application que si vous l'avez obtenue d'une source fiable."
 
-#: ../qml/Dialogs/InstallWarningDialog.qml:41
+#: ../qml/Dialogs/InstallWarningDialog.qml:51
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
 msgid "I understand the risks"
 msgstr "Je comprends les risques"

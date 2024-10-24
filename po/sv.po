@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-31 21:47+0000\n"
+"POT-Creation-Date: 2024-10-24 04:30+0000\n"
 "PO-Revision-Date: 2024-09-03 18:09+0000\n"
 "Last-Translator: Kristoffer Grundström <swedishsailfishosuser@tutanota.com>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/open-store-io/"
@@ -434,7 +434,7 @@ msgid "Submit"
 msgstr "Skicka"
 
 #: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:148
-#: ../qml/Dialogs/InstallWarningDialog.qml:50
+#: ../qml/Dialogs/InstallWarningDialog.qml:61
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
 #: ../qml/Dialogs/UninstallDialog.qml:42
 msgid "Cancel"
@@ -585,7 +585,7 @@ msgstr ""
 "OpenStore är inte rekommenderat och kan potentiellt skada ditt system. "
 "Installera endast den här appen om du har fått den från en pålitlig källa."
 
-#: ../qml/Dialogs/InstallWarningDialog.qml:41
+#: ../qml/Dialogs/InstallWarningDialog.qml:51
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
 msgid "I understand the risks"
 msgstr "Jag förstår riskerna"
@@ -794,8 +794,8 @@ msgstr "Ytterligare ikoner efter"
 msgid ""
 "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr ""
-"mjukvara;appar;applikationer;program;butik;marknadsplats;spela;klicka;upptäck"
-";installera;"
+"mjukvara;appar;applikationer;program;butik;marknadsplats;spela;klicka;"
+"upptäck;installera;"
 
 #~ msgid "Scope"
 #~ msgstr "Scope"

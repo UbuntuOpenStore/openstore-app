@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-31 21:47+0000\n"
+"POT-Creation-Date: 2024-10-24 04:30+0000\n"
 "PO-Revision-Date: 2024-07-25 08:09+0000\n"
 "Last-Translator: Ricky From Hong Kong <lamricky11@hotmail.com>\n"
 "Language-Team: Chinese (Traditional, Hong Kong) <https://hosted.weblate.org/"
@@ -439,7 +439,7 @@ msgid "Submit"
 msgstr ""
 
 #: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:148
-#: ../qml/Dialogs/InstallWarningDialog.qml:50
+#: ../qml/Dialogs/InstallWarningDialog.qml:61
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
 #: ../qml/Dialogs/UninstallDialog.qml:42
 msgid "Cancel"
@@ -593,7 +593,7 @@ msgid ""
 "install this app if you got it from a trusted source."
 msgstr ""
 
-#: ../qml/Dialogs/InstallWarningDialog.qml:41
+#: ../qml/Dialogs/InstallWarningDialog.qml:51
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
 msgid "I understand the risks"
 msgstr ""

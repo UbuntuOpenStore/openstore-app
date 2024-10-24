@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-31 21:47+0000\n"
+"POT-Creation-Date: 2024-10-24 04:30+0000\n"
 "PO-Revision-Date: 2024-08-14 07:09+0000\n"
 "Last-Translator: Jozef Mlich <jmlich83@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/open-store-io/"
@@ -430,7 +430,7 @@ msgid "Submit"
 msgstr "Odeslat"
 
 #: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:148
-#: ../qml/Dialogs/InstallWarningDialog.qml:50
+#: ../qml/Dialogs/InstallWarningDialog.qml:61
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
 #: ../qml/Dialogs/UninstallDialog.qml:42
 msgid "Cancel"
@@ -582,7 +582,7 @@ msgstr ""
 "OpenStore, není doporučené a může poškodit Váš systém. Instalujte pouze "
 "aplikace z důvěryhodných zdrojů."
 
-#: ../qml/Dialogs/InstallWarningDialog.qml:41
+#: ../qml/Dialogs/InstallWarningDialog.qml:51
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
 msgid "I understand the risks"
 msgstr "Rozumím rizikům"

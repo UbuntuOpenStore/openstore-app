@@ -16,8 +16,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
 import QtQuick.Layouts 1.1
 import OpenStore 1.0
 
@@ -166,10 +166,10 @@ Page {
                         return types.join(', ') + installedSize + downloadSize;
                     }
 
-                    UbuntuShape {
+                    LomiriShape {
                         SlotsLayout.position: SlotsLayout.Leading
                         width: units.gu(12); height: width
-                        aspect: UbuntuShape.Flat
+                        aspect: LomiriShape.Flat
 
                         image: Image {
                             height: parent.height
@@ -264,9 +264,9 @@ Page {
                         text: i18n.tr("Open")
                         visible: app.installed && app.containsApp && app.appId!="openstore.openstore-team"
                         color: installUpgradeButton.visible
-                            ? theme.name == "Ubuntu.Components.Themes.Ambiance"
-                                ? UbuntuColors.graphite
-                                : UbuntuColors.ash
+                            ? theme.name == "Lomiri.Components.Themes.Ambiance"
+                                ? LomiriColors.graphite
+                                : LomiriColors.ash
                             : theme.palette.normal.positive
 
                         onClicked: Qt.openUrlExternally(app.appLaunchUrl())

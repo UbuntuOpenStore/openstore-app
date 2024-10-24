@@ -16,7 +16,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 ListItem {
     id: rootItem
@@ -47,9 +47,9 @@ ListItem {
         }
         summary.wrapMode: Text.WrapAtWordBoundaryOrAnywhere
 
-        UbuntuShape {
+        LomiriShape {
             id: appIconShape
-            aspect: UbuntuShape.Flat
+            aspect: LomiriShape.Flat
             SlotsLayout.position: SlotsLayout.Leading
 
             image: Image {

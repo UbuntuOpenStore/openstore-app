@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 ListItem {
     height: units.gu(32)
@@ -36,12 +36,12 @@ ListItem {
         visible: count > 0
         spacing: units.gu(1)
         orientation: ListView.Horizontal
-        delegate: UbuntuShape {
+        delegate: LomiriShape {
             height: parent.height
             // sh : lv.h = sw : x
             width: screenshot.sourceSize.width * height / screenshot.sourceSize.height
-            aspect: UbuntuShape.Flat
-            sourceFillMode: UbuntuShape.PreserveAspectFit
+            aspect: LomiriShape.Flat
+            sourceFillMode: LomiriShape.PreserveAspectFit
             source: Image {
                 id: screenshot
                 source: modelData

@@ -16,13 +16,13 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
 import OpenStore 1.0
 import QtQuick.Layouts 1.1
 import Qt.labs.settings 1.0
-import Ubuntu.Content 1.3
-import Ubuntu.Connectivity 1.0
+import Lomiri.Content 1.3
+import Lomiri.Connectivity 1.0
 
 import "Components" as Components
 import "Dialogs" as Dialogs
@@ -41,7 +41,7 @@ MainView {
     property bool isBigScreen: width > units.gu(70)
     property string mainStackPage
 
-    readonly property string appColorText: UbuntuColors.porcelain
+    readonly property string appColorText: LomiriColors.porcelain
     readonly property string    appColor: "#292929"
 
     property alias apiKey: settings.apiKey

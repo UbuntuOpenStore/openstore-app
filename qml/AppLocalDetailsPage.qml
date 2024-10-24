@@ -15,10 +15,10 @@
  */
 
 import QtQuick 2.9
-import Ubuntu.Components 1.3
-import Ubuntu.Components.ListItems 1.3
-import Ubuntu.Components.Popups 1.3
-import Ubuntu.Connectivity 1.0
+import Lomiri.Components 1.3
+import Lomiri.Components.ListItems 1.3
+import Lomiri.Components.Popups 1.3
+import Lomiri.Connectivity 1.0
 import QtQuick.Layouts 1.1
 import OpenStore 1.0
 
@@ -72,10 +72,10 @@ Page {
                     anchors.fill: parent
                     title.text: app.name
 
-                    UbuntuShape {
+                    LomiriShape {
                         SlotsLayout.position: SlotsLayout.Leading
                         width: units.gu(12); height: width
-                        aspect: UbuntuShape.Flat
+                        aspect: LomiriShape.Flat
 
                         image: Image {
                             height: parent.height

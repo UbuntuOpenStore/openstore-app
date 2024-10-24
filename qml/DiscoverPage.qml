@@ -16,9 +16,9 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import OpenStore 1.0
-import Ubuntu.Connectivity 1.0
+import Lomiri.Connectivity 1.0
 
 import "Components" as Components
 

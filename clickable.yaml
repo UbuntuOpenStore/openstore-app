@@ -1,7 +1,8 @@
-clickable_minimum_required: 7.4.0
+clickable_minimum_required: 8.2.0
 builder: cmake
 kill: openstore
 ignore_review_errors: true
 dependencies_target:
   - libclick-0.4-dev
   - libpam0g-dev
+framework: ubuntu-sdk-20.04

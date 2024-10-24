@@ -16,7 +16,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 Item {
     id: zI
@@ -51,9 +51,9 @@ Item {
             hideAnimation.initialY = y;
         }
 
-        UbuntuNumberAnimation { target: zI; property: "itemScale"; to: 1 }
-        UbuntuNumberAnimation { target: zI; properties: "x,y"; to: 0 }
-        UbuntuNumberAnimation { target: zIbg; property: "opacity"; to: 1 }
+        LomiriNumberAnimation { target: zI; property: "itemScale"; to: 1 }
+        LomiriNumberAnimation { target: zI; properties: "x,y"; to: 0 }
+        LomiriNumberAnimation { target: zIbg; property: "opacity"; to: 1 }
     }
 
 
@@ -118,10 +118,10 @@ Item {
         property int initialY: 0
 
 
-        UbuntuNumberAnimation { target: zI; property: "itemScale"; to: hideAnimation.initialScale }
-        UbuntuNumberAnimation { target: zI; property: "x"; to: hideAnimation.initialX }
-        UbuntuNumberAnimation { target: zI; property: "y"; to: hideAnimation.initialY }
-        UbuntuNumberAnimation { target: zIbg; property: "opacity"; to: 0 }
+        LomiriNumberAnimation { target: zI; property: "itemScale"; to: hideAnimation.initialScale }
+        LomiriNumberAnimation { target: zI; property: "x"; to: hideAnimation.initialX }
+        LomiriNumberAnimation { target: zI; property: "y"; to: hideAnimation.initialY }
+        LomiriNumberAnimation { target: zIbg; property: "opacity"; to: 0 }
         onStopped: {
             script: zI.destroy()
         }

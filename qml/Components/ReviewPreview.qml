@@ -16,8 +16,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
 import OpenStore 1.0
 
 import "../Dialogs" as Dialogs
@@ -290,11 +290,11 @@ ListItem {
 
             model: reviews
 
-            delegate: UbuntuShape {
+            delegate: LomiriShape {
                 property var review: model
                 height: reviewsListView.height - units.gu(4)
                 width: height * 1.3
-                aspect: UbuntuShape.DropShadow
+                aspect: LomiriShape.DropShadow
                 backgroundColor: theme.palette.normal.background
                 ScrollView {
                     id: reviewScrollView
@@ -305,7 +305,7 @@ ListItem {
                         spacing: units.gu(1)
                         Row {
                             spacing: units.gu(1)
-                            UbuntuShape {
+                            LomiriShape {
                                 width: units.gu(4)
                                 height: units.gu(4)
 

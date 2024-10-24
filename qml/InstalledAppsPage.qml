@@ -16,8 +16,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Connectivity 1.0
+import Lomiri.Components 1.3
+import Lomiri.Connectivity 1.0
 import OpenStore 1.0
 import QtQuick.Layouts 1.1
 
@@ -125,11 +125,11 @@ Page {
                         SlotsLayout.position: SlotsLayout.Leading
                         width: units.gu(4); height: width
 
-                        UbuntuShape {
+                        LomiriShape {
                             id: appIcon
                             anchors.fill: parent
                             opacity: updateSpinner.visible ? .2 : 1
-                            aspect: UbuntuShape.Flat
+                            aspect: LomiriShape.Flat
                             image: Image {
                                 sourceSize.width: parent.width
                                 sourceSize.height: parent.height

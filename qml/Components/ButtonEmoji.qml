@@ -16,7 +16,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 Button {
     property alias emoji: icon.source
@@ -30,16 +30,16 @@ Button {
         asynchronous: true
         color: iconSelected
             ? theme.palette.normal.focus
-            : theme.name == "Ubuntu.Components.Themes.Ambiance"
+            : theme.name == "Lomiri.Components.Themes.Ambiance"
                 ? "#FFFFFF"
-                : UbuntuColors.jet
+                : LomiriColors.jet
     }
 
     color: iconSelected
         ? theme.palette.normal.focusText
-        : theme.name == "Ubuntu.Components.Themes.Ambiance"
-            ? UbuntuColors.graphite
-            : UbuntuColors.ash
+        : theme.name == "Lomiri.Components.Themes.Ambiance"
+            ? LomiriColors.graphite
+            : LomiriColors.ash
     width: buttonWidth
     height: width
     enabled: textArea.text.length <= maxLength

@@ -16,7 +16,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 AbstractButton {
     id: rootItem
@@ -27,11 +27,11 @@ AbstractButton {
     Column {
         anchors.fill: parent
 
-        UbuntuShape {
+        LomiriShape {
             width: parent.width
             height: width
-            aspect: UbuntuShape.Flat
-            sourceFillMode: UbuntuShape.PreserveAspectFit
+            aspect: LomiriShape.Flat
+            sourceFillMode: LomiriShape.PreserveAspectFit
 
             source: Image {
                 source: rootItem.appItem.icon

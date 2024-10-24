@@ -16,7 +16,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 import "Components" as Components
 Page {
@@ -43,7 +43,7 @@ Page {
     ScrollView {
         anchors.fill: parent
 
-        UbuntuListView {
+        LomiriListView {
             id: categoryView
             anchors.fill: parent
 

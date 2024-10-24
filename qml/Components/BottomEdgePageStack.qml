@@ -16,7 +16,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 Item {
     id: rootItem
@@ -51,7 +51,7 @@ Item {
 
     Rectangle {
         anchors.fill: parent
-        color: UbuntuColors.jet
+        color: LomiriColors.jet
         opacity: 0.8
         visible: d.isStackVisible
     }

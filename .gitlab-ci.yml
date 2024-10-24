@@ -7,27 +7,9 @@
 before_script:
   - git submodule update --init --recursive
 
-build-arm64-xenial:
-  extends: .artifacts
-  image: clickable/ci-16.04-arm64
-  rules:
-    - if: $CI_COMMIT_TAG == null
-  script:
-    - clickable build
-  stage: build
-
 build-arm64-focal:
   extends: .artifacts
   image: clickable/ci-20.04-arm64
-  rules:
-    - if: $CI_COMMIT_TAG == null
-  script:
-    - bash ./focal-build.sh build
-  stage: build
-
-build-armhf-xenial:
-  extends: .artifacts
-  image: clickable/ci-16.04-armhf
   rules:
     - if: $CI_COMMIT_TAG == null
   script:
@@ -40,15 +22,6 @@ build-armhf-focal:
   rules:
     - if: $CI_COMMIT_TAG == null
   script:
-    - bash ./focal-build.sh build
-  stage: build
-
-build-amd64-xenial:
-  extends: .artifacts
-  image: clickable/ci-16.04-amd64
-  rules:
-    - if: $CI_COMMIT_TAG == null
-  script:
     - clickable build
   stage: build
 
@@ -58,32 +31,12 @@ build-amd64-focal:
   rules:
     - if: $CI_COMMIT_TAG == null
   script:
-    - bash ./focal-build.sh build
-  stage: build
-
-publish-arm64-xenial:
-  extends: .artifacts
-  image: clickable/ci-16.04-arm64
-  rules:
-    - if: $CI_COMMIT_TAG
-  script:
     - clickable build
-    - clickable publish "$CI_COMMIT_MESSAGE"
-  stage: deploy
+  stage: build
 
 publish-arm64-focal:
   extends: .artifacts
   image: clickable/ci-20.04-arm64
-  rules:
-    - if: $CI_COMMIT_TAG
-  script:
-    - bash ./focal-build.sh build
-    - CLICKABLE_FRAMEWORK=ubuntu-sdk-20.04 clickable publish
-  stage: deploy
-
-publish-armhf-xenial:
-  extends: .artifacts
-  image: clickable/ci-16.04-armhf
   rules:
     - if: $CI_COMMIT_TAG
   script:
@@ -97,16 +50,6 @@ publish-armhf-focal:
   rules:
     - if: $CI_COMMIT_TAG
   script:
-    - bash ./focal-build.sh build
-    - CLICKABLE_FRAMEWORK=ubuntu-sdk-20.04 clickable publish
-  stage: deploy
-
-publish-amd64-xenial:
-  extends: .artifacts
-  image: clickable/ci-16.04-amd64
-  rules:
-    - if: $CI_COMMIT_TAG
-  script:
     - clickable build
     - clickable publish
   stage: deploy
@@ -117,6 +60,6 @@ publish-amd64-focal:
   rules:
     - if: $CI_COMMIT_TAG
   script:
-    - bash ./focal-build.sh build
-    - CLICKABLE_FRAMEWORK=ubuntu-sdk-20.04 clickable publish
+    - clickable build
+    - clickable publish
   stage: deploy

@@ -16,7 +16,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import Morph.Web 0.1
 import PamAuthentication 0.1
 
@@ -92,7 +92,7 @@ Page {
                     anchors.horizontalCenter: parent.horizontalCenter
                     height: units.gu(18)
 
-                    UbuntuShape {
+                    LomiriShape {
                         width: units.gu(16)
                         height: width
                         anchors.horizontalCenter: parent.horizontalCenter

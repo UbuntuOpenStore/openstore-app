@@ -13,5 +13,5 @@
     },
     "version": "@BUILD_VERSION@",
     "maintainer": "OpenStore Team <openstore-team@lists.launchpad.net>",
-    "framework" : "ubuntu-sdk-16.04.5"
+    "framework" : "ubuntu-sdk-20.04"
 }

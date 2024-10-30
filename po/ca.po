@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-24 04:30+0000\n"
-"PO-Revision-Date: 2024-03-18 18:01+0000\n"
+"PO-Revision-Date: 2024-10-31 13:00+0000\n"
 "Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/ca/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.8.2-dev\n"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
 #: ../qml/AppDetailsPage.qml:108 ../qml/AppLocalDetailsPage.qml:34
@@ -67,7 +67,7 @@ msgstr "Obre-la"
 
 #: ../qml/AppDetailsPage.qml:280
 msgid "The OpenStore is installed!"
-msgstr "OpenStore instal·lat"
+msgstr "S'ha instal·lat l'OpenStore."
 
 #: ../qml/AppDetailsPage.qml:289
 msgid "Install stable version"
@@ -130,7 +130,7 @@ msgstr "Descàrregues de la darrera versió"
 
 #: ../qml/AppDetailsPage.qml:537
 msgid "Total downloads"
-msgstr "Descàrregues totals"
+msgstr "Baixades totals"
 
 #: ../qml/AppDetailsPage.qml:546
 msgid "License"
@@ -582,9 +582,9 @@ msgid ""
 "OpenStore is not recommended and can potentially harm your system. Only "
 "install this app if you got it from a trusted source."
 msgstr ""
-"Voleu instal·lar l'aplicació desconeguda % 1? No es recomana instal·lar-ne "
-"des de fora de l'OpenStore perquè poden danyar el vostre sistema. Instal·leu "
-"aquesta aplicació només si confiau del seu origen."
+"Voleu instal·lar l'aplicació desconeguda %1? No es recomana instal·lar-ne "
+"des de fora de l'OpenStore perquè podrien danyar el vostre sistema. Instal·"
+"leu aquesta aplicació només si confiau del seu origen."
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:51
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:32

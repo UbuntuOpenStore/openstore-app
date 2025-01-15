@@ -34,6 +34,33 @@ build-amd64-focal:
     - clickable build
   stage: build
 
+build-arm64-next:
+  extends: .artifacts
+  image: clickable/ci-utnext-arm64
+  rules:
+    - if: $CI_COMMIT_TAG == null
+  script:
+    - clickable build
+  stage: build
+
+build-armhf-next:
+  extends: .artifacts
+  image: clickable/ci-utnext-armhf
+  rules:
+    - if: $CI_COMMIT_TAG == null
+  script:
+    - clickable build
+  stage: build
+
+build-amd64-next:
+  extends: .artifacts
+  image: clickable/ci-utnext-amd64
+  rules:
+    - if: $CI_COMMIT_TAG == null
+  script:
+    - clickable build
+  stage: build
+
 publish-arm64-focal:
   extends: .artifacts
   image: clickable/ci-20.04-arm64

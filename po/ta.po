@@ -8,560 +8,572 @@ msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-24 04:30+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-01-24 16:01+0000\n"
+"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/open-store-io/"
+"openstore-app/ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 #: ../qml/AppDetailsPage.qml:108 ../qml/AppLocalDetailsPage.qml:34
 msgid "App details"
-msgstr ""
+msgstr "பயன்பாட்டு விவரங்கள்"
 
 #: ../qml/AppDetailsPage.qml:115 ../qml/AppDetailsPage.qml:385
 #: ../qml/AppLocalDetailsPage.qml:41 ../qml/Dialogs/UninstallDialog.qml:33
 msgid "Remove"
-msgstr ""
+msgstr "அகற்று"
 
 #: ../qml/AppDetailsPage.qml:152 ../qml/Components/PackageListItem.qml:34
 #: ../qml/Components/PackageTile.qml:79
 msgid "App"
-msgstr ""
+msgstr "பயன்பாடு"
 
 #: ../qml/AppDetailsPage.qml:153 ../qml/Components/PackageListItem.qml:35
 #: ../qml/Components/PackageTile.qml:80
 msgid "Bookmark"
-msgstr ""
+msgstr "புத்தககுறி"
 
 #: ../qml/AppDetailsPage.qml:154 ../qml/Components/PackageListItem.qml:36
 #: ../qml/Components/PackageTile.qml:81
 msgid "Web App"
-msgstr ""
+msgstr "வலை பயன்பாடு"
 
 #: ../qml/AppDetailsPage.qml:164
 msgid "Install Size: "
-msgstr ""
+msgstr "அளவை நிறுவுதல்: "
 
 #: ../qml/AppDetailsPage.qml:165
 msgid "Download Size: "
-msgstr ""
+msgstr "பதிவிறக்க அளவு: "
 
 #: ../qml/AppDetailsPage.qml:239
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
 msgstr ""
+"இந்த பயன்பாட்டின் நிறுவப்பட்ட பதிப்பு ஓபன்ச்டோர் சேவையகத்திலிருந்து வரவில்லை. கீழே உள்ள "
+"பொத்தானைத் தட்டுவதன் மூலம் அண்மைக் கால நிலையான புதுப்பிப்பை நிறுவலாம்."
 
 #: ../qml/AppDetailsPage.qml:264 ../qml/AppLocalDetailsPage.qml:104
 #: ../qml/Components/HighlightedApp.qml:117
 msgid "Open"
-msgstr ""
+msgstr "திற"
 
 #: ../qml/AppDetailsPage.qml:280
 msgid "The OpenStore is installed!"
-msgstr ""
+msgstr "ஓபன்ச்டோர் நிறுவப்பட்டுள்ளது!"
 
 #: ../qml/AppDetailsPage.qml:289
 msgid "Install stable version"
-msgstr ""
+msgstr "நிலையான பதிப்பை நிறுவவும்"
 
 #: ../qml/AppDetailsPage.qml:292
 msgid "Upgrade"
-msgstr ""
+msgstr "மேம்படுத்தல்"
 
 #: ../qml/AppDetailsPage.qml:295
 msgid "Install"
-msgstr ""
+msgstr "நிறுவவும்"
 
 #: ../qml/AppDetailsPage.qml:371
 msgid "This app is not compatible with your system."
-msgstr ""
+msgstr "இந்த பயன்பாடு உங்கள் கணினியுடன் பொருந்தாது."
 
 #: ../qml/AppDetailsPage.qml:404
 msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
 msgstr ""
+"இந்த பயன்பாட்டில் கணினியின் தடைசெய்யப்பட்ட பகுதிகள் மற்றும் உங்கள் எல்லா தரவுகளுக்கும் அணுகல் "
+"உள்ளது, விவரங்களுக்கு கீழே காண்க."
 
 #: ../qml/AppDetailsPage.qml:407
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
+"இந்த பயன்பாட்டில் தடைசெய்யப்பட்ட கணினி தரவுகளுக்கான அணுகல் உள்ளது, விவரங்களுக்கு கீழே "
+"காண்க."
 
 #: ../qml/AppDetailsPage.qml:432
 msgid "Description"
-msgstr ""
+msgstr "விவரம்"
 
 #. TRANSLATORS: Title of the changelog section
 #: ../qml/AppDetailsPage.qml:470
 msgid "What's New"
-msgstr ""
+msgstr "புதியது என்ன"
 
 #: ../qml/AppDetailsPage.qml:489
 msgid "Packager/Publisher"
-msgstr ""
+msgstr "பேக்கேசர்/வெளியீட்டாளர்"
 
 #: ../qml/AppDetailsPage.qml:498 ../qml/AppLocalDetailsPage.qml:138
 msgid "Installed version"
-msgstr ""
+msgstr "நிறுவப்பட்ட பதிப்பு"
 
 #: ../qml/AppDetailsPage.qml:508
 msgid "Latest available version"
-msgstr ""
+msgstr "கிடைக்கக்கூடிய அண்மைக் கால பதிப்பு"
 
 #: ../qml/AppDetailsPage.qml:517
 msgid "First released"
-msgstr ""
+msgstr "முதலில் வெளியிடப்பட்டது"
 
 #: ../qml/AppDetailsPage.qml:528
 msgid "Downloads of the latest version"
-msgstr ""
+msgstr "அண்மைக் கால பதிப்பின் பதிவிறக்கங்கள்"
 
 #: ../qml/AppDetailsPage.qml:537
 msgid "Total downloads"
-msgstr ""
+msgstr "மொத்த பதிவிறக்கங்கள்"
 
 #: ../qml/AppDetailsPage.qml:546
 msgid "License"
-msgstr ""
+msgstr "உரிமம்"
 
 #: ../qml/AppDetailsPage.qml:547
 msgid "N/A"
-msgstr ""
+msgstr "இதற்கில்லை"
 
 #: ../qml/AppDetailsPage.qml:559 ../qml/SettingsPage.qml:214
 msgid "Source Code"
-msgstr ""
+msgstr "மூலக் குறியீடு"
 
 #: ../qml/AppDetailsPage.qml:572
 msgid "Get support for this app"
-msgstr ""
+msgstr "இந்த பயன்பாட்டிற்கான ஆதரவைப் பெறுங்கள்"
 
 #: ../qml/AppDetailsPage.qml:585
 msgid "Donate to support this app"
-msgstr ""
+msgstr "இந்த பயன்பாட்டை ஆதரிக்க நன்கொடை"
 
 #: ../qml/AppDetailsPage.qml:598
 msgid "Help translate this app"
-msgstr ""
+msgstr "இந்த பயன்பாட்டை மொழிபெயர்க்க உதவுங்கள்"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
 #: ../qml/AppDetailsPage.qml:614
 msgid "More from %1"
-msgstr ""
+msgstr "%1 இலிருந்து மேலும்"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
 #: ../qml/AppDetailsPage.qml:629
 msgid "Other apps in %1"
-msgstr ""
+msgstr "%1 இல் உள்ள பிற பயன்பாடுகள்"
 
 #: ../qml/AppDetailsPage.qml:635
 msgid "Package contents"
-msgstr ""
+msgstr "தொகுப்பு உள்ளடக்கங்கள்"
 
 #: ../qml/AppDetailsPage.qml:722
 msgid "Permissions"
-msgstr ""
+msgstr "அனுமதிகள்"
 
 #: ../qml/AppDetailsPage.qml:727
 msgid "Accounts"
-msgstr ""
+msgstr "கணக்குகள்"
 
 #: ../qml/AppDetailsPage.qml:728
 msgid "Audio"
-msgstr ""
+msgstr "ஆடியோ"
 
 #: ../qml/AppDetailsPage.qml:729
 msgid "Bluetooth"
-msgstr ""
+msgstr "ஊடலை"
 
 #: ../qml/AppDetailsPage.qml:730
 msgid "Calendar"
-msgstr ""
+msgstr "நாட்காட்டி"
 
 #: ../qml/AppDetailsPage.qml:731
 msgid "Camera"
-msgstr ""
+msgstr "கேமரா"
 
 #: ../qml/AppDetailsPage.qml:732
 msgid "Connectivity"
-msgstr ""
+msgstr "இணைப்பு"
 
 #: ../qml/AppDetailsPage.qml:733
 msgid "Contacts"
-msgstr ""
+msgstr "தொடர்புகள்"
 
 #: ../qml/AppDetailsPage.qml:734
 msgid "Content Exchange Source"
-msgstr ""
+msgstr "உள்ளடக்க பரிமாற்ற மூல"
 
 #: ../qml/AppDetailsPage.qml:735
 msgid "Content Exchange"
-msgstr ""
+msgstr "உள்ளடக்க பரிமாற்றம்"
 
 #: ../qml/AppDetailsPage.qml:736
 msgid "Debug"
-msgstr ""
+msgstr "பிழைத்திருத்தம்"
 
 #: ../qml/AppDetailsPage.qml:737
 msgid "History"
-msgstr ""
+msgstr "வரலாறு"
 
 #: ../qml/AppDetailsPage.qml:738
 msgid "In App Purchases"
-msgstr ""
+msgstr "பயன்பாட்டு வாங்குதல்களில்"
 
 #: ../qml/AppDetailsPage.qml:739
 msgid "Keep Display On"
-msgstr ""
+msgstr "காட்சியைத் தொடருங்கள்"
 
 #: ../qml/AppDetailsPage.qml:740
 msgid "Location"
-msgstr ""
+msgstr "இடம்"
 
 #: ../qml/AppDetailsPage.qml:741
 msgid "Microphone"
-msgstr ""
+msgstr "ஒலிவாங்கி"
 
 #: ../qml/AppDetailsPage.qml:742
 msgid "Read Music Files"
-msgstr ""
+msgstr "இசை கோப்புகளைப் படியுங்கள்"
 
 #: ../qml/AppDetailsPage.qml:743
 msgid "Music Files"
-msgstr ""
+msgstr "இசை கோப்புகள்"
 
 #: ../qml/AppDetailsPage.qml:744
 msgid "Networking"
-msgstr ""
+msgstr "நெட்வொர்க்கிங்"
 
 #: ../qml/AppDetailsPage.qml:745
 msgid "Read Picture Files"
-msgstr ""
+msgstr "படக் கோப்புகளைப் படியுங்கள்"
 
 #: ../qml/AppDetailsPage.qml:746
 msgid "Picture Files"
-msgstr ""
+msgstr "படக் கோப்புகள்"
 
 #: ../qml/AppDetailsPage.qml:747
 msgid "Push Notifications"
-msgstr ""
+msgstr "அறிவிப்புகளை அழுத்தவும்"
 
 #: ../qml/AppDetailsPage.qml:748
 msgid "Sensors"
-msgstr ""
+msgstr "சென்சார்கள்"
 
 #: ../qml/AppDetailsPage.qml:749
 msgid "User Metrics"
-msgstr ""
+msgstr "பயனர் அளவீடுகள்"
 
 #: ../qml/AppDetailsPage.qml:750
 msgid "Read Video Files"
-msgstr ""
+msgstr "வீடியோ கோப்புகளைப் படியுங்கள்"
 
 #: ../qml/AppDetailsPage.qml:751
 msgid "Video Files"
-msgstr ""
+msgstr "வீடியோ கோப்புகள்"
 
 #: ../qml/AppDetailsPage.qml:752
 msgid "Video"
-msgstr ""
+msgstr "ஒளிதோற்றம்"
 
 #: ../qml/AppDetailsPage.qml:753
 msgid "Webview"
-msgstr ""
+msgstr "வெப்வியூ"
 
 #: ../qml/AppDetailsPage.qml:757
 msgid "Full System Access"
-msgstr ""
+msgstr "முழு கணினி அணுகல்"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
 #: ../qml/AppDetailsPage.qml:762
 msgid "none required"
-msgstr ""
+msgstr "எதுவும் தேவையில்லை"
 
 #: ../qml/AppDetailsPage.qml:798
 msgid "Read paths"
-msgstr ""
+msgstr "பாதைகளைப் படியுங்கள்"
 
 #: ../qml/AppDetailsPage.qml:815
 msgid "Write paths"
-msgstr ""
+msgstr "பாதைகளை எழுதுங்கள்"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
 #: ../qml/AppDetailsPage.qml:886
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 சிபி"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
 #: ../qml/AppDetailsPage.qml:891
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 எம்பி"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
 #: ../qml/AppDetailsPage.qml:896
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 கி.பை."
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
 #: ../qml/AppDetailsPage.qml:899
 msgid "%1 bytes"
-msgstr ""
+msgstr "%1 பைட்டுகள்"
 
 #: ../qml/AppLocalDetailsPage.qml:118
 msgid "This app could not be found in the OpenStore"
-msgstr ""
+msgstr "இந்த பயன்பாட்டை ஓபன்ச்டோரில் காண முடியவில்லை"
 
 #: ../qml/AppLocalDetailsPage.qml:121
 msgid ""
 "You are currently offline and the app details could not be fetched from the "
 "OpenStore"
 msgstr ""
+"நீங்கள் தற்போது ஆஃப்லைனில் இருக்கிறீர்கள், பயன்பாட்டு விவரங்களை ஓபன்ச்டோரிலிருந்து பெற "
+"முடியவில்லை"
 
 #: ../qml/CategoriesPage.qml:39
 msgid "Categories"
-msgstr ""
+msgstr "வகைகள்"
 
 #: ../qml/CategoriesPage.qml:84
 msgid "Nothing to see here yet!"
-msgstr ""
+msgstr "இதுவரை இங்கு பார்க்க எதுவும் இல்லை!"
 
 #: ../qml/Components/BottomEdgePageStack.qml:102
 msgid "Back"
-msgstr ""
+msgstr "பின்"
 
 #: ../qml/Components/BottomEdgePageStack.qml:102
 #: ../qml/Components/ReviewPreview.qml:103
 #: ../qml/Components/ReviewPreview.qml:117
 msgid "Close"
-msgstr ""
+msgstr "மூடு"
 
 #: ../qml/Components/HeaderMain.qml:27 ../qml/SettingsPage.qml:29
 msgid "Settings"
-msgstr ""
+msgstr "அமைப்புகள்"
 
 #: ../qml/Components/HeaderMain.qml:40 ../qml/SearchPage.qml:35
 msgid "Search"
-msgstr ""
+msgstr "தேடல்"
 
 #: ../qml/Components/HighlightedApp.qml:114
 #: ../qml/Components/ReviewPreview.qml:193
 msgid "Update"
-msgstr ""
+msgstr "புதுப்பிப்பு"
 
 #: ../qml/Components/HighlightedApp.qml:120
 msgid "Details"
-msgstr ""
+msgstr "விவரங்கள்"
 
 #: ../qml/Components/HookIcon.qml:54
 msgid "Application"
-msgstr ""
+msgstr "பயன்பாடு"
 
 #. TRANSLATORS: This is a platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: ../qml/Components/HookIcon.qml:68
 msgid "URL Handler"
-msgstr ""
+msgstr "முகவரி வர்த்தகங்கள்"
 
 #. TRANSLATORS: This is a platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
 #: ../qml/Components/HookIcon.qml:82
 msgid "Content Hub Handler"
-msgstr ""
+msgstr "உள்ளடக்க அப் ஏண்ட்லர்"
 
 #. TRANSLATORS: This is a platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
 #: ../qml/Components/HookIcon.qml:96
 msgid "Push Helper"
-msgstr ""
+msgstr "புச் உதவியாளர்"
 
 #. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
 #: ../qml/Components/HookIcon.qml:110
 msgid "Accounts provider"
-msgstr ""
+msgstr "கணக்கு வழங்குநர்"
 
 #: ../qml/Components/PackageTile.qml:97
 msgid "Update available"
-msgstr ""
+msgstr "புதுப்பிப்பு கிடைக்கிறது"
 
 #: ../qml/Components/PackageTile.qml:97
 msgid "✓ Installed"
-msgstr ""
+msgstr "நிறுவப்பட்டது"
 
 #: ../qml/Components/ReviewPreview.qml:93
 msgid "Something went wrong..."
-msgstr ""
+msgstr "ஏதோ தவறு நடந்தது ..."
 
 #: ../qml/Components/ReviewPreview.qml:99
 msgid "Error Posting Review"
-msgstr ""
+msgstr "மதிப்பாய்வு இடுகையிடும் பிழை"
 
 #: ../qml/Components/ReviewPreview.qml:113
 msgid "Review Posted Correctly"
-msgstr ""
+msgstr "மதிப்பாய்வு சரியாக இடுகையிடப்பட்டது"
 
 #: ../qml/Components/ReviewPreview.qml:114
 msgid "Your review has been posted successfully."
-msgstr ""
+msgstr "உங்கள் மதிப்பாய்வு வெற்றிகரமாக வெளியிடப்பட்டுள்ளது."
 
 #: ../qml/Components/ReviewPreview.qml:128
 msgid "Loading..."
-msgstr ""
+msgstr "ஏற்றுகிறது ..."
 
 #: ../qml/Components/ReviewPreview.qml:128
 msgid "Rate this app"
-msgstr ""
+msgstr "இந்த பயன்பாட்டை மதிப்பிடுங்கள்"
 
 #: ../qml/Components/ReviewPreview.qml:135
 msgid "(Optional) Write a review"
-msgstr ""
+msgstr "(விரும்பினால்) மதிப்பாய்வு எழுதுங்கள்"
 
 #: ../qml/Components/ReviewPreview.qml:139
 msgid "%1/%2 characters"
-msgstr ""
+msgstr "%1/%2 எழுத்துக்கள்"
 
 #: ../qml/Components/ReviewPreview.qml:193
 msgid "Submit"
-msgstr ""
+msgstr "சமர்ப்பிக்கவும்"
 
 #: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:148
 #: ../qml/Dialogs/InstallWarningDialog.qml:61
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
 #: ../qml/Dialogs/UninstallDialog.qml:42
 msgid "Cancel"
-msgstr ""
+msgstr "ரத்துசெய்"
 
 #: ../qml/Components/ReviewPreview.qml:244
 msgid "%1 review. "
 msgid_plural "%1 reviews. "
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 மதிப்பாய்வு. "
+msgstr[1] "%1 மதிப்புரைகள். "
 
 #: ../qml/Components/ReviewPreview.qml:252
 msgid "Edit Review"
-msgstr ""
+msgstr "மதிப்பாய்வைத் திருத்தவும்"
 
 #: ../qml/Components/ReviewPreview.qml:255
 msgid "Review app"
-msgstr ""
+msgstr "பயன்பாட்டை மதிப்பாய்வு செய்யவும்"
 
 #: ../qml/Components/ReviewPreview.qml:258
 msgid "Sign in to review this app"
-msgstr ""
+msgstr "இந்த பயன்பாட்டை மதிப்பாய்வு செய்ய உள்நுழைக"
 
 #: ../qml/Components/ReviewPreview.qml:261
 msgid "Install this app to review it"
-msgstr ""
+msgstr "அதை மதிப்பாய்வு செய்ய இந்த பயன்பாட்டை நிறுவவும்"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:26
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:25
 msgid "Warning"
-msgstr ""
+msgstr "எச்சரிக்கை"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:35
 msgid ""
 "You are currently using a non-standard domain for the OpenStore. This is a "
 "development feature. The domain you are using is:"
 msgstr ""
+"நீங்கள் தற்போது ஓபன்ச்டோருக்கு தரமற்ற களத்தைப் பயன்படுத்துகிறீர்கள். இது ஒரு வளர்ச்சி அம்சமாகும்"
+". நீங்கள் பயன்படுத்தும் டொமைன்:"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:49
 msgid "Are you sure you want to continue?"
-msgstr ""
+msgstr "நீங்கள் தொடர விரும்புகிறீர்களா?"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:53
 msgid "Yes, I know what I'm doing"
-msgstr ""
+msgstr "ஆம், நான் என்ன செய்கிறேன் என்று எனக்குத் தெரியும்"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:61
 msgid "Get me out of here!"
-msgstr ""
+msgstr "என்னை இங்கிருந்து வெளியேற்றுங்கள்!"
 
 #: ../qml/Dialogs/DonationDialog.qml:25
 msgid "Donating"
-msgstr ""
+msgstr "நன்கொடை"
 
 #: ../qml/Dialogs/DonationDialog.qml:26
 msgid "Would you like to support this app with a donation to the developer?"
-msgstr ""
+msgstr "டெவலப்பருக்கு நன்கொடை மூலம் இந்த பயன்பாட்டை ஆதரிக்க விரும்புகிறீர்களா?"
 
 #: ../qml/Dialogs/DonationDialog.qml:32
 msgid "Donate now"
-msgstr ""
+msgstr "இப்போது நன்கொடை"
 
 #: ../qml/Dialogs/DonationDialog.qml:40
 msgid "Maybe later"
-msgstr ""
+msgstr "ஒருவேளை பின்னர்"
 
 #: ../qml/Dialogs/FilterDialog.qml:26
 msgid "Filters and Sorting"
-msgstr ""
+msgstr "வடிப்பான்கள் மற்றும் வரிசையாக்கம்"
 
 #: ../qml/Dialogs/FilterDialog.qml:38
 msgid "Sort By"
-msgstr ""
+msgstr "வரிசைப்படுத்தவும்"
 
 #: ../qml/Dialogs/FilterDialog.qml:45 ../qml/Dialogs/FilterDialog.qml:65
 msgid "Relevance"
-msgstr ""
+msgstr "பொருத்தமானது"
 
 #: ../qml/Dialogs/FilterDialog.qml:46
 msgid "Most Popular"
-msgstr ""
+msgstr "மிகவும் பிரபலமானது"
 
 #: ../qml/Dialogs/FilterDialog.qml:47
 msgid "Least Popular"
-msgstr ""
+msgstr "குறைந்தது பிரபலமானது"
 
 #: ../qml/Dialogs/FilterDialog.qml:48
 msgid "Title (A-Z)"
-msgstr ""
+msgstr "தலைப்பு (A-Z)"
 
 #: ../qml/Dialogs/FilterDialog.qml:49
 msgid "Title (Z-A)"
-msgstr ""
+msgstr "தலைப்பு (Z-A)"
 
 #: ../qml/Dialogs/FilterDialog.qml:50
 msgid "Newest"
-msgstr ""
+msgstr "புதியது"
 
 #: ../qml/Dialogs/FilterDialog.qml:51
 msgid "Oldest"
-msgstr ""
+msgstr "பழமையானது"
 
 #: ../qml/Dialogs/FilterDialog.qml:52
 msgid "Latest Update"
-msgstr ""
+msgstr "அண்மைக் கால புதுப்பிப்பு"
 
 #: ../qml/Dialogs/FilterDialog.qml:53
 msgid "Oldest Update"
-msgstr ""
+msgstr "பழமையான புதுப்பிப்பு"
 
 #: ../qml/Dialogs/FilterDialog.qml:93
 msgid "Type"
-msgstr ""
+msgstr "வகை"
 
 #: ../qml/Dialogs/FilterDialog.qml:100 ../qml/Dialogs/FilterDialog.qml:115
 msgid "All Types"
-msgstr ""
+msgstr "அனைத்து வகைகளும்"
 
 #: ../qml/Dialogs/FilterDialog.qml:101
 msgid "Apps"
-msgstr ""
+msgstr "பயன்பாடுகள்"
 
 #: ../qml/Dialogs/FilterDialog.qml:102
 msgid "Bookmarks"
-msgstr ""
+msgstr "புக்மார்க்குகள்"
 
 #: ../qml/Dialogs/FilterDialog.qml:103
 msgid "Web Apps"
-msgstr ""
+msgstr "வலை பயன்பாடுகள்"
 
 #: ../qml/Dialogs/FilterDialog.qml:140
 msgid "Apply"
-msgstr ""
+msgstr "இடு"
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:27
 msgid "Install unknown app?"
-msgstr ""
+msgstr "அறியப்படாத பயன்பாட்டை நிறுவவா?"
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:28
 msgid ""
@@ -569,29 +581,35 @@ msgid ""
 "OpenStore is not recommended and can potentially harm your system. Only "
 "install this app if you got it from a trusted source."
 msgstr ""
+"அறியப்படாத பயன்பாடு %1 ஐ நிறுவ விரும்புகிறீர்களா? ஓபன்ச்டோருக்கு வெளியில் இருந்து "
+"பயன்பாடுகளை நிறுவுவது பரிந்துரைக்கப்படவில்லை, மேலும் இது உங்கள் கணினிக்கு தீங்கு "
+"விளைவிக்கும். இந்த பயன்பாட்டை நம்பகமான மூலத்திலிருந்து பெற்றால் மட்டுமே நிறுவவும்."
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:51
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
 msgid "I understand the risks"
-msgstr ""
+msgstr "அபாயங்களை நான் புரிந்துகொள்கிறேன்"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:26
 msgid "Review confirmation"
-msgstr ""
+msgstr "உறுதிப்படுத்தலை மதிப்பாய்வு செய்யவும்"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:27
 msgid ""
 "Would you like to contact the publisher or file a bug instead? By opening a "
 "discussion with the developer(s) you could be helping to improve this app."
 msgstr ""
+"நீங்கள் வெளியீட்டாளரைத் தொடர்பு கொள்ள விரும்புகிறீர்களா அல்லது அதற்கு பதிலாக ஒரு பிழையை "
+"தாக்கல் செய்ய விரும்புகிறீர்களா? உருவாக்குபவர் (கள்) உடன் கலந்துரையாடலைத் திறப்பதன் மூலம் இந்"
+"த பயன்பாட்டை மேம்படுத்த நீங்கள் உதவலாம்."
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:37
 msgid "Get support"
-msgstr ""
+msgstr "ஆதரவை பெறு"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:47
 msgid "Post my review"
-msgstr ""
+msgstr "எனது மதிப்பாய்வை இடுங்கள்"
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
 msgid ""
@@ -601,167 +619,180 @@ msgid ""
 "anything bad that might happen to your device or data from installing this "
 "app."
 msgstr ""
+"இந்த பயன்பாட்டில் கணினியின் தடைசெய்யப்பட்ட பகுதிகள் மற்றும் உங்கள் எல்லா தரவுகளுக்கும் அணுகல் "
+"உள்ளது. இது உங்கள் கணினியை உடைக்கும் திறன் கொண்டது. ஓபன்ச்டோர் பராமரிப்பாளர்கள் இந்த "
+"பயன்பாட்டிற்கான குறியீட்டை பாதுகாப்பிற்காக மதிப்பாய்வு செய்துள்ள நிலையில், இந்த பயன்பாட்டை "
+"நிறுவுவதிலிருந்து உங்கள் சாதனம் அல்லது தரவுகளுக்கு ஏற்படக்கூடிய மோசமான எதற்கும் அவர்கள் "
+"பொறுப்பல்ல."
 
 #: ../qml/Dialogs/UninstallDialog.qml:25
 msgid "Remove package"
-msgstr ""
+msgstr "தொகுப்பை அகற்று"
 
 #: ../qml/Dialogs/UninstallDialog.qml:26
 msgid "Do you want to remove %1?"
-msgstr ""
+msgstr "%1 ஐ அகற்ற விரும்புகிறீர்களா?"
 
 #: ../qml/DiscoverPage.qml:40
 msgid "OpenStore"
-msgstr ""
+msgstr "ஓபன்ச்டோர்"
 
 #: ../qml/DiscoverPage.qml:76
 msgid "by %1"
-msgstr ""
+msgstr "மூலம் %1"
 
 #: ../qml/DiscoverPage.qml:130
 msgid "You are currently offline"
-msgstr ""
+msgstr "நீங்கள் தற்போது ஆஃப்லைனில் இருக்கிறீர்கள்"
 
 #: ../qml/DiscoverPage.qml:146
 msgid "OpenStore update available"
-msgstr ""
+msgstr "ஓபன்ச்டோர் புதுப்பிப்பு கிடைக்கிறது"
 
 #: ../qml/DiscoverPage.qml:176
 msgid " (%1 update available)"
 msgid_plural " (%1 updates available)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] " (%1 புதுப்பிப்பு கிடைக்கிறது)"
+msgstr[1] " (%1 புதுப்பிப்புகள் கிடைக்கின்றன)"
 
 #: ../qml/DiscoverPage.qml:176 ../qml/DiscoverPage.qml:177
 #: ../qml/InstalledAppsPage.qml:52
 msgid "Installed Apps"
-msgstr ""
+msgstr "நிறுவப்பட்ட பயன்பாடுகள்"
 
 #: ../qml/DiscoverPage.qml:201
 msgid "Browse Apps by Category"
-msgstr ""
+msgstr "வகை அடிப்படையில் பயன்பாடுகளை உலாவுக"
 
 #: ../qml/FilteredAppList.qml:109
 msgid "No results found."
-msgstr ""
+msgstr "முடிவுகள் எதுவும் கிடைக்கவில்லை."
 
 #: ../qml/FilteredAppList.qml:109
 msgid "Nothing here yet"
-msgstr ""
+msgstr "இன்னும் இங்கே எதுவும் இல்லை"
 
 #: ../qml/FilteredAppList.qml:110
 msgid "No app has been released in this category yet."
-msgstr ""
+msgstr "இந்த பிரிவில் இதுவரை எந்த பயன்பாடும் வெளியிடப்படவில்லை."
 
 #: ../qml/FilteredAppList.qml:110
 msgid "Try with a different search."
-msgstr ""
+msgstr "வேறு தேடலுடன் முயற்சிக்கவும்."
 
 #. TRANSLATORS: %1 is the number of installed apps
 #: ../qml/InstalledAppsPage.qml:80
 msgid "Installed apps (%1)"
-msgstr ""
+msgstr "நிறுவப்பட்ட பயன்பாடுகள் (%1)"
 
 #. TRANSLATORS: %1 is the number of available app updates
 #: ../qml/InstalledAppsPage.qml:84
 msgid "Available updates (%1)"
-msgstr ""
+msgstr "கிடைக்கும் புதுப்பிப்புகள் (%1)"
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
 #: ../qml/InstalledAppsPage.qml:88
 msgid "Stable version available (%1)"
-msgstr ""
+msgstr "நிலையான பதிப்பு கிடைக்கிறது (%1)"
 
 #: ../qml/InstalledAppsPage.qml:91
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
 msgstr ""
+"இந்த பயன்பாடுகளின் நிறுவப்பட்ட பதிப்புகள் ஓபன்ச்டோரிலிருந்து வரவில்லை, ஆனால் நிலையான "
+"பதிப்பு கிடைக்கிறது."
 
 #: ../qml/InstalledAppsPage.qml:92
 msgid "Update all"
-msgstr ""
+msgstr "அனைத்தையும் புதுப்பிக்கவும்"
 
 #: ../qml/InstalledAppsPage.qml:194
 msgid "No apps found"
-msgstr ""
+msgstr "பயன்பாடுகள் எதுவும் கிடைக்கவில்லை"
 
 #: ../qml/InstalledAppsPage.qml:195
 msgid "No app has been installed from OpenStore yet."
-msgstr ""
+msgstr "ஓபன்ச்டோரிலிருந்து இதுவரை எந்த பயன்பாடும் நிறுவப்படவில்லை."
 
 #: ../qml/Main.qml:319 ../qml/SearchPage.qml:55
 msgid "Filters"
-msgstr ""
+msgstr "வடிப்பான்கள்"
 
 #: ../qml/Main.qml:366
 msgid "App installed"
-msgstr ""
+msgstr "பயன்பாடு நிறுவப்பட்டது"
 
 #: ../qml/Main.qml:367
 msgid "The app has been installed successfully."
-msgstr ""
+msgstr "பயன்பாடு வெற்றிகரமாக நிறுவப்பட்டுள்ளது."
 
 #: ../qml/Main.qml:370 ../qml/Main.qml:383 ../qml/Main.qml:398
 msgid "OK"
-msgstr ""
+msgstr "சரி"
 
 #: ../qml/Main.qml:379
 msgid "Installation failed"
-msgstr ""
+msgstr "நிறுவல் தோல்வியடைந்தது"
 
 #: ../qml/Main.qml:380
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
+"தொகுப்பை நிறுவ முடியவில்லை. இது செல்லுபடியாகும் சொடுக்கு தொகுப்பு என்பதை "
+"உறுதிப்படுத்திக் கொள்ளுங்கள்."
 
 #: ../qml/Main.qml:394
 msgid "Installation failed (Error %1)"
-msgstr ""
+msgstr "நிறுவல் தோல்வியடைந்தது (பிழை %1)"
 
 #: ../qml/SearchPage.qml:48
 msgid "Search in OpenStore..."
-msgstr ""
+msgstr "ஓபன்ச்டோரில் தேடுங்கள் ..."
 
 #: ../qml/SettingsPage.qml:113
 msgid "OpenStore Account"
-msgstr ""
+msgstr "ஓபன்ச்டோர் கணக்கு"
 
 #: ../qml/SettingsPage.qml:121 ../qml/SignInPage.qml:31
 msgid "Sign in"
-msgstr ""
+msgstr "விடுபதிகை"
 
 #: ../qml/SettingsPage.qml:138
 msgid "Sign out"
-msgstr ""
+msgstr "விடுபதிகை"
 
 #: ../qml/SettingsPage.qml:166
 msgid "Parental control"
-msgstr ""
+msgstr "பெற்றோர் கட்டுப்பாடு"
 
 #: ../qml/SettingsPage.qml:172
 msgid "Hide adult-oriented content"
-msgstr ""
+msgstr "வயதுவந்தோர் சார்ந்த உள்ளடக்கத்தை மறைக்கவும்"
 
 #: ../qml/SettingsPage.qml:182
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr ""
+"உங்கள் கடவுச்சொல்லைத் தட்டச்சு செய்வதன் மூலம் NSFW உள்ளடக்கத்தைக் காண்பிப்பதற்கான முழுப் "
+"பொறுப்பையும் எடுத்துக் கொள்ளுங்கள்."
 
 #: ../qml/SettingsPage.qml:207
 msgid "About OpenStore"
-msgstr ""
+msgstr "ஓபன்ச்டோர் பற்றி"
 
 #: ../qml/SettingsPage.qml:223
 msgid "Report an issue"
-msgstr ""
+msgstr "ஒரு சிக்கலைப் புகாரளிக்கவும்"
 
 #: ../qml/SettingsPage.qml:232
 msgid "Additional Icons by"
-msgstr ""
+msgstr "மூலம் கூடுதல் சின்னங்கள்"
 
 #: openstore.desktop.in.h:1
 msgid ""
 "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr ""
+"மென்பொருள்; பயன்பாடுகள்; பயன்பாடுகள்; நிரல்கள்; கடை; சந்தை; நாடகம்; கிளிக்; கண்டுபிடி; "
+"நிறுவு;"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-24 04:30+0000\n"
-"PO-Revision-Date: 2025-01-17 13:01+0000\n"
+"PO-Revision-Date: 2025-01-31 09:02+0000\n"
 "Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/fi/>\n"
@@ -36,12 +36,12 @@ msgstr "Sovellus"
 #: ../qml/AppDetailsPage.qml:153 ../qml/Components/PackageListItem.qml:35
 #: ../qml/Components/PackageTile.qml:80
 msgid "Bookmark"
-msgstr ""
+msgstr "Kirjanmerkki"
 
 #: ../qml/AppDetailsPage.qml:154 ../qml/Components/PackageListItem.qml:36
 #: ../qml/Components/PackageTile.qml:81
 msgid "Web App"
-msgstr "Web-sovellus"
+msgstr "Verkkosovellus"
 
 #: ../qml/AppDetailsPage.qml:164
 #, fuzzy
@@ -131,7 +131,7 @@ msgstr "Uusimman version lataukset"
 
 #: ../qml/AppDetailsPage.qml:537
 msgid "Total downloads"
-msgstr "Latauskerrat"
+msgstr "Latauksia yhteensä"
 
 #: ../qml/AppDetailsPage.qml:546
 msgid "License"
@@ -175,7 +175,7 @@ msgstr "Paketin sisältö"
 
 #: ../qml/AppDetailsPage.qml:722
 msgid "Permissions"
-msgstr "Käyttöoikeudet"
+msgstr "Luvat"
 
 #: ../qml/AppDetailsPage.qml:727
 msgid "Accounts"
@@ -183,7 +183,7 @@ msgstr "Tilit"
 
 #: ../qml/AppDetailsPage.qml:728
 msgid "Audio"
-msgstr "Ääni"
+msgstr "Audio"
 
 #: ../qml/AppDetailsPage.qml:729
 msgid "Bluetooth"
@@ -199,23 +199,23 @@ msgstr "Kamera"
 
 #: ../qml/AppDetailsPage.qml:732
 msgid "Connectivity"
-msgstr "Yhdistettävyys"
+msgstr "Liitettävyys"
 
 #: ../qml/AppDetailsPage.qml:733
 msgid "Contacts"
-msgstr "Yhteystiedot"
+msgstr "Yhteyshenkilöt"
 
 #: ../qml/AppDetailsPage.qml:734
 msgid "Content Exchange Source"
-msgstr ""
+msgstr "Sisällönvaihdon lähde"
 
 #: ../qml/AppDetailsPage.qml:735
 msgid "Content Exchange"
-msgstr ""
+msgstr "Sisällönvaihto"
 
 #: ../qml/AppDetailsPage.qml:736
 msgid "Debug"
-msgstr "Vianjäljitys"
+msgstr "Suorita viankorjaus"
 
 #: ../qml/AppDetailsPage.qml:737
 msgid "History"
@@ -223,7 +223,7 @@ msgstr "Historia"
 
 #: ../qml/AppDetailsPage.qml:738
 msgid "In App Purchases"
-msgstr "Sovelluksen sisäiset ostot"
+msgstr "Sovelluksen sisäiset ostokset"
 
 #: ../qml/AppDetailsPage.qml:739
 msgid "Keep Display On"
@@ -239,7 +239,7 @@ msgstr "Mikrofoni"
 
 #: ../qml/AppDetailsPage.qml:742
 msgid "Read Music Files"
-msgstr "Lue musiikkitiedostot"
+msgstr "Lue musiikkitiedostoja"
 
 #: ../qml/AppDetailsPage.qml:743
 msgid "Music Files"
@@ -247,11 +247,11 @@ msgstr "Musiikkitiedostot"
 
 #: ../qml/AppDetailsPage.qml:744
 msgid "Networking"
-msgstr "Verkko"
+msgstr "Verkostoituminen"
 
 #: ../qml/AppDetailsPage.qml:745
 msgid "Read Picture Files"
-msgstr "Lue kuvatiedostot"
+msgstr "Lue kuvatiedostoja"
 
 #: ../qml/AppDetailsPage.qml:746
 msgid "Picture Files"
@@ -259,19 +259,19 @@ msgstr "Kuvatiedostot"
 
 #: ../qml/AppDetailsPage.qml:747
 msgid "Push Notifications"
-msgstr "Push-ilmoitukset"
+msgstr "Työnnä ilmoitukset"
 
 #: ../qml/AppDetailsPage.qml:748
 msgid "Sensors"
-msgstr ""
+msgstr "Anturit"
 
 #: ../qml/AppDetailsPage.qml:749
 msgid "User Metrics"
-msgstr ""
+msgstr "Käyttäjämittarit"
 
 #: ../qml/AppDetailsPage.qml:750
 msgid "Read Video Files"
-msgstr "Lue videotiedostot"
+msgstr "Lue videotiedostoja"
 
 #: ../qml/AppDetailsPage.qml:751
 msgid "Video Files"
@@ -283,11 +283,11 @@ msgstr "Video"
 
 #: ../qml/AppDetailsPage.qml:753
 msgid "Webview"
-msgstr ""
+msgstr "Webview"
 
 #: ../qml/AppDetailsPage.qml:757
 msgid "Full System Access"
-msgstr "Täysi pääsy järjestelmään"
+msgstr "Täysi järjestelmän käyttöoikeus"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
 #: ../qml/AppDetailsPage.qml:762
@@ -358,7 +358,7 @@ msgstr "Asetukset"
 
 #: ../qml/Components/HeaderMain.qml:40 ../qml/SearchPage.qml:35
 msgid "Search"
-msgstr "Etsi"
+msgstr "Haku"
 
 #: ../qml/Components/HighlightedApp.qml:114
 #: ../qml/Components/ReviewPreview.qml:193
@@ -435,14 +435,14 @@ msgstr "%1/%2 merkkiä"
 
 #: ../qml/Components/ReviewPreview.qml:193
 msgid "Submit"
-msgstr ""
+msgstr "Lähetä"
 
 #: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:148
 #: ../qml/Dialogs/InstallWarningDialog.qml:61
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
 #: ../qml/Dialogs/UninstallDialog.qml:42
 msgid "Cancel"
-msgstr "Peru"
+msgstr "Peruuta"
 
 #: ../qml/Components/ReviewPreview.qml:244
 msgid "%1 review. "
@@ -511,71 +511,63 @@ msgstr ""
 
 #: ../qml/Dialogs/FilterDialog.qml:38
 msgid "Sort By"
-msgstr ""
+msgstr "Lajitteluperuste"
 
 #: ../qml/Dialogs/FilterDialog.qml:45 ../qml/Dialogs/FilterDialog.qml:65
 msgid "Relevance"
-msgstr ""
+msgstr "Merkityksellisyys"
 
 #: ../qml/Dialogs/FilterDialog.qml:46
 msgid "Most Popular"
-msgstr ""
+msgstr "Suosituimmat"
 
 #: ../qml/Dialogs/FilterDialog.qml:47
 msgid "Least Popular"
-msgstr ""
+msgstr "Vähiten suosittu"
 
 #: ../qml/Dialogs/FilterDialog.qml:48
 msgid "Title (A-Z)"
-msgstr ""
+msgstr "Otsikko (A-Z)"
 
 #: ../qml/Dialogs/FilterDialog.qml:49
 msgid "Title (Z-A)"
-msgstr ""
+msgstr "Otsikko (Z-A)"
 
 #: ../qml/Dialogs/FilterDialog.qml:50
 msgid "Newest"
-msgstr ""
+msgstr "Uusin"
 
 #: ../qml/Dialogs/FilterDialog.qml:51
 msgid "Oldest"
-msgstr ""
+msgstr "Vanhin"
 
 #: ../qml/Dialogs/FilterDialog.qml:52
-#, fuzzy
-#| msgid "Update"
 msgid "Latest Update"
-msgstr "Päivitä"
+msgstr "Uusin päivitys"
 
 #: ../qml/Dialogs/FilterDialog.qml:53
-#, fuzzy
-#| msgid "Update"
 msgid "Oldest Update"
-msgstr "Päivitä"
+msgstr "Vanhin päivitys"
 
 #: ../qml/Dialogs/FilterDialog.qml:93
 msgid "Type"
-msgstr ""
+msgstr "Tyyppi"
 
 #: ../qml/Dialogs/FilterDialog.qml:100 ../qml/Dialogs/FilterDialog.qml:115
 msgid "All Types"
-msgstr ""
+msgstr "Kaikki tyypit"
 
 #: ../qml/Dialogs/FilterDialog.qml:101
-#, fuzzy
-#| msgid "My Apps"
 msgid "Apps"
-msgstr "Asennetut"
+msgstr "Sovellukset"
 
 #: ../qml/Dialogs/FilterDialog.qml:102
 msgid "Bookmarks"
-msgstr ""
+msgstr "Kirjanmerkit"
 
 #: ../qml/Dialogs/FilterDialog.qml:103
-#, fuzzy
-#| msgid "Web App"
 msgid "Web Apps"
-msgstr "Web-sovellus"
+msgstr "Verkkosovellukset"
 
 #: ../qml/Dialogs/FilterDialog.qml:140
 msgid "Apply"

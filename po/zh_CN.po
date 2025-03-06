@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: Chinese (Simplified) (OpenStore)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-24 04:30+0000\n"
-"PO-Revision-Date: 2021-07-12 07:14+0000\n"
-"Last-Translator: Enceka <enceka@yeah.net>\n"
-"Language-Team: Chinese (Simplified) <https://translate.ubports.com/projects/"
-"openstore/openstore-app/zh_Hans/>\n"
+"PO-Revision-Date: 2025-03-06 04:15+0000\n"
+"Last-Translator: ChenLei <falsecollector@outlook.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/open-store-io/openstore-app/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.11.3\n"
+"X-Generator: Weblate 5.10.3-dev\n"
 
 #: ../qml/AppDetailsPage.qml:108 ../qml/AppLocalDetailsPage.qml:34
 msgid "App details"
@@ -31,7 +31,7 @@ msgstr "应用"
 #: ../qml/AppDetailsPage.qml:153 ../qml/Components/PackageListItem.qml:35
 #: ../qml/Components/PackageTile.qml:80
 msgid "Bookmark"
-msgstr ""
+msgstr "书签"
 
 #: ../qml/AppDetailsPage.qml:154 ../qml/Components/PackageListItem.qml:36
 #: ../qml/Components/PackageTile.qml:81
@@ -42,11 +42,12 @@ msgstr "Web应用"
 #, fuzzy
 #| msgid "Install"
 msgid "Install Size: "
-msgstr "安装"
+msgstr "安装: "
 
 #: ../qml/AppDetailsPage.qml:165
+#, fuzzy
 msgid "Download Size: "
-msgstr ""
+msgstr "下载: "
 
 #: ../qml/AppDetailsPage.qml:239
 msgid ""
@@ -145,10 +146,8 @@ msgid "Donate to support this app"
 msgstr "捐赠以支持此应用"
 
 #: ../qml/AppDetailsPage.qml:598
-#, fuzzy
-#| msgid "Rate this app"
 msgid "Help translate this app"
-msgstr "支持此应用"
+msgstr "帮助翻译此应用"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
 #: ../qml/AppDetailsPage.qml:614
@@ -328,10 +327,8 @@ msgid "Categories"
 msgstr "分类"
 
 #: ../qml/CategoriesPage.qml:84
-#, fuzzy
-#| msgid "Nothing here yet"
 msgid "Nothing to see here yet!"
-msgstr "这里还没有什么"
+msgstr "这里目前什么都没有"
 
 #: ../qml/Components/BottomEdgePageStack.qml:102
 msgid "Back"
@@ -426,7 +423,7 @@ msgstr "%1到%2个字符"
 
 #: ../qml/Components/ReviewPreview.qml:193
 msgid "Submit"
-msgstr ""
+msgstr "提交"
 
 #: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:148
 #: ../qml/Dialogs/InstallWarningDialog.qml:61
@@ -442,7 +439,7 @@ msgstr[0] "%1 评论 "
 
 #: ../qml/Components/ReviewPreview.qml:252
 msgid "Edit Review"
-msgstr ""
+msgstr "编辑评论"
 
 #: ../qml/Components/ReviewPreview.qml:255
 msgid "Review app"
@@ -499,90 +496,83 @@ msgstr "以后再说"
 
 #: ../qml/Dialogs/FilterDialog.qml:26
 msgid "Filters and Sorting"
-msgstr ""
+msgstr "过滤器和排序"
 
 #: ../qml/Dialogs/FilterDialog.qml:38
 msgid "Sort By"
-msgstr ""
+msgstr "排序"
 
 #: ../qml/Dialogs/FilterDialog.qml:45 ../qml/Dialogs/FilterDialog.qml:65
 msgid "Relevance"
-msgstr ""
+msgstr "相关性"
 
 #: ../qml/Dialogs/FilterDialog.qml:46
 msgid "Most Popular"
-msgstr ""
+msgstr "最受欢迎"
 
 #: ../qml/Dialogs/FilterDialog.qml:47
 msgid "Least Popular"
-msgstr ""
+msgstr "最不受欢迎"
 
 #: ../qml/Dialogs/FilterDialog.qml:48
 msgid "Title (A-Z)"
-msgstr ""
+msgstr "标题 (A-Z)"
 
 #: ../qml/Dialogs/FilterDialog.qml:49
 msgid "Title (Z-A)"
-msgstr ""
+msgstr "标题 (Z-A)"
 
 #: ../qml/Dialogs/FilterDialog.qml:50
 msgid "Newest"
-msgstr ""
+msgstr "最新"
 
 #: ../qml/Dialogs/FilterDialog.qml:51
 msgid "Oldest"
-msgstr ""
+msgstr "历史"
 
 #: ../qml/Dialogs/FilterDialog.qml:52
-#, fuzzy
-#| msgid "Update"
 msgid "Latest Update"
-msgstr "更新"
+msgstr "最后更新"
 
 #: ../qml/Dialogs/FilterDialog.qml:53
-#, fuzzy
-#| msgid "Update"
 msgid "Oldest Update"
-msgstr "更新"
+msgstr "历史更新"
 
 #: ../qml/Dialogs/FilterDialog.qml:93
 msgid "Type"
-msgstr ""
+msgstr "类型"
 
 #: ../qml/Dialogs/FilterDialog.qml:100 ../qml/Dialogs/FilterDialog.qml:115
 msgid "All Types"
-msgstr ""
+msgstr "全部类型"
 
 #: ../qml/Dialogs/FilterDialog.qml:101
-#, fuzzy
-#| msgid "My Apps"
 msgid "Apps"
-msgstr "我的应用程序"
+msgstr "我的应用"
 
 #: ../qml/Dialogs/FilterDialog.qml:102
 msgid "Bookmarks"
-msgstr ""
+msgstr "书签"
 
 #: ../qml/Dialogs/FilterDialog.qml:103
-#, fuzzy
-#| msgid "Web App"
 msgid "Web Apps"
 msgstr "Web应用"
 
 #: ../qml/Dialogs/FilterDialog.qml:140
 msgid "Apply"
-msgstr ""
+msgstr "应用"
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:27
 msgid "Install unknown app?"
-msgstr "安装未知的应用程序吗？"
+msgstr "要安装未知的应用程序吗？"
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:28
 msgid ""
 "Do you want to install the unknown app %1? Installing apps from outside the "
 "OpenStore is not recommended and can potentially harm your system. Only "
 "install this app if you got it from a trusted source."
-msgstr ""
+msgstr "是否安装未知应用%1？请注意：从OpenStore以外的渠道安装应用可能存在风险，可能导"
+"致系统损坏。请务必确认该应用来源可信后再进行安装。"
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:51
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
@@ -591,19 +581,18 @@ msgstr "我明白此风险"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:26
 msgid "Review confirmation"
-msgstr ""
+msgstr "审核确认"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:27
 msgid ""
 "Would you like to contact the publisher or file a bug instead? By opening a "
 "discussion with the developer(s) you could be helping to improve this app."
-msgstr ""
+msgstr "您想联系出版商或提交一个错误报告吗？通过与开发者进行讨论，您可能有助于改进此"
+"应用。"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:37
-#, fuzzy
-#| msgid "Get support for this app"
 msgid "Get support"
-msgstr "获得对此应用的支持"
+msgstr "获得支持"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:47
 msgid "Post my review"

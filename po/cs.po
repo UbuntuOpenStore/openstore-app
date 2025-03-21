@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-24 04:30+0000\n"
-"PO-Revision-Date: 2024-08-14 07:09+0000\n"
+"PO-Revision-Date: 2025-03-21 20:13+0000\n"
 "Last-Translator: Jozef Mlich <jmlich83@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/cs/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
-"X-Generator: Weblate 5.7-dev\n"
+"X-Generator: Weblate 5.11-dev\n"
 
 #: ../qml/AppDetailsPage.qml:108 ../qml/AppLocalDetailsPage.qml:34
 msgid "App details"
@@ -123,7 +123,7 @@ msgstr "Poprvé vydáno"
 
 #: ../qml/AppDetailsPage.qml:528
 msgid "Downloads of the latest version"
-msgstr "Stáhnout nejnovější verzi"
+msgstr "Počet stážení nejnovější verzi"
 
 #: ../qml/AppDetailsPage.qml:537
 msgid "Total downloads"

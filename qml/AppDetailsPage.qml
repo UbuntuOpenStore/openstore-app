@@ -232,7 +232,7 @@ Page {
             }
 
             ListItem {
-                visible: app.isLocalVersionSideloaded && app.channelMatchesOS
+                visible: app.isLocalVersionSideloaded && app.frameworkSupported
                 height: sideloadedLayout.height
                 ListItemLayout {
                     id: sideloadedLayout
@@ -256,7 +256,7 @@ Page {
                     anchors.fill: parent
                     anchors.margins: units.gu(2)
                     spacing: units.gu(2)
-                    visible: !PlatformIntegration.clickInstaller.busy && !PackagesCache.updatingCache && app.channelMatchesOS
+                    visible: !PlatformIntegration.clickInstaller.busy && !PackagesCache.updatingCache && app.frameworkSupported
 
                     Button {
                         Layout.fillWidth: true
@@ -329,7 +329,7 @@ Page {
 
                     onVisibleChanged: {
                         // The page is automatically closed for channel-incompatible apps when they are removed.
-                        if (app && !app.installed && !app.channelMatchesOS) {
+                        if (app && !app.installed && !app.frameworkSupported) {
                             pageStack.pop();
                         }
                     }
@@ -371,7 +371,7 @@ Page {
                     subtitle.text: i18n.tr("This app is not compatible with your system.")
                     subtitle.maximumLineCount: Number.MAX_VALUE
                     subtitle.wrapMode: Text.WordWrap
-                    visible: !app.channelMatchesOS && !PlatformIntegration.clickInstaller.busy && !PackagesCache.updatingCache
+                    visible: !app.frameworkSupported && !PlatformIntegration.clickInstaller.busy && !PackagesCache.updatingCache
 
                     Icon {
                         SlotsLayout.position: SlotsLayout.Leading
@@ -447,7 +447,7 @@ Page {
             }
 
             Components.ReviewPreview {
-                visible: app.channelMatchesOS
+                visible: app.frameworkSupported
                 reviews: app.reviews
 
                 onRatingUpdated: {

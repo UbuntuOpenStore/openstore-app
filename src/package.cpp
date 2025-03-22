@@ -89,14 +89,16 @@ void PackageItem::fillData(const QVariantMap &json)
     m_name = json.value("name").toString();
     m_publisher = json.value("publisher").toString();
 
+    QStringList supportedFrameworks = PlatformIntegration::instance()->supportedFrameworks();
+
     QList<QVariant> downloads = json.value("downloads").toList();
     m_version = json.value("version").toString();
     m_revision = json.value("revision").toInt();
     Q_FOREACH (QVariant download, downloads) {
         QMap<QString, QVariant> downloadData = download.toMap();
-
         if (
-            downloadData.value("channel") == PlatformIntegration::instance()->systemCodename() &&
+            downloadData.value("channel").toString() == QStringLiteral("focal") &&
+            supportedFrameworks.contains(downloadData.value("framework").toString()) &&
             (
                 downloadData.value("architecture") == PlatformIntegration::instance()->supportedArchitecture() ||
                 downloadData.value("architecture") == QStringLiteral("all")
@@ -129,6 +131,24 @@ void PackageItem::fillData(const QVariantMap &json)
     m_updatedDate = json.value("updated_date").toDateTime();
     m_channels = json.value("channels").toStringList();
     m_types = json.value("types").toStringList();
+
+    QStringList deviceCompatibilities = json.value("device_compatibilities").toStringList();
+    m_matchingFramework = false;
+    for (QString deviceCompatibility : deviceCompatibilities) {
+        QStringList parts = deviceCompatibility.split(":");
+
+        // We only use one channel
+        if (parts[0] != "focal") {
+            continue;
+        }
+
+        if (parts.size() == 3) {
+            m_frameworks << parts[2];
+            if (supportedFrameworks.contains(parts[2])) {
+                m_matchingFramework = true;
+            }
+        }
+    }
 
     QList<PackageItem::HookStruct> hooksList;
     if (json.contains("manifest") && json.value("manifest").toMap().contains("hooks")) {

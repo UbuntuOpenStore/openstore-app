@@ -64,7 +64,7 @@
     Q_PROPERTY(QDateTime updatedDate READ updatedDate NOTIFY updated)
     Q_PROPERTY(QStringList channels READ channels NOTIFY updated)
     Q_PROPERTY(QStringList types READ types NOTIFY updated)
-    Q_PROPERTY(bool channelMatchesOS READ channelMatchesOS NOTIFY updated)
+    Q_PROPERTY(bool frameworkSupported READ frameworkSupported NOTIFY updated)
     Q_PROPERTY(ReviewsModel * reviews MEMBER m_reviews NOTIFY updated)
     Q_PROPERTY(Ratings * ratings MEMBER m_ratings NOTIFY updated)
 
@@ -124,8 +124,9 @@ public:
     QDateTime publishedDate() const { return m_publishedDate; }
     QDateTime updatedDate() const { return m_updatedDate; }
     QStringList channels() const { return m_channels; }
+    QStringList frameworks() const { return m_frameworks; }
     QStringList types() const { return m_types; }
-    bool channelMatchesOS() const {  return m_channels.contains(PlatformIntegration::instance()->systemCodename()); };
+    bool frameworkSupported() const {  return m_matchingFramework; };
 
     Q_INVOKABLE QStringList permissions(int index) const { return m_hooks.at(index).permissions; }
     Q_INVOKABLE Hooks hooks(int index) const { return m_hooks.at(index).hooks; }
@@ -182,6 +183,8 @@ private:
     QDateTime m_publishedDate;
     QDateTime m_updatedDate;
     QStringList m_channels;
+    QStringList m_frameworks;
+    bool m_matchingFramework;
     QStringList m_types;
     QPointer<ReviewsModel> m_reviews;
     QPointer<Ratings> m_ratings;

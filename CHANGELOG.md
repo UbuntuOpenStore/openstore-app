@@ -1,5 +1,10 @@
 # OpenStore App Changelog
 
+## v3.6.0
+
+- Fixed apps not installing on Nobel - thanks Marius!
+- Translation update, thank you translators!
+
 ## v3.5.2
 
 - Fixed install spinner when installing external clicks - thanks Kugi!

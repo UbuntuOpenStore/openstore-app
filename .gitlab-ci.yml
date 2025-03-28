@@ -68,7 +68,7 @@ publish-arm64-focal:
     - if: $CI_COMMIT_TAG
   script:
     - clickable build
-    - clickable publish
+    - clickable publish "$CI_COMMIT_MESSAGE"
   stage: deploy
 
 publish-armhf-focal:

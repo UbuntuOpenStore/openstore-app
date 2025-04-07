@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-28 04:55+0000\n"
-"PO-Revision-Date: 2024-04-20 10:07+0000\n"
+"PO-Revision-Date: 2025-04-07 11:09+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/nl/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.11-dev\n"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
 #: ../qml/AppDetailsPage.qml:108 ../qml/AppLocalDetailsPage.qml:34
@@ -57,9 +57,9 @@ msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
 msgstr ""
-"De geïnstalleerde versie van deze app is niet afkomstig van de OpenStore-"
-"server. Je kunt de recentste stabiele update installeren door op de knop "
-"hieronder te drukken."
+"De geïnstalleerde versie van deze app is niet afkomstig uit de OpenStore. Je "
+"kunt de nieuwste stabiele versie installeren door op onderstaande knop te "
+"drukken."
 
 #: ../qml/AppDetailsPage.qml:264 ../qml/AppLocalDetailsPage.qml:104
 #: ../qml/Components/HighlightedApp.qml:117
@@ -92,17 +92,17 @@ msgid ""
 "see below for details."
 msgstr ""
 "Deze app heeft toegang tot afgeschermde delen van het systeem en je "
-"gegevens. Bekijk hieronder de details."
+"gegevens. Bekijk hieronder wat dat inhoudt."
 
 #: ../qml/AppDetailsPage.qml:407
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
-"Deze app heeft toegang tot afgeschermde systeemgegevens. Bekijk hieronder de "
-"details."
+"Deze app heeft toegang tot afgeschermde systeemgegevens - bekijk hieronder "
+"wat dat inhoudt."
 
 #: ../qml/AppDetailsPage.qml:432
 msgid "Description"
-msgstr "Omschrijving"
+msgstr "Beschrijving"
 
 #. TRANSLATORS: Title of the changelog section
 #: ../qml/AppDetailsPage.qml:470
@@ -131,7 +131,7 @@ msgstr "Aantal downloads van nieuwste versie"
 
 #: ../qml/AppDetailsPage.qml:537
 msgid "Total downloads"
-msgstr "Totaalaantal downloads"
+msgstr "Totaal aantal downloads"
 
 #: ../qml/AppDetailsPage.qml:546
 msgid "License"
@@ -151,7 +151,7 @@ msgstr "Ondersteuning bij deze app"
 
 #: ../qml/AppDetailsPage.qml:585
 msgid "Donate to support this app"
-msgstr "Doneer om deze app te ondersteunen"
+msgstr "Doneer om de ontwikkeling van deze app te steunen"
 
 #: ../qml/AppDetailsPage.qml:598
 msgid "Help translate this app"
@@ -294,11 +294,11 @@ msgstr "geen vereiste"
 
 #: ../qml/AppDetailsPage.qml:798
 msgid "Read paths"
-msgstr "Leespaden"
+msgstr "Leeslocaties"
 
 #: ../qml/AppDetailsPage.qml:815
 msgid "Write paths"
-msgstr "Schrijfpaden"
+msgstr "Schrijflocaties"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
 #: ../qml/AppDetailsPage.qml:886
@@ -329,8 +329,8 @@ msgid ""
 "You are currently offline and the app details could not be fetched from the "
 "OpenStore"
 msgstr ""
-"De appinformatie kan niet worden opgehaald omdat je niet verbonden bent met "
-"internet"
+"De appinformatie kan niet worden opgehaald, omdat er geen internetverbinding "
+"is"
 
 #: ../qml/CategoriesPage.qml:39
 msgid "Categories"
@@ -374,7 +374,7 @@ msgstr "Applicatie"
 #. TRANSLATORS: This is a platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: ../qml/Components/HookIcon.qml:68
 msgid "URL Handler"
-msgstr "URL-afhandeling"
+msgstr "Url-afhandeling"
 
 #. TRANSLATORS: This is a platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
 #: ../qml/Components/HookIcon.qml:82
@@ -401,7 +401,7 @@ msgstr "✓ Geïnstalleerd"
 
 #: ../qml/Components/ReviewPreview.qml:93
 msgid "Something went wrong..."
-msgstr "Er is iets misgegaan..."
+msgstr "Er is iets misgegaan…"
 
 #: ../qml/Components/ReviewPreview.qml:99
 msgid "Error Posting Review"
@@ -409,7 +409,7 @@ msgstr "De recensie kan niet worden geplaatst"
 
 #: ../qml/Components/ReviewPreview.qml:113
 msgid "Review Posted Correctly"
-msgstr "De recensie is geplaatst"
+msgstr "Recensie geplaatst"
 
 #: ../qml/Components/ReviewPreview.qml:114
 msgid "Your review has been posted successfully."
@@ -417,7 +417,7 @@ msgstr "Je recensie is geplaatst."
 
 #: ../qml/Components/ReviewPreview.qml:128
 msgid "Loading..."
-msgstr "Bezig met laden..."
+msgstr "Bezig met laden…"
 
 #: ../qml/Components/ReviewPreview.qml:128
 msgid "Rate this app"
@@ -495,7 +495,9 @@ msgstr "Doneren"
 
 #: ../qml/Dialogs/DonationDialog.qml:26
 msgid "Would you like to support this app with a donation to the developer?"
-msgstr "Wil je deze app ondersteunen middels een donatie aan de ontwikkelaar?"
+msgstr ""
+"Wil je de ontwikkeling van deze app steunen door te doneren aan de "
+"ontwikkelaar?"
 
 #: ../qml/Dialogs/DonationDialog.qml:32
 msgid "Donate now"
@@ -507,7 +509,7 @@ msgstr "Misschien later"
 
 #: ../qml/Dialogs/FilterDialog.qml:26
 msgid "Filters and Sorting"
-msgstr "Filters en sortering"
+msgstr "Filteren en sorteren"
 
 #: ../qml/Dialogs/FilterDialog.qml:38
 msgid "Sort By"
@@ -527,11 +529,11 @@ msgstr "Minst populair"
 
 #: ../qml/Dialogs/FilterDialog.qml:48
 msgid "Title (A-Z)"
-msgstr "Titel (A-Z)"
+msgstr "Titel (A–Z)"
 
 #: ../qml/Dialogs/FilterDialog.qml:49
 msgid "Title (Z-A)"
-msgstr "Titel (Z-A)"
+msgstr "Titel (Z–A)"
 
 #: ../qml/Dialogs/FilterDialog.qml:50
 msgid "Newest"
@@ -583,9 +585,9 @@ msgid ""
 "OpenStore is not recommended and can potentially harm your system. Only "
 "install this app if you got it from a trusted source."
 msgstr ""
-"Weet je zeker dat je ‘%1’ wilt installeren? Installatie buiten OpenStore om "
-"wordt afgeraden en kan mogelijk leiden tot systeembeschadiging. Installeer "
-"zulke apps alléén als de bron 100% betrouwbaar is."
+"Let op: installatie buiten OpenStore om wordt afgeraden en kan mogelijk "
+"leiden tot systeembeschadiging. Installeer zulke apps alléén als de bron "
+"100% betrouwbaar is. Weet je zeker dat je ‘%1’ wilt installeren?"
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:51
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
@@ -602,7 +604,7 @@ msgid ""
 "discussion with the developer(s) you could be helping to improve this app."
 msgstr ""
 "Wil je contact opnemen met de uitgever of een bug melden? Door het gesprek "
-"met de ontwikkelaar(s) aan te gaan help je om de app beter te maken."
+"met de ontwikkelaar(s) aan te gaan, help je om de app beter te maken."
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:37
 msgid "Get support"
@@ -620,14 +622,15 @@ msgid ""
 "anything bad that might happen to your device or data from installing this "
 "app."
 msgstr ""
-"Deze app heeft toegang tot afgeschermde delen van het systeem en je gegevens "
-"- hiermee verhoog je het risico op systeembeschadiging. De OpenStore-"
-"beheerders hebben de code nagekeken, maar zijn niet verantwoordelijk voor "
-"eventuele schade ontstaan aan je apparaat of gegevens door deze app."
+"Deze app heeft toegang tot afgeschermde delen van het systeem en je "
+"gegevens, waardoor de kans op systeembeschadiging aanzienlijk toeneemt. De "
+"OpenStore-beheerders hebben de code nagekeken, maar zijn niet "
+"verantwoordelijk voor eventuele schade aan je apparaat of gegevens door het "
+"gebruik van deze app."
 
 #: ../qml/Dialogs/UninstallDialog.qml:25
 msgid "Remove package"
-msgstr "Pakket verwijderen"
+msgstr "App verwijderen"
 
 #: ../qml/Dialogs/UninstallDialog.qml:26
 msgid "Do you want to remove %1?"
@@ -747,7 +750,7 @@ msgstr "Installatie mislukt (fout %1)"
 
 #: ../qml/SearchPage.qml:48
 msgid "Search in OpenStore..."
-msgstr "OpenStore doorzoeken..."
+msgstr "OpenStore doorzoeken…"
 
 #: ../qml/SettingsPage.qml:113
 msgid "OpenStore Account"

@@ -8,17 +8,17 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-28 04:55+0000\n"
-"PO-Revision-Date: 2022-11-20 12:16+0000\n"
-"Last-Translator: Артём Котлубай Сергеевич <artemkotlubai@yandex.ru>\n"
-"Language-Team: Russian <https://translate.ubports.com/projects/openstore/"
+"PO-Revision-Date: 2025-04-21 21:01+0000\n"
+"Last-Translator: Yurt Page <yurtpage@gmail.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.11.3\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.11.1-dev\n"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
 #: ../qml/AppDetailsPage.qml:108 ../qml/AppLocalDetailsPage.qml:34
@@ -38,7 +38,7 @@ msgstr "Приложение"
 #: ../qml/AppDetailsPage.qml:153 ../qml/Components/PackageListItem.qml:35
 #: ../qml/Components/PackageTile.qml:80
 msgid "Bookmark"
-msgstr ""
+msgstr "Закладка"
 
 #: ../qml/AppDetailsPage.qml:154 ../qml/Components/PackageListItem.qml:36
 #: ../qml/Components/PackageTile.qml:81
@@ -46,14 +46,12 @@ msgid "Web App"
 msgstr "Сетевое приложение"
 
 #: ../qml/AppDetailsPage.qml:164
-#, fuzzy
-#| msgid "Install"
 msgid "Install Size: "
-msgstr "Установить"
+msgstr "Установить размер: "
 
 #: ../qml/AppDetailsPage.qml:165
 msgid "Download Size: "
-msgstr ""
+msgstr "Скачанный размер: "
 
 #: ../qml/AppDetailsPage.qml:239
 msgid ""
@@ -129,11 +127,11 @@ msgstr "Впервые выпущено"
 
 #: ../qml/AppDetailsPage.qml:528
 msgid "Downloads of the latest version"
-msgstr "Загрузка последней версии"
+msgstr "Скачивания последней версии"
 
 #: ../qml/AppDetailsPage.qml:537
 msgid "Total downloads"
-msgstr "Все загрузки"
+msgstr "Всего скачиваний"
 
 #: ../qml/AppDetailsPage.qml:546
 msgid "License"
@@ -156,10 +154,8 @@ msgid "Donate to support this app"
 msgstr "Пожертвуйте, чтобы поддержать это приложение"
 
 #: ../qml/AppDetailsPage.qml:598
-#, fuzzy
-#| msgid "Rate this app"
 msgid "Help translate this app"
-msgstr "Оцените это приложение"
+msgstr "Помогите перевести приложение"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
 #: ../qml/AppDetailsPage.qml:614
@@ -341,10 +337,8 @@ msgid "Categories"
 msgstr "Категории"
 
 #: ../qml/CategoriesPage.qml:84
-#, fuzzy
-#| msgid "Nothing here yet"
 msgid "Nothing to see here yet!"
-msgstr "Ничего не найдено"
+msgstr "Ничего ещё нет!"
 
 #: ../qml/Components/BottomEdgePageStack.qml:102
 msgid "Back"
@@ -439,7 +433,7 @@ msgstr "%1/%2 символов"
 
 #: ../qml/Components/ReviewPreview.qml:193
 msgid "Submit"
-msgstr ""
+msgstr "Отправить"
 
 #: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:148
 #: ../qml/Dialogs/InstallWarningDialog.qml:61
@@ -457,7 +451,7 @@ msgstr[2] "%1 отзывов. "
 
 #: ../qml/Components/ReviewPreview.qml:252
 msgid "Edit Review"
-msgstr ""
+msgstr "Изменить отзыв"
 
 #: ../qml/Components/ReviewPreview.qml:255
 msgid "Review app"
@@ -515,79 +509,71 @@ msgstr "Может быть позже"
 
 #: ../qml/Dialogs/FilterDialog.qml:26
 msgid "Filters and Sorting"
-msgstr ""
+msgstr "Фильтры и сортировка"
 
 #: ../qml/Dialogs/FilterDialog.qml:38
 msgid "Sort By"
-msgstr ""
+msgstr "Сортировка по"
 
 #: ../qml/Dialogs/FilterDialog.qml:45 ../qml/Dialogs/FilterDialog.qml:65
 msgid "Relevance"
-msgstr ""
+msgstr "Релевантности"
 
 #: ../qml/Dialogs/FilterDialog.qml:46
 msgid "Most Popular"
-msgstr ""
+msgstr "Наипопулярнейшие"
 
 #: ../qml/Dialogs/FilterDialog.qml:47
 msgid "Least Popular"
-msgstr ""
+msgstr "Менее популярные"
 
 #: ../qml/Dialogs/FilterDialog.qml:48
 msgid "Title (A-Z)"
-msgstr ""
+msgstr "Название (A-Я)"
 
 #: ../qml/Dialogs/FilterDialog.qml:49
 msgid "Title (Z-A)"
-msgstr ""
+msgstr "Название (A-Я)"
 
 #: ../qml/Dialogs/FilterDialog.qml:50
 msgid "Newest"
-msgstr ""
+msgstr "Новейшие"
 
 #: ../qml/Dialogs/FilterDialog.qml:51
 msgid "Oldest"
-msgstr ""
+msgstr "Старейшие"
 
 #: ../qml/Dialogs/FilterDialog.qml:52
-#, fuzzy
-#| msgid "Update"
 msgid "Latest Update"
-msgstr "Обновить"
+msgstr "Последнее обновление"
 
 #: ../qml/Dialogs/FilterDialog.qml:53
-#, fuzzy
-#| msgid "Update"
 msgid "Oldest Update"
-msgstr "Обновить"
+msgstr "Старейшее обновление"
 
 #: ../qml/Dialogs/FilterDialog.qml:93
 msgid "Type"
-msgstr ""
+msgstr "Тип"
 
 #: ../qml/Dialogs/FilterDialog.qml:100 ../qml/Dialogs/FilterDialog.qml:115
 msgid "All Types"
-msgstr ""
+msgstr "Все типы"
 
 #: ../qml/Dialogs/FilterDialog.qml:101
-#, fuzzy
-#| msgid "My Apps"
 msgid "Apps"
-msgstr "Мои приложения"
+msgstr "Приложения"
 
 #: ../qml/Dialogs/FilterDialog.qml:102
 msgid "Bookmarks"
-msgstr ""
+msgstr "Закладки"
 
 #: ../qml/Dialogs/FilterDialog.qml:103
-#, fuzzy
-#| msgid "Web App"
 msgid "Web Apps"
-msgstr "Сетевое приложение"
+msgstr "Веб приложение"
 
 #: ../qml/Dialogs/FilterDialog.qml:140
 msgid "Apply"
-msgstr ""
+msgstr "Подтвердить"
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:27
 msgid "Install unknown app?"
@@ -599,6 +585,9 @@ msgid ""
 "OpenStore is not recommended and can potentially harm your system. Only "
 "install this app if you got it from a trusted source."
 msgstr ""
+"Вы хотите установить неизвестное приложение %1? Установка приложений извне "
+"OpenStore не рекомендуется и может повредить вашу систему. Установите это "
+"приложение только если вы получили его из надёжного источника."
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:51
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
@@ -607,23 +596,23 @@ msgstr "Я понимаю последствия"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:26
 msgid "Review confirmation"
-msgstr ""
+msgstr "Подтверждение отзыва"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:27
 msgid ""
 "Would you like to contact the publisher or file a bug instead? By opening a "
 "discussion with the developer(s) you could be helping to improve this app."
 msgstr ""
+"Хотели бы вы вместо этого связаться с издателем или пожаловаться на ошибку? "
+"Начав обсуждение с разработчиком, вы сможете помочь улучшить это приложение."
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:37
-#, fuzzy
-#| msgid "Get support for this app"
 msgid "Get support"
-msgstr "Получить поддержку для этого приложения"
+msgstr "Получить поддержку"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:47
 msgid "Post my review"
-msgstr ""
+msgstr "Разместить отзыв"
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
 msgid ""
@@ -648,10 +637,8 @@ msgid "Do you want to remove %1?"
 msgstr "Вы действительно хотите удалить %1?"
 
 #: ../qml/DiscoverPage.qml:40
-#, fuzzy
-#| msgid "OpenStore team"
 msgid "OpenStore"
-msgstr "Команда OpenStore"
+msgstr "OpenStore"
 
 #: ../qml/DiscoverPage.qml:76
 msgid "by %1"
@@ -659,7 +646,7 @@ msgstr "от %1"
 
 #: ../qml/DiscoverPage.qml:130
 msgid "You are currently offline"
-msgstr ""
+msgstr "Вы сейчас не в сети"
 
 #: ../qml/DiscoverPage.qml:146
 msgid "OpenStore update available"
@@ -734,7 +721,7 @@ msgstr "Отсутствуют приложения, установленные 
 
 #: ../qml/Main.qml:319 ../qml/SearchPage.qml:55
 msgid "Filters"
-msgstr ""
+msgstr "Фильтры"
 
 #: ../qml/Main.qml:366
 msgid "App installed"
@@ -808,7 +795,7 @@ msgstr "Дополнительные значки от"
 #: openstore.desktop.in.h:1
 msgid ""
 "software;apps;applications;programs;store;market;play;click;discover;install;"
-msgstr ""
+msgstr "по;приложения;программы;магазин;играть;найти;установить;"
 
 #~ msgid "Scope"
 #~ msgstr "Линза (Scope)"

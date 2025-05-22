@@ -1,5 +1,10 @@
 # OpenStore App Changelog
 
+## v3.6.1
+
+- Added custom header for api requests
+- Translation update, thank you translators!
+
 ## v3.6.0
 
 - Fixed apps not installing on Nobel - thanks Marius!

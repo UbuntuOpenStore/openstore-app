@@ -88,6 +88,8 @@ QNetworkReply *OpenStoreNetworkManager::sendRequest(QNetworkRequest request)
 
     url.setQuery(q);
     request.setUrl(url);
+    request.setRawHeader("X-Source", "openstore-app");
+
 
     // qDebug() << "Firing request for" << request.url();
 
@@ -97,6 +99,7 @@ QNetworkReply *OpenStoreNetworkManager::sendRequest(QNetworkRequest request)
 QNetworkReply *OpenStoreNetworkManager::postRequest(QNetworkRequest request, QJsonObject query)
 {
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    request.setRawHeader("X-Source", "openstore-app");
 
     query.insert("frameworks", PlatformIntegration::instance()->supportedFrameworks().join(','));
     query.insert("architecture", PlatformIntegration::instance()->supportedArchitecture());
@@ -245,6 +248,7 @@ void OpenStoreNetworkManager::postReview(const QString &signature,
 
     QNetworkRequest request(url);
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    request.setRawHeader("X-Source", "openstore-app");
 
     QNetworkReply *reply;
 

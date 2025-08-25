@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-28 04:55+0000\n"
-"PO-Revision-Date: 2022-05-03 04:46+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
-"Language-Team: Norwegian Bokmål <https://translate.ubports.com/projects/"
-"openstore/openstore-app/nb_NO/>\n"
+"PO-Revision-Date: 2025-08-26 18:02+0000\n"
+"Last-Translator: Ida Brenna <ida@larald.no>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
+"open-store-io/openstore-app/nb_NO/>\n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.11.3\n"
+"X-Generator: Weblate 5.13\n"
 
 #: ../qml/AppDetailsPage.qml:108 ../qml/AppLocalDetailsPage.qml:34
 msgid "App details"
@@ -36,7 +36,7 @@ msgstr "Program"
 #: ../qml/AppDetailsPage.qml:153 ../qml/Components/PackageListItem.qml:35
 #: ../qml/Components/PackageTile.qml:80
 msgid "Bookmark"
-msgstr ""
+msgstr "Bokmerke"
 
 #: ../qml/AppDetailsPage.qml:154 ../qml/Components/PackageListItem.qml:36
 #: ../qml/Components/PackageTile.qml:81
@@ -44,14 +44,12 @@ msgid "Web App"
 msgstr "Nett-program"
 
 #: ../qml/AppDetailsPage.qml:164
-#, fuzzy
-#| msgid "Install"
 msgid "Install Size: "
-msgstr "Installer"
+msgstr "Installasjonens størrelse: "
 
 #: ../qml/AppDetailsPage.qml:165
 msgid "Download Size: "
-msgstr ""
+msgstr "Nedlastingens størrelse: "
 
 #: ../qml/AppDetailsPage.qml:239
 msgid ""
@@ -155,10 +153,8 @@ msgid "Donate to support this app"
 msgstr "Gi pengestøtte til utvikling av dette programmet"
 
 #: ../qml/AppDetailsPage.qml:598
-#, fuzzy
-#| msgid "Rate this app"
 msgid "Help translate this app"
-msgstr "Vurder dette programmet"
+msgstr "Bidra til å oversette denne appen"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
 #: ../qml/AppDetailsPage.qml:614
@@ -340,10 +336,8 @@ msgid "Categories"
 msgstr "Kategorier"
 
 #: ../qml/CategoriesPage.qml:84
-#, fuzzy
-#| msgid "Nothing here yet"
 msgid "Nothing to see here yet!"
-msgstr "Ingenting her ennå"
+msgstr "Ingenting å se her ennå!"
 
 #: ../qml/Components/BottomEdgePageStack.qml:102
 msgid "Back"
@@ -413,14 +407,12 @@ msgid "Error Posting Review"
 msgstr "Klarte ikke å publisere vurdering"
 
 #: ../qml/Components/ReviewPreview.qml:113
-#, fuzzy
 msgid "Review Posted Correctly"
-msgstr "Vurdering innsendt"
+msgstr "Anmeldelsen ble riktig publisert"
 
 #: ../qml/Components/ReviewPreview.qml:114
-#, fuzzy
 msgid "Your review has been posted successfully."
-msgstr "Din anmeldelse har blitt postet."
+msgstr "Din anmeldelse ble riktig publisert."
 
 #: ../qml/Components/ReviewPreview.qml:128
 msgid "Loading..."
@@ -440,7 +432,7 @@ msgstr "%1/%2 tegn"
 
 #: ../qml/Components/ReviewPreview.qml:193
 msgid "Submit"
-msgstr ""
+msgstr "Send"
 
 #: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:148
 #: ../qml/Dialogs/InstallWarningDialog.qml:61
@@ -457,7 +449,7 @@ msgstr[1] "%1 vurderinger. "
 
 #: ../qml/Components/ReviewPreview.qml:252
 msgid "Edit Review"
-msgstr ""
+msgstr "Rediger anmeldelsen"
 
 #: ../qml/Components/ReviewPreview.qml:255
 msgid "Review app"
@@ -514,79 +506,71 @@ msgstr "Kanskje senere"
 
 #: ../qml/Dialogs/FilterDialog.qml:26
 msgid "Filters and Sorting"
-msgstr ""
+msgstr "Filtre og sortering"
 
 #: ../qml/Dialogs/FilterDialog.qml:38
 msgid "Sort By"
-msgstr ""
+msgstr "Sorter etter"
 
 #: ../qml/Dialogs/FilterDialog.qml:45 ../qml/Dialogs/FilterDialog.qml:65
 msgid "Relevance"
-msgstr ""
+msgstr "Relevans"
 
 #: ../qml/Dialogs/FilterDialog.qml:46
 msgid "Most Popular"
-msgstr ""
+msgstr "Mest populær"
 
 #: ../qml/Dialogs/FilterDialog.qml:47
 msgid "Least Popular"
-msgstr ""
+msgstr "Minst populær"
 
 #: ../qml/Dialogs/FilterDialog.qml:48
 msgid "Title (A-Z)"
-msgstr ""
+msgstr "Tittel (A-Z)"
 
 #: ../qml/Dialogs/FilterDialog.qml:49
 msgid "Title (Z-A)"
-msgstr ""
+msgstr "Tittel (Z-A)"
 
 #: ../qml/Dialogs/FilterDialog.qml:50
 msgid "Newest"
-msgstr ""
+msgstr "Nyeste"
 
 #: ../qml/Dialogs/FilterDialog.qml:51
 msgid "Oldest"
-msgstr ""
+msgstr "Eldste"
 
 #: ../qml/Dialogs/FilterDialog.qml:52
-#, fuzzy
-#| msgid "Update"
 msgid "Latest Update"
-msgstr "Oppdater"
+msgstr "Sist oppdatert"
 
 #: ../qml/Dialogs/FilterDialog.qml:53
-#, fuzzy
-#| msgid "Update"
 msgid "Oldest Update"
-msgstr "Oppdater"
+msgstr "Eldste oppdatering"
 
 #: ../qml/Dialogs/FilterDialog.qml:93
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 #: ../qml/Dialogs/FilterDialog.qml:100 ../qml/Dialogs/FilterDialog.qml:115
 msgid "All Types"
-msgstr ""
+msgstr "Alle typer"
 
 #: ../qml/Dialogs/FilterDialog.qml:101
-#, fuzzy
-#| msgid "My Apps"
 msgid "Apps"
-msgstr "Mine apper"
+msgstr "Apper"
 
 #: ../qml/Dialogs/FilterDialog.qml:102
 msgid "Bookmarks"
-msgstr ""
+msgstr "Bokmerker"
 
 #: ../qml/Dialogs/FilterDialog.qml:103
-#, fuzzy
-#| msgid "Web App"
 msgid "Web Apps"
-msgstr "Nett-program"
+msgstr "Nett-applikasjoner"
 
 #: ../qml/Dialogs/FilterDialog.qml:140
 msgid "Apply"
-msgstr ""
+msgstr "Bruk"
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:27
 msgid "Install unknown app?"
@@ -598,6 +582,9 @@ msgid ""
 "OpenStore is not recommended and can potentially harm your system. Only "
 "install this app if you got it from a trusted source."
 msgstr ""
+"Ønsker du å installere den ukjente appen %1? Å installere apper utenfor "
+"OpenStore er ikke anbefalt og kan potensielt skade systemet ditt. Bare "
+"installer denne appen hvis du fikk den fra en kilde du stoler på."
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:51
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
@@ -613,16 +600,17 @@ msgid ""
 "Would you like to contact the publisher or file a bug instead? By opening a "
 "discussion with the developer(s) you could be helping to improve this app."
 msgstr ""
+"Kunne du tenke deg å kontakte utgiveren eller å rapportere en "
+"programvarefeil i stedet? Ved å starte en samtale med utvikleren(e) kan du "
+"bidra til å gjøre denne appen bedre."
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:37
-#, fuzzy
-#| msgid "Get support for this app"
 msgid "Get support"
-msgstr "Få hjelp med dette programmet"
+msgstr "Få hjelp"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:47
 msgid "Post my review"
-msgstr ""
+msgstr "Publiser min anmeldelse"
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
 msgid ""
@@ -639,19 +627,16 @@ msgstr ""
 "installerer dette programmet."
 
 #: ../qml/Dialogs/UninstallDialog.qml:25
-#, fuzzy
 msgid "Remove package"
-msgstr "Fjern program"
+msgstr "Fjern pakken"
 
 #: ../qml/Dialogs/UninstallDialog.qml:26
 msgid "Do you want to remove %1?"
 msgstr "Ønsker du å fjerne %1?"
 
 #: ../qml/DiscoverPage.qml:40
-#, fuzzy
-#| msgid "OpenStore team"
 msgid "OpenStore"
-msgstr "OpenStore-laget"
+msgstr "OpenStore"
 
 #: ../qml/DiscoverPage.qml:76
 msgid "by %1"
@@ -659,7 +644,7 @@ msgstr "av %1"
 
 #: ../qml/DiscoverPage.qml:130
 msgid "You are currently offline"
-msgstr ""
+msgstr "Du er for tiden uten nett"
 
 #: ../qml/DiscoverPage.qml:146
 msgid "OpenStore update available"
@@ -733,7 +718,7 @@ msgstr "Ingen installerte programmer fra OpenStore."
 
 #: ../qml/Main.qml:319 ../qml/SearchPage.qml:55
 msgid "Filters"
-msgstr ""
+msgstr "Filtre"
 
 #: ../qml/Main.qml:366
 msgid "App installed"
@@ -810,6 +795,8 @@ msgstr "Ytterligere ikoner av"
 msgid ""
 "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr ""
+"programvare;apper;applikasjoner;programmer;butikk;avspill;klikk;oppdag;installer;"
+""
 
 #~ msgid "Scope"
 #~ msgstr "Søkefelt"

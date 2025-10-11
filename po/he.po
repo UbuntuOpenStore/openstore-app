@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-28 04:55+0000\n"
-"PO-Revision-Date: 2020-09-05 21:04+0000\n"
-"Last-Translator: tamer dab <dabsantamer@yahoo.com>\n"
-"Language-Team: Hebrew <https://translate.ubports.com/projects/openstore/"
+"PO-Revision-Date: 2025-10-12 20:08+0000\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: Hebrew <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 3.11.3\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #: ../qml/AppDetailsPage.qml:108 ../qml/AppLocalDetailsPage.qml:34
 msgid "App details"
@@ -31,27 +31,25 @@ msgstr "הסרה"
 #: ../qml/AppDetailsPage.qml:152 ../qml/Components/PackageListItem.qml:34
 #: ../qml/Components/PackageTile.qml:79
 msgid "App"
-msgstr "אפליקציה"
+msgstr "יישומון"
 
 #: ../qml/AppDetailsPage.qml:153 ../qml/Components/PackageListItem.qml:35
 #: ../qml/Components/PackageTile.qml:80
 msgid "Bookmark"
-msgstr ""
+msgstr "סימנייה"
 
 #: ../qml/AppDetailsPage.qml:154 ../qml/Components/PackageListItem.qml:36
 #: ../qml/Components/PackageTile.qml:81
 msgid "Web App"
-msgstr "אפליקציית אינטרנט"
+msgstr "יישומון דפדפן"
 
 #: ../qml/AppDetailsPage.qml:164
-#, fuzzy
-#| msgid "Install"
 msgid "Install Size: "
-msgstr "התקנה"
+msgstr "גודל התקנה: "
 
 #: ../qml/AppDetailsPage.qml:165
 msgid "Download Size: "
-msgstr ""
+msgstr "גודל הורדה: "
 
 #: ../qml/AppDetailsPage.qml:239
 msgid ""
@@ -72,7 +70,7 @@ msgstr "OpenStore מותקן!"
 
 #: ../qml/AppDetailsPage.qml:289
 msgid "Install stable version"
-msgstr "התקן גרסה יציבה"
+msgstr "התקנת גרסה יציבה"
 
 #: ../qml/AppDetailsPage.qml:292
 msgid "Upgrade"
@@ -84,19 +82,19 @@ msgstr "התקנה"
 
 #: ../qml/AppDetailsPage.qml:371
 msgid "This app is not compatible with your system."
-msgstr "אפליקציה זו אינה תואמת למערכת שלך."
+msgstr "היישומון אינו תואם למערכת שלך."
 
 #: ../qml/AppDetailsPage.qml:404
 msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
 msgstr ""
-"לאפליקציה זו יש גישה לחלקים מוגבלים של המערכת ולכל הנתונים שלך, ראה להלן "
-"לפרטים."
+"ליישומון יש גישה לחלקים מוגבלים של המערכת ולכל הנתונים שלך, פרטים נוספים "
+"להלן."
 
 #: ../qml/AppDetailsPage.qml:407
 msgid "This app has access to restricted system data, see below for details."
-msgstr "ליישומון זהו יש גישה למידע מוגבל במערכת, פרטים נוספים להלן."
+msgstr "ליישומון הזה יש גישה למידע מוגבל במערכת, פרטים נוספים להלן."
 
 #: ../qml/AppDetailsPage.qml:432
 msgid "Description"
@@ -109,7 +107,7 @@ msgstr "מה חדש"
 
 #: ../qml/AppDetailsPage.qml:489
 msgid "Packager/Publisher"
-msgstr "מתחזק/מפיץ"
+msgstr "אריזה/הפצה"
 
 #: ../qml/AppDetailsPage.qml:498 ../qml/AppLocalDetailsPage.qml:138
 msgid "Installed version"
@@ -129,11 +127,11 @@ msgstr "הורדות של הגרסה האחרונה"
 
 #: ../qml/AppDetailsPage.qml:537
 msgid "Total downloads"
-msgstr "סה\"כ הורדות"
+msgstr "סה״כ הורדות"
 
 #: ../qml/AppDetailsPage.qml:546
 msgid "License"
-msgstr "רשיון"
+msgstr "רישיון"
 
 #: ../qml/AppDetailsPage.qml:547
 msgid "N/A"
@@ -145,17 +143,15 @@ msgstr "קוד מקור"
 
 #: ../qml/AppDetailsPage.qml:572
 msgid "Get support for this app"
-msgstr "קבל תמיכה לאפליקציה זו"
+msgstr "קבלת תמיכה ליישומון הזה"
 
 #: ../qml/AppDetailsPage.qml:585
 msgid "Donate to support this app"
-msgstr "תרום לתמיכה באפליקציה זו"
+msgstr "תרומה לתמיכה ביישומון הזה"
 
 #: ../qml/AppDetailsPage.qml:598
-#, fuzzy
-#| msgid "Rate this app"
 msgid "Help translate this app"
-msgstr "דרג את האפליקציה הזו"
+msgstr "סיוע בתרגום היישומון הזה"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
 #: ../qml/AppDetailsPage.qml:614
@@ -169,7 +165,7 @@ msgstr "יישומונים אחרים תחת %1"
 
 #: ../qml/AppDetailsPage.qml:635
 msgid "Package contents"
-msgstr "תכני החבילה"
+msgstr "תוכן החבילה"
 
 #: ../qml/AppDetailsPage.qml:722
 msgid "Permissions"
@@ -181,11 +177,11 @@ msgstr "חשבונות"
 
 #: ../qml/AppDetailsPage.qml:728
 msgid "Audio"
-msgstr "אודיו"
+msgstr "שמע"
 
 #: ../qml/AppDetailsPage.qml:729
 msgid "Bluetooth"
-msgstr "בלוטות'"
+msgstr "בלוטות׳"
 
 #: ../qml/AppDetailsPage.qml:730
 msgid "Calendar"
@@ -213,7 +209,7 @@ msgstr "חילופי תוכן"
 
 #: ../qml/AppDetailsPage.qml:736
 msgid "Debug"
-msgstr "ניפוי באגים"
+msgstr "ניפוי שגיאות"
 
 #: ../qml/AppDetailsPage.qml:737
 msgid "History"
@@ -221,11 +217,11 @@ msgstr "היסטוריה"
 
 #: ../qml/AppDetailsPage.qml:738
 msgid "In App Purchases"
-msgstr "רכישות באפליקציות"
+msgstr "רכישות ביישומון"
 
 #: ../qml/AppDetailsPage.qml:739
 msgid "Keep Display On"
-msgstr "תצוגה מופעלת תמיד"
+msgstr "השארת התצוגה פעילה"
 
 #: ../qml/AppDetailsPage.qml:740
 msgid "Location"
@@ -237,11 +233,11 @@ msgstr "מיקרופון"
 
 #: ../qml/AppDetailsPage.qml:742
 msgid "Read Music Files"
-msgstr "קרא קבצי מוסיקה"
+msgstr "קריאת קובצי מוזיקה"
 
 #: ../qml/AppDetailsPage.qml:743
 msgid "Music Files"
-msgstr "קבצי מוסיקה"
+msgstr "קובצי מוזיקה"
 
 #: ../qml/AppDetailsPage.qml:744
 msgid "Networking"
@@ -249,15 +245,15 @@ msgstr "רשת"
 
 #: ../qml/AppDetailsPage.qml:745
 msgid "Read Picture Files"
-msgstr "קרא קבצי תמונות"
+msgstr "קריאת קובצי תמונות"
 
 #: ../qml/AppDetailsPage.qml:746
 msgid "Picture Files"
-msgstr "קבצי תמונות"
+msgstr "קובצי תמונות"
 
 #: ../qml/AppDetailsPage.qml:747
 msgid "Push Notifications"
-msgstr "התראות"
+msgstr "התראות בדחיפה"
 
 #: ../qml/AppDetailsPage.qml:748
 msgid "Sensors"
@@ -269,11 +265,11 @@ msgstr "מדדי משתמשים"
 
 #: ../qml/AppDetailsPage.qml:750
 msgid "Read Video Files"
-msgstr "קרא קבצי וידאו"
+msgstr "קריאת קובצי וידאו"
 
 #: ../qml/AppDetailsPage.qml:751
 msgid "Video Files"
-msgstr "קבצי וידאו"
+msgstr "קובצי וידאו"
 
 #: ../qml/AppDetailsPage.qml:752
 msgid "Video"
@@ -281,7 +277,7 @@ msgstr "וידאו"
 
 #: ../qml/AppDetailsPage.qml:753
 msgid "Webview"
-msgstr "תצוגת אינטרנט"
+msgstr "תצוגת אתרים"
 
 #: ../qml/AppDetailsPage.qml:757
 msgid "Full System Access"
@@ -322,23 +318,21 @@ msgstr "%1 בתים"
 
 #: ../qml/AppLocalDetailsPage.qml:118
 msgid "This app could not be found in the OpenStore"
-msgstr "אפליקציה זו לא נמצאה ב- OpenStore"
+msgstr "היישומון הזה לא נמצא ב־OpenStore"
 
 #: ../qml/AppLocalDetailsPage.qml:121
 msgid ""
 "You are currently offline and the app details could not be fetched from the "
 "OpenStore"
-msgstr "אתה לא מחובר כרגע ולא ניתן היה לאחזר את פרטי האפליקציה מ- OpenStore"
+msgstr "אין והוא כרגע ולא ניתן למשוך את פרטי היישומון מ־OpenStore"
 
 #: ../qml/CategoriesPage.qml:39
 msgid "Categories"
 msgstr "קטגוריות"
 
 #: ../qml/CategoriesPage.qml:84
-#, fuzzy
-#| msgid "Nothing here yet"
 msgid "Nothing to see here yet!"
-msgstr "אין כאן כלום כרגע"
+msgstr "אין מה לראות כאן עדיין!"
 
 #: ../qml/Components/BottomEdgePageStack.qml:102
 msgid "Back"
@@ -401,7 +395,7 @@ msgstr "✓ מותקן"
 
 #: ../qml/Components/ReviewPreview.qml:93
 msgid "Something went wrong..."
-msgstr "משהו השתבש..."
+msgstr "משהו השתבש…"
 
 #: ../qml/Components/ReviewPreview.qml:99
 msgid "Error Posting Review"
@@ -409,7 +403,7 @@ msgstr "שגיאה בפרסום הביקורת"
 
 #: ../qml/Components/ReviewPreview.qml:113
 msgid "Review Posted Correctly"
-msgstr "הביקורת פורסמה כהלכה"
+msgstr "הביקורת פורסמה כראוי"
 
 #: ../qml/Components/ReviewPreview.qml:114
 msgid "Your review has been posted successfully."
@@ -417,15 +411,15 @@ msgstr "הביקורת שלך פורסמה בהצלחה."
 
 #: ../qml/Components/ReviewPreview.qml:128
 msgid "Loading..."
-msgstr "טוען..."
+msgstr "טעינה…"
 
 #: ../qml/Components/ReviewPreview.qml:128
 msgid "Rate this app"
-msgstr "דרג את האפליקציה הזו"
+msgstr "דירוג היישומון הזה"
 
 #: ../qml/Components/ReviewPreview.qml:135
 msgid "(Optional) Write a review"
-msgstr "(אופציונלי) כתוב ביקורת"
+msgstr "(רשות) לכתוב ביקורת"
 
 #: ../qml/Components/ReviewPreview.qml:139
 msgid "%1/%2 characters"
@@ -433,7 +427,7 @@ msgstr "%1 / %2 תווים"
 
 #: ../qml/Components/ReviewPreview.qml:193
 msgid "Submit"
-msgstr ""
+msgstr "הגשה"
 
 #: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:148
 #: ../qml/Dialogs/InstallWarningDialog.qml:61
@@ -450,19 +444,19 @@ msgstr[1] "%1 ביקורות. "
 
 #: ../qml/Components/ReviewPreview.qml:252
 msgid "Edit Review"
-msgstr ""
+msgstr "עריכת ביקורת"
 
 #: ../qml/Components/ReviewPreview.qml:255
 msgid "Review app"
-msgstr "סקירת האפליקציה"
+msgstr "סקירת היישומון"
 
 #: ../qml/Components/ReviewPreview.qml:258
 msgid "Sign in to review this app"
-msgstr "התחבר בכדי לסקור אפליקציה הזו"
+msgstr "יש להיכנס כדי לסקר את היישומון הזה"
 
 #: ../qml/Components/ReviewPreview.qml:261
 msgid "Install this app to review it"
-msgstr "התקן אפליקציה זו כדי לסקור אותה"
+msgstr "יש להתקין את היישומון כדי לסקר אותו"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:26
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:25
@@ -474,32 +468,31 @@ msgid ""
 "You are currently using a non-standard domain for the OpenStore. This is a "
 "development feature. The domain you are using is:"
 msgstr ""
-"אתה משתמש כרגע בתחום לא סטנדרטי עבור OpenStore. זו תכונת פיתוח. הדומיין שבו "
-"אתה משתמש הוא:"
+"שם התחום ל־OpenStore חורג מהרגיל. זאת יכולת למפתחים. שם התחום בשימוש הוא:"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:49
 msgid "Are you sure you want to continue?"
-msgstr "האם אתה בטוח שאתה רוצה להמשיך?"
+msgstr "להמשיך?"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:53
 msgid "Yes, I know what I'm doing"
-msgstr "כן, אני יודע מה אני עושה"
+msgstr "כן, ההשלכות ברורות לי"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:61
 msgid "Get me out of here!"
-msgstr "תוציאו אותי מפה!"
+msgstr "רוצה לצאת מפה!"
 
 #: ../qml/Dialogs/DonationDialog.qml:25
 msgid "Donating"
-msgstr "תורם"
+msgstr "תרומה"
 
 #: ../qml/Dialogs/DonationDialog.qml:26
 msgid "Would you like to support this app with a donation to the developer?"
-msgstr "האם תרצה לתמוך באפליקציה זו באמצעות תרומה למפתח?"
+msgstr "מעניין אותך לתמוך ביישומון הזה כלכלית?"
 
 #: ../qml/Dialogs/DonationDialog.qml:32
 msgid "Donate now"
-msgstr "תרום עכשיו"
+msgstr "לתרום עכשיו"
 
 #: ../qml/Dialogs/DonationDialog.qml:40
 msgid "Maybe later"
@@ -507,83 +500,75 @@ msgstr "אולי אחר כך"
 
 #: ../qml/Dialogs/FilterDialog.qml:26
 msgid "Filters and Sorting"
-msgstr ""
+msgstr "מסננים ומיון"
 
 #: ../qml/Dialogs/FilterDialog.qml:38
 msgid "Sort By"
-msgstr ""
+msgstr "מיון לפי"
 
 #: ../qml/Dialogs/FilterDialog.qml:45 ../qml/Dialogs/FilterDialog.qml:65
 msgid "Relevance"
-msgstr ""
+msgstr "התאמה"
 
 #: ../qml/Dialogs/FilterDialog.qml:46
 msgid "Most Popular"
-msgstr ""
+msgstr "הכי נפוץ"
 
 #: ../qml/Dialogs/FilterDialog.qml:47
 msgid "Least Popular"
-msgstr ""
+msgstr "הכי פחות נפוץ"
 
 #: ../qml/Dialogs/FilterDialog.qml:48
 msgid "Title (A-Z)"
-msgstr ""
+msgstr "כותרת (א-ת)"
 
 #: ../qml/Dialogs/FilterDialog.qml:49
 msgid "Title (Z-A)"
-msgstr ""
+msgstr "כותרת (ת-א)"
 
 #: ../qml/Dialogs/FilterDialog.qml:50
 msgid "Newest"
-msgstr ""
+msgstr "החדש ביותר"
 
 #: ../qml/Dialogs/FilterDialog.qml:51
 msgid "Oldest"
-msgstr ""
+msgstr "הישן ביותר"
 
 #: ../qml/Dialogs/FilterDialog.qml:52
-#, fuzzy
-#| msgid "Update"
 msgid "Latest Update"
-msgstr "עדכון"
+msgstr "עדכון אחרון"
 
 #: ../qml/Dialogs/FilterDialog.qml:53
-#, fuzzy
-#| msgid "Update"
 msgid "Oldest Update"
-msgstr "עדכון"
+msgstr "עדכון הכי מוקדם"
 
 #: ../qml/Dialogs/FilterDialog.qml:93
 msgid "Type"
-msgstr ""
+msgstr "סוג"
 
 #: ../qml/Dialogs/FilterDialog.qml:100 ../qml/Dialogs/FilterDialog.qml:115
 msgid "All Types"
-msgstr ""
+msgstr "כל הסוגים"
 
 #: ../qml/Dialogs/FilterDialog.qml:101
-#, fuzzy
-#| msgid "My Apps"
 msgid "Apps"
-msgstr "היישומונים שלי"
+msgstr "יישומונים"
 
 #: ../qml/Dialogs/FilterDialog.qml:102
 msgid "Bookmarks"
-msgstr ""
+msgstr "סימניות"
 
 #: ../qml/Dialogs/FilterDialog.qml:103
-#, fuzzy
-#| msgid "Web App"
 msgid "Web Apps"
-msgstr "אפליקציית אינטרנט"
+msgstr "יישומוני דפדפן"
 
 #: ../qml/Dialogs/FilterDialog.qml:140
 msgid "Apply"
-msgstr ""
+msgstr "החלה"
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:27
 msgid "Install unknown app?"
-msgstr "להתקין אפליקציה לא ידועה?"
+msgstr "להתקין יישומון לא ידוע?"
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:28
 msgid ""
@@ -591,31 +576,34 @@ msgid ""
 "OpenStore is not recommended and can potentially harm your system. Only "
 "install this app if you got it from a trusted source."
 msgstr ""
+"להתקין את היישומון הלא מוכר %1? התקנת יישומונים מחוץ ל־OpenStore אינה מומלצת "
+"ועלולה לפגוע במערכת שלך. יש להתקין את היישומון הזה רק אם קיבלת אותו ממקור "
+"אמין."
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:51
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
 msgid "I understand the risks"
-msgstr "אני מבין את הסיכונים"
+msgstr "הסיכונים ברורים לי"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:26
 msgid "Review confirmation"
-msgstr ""
+msgstr "אישור ביקורת"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:27
 msgid ""
 "Would you like to contact the publisher or file a bug instead? By opening a "
 "discussion with the developer(s) you could be helping to improve this app."
 msgstr ""
+"ליצור קשר עם המפרסם או להגיש דוח תקלה במקום? פתיחת דיון עם המפתחים עשויה "
+"לסייע בשיפור היישומון הזה."
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:37
-#, fuzzy
-#| msgid "Get support for this app"
 msgid "Get support"
-msgstr "קבל תמיכה לאפליקציה זו"
+msgstr "קבלת תמיכה"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:47
 msgid "Post my review"
-msgstr ""
+msgstr "פרסום הביקורת שלי"
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
 msgid ""
@@ -625,10 +613,10 @@ msgid ""
 "anything bad that might happen to your device or data from installing this "
 "app."
 msgstr ""
-"לאפליקציה זו יש גישה לחלקים מוגבלים של המערכת ולכל הנתונים שלך. יש בכך "
-"פוטנציאל לנזק למערכת שלך. אמנם אנשי התחזוקה של OpenStore בדקו את הקוד "
-"לאפליקציה זו למען בטיחותם, אך הם אינם אחראים לשום דבר רע שעלול לקרות למכשיר "
-"שלך או לנתונים מהתקנת יישום זה."
+"ליישומון הזה יש גישה לחלקים מוגבלים במערכת ולכל הנתונים שלך. הוא יכול להזיק "
+"למערכת שלך. אמנם המתחזקים של OpenStore בדקו את הקוד של היישומון הזה למען "
+"בטיחותך, אך הם אינם אחראים לשום דבר רע שעלול לקרות למכשיר שלך או לנתונים עקב "
+"התקנת יישומון זה."
 
 #: ../qml/Dialogs/UninstallDialog.qml:25
 msgid "Remove package"
@@ -639,37 +627,35 @@ msgid "Do you want to remove %1?"
 msgstr "להסיר את %1?"
 
 #: ../qml/DiscoverPage.qml:40
-#, fuzzy
-#| msgid "OpenStore team"
 msgid "OpenStore"
-msgstr "צוות OpenStore"
+msgstr "OpenStore"
 
 #: ../qml/DiscoverPage.qml:76
 msgid "by %1"
-msgstr "לפי %1"
+msgstr "מאת %1"
 
 #: ../qml/DiscoverPage.qml:130
 msgid "You are currently offline"
-msgstr ""
+msgstr "החיבור שלך מנותק"
 
 #: ../qml/DiscoverPage.qml:146
 msgid "OpenStore update available"
-msgstr "יש עדכון זמין ב־OpenStore"
+msgstr "יש עדכון של OpenStore"
 
 #: ../qml/DiscoverPage.qml:176
 msgid " (%1 update available)"
 msgid_plural " (%1 updates available)"
-msgstr[0] " (עדכון %1 זמין)"
+msgstr[0] " (עדכון זמין)"
 msgstr[1] " (%1 עדכונים זמינים)"
 
 #: ../qml/DiscoverPage.qml:176 ../qml/DiscoverPage.qml:177
 #: ../qml/InstalledAppsPage.qml:52
 msgid "Installed Apps"
-msgstr "אפליקציות מותקנות"
+msgstr "יישומונים מותקנים"
 
 #: ../qml/DiscoverPage.qml:201
 msgid "Browse Apps by Category"
-msgstr "עיין באפליקציות לפי קטגוריות"
+msgstr "עיון ביישומונים לפי קטגוריות"
 
 #: ../qml/FilteredAppList.qml:109
 msgid "No results found."
@@ -707,11 +693,11 @@ msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
 msgstr ""
-"הגרסאות המותקנות של יישומים אלה לא הגיעו מ- OpenStore אך קיימת גרסה יציבה."
+"הגרסאות המותקנות של יישומונים אלה לא הגיעו מ־OpenStore אך קיימת גרסה יציבה."
 
 #: ../qml/InstalledAppsPage.qml:92
 msgid "Update all"
-msgstr "עדכן הכל"
+msgstr "עדכון של הכול"
 
 #: ../qml/InstalledAppsPage.qml:194
 msgid "No apps found"
@@ -723,7 +709,7 @@ msgstr "עדיין לא הותקנו יישומונים מה־OpenStore."
 
 #: ../qml/Main.qml:319 ../qml/SearchPage.qml:55
 msgid "Filters"
-msgstr ""
+msgstr "מסננים"
 
 #: ../qml/Main.qml:366
 msgid "App installed"
@@ -760,15 +746,15 @@ msgstr "חשבון OpenStore"
 
 #: ../qml/SettingsPage.qml:121 ../qml/SignInPage.qml:31
 msgid "Sign in"
-msgstr "להתחבר"
+msgstr "כניסה"
 
 #: ../qml/SettingsPage.qml:138
 msgid "Sign out"
-msgstr "התנתק"
+msgstr "יציאה"
 
 #: ../qml/SettingsPage.qml:166
 msgid "Parental control"
-msgstr "שליטה הורית"
+msgstr "בקרת הורים"
 
 #: ../qml/SettingsPage.qml:172
 msgid "Hide adult-oriented content"
@@ -778,11 +764,11 @@ msgstr "הסתרת תוכן למבוגרים"
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
-msgstr "הקלדת הססמה שלך מהווה את אחריותך המלאה להצגת תוכן למבוגרים."
+msgstr "הקלדת הסיסמה שלך מהווה את אחריותך המלאה להצגת תוכן למבוגרים."
 
 #: ../qml/SettingsPage.qml:207
 msgid "About OpenStore"
-msgstr "על אודות ה־OpenStore"
+msgstr "על ה־OpenStore"
 
 #: ../qml/SettingsPage.qml:223
 msgid "Report an issue"
@@ -796,6 +782,8 @@ msgstr "סמלים נוספים מאת"
 msgid ""
 "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr ""
+"תוכנה;יישומים;יישומונים;אפליקציות;אפליקציה;אופנסטור;אופןסטור;נגינה;פליי;חנות;יישום;יישומון;התקנה;חבילה;חבילות;תוכנות;תוכניות;חשיפה;מבחר;מאגר;"
+""
 
 #~ msgid "Scope"
 #~ msgstr "טווח"

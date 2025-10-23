@@ -19,25 +19,25 @@
 #ifndef CACHINGNETWORKMANAGERFACTORY_H
 #define CACHINGNETWORKMANAGERFACTORY_H
 
-#include <QQmlNetworkAccessManagerFactory>
 #include <QNetworkAccessManager>
+#include <QQmlNetworkAccessManagerFactory>
 
 class CachingNetworkAccessManager : public QNetworkAccessManager
 {
-Q_OBJECT
+  Q_OBJECT
 public:
-    CachingNetworkAccessManager(QObject *parent = 0);
+  CachingNetworkAccessManager(QObject* parent = 0);
 
 protected:
-    QNetworkReply* createRequest(Operation op, const QNetworkRequest &req, QIODevice *outgoingData = 0) override;
+  QNetworkReply* createRequest(Operation op, const QNetworkRequest& req, QIODevice* outgoingData = 0) override;
 };
 
 class CachingNetworkManagerFactory : public QQmlNetworkAccessManagerFactory
 {
 public:
-    CachingNetworkManagerFactory();
+  CachingNetworkManagerFactory();
 
-    QNetworkAccessManager *create(QObject *parent) override;
+  QNetworkAccessManager* create(QObject* parent) override;
 };
 
 #endif // CACHINGNETWORKMANAGERFACTORY_H

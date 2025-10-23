@@ -20,46 +20,48 @@
 #include "cachingnetworkmanagerfactory.h"
 #include "apiconstants.h"
 
-#include <QNetworkDiskCache>
 #include <QNetworkAccessManager>
+#include <QNetworkDiskCache>
 #include <QStandardPaths>
 
-CachingNetworkAccessManager::CachingNetworkAccessManager(QObject *parent)
-    : QNetworkAccessManager(parent)
-{ }
-
-QNetworkReply* CachingNetworkAccessManager::createRequest(Operation op, const QNetworkRequest &request, QIODevice *outgoingData)
+CachingNetworkAccessManager::CachingNetworkAccessManager(QObject* parent)
+  : QNetworkAccessManager(parent)
 {
-    const QUrl &requestedUrl = request.url();
-
-    // Use cache only for images
-    if (requestedUrl.fileName().indexOf(".png") || requestedUrl.fileName().indexOf(".svg") || requestedUrl.fileName().indexOf(".jpg") || requestedUrl.fileName().indexOf(".jpeg")) {
-        QNetworkRequest req(request);
-        req.setAttribute(QNetworkRequest::CacheLoadControlAttribute, QNetworkRequest::PreferCache);
-        return QNetworkAccessManager::createRequest(op, req, outgoingData);
-    }
-
-    return QNetworkAccessManager::createRequest(op, request, outgoingData);
 }
 
-CachingNetworkManagerFactory::CachingNetworkManagerFactory()
-{ }
+QNetworkReply* CachingNetworkAccessManager::createRequest(Operation op, const QNetworkRequest& request, QIODevice* outgoingData)
+{
+  const QUrl& requestedUrl = request.url();
 
-QNetworkAccessManager *CachingNetworkManagerFactory::create(QObject *parent) {
-    QNetworkAccessManager *manager = new CachingNetworkAccessManager(parent);
+  // Use cache only for images
+  if (requestedUrl.fileName().indexOf(".png") || requestedUrl.fileName().indexOf(".svg") || requestedUrl.fileName().indexOf(".jpg") ||
+      requestedUrl.fileName().indexOf(".jpeg")) {
+    QNetworkRequest req(request);
+    req.setAttribute(QNetworkRequest::CacheLoadControlAttribute, QNetworkRequest::PreferCache);
+    return QNetworkAccessManager::createRequest(op, req, outgoingData);
+  }
 
-    QString domain = qgetenv("OPENSTORE_DOMAIN");
-    if (domain.isEmpty()) {
-        domain = STORE_DOMAIN;
-    }
+  return QNetworkAccessManager::createRequest(op, request, outgoingData);
+}
 
-    for (int i=0; i < 6; ++i ) {
-        manager->connectToHostEncrypted(domain);
-    }
+CachingNetworkManagerFactory::CachingNetworkManagerFactory() {}
 
-    QNetworkDiskCache* cache = new QNetworkDiskCache(manager);
-    cache->setCacheDirectory(QStringLiteral("%1/qml_cache").arg(QStandardPaths::writableLocation(QStandardPaths::CacheLocation)));
+QNetworkAccessManager* CachingNetworkManagerFactory::create(QObject* parent)
+{
+  QNetworkAccessManager* manager = new CachingNetworkAccessManager(parent);
 
-    manager->setCache(cache);
-    return manager;
+  QString domain = qgetenv("OPENSTORE_DOMAIN");
+  if (domain.isEmpty()) {
+    domain = STORE_DOMAIN;
+  }
+
+  for (int i = 0; i < 6; ++i) {
+    manager->connectToHostEncrypted(domain);
+  }
+
+  QNetworkDiskCache* cache = new QNetworkDiskCache(manager);
+  cache->setCacheDirectory(QStringLiteral("%1/qml_cache").arg(QStandardPaths::writableLocation(QStandardPaths::CacheLocation)));
+
+  manager->setCache(cache);
+  return manager;
 }

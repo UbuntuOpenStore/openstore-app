@@ -17,87 +17,87 @@
 
 #include "categoriesmodel.h"
 
-CategoriesModel::CategoriesModel(QObject *parent)
-    : QAbstractListModel(parent)
-    , m_ready(false)
+CategoriesModel::CategoriesModel(QObject* parent)
+  : QAbstractListModel(parent)
+  , m_ready(false)
 {
-    connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::parsedReply, this, &CategoriesModel::parseReply);
-    connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::reloaded, this, &CategoriesModel::update);
+  connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::parsedReply, this, &CategoriesModel::parseReply);
+  connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::reloaded, this, &CategoriesModel::update);
 
-    update();
+  update();
 }
 
 QHash<int, QByteArray> CategoriesModel::roleNames() const
 {
-    QHash<int, QByteArray> roles;
+  QHash<int, QByteArray> roles;
 
-    roles.insert(RoleName, "name");
-    roles.insert(RoleId, "id");
-    roles.insert(RoleCount, "count");
-    roles.insert(RoleIconUrl, "iconUrl");
+  roles.insert(RoleName, "name");
+  roles.insert(RoleId, "id");
+  roles.insert(RoleCount, "count");
+  roles.insert(RoleIconUrl, "iconUrl");
 
-    return roles;
+  return roles;
 }
 
-int CategoriesModel::rowCount(const QModelIndex & parent) const
+int CategoriesModel::rowCount(const QModelIndex& parent) const
 {
-    Q_UNUSED(parent)
-    return m_list.count();
+  Q_UNUSED(parent)
+  return m_list.count();
 }
 
-QVariant CategoriesModel::data(const QModelIndex &index, int role) const
+QVariant CategoriesModel::data(const QModelIndex& index, int role) const
 {
-    if (index.row() < 0 || index.row() > rowCount())
-        return QVariant();
+  if (index.row() < 0 || index.row() > rowCount())
+    return QVariant();
 
-    const CategoryItem &cat = m_list.at(index.row());
+  const CategoryItem& cat = m_list.at(index.row());
 
-    switch (role) {
+  switch (role) {
     case RoleName:
-        return cat.name;
+      return cat.name;
     case RoleId:
-        return cat.id;
+      return cat.id;
     case RoleCount:
-        return cat.count;
+      return cat.count;
     case RoleIconUrl:
-        return cat.iconUrl;
+      return cat.iconUrl;
 
     default:
-        return QVariant();
-    }
+      return QVariant();
+  }
 }
 
 void CategoriesModel::update()
 {
-    m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
-    OpenStoreNetworkManager::instance()->getCategories(m_requestSignature);
+  m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
+  OpenStoreNetworkManager::instance()->getCategories(m_requestSignature);
 }
 
 void CategoriesModel::parseReply(OpenStoreReply reply)
 {
-    if (reply.signature != m_requestSignature)
-        return;
+  if (reply.signature != m_requestSignature)
+    return;
 
-    QVariantList data = reply.data.toList();
+  QVariantList data = reply.data.toList();
 
-    beginResetModel();
-    m_list.clear();
-    endResetModel();
+  beginResetModel();
+  m_list.clear();
+  endResetModel();
 
-    beginInsertRows(QModelIndex(), 0, data.count() - 1);
-    Q_FOREACH(const QVariant & cat, data) {
-        const QVariantMap &catMap = cat.toMap();
+  beginInsertRows(QModelIndex(), 0, data.count() - 1);
+  Q_FOREACH (const QVariant& cat, data) {
+    const QVariantMap& catMap = cat.toMap();
 
-        CategoryItem catItem;
-        catItem.id = catMap.value("category").toString();
-        catItem.name = catMap.value("translation", catItem.id).toString();
-        catItem.count = catMap.value("count").toInt();
-        catItem.iconUrl = catMap.value("icon").toUrl();
+    CategoryItem catItem;
+    catItem.id = catMap.value("category").toString();
+    catItem.name = catMap.value("translation", catItem.id).toString();
+    catItem.count = catMap.value("count").toInt();
+    catItem.iconUrl = catMap.value("icon").toUrl();
 
-        m_list.append(catItem);
-    }
-    endInsertRows();
+    m_list.append(catItem);
+  }
+  endInsertRows();
 
-    m_ready = true;
-    Q_EMIT updated();
+  m_ready = true;
+  Q_EMIT updated();
 }

@@ -6,3 +6,5 @@ dependencies_target:
   - libclick-0.4-dev
   - libpam0g-dev
 framework: ubuntu-sdk-20.04
+scripts:
+  format: ./scripts/format-code.sh

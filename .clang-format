@@ -1,0 +1,15 @@
+---
+Language: Cpp
+BasedOnStyle: Mozilla
+ColumnLimit: 140
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None
+
+# Add Qt-specific macros
+StatementMacros:
+  - Q_UNUSED
+  - QT_REQUIRE_VERSION
+
+ForEachMacros:
+  - foreach
+  - Q_FOREACH

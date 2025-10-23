@@ -15,78 +15,78 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <QGuiApplication>
-#include <QQmlApplicationEngine>
-#include <QQuickView>
-#include <QQmlContext>
 #include <QElapsedTimer>
+#include <QGuiApplication>
 #include <QHostInfo>
+#include <QQmlApplicationEngine>
+#include <QQmlContext>
+#include <QQuickView>
 
 #include "apiconstants.h"
-#include "platformintegration.h"
-#include "clickinstaller.h"
-#include "models/searchmodel.h"
-#include "models/categoriesmodel.h"
-#include "models/localpackagesmodel.h"
-#include "models/discovermodel.h"
-#include "packagescache.h"
-#include "openstorenetworkmanager.h"
 #include "cachingnetworkmanagerfactory.h"
+#include "clickinstaller.h"
+#include "models/categoriesmodel.h"
+#include "models/discovermodel.h"
+#include "models/localpackagesmodel.h"
+#include "models/searchmodel.h"
+#include "openstorenetworkmanager.h"
+#include "packagescache.h"
+#include "platformintegration.h"
 #include "review.h"
 
-static QObject *registerNetworkManagerSingleton (QQmlEngine * /*engine*/, QJSEngine * /*scriptEngine*/)
+static QObject* registerNetworkManagerSingleton(QQmlEngine* /*engine*/, QJSEngine* /*scriptEngine*/)
 {
-    return OpenStoreNetworkManager::instance();
+  return OpenStoreNetworkManager::instance();
 }
 
-static QObject *registerPlatformIntegrationSingleton (QQmlEngine * /*engine*/, QJSEngine * /*scriptEngine*/)
+static QObject* registerPlatformIntegrationSingleton(QQmlEngine* /*engine*/, QJSEngine* /*scriptEngine*/)
 {
-    return PlatformIntegration::instance();
+  return PlatformIntegration::instance();
 }
 
-static QObject *registerPackagesCacheSingleton (QQmlEngine * /*engine*/, QJSEngine * /*scriptEngine*/)
+static QObject* registerPackagesCacheSingleton(QQmlEngine* /*engine*/, QJSEngine* /*scriptEngine*/)
 {
-    return PackagesCache::instance();
+  return PackagesCache::instance();
 }
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
-    QElapsedTimer initTimer;
-    initTimer.start();
+  QElapsedTimer initTimer;
+  initTimer.start();
 
-    QCoreApplication::setApplicationName(QStringLiteral("openstore.openstore-team"));
-    QCoreApplication::setApplicationVersion(QString(BUILD_VERSION));
-    qDebug() << "OpenStore" << QCoreApplication::applicationVersion();
+  QCoreApplication::setApplicationName(QStringLiteral("openstore.openstore-team"));
+  QCoreApplication::setApplicationVersion(QString(BUILD_VERSION));
+  qDebug() << "OpenStore" << QCoreApplication::applicationVersion();
 
-    QGuiApplication app(argc, argv);
+  QGuiApplication app(argc, argv);
 
-    qmlRegisterSingletonType<OpenStoreNetworkManager>("OpenStore", 1, 0, "OpenStoreNetworkManager", registerNetworkManagerSingleton);
-    qmlRegisterSingletonType<PlatformIntegration>("OpenStore", 1, 0, "PlatformIntegration", registerPlatformIntegrationSingleton);
-    qmlRegisterSingletonType<PackagesCache>("OpenStore", 1, 0, "PackagesCache", registerPackagesCacheSingleton);
-    qmlRegisterUncreatableType<ClickInstaller>("OpenStore", 1, 0, "ClickInstaller", "Access ClickInstall from the PlatformIntegration singleton");
-    qmlRegisterType<LocalPackagesModel>("OpenStore", 1, 0, "LocalAppModel");
-    qmlRegisterType<DiscoverModel>("OpenStore", 1, 0, "DiscoverModel");
-    qmlRegisterType<SearchModel>("OpenStore", 1, 0, "SearchModel");
-    qmlRegisterType<CategoriesModel>("OpenStore", 1, 0, "CategoriesModel");
-    qmlRegisterUncreatableType<PackageItem>("OpenStore", 1, 0, "PackageItem", "PackageItem is only available through LocalAppModel, DiscoverModel, or SearchModel.");
+  qmlRegisterSingletonType<OpenStoreNetworkManager>("OpenStore", 1, 0, "OpenStoreNetworkManager", registerNetworkManagerSingleton);
+  qmlRegisterSingletonType<PlatformIntegration>("OpenStore", 1, 0, "PlatformIntegration", registerPlatformIntegrationSingleton);
+  qmlRegisterSingletonType<PackagesCache>("OpenStore", 1, 0, "PackagesCache", registerPackagesCacheSingleton);
+  qmlRegisterUncreatableType<ClickInstaller>(
+    "OpenStore", 1, 0, "ClickInstaller", "Access ClickInstall from the PlatformIntegration singleton");
+  qmlRegisterType<LocalPackagesModel>("OpenStore", 1, 0, "LocalAppModel");
+  qmlRegisterType<DiscoverModel>("OpenStore", 1, 0, "DiscoverModel");
+  qmlRegisterType<SearchModel>("OpenStore", 1, 0, "SearchModel");
+  qmlRegisterType<CategoriesModel>("OpenStore", 1, 0, "CategoriesModel");
+  qmlRegisterUncreatableType<PackageItem>(
+    "OpenStore", 1, 0, "PackageItem", "PackageItem is only available through LocalAppModel, DiscoverModel, or SearchModel.");
 
-    qmlRegisterType<Ratings>("OpenStore", 1, 0, "Ratings");
-    qRegisterMetaType<Ratings::Rating>("Rating");
-    QQuickView view;
+  qmlRegisterType<Ratings>("OpenStore", 1, 0, "Ratings");
+  qRegisterMetaType<Ratings::Rating>("Rating");
+  QQuickView view;
 
-    QObject::connect(view.engine(), &QQmlEngine::quit, &app, &QGuiApplication::quit);
+  QObject::connect(view.engine(), &QQmlEngine::quit, &app, &QGuiApplication::quit);
 
-    // This applies to QML requests only
-    CachingNetworkManagerFactory *managerFactory = new CachingNetworkManagerFactory();
-    view.engine()->setNetworkAccessManagerFactory(managerFactory);
+  // This applies to QML requests only
+  CachingNetworkManagerFactory* managerFactory = new CachingNetworkManagerFactory();
+  view.engine()->setNetworkAccessManagerFactory(managerFactory);
 
+  view.setSource(QUrl(QStringLiteral("qrc:///Main.qml")));
+  view.setResizeMode(QQuickView::SizeRootObjectToView);
+  view.show();
 
-    view.setSource(QUrl(QStringLiteral("qrc:///Main.qml")));
-    view.setResizeMode(QQuickView::SizeRootObjectToView);
-    view.show();
+  qDebug() << "App required" << initTimer.elapsed() << "msec to be initialised.";
 
-    qDebug() << "App required" << initTimer.elapsed() << "msec to be initialised.";
-
-    return app.exec();
+  return app.exec();
 }
-

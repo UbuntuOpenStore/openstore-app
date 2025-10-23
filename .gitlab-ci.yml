@@ -4,8 +4,22 @@
     paths:
     - build/*/app/*.click
 
+stages:
+  - lint
+  - build
+  - deploy
+
 before_script:
   - git submodule update --init --recursive
+
+clang-format:
+  stage: lint
+  image: ubuntu:22.04
+  variables:
+    DEBIAN_FRONTEND: noninteractive
+  script:
+    - apt-get update && apt-get install -y clang-format git
+    - ./scripts/check-format.sh
 
 build-arm64-focal:
   extends: .artifacts

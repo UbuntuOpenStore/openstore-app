@@ -13,6 +13,18 @@ Please report any bugs/features/requests in our [bug tracker](https://gitlab.com
 If you would like to help out with translations head over to the OpenStore
 project on the [Weblate](https://hosted.weblate.org/projects/open-store-io/openstore-app/).
 
+## Development
+
+### Code Style
+
+This project uses clang-format for C++ code formatting based on Mozilla style. Code is automatically formatted when you commit changes. See [CODING_STYLE.md](CODING_STYLE.md) for details.
+
+To manually format all code:
+
+```bash
+./scripts/format-code.sh
+```
+
 ## Donations
 
 We rely on donations from generous individuals like you to continue our mission

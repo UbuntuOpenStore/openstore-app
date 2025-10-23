@@ -20,76 +20,90 @@
 
 #include "review.h"
 
-#include <QObject>
-#include <QNetworkAccessManager>
 #include <QJsonObject>
+#include <QNetworkAccessManager>
+#include <QObject>
 
 #include <QUrlQuery>
 
-    struct OpenStoreReply {
-    QVariant data;
-    QString signature;
-    QUrl url;
+struct OpenStoreReply
+{
+  QVariant data;
+  QString signature;
+  QUrl url;
 };
 
 class OpenStoreNetworkManager : public QObject
 {
-    Q_OBJECT
-    Q_PROPERTY(bool networkAccessible READ networkAccessible NOTIFY networkAccessibleChanged)
-    Q_PROPERTY(bool showNsfw MEMBER m_showNsfw NOTIFY showNsfwChanged)
-    Q_PROPERTY(bool isDifferentDomain READ isDifferentDomain CONSTANT)
-    Q_PROPERTY(QString domain READ getUrl CONSTANT)
+  Q_OBJECT
+  Q_PROPERTY(bool networkAccessible READ networkAccessible NOTIFY networkAccessibleChanged)
+  Q_PROPERTY(bool showNsfw MEMBER m_showNsfw NOTIFY showNsfwChanged)
+  Q_PROPERTY(bool isDifferentDomain READ isDifferentDomain CONSTANT)
+  Q_PROPERTY(QString domain READ getUrl CONSTANT)
 
 public:
-    explicit OpenStoreNetworkManager();
+  explicit OpenStoreNetworkManager();
 
-    static OpenStoreNetworkManager* instance() {
-        if (!m_instance) {
-            m_instance = new OpenStoreNetworkManager();
-        }
-        return m_instance;
+  static OpenStoreNetworkManager* instance()
+  {
+    if (!m_instance) {
+      m_instance = new OpenStoreNetworkManager();
     }
+    return m_instance;
+  }
 
-    bool networkAccessible() const { return m_manager->networkAccessible() != QNetworkAccessManager::NotAccessible; }
-    bool isDifferentDomain() const;
-    QString getUrl() const;
-    QString getUrl(QString route) const;
+  bool networkAccessible() const { return m_manager->networkAccessible() != QNetworkAccessManager::NotAccessible; }
+  bool isDifferentDomain() const;
+  QString getUrl() const;
+  QString getUrl(QString route) const;
 
-    QString generateNewSignature() const;
+  QString generateNewSignature() const;
 
 public Q_SLOTS:
-    void getDiscover(const QString &signature);
-    void getAppDetails(const QString &signature, const QString &appId);
-    void getSearch(const QString &signature, int skip, int limit, const QString &filterString, const QString &category, const QString &sort, const QString &filterType);
-    void getCategories(const QString &signature);
-    void getByUrl(const QString &signature, const QUrl &url);
-    void getRevisions(const QString &signature, const QStringList &appIdsAtVersion);
-    void postReview(const QString &signature, const QString &appId, const QString &version, const QString &review, Ratings::Rating rating, const QString &apiKey, const bool &edit);
-    void getReviews(const QString &signature, const QString &appId);
-    void getReviews(const QString &signature, const QString &appId, unsigned int limit, qlonglong fromDate);
-    void getReviews(const QString &signature, const QString &appId, const QString &apiKey);
+  void getDiscover(const QString& signature);
+  void getAppDetails(const QString& signature, const QString& appId);
+  void getSearch(const QString& signature,
+                 int skip,
+                 int limit,
+                 const QString& filterString,
+                 const QString& category,
+                 const QString& sort,
+                 const QString& filterType);
+  void getCategories(const QString& signature);
+  void getByUrl(const QString& signature, const QUrl& url);
+  void getRevisions(const QString& signature, const QStringList& appIdsAtVersion);
+  void postReview(const QString& signature,
+                  const QString& appId,
+                  const QString& version,
+                  const QString& review,
+                  Ratings::Rating rating,
+                  const QString& apiKey,
+                  const bool& edit);
+  void getReviews(const QString& signature, const QString& appId);
+  void getReviews(const QString& signature, const QString& appId, unsigned int limit, qlonglong fromDate);
+  void getReviews(const QString& signature, const QString& appId, const QString& apiKey);
 
 Q_SIGNALS:
-    void networkAccessibleChanged();
-    void parsedReply(const OpenStoreReply &reply);
-    void showNsfwChanged();
-    void reloaded();
-    void error(const QString &signature, const QString &error);
+  void networkAccessibleChanged();
+  void parsedReply(const OpenStoreReply& reply);
+  void showNsfwChanged();
+  void reloaded();
+  void error(const QString& signature, const QString& error);
 
 private Q_SLOTS:
-    void deleteCache();
+  void deleteCache();
 
 private:
-    QNetworkReply* sendRequest(QNetworkRequest request);
-    QNetworkReply* postRequest(QNetworkRequest request, QJsonObject query);
-    void parseReply(QNetworkReply *reply, const QString &signature);
-    void getReviewsByUrl(const QString &signature, const QUrl &url);
+  QNetworkReply* sendRequest(QNetworkRequest request);
+  QNetworkReply* postRequest(QNetworkRequest request, QJsonObject query);
+  void parseReply(QNetworkReply* reply, const QString& signature);
+  void getReviewsByUrl(const QString& signature, const QUrl& url);
 
 private:
-    QNetworkAccessManager* m_manager;
-    bool m_showNsfw;
+  QNetworkAccessManager* m_manager;
+  bool m_showNsfw;
 
-    static OpenStoreNetworkManager* m_instance;
+  static OpenStoreNetworkManager* m_instance;
 };
 
 #endif // OPENSTORENETWORKMANAGER_H

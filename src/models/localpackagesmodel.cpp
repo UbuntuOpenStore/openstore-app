@@ -16,237 +16,239 @@
  */
 
 #include "localpackagesmodel.h"
-#include "../package.h"
-#include "../platformintegration.h"
 #include "../openstorenetworkmanager.h"
+#include "../package.h"
 #include "../packagescache.h"
+#include "../platformintegration.h"
 
-#include <QJsonDocument>
 #include <QJsonArray>
+#include <QJsonDocument>
 #include <algorithm>
 
 // For desktop file parsing
-#include <QSettings>
-#include <QFileInfo>
 #include <QDir>
+#include <QFileInfo>
+#include <QSettings>
 
-#define MODEL_START_REFRESH() m_ready = false; Q_EMIT readyChanged();
-#define MODEL_END_REFRESH() m_ready = true; Q_EMIT readyChanged();
+#define MODEL_START_REFRESH()                                                                                                              \
+  m_ready = false;                                                                                                                         \
+  Q_EMIT readyChanged();
+#define MODEL_END_REFRESH()                                                                                                                \
+  m_ready = true;                                                                                                                          \
+  Q_EMIT readyChanged();
 
 /*
     Sort available updates first, then by name
 */
-bool sortPackage(const LocalPackageItem &a, const LocalPackageItem &b)
+bool sortPackage(const LocalPackageItem& a, const LocalPackageItem& b)
 {
-    if (a.updateStatus == b.updateStatus) {
-        return (a.name.compare(b.name, Qt::CaseInsensitive) < 0);
-    }
+  if (a.updateStatus == b.updateStatus) {
+    return (a.name.compare(b.name, Qt::CaseInsensitive) < 0);
+  }
 
-    return (a.updateStatus.compare(b.updateStatus) < 0);
+  return (a.updateStatus.compare(b.updateStatus) < 0);
 }
 
-LocalPackagesModel::LocalPackagesModel(QAbstractListModel *parent)
-    : QAbstractListModel(parent), m_ready(false), m_appStoreUpdateAvailable(false)
+LocalPackagesModel::LocalPackagesModel(QAbstractListModel* parent)
+  : QAbstractListModel(parent)
+  , m_ready(false)
+  , m_appStoreUpdateAvailable(false)
 {
-    connect(PlatformIntegration::instance(), &PlatformIntegration::updated, this, &LocalPackagesModel::refresh);
-    connect(PackagesCache::instance(), &PackagesCache::updatingCacheChanged, this, &LocalPackagesModel::refresh);
+  connect(PlatformIntegration::instance(), &PlatformIntegration::updated, this, &LocalPackagesModel::refresh);
+  connect(PackagesCache::instance(), &PackagesCache::updatingCacheChanged, this, &LocalPackagesModel::refresh);
 
-    refresh();
+  refresh();
 }
 
 QHash<int, QByteArray> LocalPackagesModel::roleNames() const
 {
-    QHash<int, QByteArray> roles;
+  QHash<int, QByteArray> roles;
 
-    roles.insert(RoleName, "name");
-    roles.insert(RoleAppId, "appId");
-    roles.insert(RoleVersion, "version");
-    roles.insert(RoleIcon, "icon");
-    roles.insert(RoleUpdateAvailable, "updateAvailable");
-    roles.insert(RoleUpdateStatus, "updateStatus");
-    roles.insert(RolePackageUrl, "packageUrl");
-    roles.insert(RoleAppLaunchUrl, "appLaunchUrl");
+  roles.insert(RoleName, "name");
+  roles.insert(RoleAppId, "appId");
+  roles.insert(RoleVersion, "version");
+  roles.insert(RoleIcon, "icon");
+  roles.insert(RoleUpdateAvailable, "updateAvailable");
+  roles.insert(RoleUpdateStatus, "updateStatus");
+  roles.insert(RolePackageUrl, "packageUrl");
+  roles.insert(RoleAppLaunchUrl, "appLaunchUrl");
 
-    return roles;
+  return roles;
 }
 
-int LocalPackagesModel::rowCount(const QModelIndex & parent) const
+int LocalPackagesModel::rowCount(const QModelIndex& parent) const
 {
-    Q_UNUSED(parent)
-    return m_list.count();
+  Q_UNUSED(parent)
+  return m_list.count();
 }
 
-QVariant LocalPackagesModel::data(const QModelIndex & index, int role) const
+QVariant LocalPackagesModel::data(const QModelIndex& index, int role) const
 {
-    if (index.row() < 0 || index.row() > rowCount())
-        return QVariant();
+  if (index.row() < 0 || index.row() > rowCount())
+    return QVariant();
 
-    auto pkg = m_list.at(index.row());
+  auto pkg = m_list.at(index.row());
 
-    switch (role) {
+  switch (role) {
     case RoleName:
-        return pkg.name;
+      return pkg.name;
     case RoleAppId:
-        return pkg.appId;
+      return pkg.appId;
     case RoleVersion:
-        return pkg.version;
+      return pkg.version;
     case RoleIcon:
-        return pkg.icon;
+      return pkg.icon;
     case RoleUpdateAvailable:
-        return pkg.updateAvailable;
+      return pkg.updateAvailable;
     case RoleUpdateStatus:
-        return pkg.updateStatus;
+      return pkg.updateStatus;
     case RolePackageUrl:
-        return pkg.packageUrl;
+      return pkg.packageUrl;
     case RoleAppLaunchUrl:
-        return pkg.appLaunchUrl;
+      return pkg.appLaunchUrl;
 
     default:
-        return QVariant();
-    }
+      return QVariant();
+  }
 }
 
 int LocalPackagesModel::updatesAvailableCount() const
 {
-    int result = 0;
+  int result = 0;
 
-    Q_FOREACH (const LocalPackageItem &pkg, m_list) {
-        if (pkg.updateStatus == QStringLiteral("available")) {
-            ++result;
-        }
+  Q_FOREACH (const LocalPackageItem& pkg, m_list) {
+    if (pkg.updateStatus == QStringLiteral("available")) {
+      ++result;
     }
+  }
 
-    return result;
+  return result;
 }
 
 int LocalPackagesModel::downgradesAvailableCount() const
 {
-    int result = 0;
+  int result = 0;
 
-    Q_FOREACH (const LocalPackageItem &pkg, m_list) {
-        if (pkg.updateStatus == QStringLiteral("downgrade")) {
-            ++result;
-        }
+  Q_FOREACH (const LocalPackageItem& pkg, m_list) {
+    if (pkg.updateStatus == QStringLiteral("downgrade")) {
+      ++result;
     }
+  }
 
-    return result;
+  return result;
 }
 
 void LocalPackagesModel::refresh()
 {
-    // qDebug() << Q_FUNC_INFO << "refresh called";
+  // qDebug() << Q_FUNC_INFO << "refresh called";
 
-    MODEL_START_REFRESH();
+  MODEL_START_REFRESH();
 
-    beginResetModel();
-    m_list.clear();
+  beginResetModel();
+  m_list.clear();
 
-    const QVariantList &clickDb = PlatformIntegration::instance()->clickDb();
+  const QVariantList& clickDb = PlatformIntegration::instance()->clickDb();
 
-    beginInsertRows(QModelIndex(), m_list.count(), m_list.count() + PackagesCache::instance()->numberOfInstalledAppsInStore() - 1);
-    Q_FOREACH(const QVariant &pkg, clickDb) {
-        QVariantMap map = pkg.toMap();
-        QString appId = map.value("name").toString();
-        QString version = map.value("version").toString();
+  beginInsertRows(QModelIndex(), m_list.count(), m_list.count() + PackagesCache::instance()->numberOfInstalledAppsInStore() - 1);
+  Q_FOREACH (const QVariant& pkg, clickDb) {
+    QVariantMap map = pkg.toMap();
+    QString appId = map.value("name").toString();
+    QString version = map.value("version").toString();
 
-        QVariantMap hookMap = map.value("hooks").toMap();
-        QString appLaunchUrl;
-        Q_FOREACH (const QString &key, hookMap.keys())
-        {
-            QVariantMap hook = hookMap.value(key).toMap();
-            if (hook.keys().contains("desktop")) {
-                appLaunchUrl = QString("appid://%1/%2/%3")
-                    .arg(appId)
-                    .arg(key)
-                    .arg(version);
-            }
-        }
-
-        LocalPackageItem pkgItem;
-        pkgItem.appId = appId;
-        pkgItem.name = map.value("title").toString();
-        pkgItem.version = version;
-        pkgItem.packageUrl = PackagesCache::instance()->getPackageUrl(pkgItem.appId);
-        pkgItem.appLaunchUrl = appLaunchUrl;
-
-        int remoteRevision = PackagesCache::instance()->getRemoteAppRevision(pkgItem.appId);
-        int localRevision = PackagesCache::instance()->getLocalAppRevision(pkgItem.appId);
-        pkgItem.updateAvailable = bool(remoteRevision > localRevision);
-
-        if (localRevision == 0) {
-            pkgItem.updateStatus = QStringLiteral("downgrade");
-        }
-        else if (pkgItem.updateAvailable) {
-            pkgItem.updateStatus = QStringLiteral("available");
-        }
-        else {
-            pkgItem.updateStatus = QStringLiteral("none");
-        }
-
-        //pkgItem.icon = map.value("icon").toString();
-        if (pkgItem.icon.isEmpty()) {
-            const QString &directory = map.value("_directory").toString();
-
-            const QVariantMap &hooks = map.value("hooks").toMap();
-            Q_FOREACH(const QString &hook, hooks.keys()) {
-                const QVariantMap &h = hooks.value(hook).toMap();
-
-                const QString &desktop = h.value("desktop").toString();
-                if (!desktop.isEmpty()) {
-                    //        qDebug() << "Getting icon from .desktop file.";
-                    const QString &desktopFile = directory + QDir::separator() + desktop;
-                    QSettings appInfo(desktopFile, QSettings::IniFormat);
-                    pkgItem.icon = directory + QDir::separator() + appInfo.value("Desktop Entry/Icon").toString();
-                    //        qDebug() << pkgItem.icon;
-                    break;
-                }
-            }
-
-            if (!pkgItem.icon.isEmpty()) {
-                pkgItem.icon = pkgItem.icon.prepend("file://");
-            }
-
-            m_list.append(pkgItem);
-
-            // Check if there's an update for OpenStore
-            if (pkgItem.appId == m_appStoreAppId && localRevision != 0) {
-                m_appStoreUpdateAvailable = pkgItem.updateAvailable;
-                Q_EMIT appStoreUpdateAvailableChanged();
-            }
-        }
+    QVariantMap hookMap = map.value("hooks").toMap();
+    QString appLaunchUrl;
+    Q_FOREACH (const QString& key, hookMap.keys()) {
+      QVariantMap hook = hookMap.value(key).toMap();
+      if (hook.keys().contains("desktop")) {
+        appLaunchUrl = QString("appid://%1/%2/%3").arg(appId).arg(key).arg(version);
+      }
     }
-    //        qDebug() << "Finished refresh.";
 
-    std::sort(m_list.begin(), m_list.end(), sortPackage);
+    LocalPackageItem pkgItem;
+    pkgItem.appId = appId;
+    pkgItem.name = map.value("title").toString();
+    pkgItem.version = version;
+    pkgItem.packageUrl = PackagesCache::instance()->getPackageUrl(pkgItem.appId);
+    pkgItem.appLaunchUrl = appLaunchUrl;
 
-    endInsertRows();
-    endResetModel();
+    int remoteRevision = PackagesCache::instance()->getRemoteAppRevision(pkgItem.appId);
+    int localRevision = PackagesCache::instance()->getLocalAppRevision(pkgItem.appId);
+    pkgItem.updateAvailable = bool(remoteRevision > localRevision);
 
-    Q_EMIT updated();
-    MODEL_END_REFRESH();
+    if (localRevision == 0) {
+      pkgItem.updateStatus = QStringLiteral("downgrade");
+    } else if (pkgItem.updateAvailable) {
+      pkgItem.updateStatus = QStringLiteral("available");
+    } else {
+      pkgItem.updateStatus = QStringLiteral("none");
+    }
+
+    // pkgItem.icon = map.value("icon").toString();
+    if (pkgItem.icon.isEmpty()) {
+      const QString& directory = map.value("_directory").toString();
+
+      const QVariantMap& hooks = map.value("hooks").toMap();
+      Q_FOREACH (const QString& hook, hooks.keys()) {
+        const QVariantMap& h = hooks.value(hook).toMap();
+
+        const QString& desktop = h.value("desktop").toString();
+        if (!desktop.isEmpty()) {
+          //        qDebug() << "Getting icon from .desktop file.";
+          const QString& desktopFile = directory + QDir::separator() + desktop;
+          QSettings appInfo(desktopFile, QSettings::IniFormat);
+          pkgItem.icon = directory + QDir::separator() + appInfo.value("Desktop Entry/Icon").toString();
+          //        qDebug() << pkgItem.icon;
+          break;
+        }
+      }
+
+      if (!pkgItem.icon.isEmpty()) {
+        pkgItem.icon = pkgItem.icon.prepend("file://");
+      }
+
+      m_list.append(pkgItem);
+
+      // Check if there's an update for OpenStore
+      if (pkgItem.appId == m_appStoreAppId && localRevision != 0) {
+        m_appStoreUpdateAvailable = pkgItem.updateAvailable;
+        Q_EMIT appStoreUpdateAvailableChanged();
+      }
+    }
+  }
+  //        qDebug() << "Finished refresh.";
+
+  std::sort(m_list.begin(), m_list.end(), sortPackage);
+
+  endInsertRows();
+  endResetModel();
+
+  Q_EMIT updated();
+  MODEL_END_REFRESH();
 }
 
-QVariantMap LocalPackagesModel::get(int row) {
-    QHash<int,QByteArray> names = roleNames();
-    QHashIterator<int, QByteArray> ittr(names);
-    QVariantMap map;
-    while (ittr.hasNext()) {
-        ittr.next();
+QVariantMap LocalPackagesModel::get(int row)
+{
+  QHash<int, QByteArray> names = roleNames();
+  QHashIterator<int, QByteArray> ittr(names);
+  QVariantMap map;
+  while (ittr.hasNext()) {
+    ittr.next();
 
-        QModelIndex idx = index(row, 0);
-        QVariant data = idx.data(ittr.key());
-        map[ittr.value()] = data;
-    }
+    QModelIndex idx = index(row, 0);
+    QVariant data = idx.data(ittr.key());
+    map[ittr.value()] = data;
+  }
 
-    return map;
+  return map;
 }
 
-QVariantMap LocalPackagesModel::getByAppId(const QString &appId) {
-    for (int i = 0; i < m_list.count(); i++) {
-        if (m_list[i].appId == appId) {
-            return get(i);
-        }
+QVariantMap LocalPackagesModel::getByAppId(const QString& appId)
+{
+  for (int i = 0; i < m_list.count(); i++) {
+    if (m_list[i].appId == appId) {
+      return get(i);
     }
+  }
 
-    return QVariantMap();
+  return QVariantMap();
 }

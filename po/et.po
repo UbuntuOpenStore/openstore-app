@@ -8,356 +8,367 @@ msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-28 04:55+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-10-25 08:02+0000\n"
+"Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Estonian <https://hosted.weblate.org/projects/open-store-io/"
+"openstore-app/et/>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.14.1-dev\n"
 
 #: ../qml/AppDetailsPage.qml:108 ../qml/AppLocalDetailsPage.qml:34
 msgid "App details"
-msgstr ""
+msgstr "Rakenduse üksikasjad"
 
 #: ../qml/AppDetailsPage.qml:115 ../qml/AppDetailsPage.qml:385
 #: ../qml/AppLocalDetailsPage.qml:41 ../qml/Dialogs/UninstallDialog.qml:33
 msgid "Remove"
-msgstr ""
+msgstr "Eemalda"
 
 #: ../qml/AppDetailsPage.qml:152 ../qml/Components/PackageListItem.qml:34
 #: ../qml/Components/PackageTile.qml:79
 msgid "App"
-msgstr ""
+msgstr "Rakendus"
 
 #: ../qml/AppDetailsPage.qml:153 ../qml/Components/PackageListItem.qml:35
 #: ../qml/Components/PackageTile.qml:80
 msgid "Bookmark"
-msgstr ""
+msgstr "Lisa järjehoidjaks"
 
 #: ../qml/AppDetailsPage.qml:154 ../qml/Components/PackageListItem.qml:36
 #: ../qml/Components/PackageTile.qml:81
 msgid "Web App"
-msgstr ""
+msgstr "Veebirakendus"
 
 #: ../qml/AppDetailsPage.qml:164
 msgid "Install Size: "
-msgstr ""
+msgstr "Paigalduse suurus: "
 
 #: ../qml/AppDetailsPage.qml:165
 msgid "Download Size: "
-msgstr ""
+msgstr "Allalaaditav maht: "
 
 #: ../qml/AppDetailsPage.qml:239
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
 msgstr ""
+"Selle rakenduse paigaldatud versioon ei ole pärit OpenStore'i serverist. Sa "
+"võid viimase stabiilse versiooniuuenduse paigaldada klõpsides järgnevat "
+"nuppu."
 
 #: ../qml/AppDetailsPage.qml:264 ../qml/AppLocalDetailsPage.qml:104
 #: ../qml/Components/HighlightedApp.qml:117
 msgid "Open"
-msgstr ""
+msgstr "Ava"
 
 #: ../qml/AppDetailsPage.qml:280
 msgid "The OpenStore is installed!"
-msgstr ""
+msgstr "OpenStore on paigaldatud!"
 
 #: ../qml/AppDetailsPage.qml:289
 msgid "Install stable version"
-msgstr ""
+msgstr "Paigalda stabiilne versioon"
 
 #: ../qml/AppDetailsPage.qml:292
 msgid "Upgrade"
-msgstr ""
+msgstr "Uuenda"
 
 #: ../qml/AppDetailsPage.qml:295
 msgid "Install"
-msgstr ""
+msgstr "Paigalda"
 
 #: ../qml/AppDetailsPage.qml:371
 msgid "This app is not compatible with your system."
-msgstr ""
+msgstr "See rakendus ei ühildu sinu süsteemiga."
 
 #: ../qml/AppDetailsPage.qml:404
 msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
 msgstr ""
+"Sellel rakendusel on ligipääs süsteemi piiratud osale ja sinu kõikidele "
+"andmetele, üksikasjad on kirjas alljärgnevas."
 
 #: ../qml/AppDetailsPage.qml:407
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
+"Sellel rakendusel on ligipääs kasutuspiiranguga süsteemiandmetele, "
+"üksikasjad on kirjas alljärgnevas."
 
 #: ../qml/AppDetailsPage.qml:432
 msgid "Description"
-msgstr ""
+msgstr "Kirjeldus"
 
 #. TRANSLATORS: Title of the changelog section
 #: ../qml/AppDetailsPage.qml:470
 msgid "What's New"
-msgstr ""
+msgstr "Mida on meil uut"
 
 #: ../qml/AppDetailsPage.qml:489
 msgid "Packager/Publisher"
-msgstr ""
+msgstr "Pakendaja/avaldaja"
 
 #: ../qml/AppDetailsPage.qml:498 ../qml/AppLocalDetailsPage.qml:138
 msgid "Installed version"
-msgstr ""
+msgstr "Paigaldatud versioon"
 
 #: ../qml/AppDetailsPage.qml:508
 msgid "Latest available version"
-msgstr ""
+msgstr "Viimane saadavalolev versioon"
 
 #: ../qml/AppDetailsPage.qml:517
 msgid "First released"
-msgstr ""
+msgstr "Esmalt avaldatud"
 
 #: ../qml/AppDetailsPage.qml:528
 msgid "Downloads of the latest version"
-msgstr ""
+msgstr "Viimase versiooni allalaadimisi"
 
 #: ../qml/AppDetailsPage.qml:537
 msgid "Total downloads"
-msgstr ""
+msgstr "Allalaadimisi kokku"
 
 #: ../qml/AppDetailsPage.qml:546
 msgid "License"
-msgstr ""
+msgstr "Litsents"
 
 #: ../qml/AppDetailsPage.qml:547
 msgid "N/A"
-msgstr ""
+msgstr "pole teada"
 
 #: ../qml/AppDetailsPage.qml:559 ../qml/SettingsPage.qml:214
 msgid "Source Code"
-msgstr ""
+msgstr "Lähtekood"
 
 #: ../qml/AppDetailsPage.qml:572
 msgid "Get support for this app"
-msgstr ""
+msgstr "Selle rakenduse kasutajatugi"
 
 #: ../qml/AppDetailsPage.qml:585
 msgid "Donate to support this app"
-msgstr ""
+msgstr "Toeta rahaliselt selle rakenduse arendamist"
 
 #: ../qml/AppDetailsPage.qml:598
 msgid "Help translate this app"
-msgstr ""
+msgstr "Aita seda rakendust tõlkida"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
 #: ../qml/AppDetailsPage.qml:614
 msgid "More from %1"
-msgstr ""
+msgstr "Muud rakendused arendajalt %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
 #: ../qml/AppDetailsPage.qml:629
 msgid "Other apps in %1"
-msgstr ""
+msgstr "Muud rakendused kategoorias %1"
 
 #: ../qml/AppDetailsPage.qml:635
 msgid "Package contents"
-msgstr ""
+msgstr "Paketi sisu"
 
 #: ../qml/AppDetailsPage.qml:722
 msgid "Permissions"
-msgstr ""
+msgstr "Õigused"
 
 #: ../qml/AppDetailsPage.qml:727
 msgid "Accounts"
-msgstr ""
+msgstr "Kasutajakontod"
 
 #: ../qml/AppDetailsPage.qml:728
 msgid "Audio"
-msgstr ""
+msgstr "Heli"
 
 #: ../qml/AppDetailsPage.qml:729
 msgid "Bluetooth"
-msgstr ""
+msgstr "Bluetooth"
 
 #: ../qml/AppDetailsPage.qml:730
 msgid "Calendar"
-msgstr ""
+msgstr "Kalender"
 
 #: ../qml/AppDetailsPage.qml:731
 msgid "Camera"
-msgstr ""
+msgstr "Kaamera"
 
 #: ../qml/AppDetailsPage.qml:732
 msgid "Connectivity"
-msgstr ""
+msgstr "Ühenduvus"
 
 #: ../qml/AppDetailsPage.qml:733
 msgid "Contacts"
-msgstr ""
+msgstr "Kontaktid"
 
 #: ../qml/AppDetailsPage.qml:734
 msgid "Content Exchange Source"
-msgstr ""
+msgstr "Sisuvahetuse allikas"
 
 #: ../qml/AppDetailsPage.qml:735
 msgid "Content Exchange"
-msgstr ""
+msgstr "Sisuvahetus"
 
 #: ../qml/AppDetailsPage.qml:736
 msgid "Debug"
-msgstr ""
+msgstr "Veaotsing"
 
 #: ../qml/AppDetailsPage.qml:737
 msgid "History"
-msgstr ""
+msgstr "Ajalugu"
 
 #: ../qml/AppDetailsPage.qml:738
 msgid "In App Purchases"
-msgstr ""
+msgstr "Rakendusesisesed ostud"
 
 #: ../qml/AppDetailsPage.qml:739
 msgid "Keep Display On"
-msgstr ""
+msgstr "Ekraani hoidmine sisselülitatuna"
 
 #: ../qml/AppDetailsPage.qml:740
 msgid "Location"
-msgstr ""
+msgstr "Asukoht"
 
 #: ../qml/AppDetailsPage.qml:741
 msgid "Microphone"
-msgstr ""
+msgstr "Mikrofon"
 
 #: ../qml/AppDetailsPage.qml:742
 msgid "Read Music Files"
-msgstr ""
+msgstr "Muusikafailide lugemine"
 
 #: ../qml/AppDetailsPage.qml:743
 msgid "Music Files"
-msgstr ""
+msgstr "Muusikafailid"
 
 #: ../qml/AppDetailsPage.qml:744
 msgid "Networking"
-msgstr ""
+msgstr "Võrgundus"
 
 #: ../qml/AppDetailsPage.qml:745
 msgid "Read Picture Files"
-msgstr ""
+msgstr "Pildifailide lugemine"
 
 #: ../qml/AppDetailsPage.qml:746
 msgid "Picture Files"
-msgstr ""
+msgstr "Pildifailid"
 
 #: ../qml/AppDetailsPage.qml:747
 msgid "Push Notifications"
-msgstr ""
+msgstr "Tõuketeavitused"
 
 #: ../qml/AppDetailsPage.qml:748
 msgid "Sensors"
-msgstr ""
+msgstr "Andurid"
 
 #: ../qml/AppDetailsPage.qml:749
 msgid "User Metrics"
-msgstr ""
+msgstr "Kasutajate statistika"
 
 #: ../qml/AppDetailsPage.qml:750
 msgid "Read Video Files"
-msgstr ""
+msgstr "Videofailide lugemine"
 
 #: ../qml/AppDetailsPage.qml:751
 msgid "Video Files"
-msgstr ""
+msgstr "Videofailid"
 
 #: ../qml/AppDetailsPage.qml:752
 msgid "Video"
-msgstr ""
+msgstr "Video"
 
 #: ../qml/AppDetailsPage.qml:753
 msgid "Webview"
-msgstr ""
+msgstr "Webview sisemine brauser"
 
 #: ../qml/AppDetailsPage.qml:757
 msgid "Full System Access"
-msgstr ""
+msgstr "Täisligipääs süsteemile"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
 #: ../qml/AppDetailsPage.qml:762
 msgid "none required"
-msgstr ""
+msgstr "ei vaja eraldi õigusi"
 
 #: ../qml/AppDetailsPage.qml:798
 msgid "Read paths"
-msgstr ""
+msgstr "Asukohtadest/kaustadest lugemine"
 
 #: ../qml/AppDetailsPage.qml:815
 msgid "Write paths"
-msgstr ""
+msgstr "Asukohtadesse/kaustadesse kirjutamine"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
 #: ../qml/AppDetailsPage.qml:886
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
 #: ../qml/AppDetailsPage.qml:891
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
 #: ../qml/AppDetailsPage.qml:896
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
 #: ../qml/AppDetailsPage.qml:899
 msgid "%1 bytes"
-msgstr ""
+msgstr "%1 baiti"
 
 #: ../qml/AppLocalDetailsPage.qml:118
 msgid "This app could not be found in the OpenStore"
-msgstr ""
+msgstr "Seda rakendust ei leidu OpenStore'is"
 
 #: ../qml/AppLocalDetailsPage.qml:121
 msgid ""
 "You are currently offline and the app details could not be fetched from the "
 "OpenStore"
 msgstr ""
+"Sinu nutiseadmes puudub hetkel võrguühendust ja seega rakenduse üksikasju ei "
+"saa OpenStore'ist laadida"
 
 #: ../qml/CategoriesPage.qml:39
 msgid "Categories"
-msgstr ""
+msgstr "Kategooriad"
 
 #: ../qml/CategoriesPage.qml:84
 msgid "Nothing to see here yet!"
-msgstr ""
+msgstr "Siin pole veel mitte midagi huvitavat!"
 
 #: ../qml/Components/BottomEdgePageStack.qml:102
 msgid "Back"
-msgstr ""
+msgstr "Tagasi"
 
 #: ../qml/Components/BottomEdgePageStack.qml:102
 #: ../qml/Components/ReviewPreview.qml:103
 #: ../qml/Components/ReviewPreview.qml:117
 msgid "Close"
-msgstr ""
+msgstr "Sulge"
 
 #: ../qml/Components/HeaderMain.qml:27 ../qml/SettingsPage.qml:29
 msgid "Settings"
-msgstr ""
+msgstr "Seadistused"
 
 #: ../qml/Components/HeaderMain.qml:40 ../qml/SearchPage.qml:35
 msgid "Search"
-msgstr ""
+msgstr "Otsi"
 
 #: ../qml/Components/HighlightedApp.qml:114
 #: ../qml/Components/ReviewPreview.qml:193
 msgid "Update"
-msgstr ""
+msgstr "Uuenda"
 
 #: ../qml/Components/HighlightedApp.qml:120
 msgid "Details"
-msgstr ""
+msgstr "Üksikasjad"
 
 #: ../qml/Components/HookIcon.qml:54
 msgid "Application"
-msgstr ""
+msgstr "Rakendus"
 
 #. TRANSLATORS: This is a platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: ../qml/Components/HookIcon.qml:68
@@ -381,81 +392,81 @@ msgstr ""
 
 #: ../qml/Components/PackageTile.qml:97
 msgid "Update available"
-msgstr ""
+msgstr "Uus versioon on saadaval"
 
 #: ../qml/Components/PackageTile.qml:97
 msgid "✓ Installed"
-msgstr ""
+msgstr "✓ Paigaldatud"
 
 #: ../qml/Components/ReviewPreview.qml:93
 msgid "Something went wrong..."
-msgstr ""
+msgstr "Midagi läks valesti..."
 
 #: ../qml/Components/ReviewPreview.qml:99
 msgid "Error Posting Review"
-msgstr ""
+msgstr "Viga arvustuse salvestamisel"
 
 #: ../qml/Components/ReviewPreview.qml:113
 msgid "Review Posted Correctly"
-msgstr ""
+msgstr "Arvustuse salvestamine õnnestus"
 
 #: ../qml/Components/ReviewPreview.qml:114
 msgid "Your review has been posted successfully."
-msgstr ""
+msgstr "Sinu koostatud arvustuse salvestamine õnnestus."
 
 #: ../qml/Components/ReviewPreview.qml:128
 msgid "Loading..."
-msgstr ""
+msgstr "Laadin..."
 
 #: ../qml/Components/ReviewPreview.qml:128
 msgid "Rate this app"
-msgstr ""
+msgstr "Hinda seda rakendust"
 
 #: ../qml/Components/ReviewPreview.qml:135
 msgid "(Optional) Write a review"
-msgstr ""
+msgstr "(Kui soovid) Koosta arvustus"
 
 #: ../qml/Components/ReviewPreview.qml:139
 msgid "%1/%2 characters"
-msgstr ""
+msgstr "%1/%2 tähemärki"
 
 #: ../qml/Components/ReviewPreview.qml:193
 msgid "Submit"
-msgstr ""
+msgstr "Lisa rakendus"
 
 #: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:148
 #: ../qml/Dialogs/InstallWarningDialog.qml:61
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
 #: ../qml/Dialogs/UninstallDialog.qml:42
 msgid "Cancel"
-msgstr ""
+msgstr "Katkesta"
 
 #: ../qml/Components/ReviewPreview.qml:244
 msgid "%1 review. "
 msgid_plural "%1 reviews. "
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 arvustus. "
+msgstr[1] "%1 arvustust. "
 
 #: ../qml/Components/ReviewPreview.qml:252
 msgid "Edit Review"
-msgstr ""
+msgstr "Muuda arvustust"
 
 #: ../qml/Components/ReviewPreview.qml:255
 msgid "Review app"
-msgstr ""
+msgstr "Arvusta rakendust"
 
 #: ../qml/Components/ReviewPreview.qml:258
 msgid "Sign in to review this app"
-msgstr ""
+msgstr "Selle rakenduse arvustamiseks logi sisse"
 
 #: ../qml/Components/ReviewPreview.qml:261
 msgid "Install this app to review it"
-msgstr ""
+msgstr "Arvustamiseks palun paigalda rakendus"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:26
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:25
 msgid "Warning"
-msgstr ""
+msgstr "Hoiatus"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:35
 msgid ""
@@ -477,91 +488,91 @@ msgstr ""
 
 #: ../qml/Dialogs/DonationDialog.qml:25
 msgid "Donating"
-msgstr ""
+msgstr "Toeta rahaliselt"
 
 #: ../qml/Dialogs/DonationDialog.qml:26
 msgid "Would you like to support this app with a donation to the developer?"
-msgstr ""
+msgstr "Kas sa sooviksid selle rakenduse arendajat toetada rahaliselt?"
 
 #: ../qml/Dialogs/DonationDialog.qml:32
 msgid "Donate now"
-msgstr ""
+msgstr "Toeta kohe"
 
 #: ../qml/Dialogs/DonationDialog.qml:40
 msgid "Maybe later"
-msgstr ""
+msgstr "Võib-olla hiljem"
 
 #: ../qml/Dialogs/FilterDialog.qml:26
 msgid "Filters and Sorting"
-msgstr ""
+msgstr "Filtrid ja järjestus"
 
 #: ../qml/Dialogs/FilterDialog.qml:38
 msgid "Sort By"
-msgstr ""
+msgstr "Järjestuse viis"
 
 #: ../qml/Dialogs/FilterDialog.qml:45 ../qml/Dialogs/FilterDialog.qml:65
 msgid "Relevance"
-msgstr ""
+msgstr "Teemakohasus"
 
 #: ../qml/Dialogs/FilterDialog.qml:46
 msgid "Most Popular"
-msgstr ""
+msgstr "Populaarseimad"
 
 #: ../qml/Dialogs/FilterDialog.qml:47
 msgid "Least Popular"
-msgstr ""
+msgstr "Vähem populaarsed"
 
 #: ../qml/Dialogs/FilterDialog.qml:48
 msgid "Title (A-Z)"
-msgstr ""
+msgstr "Pealkiri (A..Z)"
 
 #: ../qml/Dialogs/FilterDialog.qml:49
 msgid "Title (Z-A)"
-msgstr ""
+msgstr "Pealkiri (Z..A)"
 
 #: ../qml/Dialogs/FilterDialog.qml:50
 msgid "Newest"
-msgstr ""
+msgstr "Uusim"
 
 #: ../qml/Dialogs/FilterDialog.qml:51
 msgid "Oldest"
-msgstr ""
+msgstr "Vanim"
 
 #: ../qml/Dialogs/FilterDialog.qml:52
 msgid "Latest Update"
-msgstr ""
+msgstr "Viimane uuendus"
 
 #: ../qml/Dialogs/FilterDialog.qml:53
 msgid "Oldest Update"
-msgstr ""
+msgstr "Vanim uuendus"
 
 #: ../qml/Dialogs/FilterDialog.qml:93
 msgid "Type"
-msgstr ""
+msgstr "Tüüp"
 
 #: ../qml/Dialogs/FilterDialog.qml:100 ../qml/Dialogs/FilterDialog.qml:115
 msgid "All Types"
-msgstr ""
+msgstr "Kõik tüübid"
 
 #: ../qml/Dialogs/FilterDialog.qml:101
 msgid "Apps"
-msgstr ""
+msgstr "Rakendused"
 
 #: ../qml/Dialogs/FilterDialog.qml:102
 msgid "Bookmarks"
-msgstr ""
+msgstr "Järjehoidjad"
 
 #: ../qml/Dialogs/FilterDialog.qml:103
 msgid "Web Apps"
-msgstr ""
+msgstr "Veebirakendused"
 
 #: ../qml/Dialogs/FilterDialog.qml:140
 msgid "Apply"
-msgstr ""
+msgstr "Rakenda"
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:27
 msgid "Install unknown app?"
-msgstr ""
+msgstr "Kas tahad paigaldada tundmatut rakendust?"
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:28
 msgid ""
@@ -604,15 +615,15 @@ msgstr ""
 
 #: ../qml/Dialogs/UninstallDialog.qml:25
 msgid "Remove package"
-msgstr ""
+msgstr "Eemalda pakett"
 
 #: ../qml/Dialogs/UninstallDialog.qml:26
 msgid "Do you want to remove %1?"
-msgstr ""
+msgstr "Kas sa kindlasti soovid selle paketi eemaldada: %1?"
 
 #: ../qml/DiscoverPage.qml:40
 msgid "OpenStore"
-msgstr ""
+msgstr "OpenStore"
 
 #: ../qml/DiscoverPage.qml:76
 msgid "by %1"
@@ -620,57 +631,57 @@ msgstr ""
 
 #: ../qml/DiscoverPage.qml:130
 msgid "You are currently offline"
-msgstr ""
+msgstr "Sinu nutiseadmes puudub hetkel võrguühendus"
 
 #: ../qml/DiscoverPage.qml:146
 msgid "OpenStore update available"
-msgstr ""
+msgstr "Saadaval on OpenStore'i uuendus"
 
 #: ../qml/DiscoverPage.qml:176
 msgid " (%1 update available)"
 msgid_plural " (%1 updates available)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] " (saadaval on %1 uuendus)"
+msgstr[1] " (saadaval on %1 uuendust)"
 
 #: ../qml/DiscoverPage.qml:176 ../qml/DiscoverPage.qml:177
 #: ../qml/InstalledAppsPage.qml:52
 msgid "Installed Apps"
-msgstr ""
+msgstr "Paigaldatud rakendused"
 
 #: ../qml/DiscoverPage.qml:201
 msgid "Browse Apps by Category"
-msgstr ""
+msgstr "Sirvi rakendusi kategooriate kaupa"
 
 #: ../qml/FilteredAppList.qml:109
 msgid "No results found."
-msgstr ""
+msgstr "Tulemusi ei leidu."
 
 #: ../qml/FilteredAppList.qml:109
 msgid "Nothing here yet"
-msgstr ""
+msgstr "Siin pole veel midagi"
 
 #: ../qml/FilteredAppList.qml:110
 msgid "No app has been released in this category yet."
-msgstr ""
+msgstr "Selles kategoorias pole veel avaldatud ühtegi rakendust."
 
 #: ../qml/FilteredAppList.qml:110
 msgid "Try with a different search."
-msgstr ""
+msgstr "Proovi teistsugust otsingut."
 
 #. TRANSLATORS: %1 is the number of installed apps
 #: ../qml/InstalledAppsPage.qml:80
 msgid "Installed apps (%1)"
-msgstr ""
+msgstr "Paigaldatud rakendused (%1)"
 
 #. TRANSLATORS: %1 is the number of available app updates
 #: ../qml/InstalledAppsPage.qml:84
 msgid "Available updates (%1)"
-msgstr ""
+msgstr "Saadaval uuendused (%1)"
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
 #: ../qml/InstalledAppsPage.qml:88
 msgid "Stable version available (%1)"
-msgstr ""
+msgstr "Saadaval on stabiilne versioon (%1)"
 
 #: ../qml/InstalledAppsPage.qml:91
 msgid ""
@@ -680,88 +691,94 @@ msgstr ""
 
 #: ../qml/InstalledAppsPage.qml:92
 msgid "Update all"
-msgstr ""
+msgstr "Uuenda kõik"
 
 #: ../qml/InstalledAppsPage.qml:194
 msgid "No apps found"
-msgstr ""
+msgstr "Rakendusi ei leidu"
 
 #: ../qml/InstalledAppsPage.qml:195
 msgid "No app has been installed from OpenStore yet."
-msgstr ""
+msgstr "Sa pole veel OpenStore'ist ühtegi rakendust paigaldanud."
 
 #: ../qml/Main.qml:319 ../qml/SearchPage.qml:55
 msgid "Filters"
-msgstr ""
+msgstr "Filtrid"
 
 #: ../qml/Main.qml:366
 msgid "App installed"
-msgstr ""
+msgstr "Rakendus on paigaldatud"
 
 #: ../qml/Main.qml:367
 msgid "The app has been installed successfully."
-msgstr ""
+msgstr "Rakenduse paigaldamine õnnestus."
 
 #: ../qml/Main.qml:370 ../qml/Main.qml:383 ../qml/Main.qml:398
 msgid "OK"
-msgstr ""
+msgstr "Sobib"
 
 #: ../qml/Main.qml:379
 msgid "Installation failed"
-msgstr ""
+msgstr "Paigaldamine ei õnnestunud"
 
 #: ../qml/Main.qml:380
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
+"Paketi paigaldamine ei õnnestunud. Palun kontrolli, et see on korrektne "
+"click-pakett."
 
 #: ../qml/Main.qml:394
 msgid "Installation failed (Error %1)"
-msgstr ""
+msgstr "Paigaldamine ei õnnestunud (Viga: %1)"
 
 #: ../qml/SearchPage.qml:48
 msgid "Search in OpenStore..."
-msgstr ""
+msgstr "Otsi OpenStore'ist..."
 
 #: ../qml/SettingsPage.qml:113
 msgid "OpenStore Account"
-msgstr ""
+msgstr "OpenStore'i kasutajakonto"
 
 #: ../qml/SettingsPage.qml:121 ../qml/SignInPage.qml:31
 msgid "Sign in"
-msgstr ""
+msgstr "Logi sisse"
 
 #: ../qml/SettingsPage.qml:138
 msgid "Sign out"
-msgstr ""
+msgstr "Logi välja"
 
 #: ../qml/SettingsPage.qml:166
 msgid "Parental control"
-msgstr ""
+msgstr "Vanemlik järelevalve"
 
 #: ../qml/SettingsPage.qml:172
 msgid "Hide adult-oriented content"
-msgstr ""
+msgstr "Peida täiskasvanutele mõeldud sisu"
 
 #: ../qml/SettingsPage.qml:182
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr ""
+"Kui sisestad oma salasõna, siis vastutad täies mahus ebasobiliku sisu "
+"kuvamise eest."
 
 #: ../qml/SettingsPage.qml:207
 msgid "About OpenStore"
-msgstr ""
+msgstr "Rakenduse teave: OpenStore"
 
 #: ../qml/SettingsPage.qml:223
 msgid "Report an issue"
-msgstr ""
+msgstr "Teata veast või problemist"
 
 #: ../qml/SettingsPage.qml:232
 msgid "Additional Icons by"
-msgstr ""
+msgstr "Täiendavate ikoonide autor on"
 
 #: openstore.desktop.in.h:1
 msgid ""
 "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr ""
+"software;apps;applications;programs;store;market;play;click;discover;install;tarkvara;programm;pood;rakenduspood;avasta;leia;otsi;rakendus;äpp;äpid;paigalda;paigaldamine;uuenda;uuendamine;uuendus;värskendus;värskenda;värskendamine;"
+""

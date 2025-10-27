@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-28 04:55+0000\n"
-"PO-Revision-Date: 2025-10-25 08:02+0000\n"
+"PO-Revision-Date: 2025-10-28 09:02+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/et/>\n"
@@ -373,22 +373,22 @@ msgstr "Rakendus"
 #. TRANSLATORS: This is a platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
 #: ../qml/Components/HookIcon.qml:68
 msgid "URL Handler"
-msgstr ""
+msgstr "Võrguaadresside käsitleja"
 
 #. TRANSLATORS: This is a platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
 #: ../qml/Components/HookIcon.qml:82
 msgid "Content Hub Handler"
-msgstr ""
+msgstr "Sisukeskuse käsitleja"
 
 #. TRANSLATORS: This is a platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
 #: ../qml/Components/HookIcon.qml:96
 msgid "Push Helper"
-msgstr ""
+msgstr "Tõuketeavituste käsitleja"
 
 #. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
 #: ../qml/Components/HookIcon.qml:110
 msgid "Accounts provider"
-msgstr ""
+msgstr "Kasutajakontode käsitleja"
 
 #: ../qml/Components/PackageTile.qml:97
 msgid "Update available"
@@ -473,18 +473,20 @@ msgid ""
 "You are currently using a non-standard domain for the OpenStore. This is a "
 "development feature. The domain you are using is:"
 msgstr ""
+"Sa kasutad hetkel OpenStore'i ebastandardset domeeni, mis on eelkõige "
+"mõeldud arenduseks. Antud domeen on:"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:49
 msgid "Are you sure you want to continue?"
-msgstr ""
+msgstr "Kas sa oled kindel, et soovid jätkata?"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:53
 msgid "Yes, I know what I'm doing"
-msgstr ""
+msgstr "Ma tean, mida ma teen"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:61
 msgid "Get me out of here!"
-msgstr ""
+msgstr "Oh, ei - läheme siit ära!"
 
 #: ../qml/Dialogs/DonationDialog.qml:25
 msgid "Donating"
@@ -580,29 +582,36 @@ msgid ""
 "OpenStore is not recommended and can potentially harm your system. Only "
 "install this app if you got it from a trusted source."
 msgstr ""
+"Kas sa soovid paigaldada tundmatu rakenduse „%1“? Rakenduste paigaldamine "
+"väljastpoolt OpenStore'i pole soovitatud ja see võib kahjustada sinu "
+"süsteemi. Paigalda see rakendus vaid siis, kui oled ta saanud turvalisest "
+"allikast."
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:51
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
 msgid "I understand the risks"
-msgstr ""
+msgstr "Ma mõistan riske"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:26
 msgid "Review confirmation"
-msgstr ""
+msgstr "Arvustuse kinnitus"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:27
 msgid ""
 "Would you like to contact the publisher or file a bug instead? By opening a "
 "discussion with the developer(s) you could be helping to improve this app."
 msgstr ""
+"Kas sa selle asemel sooviksid võtta ühendust rakenduse väljaandjaga või "
+"koostada veateate? Näiteks vesteldes arendaja(te)ga võib sul olla võimalik "
+"aidata rakendust parandada."
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:37
 msgid "Get support"
-msgstr ""
+msgstr "Vaata kasutajatuge"
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml:47
 msgid "Post my review"
-msgstr ""
+msgstr "Postita minu arvustus"
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
 msgid ""
@@ -612,6 +621,12 @@ msgid ""
 "anything bad that might happen to your device or data from installing this "
 "app."
 msgstr ""
+"Sellel rakendusel on ligipääs sinu nutiseadme süsteemi piiratud osadele ja "
+"kõikidele sinu andmetele. Ta isegi võib olla suutlik süsteemi katki teha. "
+"OpenStore'i haldajad on küll selle rakenduse lähtekoodi turvalisuse ja "
+"ohutuse mõttes üle vaadanud, pole nad vastutavad kui midagi peale selle "
+"rakenduse paigaldamist läheb valesti sinu nutiseadme süsteemiga või sinu "
+"andmetega."
 
 #: ../qml/Dialogs/UninstallDialog.qml:25
 msgid "Remove package"
@@ -627,7 +642,7 @@ msgstr "OpenStore"
 
 #: ../qml/DiscoverPage.qml:76
 msgid "by %1"
-msgstr ""
+msgstr "autorilt %1"
 
 #: ../qml/DiscoverPage.qml:130
 msgid "You are currently offline"
@@ -688,6 +703,8 @@ msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
 msgstr ""
+"Selle rakenduse paigaldatud versioonid pole pärit OpenStore'ist, aga "
+"stabiilne versioon on nüüd saadaval."
 
 #: ../qml/InstalledAppsPage.qml:92
 msgid "Update all"

@@ -7,4 +7,6 @@ dependencies_target:
   - libpam0g-dev
 framework: ubuntu-sdk-20.04
 scripts:
-  format: ./scripts/format-code.sh
+  format: ./scripts/format.sh
+  check: ./scripts/check.sh
+  lint-qml: ./scripts/lint-qml.sh

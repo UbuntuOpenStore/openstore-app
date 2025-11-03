@@ -17,13 +17,36 @@ project on the [Weblate](https://hosted.weblate.org/projects/open-store-io/opens
 
 ### Code Style
 
-This project uses clang-format for C++ code formatting based on Mozilla style. Code is automatically formatted when you commit changes. See [CODING_STYLE.md](CODING_STYLE.md) for details.
+This project uses Docker to provide consistent code formatting and linting tools:
+- clang-format for C++ code formatting
+- qmlformat for QML code formatting
+- qmllint for QML code linting
 
-To manually format all code:
+#### Prerequisites
+
+- Docker must be installed on your system
+
+#### Formatting & Linting Code
+
+To format all code:
 
 ```bash
-./scripts/format-code.sh
+./scripts/format.sh
 ```
+
+To check if your code is properly formatted before submitting:
+
+```bash
+./scripts/check.sh
+```
+
+To lint QML files:
+
+```bash
+./scripts/lint-qml.sh
+```
+
+The first time you run these scripts, a Docker image will be built with all the required tools.
 
 ## Donations
 

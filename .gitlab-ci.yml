@@ -12,14 +12,11 @@ stages:
 before_script:
   - git submodule update --init --recursive
 
-clang-format:
+check:
   stage: lint
-  image: ubuntu:22.04
-  variables:
-    DEBIAN_FRONTEND: noninteractive
+  image: bhdouglass/openstore-app-tools
   script:
-    - apt-get update && apt-get install -y clang-format git
-    - ./scripts/check-format.sh
+    - ./scripts/check.sh
 
 build-arm64-focal:
   extends: .artifacts

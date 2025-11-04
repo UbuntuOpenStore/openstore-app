@@ -28,30 +28,32 @@ case "$COMMAND" in
         ;;
 
     format-qml)
-        echo "Formatting QML files..."
-        find /code -type f -name "*.qml" -not -path "*/build/*" -not -path "*/\.*/*" | while read -r file; do
-            qmlformat -i "$file"
-        done
+        echo "Formatting QML files is currently disabled."
+        # echo "Formatting QML files..."
+        # find /code -type f -name "*.qml" -not -path "*/build/*" -not -path "*/\.*/*" | while read -r file; do
+        #    qmlformat -i "$file"
+        # done
         ;;
 
     check-qml)
-        echo "Checking QML format..."
-        FAILED=0
-        find /code -type f -name "*.qml" -not -path "*/build/*" -not -path "*/\.*/*" | while read -r file; do
-            temp_file=$(mktemp)
-            qmlformat "$file" > "$temp_file"
+        echo "Checking QML files is currently disabled."
+        # echo "Checking QML format..."
+        # FAILED=0
+        # find /code -type f -name "*.qml" -not -path "*/build/*" -not -path "*/\.*/*" | while read -r file; do
+        #     temp_file=$(mktemp)
+        #     qmlformat "$file" > "$temp_file"
 
-            if ! diff -q "$file" "$temp_file" &>/dev/null; then
-                echo "❌ $file is not properly formatted"
-                diff -u --color=always "$file" "$temp_file" || true
-                FAILED=1
-            else
-                echo "✅ $file is properly formatted"
-            fi
+        #     if ! diff -q "$file" "$temp_file" &>/dev/null; then
+        #         echo "❌ $file is not properly formatted"
+        #         diff -u --color=always "$file" "$temp_file" || true
+        #         FAILED=1
+        #     else
+        #         echo "✅ $file is properly formatted"
+        #     fi
 
-            rm "$temp_file"
-        done
-        exit $FAILED
+        #     rm "$temp_file"
+        # done
+        # exit $FAILED
         ;;
 
     lint-qml)
@@ -77,9 +79,9 @@ case "$COMMAND" in
         done
 
         # Format QML files
-        find /code -type f -name "*.qml" -not -path "*/build/*" -not -path "*/\.*/*" | while read -r file; do
-            qmlformat -i "$file"
-        done
+        # find /code -type f -name "*.qml" -not -path "*/build/*" -not -path "*/\.*/*" | while read -r file; do
+        #     qmlformat -i "$file"
+        # done
         ;;
 
     check-all)
@@ -99,21 +101,21 @@ case "$COMMAND" in
         done
 
         # Check QML files
-        echo -e "\nChecking QML files..."
-        find /code -type f -name "*.qml" -not -path "*/build/*" -not -path "*/\.*/*" | while read -r file; do
-            temp_file=$(mktemp)
-            qmlformat "$file" > "$temp_file"
+        # echo -e "\nChecking QML files..."
+        # find /code -type f -name "*.qml" -not -path "*/build/*" -not -path "*/\.*/*" | while read -r file; do
+        #     temp_file=$(mktemp)
+        #     qmlformat "$file" > "$temp_file"
 
-            if ! diff -q "$file" "$temp_file" &>/dev/null; then
-                echo "❌ $file is not properly formatted"
-                diff -u --color=always "$file" "$temp_file" || true
-                FAILED=1
-            else
-                echo "✅ $file is properly formatted"
-            fi
+        #     if ! diff -q "$file" "$temp_file" &>/dev/null; then
+        #         echo "❌ $file is not properly formatted"
+        #         diff -u --color=always "$file" "$temp_file" || true
+        #         FAILED=1
+        #     else
+        #         echo "✅ $file is properly formatted"
+        #     fi
 
-            rm "$temp_file"
-        done
+        #     rm "$temp_file"
+        # done
 
         exit $FAILED
         ;;

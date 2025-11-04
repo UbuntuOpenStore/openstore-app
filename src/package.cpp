@@ -74,7 +74,7 @@ QString PackageItem::appLaunchUrl() const
 
   Q_FOREACH (const HookStruct& h, m_hooks) {
     if (h.hooks & PackageItem::HookDesktop) {
-      return "appid://" + m_appId + "/" + h.name + "/" + m_installedVersion;
+      return "appid://" + m_appId + "/" + h.name + "/current-user-version";
     }
   }
 

@@ -151,7 +151,9 @@ void ClickInstaller::installLocalPackage(const QString& packageFilePath)
     m_installerProcess = new QProcess(this);
     connect(m_installerProcess, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(installerFinished(int, QProcess::ExitStatus)));
     connect(m_installerProcess, SIGNAL(stateChanged(QProcess::ProcessState)), this, SLOT(processStatusChanged(QProcess::ProcessState)));
-    m_installerProcess->start("pkcon", QStringList() << "install-local" << "--allow-untrusted" << packageFilePath);
+    m_installerProcess->start("pkcon",
+                              QStringList() << "install-local"
+                                            << "--allow-untrusted" << packageFilePath);
   }
   Q_EMIT busyChanged();
 }

@@ -160,7 +160,7 @@ void LocalPackagesModel::refresh()
     Q_FOREACH (const QString& key, hookMap.keys()) {
       QVariantMap hook = hookMap.value(key).toMap();
       if (hook.keys().contains("desktop")) {
-        appLaunchUrl = QString("appid://%1/%2/%3").arg(appId).arg(key).arg(version);
+        appLaunchUrl = QString("appid://%1/%2/current-user-version").arg(appId).arg(key);
       }
     }
 

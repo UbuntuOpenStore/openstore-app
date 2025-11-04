@@ -26,11 +26,3 @@ RUN useradd -ms /bin/bash formatter
 
 USER formatter
 WORKDIR /code
-
-# Create entry script to run formatting
-COPY tools-entrypoint.sh /usr/local/bin/tools-entrypoint.sh
-USER root
-RUN chmod +x /usr/local/bin/tools-entrypoint.sh
-USER formatter
-
-ENTRYPOINT ["/usr/local/bin/tools-entrypoint.sh"]

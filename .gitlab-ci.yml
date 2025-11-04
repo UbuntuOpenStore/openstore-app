@@ -10,6 +10,7 @@ stages:
   - deploy
 
 before_script:
+  - git config --global --add safe.directory /builds/theopenstore/openstore-app/plugins/PamAuthentication
   - git config --global --add safe.directory /builds/theopenstore/openstore-app
   - git submodule update --init --recursive
 

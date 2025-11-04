@@ -18,7 +18,7 @@ check:
   stage: lint
   image: bhdouglass/openstore-app-tools
   script:
-    - ./tools/docker/run-docker-tools.sh check-all
+    - ./tools/docker/docker-runner.sh check-all
 
 build-arm64-focal:
   extends: .artifacts

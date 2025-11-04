@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chinese (Simplified) (OpenStore)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-28 04:55+0000\n"
+"POT-Creation-Date: 2025-11-04 03:48+0000\n"
 "PO-Revision-Date: 2025-03-06 08:43+0000\n"
 "Last-Translator: ChenLei <falsecollector@outlook.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
@@ -768,8 +768,7 @@ msgid "Additional Icons by"
 msgstr "额外图标"
 
 #: openstore.desktop.in.h:1
-msgid ""
-"software;apps;applications;programs;store;market;play;click;discover;install;"
+msgid "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr "软件;应用;应用程序;程序;商店;市场;播放;点击;发现;安装;"
 
 #~ msgid "Scope"

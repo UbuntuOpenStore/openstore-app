@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-28 04:55+0000\n"
+"POT-Creation-Date: 2025-11-04 03:48+0000\n"
 "PO-Revision-Date: 2024-07-25 08:09+0000\n"
 "Last-Translator: Ricky From Hong Kong <lamricky11@hotmail.com>\n"
 "Language-Team: Chinese (Traditional, Hong Kong) <https://hosted.weblate.org/"
@@ -790,8 +790,7 @@ msgid "Additional Icons by"
 msgstr ""
 
 #: openstore.desktop.in.h:1
-msgid ""
-"software;apps;applications;programs;store;market;play;click;discover;install;"
+msgid "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr ""
 
 #~ msgid "Scope"

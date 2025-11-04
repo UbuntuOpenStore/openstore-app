@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-28 04:55+0000\n"
+"POT-Creation-Date: 2025-11-04 03:48+0000\n"
 "PO-Revision-Date: 2021-07-24 23:19+0000\n"
 "Last-Translator: Stefan Kalb <stefan.kalb@gmx.ch>\n"
 "Language-Team: Albanian <https://translate.ubports.com/projects/openstore/"
@@ -795,8 +795,7 @@ msgid "Additional Icons by"
 msgstr ""
 
 #: openstore.desktop.in.h:1
-msgid ""
-"software;apps;applications;programs;store;market;play;click;discover;install;"
+msgid "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr ""
 
 #~ msgid "Scope"

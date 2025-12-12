@@ -185,6 +185,8 @@ MainView {
             loadAppId(appIdToOpen.appName);
         } else if (appIdToOpen && !!appIdToOpen.publisher) {
             root.showSearch('publisher:' + appIdToOpen.publisher)
+        } else if (appIdToOpen && !!appIdToOpen.search) {
+            root.showSearch(appIdToOpen.search)
         }
     }
 
@@ -213,6 +215,8 @@ MainView {
                 loadAppId(appIdToOpen.appName);
             } else if (appIdToOpen && !!appIdToOpen.publisher) {
                 root.showSearch('publisher:' + appIdToOpen.publisher)
+            } else if (appIdToOpen && !!appIdToOpen.search) {
+                root.showSearch(appIdToOpen.search)
             }
         }
     }

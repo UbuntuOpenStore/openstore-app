@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-04 03:48+0000\n"
+"POT-Creation-Date: 2025-12-12 06:47+0000\n"
 "PO-Revision-Date: 2025-04-18 23:02+0000\n"
 "Last-Translator: picatsv <picatsv@gmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/open-store-io/"
@@ -714,34 +714,34 @@ msgstr "Nessuna applicazione trovata"
 msgid "No app has been installed from OpenStore yet."
 msgstr "Nessuna applicazione è stata installata da OpenStore."
 
-#: ../qml/Main.qml:319 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:323 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr "Filtri"
 
-#: ../qml/Main.qml:366
+#: ../qml/Main.qml:370
 msgid "App installed"
 msgstr "App installata"
 
-#: ../qml/Main.qml:367
+#: ../qml/Main.qml:371
 msgid "The app has been installed successfully."
 msgstr "L'app è stata installata con successo."
 
-#: ../qml/Main.qml:370 ../qml/Main.qml:383 ../qml/Main.qml:398
+#: ../qml/Main.qml:374 ../qml/Main.qml:387 ../qml/Main.qml:402
 msgid "OK"
 msgstr "OK"
 
-#: ../qml/Main.qml:379
+#: ../qml/Main.qml:383
 msgid "Installation failed"
 msgstr "Installazione fallita"
 
-#: ../qml/Main.qml:380
+#: ../qml/Main.qml:384
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 "Il pacchetto non può essere installato. Assicurarsi che sia un "
 "pacchetto .click valido."
 
-#: ../qml/Main.qml:394
+#: ../qml/Main.qml:398
 msgid "Installation failed (Error %1)"
 msgstr "Installazione fallita (Errore %1)"
 

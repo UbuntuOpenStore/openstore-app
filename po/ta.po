@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-04 03:48+0000\n"
+"POT-Creation-Date: 2025-12-12 06:47+0000\n"
 "PO-Revision-Date: 2025-06-17 15:01+0000\n"
 "Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/open-store-io/"
@@ -715,34 +715,34 @@ msgstr "பயன்பாடுகள் எதுவும் கிடைக�
 msgid "No app has been installed from OpenStore yet."
 msgstr "ஓபன்ச்டோரிலிருந்து இதுவரை எந்த பயன்பாடும் நிறுவப்படவில்லை."
 
-#: ../qml/Main.qml:319 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:323 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr "வடிப்பான்கள்"
 
-#: ../qml/Main.qml:366
+#: ../qml/Main.qml:370
 msgid "App installed"
 msgstr "பயன்பாடு நிறுவப்பட்டது"
 
-#: ../qml/Main.qml:367
+#: ../qml/Main.qml:371
 msgid "The app has been installed successfully."
 msgstr "பயன்பாடு வெற்றிகரமாக நிறுவப்பட்டுள்ளது."
 
-#: ../qml/Main.qml:370 ../qml/Main.qml:383 ../qml/Main.qml:398
+#: ../qml/Main.qml:374 ../qml/Main.qml:387 ../qml/Main.qml:402
 msgid "OK"
 msgstr "சரி"
 
-#: ../qml/Main.qml:379
+#: ../qml/Main.qml:383
 msgid "Installation failed"
 msgstr "நிறுவல் தோல்வியடைந்தது"
 
-#: ../qml/Main.qml:380
+#: ../qml/Main.qml:384
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 "தொகுப்பை நிறுவ முடியவில்லை. இது செல்லுபடியாகும் சொடுக்கு தொகுப்பு என்பதை "
 "உறுதிப்படுத்திக் கொள்ளுங்கள்."
 
-#: ../qml/Main.qml:394
+#: ../qml/Main.qml:398
 msgid "Installation failed (Error %1)"
 msgstr "நிறுவல் தோல்வியடைந்தது (பிழை %1)"
 

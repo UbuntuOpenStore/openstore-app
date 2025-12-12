@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-04 03:48+0000\n"
+"POT-Creation-Date: 2025-12-12 06:47+0000\n"
 "PO-Revision-Date: 2024-07-03 05:09+0000\n"
 "Last-Translator: hugoalh <hugoalh@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
@@ -698,32 +698,32 @@ msgstr "未找到應用程式"
 msgid "No app has been installed from OpenStore yet."
 msgstr "尚未從 OpenStore 安裝任何應用程式。"
 
-#: ../qml/Main.qml:319 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:323 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr "過濾器"
 
-#: ../qml/Main.qml:366
+#: ../qml/Main.qml:370
 msgid "App installed"
 msgstr "應用程式已安裝"
 
-#: ../qml/Main.qml:367
+#: ../qml/Main.qml:371
 msgid "The app has been installed successfully."
 msgstr "該應用程式已成功安裝。"
 
-#: ../qml/Main.qml:370 ../qml/Main.qml:383 ../qml/Main.qml:398
+#: ../qml/Main.qml:374 ../qml/Main.qml:387 ../qml/Main.qml:402
 msgid "OK"
 msgstr "好的"
 
-#: ../qml/Main.qml:379
+#: ../qml/Main.qml:383
 msgid "Installation failed"
 msgstr "安裝失敗"
 
-#: ../qml/Main.qml:380
+#: ../qml/Main.qml:384
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr "無法安裝該軟體。確保它是有效的軟體封包。"
 
-#: ../qml/Main.qml:394
+#: ../qml/Main.qml:398
 msgid "Installation failed (Error %1)"
 msgstr "安裝失敗 (錯誤 %1)"
 

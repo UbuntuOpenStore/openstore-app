@@ -146,60 +146,72 @@ void PackageItem::fillData(const QVariantMap& json)
     }
   }
 
+  // Parse hook information from top-level API fields
+  // Note: The manifest.hooks field has been deprecated. We now use aggregated
+  // permissions, read_paths, and write_paths provided at the top level of the API response.
   QList<PackageItem::HookStruct> hooksList;
-  if (json.contains("manifest") && json.value("manifest").toMap().contains("hooks")) {
-    QVariantMap manifest = json.value("manifest").toMap();
-    QVariantMap hookMap = manifest.value("hooks").toMap();
 
-    Q_FOREACH (const QString& hook, hookMap.keys()) {
-      PackageItem::HookStruct hookStruct;
-      hookStruct.name = hook;
-      hookStruct.hooks = PackageItem::HookNone;
+  PackageItem::HookStruct hookStruct;
 
-      QStringList permissions;
-      QStringList readPaths;
-      QStringList writePaths;
-
-      QVariantMap apparmorMap = hookMap.value(hook).toMap().value("apparmor").toMap();
-
-      //                qDebug() << "have apparmor for" << hook << apparmorMap;
-      Q_FOREACH (const QVariant& perm, apparmorMap.value("policy_groups").toList()) {
-        permissions.append(perm.toString());
-      }
-
-      Q_FOREACH (const QVariant& perm, apparmorMap.value("read_path").toList()) {
-        readPaths.append(perm.toString());
-      }
-
-      Q_FOREACH (const QVariant& perm, apparmorMap.value("write_path").toList()) {
-        writePaths.append(perm.toString());
-      }
-
-      hookStruct.apparmorTemplate = apparmorMap.value("template").toString();
-      hookStruct.readPaths = readPaths;
-      hookStruct.writePaths = writePaths;
-      hookStruct.permissions = permissions;
-
-      if (hookMap.value(hook).toMap().contains("desktop")) {
-        hookStruct.hooks |= PackageItem::HookDesktop;
-      }
-      if (hookMap.value(hook).toMap().contains("content-hub")) {
-        hookStruct.hooks |= PackageItem::HookContentHub;
-      }
-      if (hookMap.value(hook).toMap().contains("urls")) {
-        hookStruct.hooks |= PackageItem::HookUrls;
-      }
-      if (hookMap.value(hook).toMap().contains("push-helper")) {
-        hookStruct.hooks |= PackageItem::HookPushHelper;
-      }
-      if (hookMap.value(hook).toMap().contains("account-provider")) {
-        hookStruct.hooks |= PackageItem::HookAccountService;
-      }
-      hooksList.append(hookStruct);
-    }
-
-    m_hooks = hooksList;
+  if (json.contains("desktop_names") && json.value("desktop_names").toList().size() > 0) {
+    hookStruct.name = json.value("desktop_names").toList().first().toString();
+  } else {
+    // Fallback: derive from app ID (e.g., "openstore.openstore-team" -> "openstore")
+    QStringList appIdParts = m_appId.split(".");
+    hookStruct.name = appIdParts.size() > 0 ? appIdParts.first() : m_appId;
   }
+
+  QStringList permissions;
+  if (json.contains("permissions")) {
+    Q_FOREACH (const QVariant& perm, json.value("permissions").toList()) {
+      permissions.append(perm.toString());
+    }
+  }
+
+  QStringList readPaths;
+  if (json.contains("read_paths")) {
+    Q_FOREACH (const QVariant& path, json.value("read_paths").toList()) {
+      readPaths.append(path.toString());
+    }
+  }
+
+  QStringList writePaths;
+  if (json.contains("write_paths")) {
+    Q_FOREACH (const QVariant& path, json.value("write_paths").toList()) {
+      writePaths.append(path.toString());
+    }
+  }
+
+  // Infer apparmor template from permissions
+  QString apparmorTemplate;
+  if (permissions.contains("unconfined")) {
+    apparmorTemplate = "unconfined";
+  } else {
+    apparmorTemplate = "";
+  }
+
+  // Infer hook types from available metadata
+  hookStruct.hooks = PackageItem::HookDesktop; // Since we no longer have scopes, everything has a desktop hook
+
+  // Infer content-hub from permissions (heuristic)
+  if (permissions.contains("content_exchange") ||
+      permissions.contains("content_exchange_source")) {
+    hookStruct.hooks |= PackageItem::HookContentHub;
+  }
+
+  // Infer push-helper from permissions (heuristic)
+  if (permissions.contains("push-notification-client")) {
+    hookStruct.hooks |= PackageItem::HookPushHelper;
+  }
+
+  hookStruct.permissions = permissions;
+  hookStruct.apparmorTemplate = apparmorTemplate;
+  hookStruct.readPaths = readPaths;
+  hookStruct.writePaths = writePaths;
+
+  hooksList.append(hookStruct);
+
+  m_hooks = hooksList;
 
   m_reviews = new ReviewsModel(m_appId, this);
   m_ratings = new Ratings(json["ratings"].toMap(), this);

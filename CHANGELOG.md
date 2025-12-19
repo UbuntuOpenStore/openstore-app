@@ -1,5 +1,12 @@
 # OpenStore App Changelog
 
+## v3.6.2
+
+- Updated app launching to better match what the launcher is doing
+- Added URL handling for search text - thanks Kugi!
+- Removed deprecated api usage
+- Translation update, thank you translators!
+
 ## v3.6.1
 
 - Added custom header for api requests

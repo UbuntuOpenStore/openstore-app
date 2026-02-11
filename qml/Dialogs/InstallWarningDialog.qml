@@ -32,7 +32,7 @@ Component {
         signal accepted();
         signal rejected();
 
-        // We can't use PlatformIntegration.clickInstaller.busy
+        // We can't use PlatformIntegration.backendManager.anyBackendBusy
         // because app immediately freezes once the installation process starts
         // then we delay the installation to let UI changes take effect first
         Timer {
@@ -67,7 +67,7 @@ Component {
         }
 
         Connections {
-            target: PlatformIntegration.clickInstaller
+            target: PlatformIntegration.backendManager
             onPackageInstalled: PopupUtils.close(installQuestionDialog)
             onPackageInstallationFailed: PopupUtils.close(installQuestionDialog)
         }

@@ -33,6 +33,7 @@ struct LocalPackageItem
   QString updateStatus;
   QString packageUrl;
   QString appLaunchUrl;
+  QString packageType;
 };
 
 class LocalPackagesModel : public QAbstractListModel
@@ -57,6 +58,7 @@ public:
     RoleUpdateStatus,
     RolePackageUrl,
     RoleAppLaunchUrl,
+    RolePackageType,
   };
 
   explicit LocalPackagesModel(QAbstractListModel* parent = 0);

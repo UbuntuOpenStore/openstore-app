@@ -16,7 +16,7 @@
  */
 
 #include "platformintegration.h"
-#include "clickinstaller.h"
+#include "packagebackendmanager.h"
 
 #include <QDebug>
 #include <QJsonDocument>
@@ -37,10 +37,10 @@ PlatformIntegration::PlatformIntegration()
   m_systemLocale = getSystemLocale();
   m_systemCodename = getSystemCodename();
 
-  m_installer = new ClickInstaller();
+  m_backendManager = PackageBackendManager::instance();
 
-  connect(m_installer, &ClickInstaller::busyChanged, [=]() {
-    if (!m_installer->busy()) {
+  connect(m_backendManager, &PackageBackendManager::anyBackendBusyChanged, [=]() {
+    if (!m_backendManager->anyBackendBusy()) {
       this->update();
     }
   });
@@ -50,7 +50,7 @@ PlatformIntegration::PlatformIntegration()
 
 PlatformIntegration::~PlatformIntegration()
 {
-  delete m_installer;
+  // PackageBackendManager is a singleton, don't delete it
 }
 
 void PlatformIntegration::update()

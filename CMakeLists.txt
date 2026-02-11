@@ -4,6 +4,18 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
+# Add optional Snap support
+option(ENABLE_SNAP_SUPPORT "Enable Snap package support" ON)
+
+if(ENABLE_SNAP_SUPPORT)
+    # Initial implementation uses snap CLI - no additional dependencies
+    # Runtime requirement: 'snap' command must be available
+    add_definitions(-DENABLE_SNAP_SUPPORT)
+    message(STATUS "Snap support enabled")
+    # TODO: Future enhancement - add snapd-glib support
+    # pkg_check_modules(SNAPD snapd-glib)
+endif()
+
 find_package(Qt5Core REQUIRED)
 find_package(Qt5Qml REQUIRED)
 find_package(Qt5Quick REQUIRED)

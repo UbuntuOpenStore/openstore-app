@@ -30,6 +30,7 @@ Page {
 
     property var app: null
     property var rating: null
+    property var activeBackend: app ? PlatformIntegration.backendManager.getBackend(app.packageType || "click") : null
     property var restrictedPermissions: [
         'bluetooth',
         'calendar',
@@ -107,7 +108,7 @@ Page {
 
     header: Components.HeaderBase {
         title: app ? app.name : i18n.tr("App details")
-        enabled: !PlatformIntegration.clickInstaller.busy
+        enabled: !PlatformIntegration.backendManager.anyBackendBusy
 
         trailingActionBar {
             numberOfSlots: 1
@@ -274,7 +275,7 @@ Page {
                     anchors.fill: parent
                     anchors.margins: units.gu(2)
                     spacing: units.gu(2)
-                    visible: !PlatformIntegration.clickInstaller.busy && !PackagesCache.updatingCache && app.frameworkSupported
+                    visible: !activeBackend || (!activeBackend.busy && !PackagesCache.updatingCache && app.frameworkSupported)
 
                     Button {
                         Layout.fillWidth: true
@@ -349,7 +350,7 @@ Page {
                     anchors.fill: parent
                     anchors.margins: units.gu(2)
                     spacing: units.gu(2)
-                    visible: (PlatformIntegration.clickInstaller.busy && !PlatformIntegration.clickInstaller.isLocalInstall) || PackagesCache.updatingCache
+                    visible: (activeBackend && activeBackend.busy && !activeBackend.isLocalInstall) || PackagesCache.updatingCache
 
                     onVisibleChanged: {
                         // The page is automatically closed for channel-incompatible apps when they are removed.
@@ -361,8 +362,8 @@ Page {
                     ProgressBar {
                         Layout.fillWidth: true
                         maximumValue: app ? app.downloadSize : 0
-                        value: PlatformIntegration.clickInstaller.downloadProgress
-                        indeterminate: PlatformIntegration.clickInstaller.downloadProgress == 0 || PackagesCache.updatingCache
+                        value: activeBackend ? activeBackend.downloadProgress : 0
+                        indeterminate: !activeBackend || activeBackend.downloadProgress == 0 || PackagesCache.updatingCache
                     }
 
                     AbstractButton {
@@ -371,8 +372,8 @@ Page {
                         Layout.fillHeight: true
                         action: Action {
                             iconName: "close"
-                            onTriggered: PlatformIntegration.clickInstaller.abortInstallation()
-                            enabled: PlatformIntegration.clickInstaller.downloadProgress < app.downloadSize
+                            onTriggered: { if (activeBackend) activeBackend.abortInstallation() }
+                            enabled: activeBackend && activeBackend.downloadProgress < app.downloadSize
                         }
                         Rectangle {
                             color: "#cdcdcd"
@@ -395,7 +396,7 @@ Page {
                     subtitle.text: i18n.tr("This app is not compatible with your system.")
                     subtitle.maximumLineCount: Number.MAX_VALUE
                     subtitle.wrapMode: Text.WordWrap
-                    visible: !app.frameworkSupported && !PlatformIntegration.clickInstaller.busy && !PackagesCache.updatingCache
+                    visible: !app.frameworkSupported && (!activeBackend || !activeBackend.busy) && !PackagesCache.updatingCache
 
                     Icon {
                         SlotsLayout.position: SlotsLayout.Leading
@@ -628,7 +629,7 @@ Page {
 
             ListItem {
                 visible: app.packageType === "click"
-                enabled: !PlatformIntegration.clickInstaller.busy
+                enabled: !PlatformIntegration.backendManager.anyBackendBusy
                 onClicked: {
                     bottomEdgeStack.clear()
                     root.showSearch('publisher:' + app.publisher)
@@ -642,7 +643,7 @@ Page {
             }
 
             ListItem {
-                enabled: !PlatformIntegration.clickInstaller.busy
+                enabled: !PlatformIntegration.backendManager.anyBackendBusy
                 onClicked: {
                     bottomEdgeStack.clear()
                     root.showCategory(localCat(app.category), app.category)

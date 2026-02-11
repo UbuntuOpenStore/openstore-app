@@ -18,6 +18,7 @@
 #include "localpackagesmodel.h"
 #include "../openstorenetworkmanager.h"
 #include "../package.h"
+#include "../packagebackendmanager.h"
 #include "../packagescache.h"
 #include "../platformintegration.h"
 
@@ -72,6 +73,7 @@ QHash<int, QByteArray> LocalPackagesModel::roleNames() const
   roles.insert(RoleUpdateStatus, "updateStatus");
   roles.insert(RolePackageUrl, "packageUrl");
   roles.insert(RoleAppLaunchUrl, "appLaunchUrl");
+  roles.insert(RolePackageType, "packageType");
 
   return roles;
 }
@@ -106,6 +108,8 @@ QVariant LocalPackagesModel::data(const QModelIndex& index, int role) const
       return pkg.packageUrl;
     case RoleAppLaunchUrl:
       return pkg.appLaunchUrl;
+    case RolePackageType:
+      return pkg.packageType;
 
     default:
       return QVariant();
@@ -147,13 +151,14 @@ void LocalPackagesModel::refresh()
   beginResetModel();
   m_list.clear();
 
-  const QVariantList& clickDb = PlatformIntegration::instance()->clickDb();
+  // Get all installed packages from all backends
+  const QList<InstalledPackageInfo>& installedPackages = PackageBackendManager::instance()->getAllInstalledPackages();
 
   beginInsertRows(QModelIndex(), m_list.count(), m_list.count() + PackagesCache::instance()->numberOfInstalledAppsInStore() - 1);
-  Q_FOREACH (const QVariant& pkg, clickDb) {
-    QVariantMap map = pkg.toMap();
-    QString appId = map.value("name").toString();
-    QString version = map.value("version").toString();
+  for (const InstalledPackageInfo& info : installedPackages) {
+    QVariantMap map = info.manifest;
+    QString appId = info.appId;
+    QString version = info.version;
 
     QVariantMap hookMap = map.value("hooks").toMap();
     QString appLaunchUrl;
@@ -168,6 +173,7 @@ void LocalPackagesModel::refresh()
     pkgItem.appId = appId;
     pkgItem.name = map.value("title").toString();
     pkgItem.version = version;
+    pkgItem.packageType = info.packageType;
     pkgItem.packageUrl = PackagesCache::instance()->getPackageUrl(pkgItem.appId);
     pkgItem.appLaunchUrl = appLaunchUrl;
 

@@ -202,7 +202,11 @@ MainView {
             var popup = PopupUtils.open(installWarningDialog, root, {fileName: fileName});
             popup.accepted.connect(function() {
                 contentHubInstallInProgress = true;
-                PlatformIntegration.clickInstaller.installPackage(filePath, true)
+                // Assume local file installs are Click packages
+                var backend = PlatformIntegration.backendManager.getBackend("click");
+                if (backend) {
+                    backend.installPackage(filePath, true);
+                }
             })
         }
     }
@@ -222,7 +226,7 @@ MainView {
     }
 
     Connections {
-        target: PlatformIntegration.clickInstaller
+        target: PlatformIntegration.backendManager
 
         onPackageInstalled: {
             print("******* package installed")

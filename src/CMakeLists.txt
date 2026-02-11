@@ -8,7 +8,10 @@ set(
     SRC
     main.cpp
     models/categoriesmodel.cpp
-    clickinstaller.cpp
+    packagebackend.h
+    clickbackend.cpp
+    snapbackend.cpp
+    packagebackendmanager.cpp
     models/discovermodel.cpp
     models/localpackagesmodel.cpp
     models/searchmodel.cpp

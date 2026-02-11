@@ -17,7 +17,7 @@
 
 #include "package.h"
 
-#include "clickinstaller.h"
+#include "packagebackendmanager.h"
 #include "platformintegration.h"
 
 PackageItem::PackageItem(const QVariantMap& json, QObject* parent)
@@ -33,10 +33,16 @@ PackageItem::~PackageItem()
 
 bool PackageItem::install() const
 {
-  ClickInstaller* installer = PlatformIntegration::instance()->clickInstaller();
+  PackageBackendManager* manager = PackageBackendManager::instance();
+  PackageBackend* backend = manager->getBackend(packageType());
 
-  if (installer->busy()) {
-    qDebug() << Q_FUNC_INFO << "Installer is busy...";
+  if (!backend) {
+    qWarning() << Q_FUNC_INFO << "No backend available for package type:" << packageType();
+    return false;
+  }
+
+  if (backend->busy()) {
+    qDebug() << Q_FUNC_INFO << "Backend is busy...";
     return false;
   }
 
@@ -45,16 +51,22 @@ bool PackageItem::install() const
     return false;
   }
 
-  installer->installPackage(packageUrl());
+  backend->installPackage(packageUrl());
   return true;
 }
 
 bool PackageItem::remove() const
 {
-  ClickInstaller* installer = PlatformIntegration::instance()->clickInstaller();
+  PackageBackendManager* manager = PackageBackendManager::instance();
+  PackageBackend* backend = manager->getBackend(packageType());
 
-  if (installer->busy()) {
-    qDebug() << Q_FUNC_INFO << "Installer is busy...";
+  if (!backend) {
+    qWarning() << Q_FUNC_INFO << "No backend available for package type:" << packageType();
+    return false;
+  }
+
+  if (backend->busy()) {
+    qDebug() << Q_FUNC_INFO << "Backend is busy...";
     return false;
   }
 
@@ -63,7 +75,7 @@ bool PackageItem::remove() const
     return false;
   }
 
-  installer->removePackage(appId(), installedVersionString());
+  backend->removePackage(appId(), installedVersionString());
   return true;
 }
 
@@ -195,8 +207,7 @@ void PackageItem::fillData(const QVariantMap& json)
   hookStruct.hooks = PackageItem::HookDesktop; // Since we no longer have scopes, everything has a desktop hook
 
   // Infer content-hub from permissions (heuristic)
-  if (permissions.contains("content_exchange") ||
-      permissions.contains("content_exchange_source")) {
+  if (permissions.contains("content_exchange") || permissions.contains("content_exchange_source")) {
     hookStruct.hooks |= PackageItem::HookContentHub;
   }
 

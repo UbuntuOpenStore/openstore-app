@@ -32,7 +32,7 @@ Page {
 
     header: Components.HeaderBase {
         title: app ? app.name : i18n.tr("App details")
-        enabled: !PlatformIntegration.clickInstaller.busy
+        enabled: !PlatformIntegration.backendManager.anyBackendBusy
 
         trailingActionBar {
             numberOfSlots: 1
@@ -45,7 +45,10 @@ Page {
                     // TODO share removeQuestion popup
                     var popup = PopupUtils.open(removeQuestion, root, {pkgName: app.name || app.appId});
                     popup.accepted.connect(function() {
-                        PlatformIntegration.clickInstaller.removePackage(app.appId, app.version);
+                        var backend = PlatformIntegration.backendManager.getBackend(app.packageType || "click");
+                        if (backend) {
+                            backend.removePackage(app.appId, app.version);
+                        }
                         bottomEdgeStack.pop();
                     })
                 }

@@ -29,7 +29,7 @@ Page {
     property var currentApp: null
     property var appsUpdating: []
 
-    property bool updating: (PlatformIntegration.clickInstaller.busy && !PlatformIntegration.clickInstaller.isLocalInstall) || PackagesCache.updatingCache
+    property bool updating: (PlatformIntegration.backendManager.anyBackendBusy && !PlatformIntegration.backendManager.getBackend("click").isLocalInstall) || PackagesCache.updatingCache
 
     function updateNextPackage() {
         //console.log('updateNextPackage', JSON.stringify(appsUpdating));
@@ -38,12 +38,15 @@ Page {
             var nextApp = appsUpdating.shift();
             currentApp = nextApp.appId;
 
-            PlatformIntegration.clickInstaller.installPackage(nextApp.packageUrl);
+            var backend = PlatformIntegration.backendManager.getBackend(nextApp.packageType || "click");
+            if (backend) {
+                backend.installPackage(nextApp.packageUrl);
+            }
         }
     }
 
     Connections {
-        target: PlatformIntegration.clickInstaller
+        target: PlatformIntegration.backendManager
         onPackageInstalled: updateNextPackage()
         onPackageInstallationFailed: updateNextPackage()
     }
@@ -90,7 +93,7 @@ Page {
 
                 subtext: (section == 'downgrade') ? i18n.tr("The installed versions of these apps did not come from the OpenStore but a stable version is available.") : '';
                 buttonText: (section == 'available') ? i18n.tr("Update all") : ''
-                buttonEnabled: !PlatformIntegration.clickInstaller.busy
+                buttonEnabled: !PlatformIntegration.backendManager.anyBackendBusy
 
                 onButtonClicked: {
                     var updates = [];
@@ -170,7 +173,10 @@ Page {
 
                 onClicked: {
                     if (updating && currentApp == model.appId) {
-                        PlatformIntegration.clickInstaller.abortInstallation()
+                        var backend = PlatformIntegration.backendManager.getBackend(model.packageType || "click");
+                        if (backend) {
+                            backend.abortInstallation();
+                        }
                     } else {
                         if (Connectivity.online) {
                             PackagesCache.packageDetailsReady.connect(slot_installedPackageDetailsReady);

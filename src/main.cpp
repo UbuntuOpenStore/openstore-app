@@ -24,12 +24,13 @@
 
 #include "apiconstants.h"
 #include "cachingnetworkmanagerfactory.h"
-#include "clickinstaller.h"
 #include "models/categoriesmodel.h"
 #include "models/discovermodel.h"
 #include "models/localpackagesmodel.h"
 #include "models/searchmodel.h"
 #include "openstorenetworkmanager.h"
+#include "packagebackend.h"
+#include "packagebackendmanager.h"
 #include "packagescache.h"
 #include "platformintegration.h"
 #include "review.h"
@@ -63,8 +64,9 @@ int main(int argc, char* argv[])
   qmlRegisterSingletonType<OpenStoreNetworkManager>("OpenStore", 1, 0, "OpenStoreNetworkManager", registerNetworkManagerSingleton);
   qmlRegisterSingletonType<PlatformIntegration>("OpenStore", 1, 0, "PlatformIntegration", registerPlatformIntegrationSingleton);
   qmlRegisterSingletonType<PackagesCache>("OpenStore", 1, 0, "PackagesCache", registerPackagesCacheSingleton);
-  qmlRegisterUncreatableType<ClickInstaller>(
-    "OpenStore", 1, 0, "ClickInstaller", "Access ClickInstall from the PlatformIntegration singleton");
+  qmlRegisterUncreatableType<PackageBackend>("OpenStore", 1, 0, "PackageBackend", "PackageBackend is an abstract interface");
+  qmlRegisterUncreatableType<PackageBackendManager>(
+    "OpenStore", 1, 0, "PackageBackendManager", "Access PackageBackendManager from the PlatformIntegration singleton");
   qmlRegisterType<LocalPackagesModel>("OpenStore", 1, 0, "LocalAppModel");
   qmlRegisterType<DiscoverModel>("OpenStore", 1, 0, "DiscoverModel");
   qmlRegisterType<SearchModel>("OpenStore", 1, 0, "SearchModel");

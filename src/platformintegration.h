@@ -22,12 +22,12 @@
 #include <QObject>
 #include <QVariantList>
 
-class ClickInstaller;
+class PackageBackendManager;
 
 class PlatformIntegration : public QObject
 {
   Q_OBJECT
-  Q_PROPERTY(ClickInstaller* clickInstaller READ clickInstaller CONSTANT)
+  Q_PROPERTY(PackageBackendManager* backendManager READ backendManager CONSTANT)
 
 public:
   PlatformIntegration();
@@ -41,7 +41,7 @@ public:
     return m_instance;
   }
 
-  ClickInstaller* clickInstaller() const { return m_installer; }
+  PackageBackendManager* backendManager() const { return m_backendManager; }
 
   QStringList supportedFrameworks() const { return m_supportedFrameworks; }
   QString supportedArchitecture() const { return m_supportedArchitecture; }
@@ -74,7 +74,7 @@ private:
   QHash<QString, QString> m_installedAppIds; // appid, version
   QVariantList m_clickDb;
 
-  ClickInstaller* m_installer;
+  PackageBackendManager* m_backendManager;
 
   static PlatformIntegration* m_instance;
 };

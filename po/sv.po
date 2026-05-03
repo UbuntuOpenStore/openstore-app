@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-03 02:29+0000\n"
-"PO-Revision-Date: 2024-09-03 18:09+0000\n"
+"PO-Revision-Date: 2026-05-04 20:09+0000\n"
 "Last-Translator: Kristoffer Grundström <swedishsailfishosuser@tutanota.com>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/sv/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8-dev\n"
+"X-Generator: Weblate 5.17.1\n"
 
 #: ../qml/AppDetailsPage.qml:108 ../qml/AppLocalDetailsPage.qml:34
 msgid "App details"
@@ -350,23 +350,23 @@ msgstr "Stäng"
 
 #: ../qml/Components/ContentRating.qml:27
 msgid "Cartoon Violence"
-msgstr ""
+msgstr "Tecknat våld"
 
 #: ../qml/Components/ContentRating.qml:28
 msgid "Fantasy Violence"
-msgstr ""
+msgstr "Fantasi-våld"
 
 #: ../qml/Components/ContentRating.qml:29
 msgid "Realistic Violence"
-msgstr ""
+msgstr "Realistiskt våld"
 
 #: ../qml/Components/ContentRating.qml:30
 msgid "Bloodshed"
-msgstr ""
+msgstr "Blodspillan"
 
 #: ../qml/Components/ContentRating.qml:31
 msgid "Sexual Violence"
-msgstr ""
+msgstr "Sexuellt våld"
 
 #: ../qml/Components/ContentRating.qml:32
 #, fuzzy
@@ -376,35 +376,35 @@ msgstr "Beskrivning"
 
 #: ../qml/Components/ContentRating.qml:33
 msgid "Human Slavery"
-msgstr ""
+msgstr "Människoslaveri"
 
 #: ../qml/Components/ContentRating.qml:34
 msgid "Alcohol"
-msgstr ""
+msgstr "Alkohol"
 
 #: ../qml/Components/ContentRating.qml:35
 msgid "Narcotics"
-msgstr ""
+msgstr "Narkotika"
 
 #: ../qml/Components/ContentRating.qml:36
 msgid "Tobacco"
-msgstr ""
+msgstr "Tobak"
 
 #: ../qml/Components/ContentRating.qml:37
 msgid "Nudity"
-msgstr ""
+msgstr "Nakenhet"
 
 #: ../qml/Components/ContentRating.qml:38
 msgid "Sexual Themes"
-msgstr ""
+msgstr "Sexuella teman"
 
 #: ../qml/Components/ContentRating.qml:39
 msgid "Profanity"
-msgstr ""
+msgstr "Ovårdat språk"
 
 #: ../qml/Components/ContentRating.qml:40
 msgid "Humor"
-msgstr ""
+msgstr "Humor"
 
 #: ../qml/Components/ContentRating.qml:41
 #, fuzzy
@@ -414,11 +414,11 @@ msgstr "Beskrivning"
 
 #: ../qml/Components/ContentRating.qml:42
 msgid "Online Text Messaging"
-msgstr ""
+msgstr "SMS Online"
 
 #: ../qml/Components/ContentRating.qml:43
 msgid "Information Sharing"
-msgstr ""
+msgstr "Delning av information"
 
 #: ../qml/Components/ContentRating.qml:44
 msgid "Audio & Video Chat"
@@ -488,11 +488,11 @@ msgstr ""
 
 #: ../qml/Components/ContentRating.qml:69
 msgid "Unrealistic bloodshed"
-msgstr ""
+msgstr "Orealistiskt blodspill"
 
 #: ../qml/Components/ContentRating.qml:70
 msgid "Realistic bloodshed"
-msgstr ""
+msgstr "Realistiskt blodsspill"
 
 #: ../qml/Components/ContentRating.qml:71
 msgid "Depictions of bloodshed and the mutilation of body parts"
@@ -558,7 +558,7 @@ msgstr ""
 
 #: ../qml/Components/ContentRating.qml:100
 msgid "Prolonged nudity"
-msgstr ""
+msgstr "Förlängd nakenhet"
 
 #: ../qml/Components/ContentRating.qml:101
 msgid "Explicit nudity showing nipples or sexual organs"
@@ -590,7 +590,7 @@ msgstr ""
 
 #: ../qml/Components/ContentRating.qml:114
 msgid "Slapstick humor"
-msgstr ""
+msgstr "Slapstick-humor"
 
 #: ../qml/Components/ContentRating.qml:115
 msgid "Vulgar or bathroom humor"
@@ -688,15 +688,15 @@ msgstr ""
 
 #: ../qml/Components/ContentRating.qml:160
 msgid "Mild"
-msgstr ""
+msgstr "Mild"
 
 #: ../qml/Components/ContentRating.qml:161
 msgid "Moderate"
-msgstr ""
+msgstr "Måttlig"
 
 #: ../qml/Components/ContentRating.qml:162
 msgid "Intense"
-msgstr ""
+msgstr "Intensiv"
 
 #: ../qml/Components/ContentRating.qml:213
 #, fuzzy

@@ -631,6 +631,11 @@ Page {
                 }
             }
 
+            Components.ContentRating {
+                visible: app.contentRating
+                contentRatingData: app.contentRating
+            }
+
             Components.SectionDivider {
                 text: i18n.tr("Package contents")
             }

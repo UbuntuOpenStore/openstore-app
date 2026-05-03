@@ -194,8 +194,7 @@ void PackageItem::fillData(const QVariantMap& json)
   hookStruct.hooks = PackageItem::HookDesktop; // Since we no longer have scopes, everything has a desktop hook
 
   // Infer content-hub from permissions (heuristic)
-  if (permissions.contains("content_exchange") ||
-      permissions.contains("content_exchange_source")) {
+  if (permissions.contains("content_exchange") || permissions.contains("content_exchange_source")) {
     hookStruct.hooks |= PackageItem::HookContentHub;
   }
 
@@ -215,6 +214,10 @@ void PackageItem::fillData(const QVariantMap& json)
 
   m_reviews = new ReviewsModel(m_appId, this);
   m_ratings = new Ratings(json["ratings"].toMap(), this);
+
+  if (json.contains("content_rating")) {
+    m_contentRating = json.value("content_rating").toMap();
+  }
 
   Q_EMIT updated();
 }

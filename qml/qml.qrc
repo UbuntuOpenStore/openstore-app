@@ -6,6 +6,7 @@
         <file>CategoriesPage.qml</file>
         <file>Components/BottomEdgePageStack.qml</file>
         <file>Components/ButtonEmoji.qml</file>
+        <file>Components/ContentRating.qml</file>
         <file>Components/EmptyState.qml</file>
         <file>Components/HeaderBase.qml</file>
         <file>Components/HeaderMain.qml</file>

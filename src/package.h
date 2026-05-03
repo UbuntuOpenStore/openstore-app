@@ -67,6 +67,7 @@ class PackageItem : public QObject
   Q_PROPERTY(bool frameworkSupported READ frameworkSupported NOTIFY updated)
   Q_PROPERTY(ReviewsModel* reviews MEMBER m_reviews NOTIFY updated)
   Q_PROPERTY(Ratings* ratings MEMBER m_ratings NOTIFY updated)
+  Q_PROPERTY(QVariantMap contentRating READ contentRating NOTIFY updated)
 
   Q_ENUMS(Hook)
   Q_FLAGS(Hooks)
@@ -129,6 +130,7 @@ public:
   QStringList frameworks() const { return m_frameworks; }
   QStringList types() const { return m_types; }
   bool frameworkSupported() const { return m_matchingFramework; };
+  QVariantMap contentRating() const { return m_contentRating; }
 
   Q_INVOKABLE QStringList permissions(int index) const { return m_hooks.at(index).permissions; }
   Q_INVOKABLE Hooks hooks(int index) const { return m_hooks.at(index).hooks; }
@@ -197,6 +199,7 @@ private:
   QStringList m_types;
   QPointer<ReviewsModel> m_reviews;
   QPointer<Ratings> m_ratings;
+  QVariantMap m_contentRating;
 };
 
 #endif // PACKAGE_H

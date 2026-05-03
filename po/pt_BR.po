@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-12 06:47+0000\n"
+"POT-Creation-Date: 2026-05-03 02:29+0000\n"
 "PO-Revision-Date: 2022-12-21 00:56+0000\n"
 "Last-Translator: Filipe Botelho <filipebotelhos@outlook.com>\n"
 "Language-Team: Portuguese (Brazil) <https://translate.ubports.com/projects/"
@@ -170,156 +170,156 @@ msgstr "Mais do %1"
 msgid "Other apps in %1"
 msgstr "Outros aplicativos em %1"
 
-#: ../qml/AppDetailsPage.qml:635
+#: ../qml/AppDetailsPage.qml:640
 msgid "Package contents"
 msgstr "Conteúdo do pacote"
 
-#: ../qml/AppDetailsPage.qml:722
+#: ../qml/AppDetailsPage.qml:727
 msgid "Permissions"
 msgstr "Permissões"
 
-#: ../qml/AppDetailsPage.qml:727
+#: ../qml/AppDetailsPage.qml:732
 msgid "Accounts"
 msgstr "Contas"
 
-#: ../qml/AppDetailsPage.qml:728
+#: ../qml/AppDetailsPage.qml:733
 msgid "Audio"
 msgstr "Áudio"
 
-#: ../qml/AppDetailsPage.qml:729
+#: ../qml/AppDetailsPage.qml:734
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: ../qml/AppDetailsPage.qml:730
+#: ../qml/AppDetailsPage.qml:735
 msgid "Calendar"
 msgstr "Calendário"
 
-#: ../qml/AppDetailsPage.qml:731
+#: ../qml/AppDetailsPage.qml:736
 msgid "Camera"
 msgstr "Câmera"
 
-#: ../qml/AppDetailsPage.qml:732
+#: ../qml/AppDetailsPage.qml:737
 msgid "Connectivity"
 msgstr "Conectividade"
 
-#: ../qml/AppDetailsPage.qml:733
+#: ../qml/AppDetailsPage.qml:738
 msgid "Contacts"
 msgstr "Contatos"
 
-#: ../qml/AppDetailsPage.qml:734
+#: ../qml/AppDetailsPage.qml:739
 msgid "Content Exchange Source"
 msgstr "Fonte de troca de conteúdo"
 
-#: ../qml/AppDetailsPage.qml:735
+#: ../qml/AppDetailsPage.qml:740
 msgid "Content Exchange"
 msgstr "Troca de conteúdo"
 
-#: ../qml/AppDetailsPage.qml:736
+#: ../qml/AppDetailsPage.qml:741
 msgid "Debug"
 msgstr "Depurar"
 
-#: ../qml/AppDetailsPage.qml:737
+#: ../qml/AppDetailsPage.qml:742
 msgid "History"
 msgstr "História"
 
-#: ../qml/AppDetailsPage.qml:738
+#: ../qml/AppDetailsPage.qml:743
 msgid "In App Purchases"
 msgstr "Compras dentro do app"
 
-#: ../qml/AppDetailsPage.qml:739
+#: ../qml/AppDetailsPage.qml:744
 msgid "Keep Display On"
 msgstr "Manter a tela ligada"
 
-#: ../qml/AppDetailsPage.qml:740
+#: ../qml/AppDetailsPage.qml:745
 msgid "Location"
 msgstr "Localização"
 
-#: ../qml/AppDetailsPage.qml:741
+#: ../qml/AppDetailsPage.qml:746
 msgid "Microphone"
 msgstr "Microfone"
 
-#: ../qml/AppDetailsPage.qml:742
+#: ../qml/AppDetailsPage.qml:747
 msgid "Read Music Files"
 msgstr "Ler arquivos de música"
 
-#: ../qml/AppDetailsPage.qml:743
+#: ../qml/AppDetailsPage.qml:748
 msgid "Music Files"
 msgstr "Arquivos de música"
 
-#: ../qml/AppDetailsPage.qml:744
+#: ../qml/AppDetailsPage.qml:749
 msgid "Networking"
 msgstr "Acesso à rede"
 
-#: ../qml/AppDetailsPage.qml:745
+#: ../qml/AppDetailsPage.qml:750
 msgid "Read Picture Files"
 msgstr "Ler arquivos de imagem"
 
-#: ../qml/AppDetailsPage.qml:746
+#: ../qml/AppDetailsPage.qml:751
 msgid "Picture Files"
 msgstr "Arquivos de imagem"
 
-#: ../qml/AppDetailsPage.qml:747
+#: ../qml/AppDetailsPage.qml:752
 msgid "Push Notifications"
 msgstr "Notificações por push"
 
-#: ../qml/AppDetailsPage.qml:748
+#: ../qml/AppDetailsPage.qml:753
 msgid "Sensors"
 msgstr "Sensores"
 
-#: ../qml/AppDetailsPage.qml:749
+#: ../qml/AppDetailsPage.qml:754
 msgid "User Metrics"
 msgstr "Métricas de usuário"
 
-#: ../qml/AppDetailsPage.qml:750
+#: ../qml/AppDetailsPage.qml:755
 msgid "Read Video Files"
 msgstr "Ler arquivos de vídeo"
 
-#: ../qml/AppDetailsPage.qml:751
+#: ../qml/AppDetailsPage.qml:756
 msgid "Video Files"
 msgstr "Arquivos de vídeo"
 
-#: ../qml/AppDetailsPage.qml:752
+#: ../qml/AppDetailsPage.qml:757
 msgid "Video"
 msgstr "Vídeo"
 
-#: ../qml/AppDetailsPage.qml:753
+#: ../qml/AppDetailsPage.qml:758
 msgid "Webview"
 msgstr "WebView"
 
-#: ../qml/AppDetailsPage.qml:757
+#: ../qml/AppDetailsPage.qml:762
 msgid "Full System Access"
 msgstr "Acesso total ao sistema"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: ../qml/AppDetailsPage.qml:762
+#: ../qml/AppDetailsPage.qml:767
 msgid "none required"
 msgstr "nada necessário"
 
-#: ../qml/AppDetailsPage.qml:798
+#: ../qml/AppDetailsPage.qml:803
 msgid "Read paths"
 msgstr "Ler caminhos"
 
-#: ../qml/AppDetailsPage.qml:815
+#: ../qml/AppDetailsPage.qml:820
 msgid "Write paths"
 msgstr "Escrever caminhos"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: ../qml/AppDetailsPage.qml:886
+#: ../qml/AppDetailsPage.qml:891
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: ../qml/AppDetailsPage.qml:891
+#: ../qml/AppDetailsPage.qml:896
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: ../qml/AppDetailsPage.qml:896
+#: ../qml/AppDetailsPage.qml:901
 msgid "%1 kB"
 msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: ../qml/AppDetailsPage.qml:899
+#: ../qml/AppDetailsPage.qml:904
 msgid "%1 bytes"
 msgstr "%1 bytes"
 
@@ -354,6 +354,380 @@ msgstr "Voltar"
 #: ../qml/Components/ReviewPreview.qml:117
 msgid "Close"
 msgstr "Fechar"
+
+#: ../qml/Components/ContentRating.qml:27
+msgid "Cartoon Violence"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:28
+msgid "Fantasy Violence"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:29
+msgid "Realistic Violence"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:30
+msgid "Bloodshed"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:31
+msgid "Sexual Violence"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:32
+#, fuzzy
+#| msgid "Description"
+msgid "Desecration"
+msgstr "Descrição"
+
+#: ../qml/Components/ContentRating.qml:33
+msgid "Human Slavery"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:34
+msgid "Alcohol"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:35
+msgid "Narcotics"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:36
+msgid "Tobacco"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:37
+msgid "Nudity"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:38
+msgid "Sexual Themes"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:39
+msgid "Profanity"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:40
+msgid "Humor"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:41
+#, fuzzy
+#| msgid "Description"
+msgid "Discrimination"
+msgstr "Descrição"
+
+#: ../qml/Components/ContentRating.qml:42
+msgid "Online Text Messaging"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:43
+msgid "Information Sharing"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:44
+msgid "Audio & Video Chat"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:45
+#, fuzzy
+#| msgid "Location"
+msgid "Location Sharing"
+msgstr "Localização"
+
+#: ../qml/Components/ContentRating.qml:46
+#, fuzzy
+#| msgid "Content Exchange"
+msgid "Contact Sharing"
+msgstr "Troca de conteúdo"
+
+#: ../qml/Components/ContentRating.qml:47
+#, fuzzy
+#| msgid "In App Purchases"
+msgid "In-App Purchases"
+msgstr "Compras dentro do app"
+
+#: ../qml/Components/ContentRating.qml:48
+msgid "Advertising"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:49
+msgid "Gambling"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:54
+msgid "Cartoon characters in unsafe situations"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:55
+msgid "Cartoon characters in aggressive conflict"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:56
+msgid "Cartoon characters showing graphic violence"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:59
+msgid "Fantasy characters in unsafe situations"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:60
+msgid "Fantasy characters in aggressive conflict"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:61
+msgid "Fantasy characters with graphic violence"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:64
+msgid "Realistic characters in unsafe situations"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:65
+msgid "Realistic characters in depictions of aggressive conflict"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:66
+msgid "Realistic characters with graphic violence"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:69
+msgid "Unrealistic bloodshed"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:70
+msgid "Realistic bloodshed"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:71
+msgid "Depictions of bloodshed and the mutilation of body parts"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:74
+msgid "Rape or other violent sexual behavior"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:77
+msgid "Visible dead human remains"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:78
+msgid "Dead human remains that are exposed to the elements"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:79
+msgid ""
+"Graphic depictions of desecration of human bodies, for example being eaten "
+"by wild animals"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:82
+msgid "Depictions or references to historical slavery"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:83
+msgid "Depictions of modern-day slavery"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:84
+msgid "Graphic depictions of modern-day slavery"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:87
+msgid "References to alcoholic beverages"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:88
+msgid "Use of alcoholic beverages"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:91
+msgid "References to illicit drugs"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:92
+msgid "Use of illicit drugs"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:95
+msgid "References to tobacco products"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:96
+msgid "Use of tobacco products"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:99
+msgid "Brief artistic nudity"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:100
+msgid "Prolonged nudity"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:101
+msgid "Explicit nudity showing nipples or sexual organs"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:104
+msgid "Provocative references or depictions"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:105
+msgid "Sexual references or depictions"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:106
+msgid "Graphic sexual behavior"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:109
+msgid "Mild or infrequent use of profanity"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:110
+msgid "Moderate use of profanity"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:111
+msgid "Strong or frequent use of profanity"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:114
+msgid "Slapstick humor"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:115
+msgid "Vulgar or bathroom humor"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:116
+msgid "Mature or sexual humor"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:119
+msgid "Negativity towards a specific group of people, e.g. ethnic jokes"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:120
+msgid ""
+"Discrimination designed to cause emotional harm, e.g. racism or homophobia"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:121
+msgid "Explicit discrimination based on gender, sexuality, race or religion"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:124
+msgid "User-to-user interactions without chat functionality"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:125
+msgid "Moderated messaging between users"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:126
+msgid "Uncontrolled chat functionality between users"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:129
+msgid "Using any online API, e.g. a user-counter"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:130
+msgid "Sharing diagnostic data not identifiable to the user"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:131
+msgid "Sharing information identifiable to the user, e.g. crash dumps"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:134
+msgid "Moderated audio or video chat between users"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:135
+msgid "Uncontrolled audio or video chat between users"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:138
+msgid "Sharing physical location to other users"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:141
+msgid "Sharing contact details with other users"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:144
+msgid "Users are encouraged to donate real money, e.g. using Patreon"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:145
+msgid ""
+"Ability to spend real money in-app, e.g. buying new content or new levels"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:148
+msgid "Product placement, e.g. billboards in a football game"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:149
+msgid "Explicit references to specific brands or trademarked products"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:150
+msgid "Users are encouraged to purchase specific real-world items"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:153
+msgid "Gambling on random events using tokens or credits"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:154
+msgid "Gambling using fictional money"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:155
+msgid "Gambling using real money"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:160
+msgid "Mild"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:161
+msgid "Moderate"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:162
+msgid "Intense"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:213
+#, fuzzy
+#| msgid "Content Exchange"
+msgid "Content Rating"
+msgstr "Troca de conteúdo"
+
+#: ../qml/Components/ContentRating.qml:271
+msgid "This app has not been rated"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:272
+msgid "All Ages"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:283
+msgid "No concerning content"
+msgstr ""
+
+#: ../qml/Components/ContentRating.qml:354
+msgid ""
+"Self reported rating using <a href=\"https://hughsie.github.io/oars/\">Open "
+"Age Rating Service</a>"
+msgstr ""
 
 #: ../qml/Components/HeaderMain.qml:27 ../qml/SettingsPage.qml:29
 msgid "Settings"

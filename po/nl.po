@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-03 02:29+0000\n"
-"PO-Revision-Date: 2025-10-24 06:35+0000\n"
+"PO-Revision-Date: 2026-05-06 10:11+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/nl/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14.1-dev\n"
+"X-Generator: Weblate 5.17.1\n"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
 #: ../qml/AppDetailsPage.qml:108 ../qml/AppLocalDetailsPage.qml:34
@@ -352,379 +352,375 @@ msgstr "Sluiten"
 
 #: ../qml/Components/ContentRating.qml:27
 msgid "Cartoon Violence"
-msgstr ""
+msgstr "Getekend geweld"
 
 #: ../qml/Components/ContentRating.qml:28
 msgid "Fantasy Violence"
-msgstr ""
+msgstr "Fantasievol geweld"
 
 #: ../qml/Components/ContentRating.qml:29
 msgid "Realistic Violence"
-msgstr ""
+msgstr "Realistisch geweld"
 
 #: ../qml/Components/ContentRating.qml:30
 msgid "Bloodshed"
-msgstr ""
+msgstr "Bloedbad"
 
 #: ../qml/Components/ContentRating.qml:31
 msgid "Sexual Violence"
-msgstr ""
+msgstr "Seksueel geweld"
 
 #: ../qml/Components/ContentRating.qml:32
-#, fuzzy
-#| msgid "Description"
 msgid "Desecration"
-msgstr "Beschrijving"
+msgstr "Heiligschennis"
 
 #: ../qml/Components/ContentRating.qml:33
 msgid "Human Slavery"
-msgstr ""
+msgstr "Slavernij"
 
 #: ../qml/Components/ContentRating.qml:34
 msgid "Alcohol"
-msgstr ""
+msgstr "Alcohol"
 
 #: ../qml/Components/ContentRating.qml:35
 msgid "Narcotics"
-msgstr ""
+msgstr "Verdovende middelen"
 
 #: ../qml/Components/ContentRating.qml:36
 msgid "Tobacco"
-msgstr ""
+msgstr "Tabak"
 
 #: ../qml/Components/ContentRating.qml:37
 msgid "Nudity"
-msgstr ""
+msgstr "Naaktheid"
 
 #: ../qml/Components/ContentRating.qml:38
 msgid "Sexual Themes"
-msgstr ""
+msgstr "Seksuele thema's"
 
 #: ../qml/Components/ContentRating.qml:39
 msgid "Profanity"
-msgstr ""
+msgstr "Grof taalgebruik"
 
 #: ../qml/Components/ContentRating.qml:40
 msgid "Humor"
-msgstr ""
+msgstr "Humor"
 
 #: ../qml/Components/ContentRating.qml:41
-#, fuzzy
-#| msgid "Description"
 msgid "Discrimination"
-msgstr "Beschrijving"
+msgstr "Discriminatie"
 
 #: ../qml/Components/ContentRating.qml:42
 msgid "Online Text Messaging"
-msgstr ""
+msgstr "Online-berichten versturen"
 
 #: ../qml/Components/ContentRating.qml:43
 msgid "Information Sharing"
-msgstr ""
+msgstr "Informatiedeling"
 
 #: ../qml/Components/ContentRating.qml:44
 msgid "Audio & Video Chat"
-msgstr ""
+msgstr "Audio- en videogesprekken"
 
 #: ../qml/Components/ContentRating.qml:45
-#, fuzzy
-#| msgid "Location"
 msgid "Location Sharing"
-msgstr "Locatie"
+msgstr "Locatiedeling"
 
 #: ../qml/Components/ContentRating.qml:46
-#, fuzzy
-#| msgid "Content Exchange"
 msgid "Contact Sharing"
-msgstr "Inhoudsuitwisseling"
+msgstr "Contactpersoondeling"
 
 #: ../qml/Components/ContentRating.qml:47
-#, fuzzy
-#| msgid "In App Purchases"
 msgid "In-App Purchases"
 msgstr "In-appaankopen"
 
 #: ../qml/Components/ContentRating.qml:48
 msgid "Advertising"
-msgstr ""
+msgstr "Reclame"
 
 #: ../qml/Components/ContentRating.qml:49
 msgid "Gambling"
-msgstr ""
+msgstr "Gokken"
 
 #: ../qml/Components/ContentRating.qml:54
 msgid "Cartoon characters in unsafe situations"
-msgstr ""
+msgstr "Strippersonages in onveilige situaties"
 
 #: ../qml/Components/ContentRating.qml:55
 msgid "Cartoon characters in aggressive conflict"
-msgstr ""
+msgstr "Strippersonages in geweldsconflicten"
 
 #: ../qml/Components/ContentRating.qml:56
 msgid "Cartoon characters showing graphic violence"
-msgstr ""
+msgstr "Strippersonages die zichtbaar geweld uitoefenen"
 
 #: ../qml/Components/ContentRating.qml:59
 msgid "Fantasy characters in unsafe situations"
-msgstr ""
+msgstr "Fantasiepersonages in onveilige situaties"
 
 #: ../qml/Components/ContentRating.qml:60
 msgid "Fantasy characters in aggressive conflict"
-msgstr ""
+msgstr "Fantasiepersonages in geweldsconflicten"
 
 #: ../qml/Components/ContentRating.qml:61
 msgid "Fantasy characters with graphic violence"
-msgstr ""
+msgstr "Fantasiepersonages die zichtbaar geweld uitoefenen"
 
 #: ../qml/Components/ContentRating.qml:64
 msgid "Realistic characters in unsafe situations"
-msgstr ""
+msgstr "Realistische personages in onveilige situaties"
 
 #: ../qml/Components/ContentRating.qml:65
 msgid "Realistic characters in depictions of aggressive conflict"
-msgstr ""
+msgstr "Realistische personages in geweldsconflicten"
 
 #: ../qml/Components/ContentRating.qml:66
 msgid "Realistic characters with graphic violence"
-msgstr ""
+msgstr "Realistische personages die zichtbaar geweld uitoefenen"
 
 #: ../qml/Components/ContentRating.qml:69
 msgid "Unrealistic bloodshed"
-msgstr ""
+msgstr "Onrealistisch bloedbad"
 
 #: ../qml/Components/ContentRating.qml:70
 msgid "Realistic bloodshed"
-msgstr ""
+msgstr "Realistisch bloedbad"
 
 #: ../qml/Components/ContentRating.qml:71
 msgid "Depictions of bloodshed and the mutilation of body parts"
-msgstr ""
+msgstr "Bloedbad en mishandeling van lichaamsdelen"
 
 #: ../qml/Components/ContentRating.qml:74
 msgid "Rape or other violent sexual behavior"
-msgstr ""
+msgstr "Verkrachting of ander gewelddadig seksueel gedrag"
 
 #: ../qml/Components/ContentRating.qml:77
 msgid "Visible dead human remains"
-msgstr ""
+msgstr "Zichtbare mensenresten"
 
 #: ../qml/Components/ContentRating.qml:78
 msgid "Dead human remains that are exposed to the elements"
-msgstr ""
+msgstr "Mensenresten die overgelaten zijn aan de elementen"
 
 #: ../qml/Components/ContentRating.qml:79
 msgid ""
 "Graphic depictions of desecration of human bodies, for example being eaten "
 "by wild animals"
 msgstr ""
+"Zichtbare ontheiliging van menselijke lichamen, bijvoorbeeld opgegeten "
+"worden door wilde dieren"
 
 #: ../qml/Components/ContentRating.qml:82
 msgid "Depictions or references to historical slavery"
-msgstr ""
+msgstr "Vertoning van of verwijzingen naar historische slavernij"
 
 #: ../qml/Components/ContentRating.qml:83
 msgid "Depictions of modern-day slavery"
-msgstr ""
+msgstr "Vertoning van moderne slavernij"
 
 #: ../qml/Components/ContentRating.qml:84
 msgid "Graphic depictions of modern-day slavery"
-msgstr ""
+msgstr "Duidelijke vertoning van moderne slavernij"
 
 #: ../qml/Components/ContentRating.qml:87
 msgid "References to alcoholic beverages"
-msgstr ""
+msgstr "Verwijzingen naar alcoholische dranken"
 
 #: ../qml/Components/ContentRating.qml:88
 msgid "Use of alcoholic beverages"
-msgstr ""
+msgstr "Alcoholgebruik"
 
 #: ../qml/Components/ContentRating.qml:91
 msgid "References to illicit drugs"
-msgstr ""
+msgstr "Verwijzingen naar illegale drugs"
 
 #: ../qml/Components/ContentRating.qml:92
 msgid "Use of illicit drugs"
-msgstr ""
+msgstr "Gebruik van illegale drugs"
 
 #: ../qml/Components/ContentRating.qml:95
 msgid "References to tobacco products"
-msgstr ""
+msgstr "Verwijzingen naar tabaksproducten"
 
 #: ../qml/Components/ContentRating.qml:96
 msgid "Use of tobacco products"
-msgstr ""
+msgstr "Gebruik van tabaksproducten"
 
 #: ../qml/Components/ContentRating.qml:99
 msgid "Brief artistic nudity"
-msgstr ""
+msgstr "Korte artistieke vertoning van naaktheid"
 
 #: ../qml/Components/ContentRating.qml:100
 msgid "Prolonged nudity"
-msgstr ""
+msgstr "Langdurige vertoning van naaktheid"
 
 #: ../qml/Components/ContentRating.qml:101
 msgid "Explicit nudity showing nipples or sexual organs"
-msgstr ""
+msgstr "Expliciete naaktheid met vertoning van tepels of geslachtsorganen"
 
 #: ../qml/Components/ContentRating.qml:104
 msgid "Provocative references or depictions"
-msgstr ""
+msgstr "Vertoningen van of verwijzingen naar uitlokgedrag"
 
 #: ../qml/Components/ContentRating.qml:105
 msgid "Sexual references or depictions"
-msgstr ""
+msgstr "Vertoningen van of verwijzingen naar seks"
 
 #: ../qml/Components/ContentRating.qml:106
 msgid "Graphic sexual behavior"
-msgstr ""
+msgstr "Zichtbaar seksueel gedrag"
 
 #: ../qml/Components/ContentRating.qml:109
 msgid "Mild or infrequent use of profanity"
-msgstr ""
+msgstr "Weinig tot geen grof taalgebruik"
 
 #: ../qml/Components/ContentRating.qml:110
 msgid "Moderate use of profanity"
-msgstr ""
+msgstr "Enig grof taalgebruik"
 
 #: ../qml/Components/ContentRating.qml:111
 msgid "Strong or frequent use of profanity"
-msgstr ""
+msgstr "Veel of regelmatig grof taalgebruik"
 
 #: ../qml/Components/ContentRating.qml:114
 msgid "Slapstick humor"
-msgstr ""
+msgstr "Slapstickhumor"
 
 #: ../qml/Components/ContentRating.qml:115
 msgid "Vulgar or bathroom humor"
-msgstr ""
+msgstr "Smakeloze of poep-en-pieshumor"
 
 #: ../qml/Components/ContentRating.qml:116
 msgid "Mature or sexual humor"
-msgstr ""
+msgstr "Volwassen of seksuele humor"
 
 #: ../qml/Components/ContentRating.qml:119
 msgid "Negativity towards a specific group of people, e.g. ethnic jokes"
-msgstr ""
+msgstr "Negativiteit ten aanzien van een groep, bijvoorbeeld etnische grappen"
 
 #: ../qml/Components/ContentRating.qml:120
 msgid ""
 "Discrimination designed to cause emotional harm, e.g. racism or homophobia"
 msgstr ""
+"Discriminatie met als doel iemand te schaden, bijvoorbeeld racisme of "
+"homofobie"
 
 #: ../qml/Components/ContentRating.qml:121
 msgid "Explicit discrimination based on gender, sexuality, race or religion"
 msgstr ""
+"Expliciete discriminatie op basis van gender, seksuele voorkeur, ras of "
+"religie"
 
 #: ../qml/Components/ContentRating.qml:124
 msgid "User-to-user interactions without chat functionality"
-msgstr ""
+msgstr "Gebruikersinteracties zonder gespreksfunctionaliteit"
 
 #: ../qml/Components/ContentRating.qml:125
 msgid "Moderated messaging between users"
-msgstr ""
+msgstr "Berichtuitwisselingen met toezicht"
 
 #: ../qml/Components/ContentRating.qml:126
 msgid "Uncontrolled chat functionality between users"
-msgstr ""
+msgstr "Berichtuitwisselingen zonder toezicht"
 
 #: ../qml/Components/ContentRating.qml:129
 msgid "Using any online API, e.g. a user-counter"
-msgstr ""
+msgstr "Gebruik van een online-api, bijv. een bezoekersteller"
 
 #: ../qml/Components/ContentRating.qml:130
 msgid "Sharing diagnostic data not identifiable to the user"
-msgstr ""
+msgstr "Delen van diagnostische gegevens, geanonimiseerd"
 
 #: ../qml/Components/ContentRating.qml:131
 msgid "Sharing information identifiable to the user, e.g. crash dumps"
 msgstr ""
+"Delen van diagnostische gegevens met identificatiemogelijkheid, bijv. "
+"crashlogboeken"
 
 #: ../qml/Components/ContentRating.qml:134
 msgid "Moderated audio or video chat between users"
-msgstr ""
+msgstr "Audio- of videogesprekken met toezicht"
 
 #: ../qml/Components/ContentRating.qml:135
 msgid "Uncontrolled audio or video chat between users"
-msgstr ""
+msgstr "Audio- of videogesprekken zonder toezicht"
 
 #: ../qml/Components/ContentRating.qml:138
 msgid "Sharing physical location to other users"
-msgstr ""
+msgstr "Locatiedeling tussen gebruikers"
 
 #: ../qml/Components/ContentRating.qml:141
 msgid "Sharing contact details with other users"
-msgstr ""
+msgstr "Contactuitwisseling tussen gebruikers"
 
 #: ../qml/Components/ContentRating.qml:144
 msgid "Users are encouraged to donate real money, e.g. using Patreon"
-msgstr ""
+msgstr "Donatieverzoeken, bijvoorbeeld via Patreon"
 
 #: ../qml/Components/ContentRating.qml:145
 msgid ""
 "Ability to spend real money in-app, e.g. buying new content or new levels"
-msgstr ""
+msgstr "In-appaankopen, bijvoorbeeld om inhoud of levels aan te schaffen"
 
 #: ../qml/Components/ContentRating.qml:148
 msgid "Product placement, e.g. billboards in a football game"
-msgstr ""
+msgstr "Productplaatsing, bijv. billboards in een voetbalwedstrijd"
 
 #: ../qml/Components/ContentRating.qml:149
 msgid "Explicit references to specific brands or trademarked products"
-msgstr ""
+msgstr "Expliciete verwijzingen naar merken of beschermde merknamen"
 
 #: ../qml/Components/ContentRating.qml:150
 msgid "Users are encouraged to purchase specific real-world items"
-msgstr ""
+msgstr "Verzoeken om fysieke objecten aan te schaffen"
 
 #: ../qml/Components/ContentRating.qml:153
 msgid "Gambling on random events using tokens or credits"
-msgstr ""
+msgstr "Gokken op evenementen met fiches of krediet"
 
 #: ../qml/Components/ContentRating.qml:154
 msgid "Gambling using fictional money"
-msgstr ""
+msgstr "Gokken met nepgeld"
 
 #: ../qml/Components/ContentRating.qml:155
 msgid "Gambling using real money"
-msgstr ""
+msgstr "Gokken met echt geld"
 
 #: ../qml/Components/ContentRating.qml:160
 msgid "Mild"
-msgstr ""
+msgstr "Mild"
 
 #: ../qml/Components/ContentRating.qml:161
 msgid "Moderate"
-msgstr ""
+msgstr "Gemiddeld"
 
 #: ../qml/Components/ContentRating.qml:162
 msgid "Intense"
-msgstr ""
+msgstr "Intens"
 
 #: ../qml/Components/ContentRating.qml:213
-#, fuzzy
-#| msgid "Content Exchange"
 msgid "Content Rating"
-msgstr "Inhoudsuitwisseling"
+msgstr "Inhoudsbeoordeling"
 
 #: ../qml/Components/ContentRating.qml:271
 msgid "This app has not been rated"
-msgstr ""
+msgstr "Deze app is nog niet beoordeeld"
 
 #: ../qml/Components/ContentRating.qml:272
-#, fuzzy
-#| msgid "All Types"
 msgid "All Ages"
-msgstr "Alle soorten"
+msgstr "Alle leeftijden"
 
 #: ../qml/Components/ContentRating.qml:283
 msgid "No concerning content"
-msgstr ""
+msgstr "Geen schadelijke inhoud"
 
 #: ../qml/Components/ContentRating.qml:354
 msgid ""
 "Self reported rating using <a href=\"https://hughsie.github.io/oars/\">Open "
 "Age Rating Service</a>"
 msgstr ""
+"Ingediend met behulp van de <a href=\"https://hughsie.github.io/oars/\">Open "
+"Age Rating Service</a>"
 
 #: ../qml/Components/HeaderMain.qml:27 ../qml/SettingsPage.qml:29
 msgid "Settings"

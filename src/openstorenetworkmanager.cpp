@@ -161,6 +161,11 @@ void OpenStoreNetworkManager::getDiscover(const QString& signature)
 void OpenStoreNetworkManager::getAppDetails(const QString& signature, const QString& appId)
 {
   QUrl url(getUrl(API_APPDETAILS_ENDPOINT.arg(appId)));
+  if (PlatformIntegration::instance()->snapInstaller()) {
+    QUrlQuery q(url);
+    q.addQueryItem("package_type", "snap,click");
+    url.setQuery(q);
+  }
   QNetworkReply* reply = sendRequest(QNetworkRequest(url));
   parseReply(reply, signature);
 }
@@ -181,6 +186,8 @@ void OpenStoreNetworkManager::getSearch(const QString& signature,
   q.addQueryItem("sort", sort);
   q.addQueryItem("category", category);
   q.addQueryItem("type", filterType);
+  if (PlatformIntegration::instance()->snapInstaller())
+    q.addQueryItem("package_types", "snap,click");
 
   if (filterString.startsWith("publisher:")) {
     q.addQueryItem("publisher", filterString.right(filterString.size() - 10));

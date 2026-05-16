@@ -65,9 +65,12 @@ class PackageItem : public QObject
   Q_PROPERTY(QStringList channels READ channels NOTIFY updated)
   Q_PROPERTY(QStringList types READ types NOTIFY updated)
   Q_PROPERTY(bool frameworkSupported READ frameworkSupported NOTIFY updated)
+  Q_PROPERTY(QString packageType READ packageType NOTIFY updated)
+  Q_PROPERTY(bool isBusy READ isBusy NOTIFY updated)
   Q_PROPERTY(ReviewsModel* reviews MEMBER m_reviews NOTIFY updated)
   Q_PROPERTY(Ratings* ratings MEMBER m_ratings NOTIFY updated)
   Q_PROPERTY(QVariantMap contentRating READ contentRating NOTIFY updated)
+  Q_PROPERTY(int downloadProgress READ downloadProgress NOTIFY downloadProgressChanged)
 
   Q_ENUMS(Hook)
   Q_FLAGS(Hooks)
@@ -109,7 +112,7 @@ public:
   QString installedVersionString() const { return m_installedVersion; }
   int revision() const { return m_revision; }
   int installedRevision() const { return m_installedRevision; }
-  bool isLocalVersionSideloaded() const { return !m_installedVersion.isEmpty() && (m_installedRevision < 1); }
+  virtual bool isLocalVersionSideloaded() const { return !m_installedVersion.isEmpty() && (m_installedRevision < 1); }
   QString packageUrl() const { return m_packageUrl; }
   QString source() const { return m_source; }
   QString donateUrl() const { return m_donateUrl; }
@@ -129,8 +132,11 @@ public:
   QStringList channels() const { return m_channels; }
   QStringList frameworks() const { return m_frameworks; }
   QStringList types() const { return m_types; }
-  bool frameworkSupported() const { return m_matchingFramework; };
+  bool frameworkSupported() const { return m_matchingFramework; }
   QVariantMap contentRating() const { return m_contentRating; }
+  QString packageType() const { return m_packageType; }
+  bool isBusy() const { return m_isBusy; }
+  int downloadProgress() const { return m_downloadProgress; }
 
   Q_INVOKABLE QStringList permissions(int index) const { return m_hooks.at(index).permissions; }
   Q_INVOKABLE Hooks hooks(int index) const { return m_hooks.at(index).hooks; }
@@ -149,23 +155,24 @@ public:
   }
   bool updateAvailable() const { return !m_installedVersion.isEmpty() && (m_revision > m_installedRevision) && m_installedRevision > 0; }
 
-  Q_INVOKABLE bool install() const;
-  Q_INVOKABLE bool remove() const;
-  Q_INVOKABLE QString appLaunchUrl() const;
+  Q_INVOKABLE virtual bool install() const = 0;
+  Q_INVOKABLE virtual bool remove() const = 0;
+  Q_INVOKABLE virtual QString appLaunchUrl() const = 0;
   Q_INVOKABLE bool review(const QString& text, Rating rating, const QString& apiKey) const;
   Q_INVOKABLE bool editReview(const QString& text, Rating rating, const QString& apiKey) const;
 
 Q_SIGNALS:
-  void updated();
-  void installedChanged();
+  void updated() const;
+  void installedChanged() const;
+  void downloadProgressChanged() const;
 
 public Q_SLOTS:
-  void updateLocalInfo(int localRevision, const QString& localVersion);
+  void updateLocalInfo(int localRevision, const QString& localVersion) const;
 
-private Q_SLOTS:
-  void fillData(const QVariantMap& json);
+protected Q_SLOTS:
+  virtual void fillData(const QVariantMap& json) = 0;
 
-private:
+protected:
   QString m_appId;
   QString m_name;
   QString m_icon;
@@ -187,9 +194,9 @@ private:
   QString m_totalDownloads;
   QString m_maintainer;
   int m_installedSize;
-  int m_downloadSize;
-  int m_installedRevision;
-  QString m_installedVersion;
+  mutable int m_downloadSize;
+  mutable int m_installedRevision;
+  mutable QString m_installedVersion;
   QList<HookStruct> m_hooks;
   QDateTime m_publishedDate;
   QDateTime m_updatedDate;
@@ -197,9 +204,12 @@ private:
   QStringList m_frameworks;
   bool m_matchingFramework;
   QStringList m_types;
+  QString m_packageType;
+  mutable bool m_isBusy;
   QPointer<ReviewsModel> m_reviews;
   QPointer<Ratings> m_ratings;
   QVariantMap m_contentRating;
+  mutable int m_downloadProgress;
 };
 
 #endif // PACKAGE_H

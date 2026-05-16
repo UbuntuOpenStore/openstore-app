@@ -19,6 +19,7 @@
 #include "clickinstaller.h"
 
 #include <QDebug>
+#include <QFile>
 #include <QJsonDocument>
 #include <QNetworkReply>
 #include <QNetworkRequest>
@@ -27,6 +28,18 @@
 #include <click.h>
 #include <gio/gio.h>
 #include <glib.h>
+
+#include <Snapd/Client>
+
+inline bool systemdUnitRuns(const QString& name)
+{
+    QProcess systemCtlProcess;
+    systemCtlProcess.setProgram("/usr/bin/systemctl");
+    systemCtlProcess.setArguments(QStringList() << "--user" << "is-active" << name);
+    systemCtlProcess.start();
+    systemCtlProcess.waitForFinished();
+    return systemCtlProcess.exitCode() == 0;
+}
 
 PlatformIntegration* PlatformIntegration::m_instance = nullptr;
 
@@ -44,6 +57,26 @@ PlatformIntegration::PlatformIntegration()
       this->update();
     }
   });
+
+  // Even though 20.04 has snapd with Snapz0r, we cannot reliably enable support,
+  // so check the system-image channel this device is running on first.
+  m_snapInstaller = nullptr;
+  if (QFile::exists("/run/snapd.socket") && systemdUnitRuns("lomiri-polkit-agent.service")) {
+    QFile channelInfo("/etc/system-image/channel.ini");
+    if (channelInfo.open(QIODevice::ReadOnly)) {
+      const auto content = channelInfo.readAll();
+      const auto lines = content.split('\n');
+      for (const auto& line : lines) {
+        if (line.startsWith("channel: ")) {
+          const auto channel = line.split(':')[1].trimmed();
+          if (!channel.startsWith("20.04/")) {
+            qInfo() << "On channel" << channel << ", instantiating snapInstaller...";
+            m_snapInstaller = new QSnapdClient();
+          }
+        }
+      }
+    }
+  }
 
   update();
 }
@@ -123,6 +156,19 @@ void PlatformIntegration::update()
 
     if (!m_installedAppIds.contains(appId) || m_installedAppIds.value(appId) < version) {
       m_installedAppIds[appId] = version;
+    }
+  }
+
+  if (m_snapInstaller) {
+    auto request = m_snapInstaller->getSnaps();
+    request->runSync();
+    for (int i = 0; i < request->snapCount(); i++) {
+      auto snap = request->snap(i);
+      const auto snapName = QStringLiteral("snap.") + snap->name();
+      const auto version = snap->version();
+      if (!m_installedAppIds.contains(snapName) || m_installedAppIds.value(snapName) < version) {
+        m_installedAppIds[snapName] = version;
+      }
     }
   }
 

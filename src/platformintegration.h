@@ -23,11 +23,13 @@
 #include <QVariantList>
 
 class ClickInstaller;
+class QSnapdClient;
 
 class PlatformIntegration : public QObject
 {
   Q_OBJECT
   Q_PROPERTY(ClickInstaller* clickInstaller READ clickInstaller CONSTANT)
+  Q_PROPERTY(QSnapdClient* snapInstaller READ snapInstaller CONSTANT)
 
 public:
   PlatformIntegration();
@@ -42,6 +44,7 @@ public:
   }
 
   ClickInstaller* clickInstaller() const { return m_installer; }
+  QSnapdClient* snapInstaller() const { return m_snapInstaller; }
 
   QStringList supportedFrameworks() const { return m_supportedFrameworks; }
   QString supportedArchitecture() const { return m_supportedArchitecture; }
@@ -75,6 +78,7 @@ private:
   QVariantList m_clickDb;
 
   ClickInstaller* m_installer;
+  QSnapdClient* m_snapInstaller;
 
   static PlatformIntegration* m_instance;
 };

@@ -29,6 +29,7 @@ Page {
     anchors.fill: parent
 
     property var app: null
+    property var localAppModel: null
     property var rating: null
     property var restrictedPermissions: [
         'bluetooth',
@@ -118,7 +119,11 @@ Page {
                 onTriggered: {
                     var popup = PopupUtils.open(removeQuestion, root, {pkgName: app.name || app.id});
                     popup.accepted.connect(function() {
-                        app.remove()
+                        const model = appDetailsPage.localAppModel;
+                        app.updated.connect(function() {
+                            model.refresh();
+                        });
+                        app.remove();
                     })
                 }
             }
@@ -262,7 +267,12 @@ Page {
                         Layout.fillWidth: true
                         Layout.maximumWidth: buttonsRow.width > units.gu(60) ? units.gu(24) : buttonsRow.width
                         text: i18n.tr("Open")
-                        visible: app.installed && app.containsApp && app.appId!="openstore.openstore-team"
+                        visible: {
+                            if (app.isBusy)
+                                return false;
+
+                            return app.installed && app.containsApp && app.appId!="openstore.openstore-team"
+                        }
                         color: installUpgradeButton.visible
                             ? theme.name == "Lomiri.Components.Themes.Ambiance"
                                 ? LomiriColors.graphite
@@ -294,7 +304,12 @@ Page {
 
                             return i18n.tr("Install");
                         }
-                        visible: !app.installed || (app.installed && app.updateAvailable) || app.isLocalVersionSideloaded
+                        visible: {
+                            if (app.isBusy)
+                                return false;
+
+                            return (!app.installed || (app.installed && app.updateAvailable) || app.isLocalVersionSideloaded)
+                        }
                         color: app.isLocalVersionSideloaded ? theme.palette.selected.focus : theme.palette.normal.positive
                         onClicked: {
                             if (isUnconfined && !isTrustedApp && !app.installed) {
@@ -325,7 +340,16 @@ Page {
                     anchors.fill: parent
                     anchors.margins: units.gu(2)
                     spacing: units.gu(2)
-                    visible: (PlatformIntegration.clickInstaller.busy && !PlatformIntegration.clickInstaller.isLocalInstall) || PackagesCache.updatingCache
+                    visible: {
+                        if (PlatformIntegration.clickInstaller.busy &&
+                            !PlatformIntegration.clickInstaller.isLocalInstall)
+                            return true;
+
+                        if (PackagesCache.updatingCache)
+                            return true;
+
+                        return app.isBusy
+                    }
 
                     onVisibleChanged: {
                         // The page is automatically closed for channel-incompatible apps when they are removed.
@@ -337,8 +361,8 @@ Page {
                     ProgressBar {
                         Layout.fillWidth: true
                         maximumValue: app ? app.downloadSize : 0
-                        value: PlatformIntegration.clickInstaller.downloadProgress
-                        indeterminate: PlatformIntegration.clickInstaller.downloadProgress == 0 || PackagesCache.updatingCache
+                        value: app.downloadProgress
+                        indeterminate: app.downloadProgress == 0 || PackagesCache.updatingCache
                     }
 
                     AbstractButton {
@@ -348,7 +372,7 @@ Page {
                         action: Action {
                             iconName: "close"
                             onTriggered: PlatformIntegration.clickInstaller.abortInstallation()
-                            enabled: PlatformIntegration.clickInstaller.downloadProgress < app.downloadSize
+                            enabled: app.downloadProgress < app.downloadSize
                         }
                         Rectangle {
                             color: "#cdcdcd"
@@ -383,11 +407,15 @@ Page {
                         Layout.fillWidth: true
                         Layout.maximumWidth: buttonsRow.width > units.gu(60) ? units.gu(24) : buttonsRow.width
                         text: i18n.tr("Remove")
-                        visible: app.installed && !PackagesCache.updatingCache
+                        visible: app.installed && (!PackagesCache.updatingCache || !app.isBusy)
                         color: theme.palette.normal.negative
                         onClicked: {
                             var popup = PopupUtils.open(removeQuestion, root, {pkgName: app.name || app.id});
                             popup.accepted.connect(function() {
+                                const model = appDetailsPage.localAppModel;
+                                app.updated.connect(function() {
+                                    model.refresh();
+                                });
                                 app.remove();
                             })
                         }
@@ -520,7 +548,7 @@ Page {
             }
 
             ListItem {
-                id: latestVersionDownloads
+        id: latestVersionDownloads
                 divider.visible: false
                 visible: (app.latestDownloads > 0)
                 ListItemLayout {

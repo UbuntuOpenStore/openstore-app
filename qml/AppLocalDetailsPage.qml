@@ -29,10 +29,11 @@ Page {
     id: appLocalDetailsPage
 
     property var app: null
+    property var localAppModel: null
 
     header: Components.HeaderBase {
         title: app ? app.name : i18n.tr("App details")
-        enabled: !PlatformIntegration.clickInstaller.busy
+        enabled: !PlatformIntegration.clickInstaller.busy && !app.isBusy
 
         trailingActionBar {
             numberOfSlots: 1
@@ -45,7 +46,18 @@ Page {
                     // TODO share removeQuestion popup
                     var popup = PopupUtils.open(removeQuestion, root, {pkgName: app.name || app.appId});
                     popup.accepted.connect(function() {
-                        PlatformIntegration.clickInstaller.removePackage(app.appId, app.version);
+                        if (app.packageType === "click") {
+                            PlatformIntegration.clickInstaller.removePackage(app.appId, app.version);
+                        } else {
+                            const packageId = app.appId.substring(5);
+                            console.log("Removing: " + packageId);
+                            const request = PlatformIntegration.snapInstaller.remove(packageId);
+                            const model = appLocalDetailsPage.localAppModel;
+                            request.complete.connect(function() {
+                                model.refresh();
+                            });
+                            request.runAsync();
+                        }
                         bottomEdgeStack.pop();
                     })
                 }

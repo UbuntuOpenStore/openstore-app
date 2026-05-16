@@ -157,7 +157,10 @@ Page {
                     PackagesCache.packageFetchError.disconnect(slot_packageFetchError);
 
                     bottomEdgeStack.clear();
-                    bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: localAppModel.getByAppId(appId) });
+                    bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), {
+                        app: localAppModel.getByAppId(appId),
+                        localAppModel: localAppModel
+                    });
                 }
 
                 function slot_installedPackageDetailsReady(pkg) {
@@ -165,7 +168,10 @@ Page {
                     PackagesCache.packageFetchError.disconnect(slot_packageFetchError);
 
                     bottomEdgeStack.clear();
-                    bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg });
+                    bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), {
+                        app: pkg,
+                        localAppModel: localAppModel
+                    });
                 }
 
                 onClicked: {
@@ -179,7 +185,10 @@ Page {
                         }
                         else {
                             bottomEdgeStack.clear();
-                            bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: localAppModel.getByAppId(model.appId) });
+                            bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), {
+                                app: localAppModel.getByAppId(model.appId),
+                                localAppModel: localAppModel
+                            });
                         }
                     }
                 }

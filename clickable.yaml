@@ -5,6 +5,12 @@ ignore_review_errors: true
 dependencies_target:
   - libclick-0.4-dev
   - libpam0g-dev
+  - libsnapd-qt-dev
+  - libsnapd-glib-dev
+install_lib:
+  - /usr/lib/${ARCH_TRIPLET}/libsnapd-qt*.so*
+  - /usr/lib/${ARCH_TRIPLET}/libsnapd-glib*.so*
+  - /usr/lib/${ARCH_TRIPLET}/libsoup-*.so*
 framework: ubuntu-sdk-20.04
 scripts:
   format: ./scripts/format.sh

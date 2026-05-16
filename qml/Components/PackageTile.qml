@@ -94,7 +94,16 @@ AbstractButton {
                 textSize: Label.XSmall
             }
 
-            summary.text: rootItem.appItem.installed ? rootItem.appItem.updateAvailable ? i18n.tr("Update available").toUpperCase() : i18n.tr("✓ Installed").toUpperCase() : ""
+            summary.text: {
+                if (rootItem.appItem.installed) {
+                   if (rootItem.appItem.updateAvailable) {
+                       return i18n.tr("Update available").toUpperCase()
+                   } else {
+                       return i18n.tr("✓ Installed").toUpperCase()
+                   }
+                }
+                return "";
+            }
             summary.textSize: Label.XSmall
         }
     }

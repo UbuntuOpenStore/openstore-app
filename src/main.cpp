@@ -22,6 +22,8 @@
 #include <QQmlContext>
 #include <QQuickView>
 
+#include <Snapd/Client>
+
 #include "apiconstants.h"
 #include "cachingnetworkmanagerfactory.h"
 #include "clickinstaller.h"
@@ -33,6 +35,8 @@
 #include "packagescache.h"
 #include "platformintegration.h"
 #include "review.h"
+#include "clickpackage.h"
+#include "snappackage.h"
 
 static QObject* registerNetworkManagerSingleton(QQmlEngine* /*engine*/, QJSEngine* /*scriptEngine*/)
 {
@@ -71,6 +75,14 @@ int main(int argc, char* argv[])
   qmlRegisterType<CategoriesModel>("OpenStore", 1, 0, "CategoriesModel");
   qmlRegisterUncreatableType<PackageItem>(
     "OpenStore", 1, 0, "PackageItem", "PackageItem is only available through LocalAppModel, DiscoverModel, or SearchModel.");
+  qmlRegisterUncreatableType<ClickPackageItem>(
+    "OpenStore", 1, 0, "ClickPackageItem", "ClickPackageItem is only available through LocalAppModel, DiscoverModel, or SearchModel.");
+  qmlRegisterUncreatableType<SnapPackageItem>(
+    "OpenStore", 1, 0, "SnapPackageItem", "SnapPackageItem is only available through LocalAppModel, DiscoverModel, or SearchModel.");
+  qmlRegisterUncreatableType<QSnapdClient>(
+    "OpenStore", 1, 0, "SnapInstaller", "Access SnapInstall from the PlatformIntegration singleton");
+  qmlRegisterUncreatableType<QSnapdRemoveRequest>(
+    "OpenStore", 1, 0, "SnapdRemoveRequest", "Created by snapInstaller");
 
   qmlRegisterType<Ratings>("OpenStore", 1, 0, "Ratings");
   qRegisterMetaType<Ratings::Rating>("Rating");

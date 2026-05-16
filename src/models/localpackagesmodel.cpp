@@ -25,6 +25,8 @@
 #include <QJsonDocument>
 #include <algorithm>
 
+#include <Snapd/Client>
+
 // For desktop file parsing
 #include <QDir>
 #include <QFileInfo>
@@ -215,6 +217,26 @@ void LocalPackagesModel::refresh()
       }
     }
   }
+
+  QSnapdClient* installer = PlatformIntegration::instance()->snapInstaller();
+  if (installer) {
+    auto request = installer->getSnaps();
+    request->runSync();
+    for (int i = 0; i < request->snapCount(); i++) {
+      QSnapdSnap* snap = request->snap(i);
+      LocalPackageItem pkgItem;
+      pkgItem.appId = QStringLiteral("snap.") + snap->name();
+      pkgItem.name = snap->title().isEmpty() ? snap->name() : snap->title();
+      pkgItem.version = snap->version();
+      //pkgItem.packageUrl = PackagesCache::instance()->getPackageUrl(pkgItem.appId);
+      //pkgItem.appLaunchUrl = appLaunchUrl;
+      pkgItem.icon = snap->icon();
+      pkgItem.updateStatus = QStringLiteral("none");
+
+      m_list.append(pkgItem);
+    }
+  }
+
   //        qDebug() << "Finished refresh.";
 
   std::sort(m_list.begin(), m_list.end(), sortPackage);

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-03 02:29+0000\n"
+"POT-Creation-Date: 2026-05-13 08:07+0000\n"
 "PO-Revision-Date: 2025-06-17 15:01+0000\n"
 "Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/open-store-io/"
@@ -19,39 +19,39 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.12.1\n"
 
-#: ../qml/AppDetailsPage.qml:108 ../qml/AppLocalDetailsPage.qml:34
+#: ../qml/AppDetailsPage.qml:109 ../qml/AppLocalDetailsPage.qml:35
 msgid "App details"
 msgstr "பயன்பாட்டு விவரங்கள்"
 
-#: ../qml/AppDetailsPage.qml:115 ../qml/AppDetailsPage.qml:385
-#: ../qml/AppLocalDetailsPage.qml:41 ../qml/Dialogs/UninstallDialog.qml:33
+#: ../qml/AppDetailsPage.qml:116 ../qml/AppDetailsPage.qml:409
+#: ../qml/AppLocalDetailsPage.qml:42 ../qml/Dialogs/UninstallDialog.qml:33
 msgid "Remove"
 msgstr "அகற்று"
 
-#: ../qml/AppDetailsPage.qml:152 ../qml/Components/PackageListItem.qml:34
+#: ../qml/AppDetailsPage.qml:157 ../qml/Components/PackageListItem.qml:34
 #: ../qml/Components/PackageTile.qml:79
 msgid "App"
 msgstr "பயன்பாடு"
 
-#: ../qml/AppDetailsPage.qml:153 ../qml/Components/PackageListItem.qml:35
+#: ../qml/AppDetailsPage.qml:158 ../qml/Components/PackageListItem.qml:35
 #: ../qml/Components/PackageTile.qml:80
 msgid "Bookmark"
 msgstr "புத்தககுறி"
 
-#: ../qml/AppDetailsPage.qml:154 ../qml/Components/PackageListItem.qml:36
+#: ../qml/AppDetailsPage.qml:159 ../qml/Components/PackageListItem.qml:36
 #: ../qml/Components/PackageTile.qml:81
 msgid "Web App"
 msgstr "வலை பயன்பாடு"
 
-#: ../qml/AppDetailsPage.qml:164
+#: ../qml/AppDetailsPage.qml:169
 msgid "Install Size: "
 msgstr "அளவை நிறுவுதல்: "
 
-#: ../qml/AppDetailsPage.qml:165
+#: ../qml/AppDetailsPage.qml:170
 msgid "Download Size: "
 msgstr "பதிவிறக்க அளவு: "
 
-#: ../qml/AppDetailsPage.qml:239
+#: ../qml/AppDetailsPage.qml:244
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
@@ -59,32 +59,32 @@ msgstr ""
 "இந்த பயன்பாட்டின் நிறுவப்பட்ட பதிப்பு ஓபன்ச்டோர் சேவையகத்திலிருந்து வரவில்லை. கீழே உள்ள "
 "பொத்தானைத் தட்டுவதன் மூலம் அண்மைக் கால நிலையான புதுப்பிப்பை நிறுவலாம்."
 
-#: ../qml/AppDetailsPage.qml:264 ../qml/AppLocalDetailsPage.qml:104
+#: ../qml/AppDetailsPage.qml:269 ../qml/AppLocalDetailsPage.qml:116
 #: ../qml/Components/HighlightedApp.qml:117
 msgid "Open"
 msgstr "திற"
 
-#: ../qml/AppDetailsPage.qml:280
+#: ../qml/AppDetailsPage.qml:290
 msgid "The OpenStore is installed!"
 msgstr "ஓபன்ச்டோர் நிறுவப்பட்டுள்ளது!"
 
-#: ../qml/AppDetailsPage.qml:289
+#: ../qml/AppDetailsPage.qml:299
 msgid "Install stable version"
 msgstr "நிலையான பதிப்பை நிறுவவும்"
 
-#: ../qml/AppDetailsPage.qml:292
+#: ../qml/AppDetailsPage.qml:302
 msgid "Upgrade"
 msgstr "மேம்படுத்தல்"
 
-#: ../qml/AppDetailsPage.qml:295
+#: ../qml/AppDetailsPage.qml:305
 msgid "Install"
 msgstr "நிறுவவும்"
 
-#: ../qml/AppDetailsPage.qml:371
+#: ../qml/AppDetailsPage.qml:395
 msgid "This app is not compatible with your system."
 msgstr "இந்த பயன்பாடு உங்கள் கணினியுடன் பொருந்தாது."
 
-#: ../qml/AppDetailsPage.qml:404
+#: ../qml/AppDetailsPage.qml:432
 msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
@@ -92,237 +92,237 @@ msgstr ""
 "இந்த பயன்பாட்டில் கணினியின் தடைசெய்யப்பட்ட பகுதிகள் மற்றும் உங்கள் எல்லா தரவுகளுக்கும் அணுகல் "
 "உள்ளது, விவரங்களுக்கு கீழே காண்க."
 
-#: ../qml/AppDetailsPage.qml:407
+#: ../qml/AppDetailsPage.qml:435
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
 "இந்த பயன்பாட்டில் தடைசெய்யப்பட்ட கணினி தரவுகளுக்கான அணுகல் உள்ளது, விவரங்களுக்கு கீழே "
 "காண்க."
 
-#: ../qml/AppDetailsPage.qml:432
+#: ../qml/AppDetailsPage.qml:460
 msgid "Description"
 msgstr "விவரம்"
 
 #. TRANSLATORS: Title of the changelog section
-#: ../qml/AppDetailsPage.qml:470
+#: ../qml/AppDetailsPage.qml:498
 msgid "What's New"
 msgstr "புதியது என்ன"
 
-#: ../qml/AppDetailsPage.qml:489
+#: ../qml/AppDetailsPage.qml:517
 msgid "Packager/Publisher"
 msgstr "பேக்கேசர்/வெளியீட்டாளர்"
 
-#: ../qml/AppDetailsPage.qml:498 ../qml/AppLocalDetailsPage.qml:138
+#: ../qml/AppDetailsPage.qml:526 ../qml/AppLocalDetailsPage.qml:150
 msgid "Installed version"
 msgstr "நிறுவப்பட்ட பதிப்பு"
 
-#: ../qml/AppDetailsPage.qml:508
+#: ../qml/AppDetailsPage.qml:536
 msgid "Latest available version"
 msgstr "கிடைக்கக்கூடிய அண்மைக் கால பதிப்பு"
 
-#: ../qml/AppDetailsPage.qml:517
+#: ../qml/AppDetailsPage.qml:545
 msgid "First released"
 msgstr "முதலில் வெளியிடப்பட்டது"
 
-#: ../qml/AppDetailsPage.qml:528
+#: ../qml/AppDetailsPage.qml:556
 msgid "Downloads of the latest version"
 msgstr "அண்மைக் கால பதிப்பின் பதிவிறக்கங்கள்"
 
-#: ../qml/AppDetailsPage.qml:537
+#: ../qml/AppDetailsPage.qml:565
 msgid "Total downloads"
 msgstr "மொத்த பதிவிறக்கங்கள்"
 
-#: ../qml/AppDetailsPage.qml:546
+#: ../qml/AppDetailsPage.qml:574
 msgid "License"
 msgstr "உரிமம்"
 
-#: ../qml/AppDetailsPage.qml:547
+#: ../qml/AppDetailsPage.qml:575
 msgid "N/A"
 msgstr "இதற்கில்லை"
 
-#: ../qml/AppDetailsPage.qml:559 ../qml/SettingsPage.qml:214
+#: ../qml/AppDetailsPage.qml:587 ../qml/SettingsPage.qml:214
 msgid "Source Code"
 msgstr "மூலக் குறியீடு"
 
-#: ../qml/AppDetailsPage.qml:572
+#: ../qml/AppDetailsPage.qml:600
 msgid "Get support for this app"
 msgstr "இந்த பயன்பாட்டிற்கான ஆதரவைப் பெறுங்கள்"
 
-#: ../qml/AppDetailsPage.qml:585
+#: ../qml/AppDetailsPage.qml:613
 msgid "Donate to support this app"
 msgstr "இந்த பயன்பாட்டை ஆதரிக்க நன்கொடை"
 
-#: ../qml/AppDetailsPage.qml:598
+#: ../qml/AppDetailsPage.qml:626
 msgid "Help translate this app"
 msgstr "இந்த பயன்பாட்டை மொழிபெயர்க்க உதவுங்கள்"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
-#: ../qml/AppDetailsPage.qml:614
+#: ../qml/AppDetailsPage.qml:642
 msgid "More from %1"
 msgstr "%1 இலிருந்து மேலும்"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: ../qml/AppDetailsPage.qml:629
+#: ../qml/AppDetailsPage.qml:657
 msgid "Other apps in %1"
 msgstr "%1 இல் உள்ள பிற பயன்பாடுகள்"
 
-#: ../qml/AppDetailsPage.qml:640
+#: ../qml/AppDetailsPage.qml:668
 msgid "Package contents"
 msgstr "தொகுப்பு உள்ளடக்கங்கள்"
 
-#: ../qml/AppDetailsPage.qml:727
+#: ../qml/AppDetailsPage.qml:755
 msgid "Permissions"
 msgstr "அனுமதிகள்"
 
-#: ../qml/AppDetailsPage.qml:732
+#: ../qml/AppDetailsPage.qml:760
 msgid "Accounts"
 msgstr "கணக்குகள்"
 
-#: ../qml/AppDetailsPage.qml:733
+#: ../qml/AppDetailsPage.qml:761
 msgid "Audio"
 msgstr "ஆடியோ"
 
-#: ../qml/AppDetailsPage.qml:734
+#: ../qml/AppDetailsPage.qml:762
 msgid "Bluetooth"
 msgstr "ஊடலை"
 
-#: ../qml/AppDetailsPage.qml:735
+#: ../qml/AppDetailsPage.qml:763
 msgid "Calendar"
 msgstr "நாட்காட்டி"
 
-#: ../qml/AppDetailsPage.qml:736
+#: ../qml/AppDetailsPage.qml:764
 msgid "Camera"
 msgstr "கேமரா"
 
-#: ../qml/AppDetailsPage.qml:737
+#: ../qml/AppDetailsPage.qml:765
 msgid "Connectivity"
 msgstr "இணைப்பு"
 
-#: ../qml/AppDetailsPage.qml:738
+#: ../qml/AppDetailsPage.qml:766
 msgid "Contacts"
 msgstr "தொடர்புகள்"
 
-#: ../qml/AppDetailsPage.qml:739
+#: ../qml/AppDetailsPage.qml:767
 msgid "Content Exchange Source"
 msgstr "உள்ளடக்க பரிமாற்ற மூல"
 
-#: ../qml/AppDetailsPage.qml:740
+#: ../qml/AppDetailsPage.qml:768
 msgid "Content Exchange"
 msgstr "உள்ளடக்க பரிமாற்றம்"
 
-#: ../qml/AppDetailsPage.qml:741
+#: ../qml/AppDetailsPage.qml:769
 msgid "Debug"
 msgstr "பிழைத்திருத்தம்"
 
-#: ../qml/AppDetailsPage.qml:742
+#: ../qml/AppDetailsPage.qml:770
 msgid "History"
 msgstr "வரலாறு"
 
-#: ../qml/AppDetailsPage.qml:743
+#: ../qml/AppDetailsPage.qml:771
 msgid "In App Purchases"
 msgstr "பயன்பாட்டு வாங்குதல்களில்"
 
-#: ../qml/AppDetailsPage.qml:744
+#: ../qml/AppDetailsPage.qml:772
 msgid "Keep Display On"
 msgstr "காட்சியைத் தொடருங்கள்"
 
-#: ../qml/AppDetailsPage.qml:745
+#: ../qml/AppDetailsPage.qml:773
 msgid "Location"
 msgstr "இடம்"
 
-#: ../qml/AppDetailsPage.qml:746
+#: ../qml/AppDetailsPage.qml:774
 msgid "Microphone"
 msgstr "ஒலிவாங்கி"
 
-#: ../qml/AppDetailsPage.qml:747
+#: ../qml/AppDetailsPage.qml:775
 msgid "Read Music Files"
 msgstr "இசை கோப்புகளைப் படியுங்கள்"
 
-#: ../qml/AppDetailsPage.qml:748
+#: ../qml/AppDetailsPage.qml:776
 msgid "Music Files"
 msgstr "இசை கோப்புகள்"
 
-#: ../qml/AppDetailsPage.qml:749
+#: ../qml/AppDetailsPage.qml:777
 msgid "Networking"
 msgstr "நெட்வொர்க்கிங்"
 
-#: ../qml/AppDetailsPage.qml:750
+#: ../qml/AppDetailsPage.qml:778
 msgid "Read Picture Files"
 msgstr "படக் கோப்புகளைப் படியுங்கள்"
 
-#: ../qml/AppDetailsPage.qml:751
+#: ../qml/AppDetailsPage.qml:779
 msgid "Picture Files"
 msgstr "படக் கோப்புகள்"
 
-#: ../qml/AppDetailsPage.qml:752
+#: ../qml/AppDetailsPage.qml:780
 msgid "Push Notifications"
 msgstr "அறிவிப்புகளை அழுத்தவும்"
 
-#: ../qml/AppDetailsPage.qml:753
+#: ../qml/AppDetailsPage.qml:781
 msgid "Sensors"
 msgstr "சென்சார்கள்"
 
-#: ../qml/AppDetailsPage.qml:754
+#: ../qml/AppDetailsPage.qml:782
 msgid "User Metrics"
 msgstr "பயனர் அளவீடுகள்"
 
-#: ../qml/AppDetailsPage.qml:755
+#: ../qml/AppDetailsPage.qml:783
 msgid "Read Video Files"
 msgstr "வீடியோ கோப்புகளைப் படியுங்கள்"
 
-#: ../qml/AppDetailsPage.qml:756
+#: ../qml/AppDetailsPage.qml:784
 msgid "Video Files"
 msgstr "வீடியோ கோப்புகள்"
 
-#: ../qml/AppDetailsPage.qml:757
+#: ../qml/AppDetailsPage.qml:785
 msgid "Video"
 msgstr "ஒளிதோற்றம்"
 
-#: ../qml/AppDetailsPage.qml:758
+#: ../qml/AppDetailsPage.qml:786
 msgid "Webview"
 msgstr "வெப்வியூ"
 
-#: ../qml/AppDetailsPage.qml:762
+#: ../qml/AppDetailsPage.qml:790
 msgid "Full System Access"
 msgstr "முழு கணினி அணுகல்"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: ../qml/AppDetailsPage.qml:767
+#: ../qml/AppDetailsPage.qml:795
 msgid "none required"
 msgstr "எதுவும் தேவையில்லை"
 
-#: ../qml/AppDetailsPage.qml:803
+#: ../qml/AppDetailsPage.qml:831
 msgid "Read paths"
 msgstr "பாதைகளைப் படியுங்கள்"
 
-#: ../qml/AppDetailsPage.qml:820
+#: ../qml/AppDetailsPage.qml:848
 msgid "Write paths"
 msgstr "பாதைகளை எழுதுங்கள்"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: ../qml/AppDetailsPage.qml:891
+#: ../qml/AppDetailsPage.qml:919
 msgid "%1 GB"
 msgstr "%1 சிபி"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: ../qml/AppDetailsPage.qml:896
+#: ../qml/AppDetailsPage.qml:924
 msgid "%1 MB"
 msgstr "%1 எம்பி"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: ../qml/AppDetailsPage.qml:901
+#: ../qml/AppDetailsPage.qml:929
 msgid "%1 kB"
 msgstr "%1 கி.பை"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: ../qml/AppDetailsPage.qml:904
+#: ../qml/AppDetailsPage.qml:932
 msgid "%1 bytes"
 msgstr "%1 பைட்டுகள்"
 
-#: ../qml/AppLocalDetailsPage.qml:118
+#: ../qml/AppLocalDetailsPage.qml:130
 msgid "This app could not be found in the OpenStore"
 msgstr "இந்த பயன்பாட்டை ஓபன்ச்டோரில் காண முடியவில்லை"
 
-#: ../qml/AppLocalDetailsPage.qml:121
+#: ../qml/AppLocalDetailsPage.qml:133
 msgid ""
 "You are currently offline and the app details could not be fetched from the "
 "OpenStore"
@@ -704,21 +704,21 @@ msgstr ""
 msgid "Content Rating"
 msgstr "உள்ளடக்க பரிமாற்றம்"
 
-#: ../qml/Components/ContentRating.qml:271
+#: ../qml/Components/ContentRating.qml:270
 msgid "This app has not been rated"
 msgstr ""
 
-#: ../qml/Components/ContentRating.qml:272
+#: ../qml/Components/ContentRating.qml:271
 #, fuzzy
 #| msgid "All Types"
 msgid "All Ages"
 msgstr "அனைத்து வகைகளும்"
 
-#: ../qml/Components/ContentRating.qml:283
+#: ../qml/Components/ContentRating.qml:282
 msgid "No concerning content"
 msgstr ""
 
-#: ../qml/Components/ContentRating.qml:354
+#: ../qml/Components/ContentRating.qml:353
 msgid ""
 "Self reported rating using <a href=\"https://hughsie.github.io/oars/\">Open "
 "Age Rating Service</a>"
@@ -765,11 +765,11 @@ msgstr "புச் உதவியாளர்"
 msgid "Accounts provider"
 msgstr "கணக்கு வழங்குநர்"
 
-#: ../qml/Components/PackageTile.qml:97
+#: ../qml/Components/PackageTile.qml:100
 msgid "Update available"
 msgstr "புதுப்பிப்பு கிடைக்கிறது"
 
-#: ../qml/Components/PackageTile.qml:97
+#: ../qml/Components/PackageTile.qml:102
 msgid "✓ Installed"
 msgstr "நிறுவப்பட்டது"
 
@@ -1083,11 +1083,11 @@ msgstr ""
 msgid "Update all"
 msgstr "அனைத்தையும் புதுப்பிக்கவும்"
 
-#: ../qml/InstalledAppsPage.qml:194
+#: ../qml/InstalledAppsPage.qml:203
 msgid "No apps found"
 msgstr "பயன்பாடுகள் எதுவும் கிடைக்கவில்லை"
 
-#: ../qml/InstalledAppsPage.qml:195
+#: ../qml/InstalledAppsPage.qml:204
 msgid "No app has been installed from OpenStore yet."
 msgstr "ஓபன்ச்டோரிலிருந்து இதுவரை எந்த பயன்பாடும் நிறுவப்படவில்லை."
 

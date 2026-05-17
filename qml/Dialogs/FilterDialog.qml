@@ -17,6 +17,7 @@
 import QtQuick 2.4
 import Lomiri.Components 1.3
 import Lomiri.Components.Popups 1.3
+import OpenStore 1.0
 
 Component {
     id: filterComponent
@@ -27,8 +28,9 @@ Component {
 
         property string selectedSort: 'relevance'
         property string selectedType: ''
+        property string selectedPackageType: ''
 
-        signal accepted(string selectedSort, string selectedType)
+        signal accepted(string selectedSort, string selectedType, string selectedPackageType)
         signal rejected()
 
         Label {
@@ -136,11 +138,62 @@ Component {
             }
         }
 
+        Label {
+            anchors { left: parent.left; right: parent.right }
+            wrapMode: Text.WordWrap
+            maximumLineCount: Number.MAX_VALUE
+            text: i18n.tr('Package Type')
+            visible: PlatformIntegration.snapInstaller != null
+        }
+
+        ListModel {
+            id: packageTypeModel
+
+            Component.onCompleted: {
+                packageTypeModel.append({ label: i18n.tr('All'), value: '' });
+                packageTypeModel.append({ label: i18n.tr('Click'), value: 'click' });
+                packageTypeModel.append({ label: i18n.tr('Snap'), value: 'snap' });
+
+                for (var i = 0; i < packageTypeModel.count; i++) {
+                    if (packageTypeModel.get(i).value == selectedPackageType) {
+                        packageType.text = packageTypeModel.get(i).label;
+                    }
+                }
+            }
+        }
+
+        ComboButton {
+            id: packageType
+            text: i18n.tr('All')
+            visible: !!PlatformIntegration.snapInstaller
+
+            onClicked: packageType.expanded = !packageType.expanded
+
+            ListView {
+                model: packageTypeModel
+
+                delegate: ListItem {
+                    height: pkgLayout.height
+
+                    ListItemLayout {
+                        id: pkgLayout
+                        title.text: label
+                    }
+
+                    onClicked: {
+                        packageType.text = label;
+                        selectedPackageType = value;
+                        packageType.expanded = false;
+                    }
+                }
+            }
+        }
+
         Button {
             text: i18n.tr('Apply')
             color: theme.palette.normal.positive
             onClicked: {
-                filterDialog.accepted(selectedSort, selectedType);
+                filterDialog.accepted(selectedSort, selectedType, selectedPackageType);
             }
         }
 

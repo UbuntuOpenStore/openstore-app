@@ -29,6 +29,7 @@ Item {
     property string category
     property string sortMode
     property string filterType
+    property string filterPackageType
     property url queryUrl
 
     property alias view: viewLoader.item
@@ -43,6 +44,7 @@ Item {
         PropertyChanges { target: searchModel; category: rootItem.category }
         PropertyChanges { target: searchModel; sortMode: rootItem.sortMode }
         PropertyChanges { target: searchModel; filterType: rootItem.filterType }
+        PropertyChanges { target: searchModel; filterPackageType: rootItem.filterPackageType }
         PropertyChanges { target: searchModel; queryUrl: rootItem.queryUrl }
     }
 

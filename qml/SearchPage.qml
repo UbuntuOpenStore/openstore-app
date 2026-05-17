@@ -58,13 +58,15 @@ Page {
                         var popup = PopupUtils.open(filterDialog, searchPage, {
                             selectedSort: view.sortMode ? view.sortMode : 'relevance',
                             selectedType: view.filterType,
+                            selectedPackageType: view.filterPackageType,
                         });
-                        popup.accepted.connect(function(selectedSort, selectedType) {
+                        popup.accepted.connect(function(selectedSort, selectedType, selectedPackageType) {
                             PopupUtils.close(popup);
                             view.sortMode = selectedSort;
                             view.filterType = selectedType;
+                            view.filterPackageType = selectedPackageType;
                         });
-                        popup.rejected.connect(function(selectedSort, selectedType) {
+                        popup.rejected.connect(function() {
                             PopupUtils.close(popup);
                         });
                     }

@@ -176,7 +176,8 @@ void OpenStoreNetworkManager::getSearch(const QString& signature,
                                         const QString& filterString,
                                         const QString& category,
                                         const QString& sort,
-                                        const QString& filterType)
+                                        const QString& filterType,
+                                        const QString& filterPackageType)
 {
   QUrl url(getUrl(API_SEARCH_ENDPOINT));
 
@@ -186,8 +187,13 @@ void OpenStoreNetworkManager::getSearch(const QString& signature,
   q.addQueryItem("sort", sort);
   q.addQueryItem("category", category);
   q.addQueryItem("type", filterType);
-  if (PlatformIntegration::instance()->snapInstaller())
-    q.addQueryItem("package_types", "snap,click");
+  if (PlatformIntegration::instance()->snapInstaller()) {
+    if (filterPackageType.isEmpty()) {
+      q.addQueryItem("package_types", "snap,click");
+    } else {
+      q.addQueryItem("package_types", filterPackageType);
+    }
+  }
 
   if (filterString.startsWith("publisher:")) {
     q.addQueryItem("publisher", filterString.right(filterString.size() - 10));

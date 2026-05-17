@@ -68,7 +68,8 @@ public Q_SLOTS:
                  const QString& filterString,
                  const QString& category,
                  const QString& sort,
-                 const QString& filterType);
+                 const QString& filterType,
+                 const QString& filterPackageType = QString());
   void getCategories(const QString& signature);
   void getByUrl(const QString& signature, const QUrl& url);
   void getRevisions(const QString& signature, const QStringList& appIdsAtVersion);

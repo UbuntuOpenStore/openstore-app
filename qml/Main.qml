@@ -327,13 +327,15 @@ MainView {
                                 var popup = PopupUtils.open(filterDialog, filteredAppPage, {
                                     selectedSort: filteredAppList.sortMode ? filteredAppList.sortMode : 'name',
                                     selectedType: filteredAppList.filterType,
+                                    selectedPackageType: filteredAppList.filterPackageType,
                                 });
-                                popup.accepted.connect(function(selectedSort, selectedType) {
+                                popup.accepted.connect(function(selectedSort, selectedType, selectedPackageType) {
                                     PopupUtils.close(popup);
                                     filteredAppList.sortMode = selectedSort;
                                     filteredAppList.filterType = selectedType;
+                                    filteredAppList.filterPackageType = selectedPackageType;
                                 });
-                                popup.rejected.connect(function(selectedSort, selectedType) {
+                                popup.rejected.connect(function() {
                                     PopupUtils.close(popup);
                                 });
                             }

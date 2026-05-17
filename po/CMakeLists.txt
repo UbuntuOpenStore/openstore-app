@@ -11,7 +11,7 @@ add_custom_target(${POT_FILE} ALL
     COMMAND ${INTLTOOL_EXTRACT} --update --type=gettext/ini
         --srcdir=${CMAKE_SOURCE_DIR} ${DESKTOP_FILE_NAME}.in
 
-    COMMAND ${GETTEXT_XGETTEXT_EXECUTABLE} -o ${POT_FILE}
+    COMMAND ${GETTEXT_XGETTEXT_EXECUTABLE} -o ${POT_FILE}.new
         -D ${CMAKE_CURRENT_SOURCE_DIR}
         -D ${CMAKE_CURRENT_BINARY_DIR}
         --from-code=UTF-8
@@ -20,7 +20,14 @@ add_custom_target(${POT_FILE} ALL
         --package-name='${DOMAIN}'
         --sort-by-file
         ${I18N_SRC_FILES}
-    COMMAND ${CMAKE_COMMAND} -E copy ${POT_FILE} ${CMAKE_CURRENT_SOURCE_DIR})
+
+    # Only replace the pot file if strings have changed, ignoring the date header,
+    # to avoid unnecessary version control noise on every build.
+    COMMAND ${CMAKE_COMMAND}
+        -D "POT_FILE=${CMAKE_CURRENT_BINARY_DIR}/${POT_FILE}"
+        -P "${CMAKE_CURRENT_SOURCE_DIR}/update_pot.cmake"
+
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different ${POT_FILE} ${CMAKE_CURRENT_SOURCE_DIR}/${POT_FILE})
 
 # Builds the binary translations catalog for each language
 # it finds source translations (*.po) for

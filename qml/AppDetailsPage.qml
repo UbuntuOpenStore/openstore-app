@@ -43,6 +43,7 @@ Page {
         'picture_files_read',
         'video_files',
         'video_files_read',
+        'unknown',
     ]
 
     property bool isTrustedApp: {
@@ -254,6 +255,23 @@ Page {
             }
 
             ListItem {
+                visible: app.packageType === "snap"
+                height: snapPackageLayout.height
+                ListItemLayout {
+                    id: snapPackageLayout
+                    subtitle.text: i18n.tr("This is a Snap package provided by the Snapcraft Store")
+                    subtitle.maximumLineCount: Number.MAX_VALUE
+                    subtitle.wrapMode: Text.WordWrap
+
+                    Icon {
+                        SlotsLayout.position: SlotsLayout.Leading
+                        width: units.gu(4); height: width
+                        name: "info"
+                    }
+                }
+            }
+
+            ListItem {
                 height: units.gu(8)
 
                 RowLayout {
@@ -312,7 +330,13 @@ Page {
                         }
                         color: app.isLocalVersionSideloaded ? theme.palette.selected.focus : theme.palette.normal.positive
                         onClicked: {
-                            if (isUnconfined && !isTrustedApp && !app.installed) {
+                            if (app.packageType === "snap" && !app.installed && !settings.hideSnapWarning) {
+                                var popup = PopupUtils.open(snapWarningDialog)
+                                popup.accepted.connect(function() {
+                                    app.install();
+                                });
+                            }
+                            else if (isUnconfined && !isTrustedApp && !app.installed) {
                                 var popup = PopupUtils.open(unconfinedWarningDialog)
                                 popup.accepted.connect(function() {
                                     app.install();
@@ -631,6 +655,7 @@ Page {
             }
 
             ListItem {
+                visible: app.packageType === "click"
                 enabled: !PlatformIntegration.clickInstaller.busy
                 onClicked: {
                     bottomEdgeStack.clear()
@@ -784,10 +809,15 @@ Page {
                                     video_files: i18n.tr("Video Files"),
                                     video: i18n.tr("Video"),
                                     webview: i18n.tr("Webview"),
+                                    unknown: i18n.tr("Unknown"),
                                 };
 
                                 if (apparmorTemplate.indexOf("unconfined") >= 0) {
-                                    return '<font color=\"#ED3146\">' + i18n.tr("Full System Access") + '</font>';
+                                    return '<font color="#ED3146">' + i18n.tr("Full System Access") + '</font>';
+                                }
+
+                                if (permissions.length === 1 && permissions[0] === "unknown") {
+                                    return '<font color="#ED3146">' + i18n.tr("Unknown") + '</font>';
                                 }
 
                                 if (permissions.length === 0) {
@@ -904,6 +934,10 @@ Page {
 
     Dialogs.UnconfinedWarningDialog {
         id: unconfinedWarningDialog
+    }
+
+    Dialogs.SnapWarningDialog {
+        id: snapWarningDialog
     }
 
     Dialogs.UninstallDialog {

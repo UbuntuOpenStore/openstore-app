@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-18 05:27+0000\n"
-"PO-Revision-Date: 2026-05-04 20:09+0000\n"
+"PO-Revision-Date: 2026-05-19 08:11+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/et/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17.1\n"
+"X-Generator: Weblate 2026.6.dev0\n"
 
 #: ../qml/AppDetailsPage.qml:120 ../qml/AppLocalDetailsPage.qml:35
 msgid "App details"
@@ -62,7 +62,7 @@ msgstr ""
 
 #: ../qml/AppDetailsPage.qml:272
 msgid "This is a Snap package provided by the Snapcraft Store"
-msgstr ""
+msgstr "See on Snapcraft Store'ist pärit Snap-pakett"
 
 #: ../qml/AppDetailsPage.qml:297 ../qml/AppLocalDetailsPage.qml:116
 #: ../qml/Components/HighlightedApp.qml:117
@@ -288,7 +288,7 @@ msgstr "Webview sisemine brauser"
 
 #: ../qml/AppDetailsPage.qml:822 ../qml/AppDetailsPage.qml:830
 msgid "Unknown"
-msgstr ""
+msgstr "Pole teada"
 
 #: ../qml/AppDetailsPage.qml:826
 msgid "Full System Access"
@@ -780,7 +780,7 @@ msgstr "Kasutajakontode käsitleja"
 #: ../qml/Components/PackageListItem.qml:48
 #: ../qml/Components/PackageTile.qml:93 ../qml/Dialogs/FilterDialog.qml:155
 msgid "Snap"
-msgstr ""
+msgstr "Snap"
 
 #: ../qml/Components/PackageTile.qml:105
 msgid "Update available"
@@ -963,20 +963,16 @@ msgid "Web Apps"
 msgstr "Veebirakendused"
 
 #: ../qml/Dialogs/FilterDialog.qml:145
-#, fuzzy
-#| msgid "Package contents"
 msgid "Package Type"
-msgstr "Paketi sisu"
+msgstr "Tarkvarapaketi tüüp"
 
 #: ../qml/Dialogs/FilterDialog.qml:153 ../qml/Dialogs/FilterDialog.qml:167
-#, fuzzy
-#| msgid "Alcohol"
 msgid "All"
-msgstr "Alkohol"
+msgstr "Kõik"
 
 #: ../qml/Dialogs/FilterDialog.qml:154
 msgid "Click"
-msgstr ""
+msgstr "Click"
 
 #: ../qml/Dialogs/FilterDialog.qml:193
 msgid "Apply"
@@ -1028,16 +1024,16 @@ msgid ""
 "Not all snaps were designed with Ubuntu Touch in mind and might not work "
 "well."
 msgstr ""
+"Mitte kõik snap-paketid pole loodud viisil, mis arvestab Ubuntu Touchiga ja "
+"seega ei pruugi hästi toimida."
 
 #: ../qml/Dialogs/SnapWarningDialog.qml:39
 msgid "Don't show this warning again"
-msgstr ""
+msgstr "Ära näita seda hoiatust uuesti"
 
 #: ../qml/Dialogs/SnapWarningDialog.qml:43
-#, fuzzy
-#| msgid "I understand the risks"
 msgid "I understand"
-msgstr "Ma mõistan riske"
+msgstr "Ma saan sellest aru"
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
 msgid ""
@@ -1121,10 +1117,8 @@ msgstr "Saadaval uuendused (%1)"
 
 #. TRANSLATORS: %1 is the number of installed snap apps
 #: ../qml/InstalledAppsPage.qml:88
-#, fuzzy
-#| msgid "Installed apps (%1)"
 msgid "Installed Snap apps (%1)"
-msgstr "Paigaldatud rakendused (%1)"
+msgstr "Paigaldatud Snap-paketid (%1)"
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
 #: ../qml/InstalledAppsPage.qml:92

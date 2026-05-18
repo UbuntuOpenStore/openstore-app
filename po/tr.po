@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-13 08:07+0000\n"
+"POT-Creation-Date: 2026-05-18 05:27+0000\n"
 "PO-Revision-Date: 2024-06-02 07:09+0000\n"
 "Last-Translator: Ali Beyaz <alipolatbeyaz@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/open-store-io/"
@@ -19,39 +19,39 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.6-dev\n"
 
-#: ../qml/AppDetailsPage.qml:109 ../qml/AppLocalDetailsPage.qml:35
+#: ../qml/AppDetailsPage.qml:120 ../qml/AppLocalDetailsPage.qml:35
 msgid "App details"
 msgstr "Uygulama ayrıntıları"
 
-#: ../qml/AppDetailsPage.qml:116 ../qml/AppDetailsPage.qml:409
+#: ../qml/AppDetailsPage.qml:127 ../qml/AppDetailsPage.qml:443
 #: ../qml/AppLocalDetailsPage.qml:42 ../qml/Dialogs/UninstallDialog.qml:33
 msgid "Remove"
 msgstr "Kaldır"
 
-#: ../qml/AppDetailsPage.qml:157 ../qml/Components/PackageListItem.qml:34
+#: ../qml/AppDetailsPage.qml:168 ../qml/Components/PackageListItem.qml:34
 #: ../qml/Components/PackageTile.qml:79
 msgid "App"
 msgstr "Uygulama"
 
-#: ../qml/AppDetailsPage.qml:158 ../qml/Components/PackageListItem.qml:35
+#: ../qml/AppDetailsPage.qml:169 ../qml/Components/PackageListItem.qml:35
 #: ../qml/Components/PackageTile.qml:80
 msgid "Bookmark"
 msgstr "Yer imi"
 
-#: ../qml/AppDetailsPage.qml:159 ../qml/Components/PackageListItem.qml:36
+#: ../qml/AppDetailsPage.qml:170 ../qml/Components/PackageListItem.qml:36
 #: ../qml/Components/PackageTile.qml:81
 msgid "Web App"
 msgstr "İnternet Uygulamaları"
 
-#: ../qml/AppDetailsPage.qml:169
+#: ../qml/AppDetailsPage.qml:180
 msgid "Install Size: "
 msgstr "Kurulum Boyutu: "
 
-#: ../qml/AppDetailsPage.qml:170
+#: ../qml/AppDetailsPage.qml:181
 msgid "Download Size: "
 msgstr "İndirme Boyutu: "
 
-#: ../qml/AppDetailsPage.qml:244
+#: ../qml/AppDetailsPage.qml:255
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
@@ -59,32 +59,36 @@ msgstr ""
 "Bu uygulamanın yüklü sürümü OpenStore sunucusundan gelmiyor. En son kararlı "
 "güncellemeyi aşağıdaki butona dokunarak yükleyebilirsiniz."
 
-#: ../qml/AppDetailsPage.qml:269 ../qml/AppLocalDetailsPage.qml:116
+#: ../qml/AppDetailsPage.qml:272
+msgid "This is a Snap package provided by the Snapcraft Store"
+msgstr ""
+
+#: ../qml/AppDetailsPage.qml:297 ../qml/AppLocalDetailsPage.qml:116
 #: ../qml/Components/HighlightedApp.qml:117
 msgid "Open"
 msgstr "Aç"
 
-#: ../qml/AppDetailsPage.qml:290
+#: ../qml/AppDetailsPage.qml:318
 msgid "The OpenStore is installed!"
 msgstr "OpenStore kuruldu!"
 
-#: ../qml/AppDetailsPage.qml:299
+#: ../qml/AppDetailsPage.qml:327
 msgid "Install stable version"
 msgstr "Stabil sürümü kur"
 
-#: ../qml/AppDetailsPage.qml:302
+#: ../qml/AppDetailsPage.qml:330
 msgid "Upgrade"
 msgstr "Yükselt"
 
-#: ../qml/AppDetailsPage.qml:305
+#: ../qml/AppDetailsPage.qml:333
 msgid "Install"
 msgstr "Kur"
 
-#: ../qml/AppDetailsPage.qml:395
+#: ../qml/AppDetailsPage.qml:429
 msgid "This app is not compatible with your system."
 msgstr "Bu uygulama sisteminizle uyumlu değil."
 
-#: ../qml/AppDetailsPage.qml:432
+#: ../qml/AppDetailsPage.qml:466
 msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
@@ -92,229 +96,233 @@ msgstr ""
 "Bu uygulamanın sistemin kısıtlı bölümlerine ve tüm verilerinize erişimi "
 "vardır; ayrıntılar için aşağıya bakın."
 
-#: ../qml/AppDetailsPage.qml:435
+#: ../qml/AppDetailsPage.qml:469
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
 "Bu uygulamanın kısıtlanmış sistem verilerine erişimi var, ayrıntılar için "
 "aşağıya bakın."
 
-#: ../qml/AppDetailsPage.qml:460
+#: ../qml/AppDetailsPage.qml:494
 msgid "Description"
 msgstr "Açıklama"
 
 #. TRANSLATORS: Title of the changelog section
-#: ../qml/AppDetailsPage.qml:498
+#: ../qml/AppDetailsPage.qml:532
 msgid "What's New"
 msgstr "Neler yeni"
 
-#: ../qml/AppDetailsPage.qml:517
+#: ../qml/AppDetailsPage.qml:551
 msgid "Packager/Publisher"
 msgstr "Paketleyici/Yayımlayıcı"
 
-#: ../qml/AppDetailsPage.qml:526 ../qml/AppLocalDetailsPage.qml:150
+#: ../qml/AppDetailsPage.qml:560 ../qml/AppLocalDetailsPage.qml:150
 msgid "Installed version"
 msgstr "Kurulu sürüm"
 
-#: ../qml/AppDetailsPage.qml:536
+#: ../qml/AppDetailsPage.qml:570
 msgid "Latest available version"
 msgstr "Son sürüm"
 
-#: ../qml/AppDetailsPage.qml:545
+#: ../qml/AppDetailsPage.qml:579
 msgid "First released"
 msgstr "İlk yayınlanma"
 
-#: ../qml/AppDetailsPage.qml:556
+#: ../qml/AppDetailsPage.qml:590
 msgid "Downloads of the latest version"
 msgstr "Son sürümün indirmeleri"
 
-#: ../qml/AppDetailsPage.qml:565
+#: ../qml/AppDetailsPage.qml:599
 msgid "Total downloads"
 msgstr "Toplam indirmeler"
 
-#: ../qml/AppDetailsPage.qml:574
+#: ../qml/AppDetailsPage.qml:608
 msgid "License"
 msgstr "Lisans"
 
-#: ../qml/AppDetailsPage.qml:575
+#: ../qml/AppDetailsPage.qml:609
 msgid "N/A"
 msgstr "N/A"
 
-#: ../qml/AppDetailsPage.qml:587 ../qml/SettingsPage.qml:214
+#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:214
 msgid "Source Code"
 msgstr "Kaynak Kodu"
 
-#: ../qml/AppDetailsPage.qml:600
+#: ../qml/AppDetailsPage.qml:634
 msgid "Get support for this app"
 msgstr "Bu uygulama için destek al"
 
-#: ../qml/AppDetailsPage.qml:613
+#: ../qml/AppDetailsPage.qml:647
 msgid "Donate to support this app"
 msgstr "Bu uygulamayı desteklemek için bağış yap"
 
-#: ../qml/AppDetailsPage.qml:626
+#: ../qml/AppDetailsPage.qml:660
 msgid "Help translate this app"
 msgstr "Bu uygulamanın tercüme edilmesine yardım edin"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
-#: ../qml/AppDetailsPage.qml:642
+#: ../qml/AppDetailsPage.qml:677
 msgid "More from %1"
 msgstr "%1'den daha fazlası"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: ../qml/AppDetailsPage.qml:657
+#: ../qml/AppDetailsPage.qml:692
 msgid "Other apps in %1"
 msgstr "%1 kategorisindeki diğer uygulamalar"
 
-#: ../qml/AppDetailsPage.qml:668
+#: ../qml/AppDetailsPage.qml:703
 msgid "Package contents"
 msgstr "Paket içerikleri"
 
-#: ../qml/AppDetailsPage.qml:755
+#: ../qml/AppDetailsPage.qml:790
 msgid "Permissions"
 msgstr "İzinler"
 
-#: ../qml/AppDetailsPage.qml:760
+#: ../qml/AppDetailsPage.qml:795
 msgid "Accounts"
 msgstr "Hesaplar"
 
-#: ../qml/AppDetailsPage.qml:761
+#: ../qml/AppDetailsPage.qml:796
 msgid "Audio"
 msgstr "Ses"
 
-#: ../qml/AppDetailsPage.qml:762
+#: ../qml/AppDetailsPage.qml:797
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: ../qml/AppDetailsPage.qml:763
+#: ../qml/AppDetailsPage.qml:798
 msgid "Calendar"
 msgstr "Takvim"
 
-#: ../qml/AppDetailsPage.qml:764
+#: ../qml/AppDetailsPage.qml:799
 msgid "Camera"
 msgstr "Kamera"
 
-#: ../qml/AppDetailsPage.qml:765
+#: ../qml/AppDetailsPage.qml:800
 msgid "Connectivity"
 msgstr "Bağlantı"
 
-#: ../qml/AppDetailsPage.qml:766
+#: ../qml/AppDetailsPage.qml:801
 msgid "Contacts"
 msgstr "Kişiler"
 
-#: ../qml/AppDetailsPage.qml:767
+#: ../qml/AppDetailsPage.qml:802
 msgid "Content Exchange Source"
 msgstr "İçerik Değişim Kaynağı"
 
-#: ../qml/AppDetailsPage.qml:768
+#: ../qml/AppDetailsPage.qml:803
 msgid "Content Exchange"
 msgstr "İçerik Değişimi"
 
-#: ../qml/AppDetailsPage.qml:769
+#: ../qml/AppDetailsPage.qml:804
 msgid "Debug"
 msgstr "Hata Ayıklama"
 
-#: ../qml/AppDetailsPage.qml:770
+#: ../qml/AppDetailsPage.qml:805
 msgid "History"
 msgstr "Geçmiş"
 
-#: ../qml/AppDetailsPage.qml:771
+#: ../qml/AppDetailsPage.qml:806
 msgid "In App Purchases"
 msgstr "Uygulama İçi Satın Alma"
 
-#: ../qml/AppDetailsPage.qml:772
+#: ../qml/AppDetailsPage.qml:807
 msgid "Keep Display On"
 msgstr "Ekranı Açık Tut"
 
-#: ../qml/AppDetailsPage.qml:773
+#: ../qml/AppDetailsPage.qml:808
 msgid "Location"
 msgstr "Konum"
 
-#: ../qml/AppDetailsPage.qml:774
+#: ../qml/AppDetailsPage.qml:809
 msgid "Microphone"
 msgstr "Mikrofon"
 
-#: ../qml/AppDetailsPage.qml:775
+#: ../qml/AppDetailsPage.qml:810
 msgid "Read Music Files"
 msgstr "Müzik Dosyalarını Okuma"
 
-#: ../qml/AppDetailsPage.qml:776
+#: ../qml/AppDetailsPage.qml:811
 msgid "Music Files"
 msgstr "Müzik Dosyaları"
 
-#: ../qml/AppDetailsPage.qml:777
+#: ../qml/AppDetailsPage.qml:812
 msgid "Networking"
 msgstr "Ağ araçları"
 
-#: ../qml/AppDetailsPage.qml:778
+#: ../qml/AppDetailsPage.qml:813
 msgid "Read Picture Files"
 msgstr "Resim Dosyalarını  Okuma"
 
-#: ../qml/AppDetailsPage.qml:779
+#: ../qml/AppDetailsPage.qml:814
 msgid "Picture Files"
 msgstr "Resim Dosyaları"
 
-#: ../qml/AppDetailsPage.qml:780
+#: ../qml/AppDetailsPage.qml:815
 msgid "Push Notifications"
 msgstr "Bildirimler"
 
-#: ../qml/AppDetailsPage.qml:781
+#: ../qml/AppDetailsPage.qml:816
 msgid "Sensors"
 msgstr "Sensörler"
 
-#: ../qml/AppDetailsPage.qml:782
+#: ../qml/AppDetailsPage.qml:817
 msgid "User Metrics"
 msgstr "Kullanıcı Metrikleri"
 
-#: ../qml/AppDetailsPage.qml:783
+#: ../qml/AppDetailsPage.qml:818
 msgid "Read Video Files"
 msgstr "Video Dosyalarını Okuma"
 
-#: ../qml/AppDetailsPage.qml:784
+#: ../qml/AppDetailsPage.qml:819
 msgid "Video Files"
 msgstr "Video Dosyaları"
 
-#: ../qml/AppDetailsPage.qml:785
+#: ../qml/AppDetailsPage.qml:820
 msgid "Video"
 msgstr "Video"
 
-#: ../qml/AppDetailsPage.qml:786
+#: ../qml/AppDetailsPage.qml:821
 msgid "Webview"
 msgstr "Web Görünümü"
 
-#: ../qml/AppDetailsPage.qml:790
+#: ../qml/AppDetailsPage.qml:822 ../qml/AppDetailsPage.qml:830
+msgid "Unknown"
+msgstr ""
+
+#: ../qml/AppDetailsPage.qml:826
 msgid "Full System Access"
 msgstr "Tam Sistem Erişimi"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: ../qml/AppDetailsPage.qml:795
+#: ../qml/AppDetailsPage.qml:835
 msgid "none required"
 msgstr "hiçbiri gerekli değil"
 
-#: ../qml/AppDetailsPage.qml:831
+#: ../qml/AppDetailsPage.qml:871
 msgid "Read paths"
 msgstr "Yolları okuma"
 
-#: ../qml/AppDetailsPage.qml:848
+#: ../qml/AppDetailsPage.qml:888
 msgid "Write paths"
 msgstr "Yolları yazma"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: ../qml/AppDetailsPage.qml:919
+#: ../qml/AppDetailsPage.qml:963
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: ../qml/AppDetailsPage.qml:924
+#: ../qml/AppDetailsPage.qml:968
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: ../qml/AppDetailsPage.qml:929
+#: ../qml/AppDetailsPage.qml:973
 msgid "%1 kB"
 msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: ../qml/AppDetailsPage.qml:932
+#: ../qml/AppDetailsPage.qml:976
 msgid "%1 bytes"
 msgstr "%1 bayt"
 
@@ -764,11 +772,16 @@ msgstr "Bildirim Yardımcısı"
 msgid "Accounts provider"
 msgstr "Hesap sağlayıcı"
 
-#: ../qml/Components/PackageTile.qml:100
+#: ../qml/Components/PackageListItem.qml:48
+#: ../qml/Components/PackageTile.qml:93 ../qml/Dialogs/FilterDialog.qml:155
+msgid "Snap"
+msgstr ""
+
+#: ../qml/Components/PackageTile.qml:105
 msgid "Update available"
 msgstr "Güncelleme mevcut"
 
-#: ../qml/Components/PackageTile.qml:102
+#: ../qml/Components/PackageTile.qml:107
 msgid "✓ Installed"
 msgstr "✓ Yüklü"
 
@@ -808,8 +821,9 @@ msgstr "%1/%2 karakter"
 msgid "Submit"
 msgstr "Gönder"
 
-#: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:148
+#: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:201
 #: ../qml/Dialogs/InstallWarningDialog.qml:61
+#: ../qml/Dialogs/SnapWarningDialog.qml:55
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
 #: ../qml/Dialogs/UninstallDialog.qml:42
 msgid "Cancel"
@@ -838,6 +852,7 @@ msgid "Install this app to review it"
 msgstr "Değerlendirebilmek için bu uygulamayı yükleyin"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:26
+#: ../qml/Dialogs/SnapWarningDialog.qml:26
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:25
 msgid "Warning"
 msgstr "Uyarı"
@@ -879,71 +894,85 @@ msgstr "Şimdi bağış yap"
 msgid "Maybe later"
 msgstr "Belki sonra"
 
-#: ../qml/Dialogs/FilterDialog.qml:26
+#: ../qml/Dialogs/FilterDialog.qml:27
 msgid "Filters and Sorting"
 msgstr "Filtreler ve Sıralama"
 
-#: ../qml/Dialogs/FilterDialog.qml:38
+#: ../qml/Dialogs/FilterDialog.qml:40
 msgid "Sort By"
 msgstr "Şuna göre sırala"
 
-#: ../qml/Dialogs/FilterDialog.qml:45 ../qml/Dialogs/FilterDialog.qml:65
+#: ../qml/Dialogs/FilterDialog.qml:47 ../qml/Dialogs/FilterDialog.qml:67
 msgid "Relevance"
 msgstr "Alaka Düzeyi"
 
-#: ../qml/Dialogs/FilterDialog.qml:46
+#: ../qml/Dialogs/FilterDialog.qml:48
 msgid "Most Popular"
 msgstr "En Popüler"
 
-#: ../qml/Dialogs/FilterDialog.qml:47
+#: ../qml/Dialogs/FilterDialog.qml:49
 msgid "Least Popular"
 msgstr "En Az Popüler"
 
-#: ../qml/Dialogs/FilterDialog.qml:48
+#: ../qml/Dialogs/FilterDialog.qml:50
 msgid "Title (A-Z)"
 msgstr "Başlık (A-Z)"
 
-#: ../qml/Dialogs/FilterDialog.qml:49
+#: ../qml/Dialogs/FilterDialog.qml:51
 msgid "Title (Z-A)"
 msgstr "Başlık (Z-A)"
 
-#: ../qml/Dialogs/FilterDialog.qml:50
+#: ../qml/Dialogs/FilterDialog.qml:52
 msgid "Newest"
 msgstr "En Yeni"
 
-#: ../qml/Dialogs/FilterDialog.qml:51
+#: ../qml/Dialogs/FilterDialog.qml:53
 msgid "Oldest"
 msgstr "En Eski"
 
-#: ../qml/Dialogs/FilterDialog.qml:52
+#: ../qml/Dialogs/FilterDialog.qml:54
 msgid "Latest Update"
 msgstr "Son Güncelleme"
 
-#: ../qml/Dialogs/FilterDialog.qml:53
+#: ../qml/Dialogs/FilterDialog.qml:55
 msgid "Oldest Update"
 msgstr "En Eski Güncelleme"
 
-#: ../qml/Dialogs/FilterDialog.qml:93
+#: ../qml/Dialogs/FilterDialog.qml:95
 msgid "Type"
 msgstr "Tür"
 
-#: ../qml/Dialogs/FilterDialog.qml:100 ../qml/Dialogs/FilterDialog.qml:115
+#: ../qml/Dialogs/FilterDialog.qml:102 ../qml/Dialogs/FilterDialog.qml:117
 msgid "All Types"
 msgstr "Tüm Türler"
 
-#: ../qml/Dialogs/FilterDialog.qml:101
+#: ../qml/Dialogs/FilterDialog.qml:103
 msgid "Apps"
 msgstr "Uygulamalar"
 
-#: ../qml/Dialogs/FilterDialog.qml:102
+#: ../qml/Dialogs/FilterDialog.qml:104
 msgid "Bookmarks"
 msgstr "Yer imleri"
 
-#: ../qml/Dialogs/FilterDialog.qml:103
+#: ../qml/Dialogs/FilterDialog.qml:105
 msgid "Web Apps"
 msgstr "Web Uygulamaları"
 
-#: ../qml/Dialogs/FilterDialog.qml:140
+#: ../qml/Dialogs/FilterDialog.qml:145
+#, fuzzy
+#| msgid "Package contents"
+msgid "Package Type"
+msgstr "Paket içerikleri"
+
+#: ../qml/Dialogs/FilterDialog.qml:153 ../qml/Dialogs/FilterDialog.qml:167
+msgid "All"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:154
+msgid "Click"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:193
 msgid "Apply"
 msgstr "Uygula"
 
@@ -987,6 +1016,22 @@ msgstr "Destek al"
 #: ../qml/Dialogs/NegativeReviewDialog.qml:47
 msgid "Post my review"
 msgstr "Yorumumu yayınla"
+
+#: ../qml/Dialogs/SnapWarningDialog.qml:27
+msgid ""
+"Not all snaps were designed with Ubuntu Touch in mind and might not work "
+"well."
+msgstr ""
+
+#: ../qml/Dialogs/SnapWarningDialog.qml:39
+msgid "Don't show this warning again"
+msgstr ""
+
+#: ../qml/Dialogs/SnapWarningDialog.qml:43
+#, fuzzy
+#| msgid "I understand the risks"
+msgid "I understand"
+msgstr "Riskleri anladım"
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
 msgid ""
@@ -1041,23 +1086,23 @@ msgstr "Yüklü Uygulamalar"
 msgid "Browse Apps by Category"
 msgstr "Kategorilere Göre Uygulamalara Göz Atın"
 
-#: ../qml/FilteredAppList.qml:109
+#: ../qml/FilteredAppList.qml:111
 msgid "No results found."
 msgstr "Sonuç bulunamadı."
 
-#: ../qml/FilteredAppList.qml:109
+#: ../qml/FilteredAppList.qml:111
 msgid "Nothing here yet"
 msgstr "Henüz bir şey yok"
 
-#: ../qml/FilteredAppList.qml:110
+#: ../qml/FilteredAppList.qml:112
 msgid "No app has been released in this category yet."
 msgstr "Bu kategoride henüz bir uygulama yayınlanmadı."
 
-#: ../qml/FilteredAppList.qml:110
+#: ../qml/FilteredAppList.qml:112
 msgid "Try with a different search."
 msgstr "Farklı bir arama yapmayı deneyin."
 
-#. TRANSLATORS: %1 is the number of installed apps
+#. TRANSLATORS: %1 is the number of installed click apps
 #: ../qml/InstalledAppsPage.qml:80
 msgid "Installed apps (%1)"
 msgstr "(%1) kurulu uygulama"
@@ -1067,12 +1112,19 @@ msgstr "(%1) kurulu uygulama"
 msgid "Available updates (%1)"
 msgstr "(%1) güncelleme var"
 
-#. TRANSLATORS: %1 is the number of apps that can be downgraded
+#. TRANSLATORS: %1 is the number of installed snap apps
 #: ../qml/InstalledAppsPage.qml:88
+#, fuzzy
+#| msgid "Installed apps (%1)"
+msgid "Installed Snap apps (%1)"
+msgstr "(%1) kurulu uygulama"
+
+#. TRANSLATORS: %1 is the number of apps that can be downgraded
+#: ../qml/InstalledAppsPage.qml:92
 msgid "Stable version available (%1)"
 msgstr "(%1) stabil sürümü olan uygulamalar"
 
-#: ../qml/InstalledAppsPage.qml:91
+#: ../qml/InstalledAppsPage.qml:95
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
@@ -1080,44 +1132,44 @@ msgstr ""
 "Bu uygulamaların yüklü sürümleri OpenStore'dan gelmemiştir ancak kararlı bir "
 "sürümü mevcuttur."
 
-#: ../qml/InstalledAppsPage.qml:92
+#: ../qml/InstalledAppsPage.qml:96
 msgid "Update all"
 msgstr "Hepsini güncelle"
 
-#: ../qml/InstalledAppsPage.qml:203
+#: ../qml/InstalledAppsPage.qml:207
 msgid "No apps found"
 msgstr "Hiçbir uygulama bulunamadı"
 
-#: ../qml/InstalledAppsPage.qml:204
+#: ../qml/InstalledAppsPage.qml:208
 msgid "No app has been installed from OpenStore yet."
 msgstr "OpenStore'dan henüz hiçbir uygulama yüklenmedi."
 
-#: ../qml/Main.qml:323 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:324 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr "Filtreler"
 
-#: ../qml/Main.qml:370
+#: ../qml/Main.qml:373
 msgid "App installed"
 msgstr "Uygulama kuruldu"
 
-#: ../qml/Main.qml:371
+#: ../qml/Main.qml:374
 msgid "The app has been installed successfully."
 msgstr "Uygulama başarıyla yüklendi."
 
-#: ../qml/Main.qml:374 ../qml/Main.qml:387 ../qml/Main.qml:402
+#: ../qml/Main.qml:377 ../qml/Main.qml:390 ../qml/Main.qml:405
 msgid "OK"
 msgstr "OK"
 
-#: ../qml/Main.qml:383
+#: ../qml/Main.qml:386
 msgid "Installation failed"
 msgstr "Yükleme başarısız"
 
-#: ../qml/Main.qml:384
+#: ../qml/Main.qml:387
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr "Paket yüklenemedi. Geçerli bir click paketi olduğundan emin olun."
 
-#: ../qml/Main.qml:398
+#: ../qml/Main.qml:401
 msgid "Installation failed (Error %1)"
 msgstr "Yükleme başarısız (Hata %1)"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-13 08:07+0000\n"
+"POT-Creation-Date: 2026-05-18 05:27+0000\n"
 "PO-Revision-Date: 2020-07-29 15:05+0000\n"
 "Last-Translator: dano6 <dano.kutka@gmail.com>\n"
 "Language-Team: Slovak <https://translate.ubports.com/projects/openstore/"
@@ -19,41 +19,41 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 3.11.3\n"
 
-#: ../qml/AppDetailsPage.qml:109 ../qml/AppLocalDetailsPage.qml:35
+#: ../qml/AppDetailsPage.qml:120 ../qml/AppLocalDetailsPage.qml:35
 msgid "App details"
 msgstr "Detaily aplikácie"
 
-#: ../qml/AppDetailsPage.qml:116 ../qml/AppDetailsPage.qml:409
+#: ../qml/AppDetailsPage.qml:127 ../qml/AppDetailsPage.qml:443
 #: ../qml/AppLocalDetailsPage.qml:42 ../qml/Dialogs/UninstallDialog.qml:33
 msgid "Remove"
 msgstr "Odstrániť"
 
-#: ../qml/AppDetailsPage.qml:157 ../qml/Components/PackageListItem.qml:34
+#: ../qml/AppDetailsPage.qml:168 ../qml/Components/PackageListItem.qml:34
 #: ../qml/Components/PackageTile.qml:79
 msgid "App"
 msgstr "Aplikácia"
 
-#: ../qml/AppDetailsPage.qml:158 ../qml/Components/PackageListItem.qml:35
+#: ../qml/AppDetailsPage.qml:169 ../qml/Components/PackageListItem.qml:35
 #: ../qml/Components/PackageTile.qml:80
 msgid "Bookmark"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:159 ../qml/Components/PackageListItem.qml:36
+#: ../qml/AppDetailsPage.qml:170 ../qml/Components/PackageListItem.qml:36
 #: ../qml/Components/PackageTile.qml:81
 msgid "Web App"
 msgstr "Webová aplikácia"
 
-#: ../qml/AppDetailsPage.qml:169
+#: ../qml/AppDetailsPage.qml:180
 #, fuzzy
 #| msgid "Install"
 msgid "Install Size: "
 msgstr "Inštalovať"
 
-#: ../qml/AppDetailsPage.qml:170
+#: ../qml/AppDetailsPage.qml:181
 msgid "Download Size: "
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:244
+#: ../qml/AppDetailsPage.qml:255
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
@@ -61,32 +61,36 @@ msgstr ""
 "Inštalovaná verzia aplikácie nepochádza zo serveru OpenStore. Najnovšiu "
 "stabilnú aktualizáciu môžete nainštalovať klepnutím na tlačidlo nižšie."
 
-#: ../qml/AppDetailsPage.qml:269 ../qml/AppLocalDetailsPage.qml:116
+#: ../qml/AppDetailsPage.qml:272
+msgid "This is a Snap package provided by the Snapcraft Store"
+msgstr ""
+
+#: ../qml/AppDetailsPage.qml:297 ../qml/AppLocalDetailsPage.qml:116
 #: ../qml/Components/HighlightedApp.qml:117
 msgid "Open"
 msgstr "Otvoriť"
 
-#: ../qml/AppDetailsPage.qml:290
+#: ../qml/AppDetailsPage.qml:318
 msgid "The OpenStore is installed!"
 msgstr "OpenStore je nainštalovaný!"
 
-#: ../qml/AppDetailsPage.qml:299
+#: ../qml/AppDetailsPage.qml:327
 msgid "Install stable version"
 msgstr "Nainštalovať stabilnú verziu"
 
-#: ../qml/AppDetailsPage.qml:302
+#: ../qml/AppDetailsPage.qml:330
 msgid "Upgrade"
 msgstr "Aktualizovať"
 
-#: ../qml/AppDetailsPage.qml:305
+#: ../qml/AppDetailsPage.qml:333
 msgid "Install"
 msgstr "Inštalovať"
 
-#: ../qml/AppDetailsPage.qml:395
+#: ../qml/AppDetailsPage.qml:429
 msgid "This app is not compatible with your system."
 msgstr "Aplikácia nie je kompatibilná s vašim systémom."
 
-#: ../qml/AppDetailsPage.qml:432
+#: ../qml/AppDetailsPage.qml:466
 msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
@@ -94,231 +98,235 @@ msgstr ""
 "Táto aplikácia má prístup k systémovým údajom, pozri nižšie pre viac "
 "informácií."
 
-#: ../qml/AppDetailsPage.qml:435
+#: ../qml/AppDetailsPage.qml:469
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
 "Táto aplikácia má prístup k systémovým údajom,  pozri nižšie pre viac "
 "informácií."
 
-#: ../qml/AppDetailsPage.qml:460
+#: ../qml/AppDetailsPage.qml:494
 msgid "Description"
 msgstr "Popis"
 
 #. TRANSLATORS: Title of the changelog section
-#: ../qml/AppDetailsPage.qml:498
+#: ../qml/AppDetailsPage.qml:532
 msgid "What's New"
 msgstr "Novinky"
 
-#: ../qml/AppDetailsPage.qml:517
+#: ../qml/AppDetailsPage.qml:551
 msgid "Packager/Publisher"
 msgstr "Autor/Vydavateľ"
 
-#: ../qml/AppDetailsPage.qml:526 ../qml/AppLocalDetailsPage.qml:150
+#: ../qml/AppDetailsPage.qml:560 ../qml/AppLocalDetailsPage.qml:150
 msgid "Installed version"
 msgstr "Nainštalovaná verzia"
 
-#: ../qml/AppDetailsPage.qml:536
+#: ../qml/AppDetailsPage.qml:570
 msgid "Latest available version"
 msgstr "Najnovšia dostupná verzia"
 
-#: ../qml/AppDetailsPage.qml:545
+#: ../qml/AppDetailsPage.qml:579
 msgid "First released"
 msgstr "Prvé vydanie"
 
-#: ../qml/AppDetailsPage.qml:556
+#: ../qml/AppDetailsPage.qml:590
 msgid "Downloads of the latest version"
 msgstr "Počet stiahnutí poslednej verzie"
 
-#: ../qml/AppDetailsPage.qml:565
+#: ../qml/AppDetailsPage.qml:599
 msgid "Total downloads"
 msgstr "Celkový počet stiahnutí"
 
-#: ../qml/AppDetailsPage.qml:574
+#: ../qml/AppDetailsPage.qml:608
 msgid "License"
 msgstr "Licencia"
 
-#: ../qml/AppDetailsPage.qml:575
+#: ../qml/AppDetailsPage.qml:609
 msgid "N/A"
 msgstr "Nedostupné"
 
-#: ../qml/AppDetailsPage.qml:587 ../qml/SettingsPage.qml:214
+#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:214
 msgid "Source Code"
 msgstr "Zdrojový kód"
 
-#: ../qml/AppDetailsPage.qml:600
+#: ../qml/AppDetailsPage.qml:634
 msgid "Get support for this app"
 msgstr "Zažiadať o podporu k aplikácii"
 
-#: ../qml/AppDetailsPage.qml:613
+#: ../qml/AppDetailsPage.qml:647
 msgid "Donate to support this app"
 msgstr "Zaslať príspevok na podporu aplikácie"
 
-#: ../qml/AppDetailsPage.qml:626
+#: ../qml/AppDetailsPage.qml:660
 #, fuzzy
 #| msgid "Rate this app"
 msgid "Help translate this app"
 msgstr "Ohodnoťte aplikáciu"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
-#: ../qml/AppDetailsPage.qml:642
+#: ../qml/AppDetailsPage.qml:677
 msgid "More from %1"
 msgstr "Viac od %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: ../qml/AppDetailsPage.qml:657
+#: ../qml/AppDetailsPage.qml:692
 msgid "Other apps in %1"
 msgstr "Ostatné aplikácie v %1"
 
-#: ../qml/AppDetailsPage.qml:668
+#: ../qml/AppDetailsPage.qml:703
 msgid "Package contents"
 msgstr "Obsah balíčku"
 
-#: ../qml/AppDetailsPage.qml:755
+#: ../qml/AppDetailsPage.qml:790
 msgid "Permissions"
 msgstr "Oprávnenia"
 
-#: ../qml/AppDetailsPage.qml:760
+#: ../qml/AppDetailsPage.qml:795
 msgid "Accounts"
 msgstr "Účty"
 
-#: ../qml/AppDetailsPage.qml:761
+#: ../qml/AppDetailsPage.qml:796
 msgid "Audio"
 msgstr "Zvuk"
 
-#: ../qml/AppDetailsPage.qml:762
+#: ../qml/AppDetailsPage.qml:797
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: ../qml/AppDetailsPage.qml:763
+#: ../qml/AppDetailsPage.qml:798
 msgid "Calendar"
 msgstr "Kalendár"
 
-#: ../qml/AppDetailsPage.qml:764
+#: ../qml/AppDetailsPage.qml:799
 msgid "Camera"
 msgstr "Fotoaparát"
 
-#: ../qml/AppDetailsPage.qml:765
+#: ../qml/AppDetailsPage.qml:800
 msgid "Connectivity"
 msgstr "Pripojenie"
 
-#: ../qml/AppDetailsPage.qml:766
+#: ../qml/AppDetailsPage.qml:801
 msgid "Contacts"
 msgstr "Kontakty"
 
-#: ../qml/AppDetailsPage.qml:767
+#: ../qml/AppDetailsPage.qml:802
 msgid "Content Exchange Source"
 msgstr "Spravovanie zdieľaného obsahu"
 
-#: ../qml/AppDetailsPage.qml:768
+#: ../qml/AppDetailsPage.qml:803
 msgid "Content Exchange"
 msgstr "Zdieľaný obsah"
 
-#: ../qml/AppDetailsPage.qml:769
+#: ../qml/AppDetailsPage.qml:804
 msgid "Debug"
 msgstr "Odskúšať"
 
-#: ../qml/AppDetailsPage.qml:770
+#: ../qml/AppDetailsPage.qml:805
 msgid "History"
 msgstr "História"
 
-#: ../qml/AppDetailsPage.qml:771
+#: ../qml/AppDetailsPage.qml:806
 msgid "In App Purchases"
 msgstr "Nákupy v aplikácii"
 
-#: ../qml/AppDetailsPage.qml:772
+#: ../qml/AppDetailsPage.qml:807
 msgid "Keep Display On"
 msgstr "Ponechať zapnutý displej"
 
-#: ../qml/AppDetailsPage.qml:773
+#: ../qml/AppDetailsPage.qml:808
 msgid "Location"
 msgstr "Umiestnenie"
 
-#: ../qml/AppDetailsPage.qml:774
+#: ../qml/AppDetailsPage.qml:809
 msgid "Microphone"
 msgstr "Mikrofón"
 
-#: ../qml/AppDetailsPage.qml:775
+#: ../qml/AppDetailsPage.qml:810
 msgid "Read Music Files"
 msgstr "Načítať hudobné súbory"
 
-#: ../qml/AppDetailsPage.qml:776
+#: ../qml/AppDetailsPage.qml:811
 msgid "Music Files"
 msgstr "Hudobné súbory"
 
-#: ../qml/AppDetailsPage.qml:777
+#: ../qml/AppDetailsPage.qml:812
 msgid "Networking"
 msgstr "Sieť"
 
-#: ../qml/AppDetailsPage.qml:778
+#: ../qml/AppDetailsPage.qml:813
 msgid "Read Picture Files"
 msgstr "Načítať súbory s obrázkami"
 
-#: ../qml/AppDetailsPage.qml:779
+#: ../qml/AppDetailsPage.qml:814
 msgid "Picture Files"
 msgstr "Subory s obrázkami"
 
-#: ../qml/AppDetailsPage.qml:780
+#: ../qml/AppDetailsPage.qml:815
 msgid "Push Notifications"
 msgstr "Push Oznámenia"
 
-#: ../qml/AppDetailsPage.qml:781
+#: ../qml/AppDetailsPage.qml:816
 msgid "Sensors"
 msgstr "Senzory"
 
-#: ../qml/AppDetailsPage.qml:782
+#: ../qml/AppDetailsPage.qml:817
 msgid "User Metrics"
 msgstr "Metriky používateľa"
 
-#: ../qml/AppDetailsPage.qml:783
+#: ../qml/AppDetailsPage.qml:818
 msgid "Read Video Files"
 msgstr "Načítať video súbory"
 
-#: ../qml/AppDetailsPage.qml:784
+#: ../qml/AppDetailsPage.qml:819
 msgid "Video Files"
 msgstr "Video súbory"
 
-#: ../qml/AppDetailsPage.qml:785
+#: ../qml/AppDetailsPage.qml:820
 msgid "Video"
 msgstr "Video"
 
-#: ../qml/AppDetailsPage.qml:786
+#: ../qml/AppDetailsPage.qml:821
 msgid "Webview"
 msgstr "Webový režim"
 
-#: ../qml/AppDetailsPage.qml:790
+#: ../qml/AppDetailsPage.qml:822 ../qml/AppDetailsPage.qml:830
+msgid "Unknown"
+msgstr ""
+
+#: ../qml/AppDetailsPage.qml:826
 msgid "Full System Access"
 msgstr "Úplný prístup k systému"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: ../qml/AppDetailsPage.qml:795
+#: ../qml/AppDetailsPage.qml:835
 msgid "none required"
 msgstr "nevyžadované"
 
-#: ../qml/AppDetailsPage.qml:831
+#: ../qml/AppDetailsPage.qml:871
 msgid "Read paths"
 msgstr "Čítať priečinky"
 
-#: ../qml/AppDetailsPage.qml:848
+#: ../qml/AppDetailsPage.qml:888
 msgid "Write paths"
 msgstr "Zapisovať do priečinkov"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: ../qml/AppDetailsPage.qml:919
+#: ../qml/AppDetailsPage.qml:963
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: ../qml/AppDetailsPage.qml:924
+#: ../qml/AppDetailsPage.qml:968
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: ../qml/AppDetailsPage.qml:929
+#: ../qml/AppDetailsPage.qml:973
 msgid "%1 kB"
 msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: ../qml/AppDetailsPage.qml:932
+#: ../qml/AppDetailsPage.qml:976
 msgid "%1 bytes"
 msgstr "%1 bajtov"
 
@@ -768,11 +776,16 @@ msgstr "Asistent notifikácií"
 msgid "Accounts provider"
 msgstr "Poskytovateľ účtov"
 
-#: ../qml/Components/PackageTile.qml:100
+#: ../qml/Components/PackageListItem.qml:48
+#: ../qml/Components/PackageTile.qml:93 ../qml/Dialogs/FilterDialog.qml:155
+msgid "Snap"
+msgstr ""
+
+#: ../qml/Components/PackageTile.qml:105
 msgid "Update available"
 msgstr "Aktualizácia dostupná"
 
-#: ../qml/Components/PackageTile.qml:102
+#: ../qml/Components/PackageTile.qml:107
 msgid "✓ Installed"
 msgstr "✓ Nainštalované"
 
@@ -812,8 +825,9 @@ msgstr "%1/%2 znakov"
 msgid "Submit"
 msgstr ""
 
-#: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:148
+#: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:201
 #: ../qml/Dialogs/InstallWarningDialog.qml:61
+#: ../qml/Dialogs/SnapWarningDialog.qml:55
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
 #: ../qml/Dialogs/UninstallDialog.qml:42
 msgid "Cancel"
@@ -843,6 +857,7 @@ msgid "Install this app to review it"
 msgstr "Pre hodnotenie aplikácie ju najprv nainštalujte"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:26
+#: ../qml/Dialogs/SnapWarningDialog.qml:26
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:25
 msgid "Warning"
 msgstr "Upozornenie"
@@ -883,79 +898,93 @@ msgstr "Prispieť teraz"
 msgid "Maybe later"
 msgstr "Možno neskôr"
 
-#: ../qml/Dialogs/FilterDialog.qml:26
+#: ../qml/Dialogs/FilterDialog.qml:27
 msgid "Filters and Sorting"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:38
+#: ../qml/Dialogs/FilterDialog.qml:40
 msgid "Sort By"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:45 ../qml/Dialogs/FilterDialog.qml:65
+#: ../qml/Dialogs/FilterDialog.qml:47 ../qml/Dialogs/FilterDialog.qml:67
 msgid "Relevance"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:46
+#: ../qml/Dialogs/FilterDialog.qml:48
 msgid "Most Popular"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:47
+#: ../qml/Dialogs/FilterDialog.qml:49
 msgid "Least Popular"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:48
+#: ../qml/Dialogs/FilterDialog.qml:50
 msgid "Title (A-Z)"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:49
+#: ../qml/Dialogs/FilterDialog.qml:51
 msgid "Title (Z-A)"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:50
+#: ../qml/Dialogs/FilterDialog.qml:52
 msgid "Newest"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:51
+#: ../qml/Dialogs/FilterDialog.qml:53
 msgid "Oldest"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:52
+#: ../qml/Dialogs/FilterDialog.qml:54
 #, fuzzy
 #| msgid "Update"
 msgid "Latest Update"
 msgstr "Aktualizovať"
 
-#: ../qml/Dialogs/FilterDialog.qml:53
+#: ../qml/Dialogs/FilterDialog.qml:55
 #, fuzzy
 #| msgid "Update"
 msgid "Oldest Update"
 msgstr "Aktualizovať"
 
-#: ../qml/Dialogs/FilterDialog.qml:93
+#: ../qml/Dialogs/FilterDialog.qml:95
 msgid "Type"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:100 ../qml/Dialogs/FilterDialog.qml:115
+#: ../qml/Dialogs/FilterDialog.qml:102 ../qml/Dialogs/FilterDialog.qml:117
 msgid "All Types"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:101
+#: ../qml/Dialogs/FilterDialog.qml:103
 #, fuzzy
 #| msgid "My Apps"
 msgid "Apps"
 msgstr "Moje aplikácie"
 
-#: ../qml/Dialogs/FilterDialog.qml:102
+#: ../qml/Dialogs/FilterDialog.qml:104
 msgid "Bookmarks"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:103
+#: ../qml/Dialogs/FilterDialog.qml:105
 #, fuzzy
 #| msgid "Web App"
 msgid "Web Apps"
 msgstr "Webová aplikácia"
 
-#: ../qml/Dialogs/FilterDialog.qml:140
+#: ../qml/Dialogs/FilterDialog.qml:145
+#, fuzzy
+#| msgid "Package contents"
+msgid "Package Type"
+msgstr "Obsah balíčku"
+
+#: ../qml/Dialogs/FilterDialog.qml:153 ../qml/Dialogs/FilterDialog.qml:167
+msgid "All"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:154
+msgid "Click"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:193
 msgid "Apply"
 msgstr ""
 
@@ -994,6 +1023,22 @@ msgstr "Zažiadať o podporu k aplikácii"
 #: ../qml/Dialogs/NegativeReviewDialog.qml:47
 msgid "Post my review"
 msgstr ""
+
+#: ../qml/Dialogs/SnapWarningDialog.qml:27
+msgid ""
+"Not all snaps were designed with Ubuntu Touch in mind and might not work "
+"well."
+msgstr ""
+
+#: ../qml/Dialogs/SnapWarningDialog.qml:39
+msgid "Don't show this warning again"
+msgstr ""
+
+#: ../qml/Dialogs/SnapWarningDialog.qml:43
+#, fuzzy
+#| msgid "I understand the risks"
+msgid "I understand"
+msgstr "Rozumiem rizikám"
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
 msgid ""
@@ -1046,23 +1091,23 @@ msgstr "Nainštalované aplikácie"
 msgid "Browse Apps by Category"
 msgstr "Prehľadávať aplikácie podľa kategórií"
 
-#: ../qml/FilteredAppList.qml:109
+#: ../qml/FilteredAppList.qml:111
 msgid "No results found."
 msgstr "Žiadne výsledky."
 
-#: ../qml/FilteredAppList.qml:109
+#: ../qml/FilteredAppList.qml:111
 msgid "Nothing here yet"
 msgstr "Zatiaľ tu nič nie je"
 
-#: ../qml/FilteredAppList.qml:110
+#: ../qml/FilteredAppList.qml:112
 msgid "No app has been released in this category yet."
 msgstr "V tejto kategórii ešte nič nie je."
 
-#: ../qml/FilteredAppList.qml:110
+#: ../qml/FilteredAppList.qml:112
 msgid "Try with a different search."
 msgstr "Skúste hľadať inak."
 
-#. TRANSLATORS: %1 is the number of installed apps
+#. TRANSLATORS: %1 is the number of installed click apps
 #: ../qml/InstalledAppsPage.qml:80
 msgid "Installed apps (%1)"
 msgstr "Nainštalované aplikácie (%1)"
@@ -1072,12 +1117,19 @@ msgstr "Nainštalované aplikácie (%1)"
 msgid "Available updates (%1)"
 msgstr "Dostupné aktualizácie (%1)"
 
-#. TRANSLATORS: %1 is the number of apps that can be downgraded
+#. TRANSLATORS: %1 is the number of installed snap apps
 #: ../qml/InstalledAppsPage.qml:88
+#, fuzzy
+#| msgid "Installed apps (%1)"
+msgid "Installed Snap apps (%1)"
+msgstr "Nainštalované aplikácie (%1)"
+
+#. TRANSLATORS: %1 is the number of apps that can be downgraded
+#: ../qml/InstalledAppsPage.qml:92
 msgid "Stable version available (%1)"
 msgstr "Dostupné stabilné verzie (%1)"
 
-#: ../qml/InstalledAppsPage.qml:91
+#: ../qml/InstalledAppsPage.qml:95
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
@@ -1085,46 +1137,46 @@ msgstr ""
 "Nainštalovaná verzia aplikácie nepochádza so serveru OpenStore. Je však "
 "dostupná stabilná verzia."
 
-#: ../qml/InstalledAppsPage.qml:92
+#: ../qml/InstalledAppsPage.qml:96
 msgid "Update all"
 msgstr "Aktualizovať všetko"
 
-#: ../qml/InstalledAppsPage.qml:203
+#: ../qml/InstalledAppsPage.qml:207
 msgid "No apps found"
 msgstr "Nenájdené žiadne aplikácie"
 
-#: ../qml/InstalledAppsPage.qml:204
+#: ../qml/InstalledAppsPage.qml:208
 msgid "No app has been installed from OpenStore yet."
 msgstr "Z OpenStore zatiaľ neboli nainštalované žiadne aplikácie."
 
-#: ../qml/Main.qml:323 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:324 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr ""
 
-#: ../qml/Main.qml:370
+#: ../qml/Main.qml:373
 msgid "App installed"
 msgstr "Aplikácia nainštalovaná"
 
-#: ../qml/Main.qml:371
+#: ../qml/Main.qml:374
 msgid "The app has been installed successfully."
 msgstr "Aplikácia bola úspešne nainštalovaná."
 
-#: ../qml/Main.qml:374 ../qml/Main.qml:387 ../qml/Main.qml:402
+#: ../qml/Main.qml:377 ../qml/Main.qml:390 ../qml/Main.qml:405
 msgid "OK"
 msgstr "OK"
 
-#: ../qml/Main.qml:383
+#: ../qml/Main.qml:386
 msgid "Installation failed"
 msgstr "Inštalácia zlyhala"
 
-#: ../qml/Main.qml:384
+#: ../qml/Main.qml:387
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 "Balíček sa nepodarilo nainštalovať. Skontrolujte, či a jedná o platný "
 "\"click\" balíček."
 
-#: ../qml/Main.qml:398
+#: ../qml/Main.qml:401
 msgid "Installation failed (Error %1)"
 msgstr "Inštalácia zlyhala (Error %1)"
 

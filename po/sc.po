@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-13 08:07+0000\n"
+"POT-Creation-Date: 2026-05-18 05:27+0000\n"
 "PO-Revision-Date: 2021-11-15 10:19+0000\n"
 "Last-Translator: Adria <adriamartinmor@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/openstore/"
@@ -20,41 +20,41 @@ msgstr ""
 "X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
-#: ../qml/AppDetailsPage.qml:109 ../qml/AppLocalDetailsPage.qml:35
+#: ../qml/AppDetailsPage.qml:120 ../qml/AppLocalDetailsPage.qml:35
 msgid "App details"
 msgstr "Informatziones de s'aplicatzione"
 
-#: ../qml/AppDetailsPage.qml:116 ../qml/AppDetailsPage.qml:409
+#: ../qml/AppDetailsPage.qml:127 ../qml/AppDetailsPage.qml:443
 #: ../qml/AppLocalDetailsPage.qml:42 ../qml/Dialogs/UninstallDialog.qml:33
 msgid "Remove"
 msgstr "Boga"
 
-#: ../qml/AppDetailsPage.qml:157 ../qml/Components/PackageListItem.qml:34
+#: ../qml/AppDetailsPage.qml:168 ../qml/Components/PackageListItem.qml:34
 #: ../qml/Components/PackageTile.qml:79
 msgid "App"
 msgstr "Aplicatzione"
 
-#: ../qml/AppDetailsPage.qml:158 ../qml/Components/PackageListItem.qml:35
+#: ../qml/AppDetailsPage.qml:169 ../qml/Components/PackageListItem.qml:35
 #: ../qml/Components/PackageTile.qml:80
 msgid "Bookmark"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:159 ../qml/Components/PackageListItem.qml:36
+#: ../qml/AppDetailsPage.qml:170 ../qml/Components/PackageListItem.qml:36
 #: ../qml/Components/PackageTile.qml:81
 msgid "Web App"
 msgstr "Aplicatzione web"
 
-#: ../qml/AppDetailsPage.qml:169
+#: ../qml/AppDetailsPage.qml:180
 #, fuzzy
 #| msgid "Install"
 msgid "Install Size: "
 msgstr "Installa"
 
-#: ../qml/AppDetailsPage.qml:170
+#: ../qml/AppDetailsPage.qml:181
 msgid "Download Size: "
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:244
+#: ../qml/AppDetailsPage.qml:255
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
@@ -63,32 +63,36 @@ msgstr ""
 "OpenStore. Nde podes installare s'ùrtima atualizatzione istàbile incarchende "
 "su pulsante in giosso."
 
-#: ../qml/AppDetailsPage.qml:269 ../qml/AppLocalDetailsPage.qml:116
+#: ../qml/AppDetailsPage.qml:272
+msgid "This is a Snap package provided by the Snapcraft Store"
+msgstr ""
+
+#: ../qml/AppDetailsPage.qml:297 ../qml/AppLocalDetailsPage.qml:116
 #: ../qml/Components/HighlightedApp.qml:117
 msgid "Open"
 msgstr "Aberi·dda"
 
-#: ../qml/AppDetailsPage.qml:290
+#: ../qml/AppDetailsPage.qml:318
 msgid "The OpenStore is installed!"
 msgstr "OpenStore installadu"
 
-#: ../qml/AppDetailsPage.qml:299
+#: ../qml/AppDetailsPage.qml:327
 msgid "Install stable version"
 msgstr "Installa sa versione istàbile"
 
-#: ../qml/AppDetailsPage.qml:302
+#: ../qml/AppDetailsPage.qml:330
 msgid "Upgrade"
 msgstr "Atualiza"
 
-#: ../qml/AppDetailsPage.qml:305
+#: ../qml/AppDetailsPage.qml:333
 msgid "Install"
 msgstr "Installa"
 
-#: ../qml/AppDetailsPage.qml:395
+#: ../qml/AppDetailsPage.qml:429
 msgid "This app is not compatible with your system."
 msgstr "Custa aplicatzione no est cumpatìbile cun su sistema tuo."
 
-#: ../qml/AppDetailsPage.qml:432
+#: ../qml/AppDetailsPage.qml:466
 msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
@@ -96,231 +100,235 @@ msgstr ""
 "Custa aplicatzione tenet atzessu a partes restrintas de su sistema e a totu "
 "is datos tuos. Bide suta is detàllios."
 
-#: ../qml/AppDetailsPage.qml:435
+#: ../qml/AppDetailsPage.qml:469
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
 "Custa aplicatzione tenet atzessu a datos restrintos de su sistema. Bide suta "
 "is detàllios."
 
-#: ../qml/AppDetailsPage.qml:460
+#: ../qml/AppDetailsPage.qml:494
 msgid "Description"
 msgstr "Descritzione"
 
 #. TRANSLATORS: Title of the changelog section
-#: ../qml/AppDetailsPage.qml:498
+#: ../qml/AppDetailsPage.qml:532
 msgid "What's New"
 msgstr "Novidades"
 
-#: ../qml/AppDetailsPage.qml:517
+#: ../qml/AppDetailsPage.qml:551
 msgid "Packager/Publisher"
 msgstr "Isvilupadore/editore"
 
-#: ../qml/AppDetailsPage.qml:526 ../qml/AppLocalDetailsPage.qml:150
+#: ../qml/AppDetailsPage.qml:560 ../qml/AppLocalDetailsPage.qml:150
 msgid "Installed version"
 msgstr "Versione installada"
 
-#: ../qml/AppDetailsPage.qml:536
+#: ../qml/AppDetailsPage.qml:570
 msgid "Latest available version"
 msgstr "Ùrtima versione a disponimentu"
 
-#: ../qml/AppDetailsPage.qml:545
+#: ../qml/AppDetailsPage.qml:579
 msgid "First released"
 msgstr "Prima publicatzione"
 
-#: ../qml/AppDetailsPage.qml:556
+#: ../qml/AppDetailsPage.qml:590
 msgid "Downloads of the latest version"
 msgstr "Iscarrigamentos de s'ùrtima versione"
 
-#: ../qml/AppDetailsPage.qml:565
+#: ../qml/AppDetailsPage.qml:599
 msgid "Total downloads"
 msgstr "Iscarrigamentos totales"
 
-#: ../qml/AppDetailsPage.qml:574
+#: ../qml/AppDetailsPage.qml:608
 msgid "License"
 msgstr "Lissèntzia"
 
-#: ../qml/AppDetailsPage.qml:575
+#: ../qml/AppDetailsPage.qml:609
 msgid "N/A"
 msgstr "Non a disponimentu"
 
-#: ../qml/AppDetailsPage.qml:587 ../qml/SettingsPage.qml:214
+#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:214
 msgid "Source Code"
 msgstr "Còdighe de orìgine"
 
-#: ../qml/AppDetailsPage.qml:600
+#: ../qml/AppDetailsPage.qml:634
 msgid "Get support for this app"
 msgstr "Otene agiudu pro custa aplicatzione"
 
-#: ../qml/AppDetailsPage.qml:613
+#: ../qml/AppDetailsPage.qml:647
 msgid "Donate to support this app"
 msgstr "Dona pro contribuire a custa aplicatzione"
 
-#: ../qml/AppDetailsPage.qml:626
+#: ../qml/AppDetailsPage.qml:660
 #, fuzzy
 #| msgid "Rate this app"
 msgid "Help translate this app"
 msgstr "Vàluta custa aplicatzione"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
-#: ../qml/AppDetailsPage.qml:642
+#: ../qml/AppDetailsPage.qml:677
 msgid "More from %1"
 msgstr "Àteru dae %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: ../qml/AppDetailsPage.qml:657
+#: ../qml/AppDetailsPage.qml:692
 msgid "Other apps in %1"
 msgstr "Àteras aplicatziones in %1"
 
-#: ../qml/AppDetailsPage.qml:668
+#: ../qml/AppDetailsPage.qml:703
 msgid "Package contents"
 msgstr "Cuntenutu de su pachete"
 
-#: ../qml/AppDetailsPage.qml:755
+#: ../qml/AppDetailsPage.qml:790
 msgid "Permissions"
 msgstr "Permissos"
 
-#: ../qml/AppDetailsPage.qml:760
+#: ../qml/AppDetailsPage.qml:795
 msgid "Accounts"
 msgstr "Contos"
 
-#: ../qml/AppDetailsPage.qml:761
+#: ../qml/AppDetailsPage.qml:796
 msgid "Audio"
 msgstr "Audio"
 
-#: ../qml/AppDetailsPage.qml:762
+#: ../qml/AppDetailsPage.qml:797
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: ../qml/AppDetailsPage.qml:763
+#: ../qml/AppDetailsPage.qml:798
 msgid "Calendar"
 msgstr "Calendàriu"
 
-#: ../qml/AppDetailsPage.qml:764
+#: ../qml/AppDetailsPage.qml:799
 msgid "Camera"
 msgstr "Fotocàmera"
 
-#: ../qml/AppDetailsPage.qml:765
+#: ../qml/AppDetailsPage.qml:800
 msgid "Connectivity"
 msgstr "Connetividade"
 
-#: ../qml/AppDetailsPage.qml:766
+#: ../qml/AppDetailsPage.qml:801
 msgid "Contacts"
 msgstr "Cuntatos"
 
-#: ../qml/AppDetailsPage.qml:767
+#: ../qml/AppDetailsPage.qml:802
 msgid "Content Exchange Source"
 msgstr "Orìgine de iscàmbiu de cuntenutos"
 
-#: ../qml/AppDetailsPage.qml:768
+#: ../qml/AppDetailsPage.qml:803
 msgid "Content Exchange"
 msgstr "Iscàmbiu de cuntenutos"
 
-#: ../qml/AppDetailsPage.qml:769
+#: ../qml/AppDetailsPage.qml:804
 msgid "Debug"
 msgstr "Curretzione de faddinas"
 
-#: ../qml/AppDetailsPage.qml:770
+#: ../qml/AppDetailsPage.qml:805
 msgid "History"
 msgstr "Cronologia"
 
-#: ../qml/AppDetailsPage.qml:771
+#: ../qml/AppDetailsPage.qml:806
 msgid "In App Purchases"
 msgstr "Còmporas in s'aplicatzione"
 
-#: ../qml/AppDetailsPage.qml:772
+#: ../qml/AppDetailsPage.qml:807
 msgid "Keep Display On"
 msgstr "Mantene s'ischermu allutu"
 
-#: ../qml/AppDetailsPage.qml:773
+#: ../qml/AppDetailsPage.qml:808
 msgid "Location"
 msgstr "Positzione"
 
-#: ../qml/AppDetailsPage.qml:774
+#: ../qml/AppDetailsPage.qml:809
 msgid "Microphone"
 msgstr "Micròfonu"
 
-#: ../qml/AppDetailsPage.qml:775
+#: ../qml/AppDetailsPage.qml:810
 msgid "Read Music Files"
 msgstr "Leghe archìvios de mùsica"
 
-#: ../qml/AppDetailsPage.qml:776
+#: ../qml/AppDetailsPage.qml:811
 msgid "Music Files"
 msgstr "Archìvios de mùsica"
 
-#: ../qml/AppDetailsPage.qml:777
+#: ../qml/AppDetailsPage.qml:812
 msgid "Networking"
 msgstr "Rete"
 
-#: ../qml/AppDetailsPage.qml:778
+#: ../qml/AppDetailsPage.qml:813
 msgid "Read Picture Files"
 msgstr "Leghe archìvios de imàgine"
 
-#: ../qml/AppDetailsPage.qml:779
+#: ../qml/AppDetailsPage.qml:814
 msgid "Picture Files"
 msgstr "Archìvios de imàgine"
 
-#: ../qml/AppDetailsPage.qml:780
+#: ../qml/AppDetailsPage.qml:815
 msgid "Push Notifications"
 msgstr "Notìficas push"
 
-#: ../qml/AppDetailsPage.qml:781
+#: ../qml/AppDetailsPage.qml:816
 msgid "Sensors"
 msgstr "Sensores"
 
-#: ../qml/AppDetailsPage.qml:782
+#: ../qml/AppDetailsPage.qml:817
 msgid "User Metrics"
 msgstr "Mètricas de utente"
 
-#: ../qml/AppDetailsPage.qml:783
+#: ../qml/AppDetailsPage.qml:818
 msgid "Read Video Files"
 msgstr "Leghe archìvios de vìdeu"
 
-#: ../qml/AppDetailsPage.qml:784
+#: ../qml/AppDetailsPage.qml:819
 msgid "Video Files"
 msgstr "Archìvios de vìdeu"
 
-#: ../qml/AppDetailsPage.qml:785
+#: ../qml/AppDetailsPage.qml:820
 msgid "Video"
 msgstr "Vìdeu"
 
-#: ../qml/AppDetailsPage.qml:786
+#: ../qml/AppDetailsPage.qml:821
 msgid "Webview"
 msgstr "Visualizadore web"
 
-#: ../qml/AppDetailsPage.qml:790
+#: ../qml/AppDetailsPage.qml:822 ../qml/AppDetailsPage.qml:830
+msgid "Unknown"
+msgstr ""
+
+#: ../qml/AppDetailsPage.qml:826
 msgid "Full System Access"
 msgstr "Atzessu cumpletu a su sistema"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: ../qml/AppDetailsPage.qml:795
+#: ../qml/AppDetailsPage.qml:835
 msgid "none required"
 msgstr "perunu rechèdidu"
 
-#: ../qml/AppDetailsPage.qml:831
+#: ../qml/AppDetailsPage.qml:871
 msgid "Read paths"
 msgstr "Podet lèghere in"
 
-#: ../qml/AppDetailsPage.qml:848
+#: ../qml/AppDetailsPage.qml:888
 msgid "Write paths"
 msgstr "Podet iscriere in"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: ../qml/AppDetailsPage.qml:919
+#: ../qml/AppDetailsPage.qml:963
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: ../qml/AppDetailsPage.qml:924
+#: ../qml/AppDetailsPage.qml:968
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: ../qml/AppDetailsPage.qml:929
+#: ../qml/AppDetailsPage.qml:973
 msgid "%1 kB"
 msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: ../qml/AppDetailsPage.qml:932
+#: ../qml/AppDetailsPage.qml:976
 msgid "%1 bytes"
 msgstr "%1 byte"
 
@@ -771,11 +779,16 @@ msgstr "Assistente Push"
 msgid "Accounts provider"
 msgstr "Frunidore de contos"
 
-#: ../qml/Components/PackageTile.qml:100
+#: ../qml/Components/PackageListItem.qml:48
+#: ../qml/Components/PackageTile.qml:93 ../qml/Dialogs/FilterDialog.qml:155
+msgid "Snap"
+msgstr ""
+
+#: ../qml/Components/PackageTile.qml:105
 msgid "Update available"
 msgstr "Atualizatzione a disponimentu"
 
-#: ../qml/Components/PackageTile.qml:102
+#: ../qml/Components/PackageTile.qml:107
 msgid "✓ Installed"
 msgstr "✓ Installadu"
 
@@ -815,8 +828,9 @@ msgstr "%1/%2 caràteres"
 msgid "Submit"
 msgstr ""
 
-#: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:148
+#: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:201
 #: ../qml/Dialogs/InstallWarningDialog.qml:61
+#: ../qml/Dialogs/SnapWarningDialog.qml:55
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
 #: ../qml/Dialogs/UninstallDialog.qml:42
 msgid "Cancel"
@@ -845,6 +859,7 @@ msgid "Install this app to review it"
 msgstr "Installa s'aplicatzione pro dda retzensire"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:26
+#: ../qml/Dialogs/SnapWarningDialog.qml:26
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:25
 msgid "Warning"
 msgstr "Atentzione"
@@ -885,79 +900,93 @@ msgstr "Dona immoe"
 msgid "Maybe later"
 msgstr "Forsis prus a tardu"
 
-#: ../qml/Dialogs/FilterDialog.qml:26
+#: ../qml/Dialogs/FilterDialog.qml:27
 msgid "Filters and Sorting"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:38
+#: ../qml/Dialogs/FilterDialog.qml:40
 msgid "Sort By"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:45 ../qml/Dialogs/FilterDialog.qml:65
+#: ../qml/Dialogs/FilterDialog.qml:47 ../qml/Dialogs/FilterDialog.qml:67
 msgid "Relevance"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:46
+#: ../qml/Dialogs/FilterDialog.qml:48
 msgid "Most Popular"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:47
+#: ../qml/Dialogs/FilterDialog.qml:49
 msgid "Least Popular"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:48
+#: ../qml/Dialogs/FilterDialog.qml:50
 msgid "Title (A-Z)"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:49
+#: ../qml/Dialogs/FilterDialog.qml:51
 msgid "Title (Z-A)"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:50
+#: ../qml/Dialogs/FilterDialog.qml:52
 msgid "Newest"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:51
+#: ../qml/Dialogs/FilterDialog.qml:53
 msgid "Oldest"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:52
+#: ../qml/Dialogs/FilterDialog.qml:54
 #, fuzzy
 #| msgid "Update"
 msgid "Latest Update"
 msgstr "Atualiza"
 
-#: ../qml/Dialogs/FilterDialog.qml:53
+#: ../qml/Dialogs/FilterDialog.qml:55
 #, fuzzy
 #| msgid "Update"
 msgid "Oldest Update"
 msgstr "Atualiza"
 
-#: ../qml/Dialogs/FilterDialog.qml:93
+#: ../qml/Dialogs/FilterDialog.qml:95
 msgid "Type"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:100 ../qml/Dialogs/FilterDialog.qml:115
+#: ../qml/Dialogs/FilterDialog.qml:102 ../qml/Dialogs/FilterDialog.qml:117
 msgid "All Types"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:101
+#: ../qml/Dialogs/FilterDialog.qml:103
 #, fuzzy
 #| msgid "My Apps"
 msgid "Apps"
 msgstr "Apps meas"
 
-#: ../qml/Dialogs/FilterDialog.qml:102
+#: ../qml/Dialogs/FilterDialog.qml:104
 msgid "Bookmarks"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml:103
+#: ../qml/Dialogs/FilterDialog.qml:105
 #, fuzzy
 #| msgid "Web App"
 msgid "Web Apps"
 msgstr "Aplicatzione web"
 
-#: ../qml/Dialogs/FilterDialog.qml:140
+#: ../qml/Dialogs/FilterDialog.qml:145
+#, fuzzy
+#| msgid "Package contents"
+msgid "Package Type"
+msgstr "Cuntenutu de su pachete"
+
+#: ../qml/Dialogs/FilterDialog.qml:153 ../qml/Dialogs/FilterDialog.qml:167
+msgid "All"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:154
+msgid "Click"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:193
 msgid "Apply"
 msgstr ""
 
@@ -996,6 +1025,22 @@ msgstr "Otene agiudu pro custa aplicatzione"
 #: ../qml/Dialogs/NegativeReviewDialog.qml:47
 msgid "Post my review"
 msgstr ""
+
+#: ../qml/Dialogs/SnapWarningDialog.qml:27
+msgid ""
+"Not all snaps were designed with Ubuntu Touch in mind and might not work "
+"well."
+msgstr ""
+
+#: ../qml/Dialogs/SnapWarningDialog.qml:39
+msgid "Don't show this warning again"
+msgstr ""
+
+#: ../qml/Dialogs/SnapWarningDialog.qml:43
+#, fuzzy
+#| msgid "I understand the risks"
+msgid "I understand"
+msgstr "Apo cumprèndidu is arriscos"
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
 msgid ""
@@ -1052,23 +1097,23 @@ msgstr "Aplicatziones installadas"
 msgid "Browse Apps by Category"
 msgstr "Bide aplicatziones in categorias"
 
-#: ../qml/FilteredAppList.qml:109
+#: ../qml/FilteredAppList.qml:111
 msgid "No results found."
 msgstr "Perunu resurtadu."
 
-#: ../qml/FilteredAppList.qml:109
+#: ../qml/FilteredAppList.qml:111
 msgid "Nothing here yet"
 msgstr "Ancora nudda inoghe"
 
-#: ../qml/FilteredAppList.qml:110
+#: ../qml/FilteredAppList.qml:112
 msgid "No app has been released in this category yet."
 msgstr "Galu peruna aplicatzione publicada in custa categoria."
 
-#: ../qml/FilteredAppList.qml:110
+#: ../qml/FilteredAppList.qml:112
 msgid "Try with a different search."
 msgstr "Proa cun un'àtera chirca."
 
-#. TRANSLATORS: %1 is the number of installed apps
+#. TRANSLATORS: %1 is the number of installed click apps
 #: ../qml/InstalledAppsPage.qml:80
 msgid "Installed apps (%1)"
 msgstr "Aplicatziones installadas (%1)"
@@ -1078,12 +1123,19 @@ msgstr "Aplicatziones installadas (%1)"
 msgid "Available updates (%1)"
 msgstr "Atualizatziones a disponimentu (%1)"
 
-#. TRANSLATORS: %1 is the number of apps that can be downgraded
+#. TRANSLATORS: %1 is the number of installed snap apps
 #: ../qml/InstalledAppsPage.qml:88
+#, fuzzy
+#| msgid "Installed apps (%1)"
+msgid "Installed Snap apps (%1)"
+msgstr "Aplicatziones installadas (%1)"
+
+#. TRANSLATORS: %1 is the number of apps that can be downgraded
+#: ../qml/InstalledAppsPage.qml:92
 msgid "Stable version available (%1)"
 msgstr "Versione istàbile a disponimentu (%1)"
 
-#: ../qml/InstalledAppsPage.qml:91
+#: ../qml/InstalledAppsPage.qml:95
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
@@ -1091,46 +1143,46 @@ msgstr ""
 "Sa versione installada de custas aplicatziones non benit dae su server de "
 "OpenStore, però b'est una versione istàbile a disponimentu."
 
-#: ../qml/InstalledAppsPage.qml:92
+#: ../qml/InstalledAppsPage.qml:96
 msgid "Update all"
 msgstr "Atualiza totu"
 
-#: ../qml/InstalledAppsPage.qml:203
+#: ../qml/InstalledAppsPage.qml:207
 msgid "No apps found"
 msgstr "Peruna aplicatzione agatada"
 
-#: ../qml/InstalledAppsPage.qml:204
+#: ../qml/InstalledAppsPage.qml:208
 msgid "No app has been installed from OpenStore yet."
 msgstr "Ancora peruna aplicatzione installada dae OpenStore."
 
-#: ../qml/Main.qml:323 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:324 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr ""
 
-#: ../qml/Main.qml:370
+#: ../qml/Main.qml:373
 msgid "App installed"
 msgstr "Aplicatzione installada"
 
-#: ../qml/Main.qml:371
+#: ../qml/Main.qml:374
 msgid "The app has been installed successfully."
 msgstr "Aplicatzione installada."
 
-#: ../qml/Main.qml:374 ../qml/Main.qml:387 ../qml/Main.qml:402
+#: ../qml/Main.qml:377 ../qml/Main.qml:390 ../qml/Main.qml:405
 msgid "OK"
 msgstr "AB"
 
-#: ../qml/Main.qml:383
+#: ../qml/Main.qml:386
 msgid "Installation failed"
 msgstr "B'at àpidu una faddina in s'installatzione"
 
-#: ../qml/Main.qml:384
+#: ../qml/Main.qml:387
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 "B'at àpidu una faddina in s'installatzione de su pachete. Assegura·ti chi "
 "est unu pachete click vàlidu."
 
-#: ../qml/Main.qml:398
+#: ../qml/Main.qml:401
 msgid "Installation failed (Error %1)"
 msgstr "Faddina in s'installatzione (Errore %1)"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-13 08:07+0000\n"
+"POT-Creation-Date: 2026-05-18 05:27+0000\n"
 "PO-Revision-Date: 2024-07-03 05:09+0000\n"
 "Last-Translator: hugoalh <hugoalh@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
@@ -19,39 +19,39 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.7-dev\n"
 
-#: ../qml/AppDetailsPage.qml:109 ../qml/AppLocalDetailsPage.qml:35
+#: ../qml/AppDetailsPage.qml:120 ../qml/AppLocalDetailsPage.qml:35
 msgid "App details"
 msgstr "應用程式詳細資訊"
 
-#: ../qml/AppDetailsPage.qml:116 ../qml/AppDetailsPage.qml:409
+#: ../qml/AppDetailsPage.qml:127 ../qml/AppDetailsPage.qml:443
 #: ../qml/AppLocalDetailsPage.qml:42 ../qml/Dialogs/UninstallDialog.qml:33
 msgid "Remove"
 msgstr "移除"
 
-#: ../qml/AppDetailsPage.qml:157 ../qml/Components/PackageListItem.qml:34
+#: ../qml/AppDetailsPage.qml:168 ../qml/Components/PackageListItem.qml:34
 #: ../qml/Components/PackageTile.qml:79
 msgid "App"
 msgstr "應用程式"
 
-#: ../qml/AppDetailsPage.qml:158 ../qml/Components/PackageListItem.qml:35
+#: ../qml/AppDetailsPage.qml:169 ../qml/Components/PackageListItem.qml:35
 #: ../qml/Components/PackageTile.qml:80
 msgid "Bookmark"
 msgstr "書籤"
 
-#: ../qml/AppDetailsPage.qml:159 ../qml/Components/PackageListItem.qml:36
+#: ../qml/AppDetailsPage.qml:170 ../qml/Components/PackageListItem.qml:36
 #: ../qml/Components/PackageTile.qml:81
 msgid "Web App"
 msgstr "網路程式"
 
-#: ../qml/AppDetailsPage.qml:169
+#: ../qml/AppDetailsPage.qml:180
 msgid "Install Size: "
 msgstr "安裝大小： "
 
-#: ../qml/AppDetailsPage.qml:170
+#: ../qml/AppDetailsPage.qml:181
 msgid "Download Size: "
 msgstr "下載大小： "
 
-#: ../qml/AppDetailsPage.qml:244
+#: ../qml/AppDetailsPage.qml:255
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
@@ -59,258 +59,266 @@ msgstr ""
 "此應用程式的已安裝版本不是來自 OpenStore 的伺服器。 您可以點擊下面的按鈕安裝"
 "最新的穩定更新。"
 
-#: ../qml/AppDetailsPage.qml:269 ../qml/AppLocalDetailsPage.qml:116
+#: ../qml/AppDetailsPage.qml:272
+msgid "This is a Snap package provided by the Snapcraft Store"
+msgstr ""
+
+#: ../qml/AppDetailsPage.qml:297 ../qml/AppLocalDetailsPage.qml:116
 #: ../qml/Components/HighlightedApp.qml:117
 msgid "Open"
 msgstr "開啟"
 
-#: ../qml/AppDetailsPage.qml:290
+#: ../qml/AppDetailsPage.qml:318
 msgid "The OpenStore is installed!"
 msgstr "OpenStore已安裝！"
 
-#: ../qml/AppDetailsPage.qml:299
+#: ../qml/AppDetailsPage.qml:327
 msgid "Install stable version"
 msgstr "安裝穩定版本"
 
-#: ../qml/AppDetailsPage.qml:302
+#: ../qml/AppDetailsPage.qml:330
 msgid "Upgrade"
 msgstr "升級"
 
-#: ../qml/AppDetailsPage.qml:305
+#: ../qml/AppDetailsPage.qml:333
 msgid "Install"
 msgstr "安裝"
 
-#: ../qml/AppDetailsPage.qml:395
+#: ../qml/AppDetailsPage.qml:429
 msgid "This app is not compatible with your system."
 msgstr "此應用程式與您的系統不相容。"
 
-#: ../qml/AppDetailsPage.qml:432
+#: ../qml/AppDetailsPage.qml:466
 msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
 msgstr "此應用程式可能會存取受限制的系統以及您的所有數據，詳細內容請見下文。"
 
-#: ../qml/AppDetailsPage.qml:435
+#: ../qml/AppDetailsPage.qml:469
 msgid "This app has access to restricted system data, see below for details."
 msgstr "此應用程式可能會存取受限制的系統數據，詳細內容請見下文。"
 
-#: ../qml/AppDetailsPage.qml:460
+#: ../qml/AppDetailsPage.qml:494
 msgid "Description"
 msgstr "描述"
 
 #. TRANSLATORS: Title of the changelog section
-#: ../qml/AppDetailsPage.qml:498
+#: ../qml/AppDetailsPage.qml:532
 msgid "What's New"
 msgstr "甚麼是最新的"
 
-#: ../qml/AppDetailsPage.qml:517
+#: ../qml/AppDetailsPage.qml:551
 msgid "Packager/Publisher"
 msgstr "封裝者/發行者"
 
-#: ../qml/AppDetailsPage.qml:526 ../qml/AppLocalDetailsPage.qml:150
+#: ../qml/AppDetailsPage.qml:560 ../qml/AppLocalDetailsPage.qml:150
 msgid "Installed version"
 msgstr "已安裝的版本"
 
-#: ../qml/AppDetailsPage.qml:536
+#: ../qml/AppDetailsPage.qml:570
 msgid "Latest available version"
 msgstr "最新可用版本"
 
-#: ../qml/AppDetailsPage.qml:545
+#: ../qml/AppDetailsPage.qml:579
 msgid "First released"
 msgstr "最先發佈"
 
-#: ../qml/AppDetailsPage.qml:556
+#: ../qml/AppDetailsPage.qml:590
 msgid "Downloads of the latest version"
 msgstr "最新版本的下載"
 
-#: ../qml/AppDetailsPage.qml:565
+#: ../qml/AppDetailsPage.qml:599
 msgid "Total downloads"
 msgstr "下載總計"
 
-#: ../qml/AppDetailsPage.qml:574
+#: ../qml/AppDetailsPage.qml:608
 msgid "License"
 msgstr "許可証"
 
-#: ../qml/AppDetailsPage.qml:575
+#: ../qml/AppDetailsPage.qml:609
 msgid "N/A"
 msgstr "沒有"
 
-#: ../qml/AppDetailsPage.qml:587 ../qml/SettingsPage.qml:214
+#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:214
 msgid "Source Code"
 msgstr "原始碼"
 
-#: ../qml/AppDetailsPage.qml:600
+#: ../qml/AppDetailsPage.qml:634
 msgid "Get support for this app"
 msgstr "獲得對這個應用程式的支援"
 
-#: ../qml/AppDetailsPage.qml:613
+#: ../qml/AppDetailsPage.qml:647
 msgid "Donate to support this app"
 msgstr "贊助來支援此應用程式"
 
-#: ../qml/AppDetailsPage.qml:626
+#: ../qml/AppDetailsPage.qml:660
 msgid "Help translate this app"
 msgstr "幫助翻譯此應用程式"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
-#: ../qml/AppDetailsPage.qml:642
+#: ../qml/AppDetailsPage.qml:677
 msgid "More from %1"
 msgstr "更多來自 %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: ../qml/AppDetailsPage.qml:657
+#: ../qml/AppDetailsPage.qml:692
 msgid "Other apps in %1"
 msgstr "%1 的其他應用程式"
 
-#: ../qml/AppDetailsPage.qml:668
+#: ../qml/AppDetailsPage.qml:703
 msgid "Package contents"
 msgstr "封裝內容"
 
-#: ../qml/AppDetailsPage.qml:755
+#: ../qml/AppDetailsPage.qml:790
 msgid "Permissions"
 msgstr "權限"
 
-#: ../qml/AppDetailsPage.qml:760
+#: ../qml/AppDetailsPage.qml:795
 msgid "Accounts"
 msgstr "帳戶"
 
-#: ../qml/AppDetailsPage.qml:761
+#: ../qml/AppDetailsPage.qml:796
 msgid "Audio"
 msgstr "音訊"
 
-#: ../qml/AppDetailsPage.qml:762
+#: ../qml/AppDetailsPage.qml:797
 msgid "Bluetooth"
 msgstr "藍牙"
 
-#: ../qml/AppDetailsPage.qml:763
+#: ../qml/AppDetailsPage.qml:798
 msgid "Calendar"
 msgstr "日曆"
 
-#: ../qml/AppDetailsPage.qml:764
+#: ../qml/AppDetailsPage.qml:799
 msgid "Camera"
 msgstr "相機"
 
-#: ../qml/AppDetailsPage.qml:765
+#: ../qml/AppDetailsPage.qml:800
 msgid "Connectivity"
 msgstr "連接"
 
-#: ../qml/AppDetailsPage.qml:766
+#: ../qml/AppDetailsPage.qml:801
 msgid "Contacts"
 msgstr "聯繫"
 
-#: ../qml/AppDetailsPage.qml:767
+#: ../qml/AppDetailsPage.qml:802
 msgid "Content Exchange Source"
 msgstr "內容替換源"
 
-#: ../qml/AppDetailsPage.qml:768
+#: ../qml/AppDetailsPage.qml:803
 msgid "Content Exchange"
 msgstr "內容替換"
 
-#: ../qml/AppDetailsPage.qml:769
+#: ../qml/AppDetailsPage.qml:804
 msgid "Debug"
 msgstr "除錯"
 
-#: ../qml/AppDetailsPage.qml:770
+#: ../qml/AppDetailsPage.qml:805
 msgid "History"
 msgstr "歷史"
 
-#: ../qml/AppDetailsPage.qml:771
+#: ../qml/AppDetailsPage.qml:806
 msgid "In App Purchases"
 msgstr "在應用程式內購買"
 
-#: ../qml/AppDetailsPage.qml:772
+#: ../qml/AppDetailsPage.qml:807
 msgid "Keep Display On"
 msgstr "繼續顯示"
 
-#: ../qml/AppDetailsPage.qml:773
+#: ../qml/AppDetailsPage.qml:808
 msgid "Location"
 msgstr "位置"
 
-#: ../qml/AppDetailsPage.qml:774
+#: ../qml/AppDetailsPage.qml:809
 msgid "Microphone"
 msgstr "麥克風"
 
-#: ../qml/AppDetailsPage.qml:775
+#: ../qml/AppDetailsPage.qml:810
 msgid "Read Music Files"
 msgstr "讀取音樂檔案"
 
-#: ../qml/AppDetailsPage.qml:776
+#: ../qml/AppDetailsPage.qml:811
 msgid "Music Files"
 msgstr "音樂檔案"
 
-#: ../qml/AppDetailsPage.qml:777
+#: ../qml/AppDetailsPage.qml:812
 msgid "Networking"
 msgstr "聯網"
 
-#: ../qml/AppDetailsPage.qml:778
+#: ../qml/AppDetailsPage.qml:813
 msgid "Read Picture Files"
 msgstr "讀取圖片檔案"
 
-#: ../qml/AppDetailsPage.qml:779
+#: ../qml/AppDetailsPage.qml:814
 msgid "Picture Files"
 msgstr "圖片檔案"
 
-#: ../qml/AppDetailsPage.qml:780
+#: ../qml/AppDetailsPage.qml:815
 msgid "Push Notifications"
 msgstr "推送通知"
 
-#: ../qml/AppDetailsPage.qml:781
+#: ../qml/AppDetailsPage.qml:816
 msgid "Sensors"
 msgstr "感測器"
 
-#: ../qml/AppDetailsPage.qml:782
+#: ../qml/AppDetailsPage.qml:817
 msgid "User Metrics"
 msgstr "使用者指標"
 
-#: ../qml/AppDetailsPage.qml:783
+#: ../qml/AppDetailsPage.qml:818
 msgid "Read Video Files"
 msgstr "讀取影片檔案"
 
-#: ../qml/AppDetailsPage.qml:784
+#: ../qml/AppDetailsPage.qml:819
 msgid "Video Files"
 msgstr "影片檔案"
 
-#: ../qml/AppDetailsPage.qml:785
+#: ../qml/AppDetailsPage.qml:820
 msgid "Video"
 msgstr "影片"
 
-#: ../qml/AppDetailsPage.qml:786
+#: ../qml/AppDetailsPage.qml:821
 msgid "Webview"
 msgstr "網路視圖"
 
-#: ../qml/AppDetailsPage.qml:790
+#: ../qml/AppDetailsPage.qml:822 ../qml/AppDetailsPage.qml:830
+msgid "Unknown"
+msgstr ""
+
+#: ../qml/AppDetailsPage.qml:826
 msgid "Full System Access"
 msgstr "完整系統权限"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: ../qml/AppDetailsPage.qml:795
+#: ../qml/AppDetailsPage.qml:835
 msgid "none required"
 msgstr "無權限要求"
 
-#: ../qml/AppDetailsPage.qml:831
+#: ../qml/AppDetailsPage.qml:871
 msgid "Read paths"
 msgstr "讀取路徑"
 
-#: ../qml/AppDetailsPage.qml:848
+#: ../qml/AppDetailsPage.qml:888
 msgid "Write paths"
 msgstr "寫入路徑"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: ../qml/AppDetailsPage.qml:919
+#: ../qml/AppDetailsPage.qml:963
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: ../qml/AppDetailsPage.qml:924
+#: ../qml/AppDetailsPage.qml:968
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: ../qml/AppDetailsPage.qml:929
+#: ../qml/AppDetailsPage.qml:973
 msgid "%1 kB"
 msgstr "%1 KB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: ../qml/AppDetailsPage.qml:932
+#: ../qml/AppDetailsPage.qml:976
 msgid "%1 bytes"
 msgstr "%1 位元組"
 
@@ -759,11 +767,16 @@ msgstr "推送助手"
 msgid "Accounts provider"
 msgstr "帳戶支援"
 
-#: ../qml/Components/PackageTile.qml:100
+#: ../qml/Components/PackageListItem.qml:48
+#: ../qml/Components/PackageTile.qml:93 ../qml/Dialogs/FilterDialog.qml:155
+msgid "Snap"
+msgstr ""
+
+#: ../qml/Components/PackageTile.qml:105
 msgid "Update available"
 msgstr "有可用的更新"
 
-#: ../qml/Components/PackageTile.qml:102
+#: ../qml/Components/PackageTile.qml:107
 msgid "✓ Installed"
 msgstr "✓已安裝"
 
@@ -803,8 +816,9 @@ msgstr "%1/%2 個字符"
 msgid "Submit"
 msgstr "提交"
 
-#: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:148
+#: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:201
 #: ../qml/Dialogs/InstallWarningDialog.qml:61
+#: ../qml/Dialogs/SnapWarningDialog.qml:55
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
 #: ../qml/Dialogs/UninstallDialog.qml:42
 msgid "Cancel"
@@ -832,6 +846,7 @@ msgid "Install this app to review it"
 msgstr "安裝此應用程式來進行評論"
 
 #: ../qml/Dialogs/DomainWarningDialog.qml:26
+#: ../qml/Dialogs/SnapWarningDialog.qml:26
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:25
 msgid "Warning"
 msgstr "注意"
@@ -872,71 +887,85 @@ msgstr "現在贊助"
 msgid "Maybe later"
 msgstr "之後再說"
 
-#: ../qml/Dialogs/FilterDialog.qml:26
+#: ../qml/Dialogs/FilterDialog.qml:27
 msgid "Filters and Sorting"
 msgstr "過濾器和排序"
 
-#: ../qml/Dialogs/FilterDialog.qml:38
+#: ../qml/Dialogs/FilterDialog.qml:40
 msgid "Sort By"
 msgstr "排序方式"
 
-#: ../qml/Dialogs/FilterDialog.qml:45 ../qml/Dialogs/FilterDialog.qml:65
+#: ../qml/Dialogs/FilterDialog.qml:47 ../qml/Dialogs/FilterDialog.qml:67
 msgid "Relevance"
 msgstr "關聯性"
 
-#: ../qml/Dialogs/FilterDialog.qml:46
+#: ../qml/Dialogs/FilterDialog.qml:48
 msgid "Most Popular"
 msgstr "最受歡迎"
 
-#: ../qml/Dialogs/FilterDialog.qml:47
+#: ../qml/Dialogs/FilterDialog.qml:49
 msgid "Least Popular"
 msgstr "最不受歡迎"
 
-#: ../qml/Dialogs/FilterDialog.qml:48
+#: ../qml/Dialogs/FilterDialog.qml:50
 msgid "Title (A-Z)"
 msgstr "標題（A-Z）"
 
-#: ../qml/Dialogs/FilterDialog.qml:49
+#: ../qml/Dialogs/FilterDialog.qml:51
 msgid "Title (Z-A)"
 msgstr "標題（Z-A）"
 
-#: ../qml/Dialogs/FilterDialog.qml:50
+#: ../qml/Dialogs/FilterDialog.qml:52
 msgid "Newest"
 msgstr "最新"
 
-#: ../qml/Dialogs/FilterDialog.qml:51
+#: ../qml/Dialogs/FilterDialog.qml:53
 msgid "Oldest"
 msgstr "最舊"
 
-#: ../qml/Dialogs/FilterDialog.qml:52
+#: ../qml/Dialogs/FilterDialog.qml:54
 msgid "Latest Update"
 msgstr "最新更新"
 
-#: ../qml/Dialogs/FilterDialog.qml:53
+#: ../qml/Dialogs/FilterDialog.qml:55
 msgid "Oldest Update"
 msgstr "最舊更新"
 
-#: ../qml/Dialogs/FilterDialog.qml:93
+#: ../qml/Dialogs/FilterDialog.qml:95
 msgid "Type"
 msgstr "類型"
 
-#: ../qml/Dialogs/FilterDialog.qml:100 ../qml/Dialogs/FilterDialog.qml:115
+#: ../qml/Dialogs/FilterDialog.qml:102 ../qml/Dialogs/FilterDialog.qml:117
 msgid "All Types"
 msgstr "所有類型"
 
-#: ../qml/Dialogs/FilterDialog.qml:101
+#: ../qml/Dialogs/FilterDialog.qml:103
 msgid "Apps"
 msgstr "應用程式"
 
-#: ../qml/Dialogs/FilterDialog.qml:102
+#: ../qml/Dialogs/FilterDialog.qml:104
 msgid "Bookmarks"
 msgstr "書籤"
 
-#: ../qml/Dialogs/FilterDialog.qml:103
+#: ../qml/Dialogs/FilterDialog.qml:105
 msgid "Web Apps"
 msgstr "網路應用程式"
 
-#: ../qml/Dialogs/FilterDialog.qml:140
+#: ../qml/Dialogs/FilterDialog.qml:145
+#, fuzzy
+#| msgid "Package contents"
+msgid "Package Type"
+msgstr "封裝內容"
+
+#: ../qml/Dialogs/FilterDialog.qml:153 ../qml/Dialogs/FilterDialog.qml:167
+msgid "All"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:154
+msgid "Click"
+msgstr ""
+
+#: ../qml/Dialogs/FilterDialog.qml:193
 msgid "Apply"
 msgstr "套用"
 
@@ -973,6 +1002,22 @@ msgstr "獲得支援"
 #: ../qml/Dialogs/NegativeReviewDialog.qml:47
 msgid "Post my review"
 msgstr "發佈我的評論"
+
+#: ../qml/Dialogs/SnapWarningDialog.qml:27
+msgid ""
+"Not all snaps were designed with Ubuntu Touch in mind and might not work "
+"well."
+msgstr ""
+
+#: ../qml/Dialogs/SnapWarningDialog.qml:39
+msgid "Don't show this warning again"
+msgstr ""
+
+#: ../qml/Dialogs/SnapWarningDialog.qml:43
+#, fuzzy
+#| msgid "I understand the risks"
+msgid "I understand"
+msgstr "我了解風險"
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
 msgid ""
@@ -1024,23 +1069,23 @@ msgstr "已安裝應用程式"
 msgid "Browse Apps by Category"
 msgstr "依照類別瀏覽應用程式"
 
-#: ../qml/FilteredAppList.qml:109
+#: ../qml/FilteredAppList.qml:111
 msgid "No results found."
 msgstr "沒有找到任何結果。"
 
-#: ../qml/FilteredAppList.qml:109
+#: ../qml/FilteredAppList.qml:111
 msgid "Nothing here yet"
 msgstr "這裡沒有任何東西"
 
-#: ../qml/FilteredAppList.qml:110
+#: ../qml/FilteredAppList.qml:112
 msgid "No app has been released in this category yet."
 msgstr "此類別尚未發布任何應用程式。"
 
-#: ../qml/FilteredAppList.qml:110
+#: ../qml/FilteredAppList.qml:112
 msgid "Try with a different search."
 msgstr "嘗試使用不同的搜尋。"
 
-#. TRANSLATORS: %1 is the number of installed apps
+#. TRANSLATORS: %1 is the number of installed click apps
 #: ../qml/InstalledAppsPage.qml:80
 msgid "Installed apps (%1)"
 msgstr "已安裝應用程式 (%1)"
@@ -1050,56 +1095,63 @@ msgstr "已安裝應用程式 (%1)"
 msgid "Available updates (%1)"
 msgstr "可用的更新 (%1)"
 
-#. TRANSLATORS: %1 is the number of apps that can be downgraded
+#. TRANSLATORS: %1 is the number of installed snap apps
 #: ../qml/InstalledAppsPage.qml:88
+#, fuzzy
+#| msgid "Installed apps (%1)"
+msgid "Installed Snap apps (%1)"
+msgstr "已安裝應用程式 (%1)"
+
+#. TRANSLATORS: %1 is the number of apps that can be downgraded
+#: ../qml/InstalledAppsPage.qml:92
 msgid "Stable version available (%1)"
 msgstr "有可用的穩定版本 (%1)"
 
-#: ../qml/InstalledAppsPage.qml:91
+#: ../qml/InstalledAppsPage.qml:95
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
 msgstr ""
 "此應用程式的已安裝版本不是來自 OpenStore 的伺服器，但有提供了穩定版本。"
 
-#: ../qml/InstalledAppsPage.qml:92
+#: ../qml/InstalledAppsPage.qml:96
 msgid "Update all"
 msgstr "全部更新"
 
-#: ../qml/InstalledAppsPage.qml:203
+#: ../qml/InstalledAppsPage.qml:207
 msgid "No apps found"
 msgstr "未找到應用程式"
 
-#: ../qml/InstalledAppsPage.qml:204
+#: ../qml/InstalledAppsPage.qml:208
 msgid "No app has been installed from OpenStore yet."
 msgstr "尚未從 OpenStore 安裝任何應用程式。"
 
-#: ../qml/Main.qml:323 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:324 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr "過濾器"
 
-#: ../qml/Main.qml:370
+#: ../qml/Main.qml:373
 msgid "App installed"
 msgstr "應用程式已安裝"
 
-#: ../qml/Main.qml:371
+#: ../qml/Main.qml:374
 msgid "The app has been installed successfully."
 msgstr "該應用程式已成功安裝。"
 
-#: ../qml/Main.qml:374 ../qml/Main.qml:387 ../qml/Main.qml:402
+#: ../qml/Main.qml:377 ../qml/Main.qml:390 ../qml/Main.qml:405
 msgid "OK"
 msgstr "好的"
 
-#: ../qml/Main.qml:383
+#: ../qml/Main.qml:386
 msgid "Installation failed"
 msgstr "安裝失敗"
 
-#: ../qml/Main.qml:384
+#: ../qml/Main.qml:387
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr "無法安裝該軟體。確保它是有效的軟體封包。"
 
-#: ../qml/Main.qml:398
+#: ../qml/Main.qml:401
 msgid "Installation failed (Error %1)"
 msgstr "安裝失敗 (錯誤 %1)"
 

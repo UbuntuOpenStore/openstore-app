@@ -76,12 +76,16 @@ Page {
 
                 text: {
                     if (section == 'none') {
-                        // TRANSLATORS: %1 is the number of installed apps
-                        return i18n.tr("Installed apps (%1)").arg(localAppModel.count - localAppModel.updatesAvailableCount - localAppModel.downgradesAvailableCount);
+                        // TRANSLATORS: %1 is the number of installed click apps
+                        return i18n.tr("Installed apps (%1)").arg(localAppModel.count - localAppModel.updatesAvailableCount - localAppModel.downgradesAvailableCount - localAppModel.snapsCount);
                     }
                     else if (section == 'available') {
                         // TRANSLATORS: %1 is the number of available app updates
                         return i18n.tr("Available updates (%1)").arg(localAppModel.updatesAvailableCount);
+                    }
+                    else if (section == 'snap') {
+                        // TRANSLATORS: %1 is the number of installed snap apps
+                        return i18n.tr("Installed Snap apps (%1)").arg(localAppModel.snapsCount);
                     }
 
                     // TRANSLATORS: %1 is the number of apps that can be downgraded

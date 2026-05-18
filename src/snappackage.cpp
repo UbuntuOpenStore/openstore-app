@@ -55,7 +55,7 @@ bool SnapPackageItem::install() const
         }
     }
 
-    if (m_downloadSize != progressTotal) {
+    if (progressTotal > 0 && m_downloadSize != progressTotal) {
       m_downloadSize = progressTotal;
       Q_EMIT updated();
     }
@@ -154,12 +154,17 @@ void SnapPackageItem::fillData(const QVariantMap& json)
   m_revision = json.value("revision").toInt();
   Q_FOREACH (QVariant download, downloads) {
     QMap<QString, QVariant> downloadData = download.toMap();
-    m_version = downloadData.value("version").toString();
-    m_revision = downloadData.value("revision").toInt();
-    m_packageUrl = downloadData.value("download_url").toString();
-    m_installedSize = downloadData.value("installedSize").toInt();
-    auto downloadSize = downloadData.value("downloadSize").toInt();
-    if (m_downloadSize < downloadSize) m_downloadSize = downloadSize;
+
+    if (downloadData.value("channel").toString() == QStringLiteral("focal") &&
+        supportedFrameworks.contains(downloadData.value("framework").toString()) &&
+        (downloadData.value("architecture") == PlatformIntegration::instance()->supportedArchitecture() ||
+         downloadData.value("architecture") == QStringLiteral("all"))) {
+      m_version = downloadData.value("version").toString();
+      m_revision = downloadData.value("revision").toInt();
+      m_packageUrl = downloadData.value("download_url").toString();
+      m_installedSize = downloadData.value("installedSize").toInt();
+      m_downloadSize = downloadData.value("downloadSize").toInt();
+    }
   }
 
   m_source = json.value("source").toString();

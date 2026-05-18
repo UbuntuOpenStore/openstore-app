@@ -44,6 +44,16 @@ Page {
         'video_files',
         'video_files_read',
         'unknown',
+
+        // Snaps - Full list: https://snapcraft.io/docs/reference/interfaces/#ref-index-interfaces
+        'bluez',
+        'bluetooth-control',
+        'calendar-services',
+        'classic-support',
+        'contacts-service',
+        'empty',
+        'home',
+        'personal-files',
     ]
 
     property bool isTrustedApp: {
@@ -685,7 +695,7 @@ Page {
             }
 
             Components.ContentRating {
-                visible: app.contentRating
+                visible: app.contentRating && app.packageType === "click"
                 contentRatingData: app.contentRating
             }
 

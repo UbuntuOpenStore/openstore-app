@@ -51,6 +51,7 @@
         <file>Assets/thumbdown.svg</file>
         <file>Assets/thumbup-full.svg</file>
         <file>Assets/thumbup.svg</file>
+        <file>Assets/fallback.svg</file>
         <file>js/inject.js</file>
     </qresource>
 </RCC>

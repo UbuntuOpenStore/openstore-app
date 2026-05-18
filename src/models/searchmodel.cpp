@@ -71,6 +71,8 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
       return item.updateAvailable;
     case RoleTypes:
       return item.types;
+    case RolePackageType:
+      return item.packageType;
   }
   return QVariant();
 }
@@ -86,6 +88,7 @@ QHash<int, QByteArray> SearchModel::roleNames() const
   roles.insert(RoleInstalled, "installed");
   roles.insert(RoleUpdateAvailable, "updateAvailable");
   roles.insert(RoleTypes, "types");
+  roles.insert(RolePackageType, "packageType");
   return roles;
 }
 
@@ -161,6 +164,7 @@ void SearchModel::parseReply(OpenStoreReply reply)
     item.tagline = pkgMap.value("tagline").toString();
     item.icon = pkgMap.value("icon").toString();
     item.types = pkgMap.value("types").toStringList();
+    item.packageType = pkgMap.value("package_type").toString();
     item.ratings = new Ratings(pkgMap.value("ratings").toMap());
 
     item.updateAvailable =

@@ -39,8 +39,6 @@ bool PackagesCache::contains(const QString& appId) const
 
 PackageItem* PackagesCache::insert(const QString& appId, const QVariantMap& jsonMap)
 {
-  qDebug() << Q_FUNC_INFO;
-
   PackageItem* pkg = nullptr;
   if (appId.startsWith("snap."))
     pkg = new SnapPackageItem(jsonMap, this);

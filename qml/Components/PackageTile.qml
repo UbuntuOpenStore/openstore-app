@@ -88,7 +88,12 @@ AbstractButton {
                         }
                     }
 
-                    return types.join(', ');
+                    var prefix = '';
+                    if (rootItem.appItem.packageType === 'snap') {
+                        prefix = i18n.tr("Snap") + " ";
+                    }
+
+                    return prefix + types.join(', ');
                 }
 
                 textSize: Label.XSmall

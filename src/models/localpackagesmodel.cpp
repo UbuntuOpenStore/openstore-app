@@ -140,6 +140,19 @@ int LocalPackagesModel::downgradesAvailableCount() const
   return result;
 }
 
+int LocalPackagesModel::snapsCount() const
+{
+  int result = 0;
+
+  Q_FOREACH (const LocalPackageItem& pkg, m_list) {
+    if (pkg.updateStatus == QStringLiteral("snap")) {
+      ++result;
+    }
+  }
+
+  return result;
+}
+
 void LocalPackagesModel::refresh()
 {
   // qDebug() << Q_FUNC_INFO << "refresh called";
@@ -230,8 +243,23 @@ void LocalPackagesModel::refresh()
       pkgItem.version = snap->version();
       //pkgItem.packageUrl = PackagesCache::instance()->getPackageUrl(pkgItem.appId);
       //pkgItem.appLaunchUrl = appLaunchUrl;
-      pkgItem.icon = snap->icon();
-      pkgItem.updateStatus = QStringLiteral("none");
+      const QString iconPath = snap->icon();
+      if (iconPath.startsWith(QStringLiteral("http://")) || iconPath.startsWith(QStringLiteral("https://"))) {
+        pkgItem.icon = iconPath;
+      } else {
+        // icon() returns a snapd API path when not a URL, not a filesystem path.
+        // Look for the icon on the filesystem at the standard snap location.
+        // This is a bit simpler than pulling it from snapd
+        const QString base = QStringLiteral("/snap/") + snap->name() + QStringLiteral("/current/meta/gui/icon");
+        if (QFileInfo::exists(base + QStringLiteral(".svg"))) {
+          pkgItem.icon = QStringLiteral("file://") + base + QStringLiteral(".svg");
+        } else if (QFileInfo::exists(base + QStringLiteral(".png"))) {
+          pkgItem.icon = QStringLiteral("file://") + base + QStringLiteral(".png");
+        } else {
+          pkgItem.icon = QStringLiteral("qrc:/Assets/fallback.svg");
+        }
+      }
+      pkgItem.updateStatus = QStringLiteral("snap");
 
       m_list.append(pkgItem);
     }

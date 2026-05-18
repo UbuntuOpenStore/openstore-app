@@ -43,7 +43,12 @@ ListItem {
                 }
             }
 
-            return types.join(', ') + '\n' + rootItem.appItem.tagline
+            var prefix = '';
+            if (rootItem.appItem.packageType === 'snap') {
+                prefix = i18n.tr("Snap") + " ";
+            }
+
+            return prefix + types.join(', ') + '\n' + rootItem.appItem.tagline
         }
         summary.wrapMode: Text.WrapAtWordBoundaryOrAnywhere
 

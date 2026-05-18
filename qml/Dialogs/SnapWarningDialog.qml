@@ -24,7 +24,7 @@ Component {
     Dialog {
         id: snapWarningDialog
         title: i18n.tr("Warning")
-        text: i18n.tr("Not all snaps were designed with Ubuntu Touch in mind and might not work well. Additionally, the OpenStore is not aware of what permissions snap packages request.")
+        text: i18n.tr("Not all snaps were designed with Ubuntu Touch in mind and might not work well.")
 
         signal accepted()
         signal rejected()

@@ -43,6 +43,7 @@ class LocalPackagesModel : public QAbstractListModel
   Q_PROPERTY(bool ready READ ready NOTIFY readyChanged)
   Q_PROPERTY(int updatesAvailableCount READ updatesAvailableCount NOTIFY updated)
   Q_PROPERTY(int downgradesAvailableCount READ downgradesAvailableCount NOTIFY updated)
+  Q_PROPERTY(int snapsCount READ snapsCount NOTIFY updated)
   Q_PROPERTY(QString appStoreAppId MEMBER m_appStoreAppId NOTIFY appStoreAppIdChanged)
   Q_PROPERTY(bool appStoreUpdateAvailable READ appStoreUpdateAvailable NOTIFY appStoreUpdateAvailableChanged)
 
@@ -68,6 +69,7 @@ public:
   bool ready() const { return m_ready; }
   int updatesAvailableCount() const;
   int downgradesAvailableCount() const;
+  int snapsCount() const;
 
   bool appStoreUpdateAvailable() const { return m_appStoreUpdateAvailable; }
 

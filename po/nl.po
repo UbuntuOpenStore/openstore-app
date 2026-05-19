@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-18 05:27+0000\n"
-"PO-Revision-Date: 2026-05-06 10:11+0000\n"
+"PO-Revision-Date: 2026-05-19 08:11+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/nl/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17.1\n"
+"X-Generator: Weblate 2026.6.dev0\n"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
 #: ../qml/AppDetailsPage.qml:120 ../qml/AppLocalDetailsPage.qml:35
@@ -63,7 +63,7 @@ msgstr ""
 
 #: ../qml/AppDetailsPage.qml:272
 msgid "This is a Snap package provided by the Snapcraft Store"
-msgstr ""
+msgstr "Dit is een snappakket, aangeboden door de Snapcraft-winkel"
 
 #: ../qml/AppDetailsPage.qml:297 ../qml/AppLocalDetailsPage.qml:116
 #: ../qml/Components/HighlightedApp.qml:117
@@ -289,7 +289,7 @@ msgstr "Webweergave"
 
 #: ../qml/AppDetailsPage.qml:822 ../qml/AppDetailsPage.qml:830
 msgid "Unknown"
-msgstr ""
+msgstr "Onbekend"
 
 #: ../qml/AppDetailsPage.qml:826
 msgid "Full System Access"
@@ -774,7 +774,7 @@ msgstr "Accountleverancier"
 #: ../qml/Components/PackageListItem.qml:48
 #: ../qml/Components/PackageTile.qml:93 ../qml/Dialogs/FilterDialog.qml:155
 msgid "Snap"
-msgstr ""
+msgstr "Snap"
 
 #: ../qml/Components/PackageTile.qml:105
 msgid "Update available"
@@ -959,20 +959,16 @@ msgid "Web Apps"
 msgstr "Webapps"
 
 #: ../qml/Dialogs/FilterDialog.qml:145
-#, fuzzy
-#| msgid "Package contents"
 msgid "Package Type"
-msgstr "Pakketinhoud"
+msgstr "Soort pakket"
 
 #: ../qml/Dialogs/FilterDialog.qml:153 ../qml/Dialogs/FilterDialog.qml:167
-#, fuzzy
-#| msgid "Alcohol"
 msgid "All"
-msgstr "Alcohol"
+msgstr "Alles"
 
 #: ../qml/Dialogs/FilterDialog.qml:154
 msgid "Click"
-msgstr ""
+msgstr "Click"
 
 #: ../qml/Dialogs/FilterDialog.qml:193
 msgid "Apply"
@@ -1022,16 +1018,16 @@ msgid ""
 "Not all snaps were designed with Ubuntu Touch in mind and might not work "
 "well."
 msgstr ""
+"Let op: niet alle snaps zijn specifiek voor Ubuntu Touch gemaakt. Houd er "
+"dus rekening mee dat sommige apps minder goed kunnen werken."
 
 #: ../qml/Dialogs/SnapWarningDialog.qml:39
 msgid "Don't show this warning again"
-msgstr ""
+msgstr "Niet meer tonen"
 
 #: ../qml/Dialogs/SnapWarningDialog.qml:43
-#, fuzzy
-#| msgid "I understand the risks"
 msgid "I understand"
-msgstr "Ik begrijp en neem het risico"
+msgstr "Ik begrijp het"
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
 msgid ""
@@ -1114,10 +1110,8 @@ msgstr "%1 beschikbare updates"
 
 #. TRANSLATORS: %1 is the number of installed snap apps
 #: ../qml/InstalledAppsPage.qml:88
-#, fuzzy
-#| msgid "Installed apps (%1)"
 msgid "Installed Snap apps (%1)"
-msgstr "%1 geïnstalleerde apps"
+msgstr "%1 geïnstalleerde snapapps"
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
 #: ../qml/InstalledAppsPage.qml:92

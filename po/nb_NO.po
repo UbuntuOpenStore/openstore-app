@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-18 05:27+0000\n"
+"POT-Creation-Date: 2026-05-20 03:26+0000\n"
 "PO-Revision-Date: 2025-09-23 14:01+0000\n"
 "Last-Translator: Ida Brenna <ida@larald.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/open-"
@@ -144,7 +144,7 @@ msgstr "Lisens"
 msgid "N/A"
 msgstr "Ikke tilgjengelig"
 
-#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:214
+#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:231
 msgid "Source Code"
 msgstr "Kildekode"
 
@@ -1144,34 +1144,34 @@ msgstr "Fant ingen programmer"
 msgid "No app has been installed from OpenStore yet."
 msgstr "Ingen installerte programmer fra OpenStore."
 
-#: ../qml/Main.qml:324 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:331 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr "Filtre"
 
-#: ../qml/Main.qml:373
+#: ../qml/Main.qml:380
 msgid "App installed"
 msgstr "Installert"
 
-#: ../qml/Main.qml:374
+#: ../qml/Main.qml:381
 msgid "The app has been installed successfully."
 msgstr "Programmet ble installert."
 
-#: ../qml/Main.qml:377 ../qml/Main.qml:390 ../qml/Main.qml:405
+#: ../qml/Main.qml:384 ../qml/Main.qml:397 ../qml/Main.qml:412
 msgid "OK"
 msgstr "OK"
 
-#: ../qml/Main.qml:386
+#: ../qml/Main.qml:393
 msgid "Installation failed"
 msgstr "Installasjonen mislyktes"
 
-#: ../qml/Main.qml:387
+#: ../qml/Main.qml:394
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 "Programmet kunne ikke installeres. Forsikre deg om at det er en gyldig click-"
 "pakke."
 
-#: ../qml/Main.qml:401
+#: ../qml/Main.qml:408
 msgid "Installation failed (Error %1)"
 msgstr "Installasjonen mislyktes (feil %1)"
 
@@ -1192,14 +1192,20 @@ msgid "Sign out"
 msgstr "Logg ut"
 
 #: ../qml/SettingsPage.qml:166
-msgid "Parental control"
-msgstr "Foreldrekontroll"
+msgid "General"
+msgstr ""
 
 #: ../qml/SettingsPage.qml:172
+#, fuzzy
+#| msgid "Get support"
+msgid "Enable snap support"
+msgstr "Få hjelp"
+
+#: ../qml/SettingsPage.qml:189
 msgid "Hide adult-oriented content"
 msgstr "Skjul vokseninnhold"
 
-#: ../qml/SettingsPage.qml:182
+#: ../qml/SettingsPage.qml:199
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
@@ -1207,21 +1213,24 @@ msgstr ""
 "Ved å oppgi passordet ditt tar du fullt ansvar for visning av innhold som er "
 "uegnet på arbeidsplassen."
 
-#: ../qml/SettingsPage.qml:207
+#: ../qml/SettingsPage.qml:224
 msgid "About OpenStore"
 msgstr "Om OpenStore"
 
-#: ../qml/SettingsPage.qml:223
+#: ../qml/SettingsPage.qml:240
 msgid "Report an issue"
 msgstr "Rapporter en feil"
 
-#: ../qml/SettingsPage.qml:232
+#: ../qml/SettingsPage.qml:249
 msgid "Additional Icons by"
 msgstr "Ytterligere ikoner av"
 
 #: openstore.desktop.in.h:1
 msgid "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr "programvare;apper;applikasjoner;programmer;butikk;avspill;klikk;oppdag;installer;"
+
+#~ msgid "Parental control"
+#~ msgstr "Foreldrekontroll"
 
 #~ msgid "Scope"
 #~ msgstr "Søkefelt"

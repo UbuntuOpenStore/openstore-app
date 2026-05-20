@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-18 05:27+0000\n"
+"POT-Creation-Date: 2026-05-20 03:26+0000\n"
 "PO-Revision-Date: 2021-01-14 22:02+0000\n"
 "Last-Translator: Adam <padamyno@gmail.com>\n"
 "Language-Team: Hungarian <https://translate.ubports.com/projects/openstore/"
@@ -145,7 +145,7 @@ msgstr "Licensz"
 msgid "N/A"
 msgstr "N/A"
 
-#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:214
+#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:231
 msgid "Source Code"
 msgstr "Forráskód"
 
@@ -1150,33 +1150,33 @@ msgstr "Nem találató alkalmazás"
 msgid "No app has been installed from OpenStore yet."
 msgstr "Még nincs az OpenStore-ból telepített alkalmazás."
 
-#: ../qml/Main.qml:324 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:331 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr "Szűrők"
 
-#: ../qml/Main.qml:373
+#: ../qml/Main.qml:380
 msgid "App installed"
 msgstr "Alkalmazás telepítve"
 
-#: ../qml/Main.qml:374
+#: ../qml/Main.qml:381
 msgid "The app has been installed successfully."
 msgstr "Az alkamazás sikeresen telepítésre került."
 
-#: ../qml/Main.qml:377 ../qml/Main.qml:390 ../qml/Main.qml:405
+#: ../qml/Main.qml:384 ../qml/Main.qml:397 ../qml/Main.qml:412
 msgid "OK"
 msgstr "OK"
 
-#: ../qml/Main.qml:386
+#: ../qml/Main.qml:393
 msgid "Installation failed"
 msgstr "Telepítés sikertelen"
 
-#: ../qml/Main.qml:387
+#: ../qml/Main.qml:394
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 "A csomag nem telepíthető. Győződjön meg róla, hogy ez egy hiteles csomag."
 
-#: ../qml/Main.qml:401
+#: ../qml/Main.qml:408
 msgid "Installation failed (Error %1)"
 msgstr "Telepítés sikertelen (Hiba %1)"
 
@@ -1197,34 +1197,43 @@ msgid "Sign out"
 msgstr "Kijelentkezés"
 
 #: ../qml/SettingsPage.qml:166
-msgid "Parental control"
-msgstr "Szülői felügyelet"
+msgid "General"
+msgstr ""
 
 #: ../qml/SettingsPage.qml:172
+#, fuzzy
+#| msgid "Get support"
+msgid "Enable snap support"
+msgstr "Támogatás kérése"
+
+#: ../qml/SettingsPage.qml:189
 msgid "Hide adult-oriented content"
 msgstr "Felnőtt tartalom elrejtése"
 
-#: ../qml/SettingsPage.qml:182
+#: ../qml/SettingsPage.qml:199
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr "Jelszava megadása után teljes hozzáférést kap az NSFW tartalmakhoz is."
 
-#: ../qml/SettingsPage.qml:207
+#: ../qml/SettingsPage.qml:224
 msgid "About OpenStore"
 msgstr "Az OpenStore-ról"
 
-#: ../qml/SettingsPage.qml:223
+#: ../qml/SettingsPage.qml:240
 msgid "Report an issue"
 msgstr "Hiba jelentése"
 
-#: ../qml/SettingsPage.qml:232
+#: ../qml/SettingsPage.qml:249
 msgid "Additional Icons by"
 msgstr "További ikonok általa:"
 
 #: openstore.desktop.in.h:1
 msgid "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr "szoftver;appok;alkalmazások;programok;áruház;piac;játék;klikk;felfedezés;telepítés;"
+
+#~ msgid "Parental control"
+#~ msgstr "Szülői felügyelet"
 
 #~ msgid "Scope"
 #~ msgstr "Szkóp"

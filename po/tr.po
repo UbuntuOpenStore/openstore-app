@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-18 05:27+0000\n"
+"POT-Creation-Date: 2026-05-20 03:26+0000\n"
 "PO-Revision-Date: 2024-06-02 07:09+0000\n"
 "Last-Translator: Ali Beyaz <alipolatbeyaz@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/open-store-io/"
@@ -143,7 +143,7 @@ msgstr "Lisans"
 msgid "N/A"
 msgstr "N/A"
 
-#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:214
+#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:231
 msgid "Source Code"
 msgstr "Kaynak Kodu"
 
@@ -1144,32 +1144,32 @@ msgstr "Hiçbir uygulama bulunamadı"
 msgid "No app has been installed from OpenStore yet."
 msgstr "OpenStore'dan henüz hiçbir uygulama yüklenmedi."
 
-#: ../qml/Main.qml:324 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:331 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr "Filtreler"
 
-#: ../qml/Main.qml:373
+#: ../qml/Main.qml:380
 msgid "App installed"
 msgstr "Uygulama kuruldu"
 
-#: ../qml/Main.qml:374
+#: ../qml/Main.qml:381
 msgid "The app has been installed successfully."
 msgstr "Uygulama başarıyla yüklendi."
 
-#: ../qml/Main.qml:377 ../qml/Main.qml:390 ../qml/Main.qml:405
+#: ../qml/Main.qml:384 ../qml/Main.qml:397 ../qml/Main.qml:412
 msgid "OK"
 msgstr "OK"
 
-#: ../qml/Main.qml:386
+#: ../qml/Main.qml:393
 msgid "Installation failed"
 msgstr "Yükleme başarısız"
 
-#: ../qml/Main.qml:387
+#: ../qml/Main.qml:394
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr "Paket yüklenemedi. Geçerli bir click paketi olduğundan emin olun."
 
-#: ../qml/Main.qml:401
+#: ../qml/Main.qml:408
 msgid "Installation failed (Error %1)"
 msgstr "Yükleme başarısız (Hata %1)"
 
@@ -1190,34 +1190,43 @@ msgid "Sign out"
 msgstr "Çıkış yap"
 
 #: ../qml/SettingsPage.qml:166
-msgid "Parental control"
-msgstr "Ebeveyn kontrolü"
+msgid "General"
+msgstr ""
 
 #: ../qml/SettingsPage.qml:172
+#, fuzzy
+#| msgid "Get support"
+msgid "Enable snap support"
+msgstr "Destek al"
+
+#: ../qml/SettingsPage.qml:189
 msgid "Hide adult-oriented content"
 msgstr "Yetişkin odaklı içeriği gizle"
 
-#: ../qml/SettingsPage.qml:182
+#: ../qml/SettingsPage.qml:199
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr "Şifrenizi yazarak, +18 içeriği görmek için tam sorumluluk alırsınız."
 
-#: ../qml/SettingsPage.qml:207
+#: ../qml/SettingsPage.qml:224
 msgid "About OpenStore"
 msgstr "OpenStore Hakkında"
 
-#: ../qml/SettingsPage.qml:223
+#: ../qml/SettingsPage.qml:240
 msgid "Report an issue"
 msgstr "Sorun bildir"
 
-#: ../qml/SettingsPage.qml:232
+#: ../qml/SettingsPage.qml:249
 msgid "Additional Icons by"
 msgstr "Ek simgeleri sağlayan"
 
 #: openstore.desktop.in.h:1
 msgid "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr "software;apps;applications;programs;store;market;play;click;discover;install;"
+
+#~ msgid "Parental control"
+#~ msgstr "Ebeveyn kontrolü"
 
 #~ msgid "Scope"
 #~ msgstr "Scope"

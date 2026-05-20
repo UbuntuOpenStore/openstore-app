@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-18 05:27+0000\n"
+"POT-Creation-Date: 2026-05-20 03:26+0000\n"
 "PO-Revision-Date: 2026-05-19 08:11+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/open-store-io/"
@@ -144,7 +144,7 @@ msgstr "Litsents"
 msgid "N/A"
 msgstr "pole teada"
 
-#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:214
+#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:231
 msgid "Source Code"
 msgstr "Lähtekood"
 
@@ -1145,34 +1145,34 @@ msgstr "Rakendusi ei leidu"
 msgid "No app has been installed from OpenStore yet."
 msgstr "Sa pole veel OpenStore'ist ühtegi rakendust paigaldanud."
 
-#: ../qml/Main.qml:324 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:331 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr "Filtrid"
 
-#: ../qml/Main.qml:373
+#: ../qml/Main.qml:380
 msgid "App installed"
 msgstr "Rakendus on paigaldatud"
 
-#: ../qml/Main.qml:374
+#: ../qml/Main.qml:381
 msgid "The app has been installed successfully."
 msgstr "Rakenduse paigaldamine õnnestus."
 
-#: ../qml/Main.qml:377 ../qml/Main.qml:390 ../qml/Main.qml:405
+#: ../qml/Main.qml:384 ../qml/Main.qml:397 ../qml/Main.qml:412
 msgid "OK"
 msgstr "Sobib"
 
-#: ../qml/Main.qml:386
+#: ../qml/Main.qml:393
 msgid "Installation failed"
 msgstr "Paigaldamine ei õnnestunud"
 
-#: ../qml/Main.qml:387
+#: ../qml/Main.qml:394
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 "Paketi paigaldamine ei õnnestunud. Palun kontrolli, et see on korrektne "
 "click-pakett."
 
-#: ../qml/Main.qml:401
+#: ../qml/Main.qml:408
 msgid "Installation failed (Error %1)"
 msgstr "Paigaldamine ei õnnestunud (Viga: %1)"
 
@@ -1193,14 +1193,20 @@ msgid "Sign out"
 msgstr "Logi välja"
 
 #: ../qml/SettingsPage.qml:166
-msgid "Parental control"
-msgstr "Vanemlik järelevalve"
+msgid "General"
+msgstr ""
 
 #: ../qml/SettingsPage.qml:172
+#, fuzzy
+#| msgid "Get support"
+msgid "Enable snap support"
+msgstr "Vaata kasutajatuge"
+
+#: ../qml/SettingsPage.qml:189
 msgid "Hide adult-oriented content"
 msgstr "Peida täiskasvanutele mõeldud sisu"
 
-#: ../qml/SettingsPage.qml:182
+#: ../qml/SettingsPage.qml:199
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
@@ -1208,18 +1214,21 @@ msgstr ""
 "Kui sisestad oma salasõna, siis vastutad täies mahus ebasobiliku sisu "
 "kuvamise eest."
 
-#: ../qml/SettingsPage.qml:207
+#: ../qml/SettingsPage.qml:224
 msgid "About OpenStore"
 msgstr "Rakenduse teave: OpenStore"
 
-#: ../qml/SettingsPage.qml:223
+#: ../qml/SettingsPage.qml:240
 msgid "Report an issue"
 msgstr "Teata veast või problemist"
 
-#: ../qml/SettingsPage.qml:232
+#: ../qml/SettingsPage.qml:249
 msgid "Additional Icons by"
 msgstr "Täiendavate ikoonide autor on"
 
 #: openstore.desktop.in.h:1
 msgid "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr "software;apps;applications;programs;store;market;play;click;discover;install;tarkvara;programm;pood;rakenduspood;avasta;leia;otsi;rakendus;äpp;äpid;paigalda;paigaldamine;uuenda;uuendamine;uuendus;värskendus;värskenda;värskendamine;"
+
+#~ msgid "Parental control"
+#~ msgstr "Vanemlik järelevalve"

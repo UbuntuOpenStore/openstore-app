@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-18 05:27+0000\n"
+"POT-Creation-Date: 2026-05-20 03:26+0000\n"
 "PO-Revision-Date: 2023-11-10 13:36+0000\n"
 "Last-Translator: phlostically <phlostically@mailinator.com>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/open-store-io/"
@@ -148,7 +148,7 @@ msgstr "Licenco"
 msgid "N/A"
 msgstr "Ne disponebla"
 
-#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:214
+#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:231
 msgid "Source Code"
 msgstr "Fonto-kodo"
 
@@ -1144,34 +1144,34 @@ msgstr "Neniu aplikaĵo trovita"
 msgid "No app has been installed from OpenStore yet."
 msgstr "Neniu aplikaĵo instalita per OpenStore ankoraŭ."
 
-#: ../qml/Main.qml:324 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:331 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr ""
 
-#: ../qml/Main.qml:373
+#: ../qml/Main.qml:380
 msgid "App installed"
 msgstr "Aplikaĵo instalita"
 
-#: ../qml/Main.qml:374
+#: ../qml/Main.qml:381
 msgid "The app has been installed successfully."
 msgstr "La aplikaĵo estis instalita sukcese."
 
-#: ../qml/Main.qml:377 ../qml/Main.qml:390 ../qml/Main.qml:405
+#: ../qml/Main.qml:384 ../qml/Main.qml:397 ../qml/Main.qml:412
 msgid "OK"
 msgstr "Jes"
 
-#: ../qml/Main.qml:386
+#: ../qml/Main.qml:393
 msgid "Installation failed"
 msgstr "Instalado malsukcesis"
 
-#: ../qml/Main.qml:387
+#: ../qml/Main.qml:394
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 "La pakaĵo ne povis esti instalita. Certiĝu pri tio ke ĝi estas valida click-"
 "pakaĵo."
 
-#: ../qml/Main.qml:401
+#: ../qml/Main.qml:408
 msgid "Installation failed (Error %1)"
 msgstr "Instalado malsukcesis (Eraro %1)"
 
@@ -1193,14 +1193,18 @@ msgid "Sign out"
 msgstr ""
 
 #: ../qml/SettingsPage.qml:166
-msgid "Parental control"
-msgstr "Gepatra kontrolilo"
+msgid "General"
+msgstr ""
 
 #: ../qml/SettingsPage.qml:172
+msgid "Enable snap support"
+msgstr ""
+
+#: ../qml/SettingsPage.qml:189
 msgid "Hide adult-oriented content"
 msgstr "Kaŝi adoltan enhavon"
 
-#: ../qml/SettingsPage.qml:182
+#: ../qml/SettingsPage.qml:199
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
@@ -1208,21 +1212,24 @@ msgstr ""
 "Enigante vian pasvorton vi akceptas plenan respondecon pro aliro al adolta "
 "enhavo."
 
-#: ../qml/SettingsPage.qml:207
+#: ../qml/SettingsPage.qml:224
 msgid "About OpenStore"
 msgstr "Pri OpenStore"
 
-#: ../qml/SettingsPage.qml:223
+#: ../qml/SettingsPage.qml:240
 msgid "Report an issue"
 msgstr "Raporti problemon"
 
-#: ../qml/SettingsPage.qml:232
+#: ../qml/SettingsPage.qml:249
 msgid "Additional Icons by"
 msgstr ""
 
 #: openstore.desktop.in.h:1
 msgid "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr ""
+
+#~ msgid "Parental control"
+#~ msgstr "Gepatra kontrolilo"
 
 #~ msgid "Scope"
 #~ msgstr "Scope"

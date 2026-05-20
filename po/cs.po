@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-18 05:27+0000\n"
+"POT-Creation-Date: 2026-05-20 03:26+0000\n"
 "PO-Revision-Date: 2025-03-21 20:13+0000\n"
 "Last-Translator: Jozef Mlich <jmlich83@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/open-store-io/"
@@ -141,7 +141,7 @@ msgstr "Licence"
 msgid "N/A"
 msgstr "Nedostupné"
 
-#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:214
+#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:231
 msgid "Source Code"
 msgstr "Zdrojový kód"
 
@@ -1139,34 +1139,34 @@ msgstr "Nenalezeny žádné aplikace"
 msgid "No app has been installed from OpenStore yet."
 msgstr "Z OpenStore zatím nebyly nainstalovány žádné aplikace."
 
-#: ../qml/Main.qml:324 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:331 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr "Filtry"
 
-#: ../qml/Main.qml:373
+#: ../qml/Main.qml:380
 msgid "App installed"
 msgstr "Aplikace nainstalována"
 
-#: ../qml/Main.qml:374
+#: ../qml/Main.qml:381
 msgid "The app has been installed successfully."
 msgstr "Aplikace byla úspěšně nainstalována."
 
-#: ../qml/Main.qml:377 ../qml/Main.qml:390 ../qml/Main.qml:405
+#: ../qml/Main.qml:384 ../qml/Main.qml:397 ../qml/Main.qml:412
 msgid "OK"
 msgstr "OK"
 
-#: ../qml/Main.qml:386
+#: ../qml/Main.qml:393
 msgid "Installation failed"
 msgstr "Instalace se nezdařila"
 
-#: ../qml/Main.qml:387
+#: ../qml/Main.qml:394
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 "Balíček se nepodařilo nainstalovat. Zkontrolujte, zda se jedná o platný "
 "click balíček."
 
-#: ../qml/Main.qml:401
+#: ../qml/Main.qml:408
 msgid "Installation failed (Error %1)"
 msgstr "Instalace se nezdařila (chyba %1)"
 
@@ -1187,14 +1187,20 @@ msgid "Sign out"
 msgstr "Odhlásit se"
 
 #: ../qml/SettingsPage.qml:166
-msgid "Parental control"
-msgstr "Rodičovský dohled"
+msgid "General"
+msgstr ""
 
 #: ../qml/SettingsPage.qml:172
+#, fuzzy
+#| msgid "Get support"
+msgid "Enable snap support"
+msgstr "Získat technickou podporu"
+
+#: ../qml/SettingsPage.qml:189
 msgid "Hide adult-oriented content"
 msgstr "Skrýt obsah pro dospělé"
 
-#: ../qml/SettingsPage.qml:182
+#: ../qml/SettingsPage.qml:199
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
@@ -1202,21 +1208,24 @@ msgstr ""
 "Zadáním svého hesla přebíráte v plném rozsahu odpovědnost za zobrazení "
 "obsahu pro dospělé."
 
-#: ../qml/SettingsPage.qml:207
+#: ../qml/SettingsPage.qml:224
 msgid "About OpenStore"
 msgstr "O OpenStore"
 
-#: ../qml/SettingsPage.qml:223
+#: ../qml/SettingsPage.qml:240
 msgid "Report an issue"
 msgstr "Zaslat hlášení o chybě"
 
-#: ../qml/SettingsPage.qml:232
+#: ../qml/SettingsPage.qml:249
 msgid "Additional Icons by"
 msgstr "Další ikony od"
 
 #: openstore.desktop.in.h:1
 msgid "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr "software;aplikace;programy;obchod;click;balíčky;objevovat;instalace"
+
+#~ msgid "Parental control"
+#~ msgstr "Rodičovský dohled"
 
 #~ msgid "Scope"
 #~ msgstr "Scope"

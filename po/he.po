@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-18 05:27+0000\n"
+"POT-Creation-Date: 2026-05-20 03:26+0000\n"
 "PO-Revision-Date: 2026-05-07 20:11+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/open-store-io/"
@@ -141,7 +141,7 @@ msgstr "רישיון"
 msgid "N/A"
 msgstr "לא זמין"
 
-#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:214
+#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:231
 msgid "Source Code"
 msgstr "קוד מקור"
 
@@ -1127,32 +1127,32 @@ msgstr "לא נמצאו יישומונים"
 msgid "No app has been installed from OpenStore yet."
 msgstr "עדיין לא הותקנו יישומונים מה־OpenStore."
 
-#: ../qml/Main.qml:324 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:331 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr "מסננים"
 
-#: ../qml/Main.qml:373
+#: ../qml/Main.qml:380
 msgid "App installed"
 msgstr "היישומון הותקן"
 
-#: ../qml/Main.qml:374
+#: ../qml/Main.qml:381
 msgid "The app has been installed successfully."
 msgstr "היישומון הותקן בהצלחה."
 
-#: ../qml/Main.qml:377 ../qml/Main.qml:390 ../qml/Main.qml:405
+#: ../qml/Main.qml:384 ../qml/Main.qml:397 ../qml/Main.qml:412
 msgid "OK"
 msgstr "בסדר"
 
-#: ../qml/Main.qml:386
+#: ../qml/Main.qml:393
 msgid "Installation failed"
 msgstr "ההתקנה נכשלה"
 
-#: ../qml/Main.qml:387
+#: ../qml/Main.qml:394
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr "לא ניתן להתקין חבילה. נא לוודא שהחבילה היא חבילת click תקינה."
 
-#: ../qml/Main.qml:401
+#: ../qml/Main.qml:408
 msgid "Installation failed (Error %1)"
 msgstr "ההתקנה נכשלה (שגיאה %1)"
 
@@ -1173,34 +1173,43 @@ msgid "Sign out"
 msgstr "יציאה"
 
 #: ../qml/SettingsPage.qml:166
-msgid "Parental control"
-msgstr "בקרת הורים"
+msgid "General"
+msgstr ""
 
 #: ../qml/SettingsPage.qml:172
+#, fuzzy
+#| msgid "Get support"
+msgid "Enable snap support"
+msgstr "קבלת תמיכה"
+
+#: ../qml/SettingsPage.qml:189
 msgid "Hide adult-oriented content"
 msgstr "הסתרת תוכן למבוגרים"
 
-#: ../qml/SettingsPage.qml:182
+#: ../qml/SettingsPage.qml:199
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr "הקלדת הסיסמה שלך מהווה את אחריותך המלאה להצגת תוכן למבוגרים."
 
-#: ../qml/SettingsPage.qml:207
+#: ../qml/SettingsPage.qml:224
 msgid "About OpenStore"
 msgstr "על ה־OpenStore"
 
-#: ../qml/SettingsPage.qml:223
+#: ../qml/SettingsPage.qml:240
 msgid "Report an issue"
 msgstr "דיווח על בעיה"
 
-#: ../qml/SettingsPage.qml:232
+#: ../qml/SettingsPage.qml:249
 msgid "Additional Icons by"
 msgstr "סמלים נוספים מאת"
 
 #: openstore.desktop.in.h:1
 msgid "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr "תוכנה;יישומים;יישומונים;אפליקציות;אפליקציה;אופנסטור;אופןסטור;נגינה;פליי;חנות;יישום;יישומון;התקנה;חבילה;חבילות;תוכנות;תוכניות;חשיפה;מבחר;מאגר;"
+
+#~ msgid "Parental control"
+#~ msgstr "בקרת הורים"
 
 #~ msgid "Scope"
 #~ msgstr "טווח"

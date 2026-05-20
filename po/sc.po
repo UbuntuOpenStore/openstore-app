@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-18 05:27+0000\n"
+"POT-Creation-Date: 2026-05-20 03:26+0000\n"
 "PO-Revision-Date: 2021-11-15 10:19+0000\n"
 "Last-Translator: Adria <adriamartinmor@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/openstore/"
@@ -147,7 +147,7 @@ msgstr "Lissèntzia"
 msgid "N/A"
 msgstr "Non a disponimentu"
 
-#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:214
+#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:231
 msgid "Source Code"
 msgstr "Còdighe de orìgine"
 
@@ -1155,34 +1155,34 @@ msgstr "Peruna aplicatzione agatada"
 msgid "No app has been installed from OpenStore yet."
 msgstr "Ancora peruna aplicatzione installada dae OpenStore."
 
-#: ../qml/Main.qml:324 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:331 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr ""
 
-#: ../qml/Main.qml:373
+#: ../qml/Main.qml:380
 msgid "App installed"
 msgstr "Aplicatzione installada"
 
-#: ../qml/Main.qml:374
+#: ../qml/Main.qml:381
 msgid "The app has been installed successfully."
 msgstr "Aplicatzione installada."
 
-#: ../qml/Main.qml:377 ../qml/Main.qml:390 ../qml/Main.qml:405
+#: ../qml/Main.qml:384 ../qml/Main.qml:397 ../qml/Main.qml:412
 msgid "OK"
 msgstr "AB"
 
-#: ../qml/Main.qml:386
+#: ../qml/Main.qml:393
 msgid "Installation failed"
 msgstr "B'at àpidu una faddina in s'installatzione"
 
-#: ../qml/Main.qml:387
+#: ../qml/Main.qml:394
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 "B'at àpidu una faddina in s'installatzione de su pachete. Assegura·ti chi "
 "est unu pachete click vàlidu."
 
-#: ../qml/Main.qml:401
+#: ../qml/Main.qml:408
 msgid "Installation failed (Error %1)"
 msgstr "Faddina in s'installatzione (Errore %1)"
 
@@ -1203,14 +1203,20 @@ msgid "Sign out"
 msgstr "Essi"
 
 #: ../qml/SettingsPage.qml:166
-msgid "Parental control"
-msgstr "Controllu de genitores"
+msgid "General"
+msgstr ""
 
 #: ../qml/SettingsPage.qml:172
+#, fuzzy
+#| msgid "Get support for this app"
+msgid "Enable snap support"
+msgstr "Otene agiudu pro custa aplicatzione"
+
+#: ../qml/SettingsPage.qml:189
 msgid "Hide adult-oriented content"
 msgstr "Cua cuntenutos pro adultos"
 
-#: ../qml/SettingsPage.qml:182
+#: ../qml/SettingsPage.qml:199
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
@@ -1218,21 +1224,24 @@ msgstr ""
 "Insertende sa crae tua assumes totu sa responsabilidade de ammustrare "
 "cuntenutos pro adultos (Not Suitable For Work)."
 
-#: ../qml/SettingsPage.qml:207
+#: ../qml/SettingsPage.qml:224
 msgid "About OpenStore"
 msgstr "Informatziones subra de OpenStore"
 
-#: ../qml/SettingsPage.qml:223
+#: ../qml/SettingsPage.qml:240
 msgid "Report an issue"
 msgstr "Signala unu problemu"
 
-#: ../qml/SettingsPage.qml:232
+#: ../qml/SettingsPage.qml:249
 msgid "Additional Icons by"
 msgstr "Iconas additzionales dae"
 
 #: openstore.desktop.in.h:1
 msgid "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr ""
+
+#~ msgid "Parental control"
+#~ msgstr "Controllu de genitores"
 
 #~ msgid "Scope"
 #~ msgstr "Àmbitu"

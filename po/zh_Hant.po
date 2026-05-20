@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-18 05:27+0000\n"
+"POT-Creation-Date: 2026-05-20 03:26+0000\n"
 "PO-Revision-Date: 2024-07-03 05:09+0000\n"
 "Last-Translator: hugoalh <hugoalh@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
@@ -139,7 +139,7 @@ msgstr "許可証"
 msgid "N/A"
 msgstr "沒有"
 
-#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:214
+#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:231
 msgid "Source Code"
 msgstr "原始碼"
 
@@ -1126,32 +1126,32 @@ msgstr "未找到應用程式"
 msgid "No app has been installed from OpenStore yet."
 msgstr "尚未從 OpenStore 安裝任何應用程式。"
 
-#: ../qml/Main.qml:324 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:331 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr "過濾器"
 
-#: ../qml/Main.qml:373
+#: ../qml/Main.qml:380
 msgid "App installed"
 msgstr "應用程式已安裝"
 
-#: ../qml/Main.qml:374
+#: ../qml/Main.qml:381
 msgid "The app has been installed successfully."
 msgstr "該應用程式已成功安裝。"
 
-#: ../qml/Main.qml:377 ../qml/Main.qml:390 ../qml/Main.qml:405
+#: ../qml/Main.qml:384 ../qml/Main.qml:397 ../qml/Main.qml:412
 msgid "OK"
 msgstr "好的"
 
-#: ../qml/Main.qml:386
+#: ../qml/Main.qml:393
 msgid "Installation failed"
 msgstr "安裝失敗"
 
-#: ../qml/Main.qml:387
+#: ../qml/Main.qml:394
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr "無法安裝該軟體。確保它是有效的軟體封包。"
 
-#: ../qml/Main.qml:401
+#: ../qml/Main.qml:408
 msgid "Installation failed (Error %1)"
 msgstr "安裝失敗 (錯誤 %1)"
 
@@ -1172,28 +1172,34 @@ msgid "Sign out"
 msgstr "登出"
 
 #: ../qml/SettingsPage.qml:166
-msgid "Parental control"
-msgstr "家長控制"
+msgid "General"
+msgstr ""
 
 #: ../qml/SettingsPage.qml:172
+#, fuzzy
+#| msgid "Get support"
+msgid "Enable snap support"
+msgstr "獲得支援"
+
+#: ../qml/SettingsPage.qml:189
 msgid "Hide adult-oriented content"
 msgstr "隱藏成人內容"
 
-#: ../qml/SettingsPage.qml:182
+#: ../qml/SettingsPage.qml:199
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr "透過輸入密碼時，您將對於顯示敏感內容得承擔全部的責任。"
 
-#: ../qml/SettingsPage.qml:207
+#: ../qml/SettingsPage.qml:224
 msgid "About OpenStore"
 msgstr "關於 OpenStore"
 
-#: ../qml/SettingsPage.qml:223
+#: ../qml/SettingsPage.qml:240
 msgid "Report an issue"
 msgstr "報告問題"
 
-#: ../qml/SettingsPage.qml:232
+#: ../qml/SettingsPage.qml:249
 msgid "Additional Icons by"
 msgstr "附加圖示來自"
 
@@ -1202,6 +1208,9 @@ msgid "software;apps;applications;programs;store;market;play;click;discover;inst
 msgstr ""
 "software;apps;applications;programs;store;market;play;click;discover;install;"
 "軟體;應用程式;程式;商店;市場;播放;點擊;發現;安裝;"
+
+#~ msgid "Parental control"
+#~ msgstr "家長控制"
 
 #~ msgid "Scope"
 #~ msgstr "觀查"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-18 05:27+0000\n"
+"POT-Creation-Date: 2026-05-20 03:26+0000\n"
 "PO-Revision-Date: 2026-05-19 08:11+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/open-store-io/"
@@ -145,7 +145,7 @@ msgstr "Licentie"
 msgid "N/A"
 msgstr "N.v.t."
 
-#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:214
+#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:231
 msgid "Source Code"
 msgstr "Broncode"
 
@@ -1138,33 +1138,33 @@ msgstr "Geen apps gevonden"
 msgid "No app has been installed from OpenStore yet."
 msgstr "Je hebt nog geen apps geïnstalleerd via OpenStore."
 
-#: ../qml/Main.qml:324 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:331 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr "Filters"
 
-#: ../qml/Main.qml:373
+#: ../qml/Main.qml:380
 msgid "App installed"
 msgstr "App geïnstalleerd"
 
-#: ../qml/Main.qml:374
+#: ../qml/Main.qml:381
 msgid "The app has been installed successfully."
 msgstr "De app is geïnstalleerd."
 
-#: ../qml/Main.qml:377 ../qml/Main.qml:390 ../qml/Main.qml:405
+#: ../qml/Main.qml:384 ../qml/Main.qml:397 ../qml/Main.qml:412
 msgid "OK"
 msgstr "Oké"
 
-#: ../qml/Main.qml:386
+#: ../qml/Main.qml:393
 msgid "Installation failed"
 msgstr "Installatie mislukt"
 
-#: ../qml/Main.qml:387
+#: ../qml/Main.qml:394
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 "Dit pakket kan niet worden geïnstalleerd. Zorg voor een geldig click-pakket."
 
-#: ../qml/Main.qml:401
+#: ../qml/Main.qml:408
 msgid "Installation failed (Error %1)"
 msgstr "Installatie mislukt (fout %1)"
 
@@ -1185,14 +1185,20 @@ msgid "Sign out"
 msgstr "Uitloggen"
 
 #: ../qml/SettingsPage.qml:166
-msgid "Parental control"
-msgstr "Ouderlijk toezicht"
+msgid "General"
+msgstr ""
 
 #: ../qml/SettingsPage.qml:172
+#, fuzzy
+#| msgid "Get support"
+msgid "Enable snap support"
+msgstr "Ondersteuning verkrijgen"
+
+#: ../qml/SettingsPage.qml:189
 msgid "Hide adult-oriented content"
 msgstr "Volwassen inhoud verbergen"
 
-#: ../qml/SettingsPage.qml:182
+#: ../qml/SettingsPage.qml:199
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
@@ -1200,21 +1206,24 @@ msgstr ""
 "Door je wachtwoord in te voeren, neem je volledige verantwoordelijkheid voor "
 "het tonen van volwassen inhoud."
 
-#: ../qml/SettingsPage.qml:207
+#: ../qml/SettingsPage.qml:224
 msgid "About OpenStore"
 msgstr "Over OpenStore"
 
-#: ../qml/SettingsPage.qml:223
+#: ../qml/SettingsPage.qml:240
 msgid "Report an issue"
 msgstr "Probleem melden"
 
-#: ../qml/SettingsPage.qml:232
+#: ../qml/SettingsPage.qml:249
 msgid "Additional Icons by"
 msgstr "Aanvullende pictogrammen van"
 
 #: openstore.desktop.in.h:1
 msgid "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr "software;apps;applicaties;programma's;toepassingen;winkel;markt;spelen;click;ontdekken;installeren;"
+
+#~ msgid "Parental control"
+#~ msgstr "Ouderlijk toezicht"
 
 #~ msgid "Scope"
 #~ msgstr "Scope"

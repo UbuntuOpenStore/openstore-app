@@ -143,7 +143,7 @@ Component {
             wrapMode: Text.WordWrap
             maximumLineCount: Number.MAX_VALUE
             text: i18n.tr('Package Type')
-            visible: PlatformIntegration.snapInstaller != null
+            visible: !!PlatformIntegration.snapInstaller && OpenStoreNetworkManager.snapSupport
         }
 
         ListModel {
@@ -165,7 +165,7 @@ Component {
         ComboButton {
             id: packageType
             text: i18n.tr('All')
-            visible: !!PlatformIntegration.snapInstaller
+            visible: !!PlatformIntegration.snapInstaller && OpenStoreNetworkManager.snapSupport
 
             onClicked: packageType.expanded = !packageType.expanded
 

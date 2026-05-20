@@ -58,24 +58,10 @@ PlatformIntegration::PlatformIntegration()
     }
   });
 
-  // Even though 20.04 has snapd with Snapz0r, we cannot reliably enable support,
-  // so check the system-image channel this device is running on first.
   m_snapInstaller = nullptr;
   if (QFile::exists("/run/snapd.socket") && systemdUnitRuns("lomiri-polkit-agent.service")) {
-    QFile channelInfo("/etc/system-image/channel.ini");
-    if (channelInfo.open(QIODevice::ReadOnly)) {
-      const auto content = channelInfo.readAll();
-      const auto lines = content.split('\n');
-      for (const auto& line : lines) {
-        if (line.startsWith("channel: ")) {
-          const auto channel = line.split(':')[1].trimmed();
-          if (!channel.startsWith("20.04/")) {
-            qInfo() << "On channel" << channel << ", instantiating snapInstaller...";
-            m_snapInstaller = new QSnapdClient();
-          }
-        }
-      }
-    }
+    qInfo() << "Instantiating snapInstaller...";
+    m_snapInstaller = new QSnapdClient();
   }
 
   update();

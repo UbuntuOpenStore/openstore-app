@@ -37,9 +37,11 @@ OpenStoreNetworkManager::OpenStoreNetworkManager()
   m_manager = new QNetworkAccessManager(this);
   connect(m_manager, &QNetworkAccessManager::networkAccessibleChanged, this, &OpenStoreNetworkManager::networkAccessibleChanged);
   connect(this, &OpenStoreNetworkManager::showNsfwChanged, this, &OpenStoreNetworkManager::deleteCache);
+  connect(this, &OpenStoreNetworkManager::snapSupportChanged, this, &OpenStoreNetworkManager::deleteCache);
 
   // Default value
   m_showNsfw = false;
+  m_snapSupport = true;
 
   // Cache result on disk
   QNetworkDiskCache* diskCache = new QNetworkDiskCache(this);
@@ -161,11 +163,12 @@ void OpenStoreNetworkManager::getDiscover(const QString& signature)
 void OpenStoreNetworkManager::getAppDetails(const QString& signature, const QString& appId)
 {
   QUrl url(getUrl(API_APPDETAILS_ENDPOINT.arg(appId)));
-  if (PlatformIntegration::instance()->snapInstaller()) {
+  if (m_snapSupport && PlatformIntegration::instance()->snapInstaller()) {
     QUrlQuery q(url);
     q.addQueryItem("package_type", "snap,click");
     url.setQuery(q);
   }
+
   QNetworkReply* reply = sendRequest(QNetworkRequest(url));
   parseReply(reply, signature);
 }
@@ -187,7 +190,7 @@ void OpenStoreNetworkManager::getSearch(const QString& signature,
   q.addQueryItem("sort", sort);
   q.addQueryItem("category", category);
   q.addQueryItem("type", filterType);
-  if (PlatformIntegration::instance()->snapInstaller()) {
+  if (m_snapSupport && PlatformIntegration::instance()->snapInstaller()) {
     if (filterPackageType.isEmpty()) {
       q.addQueryItem("package_types", "snap,click");
     } else {
@@ -210,6 +213,12 @@ void OpenStoreNetworkManager::getSearch(const QString& signature,
 void OpenStoreNetworkManager::getCategories(const QString& signature)
 {
   QUrl url(getUrl(API_CATEGORIES_ENDPOINT));
+if (m_snapSupport && PlatformIntegration::instance()->snapInstaller()) {
+    QUrlQuery q(url);
+    q.addQueryItem("package_type", "snap,click");
+    url.setQuery(q);
+  }
+
   QNetworkReply* reply = sendRequest(QNetworkRequest(url));
   parseReply(reply, signature);
 }

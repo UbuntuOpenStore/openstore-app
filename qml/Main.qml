@@ -250,11 +250,18 @@ MainView {
         value: !settings.hideNsfw
     }
 
+    Binding {
+        target: OpenStoreNetworkManager
+        property: "snapSupport"
+        value: settings.snapSupport
+    }
+
     Settings {
         id: settings
         property bool firstStart: true
         property bool hideNsfw: true
         property bool hideSnapWarning: false
+        property bool snapSupport: true
         property string apiKey: ""
 
         Component.onCompleted: OpenStoreNetworkManager.showNsfw = !settings.hideNsfw

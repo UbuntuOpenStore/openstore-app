@@ -163,7 +163,24 @@ Page {
                 */
 
                 Components.SectionDivider {
-                    text: i18n.tr("Parental control")
+                    text: i18n.tr("General")
+                }
+
+                ListItem {
+                    ListItemLayout {
+                        anchors.centerIn: parent
+                        title.text: i18n.tr("Enable snap support")
+
+                        Switch {
+                            id: snapSupportSwitch
+                            SlotsLayout.position: SlotsLayout.Last
+                            checked: settings.snapSupport
+
+                            onClicked: {
+                                settings.snapSupport = checked
+                            }
+                        }
+                    }
                 }
 
                 ListItem {

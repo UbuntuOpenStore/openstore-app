@@ -264,13 +264,12 @@ void SnapPackageItem::fillData(const QVariantMap& json)
     auto request = snapClient->getSnap(snapName);
     request->runSync();
     const auto rev = request->snap()->revision();
-    qDebug() << "rev:" << rev;
     if (rev.startsWith("x"))
       m_installedRevision = 0;
     else
       m_installedRevision = rev.toInt();
-    qDebug() << m_installedVersion << m_installedRevision
-             << isLocalVersionSideloaded() << frameworkSupported();
+      // qDebug() << m_installedVersion << m_installedRevision
+      //          << isLocalVersionSideloaded() << frameworkSupported();
   } else {
     // Silence UI advertising reverts to stable from the store
     m_installedRevision = 1;

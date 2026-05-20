@@ -58,6 +58,7 @@ LocalPackagesModel::LocalPackagesModel(QAbstractListModel* parent)
 {
   connect(PlatformIntegration::instance(), &PlatformIntegration::updated, this, &LocalPackagesModel::refresh);
   connect(PackagesCache::instance(), &PackagesCache::updatingCacheChanged, this, &LocalPackagesModel::refresh);
+  connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::snapSupportChanged, this, &LocalPackagesModel::refresh);
 
   refresh();
 }
@@ -232,7 +233,7 @@ void LocalPackagesModel::refresh()
   }
 
   QSnapdClient* installer = PlatformIntegration::instance()->snapInstaller();
-  if (installer) {
+  if (installer && OpenStoreNetworkManager::instance()->snapSupport()) {
     auto request = installer->getSnaps();
     request->runSync();
     for (int i = 0; i < request->snapCount(); i++) {

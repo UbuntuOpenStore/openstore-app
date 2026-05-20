@@ -38,7 +38,7 @@ class OpenStoreNetworkManager : public QObject
   Q_OBJECT
   Q_PROPERTY(bool networkAccessible READ networkAccessible NOTIFY networkAccessibleChanged)
   Q_PROPERTY(bool showNsfw MEMBER m_showNsfw NOTIFY showNsfwChanged)
-  Q_PROPERTY(bool snapSupport MEMBER m_snapSupport NOTIFY snapSupportChanged)
+  Q_PROPERTY(bool snapSupport READ snapSupport WRITE setSnapSupport NOTIFY snapSupportChanged)
   Q_PROPERTY(bool isDifferentDomain READ isDifferentDomain CONSTANT)
   Q_PROPERTY(QString domain READ getUrl CONSTANT)
 
@@ -54,6 +54,8 @@ public:
   }
 
   bool networkAccessible() const { return m_manager->networkAccessible() != QNetworkAccessManager::NotAccessible; }
+  bool snapSupport() const { return m_snapSupport; }
+  void setSnapSupport(bool value) { if (m_snapSupport != value) { m_snapSupport = value; Q_EMIT snapSupportChanged(); } }
   bool isDifferentDomain() const;
   QString getUrl() const;
   QString getUrl(QString route) const;

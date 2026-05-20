@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-20 03:26+0000\n"
-"PO-Revision-Date: 2026-05-19 08:11+0000\n"
+"PO-Revision-Date: 2026-05-21 14:11+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/et/>\n"
@@ -1194,13 +1194,11 @@ msgstr "Logi välja"
 
 #: ../qml/SettingsPage.qml:166
 msgid "General"
-msgstr ""
+msgstr "Üldseadistused"
 
 #: ../qml/SettingsPage.qml:172
-#, fuzzy
-#| msgid "Get support"
 msgid "Enable snap support"
-msgstr "Vaata kasutajatuge"
+msgstr "Lülita sisse snap-pakettide tugi"
 
 #: ../qml/SettingsPage.qml:189
 msgid "Hide adult-oriented content"

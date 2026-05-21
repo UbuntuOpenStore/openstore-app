@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-20 03:26+0000\n"
-"PO-Revision-Date: 2026-05-19 08:11+0000\n"
+"PO-Revision-Date: 2026-05-21 14:11+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/nl/>\n"
@@ -1186,13 +1186,11 @@ msgstr "Uitloggen"
 
 #: ../qml/SettingsPage.qml:166
 msgid "General"
-msgstr ""
+msgstr "Algemeen"
 
 #: ../qml/SettingsPage.qml:172
-#, fuzzy
-#| msgid "Get support"
 msgid "Enable snap support"
-msgstr "Ondersteuning verkrijgen"
+msgstr "Snapondersteuning inschakelen"
 
 #: ../qml/SettingsPage.qml:189
 msgid "Hide adult-oriented content"

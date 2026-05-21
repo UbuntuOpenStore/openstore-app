@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: Chinese (Simplified) (OpenStore)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-20 03:26+0000\n"
-"PO-Revision-Date: 2025-03-06 08:43+0000\n"
-"Last-Translator: ChenLei <falsecollector@outlook.com>\n"
+"PO-Revision-Date: 2026-05-22 17:11+0000\n"
+"Last-Translator: Poesty Li <poesty7450@gmail.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/open-store-io/openstore-app/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.10.3-dev\n"
+"X-Generator: Weblate 2026.6.dev0\n"
 
 #: ../qml/AppDetailsPage.qml:120 ../qml/AppLocalDetailsPage.qml:35
 msgid "App details"
@@ -56,7 +56,7 @@ msgstr ""
 
 #: ../qml/AppDetailsPage.qml:272
 msgid "This is a Snap package provided by the Snapcraft Store"
-msgstr ""
+msgstr "这是一个由 Snapcraft 商店提供的 Snap 软件包"
 
 #: ../qml/AppDetailsPage.qml:297 ../qml/AppLocalDetailsPage.qml:116
 #: ../qml/Components/HighlightedApp.qml:117
@@ -278,7 +278,7 @@ msgstr "网页视图"
 
 #: ../qml/AppDetailsPage.qml:822 ../qml/AppDetailsPage.qml:830
 msgid "Unknown"
-msgstr ""
+msgstr "未知"
 
 #: ../qml/AppDetailsPage.qml:826
 msgid "Full System Access"
@@ -347,379 +347,367 @@ msgstr "关闭"
 
 #: ../qml/Components/ContentRating.qml:27
 msgid "Cartoon Violence"
-msgstr ""
+msgstr "卡通暴力"
 
 #: ../qml/Components/ContentRating.qml:28
 msgid "Fantasy Violence"
-msgstr ""
+msgstr "幻想暴力"
 
 #: ../qml/Components/ContentRating.qml:29
 msgid "Realistic Violence"
-msgstr ""
+msgstr "现实暴力"
 
 #: ../qml/Components/ContentRating.qml:30
 msgid "Bloodshed"
-msgstr ""
+msgstr "流血"
 
 #: ../qml/Components/ContentRating.qml:31
 msgid "Sexual Violence"
-msgstr ""
+msgstr "性暴力"
 
 #: ../qml/Components/ContentRating.qml:32
-#, fuzzy
-#| msgid "Description"
 msgid "Desecration"
-msgstr "描述"
+msgstr "亵渎"
 
 #: ../qml/Components/ContentRating.qml:33
 msgid "Human Slavery"
-msgstr ""
+msgstr "人类奴隶制"
 
 #: ../qml/Components/ContentRating.qml:34
 msgid "Alcohol"
-msgstr ""
+msgstr "酒精"
 
 #: ../qml/Components/ContentRating.qml:35
 msgid "Narcotics"
-msgstr ""
+msgstr "麻醉药品"
 
 #: ../qml/Components/ContentRating.qml:36
 msgid "Tobacco"
-msgstr ""
+msgstr "烟草"
 
 #: ../qml/Components/ContentRating.qml:37
 msgid "Nudity"
-msgstr ""
+msgstr "裸体"
 
 #: ../qml/Components/ContentRating.qml:38
 msgid "Sexual Themes"
-msgstr ""
+msgstr "性主题"
 
 #: ../qml/Components/ContentRating.qml:39
 msgid "Profanity"
-msgstr ""
+msgstr "脏话"
 
 #: ../qml/Components/ContentRating.qml:40
 msgid "Humor"
-msgstr ""
+msgstr "幽默"
 
 #: ../qml/Components/ContentRating.qml:41
-#, fuzzy
-#| msgid "Description"
 msgid "Discrimination"
-msgstr "描述"
+msgstr "歧视"
 
 #: ../qml/Components/ContentRating.qml:42
 msgid "Online Text Messaging"
-msgstr ""
+msgstr "在线文字消息"
 
 #: ../qml/Components/ContentRating.qml:43
 msgid "Information Sharing"
-msgstr ""
+msgstr "信息分享"
 
 #: ../qml/Components/ContentRating.qml:44
 msgid "Audio & Video Chat"
-msgstr ""
+msgstr "音频和视频聊天"
 
 #: ../qml/Components/ContentRating.qml:45
-#, fuzzy
-#| msgid "Location"
 msgid "Location Sharing"
-msgstr "位置"
+msgstr "位置分享"
 
 #: ../qml/Components/ContentRating.qml:46
-#, fuzzy
-#| msgid "Content Exchange"
 msgid "Contact Sharing"
-msgstr "内容交换"
+msgstr "联系人分享"
 
 #: ../qml/Components/ContentRating.qml:47
-#, fuzzy
-#| msgid "In App Purchases"
 msgid "In-App Purchases"
 msgstr "应用内购买"
 
 #: ../qml/Components/ContentRating.qml:48
 msgid "Advertising"
-msgstr ""
+msgstr "广告"
 
 #: ../qml/Components/ContentRating.qml:49
 msgid "Gambling"
-msgstr ""
+msgstr "赌博"
 
 #: ../qml/Components/ContentRating.qml:54
 msgid "Cartoon characters in unsafe situations"
-msgstr ""
+msgstr "卡通角色处于危险情境中"
 
 #: ../qml/Components/ContentRating.qml:55
 msgid "Cartoon characters in aggressive conflict"
-msgstr ""
+msgstr "卡通角色处于激烈冲突中"
 
 #: ../qml/Components/ContentRating.qml:56
 msgid "Cartoon characters showing graphic violence"
-msgstr ""
+msgstr "卡通角色展示血腥暴力"
 
 #: ../qml/Components/ContentRating.qml:59
 msgid "Fantasy characters in unsafe situations"
-msgstr ""
+msgstr "幻想角色处于危险情境中"
 
 #: ../qml/Components/ContentRating.qml:60
 msgid "Fantasy characters in aggressive conflict"
-msgstr ""
+msgstr "幻想角色处于激烈冲突中"
 
 #: ../qml/Components/ContentRating.qml:61
 msgid "Fantasy characters with graphic violence"
-msgstr ""
+msgstr "幻想角色带有血腥暴力"
 
 #: ../qml/Components/ContentRating.qml:64
 msgid "Realistic characters in unsafe situations"
-msgstr ""
+msgstr "现实角色处于危险情境中"
 
 #: ../qml/Components/ContentRating.qml:65
 msgid "Realistic characters in depictions of aggressive conflict"
-msgstr ""
+msgstr "现实角色处于激烈冲突的描绘中"
 
 #: ../qml/Components/ContentRating.qml:66
 msgid "Realistic characters with graphic violence"
-msgstr ""
+msgstr "带有血腥暴力的现实角色"
 
 #: ../qml/Components/ContentRating.qml:69
 msgid "Unrealistic bloodshed"
-msgstr ""
+msgstr "非真实的流血"
 
 #: ../qml/Components/ContentRating.qml:70
 msgid "Realistic bloodshed"
-msgstr ""
+msgstr "真实的流血"
 
 #: ../qml/Components/ContentRating.qml:71
 msgid "Depictions of bloodshed and the mutilation of body parts"
-msgstr ""
+msgstr "流血和肢体残缺的描绘"
 
 #: ../qml/Components/ContentRating.qml:74
 msgid "Rape or other violent sexual behavior"
-msgstr ""
+msgstr "强奸或其他暴力性行为"
 
 #: ../qml/Components/ContentRating.qml:77
 msgid "Visible dead human remains"
-msgstr ""
+msgstr "可见的死者遗体"
 
 #: ../qml/Components/ContentRating.qml:78
 msgid "Dead human remains that are exposed to the elements"
-msgstr ""
+msgstr "暴露在自然环境中的死者遗体"
 
 #: ../qml/Components/ContentRating.qml:79
 msgid ""
 "Graphic depictions of desecration of human bodies, for example being eaten "
 "by wild animals"
-msgstr ""
+msgstr "对人体亵渎的图形化描绘，例如被野生动物吃掉"
 
 #: ../qml/Components/ContentRating.qml:82
 msgid "Depictions or references to historical slavery"
-msgstr ""
+msgstr "对历史奴隶制的描绘或提及"
 
 #: ../qml/Components/ContentRating.qml:83
 msgid "Depictions of modern-day slavery"
-msgstr ""
+msgstr "对现代奴隶制的描绘"
 
 #: ../qml/Components/ContentRating.qml:84
 msgid "Graphic depictions of modern-day slavery"
-msgstr ""
+msgstr "对现代奴隶制的图形化描绘"
 
 #: ../qml/Components/ContentRating.qml:87
 msgid "References to alcoholic beverages"
-msgstr ""
+msgstr "提及酒精饮料"
 
 #: ../qml/Components/ContentRating.qml:88
 msgid "Use of alcoholic beverages"
-msgstr ""
+msgstr "使用酒精饮料"
 
 #: ../qml/Components/ContentRating.qml:91
 msgid "References to illicit drugs"
-msgstr ""
+msgstr "提及非法药物"
 
 #: ../qml/Components/ContentRating.qml:92
 msgid "Use of illicit drugs"
-msgstr ""
+msgstr "使用非法药物"
 
 #: ../qml/Components/ContentRating.qml:95
 msgid "References to tobacco products"
-msgstr ""
+msgstr "提及烟草制品"
 
 #: ../qml/Components/ContentRating.qml:96
 msgid "Use of tobacco products"
-msgstr ""
+msgstr "使用烟草制品"
 
 #: ../qml/Components/ContentRating.qml:99
 msgid "Brief artistic nudity"
-msgstr ""
+msgstr "短暂的艺术性裸体"
 
 #: ../qml/Components/ContentRating.qml:100
 msgid "Prolonged nudity"
-msgstr ""
+msgstr "长时间的裸体"
 
 #: ../qml/Components/ContentRating.qml:101
 msgid "Explicit nudity showing nipples or sexual organs"
-msgstr ""
+msgstr "显示乳头或性器官的明确裸体"
 
 #: ../qml/Components/ContentRating.qml:104
 msgid "Provocative references or depictions"
-msgstr ""
+msgstr "挑逗性的提及或描绘"
 
 #: ../qml/Components/ContentRating.qml:105
 msgid "Sexual references or depictions"
-msgstr ""
+msgstr "性提及或描绘"
 
 #: ../qml/Components/ContentRating.qml:106
 msgid "Graphic sexual behavior"
-msgstr ""
+msgstr "图形化的性行为"
 
 #: ../qml/Components/ContentRating.qml:109
 msgid "Mild or infrequent use of profanity"
-msgstr ""
+msgstr "轻微或偶尔使用脏话"
 
 #: ../qml/Components/ContentRating.qml:110
 msgid "Moderate use of profanity"
-msgstr ""
+msgstr "适度使用脏话"
 
 #: ../qml/Components/ContentRating.qml:111
 msgid "Strong or frequent use of profanity"
-msgstr ""
+msgstr "强烈或频繁使用脏话"
 
 #: ../qml/Components/ContentRating.qml:114
 msgid "Slapstick humor"
-msgstr ""
+msgstr "闹剧幽默"
 
 #: ../qml/Components/ContentRating.qml:115
 msgid "Vulgar or bathroom humor"
-msgstr ""
+msgstr "粗俗或厕所幽默"
 
 #: ../qml/Components/ContentRating.qml:116
 msgid "Mature or sexual humor"
-msgstr ""
+msgstr "成人或性幽默"
 
 #: ../qml/Components/ContentRating.qml:119
 msgid "Negativity towards a specific group of people, e.g. ethnic jokes"
-msgstr ""
+msgstr "针对特定人群的负面态度，例如种族笑话"
 
 #: ../qml/Components/ContentRating.qml:120
 msgid ""
 "Discrimination designed to cause emotional harm, e.g. racism or homophobia"
-msgstr ""
+msgstr "旨在造成情感伤害的歧视，例如种族主义或恐同"
 
 #: ../qml/Components/ContentRating.qml:121
 msgid "Explicit discrimination based on gender, sexuality, race or religion"
-msgstr ""
+msgstr "基于性别、性取向、种族或宗教的明确歧视"
 
 #: ../qml/Components/ContentRating.qml:124
 msgid "User-to-user interactions without chat functionality"
-msgstr ""
+msgstr "用户之间的互动而不包含聊天功能"
 
 #: ../qml/Components/ContentRating.qml:125
 msgid "Moderated messaging between users"
-msgstr ""
+msgstr "经过管理的用户间消息发送"
 
 #: ../qml/Components/ContentRating.qml:126
 msgid "Uncontrolled chat functionality between users"
-msgstr ""
+msgstr "用户之间不受控制的聊天功能"
 
 #: ../qml/Components/ContentRating.qml:129
 msgid "Using any online API, e.g. a user-counter"
-msgstr ""
+msgstr "使用任何在线 API，例如用户计数器"
 
 #: ../qml/Components/ContentRating.qml:130
 msgid "Sharing diagnostic data not identifiable to the user"
-msgstr ""
+msgstr "分享无法识别用户身份的诊断数据"
 
 #: ../qml/Components/ContentRating.qml:131
 msgid "Sharing information identifiable to the user, e.g. crash dumps"
-msgstr ""
+msgstr "分享可识别用户身份的信息，例如崩溃转储"
 
 #: ../qml/Components/ContentRating.qml:134
 msgid "Moderated audio or video chat between users"
-msgstr ""
+msgstr "经过管理的用户间音频或视频聊天"
 
 #: ../qml/Components/ContentRating.qml:135
 msgid "Uncontrolled audio or video chat between users"
-msgstr ""
+msgstr "用户之间不受控制的音频或视频聊天"
 
 #: ../qml/Components/ContentRating.qml:138
 msgid "Sharing physical location to other users"
-msgstr ""
+msgstr "向其他用户分享物理位置"
 
 #: ../qml/Components/ContentRating.qml:141
 msgid "Sharing contact details with other users"
-msgstr ""
+msgstr "与其他用户分享联系方式"
 
 #: ../qml/Components/ContentRating.qml:144
 msgid "Users are encouraged to donate real money, e.g. using Patreon"
-msgstr ""
+msgstr "鼓励用户捐赠真实货币，例如使用 Patreon"
 
 #: ../qml/Components/ContentRating.qml:145
 msgid ""
 "Ability to spend real money in-app, e.g. buying new content or new levels"
-msgstr ""
+msgstr "在应用内花费真实货币的能力，例如购买新内容或新关卡"
 
 #: ../qml/Components/ContentRating.qml:148
 msgid "Product placement, e.g. billboards in a football game"
-msgstr ""
+msgstr "产品植入，例如足球比赛中的广告牌"
 
 #: ../qml/Components/ContentRating.qml:149
 msgid "Explicit references to specific brands or trademarked products"
-msgstr ""
+msgstr "明确提及特定品牌或商标产品"
 
 #: ../qml/Components/ContentRating.qml:150
 msgid "Users are encouraged to purchase specific real-world items"
-msgstr ""
+msgstr "鼓励用户购买特定的现实世界物品"
 
 #: ../qml/Components/ContentRating.qml:153
 msgid "Gambling on random events using tokens or credits"
-msgstr ""
+msgstr "使用代币或积分对随机事件进行赌博"
 
 #: ../qml/Components/ContentRating.qml:154
 msgid "Gambling using fictional money"
-msgstr ""
+msgstr "使用虚拟货币进行赌博"
 
 #: ../qml/Components/ContentRating.qml:155
 msgid "Gambling using real money"
-msgstr ""
+msgstr "使用真实货币进行赌博"
 
 #: ../qml/Components/ContentRating.qml:160
 msgid "Mild"
-msgstr ""
+msgstr "轻微"
 
 #: ../qml/Components/ContentRating.qml:161
 msgid "Moderate"
-msgstr ""
+msgstr "中等"
 
 #: ../qml/Components/ContentRating.qml:162
 msgid "Intense"
-msgstr ""
+msgstr "强烈"
 
 #: ../qml/Components/ContentRating.qml:213
-#, fuzzy
-#| msgid "Content Exchange"
 msgid "Content Rating"
-msgstr "内容交换"
+msgstr "内容评级"
 
 #: ../qml/Components/ContentRating.qml:270
 msgid "This app has not been rated"
-msgstr ""
+msgstr "该应用尚未被评级"
 
 #: ../qml/Components/ContentRating.qml:271
-#, fuzzy
-#| msgid "All Types"
 msgid "All Ages"
-msgstr "全部类型"
+msgstr "所有年龄段"
 
 #: ../qml/Components/ContentRating.qml:282
 msgid "No concerning content"
-msgstr ""
+msgstr "无令人担忧的内容"
 
 #: ../qml/Components/ContentRating.qml:353
 msgid ""
 "Self reported rating using <a href=\"https://hughsie.github.io/oars/\">Open "
 "Age Rating Service</a>"
 msgstr ""
+"使用<a href=\"https://hughsie.github.io/oars/\">开放年龄评级服务</a>自行报告"
+"的评级"
 
 #: ../qml/Components/HeaderMain.qml:27 ../qml/SettingsPage.qml:29
 msgid "Settings"
@@ -765,7 +753,7 @@ msgstr "帐号提供商"
 #: ../qml/Components/PackageListItem.qml:48
 #: ../qml/Components/PackageTile.qml:93 ../qml/Dialogs/FilterDialog.qml:155
 msgid "Snap"
-msgstr ""
+msgstr "Snap"
 
 #: ../qml/Components/PackageTile.qml:105
 msgid "Update available"
@@ -947,18 +935,16 @@ msgid "Web Apps"
 msgstr "Web应用"
 
 #: ../qml/Dialogs/FilterDialog.qml:145
-#, fuzzy
-#| msgid "Package contents"
 msgid "Package Type"
-msgstr "程序包的内容"
+msgstr "包类型"
 
 #: ../qml/Dialogs/FilterDialog.qml:153 ../qml/Dialogs/FilterDialog.qml:167
 msgid "All"
-msgstr ""
+msgstr "全部"
 
 #: ../qml/Dialogs/FilterDialog.qml:154
 msgid "Click"
-msgstr ""
+msgstr "点击"
 
 #: ../qml/Dialogs/FilterDialog.qml:193
 msgid "Apply"
@@ -1006,17 +992,15 @@ msgstr "发布我的评论"
 msgid ""
 "Not all snaps were designed with Ubuntu Touch in mind and might not work "
 "well."
-msgstr ""
+msgstr "并非所有 snap 都是为 Ubuntu Touch 设计的，可能无法正常工作。"
 
 #: ../qml/Dialogs/SnapWarningDialog.qml:39
 msgid "Don't show this warning again"
-msgstr ""
+msgstr "不再显示此警告"
 
 #: ../qml/Dialogs/SnapWarningDialog.qml:43
-#, fuzzy
-#| msgid "I understand the risks"
 msgid "I understand"
-msgstr "我明白此风险"
+msgstr "我明白"
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
 msgid ""
@@ -1096,10 +1080,8 @@ msgstr "可用的更新(%1)"
 
 #. TRANSLATORS: %1 is the number of installed snap apps
 #: ../qml/InstalledAppsPage.qml:88
-#, fuzzy
-#| msgid "Installed apps (%1)"
 msgid "Installed Snap apps (%1)"
-msgstr "已安装应用(%1)"
+msgstr "已安装的 Snap 应用 (%1)"
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
 #: ../qml/InstalledAppsPage.qml:92
@@ -1171,13 +1153,11 @@ msgstr "注销"
 
 #: ../qml/SettingsPage.qml:166
 msgid "General"
-msgstr ""
+msgstr "一般"
 
 #: ../qml/SettingsPage.qml:172
-#, fuzzy
-#| msgid "Get support"
 msgid "Enable snap support"
-msgstr "获得支持"
+msgstr "启用 snap 支持"
 
 #: ../qml/SettingsPage.qml:189
 msgid "Hide adult-oriented content"

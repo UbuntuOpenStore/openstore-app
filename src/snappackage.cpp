@@ -42,7 +42,7 @@ bool SnapPackageItem::install() const
   if (!installer)
     return false;
 
-  auto request = installer->install(snapName);
+  auto request = installer->install(QSnapdClient::InstallFlag::Classic, snapName);
   QObject::connect(request, &QSnapdRequest::progress, this, [=](){
     const auto change = request->change();
     qint64 totalProgressDone = 0, progressTotal = 0;

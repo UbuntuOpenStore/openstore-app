@@ -145,7 +145,7 @@ public:
   Q_INVOKABLE QString readPaths(int index) { return m_hooks.at(index).readPaths.join(", "); }
   Q_INVOKABLE QString writePaths(int index) { return m_hooks.at(index).writePaths.join(", "); }
   int hooksCount() const { return m_hooks.count(); }
-  bool containsApp() const
+  virtual bool containsApp() const
   {
     Q_FOREACH (const HookStruct& hook, m_hooks) {
       if (hook.hooks & HookDesktop)

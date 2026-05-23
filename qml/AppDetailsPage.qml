@@ -282,14 +282,18 @@ Page {
             }
 
             ListItem {
-                height: units.gu(8)
+                height: (!app.isBusy && app.installed && !app.containsApp) ? 0 : units.gu(8)
 
                 RowLayout {
                     id: buttonsRow
                     anchors.fill: parent
                     anchors.margins: units.gu(2)
                     spacing: units.gu(2)
-                    visible: !PlatformIntegration.clickInstaller.busy && !PackagesCache.updatingCache && app.frameworkSupported
+                    visible: {
+                        return !PlatformIntegration.clickInstaller.busy &&
+                               !PackagesCache.updatingCache &&
+                               app.frameworkSupported;
+                    }
 
                     Button {
                         Layout.fillWidth: true

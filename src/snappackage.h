@@ -32,10 +32,14 @@ public:
   Q_INVOKABLE bool remove() const override;
   Q_INVOKABLE QString appLaunchUrl() const override;
 
+  virtual bool containsApp() const override { return m_containsApp; }
   virtual bool isLocalVersionSideloaded() const override { return false; }
 
 private Q_SLOTS:
   virtual void fillData(const QVariantMap& json) override;
+
+private:
+  mutable bool m_containsApp;
 };
 
 #endif // SNAPPACKAGE_H

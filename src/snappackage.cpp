@@ -23,7 +23,7 @@
 #include <Snapd/App>
 
 SnapPackageItem::SnapPackageItem(const QVariantMap& json, QObject* parent)
-  : PackageItem(json, parent)
+  : PackageItem(json, parent), m_containsApp(false)
 {
   fillData(json);
 }
@@ -42,7 +42,7 @@ bool SnapPackageItem::install() const
   if (!installer)
     return false;
 
-  auto request = installer->install(snapName);
+  auto request = installer->install(QSnapdClient::InstallFlag::Classic, snapName);
   QObject::connect(request, &QSnapdRequest::progress, this, [=](){
     const auto change = request->change();
     qint64 totalProgressDone = 0, progressTotal = 0;
@@ -133,6 +133,7 @@ QString SnapPackageItem::appLaunchUrl() const
     auto snapApp = request->snap()->app(i);
     if (snapApp->desktopFile().isEmpty())
       continue;
+
     return "appid://" + snapName + "/" + snapApp->name() + "/current-user-version";
   }
 
@@ -263,6 +264,14 @@ void SnapPackageItem::fillData(const QVariantMap& json)
     const auto snapName = m_appId.mid(5);
     auto request = snapClient->getSnap(snapName);
     request->runSync();
+    for (int i = 0; i < request->snap()->appCount(); i++) {
+      auto snapApp = request->snap()->app(i);
+      if (!snapApp->desktopFile().isEmpty() && !m_containsApp) {
+        m_containsApp = true;
+        break;
+      }
+    }
+
     const auto rev = request->snap()->revision();
     if (rev.startsWith("x"))
       m_installedRevision = 0;

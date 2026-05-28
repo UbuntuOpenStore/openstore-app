@@ -23,7 +23,12 @@ Component {
     Dialog {
         id: unconfinedWarningDialog
         title: i18n.tr("Warning")
-        text: i18n.tr("This app has access to restricted parts of the system and all of your data. It has the potential break your system. While the OpenStore maintainers have reviewed the code for this app for safety, they are not responsible for anything bad that might happen to your device or data from installing this app.")
+
+        property string packageType: ""
+
+        text: packageType === "snap"
+            ? i18n.tr("This app has access to restricted parts of the system and all of your data. It has the potential to break your system. The OpenStore maintainers have not reviewed the code for this app and they are not responsible for anything bad that might happen to your device or data from installing this app.")
+            : i18n.tr("This app has access to restricted parts of the system and all of your data. It has the potential to break your system. While the OpenStore maintainers have reviewed the code for this app for safety, they are not responsible for anything bad that might happen to your device or data from installing this app.")
 
         signal accepted()
         signal rejected()

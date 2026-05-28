@@ -351,7 +351,7 @@ Page {
                                 });
                             }
                             else if (isUnconfined && !isTrustedApp && !app.installed) {
-                                var popup = PopupUtils.open(unconfinedWarningDialog)
+                                var popup = PopupUtils.open(unconfinedWarningDialog, null, {packageType: app.packageType})
                                 popup.accepted.connect(function() {
                                     app.install();
                                 });

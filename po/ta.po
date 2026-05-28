@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-20 03:26+0000\n"
+"POT-Creation-Date: 2026-05-28 03:26+0000\n"
 "PO-Revision-Date: 2025-06-17 15:01+0000\n"
 "Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/open-store-io/"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "App details"
 msgstr "பயன்பாட்டு விவரங்கள்"
 
-#: ../qml/AppDetailsPage.qml:127 ../qml/AppDetailsPage.qml:443
+#: ../qml/AppDetailsPage.qml:127 ../qml/AppDetailsPage.qml:447
 #: ../qml/AppLocalDetailsPage.qml:42 ../qml/Dialogs/UninstallDialog.qml:33
 msgid "Remove"
 msgstr "அகற்று"
@@ -63,32 +63,32 @@ msgstr ""
 msgid "This is a Snap package provided by the Snapcraft Store"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:297 ../qml/AppLocalDetailsPage.qml:116
+#: ../qml/AppDetailsPage.qml:301 ../qml/AppLocalDetailsPage.qml:116
 #: ../qml/Components/HighlightedApp.qml:117
 msgid "Open"
 msgstr "திற"
 
-#: ../qml/AppDetailsPage.qml:318
+#: ../qml/AppDetailsPage.qml:322
 msgid "The OpenStore is installed!"
 msgstr "ஓபன்ச்டோர் நிறுவப்பட்டுள்ளது!"
 
-#: ../qml/AppDetailsPage.qml:327
+#: ../qml/AppDetailsPage.qml:331
 msgid "Install stable version"
 msgstr "நிலையான பதிப்பை நிறுவவும்"
 
-#: ../qml/AppDetailsPage.qml:330
+#: ../qml/AppDetailsPage.qml:334
 msgid "Upgrade"
 msgstr "மேம்படுத்தல்"
 
-#: ../qml/AppDetailsPage.qml:333
+#: ../qml/AppDetailsPage.qml:337
 msgid "Install"
 msgstr "நிறுவவும்"
 
-#: ../qml/AppDetailsPage.qml:429
+#: ../qml/AppDetailsPage.qml:433
 msgid "This app is not compatible with your system."
 msgstr "இந்த பயன்பாடு உங்கள் கணினியுடன் பொருந்தாது."
 
-#: ../qml/AppDetailsPage.qml:466
+#: ../qml/AppDetailsPage.qml:470
 msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
@@ -96,233 +96,233 @@ msgstr ""
 "இந்த பயன்பாட்டில் கணினியின் தடைசெய்யப்பட்ட பகுதிகள் மற்றும் உங்கள் எல்லா தரவுகளுக்கும் அணுகல் "
 "உள்ளது, விவரங்களுக்கு கீழே காண்க."
 
-#: ../qml/AppDetailsPage.qml:469
+#: ../qml/AppDetailsPage.qml:473
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
 "இந்த பயன்பாட்டில் தடைசெய்யப்பட்ட கணினி தரவுகளுக்கான அணுகல் உள்ளது, விவரங்களுக்கு கீழே "
 "காண்க."
 
-#: ../qml/AppDetailsPage.qml:494
+#: ../qml/AppDetailsPage.qml:498
 msgid "Description"
 msgstr "விவரம்"
 
 #. TRANSLATORS: Title of the changelog section
-#: ../qml/AppDetailsPage.qml:532
+#: ../qml/AppDetailsPage.qml:536
 msgid "What's New"
 msgstr "புதியது என்ன"
 
-#: ../qml/AppDetailsPage.qml:551
+#: ../qml/AppDetailsPage.qml:555
 msgid "Packager/Publisher"
 msgstr "பேக்கேசர்/வெளியீட்டாளர்"
 
-#: ../qml/AppDetailsPage.qml:560 ../qml/AppLocalDetailsPage.qml:150
+#: ../qml/AppDetailsPage.qml:564 ../qml/AppLocalDetailsPage.qml:150
 msgid "Installed version"
 msgstr "நிறுவப்பட்ட பதிப்பு"
 
-#: ../qml/AppDetailsPage.qml:570
+#: ../qml/AppDetailsPage.qml:574
 msgid "Latest available version"
 msgstr "கிடைக்கக்கூடிய அண்மைக் கால பதிப்பு"
 
-#: ../qml/AppDetailsPage.qml:579
+#: ../qml/AppDetailsPage.qml:583
 msgid "First released"
 msgstr "முதலில் வெளியிடப்பட்டது"
 
-#: ../qml/AppDetailsPage.qml:590
+#: ../qml/AppDetailsPage.qml:594
 msgid "Downloads of the latest version"
 msgstr "அண்மைக் கால பதிப்பின் பதிவிறக்கங்கள்"
 
-#: ../qml/AppDetailsPage.qml:599
+#: ../qml/AppDetailsPage.qml:603
 msgid "Total downloads"
 msgstr "மொத்த பதிவிறக்கங்கள்"
 
-#: ../qml/AppDetailsPage.qml:608
+#: ../qml/AppDetailsPage.qml:612
 msgid "License"
 msgstr "உரிமம்"
 
-#: ../qml/AppDetailsPage.qml:609
+#: ../qml/AppDetailsPage.qml:613
 msgid "N/A"
 msgstr "இதற்கில்லை"
 
-#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:231
+#: ../qml/AppDetailsPage.qml:625 ../qml/SettingsPage.qml:231
 msgid "Source Code"
 msgstr "மூலக் குறியீடு"
 
-#: ../qml/AppDetailsPage.qml:634
+#: ../qml/AppDetailsPage.qml:638
 msgid "Get support for this app"
 msgstr "இந்த பயன்பாட்டிற்கான ஆதரவைப் பெறுங்கள்"
 
-#: ../qml/AppDetailsPage.qml:647
+#: ../qml/AppDetailsPage.qml:651
 msgid "Donate to support this app"
 msgstr "இந்த பயன்பாட்டை ஆதரிக்க நன்கொடை"
 
-#: ../qml/AppDetailsPage.qml:660
+#: ../qml/AppDetailsPage.qml:664
 msgid "Help translate this app"
 msgstr "இந்த பயன்பாட்டை மொழிபெயர்க்க உதவுங்கள்"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
-#: ../qml/AppDetailsPage.qml:677
+#: ../qml/AppDetailsPage.qml:681
 msgid "More from %1"
 msgstr "%1 இலிருந்து மேலும்"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: ../qml/AppDetailsPage.qml:692
+#: ../qml/AppDetailsPage.qml:696
 msgid "Other apps in %1"
 msgstr "%1 இல் உள்ள பிற பயன்பாடுகள்"
 
-#: ../qml/AppDetailsPage.qml:703
+#: ../qml/AppDetailsPage.qml:707
 msgid "Package contents"
 msgstr "தொகுப்பு உள்ளடக்கங்கள்"
 
-#: ../qml/AppDetailsPage.qml:790
+#: ../qml/AppDetailsPage.qml:794
 msgid "Permissions"
 msgstr "அனுமதிகள்"
 
-#: ../qml/AppDetailsPage.qml:795
+#: ../qml/AppDetailsPage.qml:799
 msgid "Accounts"
 msgstr "கணக்குகள்"
 
-#: ../qml/AppDetailsPage.qml:796
+#: ../qml/AppDetailsPage.qml:800
 msgid "Audio"
 msgstr "ஆடியோ"
 
-#: ../qml/AppDetailsPage.qml:797
+#: ../qml/AppDetailsPage.qml:801
 msgid "Bluetooth"
 msgstr "ஊடலை"
 
-#: ../qml/AppDetailsPage.qml:798
+#: ../qml/AppDetailsPage.qml:802
 msgid "Calendar"
 msgstr "நாட்காட்டி"
 
-#: ../qml/AppDetailsPage.qml:799
+#: ../qml/AppDetailsPage.qml:803
 msgid "Camera"
 msgstr "கேமரா"
 
-#: ../qml/AppDetailsPage.qml:800
+#: ../qml/AppDetailsPage.qml:804
 msgid "Connectivity"
 msgstr "இணைப்பு"
 
-#: ../qml/AppDetailsPage.qml:801
+#: ../qml/AppDetailsPage.qml:805
 msgid "Contacts"
 msgstr "தொடர்புகள்"
 
-#: ../qml/AppDetailsPage.qml:802
+#: ../qml/AppDetailsPage.qml:806
 msgid "Content Exchange Source"
 msgstr "உள்ளடக்க பரிமாற்ற மூல"
 
-#: ../qml/AppDetailsPage.qml:803
+#: ../qml/AppDetailsPage.qml:807
 msgid "Content Exchange"
 msgstr "உள்ளடக்க பரிமாற்றம்"
 
-#: ../qml/AppDetailsPage.qml:804
+#: ../qml/AppDetailsPage.qml:808
 msgid "Debug"
 msgstr "பிழைத்திருத்தம்"
 
-#: ../qml/AppDetailsPage.qml:805
+#: ../qml/AppDetailsPage.qml:809
 msgid "History"
 msgstr "வரலாறு"
 
-#: ../qml/AppDetailsPage.qml:806
+#: ../qml/AppDetailsPage.qml:810
 msgid "In App Purchases"
 msgstr "பயன்பாட்டு வாங்குதல்களில்"
 
-#: ../qml/AppDetailsPage.qml:807
+#: ../qml/AppDetailsPage.qml:811
 msgid "Keep Display On"
 msgstr "காட்சியைத் தொடருங்கள்"
 
-#: ../qml/AppDetailsPage.qml:808
+#: ../qml/AppDetailsPage.qml:812
 msgid "Location"
 msgstr "இடம்"
 
-#: ../qml/AppDetailsPage.qml:809
+#: ../qml/AppDetailsPage.qml:813
 msgid "Microphone"
 msgstr "ஒலிவாங்கி"
 
-#: ../qml/AppDetailsPage.qml:810
+#: ../qml/AppDetailsPage.qml:814
 msgid "Read Music Files"
 msgstr "இசை கோப்புகளைப் படியுங்கள்"
 
-#: ../qml/AppDetailsPage.qml:811
+#: ../qml/AppDetailsPage.qml:815
 msgid "Music Files"
 msgstr "இசை கோப்புகள்"
 
-#: ../qml/AppDetailsPage.qml:812
+#: ../qml/AppDetailsPage.qml:816
 msgid "Networking"
 msgstr "நெட்வொர்க்கிங்"
 
-#: ../qml/AppDetailsPage.qml:813
+#: ../qml/AppDetailsPage.qml:817
 msgid "Read Picture Files"
 msgstr "படக் கோப்புகளைப் படியுங்கள்"
 
-#: ../qml/AppDetailsPage.qml:814
+#: ../qml/AppDetailsPage.qml:818
 msgid "Picture Files"
 msgstr "படக் கோப்புகள்"
 
-#: ../qml/AppDetailsPage.qml:815
+#: ../qml/AppDetailsPage.qml:819
 msgid "Push Notifications"
 msgstr "அறிவிப்புகளை அழுத்தவும்"
 
-#: ../qml/AppDetailsPage.qml:816
+#: ../qml/AppDetailsPage.qml:820
 msgid "Sensors"
 msgstr "சென்சார்கள்"
 
-#: ../qml/AppDetailsPage.qml:817
+#: ../qml/AppDetailsPage.qml:821
 msgid "User Metrics"
 msgstr "பயனர் அளவீடுகள்"
 
-#: ../qml/AppDetailsPage.qml:818
+#: ../qml/AppDetailsPage.qml:822
 msgid "Read Video Files"
 msgstr "வீடியோ கோப்புகளைப் படியுங்கள்"
 
-#: ../qml/AppDetailsPage.qml:819
+#: ../qml/AppDetailsPage.qml:823
 msgid "Video Files"
 msgstr "வீடியோ கோப்புகள்"
 
-#: ../qml/AppDetailsPage.qml:820
+#: ../qml/AppDetailsPage.qml:824
 msgid "Video"
 msgstr "ஒளிதோற்றம்"
 
-#: ../qml/AppDetailsPage.qml:821
+#: ../qml/AppDetailsPage.qml:825
 msgid "Webview"
 msgstr "வெப்வியூ"
 
-#: ../qml/AppDetailsPage.qml:822 ../qml/AppDetailsPage.qml:830
+#: ../qml/AppDetailsPage.qml:826 ../qml/AppDetailsPage.qml:834
 msgid "Unknown"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:826
+#: ../qml/AppDetailsPage.qml:830
 msgid "Full System Access"
 msgstr "முழு கணினி அணுகல்"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: ../qml/AppDetailsPage.qml:835
+#: ../qml/AppDetailsPage.qml:839
 msgid "none required"
 msgstr "எதுவும் தேவையில்லை"
 
-#: ../qml/AppDetailsPage.qml:871
+#: ../qml/AppDetailsPage.qml:875
 msgid "Read paths"
 msgstr "பாதைகளைப் படியுங்கள்"
 
-#: ../qml/AppDetailsPage.qml:888
+#: ../qml/AppDetailsPage.qml:892
 msgid "Write paths"
 msgstr "பாதைகளை எழுதுங்கள்"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: ../qml/AppDetailsPage.qml:963
+#: ../qml/AppDetailsPage.qml:967
 msgid "%1 GB"
 msgstr "%1 சிபி"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: ../qml/AppDetailsPage.qml:968
+#: ../qml/AppDetailsPage.qml:972
 msgid "%1 MB"
 msgstr "%1 எம்பி"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: ../qml/AppDetailsPage.qml:973
+#: ../qml/AppDetailsPage.qml:977
 msgid "%1 kB"
 msgstr "%1 கி.பை"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: ../qml/AppDetailsPage.qml:976
+#: ../qml/AppDetailsPage.qml:980
 msgid "%1 bytes"
 msgstr "%1 பைட்டுகள்"
 
@@ -825,7 +825,7 @@ msgstr "சமர்ப்பிக்கவும்"
 #: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:201
 #: ../qml/Dialogs/InstallWarningDialog.qml:61
 #: ../qml/Dialogs/SnapWarningDialog.qml:55
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:46
 #: ../qml/Dialogs/UninstallDialog.qml:42
 msgid "Cancel"
 msgstr "ரத்துசெய்"
@@ -991,7 +991,7 @@ msgstr ""
 "விளைவிக்கும். இந்த பயன்பாட்டை நம்பகமான மூலத்திலிருந்து பெற்றால் மட்டுமே நிறுவவும்."
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:51
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:37
 msgid "I understand the risks"
 msgstr "அபாயங்களை நான் புரிந்துகொள்கிறேன்"
 
@@ -1032,11 +1032,38 @@ msgstr ""
 msgid "I understand"
 msgstr "அபாயங்களை நான் புரிந்துகொள்கிறேன்"
 
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:30
+#, fuzzy
+#| msgid ""
+#| "This app has access to restricted parts of the system and all of your "
+#| "data. It has the potential break your system. While the OpenStore "
+#| "maintainers have reviewed the code for this app for safety, they are not "
+#| "responsible for anything bad that might happen to your device or data "
+#| "from installing this app."
 msgid ""
 "This app has access to restricted parts of the system and all of your data. "
-"It has the potential break your system. While the OpenStore maintainers have "
-"reviewed the code for this app for safety, they are not responsible for "
+"It has the potential to break your system. The OpenStore maintainers have "
+"not reviewed the code for this app and they are not responsible for anything "
+"bad that might happen to your device or data from installing this app."
+msgstr ""
+"இந்த பயன்பாட்டில் கணினியின் தடைசெய்யப்பட்ட பகுதிகள் மற்றும் உங்கள் எல்லா தரவுகளுக்கும் அணுகல் "
+"உள்ளது. இது உங்கள் கணினியை உடைக்கும் திறன் கொண்டது. ஓபன்ச்டோர் பராமரிப்பாளர்கள் இந்த "
+"பயன்பாட்டிற்கான குறியீட்டை பாதுகாப்பிற்காக மதிப்பாய்வு செய்துள்ள நிலையில், இந்த பயன்பாட்டை "
+"நிறுவுவதிலிருந்து உங்கள் சாதனம் அல்லது தரவுகளுக்கு ஏற்படக்கூடிய மோசமான எதற்கும் அவர்கள் "
+"பொறுப்பல்ல."
+
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:31
+#, fuzzy
+#| msgid ""
+#| "This app has access to restricted parts of the system and all of your "
+#| "data. It has the potential break your system. While the OpenStore "
+#| "maintainers have reviewed the code for this app for safety, they are not "
+#| "responsible for anything bad that might happen to your device or data "
+#| "from installing this app."
+msgid ""
+"This app has access to restricted parts of the system and all of your data. "
+"It has the potential to break your system. While the OpenStore maintainers "
+"have reviewed the code for this app for safety, they are not responsible for "
 "anything bad that might happen to your device or data from installing this "
 "app."
 msgstr ""

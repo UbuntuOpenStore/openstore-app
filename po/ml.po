@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-20 03:26+0000\n"
+"POT-Creation-Date: 2026-05-28 03:26+0000\n"
 "PO-Revision-Date: 2022-06-24 23:29+0000\n"
 "Last-Translator: Quilty weavy <quiltywea@gmail.com>\n"
 "Language-Team: Malayalam <https://translate.ubports.com/projects/openstore/"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "App details"
 msgstr "വിശദാംശങ്ങൾ"
 
-#: ../qml/AppDetailsPage.qml:127 ../qml/AppDetailsPage.qml:443
+#: ../qml/AppDetailsPage.qml:127 ../qml/AppDetailsPage.qml:447
 #: ../qml/AppLocalDetailsPage.qml:42 ../qml/Dialogs/UninstallDialog.qml:33
 msgid "Remove"
 msgstr "നീക്കം ചെയ്യുക"
@@ -65,32 +65,32 @@ msgstr ""
 msgid "This is a Snap package provided by the Snapcraft Store"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:297 ../qml/AppLocalDetailsPage.qml:116
+#: ../qml/AppDetailsPage.qml:301 ../qml/AppLocalDetailsPage.qml:116
 #: ../qml/Components/HighlightedApp.qml:117
 msgid "Open"
 msgstr "തുറക്കുക"
 
-#: ../qml/AppDetailsPage.qml:318
+#: ../qml/AppDetailsPage.qml:322
 msgid "The OpenStore is installed!"
 msgstr "ഓപ്പൺസ്റ്റോർ ഇൻസ്റ്റാൾ ചെയ്തു!"
 
-#: ../qml/AppDetailsPage.qml:327
+#: ../qml/AppDetailsPage.qml:331
 msgid "Install stable version"
 msgstr "സ്ഥിരമായ പതിപ്പ് ഇൻസ്റ്റാൾ ചെയ്യുക"
 
-#: ../qml/AppDetailsPage.qml:330
+#: ../qml/AppDetailsPage.qml:334
 msgid "Upgrade"
 msgstr "നവീകരിക്കുക"
 
-#: ../qml/AppDetailsPage.qml:333
+#: ../qml/AppDetailsPage.qml:337
 msgid "Install"
 msgstr "സ്ഥാപിക്കുക"
 
-#: ../qml/AppDetailsPage.qml:429
+#: ../qml/AppDetailsPage.qml:433
 msgid "This app is not compatible with your system."
 msgstr "ഈ ആപ്പ് നിങ്ങളുടെ സിസ്റ്റവുമായി പൊരുത്തപ്പെടുന്നില്ല."
 
-#: ../qml/AppDetailsPage.qml:466
+#: ../qml/AppDetailsPage.qml:470
 msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
@@ -98,231 +98,231 @@ msgstr ""
 "ഈ ആപ്പിന് സിസ്റ്റത്തിന്റെ നിയന്ത്രിത ഭാഗങ്ങളിലേക്കും നിങ്ങളുടെ എല്ലാ ഡാറ്റയിലേക്കും ആക്‌സസ് ഉണ്ട്, "
 "വിശദാംശങ്ങൾക്ക് ചുവടെ കാണുക."
 
-#: ../qml/AppDetailsPage.qml:469
+#: ../qml/AppDetailsPage.qml:473
 msgid "This app has access to restricted system data, see below for details."
 msgstr "ഈ ആപ്പിന് നിയന്ത്രിത സിസ്റ്റം ഡാറ്റയിലേക്ക് ആക്‌സസ് ഉണ്ട്, വിശദാംശങ്ങൾക്ക് ചുവടെ കാണുക."
 
-#: ../qml/AppDetailsPage.qml:494
+#: ../qml/AppDetailsPage.qml:498
 msgid "Description"
 msgstr "വിവരണം"
 
 #. TRANSLATORS: Title of the changelog section
-#: ../qml/AppDetailsPage.qml:532
+#: ../qml/AppDetailsPage.qml:536
 msgid "What's New"
 msgstr "പുതിയതെന്താണ്"
 
-#: ../qml/AppDetailsPage.qml:551
+#: ../qml/AppDetailsPage.qml:555
 msgid "Packager/Publisher"
 msgstr "പാക്കേജർ/പ്രസാധകൻ"
 
-#: ../qml/AppDetailsPage.qml:560 ../qml/AppLocalDetailsPage.qml:150
+#: ../qml/AppDetailsPage.qml:564 ../qml/AppLocalDetailsPage.qml:150
 msgid "Installed version"
 msgstr "ഇൻസ്റ്റാൾ ചെയ്ത പതിപ്പ്"
 
-#: ../qml/AppDetailsPage.qml:570
+#: ../qml/AppDetailsPage.qml:574
 msgid "Latest available version"
 msgstr "ലഭ്യമായ ഏറ്റവും പുതിയ പതിപ്പ്"
 
-#: ../qml/AppDetailsPage.qml:579
+#: ../qml/AppDetailsPage.qml:583
 msgid "First released"
 msgstr "ആദ്യം പുറത്തിറങ്ങി"
 
-#: ../qml/AppDetailsPage.qml:590
+#: ../qml/AppDetailsPage.qml:594
 msgid "Downloads of the latest version"
 msgstr "ഏറ്റവും പുതിയ പതിപ്പിന്റെ ഡൗൺലോഡുകൾ"
 
-#: ../qml/AppDetailsPage.qml:599
+#: ../qml/AppDetailsPage.qml:603
 msgid "Total downloads"
 msgstr "ആകെ ഡൗൺലോഡുകൾ"
 
-#: ../qml/AppDetailsPage.qml:608
+#: ../qml/AppDetailsPage.qml:612
 msgid "License"
 msgstr "ലൈസൻസ്"
 
-#: ../qml/AppDetailsPage.qml:609
+#: ../qml/AppDetailsPage.qml:613
 msgid "N/A"
 msgstr "ബാധകമല്ല"
 
-#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:231
+#: ../qml/AppDetailsPage.qml:625 ../qml/SettingsPage.qml:231
 msgid "Source Code"
 msgstr "ഉറവിട കോഡ്"
 
-#: ../qml/AppDetailsPage.qml:634
+#: ../qml/AppDetailsPage.qml:638
 msgid "Get support for this app"
 msgstr "ഈ ആപ്പിന് പിന്തുണ നേടൂ"
 
-#: ../qml/AppDetailsPage.qml:647
+#: ../qml/AppDetailsPage.qml:651
 msgid "Donate to support this app"
 msgstr "ഈ ആപ്പിനെ പിന്തുണയ്ക്കാൻ സംഭാവന നൽകുക"
 
-#: ../qml/AppDetailsPage.qml:660
+#: ../qml/AppDetailsPage.qml:664
 msgid "Help translate this app"
 msgstr ""
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
-#: ../qml/AppDetailsPage.qml:677
+#: ../qml/AppDetailsPage.qml:681
 msgid "More from %1"
 msgstr "% 1-ൽ നിന്ന് കൂടുതൽ"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: ../qml/AppDetailsPage.qml:692
+#: ../qml/AppDetailsPage.qml:696
 msgid "Other apps in %1"
 msgstr "% 1-ലെ മറ്റ് ആപ്പുകൾ"
 
-#: ../qml/AppDetailsPage.qml:703
+#: ../qml/AppDetailsPage.qml:707
 msgid "Package contents"
 msgstr "പാക്കേജ് ഉള്ളടക്കങ്ങൾ"
 
-#: ../qml/AppDetailsPage.qml:790
+#: ../qml/AppDetailsPage.qml:794
 msgid "Permissions"
 msgstr "അനുമതികൾ"
 
-#: ../qml/AppDetailsPage.qml:795
+#: ../qml/AppDetailsPage.qml:799
 msgid "Accounts"
 msgstr "അക്കൗണ്ടുകൾ"
 
-#: ../qml/AppDetailsPage.qml:796
+#: ../qml/AppDetailsPage.qml:800
 msgid "Audio"
 msgstr "ഓഡിയോ"
 
-#: ../qml/AppDetailsPage.qml:797
+#: ../qml/AppDetailsPage.qml:801
 msgid "Bluetooth"
 msgstr "ബ്ലൂടൂത്ത്"
 
-#: ../qml/AppDetailsPage.qml:798
+#: ../qml/AppDetailsPage.qml:802
 msgid "Calendar"
 msgstr "കലണ്ടർ"
 
-#: ../qml/AppDetailsPage.qml:799
+#: ../qml/AppDetailsPage.qml:803
 msgid "Camera"
 msgstr "ക്യാമറ"
 
-#: ../qml/AppDetailsPage.qml:800
+#: ../qml/AppDetailsPage.qml:804
 msgid "Connectivity"
 msgstr "കണക്റ്റിവിറ്റി"
 
-#: ../qml/AppDetailsPage.qml:801
+#: ../qml/AppDetailsPage.qml:805
 msgid "Contacts"
 msgstr "ബന്ധങ്ങൾ"
 
-#: ../qml/AppDetailsPage.qml:802
+#: ../qml/AppDetailsPage.qml:806
 msgid "Content Exchange Source"
 msgstr "ഉള്ളടക്ക എക്സ്ചേഞ്ച് ഉറവിടം"
 
-#: ../qml/AppDetailsPage.qml:803
+#: ../qml/AppDetailsPage.qml:807
 msgid "Content Exchange"
 msgstr "ഉള്ളടക്ക കൈമാറ്റം"
 
-#: ../qml/AppDetailsPage.qml:804
+#: ../qml/AppDetailsPage.qml:808
 msgid "Debug"
 msgstr "ഡീബഗ് ചെയ്യുക"
 
-#: ../qml/AppDetailsPage.qml:805
+#: ../qml/AppDetailsPage.qml:809
 msgid "History"
 msgstr "ചരിത്രം"
 
-#: ../qml/AppDetailsPage.qml:806
+#: ../qml/AppDetailsPage.qml:810
 msgid "In App Purchases"
 msgstr "ആപ്പ് വാങ്ങലുകളിൽ"
 
-#: ../qml/AppDetailsPage.qml:807
+#: ../qml/AppDetailsPage.qml:811
 msgid "Keep Display On"
 msgstr "ഡിസ്പ്ലേ ഓണാക്കി സൂക്ഷിക്കുക"
 
-#: ../qml/AppDetailsPage.qml:808
+#: ../qml/AppDetailsPage.qml:812
 msgid "Location"
 msgstr "സ്ഥാനം"
 
-#: ../qml/AppDetailsPage.qml:809
+#: ../qml/AppDetailsPage.qml:813
 msgid "Microphone"
 msgstr "മൈക്രോഫോൺ"
 
-#: ../qml/AppDetailsPage.qml:810
+#: ../qml/AppDetailsPage.qml:814
 msgid "Read Music Files"
 msgstr "സംഗീത ഫയലുകൾ വായിക്കുക"
 
-#: ../qml/AppDetailsPage.qml:811
+#: ../qml/AppDetailsPage.qml:815
 msgid "Music Files"
 msgstr "സംഗീത ഫയലുകൾ"
 
-#: ../qml/AppDetailsPage.qml:812
+#: ../qml/AppDetailsPage.qml:816
 msgid "Networking"
 msgstr "നെറ്റ്വർക്കിംഗ്"
 
-#: ../qml/AppDetailsPage.qml:813
+#: ../qml/AppDetailsPage.qml:817
 msgid "Read Picture Files"
 msgstr "ചിത്ര ഫയലുകൾ വായിക്കുക"
 
-#: ../qml/AppDetailsPage.qml:814
+#: ../qml/AppDetailsPage.qml:818
 msgid "Picture Files"
 msgstr "ചിത്ര ഫയലുകൾ"
 
-#: ../qml/AppDetailsPage.qml:815
+#: ../qml/AppDetailsPage.qml:819
 msgid "Push Notifications"
 msgstr "പുഷ് അറിയിപ്പുകൾ"
 
-#: ../qml/AppDetailsPage.qml:816
+#: ../qml/AppDetailsPage.qml:820
 msgid "Sensors"
 msgstr "സെൻസറുകൾ"
 
-#: ../qml/AppDetailsPage.qml:817
+#: ../qml/AppDetailsPage.qml:821
 msgid "User Metrics"
 msgstr "ഉപയോക്തൃ മെട്രിക്സ്"
 
-#: ../qml/AppDetailsPage.qml:818
+#: ../qml/AppDetailsPage.qml:822
 msgid "Read Video Files"
 msgstr "വീഡിയോ ഫയലുകൾ വായിക്കുക"
 
-#: ../qml/AppDetailsPage.qml:819
+#: ../qml/AppDetailsPage.qml:823
 msgid "Video Files"
 msgstr "വീഡിയോ ഫയലുകൾ"
 
-#: ../qml/AppDetailsPage.qml:820
+#: ../qml/AppDetailsPage.qml:824
 msgid "Video"
 msgstr "വീഡിയോ"
 
-#: ../qml/AppDetailsPage.qml:821
+#: ../qml/AppDetailsPage.qml:825
 msgid "Webview"
 msgstr "വെബ്വ്യൂ"
 
-#: ../qml/AppDetailsPage.qml:822 ../qml/AppDetailsPage.qml:830
+#: ../qml/AppDetailsPage.qml:826 ../qml/AppDetailsPage.qml:834
 msgid "Unknown"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:826
+#: ../qml/AppDetailsPage.qml:830
 msgid "Full System Access"
 msgstr "മുഴുവൻ സിസ്റ്റം ആക്സസ്"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: ../qml/AppDetailsPage.qml:835
+#: ../qml/AppDetailsPage.qml:839
 msgid "none required"
 msgstr "ഒന്നും ആവശ്യമില്ല"
 
-#: ../qml/AppDetailsPage.qml:871
+#: ../qml/AppDetailsPage.qml:875
 msgid "Read paths"
 msgstr "പാതകൾ വായിക്കുക"
 
-#: ../qml/AppDetailsPage.qml:888
+#: ../qml/AppDetailsPage.qml:892
 msgid "Write paths"
 msgstr "പാതകൾ എഴുതുക"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: ../qml/AppDetailsPage.qml:963
+#: ../qml/AppDetailsPage.qml:967
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: ../qml/AppDetailsPage.qml:968
+#: ../qml/AppDetailsPage.qml:972
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: ../qml/AppDetailsPage.qml:973
+#: ../qml/AppDetailsPage.qml:977
 msgid "%1 kB"
 msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: ../qml/AppDetailsPage.qml:976
+#: ../qml/AppDetailsPage.qml:980
 msgid "%1 bytes"
 msgstr "%1 ബൈറ്റുകൾ"
 
@@ -821,7 +821,7 @@ msgstr ""
 #: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:201
 #: ../qml/Dialogs/InstallWarningDialog.qml:61
 #: ../qml/Dialogs/SnapWarningDialog.qml:55
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:46
 #: ../qml/Dialogs/UninstallDialog.qml:42
 msgid "Cancel"
 msgstr ""
@@ -982,7 +982,7 @@ msgid ""
 msgstr ""
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:51
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:37
 msgid "I understand the risks"
 msgstr ""
 
@@ -1018,11 +1018,19 @@ msgstr ""
 msgid "I understand"
 msgstr ""
 
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:30
 msgid ""
 "This app has access to restricted parts of the system and all of your data. "
-"It has the potential break your system. While the OpenStore maintainers have "
-"reviewed the code for this app for safety, they are not responsible for "
+"It has the potential to break your system. The OpenStore maintainers have "
+"not reviewed the code for this app and they are not responsible for anything "
+"bad that might happen to your device or data from installing this app."
+msgstr ""
+
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:31
+msgid ""
+"This app has access to restricted parts of the system and all of your data. "
+"It has the potential to break your system. While the OpenStore maintainers "
+"have reviewed the code for this app for safety, they are not responsible for "
 "anything bad that might happen to your device or data from installing this "
 "app."
 msgstr ""

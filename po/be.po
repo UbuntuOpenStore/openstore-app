@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-20 03:26+0000\n"
+"POT-Creation-Date: 2026-05-28 03:26+0000\n"
 "PO-Revision-Date: 2020-12-04 14:56+0000\n"
 "Last-Translator: Zmicer <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian <https://translate.ubports.com/projects/openstore/"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "App details"
 msgstr "Пра праграму"
 
-#: ../qml/AppDetailsPage.qml:127 ../qml/AppDetailsPage.qml:443
+#: ../qml/AppDetailsPage.qml:127 ../qml/AppDetailsPage.qml:447
 #: ../qml/AppLocalDetailsPage.qml:42 ../qml/Dialogs/UninstallDialog.qml:33
 msgid "Remove"
 msgstr "Выдаліць"
@@ -66,32 +66,32 @@ msgstr ""
 msgid "This is a Snap package provided by the Snapcraft Store"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:297 ../qml/AppLocalDetailsPage.qml:116
+#: ../qml/AppDetailsPage.qml:301 ../qml/AppLocalDetailsPage.qml:116
 #: ../qml/Components/HighlightedApp.qml:117
 msgid "Open"
 msgstr "Адкрыць"
 
-#: ../qml/AppDetailsPage.qml:318
+#: ../qml/AppDetailsPage.qml:322
 msgid "The OpenStore is installed!"
 msgstr "OpenStore усталяваная!"
 
-#: ../qml/AppDetailsPage.qml:327
+#: ../qml/AppDetailsPage.qml:331
 msgid "Install stable version"
 msgstr "Усталяваць стабільную версію"
 
-#: ../qml/AppDetailsPage.qml:330
+#: ../qml/AppDetailsPage.qml:334
 msgid "Upgrade"
 msgstr "Абнавіць"
 
-#: ../qml/AppDetailsPage.qml:333
+#: ../qml/AppDetailsPage.qml:337
 msgid "Install"
 msgstr "Усталяваць"
 
-#: ../qml/AppDetailsPage.qml:429
+#: ../qml/AppDetailsPage.qml:433
 msgid "This app is not compatible with your system."
 msgstr "Гэтая праграма несумяшчальная з вашай сістэмай."
 
-#: ../qml/AppDetailsPage.qml:466
+#: ../qml/AppDetailsPage.qml:470
 msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
@@ -99,235 +99,235 @@ msgstr ""
 "У гэтай праграмы ёсць доступ да закрытых частак сістэмы і ўсіх вашых даных. "
 "Падрабязней глядзіце ніжэй."
 
-#: ../qml/AppDetailsPage.qml:469
+#: ../qml/AppDetailsPage.qml:473
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
 "У гэтай праграмы ёсць доступ да закрытых сістэмных даных. Падрабязней "
 "глядзіце ніжэй."
 
-#: ../qml/AppDetailsPage.qml:494
+#: ../qml/AppDetailsPage.qml:498
 msgid "Description"
 msgstr "Апісанне"
 
 #. TRANSLATORS: Title of the changelog section
-#: ../qml/AppDetailsPage.qml:532
+#: ../qml/AppDetailsPage.qml:536
 msgid "What's New"
 msgstr "Што новага"
 
-#: ../qml/AppDetailsPage.qml:551
+#: ../qml/AppDetailsPage.qml:555
 msgid "Packager/Publisher"
 msgstr "Аўтар / Выдавец"
 
-#: ../qml/AppDetailsPage.qml:560 ../qml/AppLocalDetailsPage.qml:150
+#: ../qml/AppDetailsPage.qml:564 ../qml/AppLocalDetailsPage.qml:150
 msgid "Installed version"
 msgstr "Усталяваная версія"
 
-#: ../qml/AppDetailsPage.qml:570
+#: ../qml/AppDetailsPage.qml:574
 msgid "Latest available version"
 msgstr "Апошняя даступная версія"
 
-#: ../qml/AppDetailsPage.qml:579
+#: ../qml/AppDetailsPage.qml:583
 msgid "First released"
 msgstr "Дата першай публікацыі"
 
-#: ../qml/AppDetailsPage.qml:590
+#: ../qml/AppDetailsPage.qml:594
 msgid "Downloads of the latest version"
 msgstr "Спампоўванне апошняй версіі"
 
-#: ../qml/AppDetailsPage.qml:599
+#: ../qml/AppDetailsPage.qml:603
 msgid "Total downloads"
 msgstr "Усе спампоўванні"
 
-#: ../qml/AppDetailsPage.qml:608
+#: ../qml/AppDetailsPage.qml:612
 msgid "License"
 msgstr "Ліцэнзія"
 
-#: ../qml/AppDetailsPage.qml:609
+#: ../qml/AppDetailsPage.qml:613
 msgid "N/A"
 msgstr "Няма"
 
-#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:231
+#: ../qml/AppDetailsPage.qml:625 ../qml/SettingsPage.qml:231
 msgid "Source Code"
 msgstr "Зыходны код"
 
-#: ../qml/AppDetailsPage.qml:634
+#: ../qml/AppDetailsPage.qml:638
 msgid "Get support for this app"
 msgstr "Атрымаць падтрымку па гэтай праграме"
 
-#: ../qml/AppDetailsPage.qml:647
+#: ../qml/AppDetailsPage.qml:651
 msgid "Donate to support this app"
 msgstr "Ахвяраванне на распрацоўку"
 
-#: ../qml/AppDetailsPage.qml:660
+#: ../qml/AppDetailsPage.qml:664
 #, fuzzy
 #| msgid "Rate this app"
 msgid "Help translate this app"
 msgstr "Ацаніць праграму"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
-#: ../qml/AppDetailsPage.qml:677
+#: ../qml/AppDetailsPage.qml:681
 msgid "More from %1"
 msgstr "Яшчэ ад %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: ../qml/AppDetailsPage.qml:692
+#: ../qml/AppDetailsPage.qml:696
 msgid "Other apps in %1"
 msgstr "Іншыя праграмы ў %1"
 
-#: ../qml/AppDetailsPage.qml:703
+#: ../qml/AppDetailsPage.qml:707
 msgid "Package contents"
 msgstr "Змесціва"
 
-#: ../qml/AppDetailsPage.qml:790
+#: ../qml/AppDetailsPage.qml:794
 msgid "Permissions"
 msgstr "Правы доступу"
 
-#: ../qml/AppDetailsPage.qml:795
+#: ../qml/AppDetailsPage.qml:799
 msgid "Accounts"
 msgstr "Акаўнты"
 
-#: ../qml/AppDetailsPage.qml:796
+#: ../qml/AppDetailsPage.qml:800
 msgid "Audio"
 msgstr "Аўдыё"
 
-#: ../qml/AppDetailsPage.qml:797
+#: ../qml/AppDetailsPage.qml:801
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: ../qml/AppDetailsPage.qml:798
+#: ../qml/AppDetailsPage.qml:802
 msgid "Calendar"
 msgstr "Каляндар"
 
-#: ../qml/AppDetailsPage.qml:799
+#: ../qml/AppDetailsPage.qml:803
 msgid "Camera"
 msgstr "Камера"
 
-#: ../qml/AppDetailsPage.qml:800
+#: ../qml/AppDetailsPage.qml:804
 msgid "Connectivity"
 msgstr "Сувязь"
 
-#: ../qml/AppDetailsPage.qml:801
+#: ../qml/AppDetailsPage.qml:805
 msgid "Contacts"
 msgstr "Кантакты"
 
-#: ../qml/AppDetailsPage.qml:802
+#: ../qml/AppDetailsPage.qml:806
 msgid "Content Exchange Source"
 msgstr "Крыніца абмену змесцівам"
 
-#: ../qml/AppDetailsPage.qml:803
+#: ../qml/AppDetailsPage.qml:807
 msgid "Content Exchange"
 msgstr "Абмен змесцівам"
 
-#: ../qml/AppDetailsPage.qml:804
+#: ../qml/AppDetailsPage.qml:808
 msgid "Debug"
 msgstr "Адладка"
 
-#: ../qml/AppDetailsPage.qml:805
+#: ../qml/AppDetailsPage.qml:809
 msgid "History"
 msgstr "Гісторыя"
 
-#: ../qml/AppDetailsPage.qml:806
+#: ../qml/AppDetailsPage.qml:810
 msgid "In App Purchases"
 msgstr "Пакупкі ў праграме"
 
-#: ../qml/AppDetailsPage.qml:807
+#: ../qml/AppDetailsPage.qml:811
 msgid "Keep Display On"
 msgstr "Забарона выключэння дысплея"
 
-#: ../qml/AppDetailsPage.qml:808
+#: ../qml/AppDetailsPage.qml:812
 msgid "Location"
 msgstr "Месцазнаходжанне"
 
-#: ../qml/AppDetailsPage.qml:809
+#: ../qml/AppDetailsPage.qml:813
 msgid "Microphone"
 msgstr "Мікрафон"
 
-#: ../qml/AppDetailsPage.qml:810
+#: ../qml/AppDetailsPage.qml:814
 msgid "Read Music Files"
 msgstr "Чытанне аўдыяфайлаў"
 
-#: ../qml/AppDetailsPage.qml:811
+#: ../qml/AppDetailsPage.qml:815
 msgid "Music Files"
 msgstr "Аўдыяфайлы"
 
-#: ../qml/AppDetailsPage.qml:812
+#: ../qml/AppDetailsPage.qml:816
 msgid "Networking"
 msgstr "Сетка"
 
-#: ../qml/AppDetailsPage.qml:813
+#: ../qml/AppDetailsPage.qml:817
 msgid "Read Picture Files"
 msgstr "Чытанне выяў"
 
-#: ../qml/AppDetailsPage.qml:814
+#: ../qml/AppDetailsPage.qml:818
 msgid "Picture Files"
 msgstr "Файлы выяў"
 
-#: ../qml/AppDetailsPage.qml:815
+#: ../qml/AppDetailsPage.qml:819
 msgid "Push Notifications"
 msgstr "Push-апавяшчэнні"
 
-#: ../qml/AppDetailsPage.qml:816
+#: ../qml/AppDetailsPage.qml:820
 msgid "Sensors"
 msgstr "Датчыкі"
 
-#: ../qml/AppDetailsPage.qml:817
+#: ../qml/AppDetailsPage.qml:821
 msgid "User Metrics"
 msgstr "Метрыка карыстальніка"
 
-#: ../qml/AppDetailsPage.qml:818
+#: ../qml/AppDetailsPage.qml:822
 msgid "Read Video Files"
 msgstr "Чытанне відэафайлаў"
 
-#: ../qml/AppDetailsPage.qml:819
+#: ../qml/AppDetailsPage.qml:823
 msgid "Video Files"
 msgstr "Відэафайлы"
 
-#: ../qml/AppDetailsPage.qml:820
+#: ../qml/AppDetailsPage.qml:824
 msgid "Video"
 msgstr "Відэа"
 
-#: ../qml/AppDetailsPage.qml:821
+#: ../qml/AppDetailsPage.qml:825
 msgid "Webview"
 msgstr "Webview"
 
-#: ../qml/AppDetailsPage.qml:822 ../qml/AppDetailsPage.qml:830
+#: ../qml/AppDetailsPage.qml:826 ../qml/AppDetailsPage.qml:834
 msgid "Unknown"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:826
+#: ../qml/AppDetailsPage.qml:830
 msgid "Full System Access"
 msgstr "Поўны доступ да сістэмы"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: ../qml/AppDetailsPage.qml:835
+#: ../qml/AppDetailsPage.qml:839
 msgid "none required"
 msgstr "не патрэбна ніякіх"
 
-#: ../qml/AppDetailsPage.qml:871
+#: ../qml/AppDetailsPage.qml:875
 msgid "Read paths"
 msgstr "Чытанне шляхоў"
 
-#: ../qml/AppDetailsPage.qml:888
+#: ../qml/AppDetailsPage.qml:892
 msgid "Write paths"
 msgstr "Запіс па шляхах"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: ../qml/AppDetailsPage.qml:963
+#: ../qml/AppDetailsPage.qml:967
 msgid "%1 GB"
 msgstr "%1 Гб"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: ../qml/AppDetailsPage.qml:968
+#: ../qml/AppDetailsPage.qml:972
 msgid "%1 MB"
 msgstr "%1 Мб"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: ../qml/AppDetailsPage.qml:973
+#: ../qml/AppDetailsPage.qml:977
 msgid "%1 kB"
 msgstr "%1 Кб"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: ../qml/AppDetailsPage.qml:976
+#: ../qml/AppDetailsPage.qml:980
 msgid "%1 bytes"
 msgstr "%1 байтаў"
 
@@ -832,7 +832,7 @@ msgstr "Пацвердзіць"
 #: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:201
 #: ../qml/Dialogs/InstallWarningDialog.qml:61
 #: ../qml/Dialogs/SnapWarningDialog.qml:55
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:46
 #: ../qml/Dialogs/UninstallDialog.qml:42
 msgid "Cancel"
 msgstr "Скасаваць"
@@ -996,7 +996,7 @@ msgid ""
 msgstr ""
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:51
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:37
 msgid "I understand the risks"
 msgstr "Я разумею рызыку"
 
@@ -1040,11 +1040,37 @@ msgstr ""
 msgid "I understand"
 msgstr "Я разумею рызыку"
 
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:30
+#, fuzzy
+#| msgid ""
+#| "This app has access to restricted parts of the system and all of your "
+#| "data. It has the potential break your system. While the OpenStore "
+#| "maintainers have reviewed the code for this app for safety, they are not "
+#| "responsible for anything bad that might happen to your device or data "
+#| "from installing this app."
 msgid ""
 "This app has access to restricted parts of the system and all of your data. "
-"It has the potential break your system. While the OpenStore maintainers have "
-"reviewed the code for this app for safety, they are not responsible for "
+"It has the potential to break your system. The OpenStore maintainers have "
+"not reviewed the code for this app and they are not responsible for anything "
+"bad that might happen to your device or data from installing this app."
+msgstr ""
+"У праграмы ёсць доступ да закрытых частак сістэмы і ўсіх вашых даных. Яна "
+"можа пашкодзіць вашу сістэму. Хоць суправаджальнікі OpenStore і праверылі "
+"код гэтай праграмы, яны не нясуць адказнасці за тое, што можа здарыцца з "
+"вашай прыладай ці вашымі данымі."
+
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:31
+#, fuzzy
+#| msgid ""
+#| "This app has access to restricted parts of the system and all of your "
+#| "data. It has the potential break your system. While the OpenStore "
+#| "maintainers have reviewed the code for this app for safety, they are not "
+#| "responsible for anything bad that might happen to your device or data "
+#| "from installing this app."
+msgid ""
+"This app has access to restricted parts of the system and all of your data. "
+"It has the potential to break your system. While the OpenStore maintainers "
+"have reviewed the code for this app for safety, they are not responsible for "
 "anything bad that might happen to your device or data from installing this "
 "app."
 msgstr ""

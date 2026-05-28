@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-20 03:26+0000\n"
+"POT-Creation-Date: 2026-05-28 03:26+0000\n"
 "PO-Revision-Date: 2026-05-04 20:09+0000\n"
 "Last-Translator: Kristoffer Grundström <swedishsailfishosuser@tutanota.com>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/open-store-io/"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "App details"
 msgstr "Appens detaljer"
 
-#: ../qml/AppDetailsPage.qml:127 ../qml/AppDetailsPage.qml:443
+#: ../qml/AppDetailsPage.qml:127 ../qml/AppDetailsPage.qml:447
 #: ../qml/AppLocalDetailsPage.qml:42 ../qml/Dialogs/UninstallDialog.qml:33
 msgid "Remove"
 msgstr "Radera"
@@ -64,32 +64,32 @@ msgstr ""
 msgid "This is a Snap package provided by the Snapcraft Store"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:297 ../qml/AppLocalDetailsPage.qml:116
+#: ../qml/AppDetailsPage.qml:301 ../qml/AppLocalDetailsPage.qml:116
 #: ../qml/Components/HighlightedApp.qml:117
 msgid "Open"
 msgstr "Öppna"
 
-#: ../qml/AppDetailsPage.qml:318
+#: ../qml/AppDetailsPage.qml:322
 msgid "The OpenStore is installed!"
 msgstr "OpenStore är installerad!"
 
-#: ../qml/AppDetailsPage.qml:327
+#: ../qml/AppDetailsPage.qml:331
 msgid "Install stable version"
 msgstr "Installera stabil version"
 
-#: ../qml/AppDetailsPage.qml:330
+#: ../qml/AppDetailsPage.qml:334
 msgid "Upgrade"
 msgstr "Uppgradera"
 
-#: ../qml/AppDetailsPage.qml:333
+#: ../qml/AppDetailsPage.qml:337
 msgid "Install"
 msgstr "Installera"
 
-#: ../qml/AppDetailsPage.qml:429
+#: ../qml/AppDetailsPage.qml:433
 msgid "This app is not compatible with your system."
 msgstr "Den här appen är inte kompatibel med ditt system."
 
-#: ../qml/AppDetailsPage.qml:466
+#: ../qml/AppDetailsPage.qml:470
 msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
@@ -97,232 +97,232 @@ msgstr ""
 "Den här appen har tillgång till begränsade delar av systemet och all din "
 "data, se längre ner för detaljer."
 
-#: ../qml/AppDetailsPage.qml:469
+#: ../qml/AppDetailsPage.qml:473
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
 "Den här appen har tillgång till begränsad system-data, se nedan för detaljer."
 
-#: ../qml/AppDetailsPage.qml:494
+#: ../qml/AppDetailsPage.qml:498
 msgid "Description"
 msgstr "Beskrivning"
 
 #. TRANSLATORS: Title of the changelog section
-#: ../qml/AppDetailsPage.qml:532
+#: ../qml/AppDetailsPage.qml:536
 msgid "What's New"
 msgstr "Det här är nytt"
 
-#: ../qml/AppDetailsPage.qml:551
+#: ../qml/AppDetailsPage.qml:555
 msgid "Packager/Publisher"
 msgstr "Paketerare/Utgivare"
 
-#: ../qml/AppDetailsPage.qml:560 ../qml/AppLocalDetailsPage.qml:150
+#: ../qml/AppDetailsPage.qml:564 ../qml/AppLocalDetailsPage.qml:150
 msgid "Installed version"
 msgstr "Installerad version"
 
-#: ../qml/AppDetailsPage.qml:570
+#: ../qml/AppDetailsPage.qml:574
 msgid "Latest available version"
 msgstr "Senast tillgängliga version"
 
-#: ../qml/AppDetailsPage.qml:579
+#: ../qml/AppDetailsPage.qml:583
 msgid "First released"
 msgstr "Först utgiven"
 
-#: ../qml/AppDetailsPage.qml:590
+#: ../qml/AppDetailsPage.qml:594
 msgid "Downloads of the latest version"
 msgstr "Hämtningar av den senaste versionen"
 
-#: ../qml/AppDetailsPage.qml:599
+#: ../qml/AppDetailsPage.qml:603
 msgid "Total downloads"
 msgstr "Totalt antal hämtningar"
 
-#: ../qml/AppDetailsPage.qml:608
+#: ../qml/AppDetailsPage.qml:612
 msgid "License"
 msgstr "Licens"
 
-#: ../qml/AppDetailsPage.qml:609
+#: ../qml/AppDetailsPage.qml:613
 msgid "N/A"
 msgstr "ej tillämpbar"
 
-#: ../qml/AppDetailsPage.qml:621 ../qml/SettingsPage.qml:231
+#: ../qml/AppDetailsPage.qml:625 ../qml/SettingsPage.qml:231
 msgid "Source Code"
 msgstr "Källkod"
 
-#: ../qml/AppDetailsPage.qml:634
+#: ../qml/AppDetailsPage.qml:638
 msgid "Get support for this app"
 msgstr "Få support för den här appen"
 
-#: ../qml/AppDetailsPage.qml:647
+#: ../qml/AppDetailsPage.qml:651
 msgid "Donate to support this app"
 msgstr "Donera för att stödja utvecklingen av appen"
 
-#: ../qml/AppDetailsPage.qml:660
+#: ../qml/AppDetailsPage.qml:664
 msgid "Help translate this app"
 msgstr "Hjälp till att översätta den här appen"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
-#: ../qml/AppDetailsPage.qml:677
+#: ../qml/AppDetailsPage.qml:681
 msgid "More from %1"
 msgstr "Mer från %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: ../qml/AppDetailsPage.qml:692
+#: ../qml/AppDetailsPage.qml:696
 msgid "Other apps in %1"
 msgstr "Andra appar i %1"
 
-#: ../qml/AppDetailsPage.qml:703
+#: ../qml/AppDetailsPage.qml:707
 msgid "Package contents"
 msgstr "Paketets innehåll"
 
-#: ../qml/AppDetailsPage.qml:790
+#: ../qml/AppDetailsPage.qml:794
 msgid "Permissions"
 msgstr "Tillstånd"
 
-#: ../qml/AppDetailsPage.qml:795
+#: ../qml/AppDetailsPage.qml:799
 msgid "Accounts"
 msgstr "Konton"
 
-#: ../qml/AppDetailsPage.qml:796
+#: ../qml/AppDetailsPage.qml:800
 msgid "Audio"
 msgstr "Audio"
 
-#: ../qml/AppDetailsPage.qml:797
+#: ../qml/AppDetailsPage.qml:801
 msgid "Bluetooth"
 msgstr "Blåtand"
 
-#: ../qml/AppDetailsPage.qml:798
+#: ../qml/AppDetailsPage.qml:802
 msgid "Calendar"
 msgstr "Kalender"
 
-#: ../qml/AppDetailsPage.qml:799
+#: ../qml/AppDetailsPage.qml:803
 msgid "Camera"
 msgstr "Kamera"
 
-#: ../qml/AppDetailsPage.qml:800
+#: ../qml/AppDetailsPage.qml:804
 msgid "Connectivity"
 msgstr "Anslutningar"
 
-#: ../qml/AppDetailsPage.qml:801
+#: ../qml/AppDetailsPage.qml:805
 msgid "Contacts"
 msgstr "Kontakter"
 
-#: ../qml/AppDetailsPage.qml:802
+#: ../qml/AppDetailsPage.qml:806
 msgid "Content Exchange Source"
 msgstr "Källa för Informationsutbyte"
 
-#: ../qml/AppDetailsPage.qml:803
+#: ../qml/AppDetailsPage.qml:807
 msgid "Content Exchange"
 msgstr "Informationsutbyte"
 
-#: ../qml/AppDetailsPage.qml:804
+#: ../qml/AppDetailsPage.qml:808
 msgid "Debug"
 msgstr "Felsöka"
 
-#: ../qml/AppDetailsPage.qml:805
+#: ../qml/AppDetailsPage.qml:809
 msgid "History"
 msgstr "Historik"
 
-#: ../qml/AppDetailsPage.qml:806
+#: ../qml/AppDetailsPage.qml:810
 msgid "In App Purchases"
 msgstr "Köp i App"
 
-#: ../qml/AppDetailsPage.qml:807
+#: ../qml/AppDetailsPage.qml:811
 msgid "Keep Display On"
 msgstr "Behåll Skärmen På"
 
-#: ../qml/AppDetailsPage.qml:808
+#: ../qml/AppDetailsPage.qml:812
 msgid "Location"
 msgstr "Plats"
 
-#: ../qml/AppDetailsPage.qml:809
+#: ../qml/AppDetailsPage.qml:813
 msgid "Microphone"
 msgstr "Mikrofon"
 
-#: ../qml/AppDetailsPage.qml:810
+#: ../qml/AppDetailsPage.qml:814
 msgid "Read Music Files"
 msgstr "Läs in Musik Filer"
 
-#: ../qml/AppDetailsPage.qml:811
+#: ../qml/AppDetailsPage.qml:815
 msgid "Music Files"
 msgstr "Musik Filer"
 
-#: ../qml/AppDetailsPage.qml:812
+#: ../qml/AppDetailsPage.qml:816
 msgid "Networking"
 msgstr "Nätverkssamarbete"
 
-#: ../qml/AppDetailsPage.qml:813
+#: ../qml/AppDetailsPage.qml:817
 msgid "Read Picture Files"
 msgstr "Läs in Bild Filer"
 
-#: ../qml/AppDetailsPage.qml:814
+#: ../qml/AppDetailsPage.qml:818
 msgid "Picture Files"
 msgstr "Bild Filer"
 
-#: ../qml/AppDetailsPage.qml:815
+#: ../qml/AppDetailsPage.qml:819
 msgid "Push Notifications"
 msgstr "Push-meddelanden"
 
-#: ../qml/AppDetailsPage.qml:816
+#: ../qml/AppDetailsPage.qml:820
 msgid "Sensors"
 msgstr "Sensorer"
 
-#: ../qml/AppDetailsPage.qml:817
+#: ../qml/AppDetailsPage.qml:821
 msgid "User Metrics"
 msgstr "Användar Metrik"
 
-#: ../qml/AppDetailsPage.qml:818
+#: ../qml/AppDetailsPage.qml:822
 msgid "Read Video Files"
 msgstr "Läs in Video Filer"
 
-#: ../qml/AppDetailsPage.qml:819
+#: ../qml/AppDetailsPage.qml:823
 msgid "Video Files"
 msgstr "Video Filer"
 
-#: ../qml/AppDetailsPage.qml:820
+#: ../qml/AppDetailsPage.qml:824
 msgid "Video"
 msgstr "Video"
 
-#: ../qml/AppDetailsPage.qml:821
+#: ../qml/AppDetailsPage.qml:825
 msgid "Webview"
 msgstr "Webb vy"
 
-#: ../qml/AppDetailsPage.qml:822 ../qml/AppDetailsPage.qml:830
+#: ../qml/AppDetailsPage.qml:826 ../qml/AppDetailsPage.qml:834
 msgid "Unknown"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml:826
+#: ../qml/AppDetailsPage.qml:830
 msgid "Full System Access"
 msgstr "Åtkomst till Hela Systemet"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: ../qml/AppDetailsPage.qml:835
+#: ../qml/AppDetailsPage.qml:839
 msgid "none required"
 msgstr "behövs inte"
 
-#: ../qml/AppDetailsPage.qml:871
+#: ../qml/AppDetailsPage.qml:875
 msgid "Read paths"
 msgstr "Läs sökvägar"
 
-#: ../qml/AppDetailsPage.qml:888
+#: ../qml/AppDetailsPage.qml:892
 msgid "Write paths"
 msgstr "Skriv sökvägar"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: ../qml/AppDetailsPage.qml:963
+#: ../qml/AppDetailsPage.qml:967
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: ../qml/AppDetailsPage.qml:968
+#: ../qml/AppDetailsPage.qml:972
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: ../qml/AppDetailsPage.qml:973
+#: ../qml/AppDetailsPage.qml:977
 msgid "%1 kB"
 msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: ../qml/AppDetailsPage.qml:976
+#: ../qml/AppDetailsPage.qml:980
 msgid "%1 bytes"
 msgstr "%1 bytes"
 
@@ -825,7 +825,7 @@ msgstr "Skicka"
 #: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:201
 #: ../qml/Dialogs/InstallWarningDialog.qml:61
 #: ../qml/Dialogs/SnapWarningDialog.qml:55
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml:41
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:46
 #: ../qml/Dialogs/UninstallDialog.qml:42
 msgid "Cancel"
 msgstr "Avbryt"
@@ -993,7 +993,7 @@ msgstr ""
 "Installera endast den här appen om du har fått den från en pålitlig källa."
 
 #: ../qml/Dialogs/InstallWarningDialog.qml:51
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml:32
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:37
 msgid "I understand the risks"
 msgstr "Jag förstår riskerna"
 
@@ -1034,11 +1034,38 @@ msgstr ""
 msgid "I understand"
 msgstr "Jag förstår riskerna"
 
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml:26
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:30
+#, fuzzy
+#| msgid ""
+#| "This app has access to restricted parts of the system and all of your "
+#| "data. It has the potential break your system. While the OpenStore "
+#| "maintainers have reviewed the code for this app for safety, they are not "
+#| "responsible for anything bad that might happen to your device or data "
+#| "from installing this app."
 msgid ""
 "This app has access to restricted parts of the system and all of your data. "
-"It has the potential break your system. While the OpenStore maintainers have "
-"reviewed the code for this app for safety, they are not responsible for "
+"It has the potential to break your system. The OpenStore maintainers have "
+"not reviewed the code for this app and they are not responsible for anything "
+"bad that might happen to your device or data from installing this app."
+msgstr ""
+"Denna app har tillgång till begränsade delar av systemet och all din data. "
+"Det kan potentiellt krascha systemet. Medans Underhålls arbetarna av "
+"OpenStore har granskat koden för den här appen för säkerhetsbrister, de kan "
+"inte hållas ansvariga ifall något dåligt händer med din enhet eller din data "
+"genom att installera denna app."
+
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml:31
+#, fuzzy
+#| msgid ""
+#| "This app has access to restricted parts of the system and all of your "
+#| "data. It has the potential break your system. While the OpenStore "
+#| "maintainers have reviewed the code for this app for safety, they are not "
+#| "responsible for anything bad that might happen to your device or data "
+#| "from installing this app."
+msgid ""
+"This app has access to restricted parts of the system and all of your data. "
+"It has the potential to break your system. While the OpenStore maintainers "
+"have reviewed the code for this app for safety, they are not responsible for "
 "anything bad that might happen to your device or data from installing this "
 "app."
 msgstr ""

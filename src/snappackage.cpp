@@ -76,6 +76,15 @@ bool SnapPackageItem::install() const
 
     const auto installedVersion = getRequest->snap()->version();
     const auto installedRevision = getRequest->snap()->revision().replace("x", "").toInt();
+    if (!m_containsApp) {
+      for (int i = 0; i < getRequest->snap()->appCount(); i++) {
+        auto snapApp = getRequest->snap()->app(i);
+        if (!snapApp->desktopFile().isEmpty()) {
+          m_containsApp = true;
+          break;
+        }
+      }
+    }
 
     m_isBusy = false;
     updateLocalInfo(installedRevision, installedVersion);

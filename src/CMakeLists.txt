@@ -2,9 +2,9 @@ include_directories(${GLIB_INCLUDE_DIRS})
 include_directories(${GIO_INCLUDE_DIRS})
 include_directories(${CLICK_INCLUDE_DIRS})
 include_directories(${PAM_INCLUDE_DIR})
-# Noble
+include_directories(${SNAPD_QT_INCLUDE_DIRS})
+# Hardcode's last
 include_directories("/usr/include/snapd-qt-2")
-# Focal
 include_directories("/usr/include/snapd-qt")
 
 add_definitions(-DQT_NO_KEYWORDS)

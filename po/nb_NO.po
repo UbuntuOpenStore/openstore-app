@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-28 03:26+0000\n"
-"PO-Revision-Date: 2025-09-23 14:01+0000\n"
+"PO-Revision-Date: 2026-06-14 14:01+0000\n"
 "Last-Translator: Ida Brenna <ida@larald.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/open-"
 "store-io/openstore-app/nb_NO/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14-dev\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 #: ../qml/AppDetailsPage.qml:120 ../qml/AppLocalDetailsPage.qml:35
 msgid "App details"
@@ -62,7 +62,7 @@ msgstr ""
 
 #: ../qml/AppDetailsPage.qml:272
 msgid "This is a Snap package provided by the Snapcraft Store"
-msgstr ""
+msgstr "Dette er en Snap-pakke som kommer fra Snapcraft-butikken"
 
 #: ../qml/AppDetailsPage.qml:301 ../qml/AppLocalDetailsPage.qml:116
 #: ../qml/Components/HighlightedApp.qml:117
@@ -288,7 +288,7 @@ msgstr "Vev-visning"
 
 #: ../qml/AppDetailsPage.qml:826 ../qml/AppDetailsPage.qml:834
 msgid "Unknown"
-msgstr ""
+msgstr "Ukjent"
 
 #: ../qml/AppDetailsPage.qml:830
 msgid "Full System Access"
@@ -359,85 +359,79 @@ msgstr "Lukk"
 
 #: ../qml/Components/ContentRating.qml:27
 msgid "Cartoon Violence"
-msgstr ""
+msgstr "Tegneserievold"
 
 #: ../qml/Components/ContentRating.qml:28
 msgid "Fantasy Violence"
-msgstr ""
+msgstr "Fantasivold"
 
 #: ../qml/Components/ContentRating.qml:29
 msgid "Realistic Violence"
-msgstr ""
+msgstr "Realistisk vold"
 
 #: ../qml/Components/ContentRating.qml:30
 msgid "Bloodshed"
-msgstr ""
+msgstr "Blodsutgytelse"
 
 #: ../qml/Components/ContentRating.qml:31
 msgid "Sexual Violence"
-msgstr ""
+msgstr "Seksuell vold"
 
 #: ../qml/Components/ContentRating.qml:32
-#, fuzzy
-#| msgid "Description"
 msgid "Desecration"
-msgstr "Beskrivelse"
+msgstr "Vanhelligelse"
 
 #: ../qml/Components/ContentRating.qml:33
 msgid "Human Slavery"
-msgstr ""
+msgstr "Menneskeslaveri"
 
 #: ../qml/Components/ContentRating.qml:34
 msgid "Alcohol"
-msgstr ""
+msgstr "Alkohol"
 
 #: ../qml/Components/ContentRating.qml:35
 msgid "Narcotics"
-msgstr ""
+msgstr "Narkotika"
 
 #: ../qml/Components/ContentRating.qml:36
 msgid "Tobacco"
-msgstr ""
+msgstr "Tobakk"
 
 #: ../qml/Components/ContentRating.qml:37
 msgid "Nudity"
-msgstr ""
+msgstr "Nakenhet"
 
 #: ../qml/Components/ContentRating.qml:38
 msgid "Sexual Themes"
-msgstr ""
+msgstr "Seksuelle temaer"
 
 #: ../qml/Components/ContentRating.qml:39
 msgid "Profanity"
-msgstr ""
+msgstr "Banning"
 
 #: ../qml/Components/ContentRating.qml:40
 msgid "Humor"
-msgstr ""
+msgstr "Humor"
 
 #: ../qml/Components/ContentRating.qml:41
-#, fuzzy
-#| msgid "Description"
 msgid "Discrimination"
-msgstr "Beskrivelse"
+msgstr "Diskriminering"
 
 #: ../qml/Components/ContentRating.qml:42
 msgid "Online Text Messaging"
-msgstr ""
+msgstr "Nettmeldinger"
 
 #: ../qml/Components/ContentRating.qml:43
 msgid "Information Sharing"
-msgstr ""
+msgstr "Deling av informasjon"
 
 #: ../qml/Components/ContentRating.qml:44
 msgid "Audio & Video Chat"
-msgstr ""
+msgstr "Lyd- og bildechat"
 
 #: ../qml/Components/ContentRating.qml:45
-#, fuzzy
-#| msgid "Location"
 msgid "Location Sharing"
-msgstr "Posisjon"
+msgstr "Posisjonsdeling"
 
 #: ../qml/Components/ContentRating.qml:46
 #, fuzzy

@@ -159,7 +159,7 @@ void ClickPackageItem::fillData(const QVariantMap& json)
   m_updatedDate = json.value("updated_date").toDateTime();
   m_channels = json.value("channels").toStringList();
   m_types = json.value("types").toStringList();
-  m_packageType = json.value("package_type").toString();
+  m_packageType = QStringLiteral("click");
 
   QStringList deviceCompatibilities = json.value("device_compatibilities").toStringList();
   m_matchingFramework = false;

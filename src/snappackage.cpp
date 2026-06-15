@@ -196,7 +196,7 @@ void SnapPackageItem::fillData(const QVariantMap& json)
   m_updatedDate = json.value("updated_date").toDateTime();
   m_channels = json.value("channels").toStringList();
   m_types = json.value("types").toStringList();
-  m_packageType = json.value("package_type").toString();
+  m_packageType = QStringLiteral("snap");
   m_matchingFramework = true;
 
   // Parse hook information from top-level API fields

@@ -75,6 +75,7 @@ QHash<int, QByteArray> LocalPackagesModel::roleNames() const
   roles.insert(RoleUpdateStatus, "updateStatus");
   roles.insert(RolePackageUrl, "packageUrl");
   roles.insert(RoleAppLaunchUrl, "appLaunchUrl");
+  roles.insert(RolePackageType, "packageType");
 
   return roles;
 }
@@ -109,6 +110,8 @@ QVariant LocalPackagesModel::data(const QModelIndex& index, int role) const
       return pkg.packageUrl;
     case RoleAppLaunchUrl:
       return pkg.appLaunchUrl;
+    case RolePackageType:
+      return pkg.packageType;
 
     default:
       return QVariant();
@@ -186,6 +189,7 @@ void LocalPackagesModel::refresh()
     pkgItem.version = version;
     pkgItem.packageUrl = PackagesCache::instance()->getPackageUrl(pkgItem.appId);
     pkgItem.appLaunchUrl = appLaunchUrl;
+    pkgItem.packageType = QStringLiteral("click");
 
     int remoteRevision = PackagesCache::instance()->getRemoteAppRevision(pkgItem.appId);
     int localRevision = PackagesCache::instance()->getLocalAppRevision(pkgItem.appId);
@@ -240,6 +244,7 @@ void LocalPackagesModel::refresh()
       QSnapdSnap* snap = request->snap(i);
       LocalPackageItem pkgItem;
       pkgItem.appId = QStringLiteral("snap.") + snap->name();
+      pkgItem.packageType = QStringLiteral("snap");
       pkgItem.name = snap->title().isEmpty() ? snap->name() : snap->title();
       pkgItem.version = snap->version();
       //pkgItem.packageUrl = PackagesCache::instance()->getPackageUrl(pkgItem.appId);

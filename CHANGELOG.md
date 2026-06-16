@@ -1,5 +1,11 @@
 # OpenStore App Changelog
 
+## v4.0.0
+
+- Added support for snaps on 24.04-2.x - thanks Alfred!
+- Added content rating display
+- Translation update, thank you translators!
+
 ## v3.6.2
 
 - Updated app launching to better match what the launcher is doing

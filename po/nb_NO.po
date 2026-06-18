@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-15 04:07+0000\n"
-"PO-Revision-Date: 2026-06-14 14:01+0000\n"
+"PO-Revision-Date: 2026-06-19 14:01+0000\n"
 "Last-Translator: Ida Brenna <ida@larald.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/open-"
 "store-io/openstore-app/nb_NO/>\n"
@@ -434,298 +434,304 @@ msgid "Location Sharing"
 msgstr "Posisjonsdeling"
 
 #: ../qml/Components/ContentRating.qml:46
-#, fuzzy
-#| msgid "Content Exchange"
 msgid "Contact Sharing"
-msgstr "Innholdsutveksling"
+msgstr "Kontaktdeling"
 
 #: ../qml/Components/ContentRating.qml:47
-#, fuzzy
-#| msgid "In App Purchases"
 msgid "In-App Purchases"
 msgstr "Kjøpsmuligheter i programmer"
 
 #: ../qml/Components/ContentRating.qml:48
 msgid "Advertising"
-msgstr ""
+msgstr "Reklame"
 
 #: ../qml/Components/ContentRating.qml:49
 msgid "Gambling"
-msgstr ""
+msgstr "Pengespill"
 
 #: ../qml/Components/ContentRating.qml:54
 msgid "Cartoon characters in unsafe situations"
-msgstr ""
+msgstr "Tegneseriefigurer i utrygge situasjoner"
 
 #: ../qml/Components/ContentRating.qml:55
 msgid "Cartoon characters in aggressive conflict"
-msgstr ""
+msgstr "Tegneseriefigurer i aggresiv konflikt"
 
 #: ../qml/Components/ContentRating.qml:56
 msgid "Cartoon characters showing graphic violence"
-msgstr ""
+msgstr "Tegneseriefigurer som viser grafisk vold"
 
 #: ../qml/Components/ContentRating.qml:59
 msgid "Fantasy characters in unsafe situations"
-msgstr ""
+msgstr "Fantasifigurer i utrygge situasjoner"
 
 #: ../qml/Components/ContentRating.qml:60
 msgid "Fantasy characters in aggressive conflict"
-msgstr ""
+msgstr "Fantasifigurer i aggresiv konflikt"
 
 #: ../qml/Components/ContentRating.qml:61
 msgid "Fantasy characters with graphic violence"
-msgstr ""
+msgstr "Fantasifigurer med grafisk vold"
 
 #: ../qml/Components/ContentRating.qml:64
 msgid "Realistic characters in unsafe situations"
-msgstr ""
+msgstr "Realistiske figurer i utrygge situasjoner"
 
 #: ../qml/Components/ContentRating.qml:65
 msgid "Realistic characters in depictions of aggressive conflict"
-msgstr ""
+msgstr "Realistiske figurer som vises i aggresiv konflikt"
 
 #: ../qml/Components/ContentRating.qml:66
 msgid "Realistic characters with graphic violence"
-msgstr ""
+msgstr "Realistiske figurer med grafisk vold"
 
 #: ../qml/Components/ContentRating.qml:69
 msgid "Unrealistic bloodshed"
-msgstr ""
+msgstr "Urealistisk blodsutgytelse"
 
 #: ../qml/Components/ContentRating.qml:70
 msgid "Realistic bloodshed"
-msgstr ""
+msgstr "Realistisk blodsutgytelse"
 
 #: ../qml/Components/ContentRating.qml:71
 msgid "Depictions of bloodshed and the mutilation of body parts"
-msgstr ""
+msgstr "Fremstillinger av blodsutgytelse og kvesting av kroppsdeler"
 
 #: ../qml/Components/ContentRating.qml:74
 msgid "Rape or other violent sexual behavior"
-msgstr ""
+msgstr "Voldtekt eller annen voldelig seksuell adferd"
 
 #: ../qml/Components/ContentRating.qml:77
 msgid "Visible dead human remains"
-msgstr ""
+msgstr "Synlige menneskelige levninger"
 
 #: ../qml/Components/ContentRating.qml:78
 msgid "Dead human remains that are exposed to the elements"
-msgstr ""
+msgstr "Menneskelige levninger som er utsatt for vær og vind"
 
 #: ../qml/Components/ContentRating.qml:79
 msgid ""
 "Graphic depictions of desecration of human bodies, for example being eaten "
 "by wild animals"
 msgstr ""
+"Grafiske fremstillinger av likskjending, for eksempel ved å bli spist av "
+"ville dyr"
 
 #: ../qml/Components/ContentRating.qml:82
 msgid "Depictions or references to historical slavery"
-msgstr ""
+msgstr "Avbildninger eller referanser til historisk slaveri"
 
 #: ../qml/Components/ContentRating.qml:83
 msgid "Depictions of modern-day slavery"
-msgstr ""
+msgstr "Avbildninger av moderne slaveri"
 
 #: ../qml/Components/ContentRating.qml:84
 msgid "Graphic depictions of modern-day slavery"
-msgstr ""
+msgstr "Grafiske fremvisninger av moderne slaveri"
 
 #: ../qml/Components/ContentRating.qml:87
 msgid "References to alcoholic beverages"
-msgstr ""
+msgstr "Referanser til alkoholholdig drikke"
 
 #: ../qml/Components/ContentRating.qml:88
 msgid "Use of alcoholic beverages"
-msgstr ""
+msgstr "Inntak av alkoholholdig drikke"
 
 #: ../qml/Components/ContentRating.qml:91
 msgid "References to illicit drugs"
-msgstr ""
+msgstr "Referanser til ulovlige rusmidler"
 
 #: ../qml/Components/ContentRating.qml:92
 msgid "Use of illicit drugs"
-msgstr ""
+msgstr "Bruk av ulovlige rusmidler"
 
 #: ../qml/Components/ContentRating.qml:95
 msgid "References to tobacco products"
-msgstr ""
+msgstr "Referanser til tobakkholdige varer"
 
 #: ../qml/Components/ContentRating.qml:96
 msgid "Use of tobacco products"
-msgstr ""
+msgstr "Bruk av tobakkholdige varer"
 
 #: ../qml/Components/ContentRating.qml:99
 msgid "Brief artistic nudity"
-msgstr ""
+msgstr "Kort kunstnerisk nakenhet"
 
 #: ../qml/Components/ContentRating.qml:100
 msgid "Prolonged nudity"
-msgstr ""
+msgstr "Forlenget nakenhet"
 
 #: ../qml/Components/ContentRating.qml:101
 msgid "Explicit nudity showing nipples or sexual organs"
-msgstr ""
+msgstr "Eksplisitt nakenhet som viser brystvorter eller kjønnsorganer"
 
 #: ../qml/Components/ContentRating.qml:104
 msgid "Provocative references or depictions"
-msgstr ""
+msgstr "Provoserende referanser eller avbildninger"
 
 #: ../qml/Components/ContentRating.qml:105
 msgid "Sexual references or depictions"
-msgstr ""
+msgstr "Seksuelle referanser eller avbildninger"
 
 #: ../qml/Components/ContentRating.qml:106
 msgid "Graphic sexual behavior"
-msgstr ""
+msgstr "Grafisk seksuell handling"
 
 #: ../qml/Components/ContentRating.qml:109
 msgid "Mild or infrequent use of profanity"
-msgstr ""
+msgstr "Mild eller tidvis bruk av banneord"
 
 #: ../qml/Components/ContentRating.qml:110
 msgid "Moderate use of profanity"
-msgstr ""
+msgstr "Moderat bruk av banneord"
 
 #: ../qml/Components/ContentRating.qml:111
 msgid "Strong or frequent use of profanity"
-msgstr ""
+msgstr "Kraftig eller ofte bruk av banneord"
 
 #: ../qml/Components/ContentRating.qml:114
 msgid "Slapstick humor"
-msgstr ""
+msgstr "Overdreven komikk"
 
 #: ../qml/Components/ContentRating.qml:115
 msgid "Vulgar or bathroom humor"
-msgstr ""
+msgstr "Vulgær eller dohumor"
 
 #: ../qml/Components/ContentRating.qml:116
 msgid "Mature or sexual humor"
-msgstr ""
+msgstr "Voksen eller seksuell humor"
 
 #: ../qml/Components/ContentRating.qml:119
 msgid "Negativity towards a specific group of people, e.g. ethnic jokes"
 msgstr ""
+"Negativitet mot en spesifikk gruppe mennesker, for eksempel vitser basert på "
+"etnisk bakgrunn"
 
 #: ../qml/Components/ContentRating.qml:120
 msgid ""
 "Discrimination designed to cause emotional harm, e.g. racism or homophobia"
-msgstr ""
+msgstr "Diskriminering ment for å såre, for eksempel rasisme eller homofobi"
 
 #: ../qml/Components/ContentRating.qml:121
 msgid "Explicit discrimination based on gender, sexuality, race or religion"
 msgstr ""
+"Eksplisitt diskriminering basert på kjønn, seksualitet, etnisk bakgrunn "
+"eller religion"
 
 #: ../qml/Components/ContentRating.qml:124
 msgid "User-to-user interactions without chat functionality"
-msgstr ""
+msgstr "Bruker-til-bruker-samhandling uten meldingsfunksjonalitet"
 
 #: ../qml/Components/ContentRating.qml:125
 msgid "Moderated messaging between users"
-msgstr ""
+msgstr "Modererte meldinger mellom brukere"
 
 #: ../qml/Components/ContentRating.qml:126
 msgid "Uncontrolled chat functionality between users"
-msgstr ""
+msgstr "Umoderert meldingsfunksjonalitet mellom brukere"
 
 #: ../qml/Components/ContentRating.qml:129
 msgid "Using any online API, e.g. a user-counter"
-msgstr ""
+msgstr "Bruker en form for nett-API, for eksempel en brukerteller"
 
 #: ../qml/Components/ContentRating.qml:130
 msgid "Sharing diagnostic data not identifiable to the user"
-msgstr ""
+msgstr "Bruker diagnosedata som ikke kan knyttes til brukeren"
 
 #: ../qml/Components/ContentRating.qml:131
 msgid "Sharing information identifiable to the user, e.g. crash dumps"
 msgstr ""
+"Deler informasjon som kan knyttes til brukeren, for eksempel krasj-logger"
 
 #: ../qml/Components/ContentRating.qml:134
 msgid "Moderated audio or video chat between users"
-msgstr ""
+msgstr "Moderert lyd- eller videosamtale mellom brukere"
 
 #: ../qml/Components/ContentRating.qml:135
 msgid "Uncontrolled audio or video chat between users"
-msgstr ""
+msgstr "Umoderert lyd- eller videosamtale mellom brukere"
 
 #: ../qml/Components/ContentRating.qml:138
 msgid "Sharing physical location to other users"
-msgstr ""
+msgstr "Deler hvor man befinner seg fysisk med andre brukere"
 
 #: ../qml/Components/ContentRating.qml:141
 msgid "Sharing contact details with other users"
-msgstr ""
+msgstr "Deler kontaktinfo med andre brukere"
 
 #: ../qml/Components/ContentRating.qml:144
 msgid "Users are encouraged to donate real money, e.g. using Patreon"
 msgstr ""
+"Brukere oppfordres til å donere ekte penger, for eksempel ved å bruke Patreon"
 
 #: ../qml/Components/ContentRating.qml:145
 msgid ""
 "Ability to spend real money in-app, e.g. buying new content or new levels"
 msgstr ""
+"Muligheten til å bruke ekte penger i programmet, for eksempel ved å kjøpe "
+"nytt innhold eller nye nivåer"
 
 #: ../qml/Components/ContentRating.qml:148
 msgid "Product placement, e.g. billboards in a football game"
-msgstr ""
+msgstr "Produktplassering, for eksempel via plakater i et fotballspill"
 
 #: ../qml/Components/ContentRating.qml:149
 msgid "Explicit references to specific brands or trademarked products"
 msgstr ""
+"Eksplisitte referanser til konkrete merker eller varemerkeregistrerte "
+"produkter"
 
 #: ../qml/Components/ContentRating.qml:150
 msgid "Users are encouraged to purchase specific real-world items"
-msgstr ""
+msgstr "Brukere oppfordres til å kjøpe spesifikke gjenstander fra virkeligheten"
 
 #: ../qml/Components/ContentRating.qml:153
 msgid "Gambling on random events using tokens or credits"
-msgstr ""
+msgstr "Veddemål om tilfeldige hendelser ved å bruke poletter eller kreditter"
 
 #: ../qml/Components/ContentRating.qml:154
 msgid "Gambling using fictional money"
-msgstr ""
+msgstr "Veddemål ved å bruke fiktive penger"
 
 #: ../qml/Components/ContentRating.qml:155
 msgid "Gambling using real money"
-msgstr ""
+msgstr "Veddemål med ekte penger"
 
 #: ../qml/Components/ContentRating.qml:160
 msgid "Mild"
-msgstr ""
+msgstr "Mild"
 
 #: ../qml/Components/ContentRating.qml:161
 msgid "Moderate"
-msgstr ""
+msgstr "Moderat"
 
 #: ../qml/Components/ContentRating.qml:162
 msgid "Intense"
-msgstr ""
+msgstr "Intens"
 
 #: ../qml/Components/ContentRating.qml:213
-#, fuzzy
-#| msgid "Content Exchange"
 msgid "Content Rating"
-msgstr "Innholdsutveksling"
+msgstr "Innholdsrating"
 
 #: ../qml/Components/ContentRating.qml:270
 msgid "This app has not been rated"
-msgstr ""
+msgstr "Denne appen har ikke fått en rating"
 
 #: ../qml/Components/ContentRating.qml:271
-#, fuzzy
-#| msgid "All Types"
 msgid "All Ages"
-msgstr "Alle typer"
+msgstr "Alle aldre"
 
 #: ../qml/Components/ContentRating.qml:282
 msgid "No concerning content"
-msgstr ""
+msgstr "Uten urovekkende innhold"
 
 #: ../qml/Components/ContentRating.qml:353
 msgid ""
 "Self reported rating using <a href=\"https://hughsie.github.io/oars/\">Open "
 "Age Rating Service</a>"
 msgstr ""
+"Selvrapportert rating som bruker <a href=\"https://hughsie.github.io/oars/\">"
+"Open Age Rating Service</a>"
 
 #: ../qml/Components/HeaderMain.qml:27 ../qml/SettingsPage.qml:29
 msgid "Settings"
@@ -771,7 +777,7 @@ msgstr "Kontotilbyder"
 #: ../qml/Components/PackageListItem.qml:48
 #: ../qml/Components/PackageTile.qml:93 ../qml/Dialogs/FilterDialog.qml:155
 msgid "Snap"
-msgstr ""
+msgstr "Snap"
 
 #: ../qml/Components/PackageTile.qml:105
 msgid "Update available"
@@ -954,18 +960,16 @@ msgid "Web Apps"
 msgstr "Nett-applikasjoner"
 
 #: ../qml/Dialogs/FilterDialog.qml:145
-#, fuzzy
-#| msgid "Package contents"
 msgid "Package Type"
-msgstr "Pakkeinnhold"
+msgstr "Pakketype"
 
 #: ../qml/Dialogs/FilterDialog.qml:153 ../qml/Dialogs/FilterDialog.qml:167
 msgid "All"
-msgstr ""
+msgstr "Alle"
 
 #: ../qml/Dialogs/FilterDialog.qml:154
 msgid "Click"
-msgstr ""
+msgstr "Click"
 
 #: ../qml/Dialogs/FilterDialog.qml:193
 msgid "Apply"
@@ -1016,25 +1020,18 @@ msgid ""
 "Not all snaps were designed with Ubuntu Touch in mind and might not work "
 "well."
 msgstr ""
+"Ikke alle snapper er laget med Ubuntu Touch i tankene og kan derfor kanskje "
+"fungere dårlig."
 
 #: ../qml/Dialogs/SnapWarningDialog.qml:39
 msgid "Don't show this warning again"
-msgstr ""
+msgstr "Ikke vis denne advarslen igjen"
 
 #: ../qml/Dialogs/SnapWarningDialog.qml:43
-#, fuzzy
-#| msgid "I understand the risks"
 msgid "I understand"
-msgstr "Jeg forstår risikoen"
+msgstr "Jeg forstår"
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:30
-#, fuzzy
-#| msgid ""
-#| "This app has access to restricted parts of the system and all of your "
-#| "data. It has the potential break your system. While the OpenStore "
-#| "maintainers have reviewed the code for this app for safety, they are not "
-#| "responsible for anything bad that might happen to your device or data "
-#| "from installing this app."
 msgid ""
 "This app has access to restricted parts of the system and all of your data. "
 "It has the potential to break your system. The OpenStore maintainers have "
@@ -1042,19 +1039,12 @@ msgid ""
 "bad that might happen to your device or data from installing this app."
 msgstr ""
 "Dette programmet har tilgang til begrensede deler av systemet, og all dataen "
-"din. Det kan potensielt ødelegge systemet. Selv om OpenStore-vedlikeholderne "
-"har vurdert koden for dette programmet i sikkerhetsøyemed, er de ikke "
-"ansvarlige for hva som kan skje enheten din eller dataen din hvis du "
-"installerer dette programmet."
+"din. Det kan potensielt ødelegge systemet ditt. OpenStore-vedlikeholderne "
+"har ikke vurdert koden for dette programmet og er ikke ansvarlige om noe "
+"ille skulle skje med enheten eller dataene dine hvis du installerer dette "
+"programmet."
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:31
-#, fuzzy
-#| msgid ""
-#| "This app has access to restricted parts of the system and all of your "
-#| "data. It has the potential break your system. While the OpenStore "
-#| "maintainers have reviewed the code for this app for safety, they are not "
-#| "responsible for anything bad that might happen to your device or data "
-#| "from installing this app."
 msgid ""
 "This app has access to restricted parts of the system and all of your data. "
 "It has the potential to break your system. While the OpenStore maintainers "
@@ -1065,7 +1055,7 @@ msgstr ""
 "Dette programmet har tilgang til begrensede deler av systemet, og all dataen "
 "din. Det kan potensielt ødelegge systemet. Selv om OpenStore-vedlikeholderne "
 "har vurdert koden for dette programmet i sikkerhetsøyemed, er de ikke "
-"ansvarlige for hva som kan skje enheten din eller dataen din hvis du "
+"ansvarlige for hva som kan skje enheten din eller dataene din hvis du "
 "installerer dette programmet."
 
 #: ../qml/Dialogs/UninstallDialog.qml:25
@@ -1135,10 +1125,8 @@ msgstr "Tilgjengelige oppgraderinger (%1)"
 
 #. TRANSLATORS: %1 is the number of installed snap apps
 #: ../qml/InstalledAppsPage.qml:88
-#, fuzzy
-#| msgid "Installed apps (%1)"
 msgid "Installed Snap apps (%1)"
-msgstr "Installerte programmer (%1)"
+msgstr "Installerte Snap-programmer (%1)"
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
 #: ../qml/InstalledAppsPage.qml:92
@@ -1214,13 +1202,11 @@ msgstr "Logg ut"
 
 #: ../qml/SettingsPage.qml:166
 msgid "General"
-msgstr ""
+msgstr "Generelt"
 
 #: ../qml/SettingsPage.qml:172
-#, fuzzy
-#| msgid "Get support"
 msgid "Enable snap support"
-msgstr "Få hjelp"
+msgstr "Aktiver snap-støtte"
 
 #: ../qml/SettingsPage.qml:189
 msgid "Hide adult-oriented content"

@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-15 04:07+0000\n"
-"PO-Revision-Date: 2024-10-31 13:00+0000\n"
-"Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
+"PO-Revision-Date: 2026-06-28 17:01+0000\n"
+"Last-Translator: Walter Garcia-Fontes <walter.garcia@upf.edu>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/ca/>\n"
 "Language: ca\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.2-dev\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 "X-Launchpad-Export-Date: 2017-05-26 05:59+0000\n"
 
 #: ../qml/AppDetailsPage.qml:120 ../qml/AppLocalDetailsPage.qml:35
@@ -62,7 +62,7 @@ msgstr ""
 
 #: ../qml/AppDetailsPage.qml:272
 msgid "This is a Snap package provided by the Snapcraft Store"
-msgstr ""
+msgstr "Aquest és un paquet Snap proporcionat per la Snapcraft Store"
 
 #: ../qml/AppDetailsPage.qml:301 ../qml/AppLocalDetailsPage.qml:116
 #: ../qml/Components/HighlightedApp.qml:117
@@ -288,7 +288,7 @@ msgstr "Visor web"
 
 #: ../qml/AppDetailsPage.qml:826 ../qml/AppDetailsPage.qml:834
 msgid "Unknown"
-msgstr ""
+msgstr "Desconegut"
 
 #: ../qml/AppDetailsPage.qml:830
 msgid "Full System Access"
@@ -359,379 +359,377 @@ msgstr "Tanca"
 
 #: ../qml/Components/ContentRating.qml:27
 msgid "Cartoon Violence"
-msgstr ""
+msgstr "Violència en els dibuixos animats"
 
 #: ../qml/Components/ContentRating.qml:28
 msgid "Fantasy Violence"
-msgstr ""
+msgstr "Violència de fantasia"
 
 #: ../qml/Components/ContentRating.qml:29
 msgid "Realistic Violence"
-msgstr ""
+msgstr "Violència realista"
 
 #: ../qml/Components/ContentRating.qml:30
 msgid "Bloodshed"
-msgstr ""
+msgstr "Vessament de sang"
 
 #: ../qml/Components/ContentRating.qml:31
 msgid "Sexual Violence"
-msgstr ""
+msgstr "Violència sexual"
 
 #: ../qml/Components/ContentRating.qml:32
-#, fuzzy
-#| msgid "Description"
 msgid "Desecration"
-msgstr "Descripció"
+msgstr "Profanació"
 
 #: ../qml/Components/ContentRating.qml:33
 msgid "Human Slavery"
-msgstr ""
+msgstr "Esclavatge humà"
 
 #: ../qml/Components/ContentRating.qml:34
 msgid "Alcohol"
-msgstr ""
+msgstr "Alcohol"
 
 #: ../qml/Components/ContentRating.qml:35
 msgid "Narcotics"
-msgstr ""
+msgstr "Narcòtics"
 
 #: ../qml/Components/ContentRating.qml:36
 msgid "Tobacco"
-msgstr ""
+msgstr "Tabac"
 
 #: ../qml/Components/ContentRating.qml:37
 msgid "Nudity"
-msgstr ""
+msgstr "Nuesa"
 
 #: ../qml/Components/ContentRating.qml:38
 msgid "Sexual Themes"
-msgstr ""
+msgstr "Temes sexuals"
 
 #: ../qml/Components/ContentRating.qml:39
 msgid "Profanity"
-msgstr ""
+msgstr "Profanitat"
 
 #: ../qml/Components/ContentRating.qml:40
 msgid "Humor"
-msgstr ""
+msgstr "Humor"
 
 #: ../qml/Components/ContentRating.qml:41
-#, fuzzy
-#| msgid "Description"
 msgid "Discrimination"
-msgstr "Descripció"
+msgstr "Discriminació"
 
 #: ../qml/Components/ContentRating.qml:42
 msgid "Online Text Messaging"
-msgstr ""
+msgstr "Missatgeria de text en línia"
 
 #: ../qml/Components/ContentRating.qml:43
 msgid "Information Sharing"
-msgstr ""
+msgstr "Compartició d'informació"
 
 #: ../qml/Components/ContentRating.qml:44
 msgid "Audio & Video Chat"
-msgstr ""
+msgstr "Xat de vídeo i d'àudio"
 
 #: ../qml/Components/ContentRating.qml:45
-#, fuzzy
-#| msgid "Location"
 msgid "Location Sharing"
-msgstr "Situació"
+msgstr "Compartició de la ubicació"
 
 #: ../qml/Components/ContentRating.qml:46
-#, fuzzy
-#| msgid "Content Exchange"
 msgid "Contact Sharing"
-msgstr "Intercanvi de continguts"
+msgstr "Intercanvi de contactes"
 
 #: ../qml/Components/ContentRating.qml:47
-#, fuzzy
-#| msgid "In App Purchases"
 msgid "In-App Purchases"
 msgstr "Compres a l'app"
 
 #: ../qml/Components/ContentRating.qml:48
 msgid "Advertising"
-msgstr ""
+msgstr "Publicitat"
 
 #: ../qml/Components/ContentRating.qml:49
 msgid "Gambling"
-msgstr ""
+msgstr "Apostes"
 
 #: ../qml/Components/ContentRating.qml:54
 msgid "Cartoon characters in unsafe situations"
-msgstr ""
+msgstr "Caràcters animats en situacions insegures"
 
 #: ../qml/Components/ContentRating.qml:55
 msgid "Cartoon characters in aggressive conflict"
-msgstr ""
+msgstr "Personatges animats en conflicte agressiu"
 
 #: ../qml/Components/ContentRating.qml:56
 msgid "Cartoon characters showing graphic violence"
-msgstr ""
+msgstr "Dibuixos animats amb violència gràfica"
 
 #: ../qml/Components/ContentRating.qml:59
 msgid "Fantasy characters in unsafe situations"
-msgstr ""
+msgstr "Personatges fantàstics en situacions insegures"
 
 #: ../qml/Components/ContentRating.qml:60
 msgid "Fantasy characters in aggressive conflict"
-msgstr ""
+msgstr "Personatges fantàstics en conflicte agressiu"
 
 #: ../qml/Components/ContentRating.qml:61
 msgid "Fantasy characters with graphic violence"
-msgstr ""
+msgstr "Personatges fantàstics amb violència gràfica"
 
 #: ../qml/Components/ContentRating.qml:64
 msgid "Realistic characters in unsafe situations"
-msgstr ""
+msgstr "Caràcters realistes en situacions insegures"
 
 #: ../qml/Components/ContentRating.qml:65
 msgid "Realistic characters in depictions of aggressive conflict"
-msgstr ""
+msgstr "Personatges realistes en representacions de conflictes agressius"
 
 #: ../qml/Components/ContentRating.qml:66
 msgid "Realistic characters with graphic violence"
-msgstr ""
+msgstr "Personatges realistes amb violència gràfica"
 
 #: ../qml/Components/ContentRating.qml:69
 msgid "Unrealistic bloodshed"
-msgstr ""
+msgstr "Vessament de sang poc realista"
 
 #: ../qml/Components/ContentRating.qml:70
 msgid "Realistic bloodshed"
-msgstr ""
+msgstr "Vessament de sang realista"
 
 #: ../qml/Components/ContentRating.qml:71
 msgid "Depictions of bloodshed and the mutilation of body parts"
-msgstr ""
+msgstr "Representacions del vessament de sang i la mutilació de parts del cos"
 
 #: ../qml/Components/ContentRating.qml:74
 msgid "Rape or other violent sexual behavior"
-msgstr ""
+msgstr "Violació o altres conductes sexuals violentes"
 
 #: ../qml/Components/ContentRating.qml:77
 msgid "Visible dead human remains"
-msgstr ""
+msgstr "Restes humanes mortes visibles"
 
 #: ../qml/Components/ContentRating.qml:78
 msgid "Dead human remains that are exposed to the elements"
-msgstr ""
+msgstr "Restes humanes mortes que s'exposen als elements"
 
 #: ../qml/Components/ContentRating.qml:79
 msgid ""
 "Graphic depictions of desecration of human bodies, for example being eaten "
 "by wild animals"
 msgstr ""
+"Representacions gràfiques de profanació de cossos humans, per exemple, "
+"menjats per animals salvatges"
 
 #: ../qml/Components/ContentRating.qml:82
 msgid "Depictions or references to historical slavery"
-msgstr ""
+msgstr "Representacions o referències a l'esclavitud històrica"
 
 #: ../qml/Components/ContentRating.qml:83
 msgid "Depictions of modern-day slavery"
-msgstr ""
+msgstr "Representacions de l'esclavitud moderna"
 
 #: ../qml/Components/ContentRating.qml:84
 msgid "Graphic depictions of modern-day slavery"
-msgstr ""
+msgstr "Representacions gràfiques de l'esclavitud moderna"
 
 #: ../qml/Components/ContentRating.qml:87
 msgid "References to alcoholic beverages"
-msgstr ""
+msgstr "Referències a begudes alcohòliques"
 
 #: ../qml/Components/ContentRating.qml:88
 msgid "Use of alcoholic beverages"
-msgstr ""
+msgstr "Ús de begudes alcohòliques"
 
 #: ../qml/Components/ContentRating.qml:91
 msgid "References to illicit drugs"
-msgstr ""
+msgstr "Referències a drogues il·lícites"
 
 #: ../qml/Components/ContentRating.qml:92
 msgid "Use of illicit drugs"
-msgstr ""
+msgstr "Ús de drogues il·lícites"
 
 #: ../qml/Components/ContentRating.qml:95
 msgid "References to tobacco products"
-msgstr ""
+msgstr "Referències als productes del tabac"
 
 #: ../qml/Components/ContentRating.qml:96
 msgid "Use of tobacco products"
-msgstr ""
+msgstr "Ús de productes del tabac"
 
 #: ../qml/Components/ContentRating.qml:99
 msgid "Brief artistic nudity"
-msgstr ""
+msgstr "Breu nuesa artística"
 
 #: ../qml/Components/ContentRating.qml:100
 msgid "Prolonged nudity"
-msgstr ""
+msgstr "Nuesa prolongada"
 
 #: ../qml/Components/ContentRating.qml:101
 msgid "Explicit nudity showing nipples or sexual organs"
-msgstr ""
+msgstr "Nuesa explícita que mostra mugrons o òrgans sexuals"
 
 #: ../qml/Components/ContentRating.qml:104
 msgid "Provocative references or depictions"
-msgstr ""
+msgstr "Referències o representacions provocadores"
 
 #: ../qml/Components/ContentRating.qml:105
 msgid "Sexual references or depictions"
-msgstr ""
+msgstr "Referències sexuals o representacions"
 
 #: ../qml/Components/ContentRating.qml:106
 msgid "Graphic sexual behavior"
-msgstr ""
+msgstr "Comportament sexual gràfic"
 
 #: ../qml/Components/ContentRating.qml:109
 msgid "Mild or infrequent use of profanity"
-msgstr ""
+msgstr "Ús lleu o poc freqüent de la profanitat"
 
 #: ../qml/Components/ContentRating.qml:110
 msgid "Moderate use of profanity"
-msgstr ""
+msgstr "Ús moderat de la profanitat"
 
 #: ../qml/Components/ContentRating.qml:111
 msgid "Strong or frequent use of profanity"
-msgstr ""
+msgstr "Ús fort o freqüent de la profanitat"
 
 #: ../qml/Components/ContentRating.qml:114
 msgid "Slapstick humor"
-msgstr ""
+msgstr "Humor bufonesc"
 
 #: ../qml/Components/ContentRating.qml:115
 msgid "Vulgar or bathroom humor"
-msgstr ""
+msgstr "Humor vulgar o de lavabo"
 
 #: ../qml/Components/ContentRating.qml:116
 msgid "Mature or sexual humor"
-msgstr ""
+msgstr "Humor madur o sexual"
 
 #: ../qml/Components/ContentRating.qml:119
 msgid "Negativity towards a specific group of people, e.g. ethnic jokes"
 msgstr ""
+"Negativitat cap a un grup específic de persones, per exemple, acudits ètnics"
 
 #: ../qml/Components/ContentRating.qml:120
 msgid ""
 "Discrimination designed to cause emotional harm, e.g. racism or homophobia"
 msgstr ""
+"Discriminació dissenyada per causar danys emocionals, per exemple, racisme o "
+"homofòbia"
 
 #: ../qml/Components/ContentRating.qml:121
 msgid "Explicit discrimination based on gender, sexuality, race or religion"
-msgstr ""
+msgstr "Discriminació explícita per raó de gènere, sexualitat, raça o religió"
 
 #: ../qml/Components/ContentRating.qml:124
 msgid "User-to-user interactions without chat functionality"
-msgstr ""
+msgstr "Interaccions usuari-usuari sense funcionalitat de xat"
 
 #: ../qml/Components/ContentRating.qml:125
 msgid "Moderated messaging between users"
-msgstr ""
+msgstr "Missatgeria moderada entre usuaris"
 
 #: ../qml/Components/ContentRating.qml:126
 msgid "Uncontrolled chat functionality between users"
-msgstr ""
+msgstr "Funcionalitat de xat no controlada entre usuaris"
 
 #: ../qml/Components/ContentRating.qml:129
 msgid "Using any online API, e.g. a user-counter"
-msgstr ""
+msgstr "Ús de qualsevol API en línia, p. ex. un compte d'usuari"
 
 #: ../qml/Components/ContentRating.qml:130
 msgid "Sharing diagnostic data not identifiable to the user"
-msgstr ""
+msgstr "Compartir dades de diagnòstic no identificables per a l'usuari"
 
 #: ../qml/Components/ContentRating.qml:131
 msgid "Sharing information identifiable to the user, e.g. crash dumps"
 msgstr ""
+"Compartint informació identificable per a l'usuari, p. ex. bolcats de fallada"
 
 #: ../qml/Components/ContentRating.qml:134
 msgid "Moderated audio or video chat between users"
-msgstr ""
+msgstr "Xat d'àudio o vídeo moderat entre usuaris"
 
 #: ../qml/Components/ContentRating.qml:135
 msgid "Uncontrolled audio or video chat between users"
-msgstr ""
+msgstr "Xat d'àudio o vídeo no controlat entre usuaris"
 
 #: ../qml/Components/ContentRating.qml:138
 msgid "Sharing physical location to other users"
-msgstr ""
+msgstr "S'està compartint la ubicació física amb altres usuaris"
 
 #: ../qml/Components/ContentRating.qml:141
 msgid "Sharing contact details with other users"
-msgstr ""
+msgstr "Compartint dades de contacte amb altres usuaris"
 
 #: ../qml/Components/ContentRating.qml:144
 msgid "Users are encouraged to donate real money, e.g. using Patreon"
 msgstr ""
+"S'encoratja els usuaris a donar diners de veritat, per exemple, utilitzant "
+"Patreon"
 
 #: ../qml/Components/ContentRating.qml:145
 msgid ""
 "Ability to spend real money in-app, e.g. buying new content or new levels"
 msgstr ""
+"Capacitat de gastar diners reals en l'aplicació, per exemple, comprant "
+"contingut nou o nous nivells"
 
 #: ../qml/Components/ContentRating.qml:148
 msgid "Product placement, e.g. billboards in a football game"
-msgstr ""
+msgstr "Col·locació de productes, per exemple cartells en un partit de futbol"
 
 #: ../qml/Components/ContentRating.qml:149
 msgid "Explicit references to specific brands or trademarked products"
-msgstr ""
+msgstr "Referències explícites a marques concretes o productes de marca"
 
 #: ../qml/Components/ContentRating.qml:150
 msgid "Users are encouraged to purchase specific real-world items"
-msgstr ""
+msgstr "S'encoratja els usuaris a comprar articles específics del món real"
 
 #: ../qml/Components/ContentRating.qml:153
 msgid "Gambling on random events using tokens or credits"
-msgstr ""
+msgstr "Apostar per esdeveniments aleatoris utilitzant tokens o crèdits"
 
 #: ../qml/Components/ContentRating.qml:154
 msgid "Gambling using fictional money"
-msgstr ""
+msgstr "Joc amb diners de ficció"
 
 #: ../qml/Components/ContentRating.qml:155
 msgid "Gambling using real money"
-msgstr ""
+msgstr "Joc amb diners de veritat"
 
 #: ../qml/Components/ContentRating.qml:160
 msgid "Mild"
-msgstr ""
+msgstr "Lleu"
 
 #: ../qml/Components/ContentRating.qml:161
 msgid "Moderate"
-msgstr ""
+msgstr "Moderat"
 
 #: ../qml/Components/ContentRating.qml:162
 msgid "Intense"
-msgstr ""
+msgstr "Intens"
 
 #: ../qml/Components/ContentRating.qml:213
-#, fuzzy
-#| msgid "Content Exchange"
 msgid "Content Rating"
-msgstr "Intercanvi de continguts"
+msgstr "Valoració de continguts"
 
 #: ../qml/Components/ContentRating.qml:270
 msgid "This app has not been rated"
-msgstr ""
+msgstr "Aquesta aplicació no s'ha valorat"
 
 #: ../qml/Components/ContentRating.qml:271
-#, fuzzy
-#| msgid "All Types"
 msgid "All Ages"
-msgstr "Totes les castes"
+msgstr "Totes les edats"
 
 #: ../qml/Components/ContentRating.qml:282
 msgid "No concerning content"
-msgstr ""
+msgstr "No hi ha contingut relacionat"
 
 #: ../qml/Components/ContentRating.qml:353
 msgid ""
 "Self reported rating using <a href=\"https://hughsie.github.io/oars/\">Open "
 "Age Rating Service</a>"
 msgstr ""
+"S'ha informat d'una valoració automàtica utilitzant <a href=\"https://"
+"hughsie.github.io/oars/\">Open Age Rating Service</a>"
 
 #: ../qml/Components/HeaderMain.qml:27 ../qml/SettingsPage.qml:29
 msgid "Settings"
@@ -777,7 +775,7 @@ msgstr "Proveïdor de comptes"
 #: ../qml/Components/PackageListItem.qml:48
 #: ../qml/Components/PackageTile.qml:93 ../qml/Dialogs/FilterDialog.qml:155
 msgid "Snap"
-msgstr ""
+msgstr "Snap"
 
 #: ../qml/Components/PackageTile.qml:105
 msgid "Update available"
@@ -960,18 +958,16 @@ msgid "Web Apps"
 msgstr "Aplicacions web"
 
 #: ../qml/Dialogs/FilterDialog.qml:145
-#, fuzzy
-#| msgid "Package contents"
 msgid "Package Type"
-msgstr "Contingut del paquet"
+msgstr "Tipus del paquet"
 
 #: ../qml/Dialogs/FilterDialog.qml:153 ../qml/Dialogs/FilterDialog.qml:167
 msgid "All"
-msgstr ""
+msgstr "Tots"
 
 #: ../qml/Dialogs/FilterDialog.qml:154
 msgid "Click"
-msgstr ""
+msgstr "Feu un clic"
 
 #: ../qml/Dialogs/FilterDialog.qml:193
 msgid "Apply"
@@ -1021,25 +1017,18 @@ msgid ""
 "Not all snaps were designed with Ubuntu Touch in mind and might not work "
 "well."
 msgstr ""
+"No totes les captures van ser dissenyades pensant en Ubuntu Touch i potser "
+"no funcionen bé."
 
 #: ../qml/Dialogs/SnapWarningDialog.qml:39
 msgid "Don't show this warning again"
-msgstr ""
+msgstr "No tornis a mostrar aquest advertiment"
 
 #: ../qml/Dialogs/SnapWarningDialog.qml:43
-#, fuzzy
-#| msgid "I understand the risks"
 msgid "I understand"
-msgstr "Entenc el risc"
+msgstr "Entenc"
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:30
-#, fuzzy
-#| msgid ""
-#| "This app has access to restricted parts of the system and all of your "
-#| "data. It has the potential break your system. While the OpenStore "
-#| "maintainers have reviewed the code for this app for safety, they are not "
-#| "responsible for anything bad that might happen to your device or data "
-#| "from installing this app."
 msgid ""
 "This app has access to restricted parts of the system and all of your data. "
 "It has the potential to break your system. The OpenStore maintainers have "
@@ -1048,17 +1037,10 @@ msgid ""
 msgstr ""
 "Aquesta aplicació té accés a parts restringides del sistema i a totes les "
 "vostres dades i podria trencar el sistema. Si bé l'equip de manteniment de "
-"l'OpenStore ha revisat el seu codi per seguretat, no es fa responsables del "
+"l'OpenStore ha revisat el seu codi per seguretat, no es fa responsable del "
 "mal que pugui fer al dispositiu o les dades, degut a la seva instal·lació."
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:31
-#, fuzzy
-#| msgid ""
-#| "This app has access to restricted parts of the system and all of your "
-#| "data. It has the potential break your system. While the OpenStore "
-#| "maintainers have reviewed the code for this app for safety, they are not "
-#| "responsible for anything bad that might happen to your device or data "
-#| "from installing this app."
 msgid ""
 "This app has access to restricted parts of the system and all of your data. "
 "It has the potential to break your system. While the OpenStore maintainers "
@@ -1068,7 +1050,7 @@ msgid ""
 msgstr ""
 "Aquesta aplicació té accés a parts restringides del sistema i a totes les "
 "vostres dades i podria trencar el sistema. Si bé l'equip de manteniment de "
-"l'OpenStore ha revisat el seu codi per seguretat, no es fa responsables del "
+"l'OpenStore ha revisat el seu codi per seguretat, no es fa responsable del "
 "mal que pugui fer al dispositiu o les dades, degut a la seva instal·lació."
 
 #: ../qml/Dialogs/UninstallDialog.qml:25
@@ -1138,10 +1120,8 @@ msgstr "Actualitzacions disponibles (%1)"
 
 #. TRANSLATORS: %1 is the number of installed snap apps
 #: ../qml/InstalledAppsPage.qml:88
-#, fuzzy
-#| msgid "Installed apps (%1)"
 msgid "Installed Snap apps (%1)"
-msgstr "Aplicacions instal·lades (%1)"
+msgstr "Aplicacions snap instal·lades (%1)"
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
 #: ../qml/InstalledAppsPage.qml:92
@@ -1217,13 +1197,11 @@ msgstr "Tanca sessió"
 
 #: ../qml/SettingsPage.qml:166
 msgid "General"
-msgstr ""
+msgstr "General"
 
 #: ../qml/SettingsPage.qml:172
-#, fuzzy
-#| msgid "Get support"
 msgid "Enable snap support"
-msgstr "Obteniu ajuda"
+msgstr "Habilita el suport per a snaps"
 
 #: ../qml/SettingsPage.qml:189
 msgid "Hide adult-oriented content"

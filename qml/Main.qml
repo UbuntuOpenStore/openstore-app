@@ -256,12 +256,19 @@ MainView {
         value: settings.snapSupport
     }
 
+    Binding {
+        target: OpenStoreNetworkManager
+        property: "lomiriCompatibleOnly"
+        value: settings.lomiriCompatibleOnly
+    }
+
     Settings {
         id: settings
         property bool firstStart: true
         property bool hideNsfw: true
         property bool hideSnapWarning: false
         property bool snapSupport: true
+        property bool lomiriCompatibleOnly: true
         property string apiKey: ""
 
         Component.onCompleted: OpenStoreNetworkManager.showNsfw = !settings.hideNsfw

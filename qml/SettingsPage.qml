@@ -184,6 +184,24 @@ Page {
                 }
 
                 ListItem {
+                    visible: settings.snapSupport
+                    ListItemLayout {
+                        anchors.centerIn: parent
+                        title.text: i18n.tr("Only show Lomiri-compatible snaps")
+
+                        Switch {
+                            id: lomiriCompatibleSwitch
+                            SlotsLayout.position: SlotsLayout.Last
+                            checked: settings.lomiriCompatibleOnly
+
+                            onClicked: {
+                                settings.lomiriCompatibleOnly = checked
+                            }
+                        }
+                    }
+                }
+
+                ListItem {
                     ListItemLayout {
                         anchors.centerIn: parent
                         title.text: i18n.tr("Hide adult-oriented content")

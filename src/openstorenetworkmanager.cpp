@@ -38,10 +38,12 @@ OpenStoreNetworkManager::OpenStoreNetworkManager()
   connect(m_manager, &QNetworkAccessManager::networkAccessibleChanged, this, &OpenStoreNetworkManager::networkAccessibleChanged);
   connect(this, &OpenStoreNetworkManager::showNsfwChanged, this, &OpenStoreNetworkManager::deleteCache);
   connect(this, &OpenStoreNetworkManager::snapSupportChanged, this, &OpenStoreNetworkManager::deleteCache);
+  connect(this, &OpenStoreNetworkManager::lomiriCompatibleOnlyChanged, this, &OpenStoreNetworkManager::deleteCache);
 
   // Default value
   m_showNsfw = false;
   m_snapSupport = true;
+  m_lomiriCompatibleOnly = true;
 
   // Cache result on disk
   QNetworkDiskCache* diskCache = new QNetworkDiskCache(this);
@@ -163,9 +165,13 @@ void OpenStoreNetworkManager::getDiscover(const QString& signature)
 void OpenStoreNetworkManager::getAppDetails(const QString& signature, const QString& appId)
 {
   QUrl url(getUrl(API_APPDETAILS_ENDPOINT.arg(appId)));
+  
   if (m_snapSupport && PlatformIntegration::instance()->snapInstaller()) {
     QUrlQuery q(url);
     q.addQueryItem("package_type", "snap,click");
+    if (m_lomiriCompatibleOnly) {
+      q.addQueryItem("lomiri_compatible", "true");
+    }
     url.setQuery(q);
   }
 
@@ -196,6 +202,9 @@ void OpenStoreNetworkManager::getSearch(const QString& signature,
     } else {
       q.addQueryItem("package_types", filterPackageType);
     }
+    if (m_lomiriCompatibleOnly) {
+      q.addQueryItem("lomiri_compatible", "true");
+    }
   }
 
   if (filterString.startsWith("publisher:")) {
@@ -213,9 +222,13 @@ void OpenStoreNetworkManager::getSearch(const QString& signature,
 void OpenStoreNetworkManager::getCategories(const QString& signature)
 {
   QUrl url(getUrl(API_CATEGORIES_ENDPOINT));
-if (m_snapSupport && PlatformIntegration::instance()->snapInstaller()) {
+  
+  if (m_snapSupport && PlatformIntegration::instance()->snapInstaller()) {
     QUrlQuery q(url);
     q.addQueryItem("package_type", "snap,click");
+    if (m_lomiriCompatibleOnly) {
+      q.addQueryItem("lomiri_compatible", "true");
+    }
     url.setQuery(q);
   }
 

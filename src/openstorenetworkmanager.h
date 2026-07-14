@@ -39,6 +39,7 @@ class OpenStoreNetworkManager : public QObject
   Q_PROPERTY(bool networkAccessible READ networkAccessible NOTIFY networkAccessibleChanged)
   Q_PROPERTY(bool showNsfw MEMBER m_showNsfw NOTIFY showNsfwChanged)
   Q_PROPERTY(bool snapSupport READ snapSupport WRITE setSnapSupport NOTIFY snapSupportChanged)
+  Q_PROPERTY(bool lomiriCompatibleOnly READ lomiriCompatibleOnly WRITE setLomiriCompatibleOnly NOTIFY lomiriCompatibleOnlyChanged)
   Q_PROPERTY(bool isDifferentDomain READ isDifferentDomain CONSTANT)
   Q_PROPERTY(QString domain READ getUrl CONSTANT)
 
@@ -56,6 +57,8 @@ public:
   bool networkAccessible() const { return m_manager->networkAccessible() != QNetworkAccessManager::NotAccessible; }
   bool snapSupport() const { return m_snapSupport; }
   void setSnapSupport(bool value) { if (m_snapSupport != value) { m_snapSupport = value; Q_EMIT snapSupportChanged(); } }
+  bool lomiriCompatibleOnly() const { return m_lomiriCompatibleOnly; }
+  void setLomiriCompatibleOnly(bool value) { if (m_lomiriCompatibleOnly != value) { m_lomiriCompatibleOnly = value; Q_EMIT lomiriCompatibleOnlyChanged(); } }
   bool isDifferentDomain() const;
   QString getUrl() const;
   QString getUrl(QString route) const;
@@ -92,6 +95,7 @@ Q_SIGNALS:
   void parsedReply(const OpenStoreReply& reply);
   void showNsfwChanged();
   void snapSupportChanged();
+  void lomiriCompatibleOnlyChanged();
   void reloaded();
   void error(const QString& signature, const QString& error);
 
@@ -108,6 +112,7 @@ private:
   QNetworkAccessManager* m_manager;
   bool m_showNsfw;
   bool m_snapSupport;
+  bool m_lomiriCompatibleOnly;
 
   static OpenStoreNetworkManager* m_instance;
 };

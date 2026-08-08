@@ -1,5 +1,9 @@
 # OpenStore App Changelog
 
+## v4.1.0
+
+- Added a toggle to only show Lomiri compatible snaps (on by default)
+
 ## v4.0.0
 
 - Added support for snaps on 24.04-2.x - thanks Alfred!

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 04:07+0000\n"
+"POT-Creation-Date: 2026-08-08 03:18+0000\n"
 "PO-Revision-Date: 2021-11-15 10:19+0000\n"
 "Last-Translator: Adria <adriamartinmor@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/openstore/"
@@ -147,7 +147,7 @@ msgstr "Lissèntzia"
 msgid "N/A"
 msgstr "Non a disponimentu"
 
-#: ../qml/AppDetailsPage.qml:625 ../qml/SettingsPage.qml:231
+#: ../qml/AppDetailsPage.qml:625 ../qml/SettingsPage.qml:249
 msgid "Source Code"
 msgstr "Còdighe de orìgine"
 
@@ -1182,34 +1182,34 @@ msgstr "Peruna aplicatzione agatada"
 msgid "No app has been installed from OpenStore yet."
 msgstr "Ancora peruna aplicatzione installada dae OpenStore."
 
-#: ../qml/Main.qml:331 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:338 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr ""
 
-#: ../qml/Main.qml:380
+#: ../qml/Main.qml:387
 msgid "App installed"
 msgstr "Aplicatzione installada"
 
-#: ../qml/Main.qml:381
+#: ../qml/Main.qml:388
 msgid "The app has been installed successfully."
 msgstr "Aplicatzione installada."
 
-#: ../qml/Main.qml:384 ../qml/Main.qml:397 ../qml/Main.qml:412
+#: ../qml/Main.qml:391 ../qml/Main.qml:404 ../qml/Main.qml:419
 msgid "OK"
 msgstr "AB"
 
-#: ../qml/Main.qml:393
+#: ../qml/Main.qml:400
 msgid "Installation failed"
 msgstr "B'at àpidu una faddina in s'installatzione"
 
-#: ../qml/Main.qml:394
+#: ../qml/Main.qml:401
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 "B'at àpidu una faddina in s'installatzione de su pachete. Assegura·ti chi "
 "est unu pachete click vàlidu."
 
-#: ../qml/Main.qml:408
+#: ../qml/Main.qml:415
 msgid "Installation failed (Error %1)"
 msgstr "Faddina in s'installatzione (Errore %1)"
 
@@ -1239,11 +1239,15 @@ msgstr ""
 msgid "Enable snap support"
 msgstr "Otene agiudu pro custa aplicatzione"
 
-#: ../qml/SettingsPage.qml:189
+#: ../qml/SettingsPage.qml:190
+msgid "Only show Lomiri-compatible snaps"
+msgstr ""
+
+#: ../qml/SettingsPage.qml:207
 msgid "Hide adult-oriented content"
 msgstr "Cua cuntenutos pro adultos"
 
-#: ../qml/SettingsPage.qml:199
+#: ../qml/SettingsPage.qml:217
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
@@ -1251,15 +1255,15 @@ msgstr ""
 "Insertende sa crae tua assumes totu sa responsabilidade de ammustrare "
 "cuntenutos pro adultos (Not Suitable For Work)."
 
-#: ../qml/SettingsPage.qml:224
+#: ../qml/SettingsPage.qml:242
 msgid "About OpenStore"
 msgstr "Informatziones subra de OpenStore"
 
-#: ../qml/SettingsPage.qml:240
+#: ../qml/SettingsPage.qml:258
 msgid "Report an issue"
 msgstr "Signala unu problemu"
 
-#: ../qml/SettingsPage.qml:249
+#: ../qml/SettingsPage.qml:267
 msgid "Additional Icons by"
 msgstr "Iconas additzionales dae"
 

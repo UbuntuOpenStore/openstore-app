@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 04:07+0000\n"
+"POT-Creation-Date: 2026-08-08 03:18+0000\n"
 "PO-Revision-Date: 2025-08-10 12:02+0000\n"
 "Last-Translator: Tomas Darius Davainis <tomas@davainis.lt>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/open-store-io/"
@@ -146,7 +146,7 @@ msgstr "Licencija"
 msgid "N/A"
 msgstr "Netinkamas"
 
-#: ../qml/AppDetailsPage.qml:625 ../qml/SettingsPage.qml:231
+#: ../qml/AppDetailsPage.qml:625 ../qml/SettingsPage.qml:249
 msgid "Source Code"
 msgstr "Pirminis kodas"
 
@@ -1181,32 +1181,32 @@ msgstr "Nerasta jokių programų"
 msgid "No app has been installed from OpenStore yet."
 msgstr "Iš „OpenStore“ dar neįdiegta nė viena programa."
 
-#: ../qml/Main.qml:331 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:338 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr ""
 
-#: ../qml/Main.qml:380
+#: ../qml/Main.qml:387
 msgid "App installed"
 msgstr "Programa įdiegta"
 
-#: ../qml/Main.qml:381
+#: ../qml/Main.qml:388
 msgid "The app has been installed successfully."
 msgstr "Programa sėkmingai įdiegta."
 
-#: ../qml/Main.qml:384 ../qml/Main.qml:397 ../qml/Main.qml:412
+#: ../qml/Main.qml:391 ../qml/Main.qml:404 ../qml/Main.qml:419
 msgid "OK"
 msgstr "Gerai"
 
-#: ../qml/Main.qml:393
+#: ../qml/Main.qml:400
 msgid "Installation failed"
 msgstr "Įdiegimas nepavyko"
 
-#: ../qml/Main.qml:394
+#: ../qml/Main.qml:401
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr "Nepavyko įdiegti paketo. Įsitikinkite, kad tai tikrai tas paketas."
 
-#: ../qml/Main.qml:408
+#: ../qml/Main.qml:415
 msgid "Installation failed (Error %1)"
 msgstr "Įdiegti nepavyko (klaida %1)"
 
@@ -1236,26 +1236,30 @@ msgstr ""
 msgid "Enable snap support"
 msgstr "Gaukite palaikymą šiai programai"
 
-#: ../qml/SettingsPage.qml:189
+#: ../qml/SettingsPage.qml:190
+msgid "Only show Lomiri-compatible snaps"
+msgstr ""
+
+#: ../qml/SettingsPage.qml:207
 msgid "Hide adult-oriented content"
 msgstr "Slėpti suaugusiesiems skirtą turinį"
 
-#: ../qml/SettingsPage.qml:199
+#: ../qml/SettingsPage.qml:217
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr ""
 "Įvesdami slaptažodį, jūs prisiimate visą atsakomybę už NSFW turinio rodymą."
 
-#: ../qml/SettingsPage.qml:224
+#: ../qml/SettingsPage.qml:242
 msgid "About OpenStore"
 msgstr "Apie „OpenStore“"
 
-#: ../qml/SettingsPage.qml:240
+#: ../qml/SettingsPage.qml:258
 msgid "Report an issue"
 msgstr "Pranešti apie problemą"
 
-#: ../qml/SettingsPage.qml:249
+#: ../qml/SettingsPage.qml:267
 msgid "Additional Icons by"
 msgstr "Papildomos piktogramos pagal"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 04:07+0000\n"
+"POT-Creation-Date: 2026-08-08 03:18+0000\n"
 "PO-Revision-Date: 2020-12-04 14:56+0000\n"
 "Last-Translator: Zmicer <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian <https://translate.ubports.com/projects/openstore/"
@@ -146,7 +146,7 @@ msgstr "Ліцэнзія"
 msgid "N/A"
 msgstr "Няма"
 
-#: ../qml/AppDetailsPage.qml:625 ../qml/SettingsPage.qml:231
+#: ../qml/AppDetailsPage.qml:625 ../qml/SettingsPage.qml:249
 msgid "Source Code"
 msgstr "Зыходны код"
 
@@ -1177,32 +1177,32 @@ msgstr "Праграм не знойдзена"
 msgid "No app has been installed from OpenStore yet."
 msgstr "У вас няма праграм з OpenStore."
 
-#: ../qml/Main.qml:331 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:338 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr "Фільтры"
 
-#: ../qml/Main.qml:380
+#: ../qml/Main.qml:387
 msgid "App installed"
 msgstr "Праграма ўсталяваная"
 
-#: ../qml/Main.qml:381
+#: ../qml/Main.qml:388
 msgid "The app has been installed successfully."
 msgstr "Праграма ўсталяваная."
 
-#: ../qml/Main.qml:384 ../qml/Main.qml:397 ../qml/Main.qml:412
+#: ../qml/Main.qml:391 ../qml/Main.qml:404 ../qml/Main.qml:419
 msgid "OK"
 msgstr "Добра"
 
-#: ../qml/Main.qml:393
+#: ../qml/Main.qml:400
 msgid "Installation failed"
 msgstr "Не атрымалася ўсталяваць"
 
-#: ../qml/Main.qml:394
+#: ../qml/Main.qml:401
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr "Не атрымалася ўсталяваць пакунак. Пераканайцеся, што ён прыдатны."
 
-#: ../qml/Main.qml:408
+#: ../qml/Main.qml:415
 msgid "Installation failed (Error %1)"
 msgstr "Не атрымалася ўсталяваць (памылка %1)"
 
@@ -1232,11 +1232,15 @@ msgstr ""
 msgid "Enable snap support"
 msgstr "Атрымаць падтрымку"
 
-#: ../qml/SettingsPage.qml:189
+#: ../qml/SettingsPage.qml:190
+msgid "Only show Lomiri-compatible snaps"
+msgstr ""
+
+#: ../qml/SettingsPage.qml:207
 msgid "Hide adult-oriented content"
 msgstr "Хаваць змесціва, непрыдатнае для дзяцей"
 
-#: ../qml/SettingsPage.qml:199
+#: ../qml/SettingsPage.qml:217
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
@@ -1244,15 +1248,15 @@ msgstr ""
 "Калі вы ўводзіце пароль, то бярэце на сябе ўсю адказнасць за адлюстраванне "
 "змесціва для дарослых."
 
-#: ../qml/SettingsPage.qml:224
+#: ../qml/SettingsPage.qml:242
 msgid "About OpenStore"
 msgstr "Пра OpenStore"
 
-#: ../qml/SettingsPage.qml:240
+#: ../qml/SettingsPage.qml:258
 msgid "Report an issue"
 msgstr "Паведаміць пра праблему"
 
-#: ../qml/SettingsPage.qml:249
+#: ../qml/SettingsPage.qml:267
 msgid "Additional Icons by"
 msgstr "Дадатковыя значкі ад"
 

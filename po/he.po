@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 04:07+0000\n"
+"POT-Creation-Date: 2026-08-08 03:18+0000\n"
 "PO-Revision-Date: 2026-05-07 20:11+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/open-store-io/"
@@ -141,7 +141,7 @@ msgstr "רישיון"
 msgid "N/A"
 msgstr "לא זמין"
 
-#: ../qml/AppDetailsPage.qml:625 ../qml/SettingsPage.qml:231
+#: ../qml/AppDetailsPage.qml:625 ../qml/SettingsPage.qml:249
 msgid "Source Code"
 msgstr "קוד מקור"
 
@@ -1153,32 +1153,32 @@ msgstr "לא נמצאו יישומונים"
 msgid "No app has been installed from OpenStore yet."
 msgstr "עדיין לא הותקנו יישומונים מה־OpenStore."
 
-#: ../qml/Main.qml:331 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:338 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr "מסננים"
 
-#: ../qml/Main.qml:380
+#: ../qml/Main.qml:387
 msgid "App installed"
 msgstr "היישומון הותקן"
 
-#: ../qml/Main.qml:381
+#: ../qml/Main.qml:388
 msgid "The app has been installed successfully."
 msgstr "היישומון הותקן בהצלחה."
 
-#: ../qml/Main.qml:384 ../qml/Main.qml:397 ../qml/Main.qml:412
+#: ../qml/Main.qml:391 ../qml/Main.qml:404 ../qml/Main.qml:419
 msgid "OK"
 msgstr "בסדר"
 
-#: ../qml/Main.qml:393
+#: ../qml/Main.qml:400
 msgid "Installation failed"
 msgstr "ההתקנה נכשלה"
 
-#: ../qml/Main.qml:394
+#: ../qml/Main.qml:401
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr "לא ניתן להתקין חבילה. נא לוודא שהחבילה היא חבילת click תקינה."
 
-#: ../qml/Main.qml:408
+#: ../qml/Main.qml:415
 msgid "Installation failed (Error %1)"
 msgstr "ההתקנה נכשלה (שגיאה %1)"
 
@@ -1208,25 +1208,29 @@ msgstr ""
 msgid "Enable snap support"
 msgstr "קבלת תמיכה"
 
-#: ../qml/SettingsPage.qml:189
+#: ../qml/SettingsPage.qml:190
+msgid "Only show Lomiri-compatible snaps"
+msgstr ""
+
+#: ../qml/SettingsPage.qml:207
 msgid "Hide adult-oriented content"
 msgstr "הסתרת תוכן למבוגרים"
 
-#: ../qml/SettingsPage.qml:199
+#: ../qml/SettingsPage.qml:217
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr "הקלדת הסיסמה שלך מהווה את אחריותך המלאה להצגת תוכן למבוגרים."
 
-#: ../qml/SettingsPage.qml:224
+#: ../qml/SettingsPage.qml:242
 msgid "About OpenStore"
 msgstr "על ה־OpenStore"
 
-#: ../qml/SettingsPage.qml:240
+#: ../qml/SettingsPage.qml:258
 msgid "Report an issue"
 msgstr "דיווח על בעיה"
 
-#: ../qml/SettingsPage.qml:249
+#: ../qml/SettingsPage.qml:267
 msgid "Additional Icons by"
 msgstr "סמלים נוספים מאת"
 

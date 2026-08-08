@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 04:07+0000\n"
+"POT-Creation-Date: 2026-08-08 03:18+0000\n"
 "PO-Revision-Date: 2021-07-24 23:19+0000\n"
 "Last-Translator: Stefan Kalb <stefan.kalb@gmx.ch>\n"
 "Language-Team: Serbian <https://translate.ubports.com/projects/openstore/"
@@ -147,7 +147,7 @@ msgstr "Лиценца"
 msgid "N/A"
 msgstr "N/A"
 
-#: ../qml/AppDetailsPage.qml:625 ../qml/SettingsPage.qml:231
+#: ../qml/AppDetailsPage.qml:625 ../qml/SettingsPage.qml:249
 msgid "Source Code"
 msgstr "Изворни код"
 
@@ -1159,34 +1159,34 @@ msgstr "Нема нађених апликација"
 msgid "No app has been installed from OpenStore yet."
 msgstr "Нема апликација инсталираних са OpenStore."
 
-#: ../qml/Main.qml:331 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml:338 ../qml/SearchPage.qml:55
 msgid "Filters"
 msgstr ""
 
-#: ../qml/Main.qml:380
+#: ../qml/Main.qml:387
 msgid "App installed"
 msgstr "Апликација инсталирана"
 
-#: ../qml/Main.qml:381
+#: ../qml/Main.qml:388
 msgid "The app has been installed successfully."
 msgstr "Апликација је успешно инсталирана."
 
-#: ../qml/Main.qml:384 ../qml/Main.qml:397 ../qml/Main.qml:412
+#: ../qml/Main.qml:391 ../qml/Main.qml:404 ../qml/Main.qml:419
 msgid "OK"
 msgstr "У реду"
 
-#: ../qml/Main.qml:393
+#: ../qml/Main.qml:400
 msgid "Installation failed"
 msgstr "Инсталација није успела"
 
-#: ../qml/Main.qml:394
+#: ../qml/Main.qml:401
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 "Пакет није могао да се инсталира. Проверите да ли је пакет валидан click "
 "пакет."
 
-#: ../qml/Main.qml:408
+#: ../qml/Main.qml:415
 msgid "Installation failed (Error %1)"
 msgstr "Инсталација неуспешна (Грешка: %1)"
 
@@ -1217,11 +1217,15 @@ msgstr ""
 msgid "Enable snap support"
 msgstr "Затражите подршку за ову апликацију"
 
-#: ../qml/SettingsPage.qml:189
+#: ../qml/SettingsPage.qml:190
+msgid "Only show Lomiri-compatible snaps"
+msgstr ""
+
+#: ../qml/SettingsPage.qml:207
 msgid "Hide adult-oriented content"
 msgstr "Сакриј садржај за одрасле"
 
-#: ../qml/SettingsPage.qml:199
+#: ../qml/SettingsPage.qml:217
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
@@ -1229,15 +1233,15 @@ msgstr ""
 "Уношењем своје шифре преузимате сву одговорност за приказ садржаја који није "
 "прикладан на радном месту."
 
-#: ../qml/SettingsPage.qml:224
+#: ../qml/SettingsPage.qml:242
 msgid "About OpenStore"
 msgstr "Детаљи о OpenStore"
 
-#: ../qml/SettingsPage.qml:240
+#: ../qml/SettingsPage.qml:258
 msgid "Report an issue"
 msgstr "Пријавите проблем"
 
-#: ../qml/SettingsPage.qml:249
+#: ../qml/SettingsPage.qml:267
 msgid "Additional Icons by"
 msgstr ""
 

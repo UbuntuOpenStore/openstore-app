@@ -27,6 +27,7 @@
 #include <QStandardPaths>
 #include <QUrlQuery>
 #include <QUuid>
+#include <QCoreApplication>
 
 #include <QDebug>
 
@@ -39,6 +40,8 @@ OpenStoreNetworkManager::OpenStoreNetworkManager()
   connect(this, &OpenStoreNetworkManager::showNsfwChanged, this, &OpenStoreNetworkManager::deleteCache);
   connect(this, &OpenStoreNetworkManager::snapSupportChanged, this, &OpenStoreNetworkManager::deleteCache);
   connect(this, &OpenStoreNetworkManager::lomiriCompatibleOnlyChanged, this, &OpenStoreNetworkManager::deleteCache);
+
+  m_userAgent = "openstore-app/" + QCoreApplication::applicationVersion() + " (" + PlatformIntegration::instance()->systemCodename() + "; " + PlatformIntegration::instance()->supportedArchitecture() + ")";
 
   // Default value
   m_showNsfw = false;
@@ -92,6 +95,7 @@ QNetworkReply* OpenStoreNetworkManager::sendRequest(QNetworkRequest request)
   url.setQuery(q);
   request.setUrl(url);
   request.setRawHeader("X-Source", "openstore-app");
+  request.setRawHeader("User-Agent", m_userAgent.toUtf8());
 
   // qDebug() << "Firing request for" << request.url();
 
@@ -102,6 +106,7 @@ QNetworkReply* OpenStoreNetworkManager::postRequest(QNetworkRequest request, QJs
 {
   request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
   request.setRawHeader("X-Source", "openstore-app");
+  request.setRawHeader("User-Agent", m_userAgent.toUtf8());
 
   query.insert("frameworks", PlatformIntegration::instance()->supportedFrameworks().join(','));
   query.insert("architecture", PlatformIntegration::instance()->supportedArchitecture());
@@ -165,7 +170,7 @@ void OpenStoreNetworkManager::getDiscover(const QString& signature)
 void OpenStoreNetworkManager::getAppDetails(const QString& signature, const QString& appId)
 {
   QUrl url(getUrl(API_APPDETAILS_ENDPOINT.arg(appId)));
-  
+
   if (m_snapSupport && PlatformIntegration::instance()->snapInstaller()) {
     QUrlQuery q(url);
     q.addQueryItem("package_type", "snap,click");
@@ -222,7 +227,7 @@ void OpenStoreNetworkManager::getSearch(const QString& signature,
 void OpenStoreNetworkManager::getCategories(const QString& signature)
 {
   QUrl url(getUrl(API_CATEGORIES_ENDPOINT));
-  
+
   if (m_snapSupport && PlatformIntegration::instance()->snapInstaller()) {
     QUrlQuery q(url);
     q.addQueryItem("package_type", "snap,click");

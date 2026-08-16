@@ -113,6 +113,7 @@ private:
   bool m_showNsfw;
   bool m_snapSupport;
   bool m_lomiriCompatibleOnly;
+  QString m_userAgent;
 
   static OpenStoreNetworkManager* m_instance;
 };

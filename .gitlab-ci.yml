@@ -47,6 +47,33 @@ build-amd64-focal:
     - clickable build
   stage: build
 
+build-arm64-26041:
+  extends: .artifacts
+  image: clickable/ci-ut26.04-1.x-arm64
+  rules:
+    - if: $CI_COMMIT_TAG == null
+  script:
+    - clickable build
+  stage: build
+
+build-armhf-26041:
+  extends: .artifacts
+  image: clickable/ci-ut26.04-1.x-armhf
+  rules:
+    - if: $CI_COMMIT_TAG == null
+  script:
+    - clickable build
+  stage: build
+
+build-amd64-26041:
+  extends: .artifacts
+  image: clickable/ci-ut26.04-1.x-amd64
+  rules:
+    - if: $CI_COMMIT_TAG == null
+  script:
+    - clickable build
+  stage: build
+
 build-arm64-next:
   extends: .artifacts
   image: clickable/ci-utnext-arm64
@@ -97,6 +124,36 @@ publish-armhf-focal:
 publish-amd64-focal:
   extends: .artifacts
   image: clickable/ci-20.04-amd64
+  rules:
+    - if: $CI_COMMIT_TAG
+  script:
+    - clickable build
+    - clickable publish
+  stage: deploy
+
+publish-arm64-26041:
+  extends: .artifacts
+  image: clickable/ci-ut26.04-1.x-arm64
+  rules:
+    - if: $CI_COMMIT_TAG
+  script:
+    - clickable build
+    - clickable publish "$CI_COMMIT_MESSAGE"
+  stage: deploy
+
+publish-armhf-26041:
+  extends: .artifacts
+  image: clickable/ci-ut26.04-1.x-armhf
+  rules:
+    - if: $CI_COMMIT_TAG
+  script:
+    - clickable build
+    - clickable publish
+  stage: deploy
+
+publish-amd64-26041:
+  extends: .artifacts
+  image: clickable/ci-ut26.04-1.x-amd64
   rules:
     - if: $CI_COMMIT_TAG
   script:

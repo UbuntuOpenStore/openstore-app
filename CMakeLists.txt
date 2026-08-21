@@ -65,6 +65,11 @@ endif(NOT BUILD_VERSION_RAW)
 string(SUBSTRING ${BUILD_VERSION_RAW} 1 -1 BUILD_VERSION)
 message(STATUS "Build version is: ${BUILD_VERSION}")
 
+if(DEFINED ENV{CLICK_FRAMEWORK_BASE})
+    set(BUILD_VERSION "${BUILD_VERSION}-$ENV{CLICK_FRAMEWORK_BASE}")
+    message(STATUS "Build version with framework is: ${BUILD_VERSION}")
+endif()
+
 # Config files & the logo
 configure_file(manifest.json.in ${CMAKE_CURRENT_BINARY_DIR}/manifest.json)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/manifest.json DESTINATION ${CMAKE_INSTALL_PREFIX})

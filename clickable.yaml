@@ -11,7 +11,6 @@ install_lib:
   - /usr/lib/${ARCH_TRIPLET}/libsnapd-qt*.so*
   - /usr/lib/${ARCH_TRIPLET}/libsnapd-glib*.so*
   - /usr/lib/${ARCH_TRIPLET}/libsoup-*.so*
-framework: ubuntu-sdk-20.04
 scripts:
   format: ./scripts/format.sh
   check: ./scripts/check.sh

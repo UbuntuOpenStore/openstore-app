@@ -53,12 +53,12 @@ bool ClickPackageItem::install() const
 
     m_isBusy = false;
     Q_EMIT updated();
-  }, Qt::UniqueConnection);
+  });
 
-  connect(installer, &ClickInstaller::downloadProgressChanged, this, [=](){
+  connect(installer, &ClickInstaller::downloadProgressChanged, this, [this, installer](){
     m_downloadProgress = installer->downloadProgress();
     Q_EMIT downloadProgressChanged();
-  }, Qt::UniqueConnection);
+  });
 
   installer->installPackage(packageUrl());
   m_isBusy = true;
@@ -84,12 +84,12 @@ bool ClickPackageItem::remove() const
   connect(installer, &ClickInstaller::packageInstallationFailed, this, [this, installer](){
     m_isBusy = false;
     Q_EMIT updated();
-  }, Qt::UniqueConnection);
+  });
 
   connect(installer, &ClickInstaller::packageInstalled, this, [this, installer](){
     m_isBusy = false;
     Q_EMIT updated();
-  }, Qt::UniqueConnection);
+  });
 
 
   m_isBusy = true;

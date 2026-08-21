@@ -30,9 +30,28 @@ set(
 
 add_definitions(-DBUILD_VERSION="${BUILD_VERSION}")
 
-qt5_add_resources(QT_RESOURCES ../qml/qml.qrc)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Gui Qml Quick QuickControls2 DBus)
+
+if(QT_VERSION_MAJOR EQUAL 6)
+    find_package(Qt6 COMPONENTS WebEngineQuick REQUIRED)
+endif()
+
+if(QT_VERSION_MAJOR EQUAL 6)
+    qt6_add_resources(QT_RESOURCES ${CMAKE_BINARY_DIR}/qml/qml.qrc)
+else()
+    qt5_add_resources(QT_RESOURCES ${CMAKE_BINARY_DIR}/qml/qml.qrc)
+endif()
 add_executable(${PROJECT_NAME} ${SRC} ${QT_RESOURCES})
-qt5_use_modules(${PROJECT_NAME} Gui Qml Quick QuickControls2 DBus)
-target_link_libraries(${PROJECT_NAME} ${GLIB_LDFLAGS} ${GIO_LDFLAGS} ${CLICK_LDFLAGS}
+target_link_libraries(${PROJECT_NAME}
+                      Qt${QT_VERSION_MAJOR}::Gui
+                      Qt${QT_VERSION_MAJOR}::Qml
+                      Qt${QT_VERSION_MAJOR}::Quick
+                      Qt${QT_VERSION_MAJOR}::QuickControls2
+                      Qt${QT_VERSION_MAJOR}::DBus
+                      ${GLIB_LDFLAGS} ${GIO_LDFLAGS} ${CLICK_LDFLAGS}
                       ${PAM_LIBRARIES} ${SNAPD_QT_LIBRARIES})
+if(QT_VERSION_MAJOR EQUAL 6)
+    target_link_libraries(${PROJECT_NAME} Qt6::WebEngineQuick)
+endif()
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX})
+

@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-07-01 20:26+0000\n"
-"PO-Revision-Date: 2025-03-21 20:13+0000\n"
-"Last-Translator: Jozef Mlich <jmlich83@gmail.com>\n"
+"PO-Revision-Date: 2026-08-22 16:51+0000\n"
+"Last-Translator: Milan Korecky <milan.korecky@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/open-store-io/"
 "openstore-app/cs/>\n"
 "Language: cs\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
-"X-Generator: Weblate 5.11-dev\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 
 #: ../qml/AppDetailsPage.qml:120 ../qml/AppLocalDetailsPage.qml:35
 msgid "App details"
@@ -61,7 +61,7 @@ msgstr ""
 
 #: ../qml/AppDetailsPage.qml:272
 msgid "This is a Snap package provided by the Snapcraft Store"
-msgstr ""
+msgstr "Toto je balíček Snap, který nabízí obchod Snapcraft Store"
 
 #: ../qml/AppDetailsPage.qml:301 ../qml/AppLocalDetailsPage.qml:116
 #: ../qml/Components/HighlightedApp.qml:117
@@ -285,7 +285,7 @@ msgstr "Webový režim"
 
 #: ../qml/AppDetailsPage.qml:826 ../qml/AppDetailsPage.qml:834
 msgid "Unknown"
-msgstr ""
+msgstr "Neznámý"
 
 #: ../qml/AppDetailsPage.qml:830
 msgid "Full System Access"
@@ -354,379 +354,384 @@ msgstr "Zavřít"
 
 #: ../qml/Components/ContentRating.qml:27
 msgid "Cartoon Violence"
-msgstr ""
+msgstr "Násilí v kreslených seriálech"
 
 #: ../qml/Components/ContentRating.qml:28
 msgid "Fantasy Violence"
-msgstr ""
+msgstr "Fiktivní násilí"
 
 #: ../qml/Components/ContentRating.qml:29
 msgid "Realistic Violence"
-msgstr ""
+msgstr "Realistické znázornění násilí"
 
 #: ../qml/Components/ContentRating.qml:30
 msgid "Bloodshed"
-msgstr ""
+msgstr "Krvavá řežba"
 
 #: ../qml/Components/ContentRating.qml:31
 msgid "Sexual Violence"
-msgstr ""
+msgstr "Sexuální násilí"
 
 #: ../qml/Components/ContentRating.qml:32
-#, fuzzy
-#| msgid "Description"
 msgid "Desecration"
-msgstr "Popis"
+msgstr "Znesvěcení"
 
 #: ../qml/Components/ContentRating.qml:33
 msgid "Human Slavery"
-msgstr ""
+msgstr "Lidské otroctví"
 
 #: ../qml/Components/ContentRating.qml:34
 msgid "Alcohol"
-msgstr ""
+msgstr "Alkohol"
 
 #: ../qml/Components/ContentRating.qml:35
 msgid "Narcotics"
-msgstr ""
+msgstr "Narkotika"
 
 #: ../qml/Components/ContentRating.qml:36
 msgid "Tobacco"
-msgstr ""
+msgstr "Tabák"
 
 #: ../qml/Components/ContentRating.qml:37
 msgid "Nudity"
-msgstr ""
+msgstr "Nudismus"
 
 #: ../qml/Components/ContentRating.qml:38
 msgid "Sexual Themes"
-msgstr ""
+msgstr "Sexuální témata"
 
 #: ../qml/Components/ContentRating.qml:39
 msgid "Profanity"
-msgstr ""
+msgstr "Vulgarismy"
 
 #: ../qml/Components/ContentRating.qml:40
 msgid "Humor"
-msgstr ""
+msgstr "Humor"
 
 #: ../qml/Components/ContentRating.qml:41
-#, fuzzy
-#| msgid "Description"
 msgid "Discrimination"
-msgstr "Popis"
+msgstr "Diskriminace"
 
 #: ../qml/Components/ContentRating.qml:42
 msgid "Online Text Messaging"
-msgstr ""
+msgstr "Online zasílání textových zpráv"
 
 #: ../qml/Components/ContentRating.qml:43
 msgid "Information Sharing"
-msgstr ""
+msgstr "Sdílení informací"
 
 #: ../qml/Components/ContentRating.qml:44
 msgid "Audio & Video Chat"
-msgstr ""
+msgstr "Audio & Video konverzace"
 
 #: ../qml/Components/ContentRating.qml:45
-#, fuzzy
-#| msgid "Location"
 msgid "Location Sharing"
-msgstr "Umístění"
+msgstr "Sdílení polohy"
 
 #: ../qml/Components/ContentRating.qml:46
-#, fuzzy
-#| msgid "Content Exchange"
 msgid "Contact Sharing"
-msgstr "Sdílený obsah"
+msgstr "Sdílení kontaktů"
 
 #: ../qml/Components/ContentRating.qml:47
-#, fuzzy
-#| msgid "In App Purchases"
 msgid "In-App Purchases"
 msgstr "Nákupy v aplikaci"
 
 #: ../qml/Components/ContentRating.qml:48
 msgid "Advertising"
-msgstr ""
+msgstr "Reklama"
 
 #: ../qml/Components/ContentRating.qml:49
 msgid "Gambling"
-msgstr ""
+msgstr "Hazardní hry"
 
 #: ../qml/Components/ContentRating.qml:54
 msgid "Cartoon characters in unsafe situations"
-msgstr ""
+msgstr "Kreslené postavy v nebezpečných situacích"
 
 #: ../qml/Components/ContentRating.qml:55
 msgid "Cartoon characters in aggressive conflict"
-msgstr ""
+msgstr "Kreslené postavy v agresivním konfliktu"
 
 #: ../qml/Components/ContentRating.qml:56
 msgid "Cartoon characters showing graphic violence"
-msgstr ""
+msgstr "Kreslené postavy zobrazující výrazné násilí"
 
 #: ../qml/Components/ContentRating.qml:59
 msgid "Fantasy characters in unsafe situations"
-msgstr ""
+msgstr "Fiktivní postavy v nebezpečných situacích"
 
 #: ../qml/Components/ContentRating.qml:60
 msgid "Fantasy characters in aggressive conflict"
-msgstr ""
+msgstr "Fiktivní postavy v agresivním konfliktu"
 
 #: ../qml/Components/ContentRating.qml:61
 msgid "Fantasy characters with graphic violence"
-msgstr ""
+msgstr "Fiktivní postavy s explicitním násilím"
 
 #: ../qml/Components/ContentRating.qml:64
 msgid "Realistic characters in unsafe situations"
-msgstr ""
+msgstr "Realistické postavy v nebezpečných situacích"
 
 #: ../qml/Components/ContentRating.qml:65
 msgid "Realistic characters in depictions of aggressive conflict"
-msgstr ""
+msgstr "Realistické postavy v agresivních konfliktech"
 
 #: ../qml/Components/ContentRating.qml:66
 msgid "Realistic characters with graphic violence"
-msgstr ""
+msgstr "Realistické postavy s výrazným násilím"
 
 #: ../qml/Components/ContentRating.qml:69
 msgid "Unrealistic bloodshed"
-msgstr ""
+msgstr "Nerealistické krvavé scény"
 
 #: ../qml/Components/ContentRating.qml:70
 msgid "Realistic bloodshed"
-msgstr ""
+msgstr "Reálné krvavé scény"
 
 #: ../qml/Components/ContentRating.qml:71
 msgid "Depictions of bloodshed and the mutilation of body parts"
-msgstr ""
+msgstr "Zobrazení krveprolití a zmrzačení částí těla"
 
 #: ../qml/Components/ContentRating.qml:74
 msgid "Rape or other violent sexual behavior"
-msgstr ""
+msgstr "Znásilnění nebo jiné násilné sexuální chování"
 
 #: ../qml/Components/ContentRating.qml:77
 msgid "Visible dead human remains"
-msgstr ""
+msgstr "Viditelné ostatky mrtvých lidí"
 
 #: ../qml/Components/ContentRating.qml:78
 msgid "Dead human remains that are exposed to the elements"
-msgstr ""
+msgstr "Lidské ostatky vystavené povětrnostním vlivům"
 
 #: ../qml/Components/ContentRating.qml:79
 msgid ""
 "Graphic depictions of desecration of human bodies, for example being eaten "
 "by wild animals"
 msgstr ""
+"Grafické zobrazení znesvěcení lidských těl, například jejich sežrání "
+"divokými zvířaty"
 
 #: ../qml/Components/ContentRating.qml:82
 msgid "Depictions or references to historical slavery"
-msgstr ""
+msgstr "Zobrazení nebo odkazy na historické otroctví"
 
 #: ../qml/Components/ContentRating.qml:83
 msgid "Depictions of modern-day slavery"
-msgstr ""
+msgstr "Zobrazení moderního otroctví"
 
 #: ../qml/Components/ContentRating.qml:84
 msgid "Graphic depictions of modern-day slavery"
-msgstr ""
+msgstr "Grafická znázornění moderního otroctví"
 
 #: ../qml/Components/ContentRating.qml:87
 msgid "References to alcoholic beverages"
-msgstr ""
+msgstr "Odkazy na alkoholické nápoje"
 
 #: ../qml/Components/ContentRating.qml:88
 msgid "Use of alcoholic beverages"
-msgstr ""
+msgstr "Konzumace alkoholických nápojů"
 
 #: ../qml/Components/ContentRating.qml:91
 msgid "References to illicit drugs"
-msgstr ""
+msgstr "Odkazy na omamné látky"
 
 #: ../qml/Components/ContentRating.qml:92
 msgid "Use of illicit drugs"
-msgstr ""
+msgstr "Užívání omamných látek"
 
 #: ../qml/Components/ContentRating.qml:95
 msgid "References to tobacco products"
-msgstr ""
+msgstr "Odkazy na tabákové výrobky"
 
 #: ../qml/Components/ContentRating.qml:96
 msgid "Use of tobacco products"
-msgstr ""
+msgstr "Užívání tabákových výrobků"
 
 #: ../qml/Components/ContentRating.qml:99
 msgid "Brief artistic nudity"
-msgstr ""
+msgstr "Krátká scéna s uměleckou nahotou"
 
 #: ../qml/Components/ContentRating.qml:100
 msgid "Prolonged nudity"
-msgstr ""
+msgstr "Dlouhotrvající nahota"
 
 #: ../qml/Components/ContentRating.qml:101
 msgid "Explicit nudity showing nipples or sexual organs"
-msgstr ""
+msgstr "Přímá nahota zobrazující bradavky nebo pohlavní orgány"
 
 #: ../qml/Components/ContentRating.qml:104
 msgid "Provocative references or depictions"
-msgstr ""
+msgstr "Provokativní narážky nebo zobrazení"
 
 #: ../qml/Components/ContentRating.qml:105
 msgid "Sexual references or depictions"
-msgstr ""
+msgstr "Sexuální narážky nebo zobrazení"
 
 #: ../qml/Components/ContentRating.qml:106
 msgid "Graphic sexual behavior"
-msgstr ""
+msgstr "Grafické znázornění sexuálního chování"
 
 #: ../qml/Components/ContentRating.qml:109
 msgid "Mild or infrequent use of profanity"
-msgstr ""
+msgstr "Mírné nebo ojedinělé používání vulgárních výrazů"
 
 #: ../qml/Components/ContentRating.qml:110
 msgid "Moderate use of profanity"
-msgstr ""
+msgstr "Mírné používání vulgárních výrazů"
 
 #: ../qml/Components/ContentRating.qml:111
 msgid "Strong or frequent use of profanity"
-msgstr ""
+msgstr "Silné nebo časté používání vulgárních výrazů"
 
 #: ../qml/Components/ContentRating.qml:114
 msgid "Slapstick humor"
-msgstr ""
+msgstr "Fyzický humor"
 
 #: ../qml/Components/ContentRating.qml:115
 msgid "Vulgar or bathroom humor"
-msgstr ""
+msgstr "Vulgární humor nebo humor na toaletní téma"
 
 #: ../qml/Components/ContentRating.qml:116
 msgid "Mature or sexual humor"
-msgstr ""
+msgstr "Humor pro dospělé nebo sexuální humor"
 
 #: ../qml/Components/ContentRating.qml:119
 msgid "Negativity towards a specific group of people, e.g. ethnic jokes"
 msgstr ""
+"Negativní postoje vůči určité skupině lidí, např. vtipy na účet určité "
+"etnické skupiny"
 
 #: ../qml/Components/ContentRating.qml:120
 msgid ""
 "Discrimination designed to cause emotional harm, e.g. racism or homophobia"
 msgstr ""
+"Diskriminace, jejímž cílem je způsobit emocionální újmu, např. rasismus nebo "
+"homofobie"
 
 #: ../qml/Components/ContentRating.qml:121
 msgid "Explicit discrimination based on gender, sexuality, race or religion"
 msgstr ""
+"Zjevná diskriminace na základě pohlaví, sexuální orientace, rasy nebo "
+"náboženského vyznání"
 
 #: ../qml/Components/ContentRating.qml:124
 msgid "User-to-user interactions without chat functionality"
-msgstr ""
+msgstr "Interakce mezi uživateli bez chatové funkce"
 
 #: ../qml/Components/ContentRating.qml:125
 msgid "Moderated messaging between users"
-msgstr ""
+msgstr "Moderované zasílání zpráv mezi uživateli"
 
 #: ../qml/Components/ContentRating.qml:126
 msgid "Uncontrolled chat functionality between users"
-msgstr ""
+msgstr "Nemoderovaná funkce chatu mezi uživateli"
 
 #: ../qml/Components/ContentRating.qml:129
 msgid "Using any online API, e.g. a user-counter"
-msgstr ""
+msgstr "Využití jakéhokoli online API, např. počítadla uživatelů"
 
 #: ../qml/Components/ContentRating.qml:130
 msgid "Sharing diagnostic data not identifiable to the user"
 msgstr ""
+"Sdílení diagnostických údajů, na jejichž základě nelze identifikovat "
+"uživatele"
 
 #: ../qml/Components/ContentRating.qml:131
 msgid "Sharing information identifiable to the user, e.g. crash dumps"
 msgstr ""
+"Sdílení informací, na jejichž základě lze identifikovat uživatele, např. "
+"výpisy paměti po selhání"
 
 #: ../qml/Components/ContentRating.qml:134
 msgid "Moderated audio or video chat between users"
-msgstr ""
+msgstr "Moderovaný audio- nebo videochat mezi uživateli"
 
 #: ../qml/Components/ContentRating.qml:135
 msgid "Uncontrolled audio or video chat between users"
-msgstr ""
+msgstr "Nekontrolovaný audio- nebo videochat mezi uživateli"
 
 #: ../qml/Components/ContentRating.qml:138
 msgid "Sharing physical location to other users"
-msgstr ""
+msgstr "Sdílení fyzické polohy s ostatními uživateli"
 
 #: ../qml/Components/ContentRating.qml:141
 msgid "Sharing contact details with other users"
-msgstr ""
+msgstr "Sdílení kontaktních údajů s ostatními uživateli"
 
 #: ../qml/Components/ContentRating.qml:144
 msgid "Users are encouraged to donate real money, e.g. using Patreon"
 msgstr ""
+"Uživatelé jsou vyzýváni, aby přispívali skutečnými penězi, např. "
+"prostřednictvím služby Patreon"
 
 #: ../qml/Components/ContentRating.qml:145
 msgid ""
 "Ability to spend real money in-app, e.g. buying new content or new levels"
 msgstr ""
+"Možnost utrácet skutečné peníze v aplikaci, např. za nákup nového obsahu "
+"nebo nových úrovní"
 
 #: ../qml/Components/ContentRating.qml:148
 msgid "Product placement, e.g. billboards in a football game"
-msgstr ""
+msgstr "Produktová reklama, např. billboardy během fotbalového zápasu"
 
 #: ../qml/Components/ContentRating.qml:149
 msgid "Explicit references to specific brands or trademarked products"
 msgstr ""
+"Výslovné odkazy na konkrétní značky nebo výrobky chráněné ochrannou známkou"
 
 #: ../qml/Components/ContentRating.qml:150
 msgid "Users are encouraged to purchase specific real-world items"
-msgstr ""
+msgstr "Uživatelé jsou vybízeni k nákupu konkrétních předmětů z reálného světa"
 
 #: ../qml/Components/ContentRating.qml:153
 msgid "Gambling on random events using tokens or credits"
-msgstr ""
+msgstr "Sázení na náhodné události pomocí žetonů nebo kreditů"
 
 #: ../qml/Components/ContentRating.qml:154
 msgid "Gambling using fictional money"
-msgstr ""
+msgstr "Hazardní hry s fiktivními penězi"
 
 #: ../qml/Components/ContentRating.qml:155
 msgid "Gambling using real money"
-msgstr ""
+msgstr "Hazardní hry o skutečné peníze"
 
 #: ../qml/Components/ContentRating.qml:160
 msgid "Mild"
-msgstr ""
+msgstr "Mírný"
 
 #: ../qml/Components/ContentRating.qml:161
 msgid "Moderate"
-msgstr ""
+msgstr "Střední"
 
 #: ../qml/Components/ContentRating.qml:162
 msgid "Intense"
-msgstr ""
+msgstr "Intenzivní"
 
 #: ../qml/Components/ContentRating.qml:213
-#, fuzzy
-#| msgid "Content Exchange"
 msgid "Content Rating"
-msgstr "Sdílený obsah"
+msgstr "Hodnocení obsahu"
 
 #: ../qml/Components/ContentRating.qml:270
 msgid "This app has not been rated"
-msgstr ""
+msgstr "Tato aplikace zatím nebyla ohodnocena"
 
 #: ../qml/Components/ContentRating.qml:271
-#, fuzzy
-#| msgid "All Types"
 msgid "All Ages"
-msgstr "Všechny typy"
+msgstr "Pro všechny věkové kategorie"
 
 #: ../qml/Components/ContentRating.qml:282
 msgid "No concerning content"
-msgstr ""
+msgstr "Žádný problematický obsah"
 
 #: ../qml/Components/ContentRating.qml:353
 msgid ""
 "Self reported rating using <a href=\"https://hughsie.github.io/oars/\">Open "
 "Age Rating Service</a>"
 msgstr ""
+"Hodnocení na základě vlastního posouzení s využitím <a href=\"https://"
+"hughsie.github.io/oars/\">Open Age Rating Service</a>"
 
 #: ../qml/Components/HeaderMain.qml:27 ../qml/SettingsPage.qml:29
 msgid "Settings"
@@ -772,7 +777,7 @@ msgstr "Poskytovatel účtů"
 #: ../qml/Components/PackageListItem.qml:48
 #: ../qml/Components/PackageTile.qml:93 ../qml/Dialogs/FilterDialog.qml:155
 msgid "Snap"
-msgstr ""
+msgstr "Snap"
 
 #: ../qml/Components/PackageTile.qml:105
 msgid "Update available"
@@ -956,18 +961,16 @@ msgid "Web Apps"
 msgstr "Webové aplikace"
 
 #: ../qml/Dialogs/FilterDialog.qml:145
-#, fuzzy
-#| msgid "Package contents"
 msgid "Package Type"
-msgstr "Obsah balíčku"
+msgstr "Typ balíčku"
 
 #: ../qml/Dialogs/FilterDialog.qml:153 ../qml/Dialogs/FilterDialog.qml:167
 msgid "All"
-msgstr ""
+msgstr "Vše"
 
 #: ../qml/Dialogs/FilterDialog.qml:154
 msgid "Click"
-msgstr ""
+msgstr "Click"
 
 #: ../qml/Dialogs/FilterDialog.qml:193
 msgid "Apply"
@@ -1017,44 +1020,30 @@ msgid ""
 "Not all snaps were designed with Ubuntu Touch in mind and might not work "
 "well."
 msgstr ""
+"Ne všechny aplikace typu „snap“ byly vyvinuty s ohledem na Ubuntu Touch a "
+"nemusí fungovat správně."
 
 #: ../qml/Dialogs/SnapWarningDialog.qml:39
 msgid "Don't show this warning again"
-msgstr ""
+msgstr "Toto varování již nezobrazovat"
 
 #: ../qml/Dialogs/SnapWarningDialog.qml:43
-#, fuzzy
-#| msgid "I understand the risks"
 msgid "I understand"
-msgstr "Rozumím rizikům"
+msgstr "Rozumím"
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:30
-#, fuzzy
-#| msgid ""
-#| "This app has access to restricted parts of the system and all of your "
-#| "data. It has the potential break your system. While the OpenStore "
-#| "maintainers have reviewed the code for this app for safety, they are not "
-#| "responsible for anything bad that might happen to your device or data "
-#| "from installing this app."
 msgid ""
 "This app has access to restricted parts of the system and all of your data. "
 "It has the potential to break your system. The OpenStore maintainers have "
 "not reviewed the code for this app and they are not responsible for anything "
 "bad that might happen to your device or data from installing this app."
 msgstr ""
-"Tato aplikace má přístup k běžně zakázaným částem systému a ke všem vašim "
-"datům a může Váš ystém poškodit. Přestože správci OpenStore provedli "
-"kontrolu kódu aplikace z důvodu bezpečnosti, nenesou odpovědnost za možné "
-"škody na Vašem zařízení a datech při instalaci této aplikace."
+"Tato aplikace má přístup k omezeným částem systému a ke všem vašim datům. "
+"Může dojít k poškození vašeho systému. Správci OpenStore kód této aplikace "
+"neprověřili a nenesou žádnou odpovědnost za případné škody, které by mohly "
+"vzniknout na vašem zařízení nebo datách v důsledku instalace této aplikace."
 
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml:31
-#, fuzzy
-#| msgid ""
-#| "This app has access to restricted parts of the system and all of your "
-#| "data. It has the potential break your system. While the OpenStore "
-#| "maintainers have reviewed the code for this app for safety, they are not "
-#| "responsible for anything bad that might happen to your device or data "
-#| "from installing this app."
 msgid ""
 "This app has access to restricted parts of the system and all of your data. "
 "It has the potential to break your system. While the OpenStore maintainers "
@@ -1135,10 +1124,8 @@ msgstr "Dostupné aktualizace (%1)"
 
 #. TRANSLATORS: %1 is the number of installed snap apps
 #: ../qml/InstalledAppsPage.qml:88
-#, fuzzy
-#| msgid "Installed apps (%1)"
 msgid "Installed Snap apps (%1)"
-msgstr "Nainstalované aplikace (%1)"
+msgstr "Nainstalované Snap aplikace (%1)"
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
 #: ../qml/InstalledAppsPage.qml:92
@@ -1214,17 +1201,15 @@ msgstr "Odhlásit se"
 
 #: ../qml/SettingsPage.qml:166
 msgid "General"
-msgstr ""
+msgstr "Obecné informace"
 
 #: ../qml/SettingsPage.qml:172
-#, fuzzy
-#| msgid "Get support"
 msgid "Enable snap support"
-msgstr "Získat technickou podporu"
+msgstr "Povolit podporu Snap"
 
 #: ../qml/SettingsPage.qml:190
 msgid "Only show Lomiri-compatible snaps"
-msgstr ""
+msgstr "Zobrazit pouze snap aplikace kompatibilní s Lomiri"
 
 #: ../qml/SettingsPage.qml:207
 msgid "Hide adult-oriented content"

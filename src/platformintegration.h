@@ -18,12 +18,13 @@
 #ifndef PLATFORMINTEGRATION_H
 #define PLATFORMINTEGRATION_H
 
+#include "clickinstaller.h"
+
 #include <QHash>
 #include <QObject>
 #include <QVariantList>
 
-class ClickInstaller;
-class QSnapdClient;
+#include <Snapd/Client>
 
 class PlatformIntegration : public QObject
 {

@@ -1,13 +1,34 @@
-cmake_minimum_required(VERSION 3.10.0)
+cmake_minimum_required(VERSION 3.16.0)
 project(openstore C CXX)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+
+# Default to whichever Qt major version is actually available on this
+# system, so the same clickable.yaml/CI matrix (focal still on Qt5,
+# 26.04+/next already on Qt6) builds the right one without extra config.
+# Pass -DENABLE_QT6=ON/OFF explicitly to override the detection.
+if(NOT DEFINED ENABLE_QT6)
+    find_package(QT NAMES Qt6 QUIET COMPONENTS Core)
+    if(QT_FOUND)
+        set(ENABLE_QT6_DEFAULT ON)
+    else()
+        set(ENABLE_QT6_DEFAULT OFF)
+    endif()
+    unset(QT_FOUND)
+    unset(QT_VERSION_MAJOR)
+endif()
+option(ENABLE_QT6 "Enable building with Qt6" ${ENABLE_QT6_DEFAULT})
+
+if(ENABLE_QT6)
+    set(QT_VERSION_MAJOR 6)
+else()
+    set(QT_VERSION_MAJOR 5)
+endif()
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
-find_package(Qt5Core REQUIRED)
-find_package(Qt5Qml REQUIRED)
-find_package(Qt5Quick REQUIRED)
-find_package(Qt5DBus REQUIRED)
+find_package(QT NAMES Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Qml Quick DBus)
 find_package(PAM REQUIRED)
 
 include(FindPkgConfig)

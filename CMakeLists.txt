@@ -70,6 +70,23 @@ if(DEFINED ENV{CLICK_FRAMEWORK_BASE})
     message(STATUS "Build version with framework is: ${BUILD_VERSION}")
 endif()
 
+set(LOMIRI_COMPONENTS_VERSION 1.3)
+set(LOMIRI_CONTENT_VERSION 1.3)
+set(LOMIRI_CONNECTIVITY_VERSION 1.0)
+
+# Generate the QML sources and the resource file from their *.in templates.
+# The generated files keep the same relative layout inside the build tree,
+file(RELATIVE_PATH QML_SOURCE_DIR_RELATIVE ${CMAKE_BINARY_DIR}/qml ${CMAKE_CURRENT_SOURCE_DIR}/qml)
+
+file(GLOB_RECURSE QML_TEMPLATE_FILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/qml/*.qml.in)
+list(SORT QML_TEMPLATE_FILES)
+foreach(QML_TEMPLATE_FILE ${QML_TEMPLATE_FILES})
+    string(REGEX REPLACE "\\.in$" "" QML_GENERATED_FILE ${QML_TEMPLATE_FILE})
+    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/${QML_TEMPLATE_FILE} ${CMAKE_BINARY_DIR}/${QML_GENERATED_FILE} @ONLY)
+endforeach()
+
+configure_file(qml/qml.qrc.in ${CMAKE_BINARY_DIR}/qml/qml.qrc @ONLY)
+
 # Config files & the logo
 configure_file(manifest.json.in ${CMAKE_CURRENT_BINARY_DIR}/manifest.json)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/manifest.json DESTINATION ${CMAKE_INSTALL_PREFIX})
@@ -80,7 +97,7 @@ install(FILES qml/Assets/${PROJECT_NAME}.svg DESTINATION ${DATA_DIR})
 install(FILES qml/Assets/${PROJECT_NAME}splash.svg DESTINATION ${DATA_DIR})
 
 # Translations
-file(GLOB_RECURSE I18N_SRC_FILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/po qml/*.qml qml/*.js)
+file(GLOB_RECURSE I18N_SRC_FILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/po qml/*.qml.in qml/*.js)
 list(APPEND I18N_SRC_FILES ${DESKTOP_FILE_NAME}.in.h)
 
 find_program(INTLTOOL_MERGE intltool-merge)
@@ -103,7 +120,7 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE_NAME} DESTINATION ${DAT
 # Make source files visible in qtcreator
 file(GLOB_RECURSE PROJECT_SRC_FILES
     RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
-    qml/*.qml
+    qml/*.qml.in
     qml/*.js
     *.json
     *.json.in

@@ -1,0 +1,57 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Main.qml</file>
+        <file>AppDetailsPage.qml</file>
+        <file>AppLocalDetailsPage.qml</file>
+        <file>CategoriesPage.qml</file>
+        <file>Components/BottomEdgePageStack.qml</file>
+        <file>Components/ButtonEmoji.qml</file>
+        <file>Components/ContentRating.qml</file>
+        <file>Components/EmptyState.qml</file>
+        <file>Components/HeaderBase.qml</file>
+        <file>Components/HeaderMain.qml</file>
+        <file>Components/HighlightedApp.qml</file>
+        <file>Components/HookIcon.qml</file>
+        <file>Components/LabelCentered.qml</file>
+        <file>Components/LineDivider.qml</file>
+        <file>Components/MostRated.qml</file>
+        <file>Components/OpenStoreCarousel.qml</file>
+        <file>Components/PackageListItem.qml</file>
+        <file>Components/PackageTile.qml</file>
+        <file>Components/RatingsRow.qml</file>
+        <file>Components/ReviewItem.qml</file>
+        <file>Components/ReviewItemVertical.qml</file>
+        <file>Components/ReviewPreview.qml</file>
+        <file>Components/ScreenshotImage.qml</file>
+        <file>Components/ScreenshotsCarousel.qml</file>
+        <file>Components/SectionDivider.qml</file>
+        <file>Dialogs/UninstallDialog.qml</file>
+        <file>Dialogs/DomainWarningDialog.qml</file>
+        <file>Dialogs/InstallWarningDialog.qml</file>
+        <file>Dialogs/DonationDialog.qml</file>
+        <file>Dialogs/UnconfinedWarningDialog.qml</file>
+        <file>Dialogs/SnapWarningDialog.qml</file>
+        <file>Dialogs/NegativeReviewDialog.qml</file>
+        <file>Dialogs/FilterDialog.qml</file>
+        <file>DiscoverPage.qml</file>
+        <file>FilteredAppList.qml</file>
+        <file>InstalledAppsPage.qml</file>
+        <file>SearchPage.qml</file>
+        <file>SettingsPage.qml</file>
+        <file>SignInPage.qml</file>
+        <file alias="Assets/buggy-full.svg">@QML_SOURCE_DIR_RELATIVE@/Assets/buggy-full.svg</file>
+        <file alias="Assets/buggy.svg">@QML_SOURCE_DIR_RELATIVE@/Assets/buggy.svg</file>
+        <file alias="Assets/happy-full.svg">@QML_SOURCE_DIR_RELATIVE@/Assets/happy-full.svg</file>
+        <file alias="Assets/happy.svg">@QML_SOURCE_DIR_RELATIVE@/Assets/happy.svg</file>
+        <file alias="Assets/neutral-full.svg">@QML_SOURCE_DIR_RELATIVE@/Assets/neutral-full.svg</file>
+        <file alias="Assets/neutral.svg">@QML_SOURCE_DIR_RELATIVE@/Assets/neutral.svg</file>
+        <file alias="Assets/openstore.svg">@QML_SOURCE_DIR_RELATIVE@/Assets/openstore.svg</file>
+        <file alias="Assets/t-up.svg">@QML_SOURCE_DIR_RELATIVE@/Assets/t-up.svg</file>
+        <file alias="Assets/thumbdown-full.svg">@QML_SOURCE_DIR_RELATIVE@/Assets/thumbdown-full.svg</file>
+        <file alias="Assets/thumbdown.svg">@QML_SOURCE_DIR_RELATIVE@/Assets/thumbdown.svg</file>
+        <file alias="Assets/thumbup-full.svg">@QML_SOURCE_DIR_RELATIVE@/Assets/thumbup-full.svg</file>
+        <file alias="Assets/thumbup.svg">@QML_SOURCE_DIR_RELATIVE@/Assets/thumbup.svg</file>
+        <file alias="Assets/fallback.svg">@QML_SOURCE_DIR_RELATIVE@/Assets/fallback.svg</file>
+        <file alias="js/inject.js">@QML_SOURCE_DIR_RELATIVE@/js/inject.js</file>
+    </qresource>
+</RCC>

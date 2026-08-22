@@ -22,6 +22,10 @@
 #include <QQmlContext>
 #include <QQuickView>
 
+#if QT_VERSION_MAJOR >= 6
+#include <QNetworkInformation>
+#endif
+
 #include <Snapd/Client>
 
 #include "apiconstants.h"
@@ -63,6 +67,10 @@ int main(int argc, char* argv[])
   qDebug() << "OpenStore" << QCoreApplication::applicationVersion();
 
   QGuiApplication app(argc, argv);
+
+#if QT_VERSION_MAJOR >= 6
+  QNetworkInformation::loadDefaultBackend();
+#endif
 
   qmlRegisterSingletonType<OpenStoreNetworkManager>("OpenStore", 1, 0, "OpenStoreNetworkManager", registerNetworkManagerSingleton);
   qmlRegisterSingletonType<PlatformIntegration>("OpenStore", 1, 0, "PlatformIntegration", registerPlatformIntegrationSingleton);

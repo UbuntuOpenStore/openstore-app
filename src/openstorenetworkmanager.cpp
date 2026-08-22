@@ -36,7 +36,13 @@ OpenStoreNetworkManager* OpenStoreNetworkManager::m_instance = nullptr;
 OpenStoreNetworkManager::OpenStoreNetworkManager()
 {
   m_manager = new QNetworkAccessManager(this);
+#if QT_VERSION_MAJOR >= 6
+  if (QNetworkInformation::instance()) {
+    connect(QNetworkInformation::instance(), &QNetworkInformation::reachabilityChanged, this, &OpenStoreNetworkManager::networkAccessibleChanged);
+  }
+#else
   connect(m_manager, &QNetworkAccessManager::networkAccessibleChanged, this, &OpenStoreNetworkManager::networkAccessibleChanged);
+#endif
   connect(this, &OpenStoreNetworkManager::showNsfwChanged, this, &OpenStoreNetworkManager::deleteCache);
   connect(this, &OpenStoreNetworkManager::snapSupportChanged, this, &OpenStoreNetworkManager::deleteCache);
   connect(this, &OpenStoreNetworkManager::lomiriCompatibleOnlyChanged, this, &OpenStoreNetworkManager::deleteCache);

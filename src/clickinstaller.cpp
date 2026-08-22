@@ -24,6 +24,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QNetworkRequest>
+#include <QRegularExpression>
 #include <QUrl>
 
 ClickInstaller::ClickInstaller(QObject* parent)
@@ -71,7 +72,7 @@ void ClickInstaller::installPackage(const QString& packageUrl, const bool isLoca
   }
 
   QString localPath = packageUrl;
-  localPath.remove(QRegExp("$file://"));
+  localPath.remove(QRegularExpression("$file://"));
   installLocalPackage(localPath);
 }
 

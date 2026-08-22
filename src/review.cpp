@@ -120,6 +120,21 @@ ReviewItem::ReviewItem(const ReviewItem& review)
 {
 }
 
+ReviewItem& ReviewItem::operator=(const ReviewItem& review)
+{
+  if (this == &review) {
+    return *this;
+  }
+  m_author = review.m_author;
+  m_body = review.m_body;
+  m_rating = review.m_rating;
+  m_reviewedVersion = review.m_reviewedVersion;
+  m_comment = review.m_comment;
+  m_isRedacted = review.m_isRedacted;
+  m_date = review.m_date;
+  return *this;
+}
+
 QString ReviewItem::id() const
 {
   return m_reviewId;

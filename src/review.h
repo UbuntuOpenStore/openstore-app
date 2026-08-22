@@ -80,6 +80,7 @@ class ReviewItem : public QObject
 public:
   explicit ReviewItem(const QJsonObject& json, QObject* parent = Q_NULLPTR);
   explicit ReviewItem(const ReviewItem& review);
+  ReviewItem& operator=(const ReviewItem& review);
 
   class Comment
   {

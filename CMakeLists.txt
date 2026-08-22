@@ -91,9 +91,15 @@ if(DEFINED ENV{CLICK_FRAMEWORK_BASE})
     message(STATUS "Build version with framework is: ${BUILD_VERSION}")
 endif()
 
-set(LOMIRI_COMPONENTS_VERSION 1.3)
-set(LOMIRI_CONTENT_VERSION 1.3)
-set(LOMIRI_CONNECTIVITY_VERSION 1.0)
+if(QT_VERSION_MAJOR EQUAL 6)
+    set(LOMIRI_COMPONENTS_VERSION 2.0)
+    set(LOMIRI_CONTENT_VERSION 2.0)
+    set(LOMIRI_CONNECTIVITY_VERSION 2.0)
+else()
+    set(LOMIRI_COMPONENTS_VERSION 1.3)
+    set(LOMIRI_CONTENT_VERSION 1.3)
+    set(LOMIRI_CONNECTIVITY_VERSION 1.0)
+endif()
 
 # Generate the QML sources and the resource file from their *.in templates.
 # The generated files keep the same relative layout inside the build tree,

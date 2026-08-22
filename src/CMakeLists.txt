@@ -38,7 +38,12 @@ else()
     qt5_add_resources(QT_RESOURCES ${CMAKE_BINARY_DIR}/qml/qml.qrc)
 endif()
 add_executable(${PROJECT_NAME} ${SRC} ${QT_RESOURCES})
-target_link_libraries(${PROJECT_NAME} Qt::Gui Qt::Qml Qt::Quick Qt::QuickControls2 Qt::DBus
+target_link_libraries(${PROJECT_NAME}
+                      Qt${QT_VERSION_MAJOR}::Gui
+                      Qt${QT_VERSION_MAJOR}::Qml
+                      Qt${QT_VERSION_MAJOR}::Quick
+                      Qt${QT_VERSION_MAJOR}::QuickControls2
+                      Qt${QT_VERSION_MAJOR}::DBus
                       ${GLIB_LDFLAGS} ${GIO_LDFLAGS} ${CLICK_LDFLAGS}
                       ${PAM_LIBRARIES} ${SNAPD_QT_LIBRARIES})
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX})

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-01 20:26+0000\n"
+"POT-Creation-Date: 2026-09-02 02:56+0000\n"
 "PO-Revision-Date: 2026-08-22 16:51+0000\n"
 "Last-Translator: Milan Korecky <milan.korecky@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/open-store-io/"
@@ -19,39 +19,40 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
 "X-Generator: Weblate 2026.9.dev0\n"
 
-#: ../qml/AppDetailsPage.qml:120 ../qml/AppLocalDetailsPage.qml:35
+#: ../qml/AppDetailsPage.qml.in:120 ../qml/AppLocalDetailsPage.qml.in:35
 msgid "App details"
 msgstr "Podrobnosti o aplikaci"
 
-#: ../qml/AppDetailsPage.qml:127 ../qml/AppDetailsPage.qml:447
-#: ../qml/AppLocalDetailsPage.qml:42 ../qml/Dialogs/UninstallDialog.qml:33
+#: ../qml/AppDetailsPage.qml.in:127 ../qml/AppDetailsPage.qml.in:449
+#: ../qml/AppLocalDetailsPage.qml.in:42
+#: ../qml/Dialogs/UninstallDialog.qml.in:33
 msgid "Remove"
 msgstr "Odstranit"
 
-#: ../qml/AppDetailsPage.qml:168 ../qml/Components/PackageListItem.qml:34
-#: ../qml/Components/PackageTile.qml:79
+#: ../qml/AppDetailsPage.qml.in:170 ../qml/Components/PackageListItem.qml.in:34
+#: ../qml/Components/PackageTile.qml.in:79
 msgid "App"
 msgstr "Aplikace"
 
-#: ../qml/AppDetailsPage.qml:169 ../qml/Components/PackageListItem.qml:35
-#: ../qml/Components/PackageTile.qml:80
+#: ../qml/AppDetailsPage.qml.in:171 ../qml/Components/PackageListItem.qml.in:35
+#: ../qml/Components/PackageTile.qml.in:80
 msgid "Bookmark"
 msgstr "Záložka"
 
-#: ../qml/AppDetailsPage.qml:170 ../qml/Components/PackageListItem.qml:36
-#: ../qml/Components/PackageTile.qml:81
+#: ../qml/AppDetailsPage.qml.in:172 ../qml/Components/PackageListItem.qml.in:36
+#: ../qml/Components/PackageTile.qml.in:81
 msgid "Web App"
 msgstr "Webová aplikace"
 
-#: ../qml/AppDetailsPage.qml:180
+#: ../qml/AppDetailsPage.qml.in:182
 msgid "Install Size: "
 msgstr "Po instalaci: "
 
-#: ../qml/AppDetailsPage.qml:181
+#: ../qml/AppDetailsPage.qml.in:183
 msgid "Download Size: "
 msgstr "Ke stažení: "
 
-#: ../qml/AppDetailsPage.qml:255
+#: ../qml/AppDetailsPage.qml.in:257
 msgid ""
 "The installed version of this app doesn't come from the OpenStore server. "
 "You can install the latest stable update by tapping the button below."
@@ -59,452 +60,452 @@ msgstr ""
 "Nainstalovaná verze aplikace nepochází ze serveru OpenStore. Nejnovější "
 "stabilní aktualizaci můžete nainstalovat klepnutím na níže uvedené tlačítko."
 
-#: ../qml/AppDetailsPage.qml:272
+#: ../qml/AppDetailsPage.qml.in:274
 msgid "This is a Snap package provided by the Snapcraft Store"
 msgstr "Toto je balíček Snap, který nabízí obchod Snapcraft Store"
 
-#: ../qml/AppDetailsPage.qml:301 ../qml/AppLocalDetailsPage.qml:116
-#: ../qml/Components/HighlightedApp.qml:117
+#: ../qml/AppDetailsPage.qml.in:303 ../qml/AppLocalDetailsPage.qml.in:116
+#: ../qml/Components/HighlightedApp.qml.in:117
 msgid "Open"
 msgstr "Otevřít"
 
-#: ../qml/AppDetailsPage.qml:322
+#: ../qml/AppDetailsPage.qml.in:324
 msgid "The OpenStore is installed!"
 msgstr "OpenStore je nainstalován!"
 
-#: ../qml/AppDetailsPage.qml:331
+#: ../qml/AppDetailsPage.qml.in:333
 msgid "Install stable version"
 msgstr "Nainstalovat stabilní verzi"
 
-#: ../qml/AppDetailsPage.qml:334
+#: ../qml/AppDetailsPage.qml.in:336
 msgid "Upgrade"
 msgstr "Přejít na novější verzi"
 
-#: ../qml/AppDetailsPage.qml:337
+#: ../qml/AppDetailsPage.qml.in:339
 msgid "Install"
 msgstr "Nainstalovat"
 
-#: ../qml/AppDetailsPage.qml:433
+#: ../qml/AppDetailsPage.qml.in:435
 msgid "This app is not compatible with your system."
 msgstr "Tato aplikace není kompatibilní s vaším systémem."
 
-#: ../qml/AppDetailsPage.qml:470
+#: ../qml/AppDetailsPage.qml.in:474
 msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
 msgstr "Aplikace má přístup k systémovým údajům, pro více informací viz níže."
 
-#: ../qml/AppDetailsPage.qml:473
+#: ../qml/AppDetailsPage.qml.in:477
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
 "Tato aplikace má přístup k systémovým datům, ke kterým je jinak omezen "
 "přístup – podrobnosti viz níže."
 
-#: ../qml/AppDetailsPage.qml:498
+#: ../qml/AppDetailsPage.qml.in:502
 msgid "Description"
 msgstr "Popis"
 
 #. TRANSLATORS: Title of the changelog section
-#: ../qml/AppDetailsPage.qml:536
+#: ../qml/AppDetailsPage.qml.in:540
 msgid "What's New"
 msgstr "Co je nového"
 
-#: ../qml/AppDetailsPage.qml:555
+#: ../qml/AppDetailsPage.qml.in:559
 msgid "Packager/Publisher"
 msgstr "Správce balíčku / vydavatel"
 
-#: ../qml/AppDetailsPage.qml:564 ../qml/AppLocalDetailsPage.qml:150
+#: ../qml/AppDetailsPage.qml.in:568 ../qml/AppLocalDetailsPage.qml.in:150
 msgid "Installed version"
 msgstr "Nainstalovaná verze"
 
-#: ../qml/AppDetailsPage.qml:574
+#: ../qml/AppDetailsPage.qml.in:578
 msgid "Latest available version"
 msgstr "Nejnovější dostupná verze"
 
-#: ../qml/AppDetailsPage.qml:583
+#: ../qml/AppDetailsPage.qml.in:587
 msgid "First released"
 msgstr "Poprvé vydáno"
 
-#: ../qml/AppDetailsPage.qml:594
+#: ../qml/AppDetailsPage.qml.in:598
 msgid "Downloads of the latest version"
 msgstr "Počet stážení nejnovější verzi"
 
-#: ../qml/AppDetailsPage.qml:603
+#: ../qml/AppDetailsPage.qml.in:607
 msgid "Total downloads"
 msgstr "Celkový počet stažení"
 
-#: ../qml/AppDetailsPage.qml:612
+#: ../qml/AppDetailsPage.qml.in:616
 msgid "License"
 msgstr "Licence"
 
-#: ../qml/AppDetailsPage.qml:613
+#: ../qml/AppDetailsPage.qml.in:617
 msgid "N/A"
 msgstr "Nedostupné"
 
-#: ../qml/AppDetailsPage.qml:625 ../qml/SettingsPage.qml:249
+#: ../qml/AppDetailsPage.qml.in:629 ../qml/SettingsPage.qml.in:249
 msgid "Source Code"
 msgstr "Zdrojový kód"
 
-#: ../qml/AppDetailsPage.qml:638
+#: ../qml/AppDetailsPage.qml.in:642
 msgid "Get support for this app"
 msgstr "Získat technickou podporu k aplikaci"
 
-#: ../qml/AppDetailsPage.qml:651
+#: ../qml/AppDetailsPage.qml.in:655
 msgid "Donate to support this app"
 msgstr "Zaslat dar na podporu vývoje aplikace"
 
-#: ../qml/AppDetailsPage.qml:664
+#: ../qml/AppDetailsPage.qml.in:668
 msgid "Help translate this app"
 msgstr "Pomozte přeložit aplikaci"
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
-#: ../qml/AppDetailsPage.qml:681
+#: ../qml/AppDetailsPage.qml.in:685
 msgid "More from %1"
 msgstr "Další aplikace od %1"
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: ../qml/AppDetailsPage.qml:696
+#: ../qml/AppDetailsPage.qml.in:700
 msgid "Other apps in %1"
 msgstr "Ostatní aplikace v %1"
 
-#: ../qml/AppDetailsPage.qml:707
+#: ../qml/AppDetailsPage.qml.in:711
 msgid "Package contents"
 msgstr "Obsah balíčku"
 
-#: ../qml/AppDetailsPage.qml:794
+#: ../qml/AppDetailsPage.qml.in:798
 msgid "Permissions"
 msgstr "Oprávnění"
 
-#: ../qml/AppDetailsPage.qml:799
+#: ../qml/AppDetailsPage.qml.in:803
 msgid "Accounts"
 msgstr "Účty"
 
-#: ../qml/AppDetailsPage.qml:800
+#: ../qml/AppDetailsPage.qml.in:804
 msgid "Audio"
 msgstr "Zvuk"
 
-#: ../qml/AppDetailsPage.qml:801
+#: ../qml/AppDetailsPage.qml.in:805
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: ../qml/AppDetailsPage.qml:802
+#: ../qml/AppDetailsPage.qml.in:806
 msgid "Calendar"
 msgstr "Kalendář"
 
-#: ../qml/AppDetailsPage.qml:803
+#: ../qml/AppDetailsPage.qml.in:807
 msgid "Camera"
 msgstr "Kamera"
 
-#: ../qml/AppDetailsPage.qml:804
+#: ../qml/AppDetailsPage.qml.in:808
 msgid "Connectivity"
 msgstr "Připojení"
 
-#: ../qml/AppDetailsPage.qml:805
+#: ../qml/AppDetailsPage.qml.in:809
 msgid "Contacts"
 msgstr "Kontakty"
 
-#: ../qml/AppDetailsPage.qml:806
+#: ../qml/AppDetailsPage.qml.in:810
 msgid "Content Exchange Source"
 msgstr "Správa sdíleného obsahu"
 
-#: ../qml/AppDetailsPage.qml:807
+#: ../qml/AppDetailsPage.qml.in:811
 msgid "Content Exchange"
 msgstr "Sdílený obsah"
 
-#: ../qml/AppDetailsPage.qml:808
+#: ../qml/AppDetailsPage.qml.in:812
 msgid "Debug"
 msgstr "Odzkoušet"
 
-#: ../qml/AppDetailsPage.qml:809
+#: ../qml/AppDetailsPage.qml.in:813
 msgid "History"
 msgstr "Historie"
 
-#: ../qml/AppDetailsPage.qml:810
+#: ../qml/AppDetailsPage.qml.in:814
 msgid "In App Purchases"
 msgstr "Nákupy v aplikaci"
 
-#: ../qml/AppDetailsPage.qml:811
+#: ../qml/AppDetailsPage.qml.in:815
 msgid "Keep Display On"
 msgstr "Udržovat displej zapnutý"
 
-#: ../qml/AppDetailsPage.qml:812
+#: ../qml/AppDetailsPage.qml.in:816
 msgid "Location"
 msgstr "Umístění"
 
-#: ../qml/AppDetailsPage.qml:813
+#: ../qml/AppDetailsPage.qml.in:817
 msgid "Microphone"
 msgstr "Mikrofon"
 
-#: ../qml/AppDetailsPage.qml:814
+#: ../qml/AppDetailsPage.qml.in:818
 msgid "Read Music Files"
 msgstr "Načíst hudební soubory"
 
-#: ../qml/AppDetailsPage.qml:815
+#: ../qml/AppDetailsPage.qml.in:819
 msgid "Music Files"
 msgstr "Hudební soubory"
 
-#: ../qml/AppDetailsPage.qml:816
+#: ../qml/AppDetailsPage.qml.in:820
 msgid "Networking"
 msgstr "Sítě"
 
-#: ../qml/AppDetailsPage.qml:817
+#: ../qml/AppDetailsPage.qml.in:821
 msgid "Read Picture Files"
 msgstr "Načíst soubory s obrázky"
 
-#: ../qml/AppDetailsPage.qml:818
+#: ../qml/AppDetailsPage.qml.in:822
 msgid "Picture Files"
 msgstr "Soubory s obrázky"
 
-#: ../qml/AppDetailsPage.qml:819
+#: ../qml/AppDetailsPage.qml.in:823
 msgid "Push Notifications"
 msgstr "Oznámení Push"
 
-#: ../qml/AppDetailsPage.qml:820
+#: ../qml/AppDetailsPage.qml.in:824
 msgid "Sensors"
 msgstr "Senzory"
 
-#: ../qml/AppDetailsPage.qml:821
+#: ../qml/AppDetailsPage.qml.in:825
 msgid "User Metrics"
 msgstr "Metriky uživatele"
 
-#: ../qml/AppDetailsPage.qml:822
+#: ../qml/AppDetailsPage.qml.in:826
 msgid "Read Video Files"
 msgstr "Načíst video soubory"
 
-#: ../qml/AppDetailsPage.qml:823
+#: ../qml/AppDetailsPage.qml.in:827
 msgid "Video Files"
 msgstr "Video soubory"
 
-#: ../qml/AppDetailsPage.qml:824
+#: ../qml/AppDetailsPage.qml.in:828
 msgid "Video"
 msgstr "Video"
 
-#: ../qml/AppDetailsPage.qml:825
+#: ../qml/AppDetailsPage.qml.in:829
 msgid "Webview"
 msgstr "Webový režim"
 
-#: ../qml/AppDetailsPage.qml:826 ../qml/AppDetailsPage.qml:834
+#: ../qml/AppDetailsPage.qml.in:830 ../qml/AppDetailsPage.qml.in:838
 msgid "Unknown"
 msgstr "Neznámý"
 
-#: ../qml/AppDetailsPage.qml:830
+#: ../qml/AppDetailsPage.qml.in:834
 msgid "Full System Access"
 msgstr "Úplný přístup k systému"
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: ../qml/AppDetailsPage.qml:839
+#: ../qml/AppDetailsPage.qml.in:843
 msgid "none required"
 msgstr "nevyžadovány"
 
-#: ../qml/AppDetailsPage.qml:875
+#: ../qml/AppDetailsPage.qml.in:879
 msgid "Read paths"
 msgstr "Popisy umístění pro čtení"
 
-#: ../qml/AppDetailsPage.qml:892
+#: ../qml/AppDetailsPage.qml.in:896
 msgid "Write paths"
 msgstr "Popisy umístění pro zápis"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: ../qml/AppDetailsPage.qml:967
+#: ../qml/AppDetailsPage.qml.in:971
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: ../qml/AppDetailsPage.qml:972
+#: ../qml/AppDetailsPage.qml.in:976
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: ../qml/AppDetailsPage.qml:977
+#: ../qml/AppDetailsPage.qml.in:981
 msgid "%1 kB"
 msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: ../qml/AppDetailsPage.qml:980
+#: ../qml/AppDetailsPage.qml.in:984
 msgid "%1 bytes"
 msgstr "%1 bajtů"
 
-#: ../qml/AppLocalDetailsPage.qml:130
+#: ../qml/AppLocalDetailsPage.qml.in:130
 msgid "This app could not be found in the OpenStore"
 msgstr "Tato aplikace nebyla nalezena v OpenStore"
 
-#: ../qml/AppLocalDetailsPage.qml:133
+#: ../qml/AppLocalDetailsPage.qml.in:133
 msgid ""
 "You are currently offline and the app details could not be fetched from the "
 "OpenStore"
 msgstr "Nyní jste offline a podrobnosti o aplikaci nelze načíst z OpenStore"
 
-#: ../qml/CategoriesPage.qml:39
+#: ../qml/CategoriesPage.qml.in:39
 msgid "Categories"
 msgstr "Kategorie"
 
-#: ../qml/CategoriesPage.qml:84
+#: ../qml/CategoriesPage.qml.in:84
 msgid "Nothing to see here yet!"
 msgstr "Zatím tu nic není!"
 
-#: ../qml/Components/BottomEdgePageStack.qml:102
+#: ../qml/Components/BottomEdgePageStack.qml.in:102
 msgid "Back"
 msgstr "Zpět"
 
-#: ../qml/Components/BottomEdgePageStack.qml:102
-#: ../qml/Components/ReviewPreview.qml:103
-#: ../qml/Components/ReviewPreview.qml:117
+#: ../qml/Components/BottomEdgePageStack.qml.in:102
+#: ../qml/Components/ReviewPreview.qml.in:103
+#: ../qml/Components/ReviewPreview.qml.in:117
 msgid "Close"
 msgstr "Zavřít"
 
-#: ../qml/Components/ContentRating.qml:27
+#: ../qml/Components/ContentRating.qml.in:27
 msgid "Cartoon Violence"
 msgstr "Násilí v kreslených seriálech"
 
-#: ../qml/Components/ContentRating.qml:28
+#: ../qml/Components/ContentRating.qml.in:28
 msgid "Fantasy Violence"
 msgstr "Fiktivní násilí"
 
-#: ../qml/Components/ContentRating.qml:29
+#: ../qml/Components/ContentRating.qml.in:29
 msgid "Realistic Violence"
 msgstr "Realistické znázornění násilí"
 
-#: ../qml/Components/ContentRating.qml:30
+#: ../qml/Components/ContentRating.qml.in:30
 msgid "Bloodshed"
 msgstr "Krvavá řežba"
 
-#: ../qml/Components/ContentRating.qml:31
+#: ../qml/Components/ContentRating.qml.in:31
 msgid "Sexual Violence"
 msgstr "Sexuální násilí"
 
-#: ../qml/Components/ContentRating.qml:32
+#: ../qml/Components/ContentRating.qml.in:32
 msgid "Desecration"
 msgstr "Znesvěcení"
 
-#: ../qml/Components/ContentRating.qml:33
+#: ../qml/Components/ContentRating.qml.in:33
 msgid "Human Slavery"
 msgstr "Lidské otroctví"
 
-#: ../qml/Components/ContentRating.qml:34
+#: ../qml/Components/ContentRating.qml.in:34
 msgid "Alcohol"
 msgstr "Alkohol"
 
-#: ../qml/Components/ContentRating.qml:35
+#: ../qml/Components/ContentRating.qml.in:35
 msgid "Narcotics"
 msgstr "Narkotika"
 
-#: ../qml/Components/ContentRating.qml:36
+#: ../qml/Components/ContentRating.qml.in:36
 msgid "Tobacco"
 msgstr "Tabák"
 
-#: ../qml/Components/ContentRating.qml:37
+#: ../qml/Components/ContentRating.qml.in:37
 msgid "Nudity"
 msgstr "Nudismus"
 
-#: ../qml/Components/ContentRating.qml:38
+#: ../qml/Components/ContentRating.qml.in:38
 msgid "Sexual Themes"
 msgstr "Sexuální témata"
 
-#: ../qml/Components/ContentRating.qml:39
+#: ../qml/Components/ContentRating.qml.in:39
 msgid "Profanity"
 msgstr "Vulgarismy"
 
-#: ../qml/Components/ContentRating.qml:40
+#: ../qml/Components/ContentRating.qml.in:40
 msgid "Humor"
 msgstr "Humor"
 
-#: ../qml/Components/ContentRating.qml:41
+#: ../qml/Components/ContentRating.qml.in:41
 msgid "Discrimination"
 msgstr "Diskriminace"
 
-#: ../qml/Components/ContentRating.qml:42
+#: ../qml/Components/ContentRating.qml.in:42
 msgid "Online Text Messaging"
 msgstr "Online zasílání textových zpráv"
 
-#: ../qml/Components/ContentRating.qml:43
+#: ../qml/Components/ContentRating.qml.in:43
 msgid "Information Sharing"
 msgstr "Sdílení informací"
 
-#: ../qml/Components/ContentRating.qml:44
+#: ../qml/Components/ContentRating.qml.in:44
 msgid "Audio & Video Chat"
 msgstr "Audio & Video konverzace"
 
-#: ../qml/Components/ContentRating.qml:45
+#: ../qml/Components/ContentRating.qml.in:45
 msgid "Location Sharing"
 msgstr "Sdílení polohy"
 
-#: ../qml/Components/ContentRating.qml:46
+#: ../qml/Components/ContentRating.qml.in:46
 msgid "Contact Sharing"
 msgstr "Sdílení kontaktů"
 
-#: ../qml/Components/ContentRating.qml:47
+#: ../qml/Components/ContentRating.qml.in:47
 msgid "In-App Purchases"
 msgstr "Nákupy v aplikaci"
 
-#: ../qml/Components/ContentRating.qml:48
+#: ../qml/Components/ContentRating.qml.in:48
 msgid "Advertising"
 msgstr "Reklama"
 
-#: ../qml/Components/ContentRating.qml:49
+#: ../qml/Components/ContentRating.qml.in:49
 msgid "Gambling"
 msgstr "Hazardní hry"
 
-#: ../qml/Components/ContentRating.qml:54
+#: ../qml/Components/ContentRating.qml.in:54
 msgid "Cartoon characters in unsafe situations"
 msgstr "Kreslené postavy v nebezpečných situacích"
 
-#: ../qml/Components/ContentRating.qml:55
+#: ../qml/Components/ContentRating.qml.in:55
 msgid "Cartoon characters in aggressive conflict"
 msgstr "Kreslené postavy v agresivním konfliktu"
 
-#: ../qml/Components/ContentRating.qml:56
+#: ../qml/Components/ContentRating.qml.in:56
 msgid "Cartoon characters showing graphic violence"
 msgstr "Kreslené postavy zobrazující výrazné násilí"
 
-#: ../qml/Components/ContentRating.qml:59
+#: ../qml/Components/ContentRating.qml.in:59
 msgid "Fantasy characters in unsafe situations"
 msgstr "Fiktivní postavy v nebezpečných situacích"
 
-#: ../qml/Components/ContentRating.qml:60
+#: ../qml/Components/ContentRating.qml.in:60
 msgid "Fantasy characters in aggressive conflict"
 msgstr "Fiktivní postavy v agresivním konfliktu"
 
-#: ../qml/Components/ContentRating.qml:61
+#: ../qml/Components/ContentRating.qml.in:61
 msgid "Fantasy characters with graphic violence"
 msgstr "Fiktivní postavy s explicitním násilím"
 
-#: ../qml/Components/ContentRating.qml:64
+#: ../qml/Components/ContentRating.qml.in:64
 msgid "Realistic characters in unsafe situations"
 msgstr "Realistické postavy v nebezpečných situacích"
 
-#: ../qml/Components/ContentRating.qml:65
+#: ../qml/Components/ContentRating.qml.in:65
 msgid "Realistic characters in depictions of aggressive conflict"
 msgstr "Realistické postavy v agresivních konfliktech"
 
-#: ../qml/Components/ContentRating.qml:66
+#: ../qml/Components/ContentRating.qml.in:66
 msgid "Realistic characters with graphic violence"
 msgstr "Realistické postavy s výrazným násilím"
 
-#: ../qml/Components/ContentRating.qml:69
+#: ../qml/Components/ContentRating.qml.in:69
 msgid "Unrealistic bloodshed"
 msgstr "Nerealistické krvavé scény"
 
-#: ../qml/Components/ContentRating.qml:70
+#: ../qml/Components/ContentRating.qml.in:70
 msgid "Realistic bloodshed"
 msgstr "Reálné krvavé scény"
 
-#: ../qml/Components/ContentRating.qml:71
+#: ../qml/Components/ContentRating.qml.in:71
 msgid "Depictions of bloodshed and the mutilation of body parts"
 msgstr "Zobrazení krveprolití a zmrzačení částí těla"
 
-#: ../qml/Components/ContentRating.qml:74
+#: ../qml/Components/ContentRating.qml.in:74
 msgid "Rape or other violent sexual behavior"
 msgstr "Znásilnění nebo jiné násilné sexuální chování"
 
-#: ../qml/Components/ContentRating.qml:77
+#: ../qml/Components/ContentRating.qml.in:77
 msgid "Visible dead human remains"
 msgstr "Viditelné ostatky mrtvých lidí"
 
-#: ../qml/Components/ContentRating.qml:78
+#: ../qml/Components/ContentRating.qml.in:78
 msgid "Dead human remains that are exposed to the elements"
 msgstr "Lidské ostatky vystavené povětrnostním vlivům"
 
-#: ../qml/Components/ContentRating.qml:79
+#: ../qml/Components/ContentRating.qml.in:79
 msgid ""
 "Graphic depictions of desecration of human bodies, for example being eaten "
 "by wild animals"
@@ -512,220 +513,220 @@ msgstr ""
 "Grafické zobrazení znesvěcení lidských těl, například jejich sežrání "
 "divokými zvířaty"
 
-#: ../qml/Components/ContentRating.qml:82
+#: ../qml/Components/ContentRating.qml.in:82
 msgid "Depictions or references to historical slavery"
 msgstr "Zobrazení nebo odkazy na historické otroctví"
 
-#: ../qml/Components/ContentRating.qml:83
+#: ../qml/Components/ContentRating.qml.in:83
 msgid "Depictions of modern-day slavery"
 msgstr "Zobrazení moderního otroctví"
 
-#: ../qml/Components/ContentRating.qml:84
+#: ../qml/Components/ContentRating.qml.in:84
 msgid "Graphic depictions of modern-day slavery"
 msgstr "Grafická znázornění moderního otroctví"
 
-#: ../qml/Components/ContentRating.qml:87
+#: ../qml/Components/ContentRating.qml.in:87
 msgid "References to alcoholic beverages"
 msgstr "Odkazy na alkoholické nápoje"
 
-#: ../qml/Components/ContentRating.qml:88
+#: ../qml/Components/ContentRating.qml.in:88
 msgid "Use of alcoholic beverages"
 msgstr "Konzumace alkoholických nápojů"
 
-#: ../qml/Components/ContentRating.qml:91
+#: ../qml/Components/ContentRating.qml.in:91
 msgid "References to illicit drugs"
 msgstr "Odkazy na omamné látky"
 
-#: ../qml/Components/ContentRating.qml:92
+#: ../qml/Components/ContentRating.qml.in:92
 msgid "Use of illicit drugs"
 msgstr "Užívání omamných látek"
 
-#: ../qml/Components/ContentRating.qml:95
+#: ../qml/Components/ContentRating.qml.in:95
 msgid "References to tobacco products"
 msgstr "Odkazy na tabákové výrobky"
 
-#: ../qml/Components/ContentRating.qml:96
+#: ../qml/Components/ContentRating.qml.in:96
 msgid "Use of tobacco products"
 msgstr "Užívání tabákových výrobků"
 
-#: ../qml/Components/ContentRating.qml:99
+#: ../qml/Components/ContentRating.qml.in:99
 msgid "Brief artistic nudity"
 msgstr "Krátká scéna s uměleckou nahotou"
 
-#: ../qml/Components/ContentRating.qml:100
+#: ../qml/Components/ContentRating.qml.in:100
 msgid "Prolonged nudity"
 msgstr "Dlouhotrvající nahota"
 
-#: ../qml/Components/ContentRating.qml:101
+#: ../qml/Components/ContentRating.qml.in:101
 msgid "Explicit nudity showing nipples or sexual organs"
 msgstr "Přímá nahota zobrazující bradavky nebo pohlavní orgány"
 
-#: ../qml/Components/ContentRating.qml:104
+#: ../qml/Components/ContentRating.qml.in:104
 msgid "Provocative references or depictions"
 msgstr "Provokativní narážky nebo zobrazení"
 
-#: ../qml/Components/ContentRating.qml:105
+#: ../qml/Components/ContentRating.qml.in:105
 msgid "Sexual references or depictions"
 msgstr "Sexuální narážky nebo zobrazení"
 
-#: ../qml/Components/ContentRating.qml:106
+#: ../qml/Components/ContentRating.qml.in:106
 msgid "Graphic sexual behavior"
 msgstr "Grafické znázornění sexuálního chování"
 
-#: ../qml/Components/ContentRating.qml:109
+#: ../qml/Components/ContentRating.qml.in:109
 msgid "Mild or infrequent use of profanity"
 msgstr "Mírné nebo ojedinělé používání vulgárních výrazů"
 
-#: ../qml/Components/ContentRating.qml:110
+#: ../qml/Components/ContentRating.qml.in:110
 msgid "Moderate use of profanity"
 msgstr "Mírné používání vulgárních výrazů"
 
-#: ../qml/Components/ContentRating.qml:111
+#: ../qml/Components/ContentRating.qml.in:111
 msgid "Strong or frequent use of profanity"
 msgstr "Silné nebo časté používání vulgárních výrazů"
 
-#: ../qml/Components/ContentRating.qml:114
+#: ../qml/Components/ContentRating.qml.in:114
 msgid "Slapstick humor"
 msgstr "Fyzický humor"
 
-#: ../qml/Components/ContentRating.qml:115
+#: ../qml/Components/ContentRating.qml.in:115
 msgid "Vulgar or bathroom humor"
 msgstr "Vulgární humor nebo humor na toaletní téma"
 
-#: ../qml/Components/ContentRating.qml:116
+#: ../qml/Components/ContentRating.qml.in:116
 msgid "Mature or sexual humor"
 msgstr "Humor pro dospělé nebo sexuální humor"
 
-#: ../qml/Components/ContentRating.qml:119
+#: ../qml/Components/ContentRating.qml.in:119
 msgid "Negativity towards a specific group of people, e.g. ethnic jokes"
 msgstr ""
 "Negativní postoje vůči určité skupině lidí, např. vtipy na účet určité "
 "etnické skupiny"
 
-#: ../qml/Components/ContentRating.qml:120
+#: ../qml/Components/ContentRating.qml.in:120
 msgid ""
 "Discrimination designed to cause emotional harm, e.g. racism or homophobia"
 msgstr ""
 "Diskriminace, jejímž cílem je způsobit emocionální újmu, např. rasismus nebo "
 "homofobie"
 
-#: ../qml/Components/ContentRating.qml:121
+#: ../qml/Components/ContentRating.qml.in:121
 msgid "Explicit discrimination based on gender, sexuality, race or religion"
 msgstr ""
 "Zjevná diskriminace na základě pohlaví, sexuální orientace, rasy nebo "
 "náboženského vyznání"
 
-#: ../qml/Components/ContentRating.qml:124
+#: ../qml/Components/ContentRating.qml.in:124
 msgid "User-to-user interactions without chat functionality"
 msgstr "Interakce mezi uživateli bez chatové funkce"
 
-#: ../qml/Components/ContentRating.qml:125
+#: ../qml/Components/ContentRating.qml.in:125
 msgid "Moderated messaging between users"
 msgstr "Moderované zasílání zpráv mezi uživateli"
 
-#: ../qml/Components/ContentRating.qml:126
+#: ../qml/Components/ContentRating.qml.in:126
 msgid "Uncontrolled chat functionality between users"
 msgstr "Nemoderovaná funkce chatu mezi uživateli"
 
-#: ../qml/Components/ContentRating.qml:129
+#: ../qml/Components/ContentRating.qml.in:129
 msgid "Using any online API, e.g. a user-counter"
 msgstr "Využití jakéhokoli online API, např. počítadla uživatelů"
 
-#: ../qml/Components/ContentRating.qml:130
+#: ../qml/Components/ContentRating.qml.in:130
 msgid "Sharing diagnostic data not identifiable to the user"
 msgstr ""
 "Sdílení diagnostických údajů, na jejichž základě nelze identifikovat "
 "uživatele"
 
-#: ../qml/Components/ContentRating.qml:131
+#: ../qml/Components/ContentRating.qml.in:131
 msgid "Sharing information identifiable to the user, e.g. crash dumps"
 msgstr ""
 "Sdílení informací, na jejichž základě lze identifikovat uživatele, např. "
 "výpisy paměti po selhání"
 
-#: ../qml/Components/ContentRating.qml:134
+#: ../qml/Components/ContentRating.qml.in:134
 msgid "Moderated audio or video chat between users"
 msgstr "Moderovaný audio- nebo videochat mezi uživateli"
 
-#: ../qml/Components/ContentRating.qml:135
+#: ../qml/Components/ContentRating.qml.in:135
 msgid "Uncontrolled audio or video chat between users"
 msgstr "Nekontrolovaný audio- nebo videochat mezi uživateli"
 
-#: ../qml/Components/ContentRating.qml:138
+#: ../qml/Components/ContentRating.qml.in:138
 msgid "Sharing physical location to other users"
 msgstr "Sdílení fyzické polohy s ostatními uživateli"
 
-#: ../qml/Components/ContentRating.qml:141
+#: ../qml/Components/ContentRating.qml.in:141
 msgid "Sharing contact details with other users"
 msgstr "Sdílení kontaktních údajů s ostatními uživateli"
 
-#: ../qml/Components/ContentRating.qml:144
+#: ../qml/Components/ContentRating.qml.in:144
 msgid "Users are encouraged to donate real money, e.g. using Patreon"
 msgstr ""
 "Uživatelé jsou vyzýváni, aby přispívali skutečnými penězi, např. "
 "prostřednictvím služby Patreon"
 
-#: ../qml/Components/ContentRating.qml:145
+#: ../qml/Components/ContentRating.qml.in:145
 msgid ""
 "Ability to spend real money in-app, e.g. buying new content or new levels"
 msgstr ""
 "Možnost utrácet skutečné peníze v aplikaci, např. za nákup nového obsahu "
 "nebo nových úrovní"
 
-#: ../qml/Components/ContentRating.qml:148
+#: ../qml/Components/ContentRating.qml.in:148
 msgid "Product placement, e.g. billboards in a football game"
 msgstr "Produktová reklama, např. billboardy během fotbalového zápasu"
 
-#: ../qml/Components/ContentRating.qml:149
+#: ../qml/Components/ContentRating.qml.in:149
 msgid "Explicit references to specific brands or trademarked products"
 msgstr ""
 "Výslovné odkazy na konkrétní značky nebo výrobky chráněné ochrannou známkou"
 
-#: ../qml/Components/ContentRating.qml:150
+#: ../qml/Components/ContentRating.qml.in:150
 msgid "Users are encouraged to purchase specific real-world items"
 msgstr "Uživatelé jsou vybízeni k nákupu konkrétních předmětů z reálného světa"
 
-#: ../qml/Components/ContentRating.qml:153
+#: ../qml/Components/ContentRating.qml.in:153
 msgid "Gambling on random events using tokens or credits"
 msgstr "Sázení na náhodné události pomocí žetonů nebo kreditů"
 
-#: ../qml/Components/ContentRating.qml:154
+#: ../qml/Components/ContentRating.qml.in:154
 msgid "Gambling using fictional money"
 msgstr "Hazardní hry s fiktivními penězi"
 
-#: ../qml/Components/ContentRating.qml:155
+#: ../qml/Components/ContentRating.qml.in:155
 msgid "Gambling using real money"
 msgstr "Hazardní hry o skutečné peníze"
 
-#: ../qml/Components/ContentRating.qml:160
+#: ../qml/Components/ContentRating.qml.in:160
 msgid "Mild"
 msgstr "Mírný"
 
-#: ../qml/Components/ContentRating.qml:161
+#: ../qml/Components/ContentRating.qml.in:161
 msgid "Moderate"
 msgstr "Střední"
 
-#: ../qml/Components/ContentRating.qml:162
+#: ../qml/Components/ContentRating.qml.in:162
 msgid "Intense"
 msgstr "Intenzivní"
 
-#: ../qml/Components/ContentRating.qml:213
+#: ../qml/Components/ContentRating.qml.in:213
 msgid "Content Rating"
 msgstr "Hodnocení obsahu"
 
-#: ../qml/Components/ContentRating.qml:270
+#: ../qml/Components/ContentRating.qml.in:270
 msgid "This app has not been rated"
 msgstr "Tato aplikace zatím nebyla ohodnocena"
 
-#: ../qml/Components/ContentRating.qml:271
+#: ../qml/Components/ContentRating.qml.in:271
 msgid "All Ages"
 msgstr "Pro všechny věkové kategorie"
 
-#: ../qml/Components/ContentRating.qml:282
+#: ../qml/Components/ContentRating.qml.in:282
 msgid "No concerning content"
 msgstr "Žádný problematický obsah"
 
-#: ../qml/Components/ContentRating.qml:353
+#: ../qml/Components/ContentRating.qml.in:353
 msgid ""
 "Self reported rating using <a href=\"https://hughsie.github.io/oars/\">Open "
 "Age Rating Service</a>"
@@ -733,134 +734,136 @@ msgstr ""
 "Hodnocení na základě vlastního posouzení s využitím <a href=\"https://"
 "hughsie.github.io/oars/\">Open Age Rating Service</a>"
 
-#: ../qml/Components/HeaderMain.qml:27 ../qml/SettingsPage.qml:29
+#: ../qml/Components/HeaderMain.qml.in:27 ../qml/SettingsPage.qml.in:29
 msgid "Settings"
 msgstr "Nastavení"
 
-#: ../qml/Components/HeaderMain.qml:40 ../qml/SearchPage.qml:35
+#: ../qml/Components/HeaderMain.qml.in:40 ../qml/SearchPage.qml.in:35
 msgid "Search"
 msgstr "Hledat"
 
-#: ../qml/Components/HighlightedApp.qml:114
-#: ../qml/Components/ReviewPreview.qml:193
+#: ../qml/Components/HighlightedApp.qml.in:114
+#: ../qml/Components/ReviewPreview.qml.in:193
 msgid "Update"
 msgstr "Aktualizovat"
 
-#: ../qml/Components/HighlightedApp.qml:120
+#: ../qml/Components/HighlightedApp.qml.in:120
 msgid "Details"
 msgstr "Údaje o aplikaci"
 
-#: ../qml/Components/HookIcon.qml:54
+#: ../qml/Components/HookIcon.qml.in:54
 msgid "Application"
 msgstr "Aplikace"
 
 #. TRANSLATORS: This is a platform service for launching other applications (ref. https://developer.ubuntu.com/en/phone/platform/guides/url-dispatcher-guide/ )
-#: ../qml/Components/HookIcon.qml:68
+#: ../qml/Components/HookIcon.qml.in:68
 msgid "URL Handler"
 msgstr "URL odkaz"
 
 #. TRANSLATORS: This is a platform service for content exchange (ref. https://developer.ubuntu.com/en/phone/platform/guides/content-hub-guide/ )
-#: ../qml/Components/HookIcon.qml:82
+#: ../qml/Components/HookIcon.qml.in:82
 msgid "Content Hub Handler"
 msgstr "Správce struktury obsahu"
 
 #. TRANSLATORS: This is a platform service for push notifications (ref. https://developer.ubuntu.com/en/phone/platform/guides/push-notifications-client-guide/ )
-#: ../qml/Components/HookIcon.qml:96
+#: ../qml/Components/HookIcon.qml.in:96
 msgid "Push Helper"
 msgstr "Asistent oznámení"
 
 #. TRANSLATORS: i.e. Online Accounts (ref. https://developer.ubuntu.com/en/phone/platform/guides/online-accounts-developer-guide/ )
-#: ../qml/Components/HookIcon.qml:110
+#: ../qml/Components/HookIcon.qml.in:110
 msgid "Accounts provider"
 msgstr "Poskytovatel účtů"
 
-#: ../qml/Components/PackageListItem.qml:48
-#: ../qml/Components/PackageTile.qml:93 ../qml/Dialogs/FilterDialog.qml:155
+#: ../qml/Components/PackageListItem.qml.in:48
+#: ../qml/Components/PackageTile.qml.in:93
+#: ../qml/Dialogs/FilterDialog.qml.in:155
 msgid "Snap"
 msgstr "Snap"
 
-#: ../qml/Components/PackageTile.qml:105
+#: ../qml/Components/PackageTile.qml.in:105
 msgid "Update available"
 msgstr "Dostupná aktualizace"
 
-#: ../qml/Components/PackageTile.qml:107
+#: ../qml/Components/PackageTile.qml.in:107
 msgid "✓ Installed"
 msgstr "✓ Vlastníte"
 
-#: ../qml/Components/ReviewPreview.qml:93
+#: ../qml/Components/ReviewPreview.qml.in:93
 msgid "Something went wrong..."
 msgstr "Něco se pokazilo..."
 
-#: ../qml/Components/ReviewPreview.qml:99
+#: ../qml/Components/ReviewPreview.qml.in:99
 msgid "Error Posting Review"
 msgstr "Chyba při vkládání recenze"
 
-#: ../qml/Components/ReviewPreview.qml:113
+#: ../qml/Components/ReviewPreview.qml.in:113
 msgid "Review Posted Correctly"
 msgstr "Recenze byla úspěšně vložena"
 
-#: ../qml/Components/ReviewPreview.qml:114
+#: ../qml/Components/ReviewPreview.qml.in:114
 msgid "Your review has been posted successfully."
 msgstr "Vaše recenze byla úspěšně zveřejněna."
 
-#: ../qml/Components/ReviewPreview.qml:128
+#: ../qml/Components/ReviewPreview.qml.in:128
 msgid "Loading..."
 msgstr "Načítání..."
 
-#: ../qml/Components/ReviewPreview.qml:128
+#: ../qml/Components/ReviewPreview.qml.in:128
 msgid "Rate this app"
 msgstr "Ohodnoťte aplikaci"
 
-#: ../qml/Components/ReviewPreview.qml:135
+#: ../qml/Components/ReviewPreview.qml.in:135
 msgid "(Optional) Write a review"
 msgstr "(Volitelné) Napište recenzi"
 
-#: ../qml/Components/ReviewPreview.qml:139
+#: ../qml/Components/ReviewPreview.qml.in:139
 msgid "%1/%2 characters"
 msgstr "%1/%2 znaků"
 
-#: ../qml/Components/ReviewPreview.qml:193
+#: ../qml/Components/ReviewPreview.qml.in:193
 msgid "Submit"
 msgstr "Odeslat"
 
-#: ../qml/Components/ReviewPreview.qml:220 ../qml/Dialogs/FilterDialog.qml:201
-#: ../qml/Dialogs/InstallWarningDialog.qml:61
-#: ../qml/Dialogs/SnapWarningDialog.qml:55
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml:46
-#: ../qml/Dialogs/UninstallDialog.qml:42
+#: ../qml/Components/ReviewPreview.qml.in:220
+#: ../qml/Dialogs/FilterDialog.qml.in:201
+#: ../qml/Dialogs/InstallWarningDialog.qml.in:61
+#: ../qml/Dialogs/SnapWarningDialog.qml.in:55
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml.in:46
+#: ../qml/Dialogs/UninstallDialog.qml.in:42
 msgid "Cancel"
 msgstr "Storno"
 
-#: ../qml/Components/ReviewPreview.qml:244
+#: ../qml/Components/ReviewPreview.qml.in:244
 msgid "%1 review. "
 msgid_plural "%1 reviews. "
 msgstr[0] "%1 recenze. "
 msgstr[1] "%1 recenzí. "
 msgstr[2] "%1 recenze. "
 
-#: ../qml/Components/ReviewPreview.qml:252
+#: ../qml/Components/ReviewPreview.qml.in:252
 msgid "Edit Review"
 msgstr "Editovat hodnocení"
 
-#: ../qml/Components/ReviewPreview.qml:255
+#: ../qml/Components/ReviewPreview.qml.in:255
 msgid "Review app"
 msgstr "Ohodnotit aplikaci"
 
-#: ../qml/Components/ReviewPreview.qml:258
+#: ../qml/Components/ReviewPreview.qml.in:258
 msgid "Sign in to review this app"
 msgstr "Chcete-li napsat recenzi k aplikaci, přihlaste se"
 
-#: ../qml/Components/ReviewPreview.qml:261
+#: ../qml/Components/ReviewPreview.qml.in:261
 msgid "Install this app to review it"
 msgstr "Pro hodnocení aplikace je třeba ji nejprve nainstalovat"
 
-#: ../qml/Dialogs/DomainWarningDialog.qml:26
-#: ../qml/Dialogs/SnapWarningDialog.qml:26
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml:25
+#: ../qml/Dialogs/DomainWarningDialog.qml.in:26
+#: ../qml/Dialogs/SnapWarningDialog.qml.in:26
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml.in:25
 msgid "Warning"
 msgstr "Upozornění"
 
-#: ../qml/Dialogs/DomainWarningDialog.qml:35
+#: ../qml/Dialogs/DomainWarningDialog.qml.in:35
 msgid ""
 "You are currently using a non-standard domain for the OpenStore. This is a "
 "development feature. The domain you are using is:"
@@ -868,119 +871,121 @@ msgstr ""
 "V tuto chvíli používáte nestandardní doménu pro OpenStore. Toto je vývojová "
 "funkce. Používaná doména je:"
 
-#: ../qml/Dialogs/DomainWarningDialog.qml:49
+#: ../qml/Dialogs/DomainWarningDialog.qml.in:49
 msgid "Are you sure you want to continue?"
 msgstr "Opravdu chcete pokračovat?"
 
-#: ../qml/Dialogs/DomainWarningDialog.qml:53
+#: ../qml/Dialogs/DomainWarningDialog.qml.in:53
 msgid "Yes, I know what I'm doing"
 msgstr "Ano, vím co dělám"
 
-#: ../qml/Dialogs/DomainWarningDialog.qml:61
+#: ../qml/Dialogs/DomainWarningDialog.qml.in:61
 msgid "Get me out of here!"
 msgstr "Pryč odsud!"
 
-#: ../qml/Dialogs/DonationDialog.qml:25
+#: ../qml/Dialogs/DonationDialog.qml.in:25
 msgid "Donating"
 msgstr "Přispívání"
 
-#: ../qml/Dialogs/DonationDialog.qml:26
+#: ../qml/Dialogs/DonationDialog.qml.in:26
 msgid "Would you like to support this app with a donation to the developer?"
 msgstr "Přejete si přispět a podpořit tak vývoj aplikace?"
 
-#: ../qml/Dialogs/DonationDialog.qml:32
+#: ../qml/Dialogs/DonationDialog.qml.in:32
 msgid "Donate now"
 msgstr "Přispět nyní"
 
-#: ../qml/Dialogs/DonationDialog.qml:40
+#: ../qml/Dialogs/DonationDialog.qml.in:40
 msgid "Maybe later"
 msgstr "Možná později"
 
-#: ../qml/Dialogs/FilterDialog.qml:27
+#: ../qml/Dialogs/FilterDialog.qml.in:27
 msgid "Filters and Sorting"
 msgstr "Filtry a Řazení"
 
-#: ../qml/Dialogs/FilterDialog.qml:40
+#: ../qml/Dialogs/FilterDialog.qml.in:40
 msgid "Sort By"
 msgstr "Setřídit dle"
 
-#: ../qml/Dialogs/FilterDialog.qml:47 ../qml/Dialogs/FilterDialog.qml:67
+#: ../qml/Dialogs/FilterDialog.qml.in:47 ../qml/Dialogs/FilterDialog.qml.in:67
 msgid "Relevance"
 msgstr "Významu"
 
-#: ../qml/Dialogs/FilterDialog.qml:48
+#: ../qml/Dialogs/FilterDialog.qml.in:48
 msgid "Most Popular"
 msgstr "Nejpopulárnější"
 
-#: ../qml/Dialogs/FilterDialog.qml:49
+#: ../qml/Dialogs/FilterDialog.qml.in:49
 msgid "Least Popular"
 msgstr "Nejméně populární"
 
-#: ../qml/Dialogs/FilterDialog.qml:50
+#: ../qml/Dialogs/FilterDialog.qml.in:50
 msgid "Title (A-Z)"
 msgstr "Název (A-Z)"
 
-#: ../qml/Dialogs/FilterDialog.qml:51
+#: ../qml/Dialogs/FilterDialog.qml.in:51
 msgid "Title (Z-A)"
 msgstr "Název (Z-A)"
 
-#: ../qml/Dialogs/FilterDialog.qml:52
+#: ../qml/Dialogs/FilterDialog.qml.in:52
 msgid "Newest"
 msgstr "Nejnovější"
 
-#: ../qml/Dialogs/FilterDialog.qml:53
+#: ../qml/Dialogs/FilterDialog.qml.in:53
 msgid "Oldest"
 msgstr "Nejstarší"
 
-#: ../qml/Dialogs/FilterDialog.qml:54
+#: ../qml/Dialogs/FilterDialog.qml.in:54
 msgid "Latest Update"
 msgstr "Poslední aktualizace"
 
-#: ../qml/Dialogs/FilterDialog.qml:55
+#: ../qml/Dialogs/FilterDialog.qml.in:55
 msgid "Oldest Update"
 msgstr "Nejstarší aktualizace"
 
-#: ../qml/Dialogs/FilterDialog.qml:95
+#: ../qml/Dialogs/FilterDialog.qml.in:95
 msgid "Type"
 msgstr "Druh"
 
-#: ../qml/Dialogs/FilterDialog.qml:102 ../qml/Dialogs/FilterDialog.qml:117
+#: ../qml/Dialogs/FilterDialog.qml.in:102
+#: ../qml/Dialogs/FilterDialog.qml.in:117
 msgid "All Types"
 msgstr "Všechny typy"
 
-#: ../qml/Dialogs/FilterDialog.qml:103
+#: ../qml/Dialogs/FilterDialog.qml.in:103
 msgid "Apps"
 msgstr "Aplikace"
 
-#: ../qml/Dialogs/FilterDialog.qml:104
+#: ../qml/Dialogs/FilterDialog.qml.in:104
 msgid "Bookmarks"
 msgstr "Záložky"
 
-#: ../qml/Dialogs/FilterDialog.qml:105
+#: ../qml/Dialogs/FilterDialog.qml.in:105
 msgid "Web Apps"
 msgstr "Webové aplikace"
 
-#: ../qml/Dialogs/FilterDialog.qml:145
+#: ../qml/Dialogs/FilterDialog.qml.in:145
 msgid "Package Type"
 msgstr "Typ balíčku"
 
-#: ../qml/Dialogs/FilterDialog.qml:153 ../qml/Dialogs/FilterDialog.qml:167
+#: ../qml/Dialogs/FilterDialog.qml.in:153
+#: ../qml/Dialogs/FilterDialog.qml.in:167
 msgid "All"
 msgstr "Vše"
 
-#: ../qml/Dialogs/FilterDialog.qml:154
+#: ../qml/Dialogs/FilterDialog.qml.in:154
 msgid "Click"
 msgstr "Click"
 
-#: ../qml/Dialogs/FilterDialog.qml:193
+#: ../qml/Dialogs/FilterDialog.qml.in:193
 msgid "Apply"
 msgstr "Potvrdit"
 
-#: ../qml/Dialogs/InstallWarningDialog.qml:27
+#: ../qml/Dialogs/InstallWarningDialog.qml.in:27
 msgid "Install unknown app?"
 msgstr "Nainstalovat neznámou aplikaci?"
 
-#: ../qml/Dialogs/InstallWarningDialog.qml:28
+#: ../qml/Dialogs/InstallWarningDialog.qml.in:28
 msgid ""
 "Do you want to install the unknown app %1? Installing apps from outside the "
 "OpenStore is not recommended and can potentially harm your system. Only "
@@ -990,16 +995,16 @@ msgstr ""
 "OpenStore, není doporučené a může poškodit Váš systém. Instalujte pouze "
 "aplikace z důvěryhodných zdrojů."
 
-#: ../qml/Dialogs/InstallWarningDialog.qml:51
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml:37
+#: ../qml/Dialogs/InstallWarningDialog.qml.in:51
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml.in:37
 msgid "I understand the risks"
 msgstr "Rozumím rizikům"
 
-#: ../qml/Dialogs/NegativeReviewDialog.qml:26
+#: ../qml/Dialogs/NegativeReviewDialog.qml.in:26
 msgid "Review confirmation"
 msgstr "Potvrzení recenze"
 
-#: ../qml/Dialogs/NegativeReviewDialog.qml:27
+#: ../qml/Dialogs/NegativeReviewDialog.qml.in:27
 msgid ""
 "Would you like to contact the publisher or file a bug instead? By opening a "
 "discussion with the developer(s) you could be helping to improve this app."
@@ -1007,15 +1012,15 @@ msgstr ""
 "Chcete kontaktovat výrobce nebo nahlásit chybu? Otevřením diskuse s vývojáři "
 "můžete pomoci zlepšovat tuto aplikaci."
 
-#: ../qml/Dialogs/NegativeReviewDialog.qml:37
+#: ../qml/Dialogs/NegativeReviewDialog.qml.in:37
 msgid "Get support"
 msgstr "Získat technickou podporu"
 
-#: ../qml/Dialogs/NegativeReviewDialog.qml:47
+#: ../qml/Dialogs/NegativeReviewDialog.qml.in:47
 msgid "Post my review"
 msgstr "Odeslat ohodnocení"
 
-#: ../qml/Dialogs/SnapWarningDialog.qml:27
+#: ../qml/Dialogs/SnapWarningDialog.qml.in:27
 msgid ""
 "Not all snaps were designed with Ubuntu Touch in mind and might not work "
 "well."
@@ -1023,15 +1028,15 @@ msgstr ""
 "Ne všechny aplikace typu „snap“ byly vyvinuty s ohledem na Ubuntu Touch a "
 "nemusí fungovat správně."
 
-#: ../qml/Dialogs/SnapWarningDialog.qml:39
+#: ../qml/Dialogs/SnapWarningDialog.qml.in:39
 msgid "Don't show this warning again"
 msgstr "Toto varování již nezobrazovat"
 
-#: ../qml/Dialogs/SnapWarningDialog.qml:43
+#: ../qml/Dialogs/SnapWarningDialog.qml.in:43
 msgid "I understand"
 msgstr "Rozumím"
 
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml:30
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml.in:30
 msgid ""
 "This app has access to restricted parts of the system and all of your data. "
 "It has the potential to break your system. The OpenStore maintainers have "
@@ -1043,7 +1048,7 @@ msgstr ""
 "neprověřili a nenesou žádnou odpovědnost za případné škody, které by mohly "
 "vzniknout na vašem zařízení nebo datách v důsledku instalace této aplikace."
 
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml:31
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml.in:31
 msgid ""
 "This app has access to restricted parts of the system and all of your data. "
 "It has the potential to break your system. While the OpenStore maintainers "
@@ -1056,83 +1061,83 @@ msgstr ""
 "kontrolu kódu aplikace z důvodu bezpečnosti, nenesou odpovědnost za možné "
 "škody na Vašem zařízení a datech při instalaci této aplikace."
 
-#: ../qml/Dialogs/UninstallDialog.qml:25
+#: ../qml/Dialogs/UninstallDialog.qml.in:25
 msgid "Remove package"
 msgstr "Odstranit balíček"
 
-#: ../qml/Dialogs/UninstallDialog.qml:26
+#: ../qml/Dialogs/UninstallDialog.qml.in:26
 msgid "Do you want to remove %1?"
 msgstr "Opravdu odstranit %1?"
 
-#: ../qml/DiscoverPage.qml:40
+#: ../qml/DiscoverPage.qml.in:40
 msgid "OpenStore"
 msgstr "OpenStore"
 
-#: ../qml/DiscoverPage.qml:76
+#: ../qml/DiscoverPage.qml.in:76
 msgid "by %1"
 msgstr "v %1"
 
-#: ../qml/DiscoverPage.qml:130
+#: ../qml/DiscoverPage.qml.in:130
 msgid "You are currently offline"
 msgstr "Aplikace je offline"
 
-#: ../qml/DiscoverPage.qml:146
+#: ../qml/DiscoverPage.qml.in:146
 msgid "OpenStore update available"
 msgstr "Dostupná aktualizace pro OpenStore"
 
-#: ../qml/DiscoverPage.qml:176
+#: ../qml/DiscoverPage.qml.in:176
 msgid " (%1 update available)"
 msgid_plural " (%1 updates available)"
 msgstr[0] " (%1 dostupná aktualizace)"
 msgstr[1] " (%1 dostupných aktualizací)"
 msgstr[2] " (%1 dostupné aktualizace)"
 
-#: ../qml/DiscoverPage.qml:176 ../qml/DiscoverPage.qml:177
-#: ../qml/InstalledAppsPage.qml:52
+#: ../qml/DiscoverPage.qml.in:176 ../qml/DiscoverPage.qml.in:177
+#: ../qml/InstalledAppsPage.qml.in:52
 msgid "Installed Apps"
 msgstr "Nainstalované aplikace"
 
-#: ../qml/DiscoverPage.qml:201
+#: ../qml/DiscoverPage.qml.in:201
 msgid "Browse Apps by Category"
 msgstr "Prohledat aplikace podle kategorie"
 
-#: ../qml/FilteredAppList.qml:111
+#: ../qml/FilteredAppList.qml.in:111
 msgid "No results found."
 msgstr "Nenalezeny žádné výsledky."
 
-#: ../qml/FilteredAppList.qml:111
+#: ../qml/FilteredAppList.qml.in:111
 msgid "Nothing here yet"
 msgstr "Zatím tu nic není"
 
-#: ../qml/FilteredAppList.qml:112
+#: ../qml/FilteredAppList.qml.in:112
 msgid "No app has been released in this category yet."
 msgstr "V této kategorii zatím nebyly vydány žádné aplikace."
 
-#: ../qml/FilteredAppList.qml:112
+#: ../qml/FilteredAppList.qml.in:112
 msgid "Try with a different search."
 msgstr "Zkuste hledat jinak."
 
 #. TRANSLATORS: %1 is the number of installed click apps
-#: ../qml/InstalledAppsPage.qml:80
+#: ../qml/InstalledAppsPage.qml.in:80
 msgid "Installed apps (%1)"
 msgstr "Nainstalované aplikace (%1)"
 
 #. TRANSLATORS: %1 is the number of available app updates
-#: ../qml/InstalledAppsPage.qml:84
+#: ../qml/InstalledAppsPage.qml.in:84
 msgid "Available updates (%1)"
 msgstr "Dostupné aktualizace (%1)"
 
 #. TRANSLATORS: %1 is the number of installed snap apps
-#: ../qml/InstalledAppsPage.qml:88
+#: ../qml/InstalledAppsPage.qml.in:88
 msgid "Installed Snap apps (%1)"
 msgstr "Nainstalované Snap aplikace (%1)"
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
-#: ../qml/InstalledAppsPage.qml:92
+#: ../qml/InstalledAppsPage.qml.in:92
 msgid "Stable version available (%1)"
 msgstr "Dostupné stabilní verze (%1)"
 
-#: ../qml/InstalledAppsPage.qml:95
+#: ../qml/InstalledAppsPage.qml.in:95
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
@@ -1140,82 +1145,83 @@ msgstr ""
 "Instalované verze těchto aplikací nepocházejí ze serveru OpenStore. Je však "
 "dostupná stabilní verze."
 
-#: ../qml/InstalledAppsPage.qml:96
+#: ../qml/InstalledAppsPage.qml.in:96
 msgid "Update all"
 msgstr "Aktualizovat vše"
 
-#: ../qml/InstalledAppsPage.qml:207
+#: ../qml/InstalledAppsPage.qml.in:207
 msgid "No apps found"
 msgstr "Nenalezeny žádné aplikace"
 
-#: ../qml/InstalledAppsPage.qml:208
+#: ../qml/InstalledAppsPage.qml.in:208
 msgid "No app has been installed from OpenStore yet."
 msgstr "Z OpenStore zatím nebyly nainstalovány žádné aplikace."
 
-#: ../qml/Main.qml:338 ../qml/SearchPage.qml:55
+#: ../qml/Main.qml.in:338 ../qml/SearchPage.qml.in:55
 msgid "Filters"
 msgstr "Filtry"
 
-#: ../qml/Main.qml:387
+#: ../qml/Main.qml.in:387
 msgid "App installed"
 msgstr "Aplikace nainstalována"
 
-#: ../qml/Main.qml:388
+#: ../qml/Main.qml.in:388
 msgid "The app has been installed successfully."
 msgstr "Aplikace byla úspěšně nainstalována."
 
-#: ../qml/Main.qml:391 ../qml/Main.qml:404 ../qml/Main.qml:419
+#: ../qml/Main.qml.in:391 ../qml/Main.qml.in:404 ../qml/Main.qml.in:419
 msgid "OK"
 msgstr "OK"
 
-#: ../qml/Main.qml:400
+#: ../qml/Main.qml.in:400
 msgid "Installation failed"
 msgstr "Instalace se nezdařila"
 
-#: ../qml/Main.qml:401
+#: ../qml/Main.qml.in:401
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 "Balíček se nepodařilo nainstalovat. Zkontrolujte, zda se jedná o platný "
 "click balíček."
 
-#: ../qml/Main.qml:415
+#: ../qml/Main.qml.in:415
 msgid "Installation failed (Error %1)"
 msgstr "Instalace se nezdařila (chyba %1)"
 
-#: ../qml/SearchPage.qml:48
+#: ../qml/SearchPage.qml.in:48
 msgid "Search in OpenStore..."
 msgstr "Hledat v OpenStore..."
 
-#: ../qml/SettingsPage.qml:113
+#: ../qml/SettingsPage.qml.in:113
 msgid "OpenStore Account"
 msgstr "OpenStore účet"
 
-#: ../qml/SettingsPage.qml:121 ../qml/SignInPage.qml:31
+#: ../qml/SettingsPage.qml.in:121 ../qml/SignInPage.qt5.qml.in:31
+#: ../qml/SignInPage.qt6.qml.in:31
 msgid "Sign in"
 msgstr "Přihlásit se"
 
-#: ../qml/SettingsPage.qml:138
+#: ../qml/SettingsPage.qml.in:138
 msgid "Sign out"
 msgstr "Odhlásit se"
 
-#: ../qml/SettingsPage.qml:166
+#: ../qml/SettingsPage.qml.in:166
 msgid "General"
 msgstr "Obecné informace"
 
-#: ../qml/SettingsPage.qml:172
+#: ../qml/SettingsPage.qml.in:172
 msgid "Enable snap support"
 msgstr "Povolit podporu Snap"
 
-#: ../qml/SettingsPage.qml:190
+#: ../qml/SettingsPage.qml.in:190
 msgid "Only show Lomiri-compatible snaps"
 msgstr "Zobrazit pouze snap aplikace kompatibilní s Lomiri"
 
-#: ../qml/SettingsPage.qml:207
+#: ../qml/SettingsPage.qml.in:207
 msgid "Hide adult-oriented content"
 msgstr "Skrýt obsah pro dospělé"
 
-#: ../qml/SettingsPage.qml:217
+#: ../qml/SettingsPage.qml.in:217
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
@@ -1223,15 +1229,15 @@ msgstr ""
 "Zadáním svého hesla přebíráte v plném rozsahu odpovědnost za zobrazení "
 "obsahu pro dospělé."
 
-#: ../qml/SettingsPage.qml:242
+#: ../qml/SettingsPage.qml.in:242
 msgid "About OpenStore"
 msgstr "O OpenStore"
 
-#: ../qml/SettingsPage.qml:258
+#: ../qml/SettingsPage.qml.in:258
 msgid "Report an issue"
 msgstr "Zaslat hlášení o chybě"
 
-#: ../qml/SettingsPage.qml:267
+#: ../qml/SettingsPage.qml.in:267
 msgid "Additional Icons by"
 msgstr "Další ikony od"
 

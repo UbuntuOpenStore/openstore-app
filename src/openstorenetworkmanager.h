@@ -24,6 +24,10 @@
 #include <QNetworkAccessManager>
 #include <QObject>
 
+#if QT_VERSION_MAJOR >= 6
+#include <QNetworkInformation>
+#endif
+
 #include <QUrlQuery>
 
 struct OpenStoreReply
@@ -54,7 +58,15 @@ public:
     return m_instance;
   }
 
-  bool networkAccessible() const { return m_manager->networkAccessible() != QNetworkAccessManager::NotAccessible; }
+  bool networkAccessible() const
+  {
+#if QT_VERSION_MAJOR >= 6
+    QNetworkInformation* info = QNetworkInformation::instance();
+    return !info || info->reachability() != QNetworkInformation::Reachability::Disconnected;
+#else
+    return m_manager->networkAccessible() != QNetworkAccessManager::NotAccessible;
+#endif
+  }
   bool snapSupport() const { return m_snapSupport; }
   void setSnapSupport(bool value) { if (m_snapSupport != value) { m_snapSupport = value; Q_EMIT snapSupportChanged(); } }
   bool lomiriCompatibleOnly() const { return m_lomiriCompatibleOnly; }

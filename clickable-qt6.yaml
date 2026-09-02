@@ -7,6 +7,9 @@ dependencies_target:
   - libpam0g-dev
   - libsnapd-qt-dev
   - libsnapd-glib-dev
+  - qt6-base-dev
+  - qt6-declarative-dev
+  - qt6-webengine-dev
 install_lib:
   - /usr/lib/${ARCH_TRIPLET}/libsnapd-qt*.so*
   - /usr/lib/${ARCH_TRIPLET}/libsnapd-glib*.so*
@@ -15,3 +18,5 @@ scripts:
   format: ./scripts/format.sh
   check: ./scripts/check.sh
   lint-qml: ./scripts/lint-qml.sh
+skip_review: true
+framework: ubuntu-touch-26.04-1.x

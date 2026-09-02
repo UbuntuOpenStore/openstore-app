@@ -1,9 +1,3 @@
-.artifacts:
-  artifacts:
-    expire_in: 1 week
-    paths:
-    - build/*/app/*.click
-
 stages:
   - lint
   - build
@@ -20,86 +14,62 @@ check:
   script:
     - ./tools/docker/docker-runner.sh check-all
 
-build-arm64-focal:
-  extends: .artifacts
-  image: clickable/ci-20.04-arm64
+.artifacts:
+  artifacts:
+    expire_in: 1 week
+    paths:
+    - build/*/app/*.click
+
+.matrix_build:
+  parallel:
+    matrix:
+      - ARCH: arm64
+        IMAGE_BASE: clickable/ci-20.04
+        CLICKABLE_ARGS: ""
+      - ARCH: armhf
+        IMAGE_BASE: clickable/ci-20.04
+        CLICKABLE_ARGS: ""
+      - ARCH: amd64
+        IMAGE_BASE: clickable/ci-20.04
+        CLICKABLE_ARGS: ""
+      - ARCH: arm64
+        IMAGE_BASE: clickable/ci-ut26.04-1.x
+        CLICKABLE_ARGS: "-c clickable-qt6.yaml"
+      - ARCH: armhf
+        IMAGE_BASE: clickable/ci-ut26.04-1.x
+        CLICKABLE_ARGS: "-c clickable-qt6.yaml"
+      - ARCH: amd64
+        IMAGE_BASE: clickable/ci-ut26.04-1.x
+        CLICKABLE_ARGS: "-c clickable-qt6.yaml"
+
+.matrix_publish:
+  parallel:
+    matrix:
+      - ARCH: arm64
+        IMAGE_BASE: clickable/ci-20.04
+        CLICKABLE_ARGS: ""
+      - ARCH: armhf
+        IMAGE_BASE: clickable/ci-20.04
+        CLICKABLE_ARGS: ""
+      - ARCH: amd64
+        IMAGE_BASE: clickable/ci-20.04
+        CLICKABLE_ARGS: ""
+
+build:
+  extends: [.artifacts, .matrix_build]
+  stage: build
+  image: $IMAGE_BASE-$ARCH
   rules:
     - if: $CI_COMMIT_TAG == null
   script:
-    - clickable build
-  stage: build
+    - clickable build $CLICKABLE_ARGS
 
-build-armhf-focal:
-  extends: .artifacts
-  image: clickable/ci-20.04-armhf
-  rules:
-    - if: $CI_COMMIT_TAG == null
-  script:
-    - clickable build
-  stage: build
-
-build-amd64-focal:
-  extends: .artifacts
-  image: clickable/ci-20.04-amd64
-  rules:
-    - if: $CI_COMMIT_TAG == null
-  script:
-    - clickable build
-  stage: build
-
-build-arm64-next:
-  extends: .artifacts
-  image: clickable/ci-utnext-arm64
-  rules:
-    - if: $CI_COMMIT_TAG == null
-  script:
-    - clickable build
-  stage: build
-
-build-armhf-next:
-  extends: .artifacts
-  image: clickable/ci-utnext-armhf
-  rules:
-    - if: $CI_COMMIT_TAG == null
-  script:
-    - clickable build
-  stage: build
-
-build-amd64-next:
-  extends: .artifacts
-  image: clickable/ci-utnext-amd64
-  rules:
-    - if: $CI_COMMIT_TAG == null
-  script:
-    - clickable build
-  stage: build
-
-publish-arm64-focal:
-  extends: .artifacts
-  image: clickable/ci-20.04-arm64
+publish:
+  extends: [.artifacts, .matrix_publish]
+  stage: deploy
+  image: $IMAGE_BASE-$ARCH
   rules:
     - if: $CI_COMMIT_TAG
   script:
-    - clickable build
+    - clickable build $CLICKABLE_ARGS
     - clickable publish "$CI_COMMIT_MESSAGE"
-  stage: deploy
-
-publish-armhf-focal:
-  extends: .artifacts
-  image: clickable/ci-20.04-armhf
-  rules:
-    - if: $CI_COMMIT_TAG
-  script:
-    - clickable build
-    - clickable publish
-  stage: deploy
-
-publish-amd64-focal:
-  extends: .artifacts
-  image: clickable/ci-20.04-amd64
-  rules:
-    - if: $CI_COMMIT_TAG
-  script:
-    - clickable build
-    - clickable publish
-  stage: deploy

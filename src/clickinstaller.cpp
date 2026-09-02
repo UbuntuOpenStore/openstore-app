@@ -71,7 +71,7 @@ void ClickInstaller::installPackage(const QString& packageUrl, const bool isLoca
   }
 
   QString localPath = packageUrl;
-  localPath.remove(QRegExp("$file://"));
+  localPath.remove("file://");
   installLocalPackage(localPath);
 }
 

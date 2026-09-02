@@ -1,13 +1,37 @@
-cmake_minimum_required(VERSION 3.0.0)
+cmake_minimum_required(VERSION 3.16.0)
 project(openstore C CXX)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+
+# Default to whichever Qt major version is actually available on this
+# system, so the same clickable.yaml/CI matrix (focal still on Qt5,
+# 26.04+/next already on Qt6) builds the right one without extra config.
+# Pass -DENABLE_QT6=ON/OFF explicitly to override the detection.
+if(NOT DEFINED ENABLE_QT6)
+    find_package(QT NAMES Qt6 QUIET COMPONENTS Core)
+    if(QT_FOUND)
+        set(ENABLE_QT6_DEFAULT ON)
+    else()
+        set(ENABLE_QT6_DEFAULT OFF)
+    endif()
+    unset(QT_FOUND)
+    unset(QT_VERSION_MAJOR)
+endif()
+option(ENABLE_QT6 "Enable building with Qt6" ${ENABLE_QT6_DEFAULT})
+
+if(ENABLE_QT6)
+    set(QT_VERSION_MAJOR 6)
+else()
+    set(QT_VERSION_MAJOR 5)
+endif()
+
+message(STATUS "Qt version is: ${QT_VERSION_MAJOR}")
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
-find_package(Qt5Core REQUIRED)
-find_package(Qt5Qml REQUIRED)
-find_package(Qt5Quick REQUIRED)
-find_package(Qt5DBus REQUIRED)
+find_package(QT NAMES Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Qml Quick DBus)
 find_package(PAM REQUIRED)
 
 include(FindPkgConfig)
@@ -65,6 +89,72 @@ endif(NOT BUILD_VERSION_RAW)
 string(SUBSTRING ${BUILD_VERSION_RAW} 1 -1 BUILD_VERSION)
 message(STATUS "Build version is: ${BUILD_VERSION}")
 
+if(DEFINED ENV{CLICK_FRAMEWORK_BASE})
+    set(BUILD_VERSION "${BUILD_VERSION}-$ENV{CLICK_FRAMEWORK_BASE}")
+    message(STATUS "Build version with framework is: ${BUILD_VERSION}")
+endif()
+
+if(QT_VERSION_MAJOR EQUAL 6)
+    set(LOMIRI_COMPONENTS_VERSION 2.0)
+    set(LOMIRI_CONTENT_VERSION 2.0)
+    set(LOMIRI_CONNECTIVITY_VERSION 1.0)
+else()
+    set(LOMIRI_COMPONENTS_VERSION 1.3)
+    set(LOMIRI_CONTENT_VERSION 1.3)
+    set(LOMIRI_CONNECTIVITY_VERSION 1.0)
+endif()
+
+# Generate the QML sources and the resource file from their *.in templates.
+# The generated files keep the same relative layout inside the build tree,
+file(RELATIVE_PATH QML_SOURCE_DIR_RELATIVE ${CMAKE_BINARY_DIR}/qml ${CMAKE_CURRENT_SOURCE_DIR}/qml)
+
+file(GLOB_RECURSE QML_TEMPLATE_FILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/qml/*.qml.in)
+list(SORT QML_TEMPLATE_FILES)
+
+# Process Qt version-specific files (*.qt5.qml.in and *.qt6.qml.in)
+# For each base name, only include the version matching the current Qt version
+set(QML_PROCESSED_BASES "")
+set(QML_FINAL_FILES "")
+
+foreach(QML_TEMPLATE_FILE ${QML_TEMPLATE_FILES})
+    # Check if this is a Qt version-specific file
+    if(QML_TEMPLATE_FILE MATCHES "^(.+)\\.qt[56]\\.qml\\.in$")
+        # Extract the base name (e.g., "SignInPage" from "SignInPage.qt5.qml.in")
+        string(REGEX REPLACE "^(.+)\\.qt[56]\\.qml\\.in$" "\\1" BASE_NAME ${QML_TEMPLATE_FILE})
+        
+        # Skip if we already processed this base name
+        if(NOT "${BASE_NAME}" IN_LIST QML_PROCESSED_BASES)
+            list(APPEND QML_PROCESSED_BASES ${BASE_NAME})
+            
+            # Select the correct version
+            if(QT_VERSION_MAJOR EQUAL 6)
+                set(VERSION_SPECIFIC_FILE "${BASE_NAME}.qt6.qml.in")
+            else()
+                set(VERSION_SPECIFIC_FILE "${BASE_NAME}.qt5.qml.in")
+            endif()
+            
+            # Check if the selected version exists
+            if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${VERSION_SPECIFIC_FILE}")
+                list(APPEND QML_FINAL_FILES ${VERSION_SPECIFIC_FILE})
+            endif()
+        endif()
+    else()
+        # Regular file, add as-is
+        list(APPEND QML_FINAL_FILES ${QML_TEMPLATE_FILE})
+    endif()
+endforeach()
+
+foreach(QML_TEMPLATE_FILE ${QML_FINAL_FILES})
+    string(REGEX REPLACE "\\.in$" "" QML_GENERATED_FILE ${QML_TEMPLATE_FILE})
+    # Convert .qt5.qml or .qt6.qml to .qml
+    if(QML_GENERATED_FILE MATCHES "\\.qt[56]\\.qml$")
+        string(REGEX REPLACE "\\.qt[56]\\.qml$" ".qml" QML_GENERATED_FILE ${QML_GENERATED_FILE})
+    endif()
+    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/${QML_TEMPLATE_FILE} ${CMAKE_BINARY_DIR}/${QML_GENERATED_FILE} @ONLY)
+endforeach()
+
+configure_file(qml/qml.qrc.in ${CMAKE_BINARY_DIR}/qml/qml.qrc @ONLY)
+
 # Config files & the logo
 configure_file(manifest.json.in ${CMAKE_CURRENT_BINARY_DIR}/manifest.json)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/manifest.json DESTINATION ${CMAKE_INSTALL_PREFIX})
@@ -75,7 +165,7 @@ install(FILES qml/Assets/${PROJECT_NAME}.svg DESTINATION ${DATA_DIR})
 install(FILES qml/Assets/${PROJECT_NAME}splash.svg DESTINATION ${DATA_DIR})
 
 # Translations
-file(GLOB_RECURSE I18N_SRC_FILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/po qml/*.qml qml/*.js)
+file(GLOB_RECURSE I18N_SRC_FILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/po qml/*.qml.in qml/*.js)
 list(APPEND I18N_SRC_FILES ${DESKTOP_FILE_NAME}.in.h)
 
 find_program(INTLTOOL_MERGE intltool-merge)
@@ -98,7 +188,7 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE_NAME} DESTINATION ${DAT
 # Make source files visible in qtcreator
 file(GLOB_RECURSE PROJECT_SRC_FILES
     RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
-    qml/*.qml
+    qml/*.qml.in
     qml/*.js
     *.json
     *.json.in

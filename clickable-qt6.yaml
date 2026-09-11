@@ -3,7 +3,7 @@ builder: cmake
 kill: openstore
 ignore_review_errors: true
 dependencies_target:
-  - libclick-0.4-dev
+  - libclick-dev
   - libpam0g-dev
   - libsnapd-qt-dev
   - libsnapd-glib-dev

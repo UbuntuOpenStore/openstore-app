@@ -33,7 +33,7 @@ Page {
 
     header: Components.HeaderBase {
         title: app ? app.name : i18n.tr("App details")
-        enabled: !PlatformIntegration.clickInstaller.busy && !app.isBusy
+        enabled: !BackendInstaller.installer.busy && !app.isBusy
 
         trailingActionBar {
             numberOfSlots: 1
@@ -48,7 +48,7 @@ Page {
                     popup.accepted.connect(function() {
                         if (app.packageType === "click") {
                             PlatformIntegration.clickInstaller.removePackage(app.appId, app.version);
-                        } else {
+                        } else if (app.packageType === "snap") {
                             const packageId = app.appId.substring(5);
                             console.log("Removing: " + packageId);
                             const request = PlatformIntegration.snapInstaller.remove(packageId);
@@ -57,6 +57,8 @@ Page {
                                 model.refresh();
                             });
                             request.runAsync();
+                        } else if (app.packageType === "packagekit") {
+                            PlatformIntegration.packageKitInstaller.removePackage(app.packageUrl, app.version);
                         }
                         bottomEdgeStack.pop();
                     })

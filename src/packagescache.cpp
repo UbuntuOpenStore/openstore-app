@@ -16,8 +16,8 @@
  */
 
 #include "packagescache.h"
-#include "clickpackage.h"
-#include "snappackage.h"
+#include "packageitems/clickpackage.h"
+#include "packageitems/snappackage.h"
 
 #include "openstorenetworkmanager.h"
 #include "platformintegration.h"
@@ -58,6 +58,11 @@ PackageItem* PackagesCache::get(const QString& appId) const
 
 void PackagesCache::getPackageDetails(const QString& appId, bool bust)
 {
+  if (appId.trimmed().isEmpty()) {
+    Q_EMIT packageFetchError(appId);
+    return;
+  }
+
   if (contains(appId) && !bust) {
     Q_EMIT packageDetailsReady(get(appId));
   } else {

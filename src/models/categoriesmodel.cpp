@@ -16,12 +16,16 @@
  */
 
 #include "categoriesmodel.h"
+#include "../openstorenetworkmanager.h"
+#include "../packageSource.h"
+#include "../packagebackendmanager.h"
 
 CategoriesModel::CategoriesModel(QObject* parent)
   : QAbstractListModel(parent)
   , m_ready(false)
 {
-  connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::parsedReply, this, &CategoriesModel::parseReply);
+  m_source = PackageBackendManager::instance()->activeSource();
+  connect(m_source, &PackageSource::categoriesReplied, this, &CategoriesModel::parseReply);
   connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::reloaded, this, &CategoriesModel::update);
 
   update();
@@ -69,33 +73,17 @@ QVariant CategoriesModel::data(const QModelIndex& index, int role) const
 
 void CategoriesModel::update()
 {
-  m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
-  OpenStoreNetworkManager::instance()->getCategories(m_requestSignature);
+  m_source->requestCategories();
 }
 
-void CategoriesModel::parseReply(OpenStoreReply reply)
+void CategoriesModel::parseReply(const QList<CategoryItem>& categories)
 {
-  if (reply.signature != m_requestSignature)
-    return;
-
-  QVariantList data = reply.data.toList();
-
   beginResetModel();
   m_list.clear();
   endResetModel();
 
-  beginInsertRows(QModelIndex(), 0, data.count() - 1);
-  Q_FOREACH (const QVariant& cat, data) {
-    const QVariantMap& catMap = cat.toMap();
-
-    CategoryItem catItem;
-    catItem.id = catMap.value("category").toString();
-    catItem.name = catMap.value("translation", catItem.id).toString();
-    catItem.count = catMap.value("count").toInt();
-    catItem.iconUrl = catMap.value("icon").toUrl();
-
-    m_list.append(catItem);
-  }
+  beginInsertRows(QModelIndex(), 0, categories.count() - 1);
+  m_list.append(categories);
   endInsertRows();
 
   m_ready = true;

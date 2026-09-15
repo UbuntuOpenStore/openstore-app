@@ -177,6 +177,11 @@ void OpenStoreNetworkManager::getDiscover(const QString& signature)
 
 void OpenStoreNetworkManager::getAppDetails(const QString& signature, const QString& appId)
 {
+  if (appId.trimmed().isEmpty()) {
+    Q_EMIT error(signature, QStringLiteral("Invalid app id"));
+    return;
+  }
+
   QUrl url(getUrl(API_APPDETAILS_ENDPOINT.arg(appId)));
 
   if (m_snapSupport && PlatformIntegration::instance()->snapInstaller()) {
@@ -274,6 +279,10 @@ void OpenStoreNetworkManager::postReview(const QString& signature,
                                          const QString& apikey,
                                          const bool& edit)
 {
+  if (appId.trimmed().isEmpty()) {
+    return;
+  }
+
   QJsonObject createReview{ { "body", review }, { "version", version }, { "rating", Ratings::ratingToString(rating) } };
   QJsonDocument jsonDocument(createReview);
 
@@ -301,6 +310,10 @@ void OpenStoreNetworkManager::postReview(const QString& signature,
 
 void OpenStoreNetworkManager::getReviews(const QString& signature, const QString& appId)
 {
+  if (appId.trimmed().isEmpty()) {
+    return;
+  }
+
   QUrl url(API_BASEURL + API_REVIEW_LIST_ENDPOINT.arg(appId));
 
   QUrlQuery q(url);
@@ -312,6 +325,10 @@ void OpenStoreNetworkManager::getReviews(const QString& signature, const QString
 
 void OpenStoreNetworkManager::getReviews(const QString& signature, const QString& appId, const QString& apiKey)
 {
+  if (appId.trimmed().isEmpty()) {
+    return;
+  }
+
   QUrl url(API_BASEURL + API_REVIEW_LIST_ENDPOINT.arg(appId));
 
   QUrlQuery q(url);
@@ -324,6 +341,10 @@ void OpenStoreNetworkManager::getReviews(const QString& signature, const QString
 
 void OpenStoreNetworkManager::getReviews(const QString& signature, const QString& appId, unsigned int limit, qlonglong fromDate)
 {
+  if (appId.trimmed().isEmpty()) {
+    return;
+  }
+
   QUrl url(API_BASEURL + API_REVIEW_LIST_ENDPOINT.arg(appId));
 
   QUrlQuery q(url);

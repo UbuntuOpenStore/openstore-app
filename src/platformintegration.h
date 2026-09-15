@@ -18,7 +18,7 @@
 #ifndef PLATFORMINTEGRATION_H
 #define PLATFORMINTEGRATION_H
 
-#include "clickinstaller.h"
+#include "installers/clickinstaller.h"
 
 #include <QHash>
 #include <QObject>
@@ -26,11 +26,21 @@
 
 #include <Snapd/Client>
 
+#ifdef ENABLE_DEB_SUPPORT
+class PackageKitInstaller;
+#endif
+
 class PlatformIntegration : public QObject
 {
   Q_OBJECT
+  Q_PROPERTY(bool clickSupport READ clickSupport CONSTANT)
+  Q_PROPERTY(bool snapSupport READ snapSupport CONSTANT)
+  Q_PROPERTY(bool debSupport READ debSupport CONSTANT)
   Q_PROPERTY(ClickInstaller* clickInstaller READ clickInstaller CONSTANT)
   Q_PROPERTY(QSnapdClient* snapInstaller READ snapInstaller CONSTANT)
+#ifdef ENABLE_DEB_SUPPORT
+  Q_PROPERTY(PackageKitInstaller* packageKitInstaller READ packageKitInstaller CONSTANT)
+#endif
 
 public:
   PlatformIntegration();
@@ -44,18 +54,80 @@ public:
     return m_instance;
   }
 
-  ClickInstaller* clickInstaller() const { return m_installer; }
-  QSnapdClient* snapInstaller() const { return m_snapInstaller; }
+  ClickInstaller* clickInstaller() const
+  {
+    return m_installer;
+  }
 
-  QStringList supportedFrameworks() const { return m_supportedFrameworks; }
-  QString supportedArchitecture() const { return m_supportedArchitecture; }
-  QString systemLocale() const { return m_systemLocale; }
-  QString systemCodename() const { return m_systemCodename; }
+  QSnapdClient* snapInstaller() const
+  {
+    return m_snapInstaller;
+  }
 
-  QString appVersion(const QString& appId) const { return m_installedAppIds.value(appId, QString()); }
-  QStringList installedAppIds() const { return m_installedAppIds.keys(); }
+  bool clickSupport() const
+  {
+#ifdef ENABLE_DEB_SUPPORT
+    return false;
+#else
+    return true;
+#endif
+  }
 
-  QVariantList clickDb() const { return m_clickDb; }
+  bool snapSupport() const
+  {
+    return m_snapInstaller != nullptr;
+  }
+
+  bool debSupport() const
+  {
+#ifdef ENABLE_DEB_SUPPORT
+    return true;
+#else
+    return false;
+#endif
+  }
+
+#ifdef ENABLE_DEB_SUPPORT
+  PackageKitInstaller* packageKitInstaller() const
+  {
+    return m_packageKitInstaller;
+  }
+#endif
+
+  QStringList supportedFrameworks() const
+  {
+    return m_supportedFrameworks;
+  }
+
+  QString supportedArchitecture() const
+  {
+    return m_supportedArchitecture;
+  }
+
+  QString systemLocale() const
+  {
+    return m_systemLocale;
+  }
+
+  QString systemCodename() const
+  {
+    return m_systemCodename;
+  }
+
+  QString appVersion(const QString& appId) const
+  {
+    return m_installedAppIds.value(appId, QString());
+  }
+
+  QStringList installedAppIds() const
+  {
+    return m_installedAppIds.keys();
+  }
+
+  QVariantList clickDb() const
+  {
+    return m_clickDb;
+  }
 
 Q_SIGNALS:
   void updated();
@@ -80,6 +152,9 @@ private:
 
   ClickInstaller* m_installer;
   QSnapdClient* m_snapInstaller;
+#ifdef ENABLE_DEB_SUPPORT
+  PackageKitInstaller* m_packageKitInstaller;
+#endif
 
   static PlatformIntegration* m_instance;
 };

@@ -167,6 +167,7 @@ Page {
                 }
 
                 ListItem {
+                    visible: PlatformIntegration.clickSupport
                     ListItemLayout {
                         anchors.centerIn: parent
                         title.text: i18n.tr("Enable snap support")
@@ -184,7 +185,7 @@ Page {
                 }
 
                 ListItem {
-                    visible: settings.snapSupport
+                    visible: settings.snapSupport && PlatformIntegration.clickSupport
                     ListItemLayout {
                         anchors.centerIn: parent
                         title.text: i18n.tr("Only show Lomiri-compatible snaps")
@@ -202,6 +203,7 @@ Page {
                 }
 
                 ListItem {
+                    visible: PlatformIntegration.clickSupport
                     ListItemLayout {
                         anchors.centerIn: parent
                         title.text: i18n.tr("Hide adult-oriented content")
@@ -220,6 +222,32 @@ Page {
                                 }
                             }
                         }
+                    }
+                }
+
+                Components.SectionDivider {
+                    visible: PlatformIntegration.debSupport
+                    text: i18n.tr("Sources")
+                }
+
+                ListItem {
+                    visible: PlatformIntegration.debSupport
+                    ListItemLayout {
+                        anchors.centerIn: parent
+                        title.text: i18n.tr("Repositories (read-only)")
+                        subtitle.text: PackageBackendManager.sources().join("\n")
+                        subtitle.maximumLineCount: Number.MAX_VALUE
+                        subtitle.wrapMode: Text.WordWrap
+                    }
+                }
+
+                ListItem {
+                    visible: PlatformIntegration.debSupport
+                    onClicked: PackageBackendManager.refreshCatalog()
+                    ListItemLayout {
+                        anchors.centerIn: parent
+                        title.text: i18n.tr("Refresh catalog")
+                        iconName: "view-refresh"
                     }
                 }
 

@@ -16,7 +16,7 @@
  */
 
 #include "platformintegration.h"
-#include "clickinstaller.h"
+#include "installers/clickinstaller.h"
 
 #include <QDebug>
 #include <QFile>
@@ -30,6 +30,10 @@
 #include <glib.h>
 
 #include <Snapd/Client>
+
+#ifdef ENABLE_DEB_SUPPORT
+#include "installers/packagekitinstaller.h"
+#endif
 
 inline bool systemdUnitRuns(const QString& name)
 {
@@ -65,12 +69,19 @@ PlatformIntegration::PlatformIntegration()
     m_snapInstaller = new QSnapdClient();
   }
 
+#ifdef ENABLE_DEB_SUPPORT
+  m_packageKitInstaller = new PackageKitInstaller();
+#endif
+
   update();
 }
 
 PlatformIntegration::~PlatformIntegration()
 {
   delete m_installer;
+#ifdef ENABLE_DEB_SUPPORT
+  delete m_packageKitInstaller;
+#endif
 }
 
 void PlatformIntegration::update()

@@ -118,7 +118,7 @@ Page {
 
     header: Components.HeaderBase {
         title: app ? app.name : i18n.tr("App details")
-        enabled: !PlatformIntegration.clickInstaller.busy
+        enabled: !BackendInstaller.installer.busy
 
         trailingActionBar {
             numberOfSlots: 1
@@ -292,7 +292,7 @@ Page {
                     anchors.margins: units.gu(2)
                     spacing: units.gu(2)
                     visible: {
-                        return !PlatformIntegration.clickInstaller.busy &&
+                        return !BackendInstaller.installer.busy &&
                                !PackagesCache.updatingCache &&
                                app.frameworkSupported;
                     }
@@ -381,8 +381,7 @@ Page {
                     anchors.margins: units.gu(2)
                     spacing: units.gu(2)
                     visible: {
-                        if (PlatformIntegration.clickInstaller.busy &&
-                            !PlatformIntegration.clickInstaller.isLocalInstall)
+                        if (BackendInstaller.installer.busy)
                             return true;
 
                         if (PackagesCache.updatingCache)
@@ -411,7 +410,7 @@ Page {
                         Layout.fillHeight: true
                         action: Action {
                             iconName: "close"
-                            onTriggered: PlatformIntegration.clickInstaller.abortInstallation()
+                            onTriggered: BackendInstaller.installer.abortInstallation()
                             enabled: app.downloadProgress < app.downloadSize
                         }
                         Rectangle {
@@ -435,7 +434,7 @@ Page {
                     subtitle.text: i18n.tr("This app is not compatible with your system.")
                     subtitle.maximumLineCount: Number.MAX_VALUE
                     subtitle.wrapMode: Text.WordWrap
-                    visible: !app.frameworkSupported && !PlatformIntegration.clickInstaller.busy && !PackagesCache.updatingCache
+                    visible: !app.frameworkSupported && !BackendInstaller.installer.busy && !PackagesCache.updatingCache
 
                     Icon {
                         SlotsLayout.position: SlotsLayout.Leading
@@ -674,7 +673,7 @@ Page {
 
             ListItem {
                 visible: app.packageType === "click"
-                enabled: !PlatformIntegration.clickInstaller.busy
+                enabled: !BackendInstaller.installer.busy
                 onClicked: {
                     bottomEdgeStack.clear()
                     root.showSearch('publisher:' + app.publisher)
@@ -688,7 +687,7 @@ Page {
             }
 
             ListItem {
-                enabled: !PlatformIntegration.clickInstaller.busy
+                enabled: !BackendInstaller.installer.busy
                 onClicked: {
                     bottomEdgeStack.clear()
                     root.showCategory(localCat(app.category), app.category)

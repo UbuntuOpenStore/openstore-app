@@ -33,7 +33,9 @@ ReviewsModel::ReviewsModel(const QString& appId, QObject* parent)
   connect(this, &ReviewsModel::refresh, this, &ReviewsModel::onRefresh);
 
   m_appendSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
-  OpenStoreNetworkManager::instance()->getReviews(m_appendSignature, appId);
+  if (!appId.trimmed().isEmpty()) {
+    OpenStoreNetworkManager::instance()->getReviews(m_appendSignature, appId);
+  }
 }
 
 int ReviewsModel::rowCount(const QModelIndex& parent) const
@@ -83,6 +85,9 @@ QHash<int, QByteArray> ReviewsModel::roleNames() const
 
 void ReviewsModel::loadMore()
 {
+  if (m_appId.trimmed().isEmpty()) {
+    return;
+  }
   if (m_list.count() == m_reviewCount) {
     return;
   }
@@ -96,6 +101,9 @@ void ReviewsModel::loadMore()
 
 void ReviewsModel::getOwnReview(const QString& apiKey)
 {
+  if (m_appId.trimmed().isEmpty()) {
+    return;
+  }
   m_ownSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
   OpenStoreNetworkManager::instance()->getReviews(m_ownSignature, m_appId, apiKey);
 }
@@ -111,6 +119,9 @@ bool ReviewsModel::sendReview(const QString& version,
                               const QString& apiKey,
                               const bool& edit)
 {
+  if (m_appId.trimmed().isEmpty()) {
+    return false;
+  }
   m_postedSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
   OpenStoreNetworkManager::instance()->postReview(m_postedSignature, m_appId, version, review, rating, apiKey, edit);
 
@@ -140,6 +151,9 @@ void ReviewsModel::parseError(const QString& signature, const QString& error)
 
 void ReviewsModel::onRefresh()
 {
+  if (m_appId.trimmed().isEmpty()) {
+    return;
+  }
   m_resetSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
   OpenStoreNetworkManager::instance()->getReviews(m_resetSignature, m_appId);
 }

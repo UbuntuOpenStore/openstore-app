@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-02 02:56+0000\n"
+"POT-Creation-Date: 2026-09-18 03:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "App details"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:127 ../qml/AppDetailsPage.qml.in:449
+#: ../qml/AppDetailsPage.qml.in:127 ../qml/AppDetailsPage.qml.in:448
 #: ../qml/AppLocalDetailsPage.qml.in:42
 #: ../qml/Dialogs/UninstallDialog.qml.in:33
 msgid "Remove"
@@ -61,7 +61,7 @@ msgstr ""
 msgid "This is a Snap package provided by the Snapcraft Store"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:303 ../qml/AppLocalDetailsPage.qml.in:116
+#: ../qml/AppDetailsPage.qml.in:303 ../qml/AppLocalDetailsPage.qml.in:118
 #: ../qml/Components/HighlightedApp.qml.in:117
 msgid "Open"
 msgstr ""
@@ -82,249 +82,249 @@ msgstr ""
 msgid "Install"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:435
+#: ../qml/AppDetailsPage.qml.in:434
 msgid "This app is not compatible with your system."
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:474
+#: ../qml/AppDetailsPage.qml.in:473
 msgid ""
 "This app has access to restricted parts of the system and all of your data, "
 "see below for details."
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:477
+#: ../qml/AppDetailsPage.qml.in:476
 msgid "This app has access to restricted system data, see below for details."
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:502
+#: ../qml/AppDetailsPage.qml.in:501
 msgid "Description"
 msgstr ""
 
 #. TRANSLATORS: Title of the changelog section
-#: ../qml/AppDetailsPage.qml.in:540
+#: ../qml/AppDetailsPage.qml.in:539
 msgid "What's New"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:559
+#: ../qml/AppDetailsPage.qml.in:558
 msgid "Packager/Publisher"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:568 ../qml/AppLocalDetailsPage.qml.in:150
+#: ../qml/AppDetailsPage.qml.in:567 ../qml/AppLocalDetailsPage.qml.in:152
 msgid "Installed version"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:578
+#: ../qml/AppDetailsPage.qml.in:577
 msgid "Latest available version"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:587
+#: ../qml/AppDetailsPage.qml.in:586
 msgid "First released"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:598
+#: ../qml/AppDetailsPage.qml.in:597
 msgid "Downloads of the latest version"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:607
+#: ../qml/AppDetailsPage.qml.in:606
 msgid "Total downloads"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:616
+#: ../qml/AppDetailsPage.qml.in:615
 msgid "License"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:617
+#: ../qml/AppDetailsPage.qml.in:616
 msgid "N/A"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:629 ../qml/SettingsPage.qml.in:249
+#: ../qml/AppDetailsPage.qml.in:628 ../qml/SettingsPage.qml.in:277
 msgid "Source Code"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:642
+#: ../qml/AppDetailsPage.qml.in:641
 msgid "Get support for this app"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:655
+#: ../qml/AppDetailsPage.qml.in:654
 msgid "Donate to support this app"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:668
+#: ../qml/AppDetailsPage.qml.in:667
 msgid "Help translate this app"
 msgstr ""
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
-#: ../qml/AppDetailsPage.qml.in:685
+#: ../qml/AppDetailsPage.qml.in:684
 msgid "More from %1"
 msgstr ""
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: ../qml/AppDetailsPage.qml.in:700
+#: ../qml/AppDetailsPage.qml.in:699
 msgid "Other apps in %1"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:711
+#: ../qml/AppDetailsPage.qml.in:710
 msgid "Package contents"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:798
+#: ../qml/AppDetailsPage.qml.in:797
 msgid "Permissions"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:803
+#: ../qml/AppDetailsPage.qml.in:802
 msgid "Accounts"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:804
+#: ../qml/AppDetailsPage.qml.in:803
 msgid "Audio"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:805
+#: ../qml/AppDetailsPage.qml.in:804
 msgid "Bluetooth"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:806
+#: ../qml/AppDetailsPage.qml.in:805
 msgid "Calendar"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:807
+#: ../qml/AppDetailsPage.qml.in:806
 msgid "Camera"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:808
+#: ../qml/AppDetailsPage.qml.in:807
 msgid "Connectivity"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:809
+#: ../qml/AppDetailsPage.qml.in:808
 msgid "Contacts"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:810
+#: ../qml/AppDetailsPage.qml.in:809
 msgid "Content Exchange Source"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:811
+#: ../qml/AppDetailsPage.qml.in:810
 msgid "Content Exchange"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:812
+#: ../qml/AppDetailsPage.qml.in:811
 msgid "Debug"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:813
+#: ../qml/AppDetailsPage.qml.in:812
 msgid "History"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:814
+#: ../qml/AppDetailsPage.qml.in:813
 msgid "In App Purchases"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:815
+#: ../qml/AppDetailsPage.qml.in:814
 msgid "Keep Display On"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:816
+#: ../qml/AppDetailsPage.qml.in:815
 msgid "Location"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:817
+#: ../qml/AppDetailsPage.qml.in:816
 msgid "Microphone"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:818
+#: ../qml/AppDetailsPage.qml.in:817
 msgid "Read Music Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:819
+#: ../qml/AppDetailsPage.qml.in:818
 msgid "Music Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:820
+#: ../qml/AppDetailsPage.qml.in:819
 msgid "Networking"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:821
+#: ../qml/AppDetailsPage.qml.in:820
 msgid "Read Picture Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:822
+#: ../qml/AppDetailsPage.qml.in:821
 msgid "Picture Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:823
+#: ../qml/AppDetailsPage.qml.in:822
 msgid "Push Notifications"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:824
+#: ../qml/AppDetailsPage.qml.in:823
 msgid "Sensors"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:825
+#: ../qml/AppDetailsPage.qml.in:824
 msgid "User Metrics"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:826
+#: ../qml/AppDetailsPage.qml.in:825
 msgid "Read Video Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:827
+#: ../qml/AppDetailsPage.qml.in:826
 msgid "Video Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:828
+#: ../qml/AppDetailsPage.qml.in:827
 msgid "Video"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:829
+#: ../qml/AppDetailsPage.qml.in:828
 msgid "Webview"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:830 ../qml/AppDetailsPage.qml.in:838
+#: ../qml/AppDetailsPage.qml.in:829 ../qml/AppDetailsPage.qml.in:837
 msgid "Unknown"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:834
+#: ../qml/AppDetailsPage.qml.in:833
 msgid "Full System Access"
 msgstr ""
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: ../qml/AppDetailsPage.qml.in:843
+#: ../qml/AppDetailsPage.qml.in:842
 msgid "none required"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:879
+#: ../qml/AppDetailsPage.qml.in:878
 msgid "Read paths"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:896
+#: ../qml/AppDetailsPage.qml.in:895
 msgid "Write paths"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: ../qml/AppDetailsPage.qml.in:971
+#: ../qml/AppDetailsPage.qml.in:970
 msgid "%1 GB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: ../qml/AppDetailsPage.qml.in:976
+#: ../qml/AppDetailsPage.qml.in:975
 msgid "%1 MB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: ../qml/AppDetailsPage.qml.in:981
+#: ../qml/AppDetailsPage.qml.in:980
 msgid "%1 kB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: ../qml/AppDetailsPage.qml.in:984
+#: ../qml/AppDetailsPage.qml.in:983
 msgid "%1 bytes"
 msgstr ""
 
-#: ../qml/AppLocalDetailsPage.qml.in:130
+#: ../qml/AppLocalDetailsPage.qml.in:132
 msgid "This app could not be found in the OpenStore"
 msgstr ""
 
-#: ../qml/AppLocalDetailsPage.qml.in:133
+#: ../qml/AppLocalDetailsPage.qml.in:135
 msgid ""
 "You are currently offline and the app details could not be fetched from the "
 "OpenStore"
@@ -1074,6 +1074,18 @@ msgstr ""
 msgid "Try with a different search."
 msgstr ""
 
+#: ../qml/IndexSetupPage.qml.in:29
+msgid "Setting up the app catalog"
+msgstr ""
+
+#: ../qml/IndexSetupPage.qml.in:71
+msgid "Building app index…"
+msgstr ""
+
+#: ../qml/IndexSetupPage.qml.in:79
+msgid "Retry"
+msgstr ""
+
 #. TRANSLATORS: %1 is the number of installed click apps
 #: ../qml/InstalledAppsPage.qml.in:80
 msgid "Installed apps (%1)"
@@ -1112,32 +1124,32 @@ msgstr ""
 msgid "No app has been installed from OpenStore yet."
 msgstr ""
 
-#: ../qml/Main.qml.in:338 ../qml/SearchPage.qml.in:55
+#: ../qml/Main.qml.in:349 ../qml/SearchPage.qml.in:55
 msgid "Filters"
 msgstr ""
 
-#: ../qml/Main.qml.in:387
+#: ../qml/Main.qml.in:398
 msgid "App installed"
 msgstr ""
 
-#: ../qml/Main.qml.in:388
+#: ../qml/Main.qml.in:399
 msgid "The app has been installed successfully."
 msgstr ""
 
-#: ../qml/Main.qml.in:391 ../qml/Main.qml.in:404 ../qml/Main.qml.in:419
+#: ../qml/Main.qml.in:402 ../qml/Main.qml.in:415 ../qml/Main.qml.in:430
 msgid "OK"
 msgstr ""
 
-#: ../qml/Main.qml.in:400
+#: ../qml/Main.qml.in:411
 msgid "Installation failed"
 msgstr ""
 
-#: ../qml/Main.qml.in:401
+#: ../qml/Main.qml.in:412
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 
-#: ../qml/Main.qml.in:415
+#: ../qml/Main.qml.in:426
 msgid "Installation failed (Error %1)"
 msgstr ""
 
@@ -1162,33 +1174,45 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: ../qml/SettingsPage.qml.in:172
+#: ../qml/SettingsPage.qml.in:173
 msgid "Enable snap support"
 msgstr ""
 
-#: ../qml/SettingsPage.qml.in:190
+#: ../qml/SettingsPage.qml.in:191
 msgid "Only show Lomiri-compatible snaps"
 msgstr ""
 
-#: ../qml/SettingsPage.qml.in:207
+#: ../qml/SettingsPage.qml.in:209
 msgid "Hide adult-oriented content"
 msgstr ""
 
-#: ../qml/SettingsPage.qml.in:217
+#: ../qml/SettingsPage.qml.in:219
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr ""
 
-#: ../qml/SettingsPage.qml.in:242
+#: ../qml/SettingsPage.qml.in:230
+msgid "Sources"
+msgstr ""
+
+#: ../qml/SettingsPage.qml.in:237
+msgid "Repositories (read-only)"
+msgstr ""
+
+#: ../qml/SettingsPage.qml.in:249
+msgid "Refresh catalog"
+msgstr ""
+
+#: ../qml/SettingsPage.qml.in:270
 msgid "About OpenStore"
 msgstr ""
 
-#: ../qml/SettingsPage.qml.in:258
+#: ../qml/SettingsPage.qml.in:286
 msgid "Report an issue"
 msgstr ""
 
-#: ../qml/SettingsPage.qml.in:267
+#: ../qml/SettingsPage.qml.in:295
 msgid "Additional Icons by"
 msgstr ""
 

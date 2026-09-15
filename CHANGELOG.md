@@ -1,5 +1,11 @@
 # OpenStore App Changelog
 
+## v4.2.0
+
+- Added Qt 6 support for 26.04 (coming soon)
+- Updated to use v4 api endpoints
+- Added a user agent to api requests so the server can differentiate traffic sources
+
 ## v4.1.0
 
 - Added a toggle to only show Lomiri compatible snaps (on by default)

@@ -15,7 +15,24 @@ if(NOT DEFINED ENABLE_QT6)
     unset(QT_FOUND)
     unset(QT_VERSION_MAJOR)
 endif()
+
 option(ENABLE_QT6 "Enable building with Qt6" ${ENABLE_QT6_DEFAULT})
+option(ENABLE_DEB_SUPPORT "Build with deb/apt catalog support" OFF)
+
+if(ENABLE_DEB_SUPPORT AND NOT ENABLE_QT6)
+    message(FATAL_ERROR "ENABLE_DEB_SUPPORT requires ENABLE_QT6 (deb dependencies are the Qt6 bindings)")
+endif()
+
+if(ENABLE_DEB_SUPPORT)
+    message(STATUS "Enabled deb support")
+
+    include(FindPkgConfig)
+    pkg_check_modules(PACKAGEKIT REQUIRED packagekitqt6)
+    find_library(PACKAGEKIT_QT_LIBRARIES NAMES packagekitqt6)
+
+    find_package(AppStreamQt REQUIRED)
+    pkg_check_modules(XAPIAN REQUIRED xapian-core)
+endif()
 
 if(ENABLE_QT6)
     set(QT_VERSION_MAJOR 6)
@@ -121,18 +138,18 @@ foreach(QML_TEMPLATE_FILE ${QML_TEMPLATE_FILES})
     if(QML_TEMPLATE_FILE MATCHES "^(.+)\\.qt[56]\\.qml\\.in$")
         # Extract the base name (e.g., "SignInPage" from "SignInPage.qt5.qml.in")
         string(REGEX REPLACE "^(.+)\\.qt[56]\\.qml\\.in$" "\\1" BASE_NAME ${QML_TEMPLATE_FILE})
-        
+
         # Skip if we already processed this base name
         if(NOT "${BASE_NAME}" IN_LIST QML_PROCESSED_BASES)
             list(APPEND QML_PROCESSED_BASES ${BASE_NAME})
-            
+
             # Select the correct version
             if(QT_VERSION_MAJOR EQUAL 6)
                 set(VERSION_SPECIFIC_FILE "${BASE_NAME}.qt6.qml.in")
             else()
                 set(VERSION_SPECIFIC_FILE "${BASE_NAME}.qt5.qml.in")
             endif()
-            
+
             # Check if the selected version exists
             if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${VERSION_SPECIFIC_FILE}")
                 list(APPEND QML_FINAL_FILES ${VERSION_SPECIFIC_FILE})

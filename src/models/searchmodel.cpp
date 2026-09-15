@@ -16,20 +16,16 @@
  */
 
 #include "searchmodel.h"
-#include "../packagescache.h"
+#include "../packagebackendmanager.h"
 #include "../platformintegration.h"
-
-#include <QDebug>
-#include <QJsonDocument>
-
-#define REQUEST_LIMIT 30
 
 SearchModel::SearchModel(QObject* parent)
   : QAbstractListModel(parent)
 {
-  connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::parsedReply, this, &SearchModel::parseReply);
-  connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::reloaded, this, &SearchModel::update);
-  connect(PlatformIntegration::instance(), &PlatformIntegration::updated, this, &SearchModel::refreshInstalledInfo);
+  m_source = PackageBackendManager::instance()->activeSource();
+
+  connect(m_source, &PackageSource::searchReplied, this, &SearchModel::searchReplied);
+  connect(PlatformIntegration::instance(), &PlatformIntegration::updated, m_source, &PackageSource::refreshInstalledState);
 
   connect(this, &SearchModel::filterStringChanged, this, &SearchModel::update);
   connect(this, &SearchModel::categoryChanged, this, &SearchModel::update);
@@ -108,7 +104,16 @@ void SearchModel::update()
   m_list.clear();
   endResetModel();
 
-  sendRequest();
+  SearchRequest request;
+  request.filterString = m_filterString;
+  request.category = m_category;
+  request.sortMode = m_sortMode;
+  request.filterType = m_filterType;
+  request.filterPackageType = m_filterPackageType;
+  request.queryUrl = m_queryUrl;
+  request.offset = 0;
+  request.limit = 30;
+  m_source->requestSearch(request);
 }
 
 bool SearchModel::canFetchMore(const QModelIndex& parent) const
@@ -120,74 +125,39 @@ bool SearchModel::canFetchMore(const QModelIndex& parent) const
 void SearchModel::fetchMore(const QModelIndex& parent)
 {
   Q_UNUSED(parent)
-  sendRequest(m_list.count());
+  SearchRequest request;
+  request.filterString = m_filterString;
+  request.category = m_category;
+  request.sortMode = m_sortMode;
+  request.filterType = m_filterType;
+  request.filterPackageType = m_filterPackageType;
+  request.queryUrl = m_queryUrl;
+  request.offset = m_list.count();
+  request.limit = 30;
+  m_source->requestSearch(request);
 }
 
-void SearchModel::sendRequest(int skip)
+void SearchModel::searchReplied(const SearchReply& reply)
 {
-  m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
-
-  if (!m_queryUrl.isEmpty()) {
-    OpenStoreNetworkManager::instance()->getByUrl(m_requestSignature, m_queryUrl);
-  } else {
-    if (m_filterString.isEmpty() && m_category.isEmpty()) {
-      // Show latest app
-      QString sortMode = QStringLiteral("-updated_date");
-      if (!m_sortMode.isEmpty()) {
-        sortMode = m_sortMode;
-      }
-
-      OpenStoreNetworkManager::instance()->getSearch(
-        m_requestSignature, skip, REQUEST_LIMIT, QString(), QString(), sortMode, m_filterType, m_filterPackageType);
-    } else {
-      OpenStoreNetworkManager::instance()->getSearch(
-        m_requestSignature, skip, REQUEST_LIMIT, m_filterString, m_category, m_sortMode, m_filterType, m_filterPackageType);
+  if (reply.refresh) {
+    // Merge the new flags into the current rows by appId; never append or reset.
+    for (int i = 0; i < reply.packages.count(); ++i) {
+      const SearchPackageItem& refreshed = reply.packages.at(i);
+      const int row = find(refreshed.appId);
+      if (row < 0)
+        continue;
+      m_list[row].installed = refreshed.installed;
+      m_list[row].updateAvailable = refreshed.updateAvailable;
+      Q_EMIT dataChanged(index(row), index(row));
     }
-  }
-}
-
-void SearchModel::parseReply(OpenStoreReply reply)
-{
-  if (reply.signature != m_requestSignature)
+    Q_EMIT updated();
     return;
-
-  QVariantMap data = reply.data.toMap();
-  QVariantList pkgList = data.value("packages").toList();
-
-  beginInsertRows(QModelIndex(), m_list.count(), m_list.count() + pkgList.count() - 1);
-
-  Q_FOREACH (const QVariant& pkg, pkgList) {
-    SearchPackageItem item;
-    const QVariantMap& pkgMap = pkg.toMap();
-
-    item.appId = pkgMap.value("id").toString();
-    item.name = pkgMap.value("name").toString();
-    item.tagline = pkgMap.value("tagline").toString();
-    item.icon = pkgMap.value("icon").toString();
-    item.types = pkgMap.value("types").toStringList();
-    item.packageType = pkgMap.value("package_type").toString();
-    item.ratings = new Ratings(pkgMap.value("ratings").toMap());
-
-    item.updateAvailable =
-      bool(PackagesCache::instance()->getRemoteAppRevision(item.appId) > PackagesCache::instance()->getLocalAppRevision(item.appId));
-    item.installed = !PlatformIntegration::instance()->appVersion(item.appId).isNull();
-
-    m_list.append(item);
   }
 
+  beginInsertRows(QModelIndex(), m_list.count(), m_list.count() + reply.packages.count() - 1);
+  m_list.append(reply.packages);
   endInsertRows();
 
-  m_fetchedAll = !data.value("next").toUrl().isValid();
-
+  m_fetchedAll = reply.fetchedAll;
   Q_EMIT updated();
-}
-
-void SearchModel::refreshInstalledInfo()
-{
-  for (int i = 0; i < m_list.count(); ++i) {
-    m_list[i].updateAvailable = bool(PackagesCache::instance()->getRemoteAppRevision(m_list[i].appId) >
-                                     PackagesCache::instance()->getLocalAppRevision(m_list[i].appId));
-    m_list[i].installed = !PlatformIntegration::instance()->appVersion(m_list[i].appId).isNull();
-    Q_EMIT dataChanged(index(i), index(i));
-  }
 }

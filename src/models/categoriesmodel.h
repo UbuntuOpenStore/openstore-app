@@ -18,16 +18,8 @@
 #ifndef CATEGORIESMODEL_H
 #define CATEGORIESMODEL_H
 
-#include "../openstorenetworkmanager.h"
+#include "../packageSource.h"
 #include <QAbstractListModel>
-
-struct CategoryItem
-{
-  QString id;
-  QString name;
-  int count;
-  QUrl iconUrl;
-};
 
 class CategoriesModel : public QAbstractListModel
 {
@@ -57,12 +49,12 @@ Q_SIGNALS:
   void updated();
 
 private Q_SLOTS:
-  void parseReply(OpenStoreReply reply);
+  void parseReply(const QList<CategoryItem>& categories);
 
 private:
+  PackageSource* m_source;
   QList<CategoryItem> m_list;
   bool m_ready;
-  QString m_requestSignature;
 };
 
 #endif // CATEGORIESMODEL_H

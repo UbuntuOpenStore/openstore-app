@@ -16,18 +16,16 @@
  */
 
 #include "discovermodel.h"
-#include "../package.h"
-#include "../packagescache.h"
-#include "../platformintegration.h"
-
-#include <QDebug>
-#include <QJsonDocument>
+#include "../openstorenetworkmanager.h"
+#include "../packageSource.h"
+#include "../packagebackendmanager.h"
 
 DiscoverModel::DiscoverModel(QObject* parent)
   : QAbstractListModel(parent)
 {
+  m_source = PackageBackendManager::instance()->activeSource();
+  connect(m_source, &PackageSource::discoverReplied, this, &DiscoverModel::parseReply);
   connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::reloaded, this, &DiscoverModel::refresh);
-  connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::parsedReply, this, &DiscoverModel::parseReply);
 
   refresh();
 }
@@ -67,7 +65,7 @@ QHash<int, QByteArray> DiscoverModel::roleNames() const
 
 PackageItem* DiscoverModel::getPackage(const QString& appId)
 {
-  return PackagesCache::instance()->get(appId);
+  return m_source->requestPackageDetails(appId);
 }
 
 void DiscoverModel::refresh()
@@ -79,50 +77,19 @@ void DiscoverModel::refresh()
   m_list.clear();
   endResetModel();
 
-  m_requestSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
-  OpenStoreNetworkManager::instance()->getDiscover(m_requestSignature);
+  m_source->requestDiscover();
 }
 
-void DiscoverModel::parseReply(OpenStoreReply reply)
+void DiscoverModel::parseReply(const DiscoverReply& reply)
 {
-  if (reply.signature != m_requestSignature)
-    return;
+  m_highlightBannerUrl = reply.highlightBannerUrl;
+  m_highlightAppId = reply.highlightAppId;
 
-  QVariantMap data = reply.data.toMap();
-
-  // Highlighted app data
-  QVariantMap highlight = data.value("highlight").toMap();
-  m_highlightBannerUrl = highlight.value("image").toUrl();
-  m_highlightAppId = highlight.value("id").toString();
-
-  if (!m_highlightAppId.isEmpty() && !PackagesCache::instance()->contains(m_highlightAppId)) {
-    PackagesCache::instance()->insert(m_highlightAppId, highlight.value("app").toMap());
-  }
-
-  // Categories parsing
-  QVariantList categories = data.value("categories").toList();
-  Q_FOREACH (const QVariant& categoryVariant, categories) {
-    const QVariantMap& category = categoryVariant.toMap();
-
-    beginInsertRows(QModelIndex(), m_list.count(), m_list.count());
-    DiscoverCategoryItem item;
-    item.name = category.value("name").toString();
-    item.tagline = category.value("tagline").toString();
-    item.queryUrl = category.value("query_url").toString();
-    item.appIds = category.value("ids").toStringList();
-    m_list.append(item);
-    endInsertRows();
-
-    QVariantList catAppsList = category.value("apps").toList();
-    Q_FOREACH (const QVariant& appVariant, catAppsList) {
-      const QVariantMap& app = appVariant.toMap();
-      const QString& appId = app.value("id").toString();
-
-      if (!PackagesCache::instance()->contains(appId)) {
-        PackagesCache::instance()->insert(appId, app);
-      }
-    }
-  }
+  // Replace the rows; the source re-emits the full discover state.
+  beginResetModel();
+  m_list.clear();
+  m_list = reply.categories;
+  endResetModel();
 
   m_ready = true;
   Q_EMIT updated();

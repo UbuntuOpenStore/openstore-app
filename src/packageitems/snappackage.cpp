@@ -17,7 +17,7 @@
 
 #include "snappackage.h"
 
-#include "platformintegration.h"
+#include "../platformintegration.h"
 
 #include <Snapd/App>
 #include <Snapd/Client>

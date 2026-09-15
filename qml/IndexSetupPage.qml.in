@@ -1,0 +1,83 @@
+/*
+ * Copyright (C) 2026 Brian Douglass
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; version 3.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+import QtQuick 2.4
+import Lomiri.Components @LOMIRI_COMPONENTS_VERSION@
+import OpenStore 1.0
+
+import "Components" as Components
+
+Page {
+    id: rootItem
+
+    property var debIndex: PlatformIntegration.debSupport ? BackendInstaller.indexStatus : null
+
+    header: Components.HeaderBase {
+        title: i18n.tr("Setting up the app catalog")
+    }
+
+    property bool completed: false
+    function finish() {
+        if (completed)
+            return;
+        completed = true;
+        pageStack.replace(Qt.resolvedUrl("DiscoverPage.qml"));
+    }
+
+    Component.onCompleted: {
+        if (debIndex && debIndex.state === "uninitialized") {
+            debIndex.initialize();
+        }
+    }
+
+    Connections {
+        target: debIndex
+        enabled: debIndex !== null
+        onReady: rootItem.finish()
+        onStateChanged: {
+            if (debIndex.state === "ready")
+                rootItem.finish();
+        }
+    }
+
+    Column {
+        anchors.fill: parent
+        anchors.margins: units.gu(4)
+
+        ActivityIndicator {
+            id: spinner
+            running: debIndex ? debIndex.state === "initializing" : false
+            visible: running
+            anchors.horizontalCenter: parent.horizontalCenter
+        }
+
+        Label {
+            anchors.horizontalCenter: parent.horizontalCenter
+            text: debIndex && debIndex.state === "error"
+                ? debIndex.errorMessage
+                : i18n.tr("Building app index…")
+            horizontalAlignment: Text.AlignHCenter
+            wrapMode: Text.WordWrap
+        }
+
+        Button {
+            anchors.horizontalCenter: parent.horizontalCenter
+            visible: debIndex && debIndex.state === "error"
+            text: i18n.tr("Retry")
+            onClicked: debIndex.retry()
+        }
+    }
+}

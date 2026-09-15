@@ -30,18 +30,28 @@
 #include <Snapd/Client>
 
 #include "apiconstants.h"
+#include "backendinstaller.h"
 #include "cachingnetworkmanagerfactory.h"
-#include "clickinstaller.h"
-#include "clickpackage.h"
+#include "installers/clickinstaller.h"
 #include "models/categoriesmodel.h"
 #include "models/discovermodel.h"
 #include "models/localpackagesmodel.h"
 #include "models/searchmodel.h"
 #include "openstorenetworkmanager.h"
+#include "packagebackendmanager.h"
+#include "packageitems/clickpackage.h"
+#ifdef ENABLE_DEB_SUPPORT
+#include "indexstatus.h"
+#include "installers/packagekitinstaller.h"
+#include "packageindex.h"
+#include "packageitems/packagekitpackage.h"
+#include "sources/packagekitsource.h"
+#endif
+#include "packageitems/snappackage.h"
 #include "packagescache.h"
 #include "platformintegration.h"
 #include "review.h"
-#include "snappackage.h"
+#include "sources/remoteapisource.h"
 
 static QObject* registerNetworkManagerSingleton(QQmlEngine* /*engine*/, QJSEngine* /*scriptEngine*/)
 {
@@ -57,6 +67,23 @@ static QObject* registerPackagesCacheSingleton(QQmlEngine* /*engine*/, QJSEngine
 {
   return PackagesCache::instance();
 }
+
+static QObject* registerBackendManagerSingleton(QQmlEngine* /*engine*/, QJSEngine* /*scriptEngine*/)
+{
+  return PackageBackendManager::instance();
+}
+
+static QObject* registerBackendInstallerSingleton(QQmlEngine* /*engine*/, QJSEngine* /*scriptEngine*/)
+{
+  return BackendInstaller::instance();
+}
+
+#ifdef ENABLE_DEB_SUPPORT
+static QObject* registerPackageIndexSingleton(QQmlEngine* /*engine*/, QJSEngine* /*scriptEngine*/)
+{
+  return PackageIndex::instance();
+}
+#endif
 
 int main(int argc, char* argv[])
 {
@@ -80,6 +107,8 @@ int main(int argc, char* argv[])
   qmlRegisterSingletonType<OpenStoreNetworkManager>("OpenStore", 1, 0, "OpenStoreNetworkManager", registerNetworkManagerSingleton);
   qmlRegisterSingletonType<PlatformIntegration>("OpenStore", 1, 0, "PlatformIntegration", registerPlatformIntegrationSingleton);
   qmlRegisterSingletonType<PackagesCache>("OpenStore", 1, 0, "PackagesCache", registerPackagesCacheSingleton);
+  qmlRegisterSingletonType<PackageBackendManager>("OpenStore", 1, 0, "PackageBackendManager", registerBackendManagerSingleton);
+  qmlRegisterSingletonType<BackendInstaller>("OpenStore", 1, 0, "BackendInstaller", registerBackendInstallerSingleton);
   qmlRegisterUncreatableType<ClickInstaller>(
     "OpenStore", 1, 0, "ClickInstaller", "Access ClickInstall from the PlatformIntegration singleton");
   qmlRegisterType<LocalPackagesModel>("OpenStore", 1, 0, "LocalAppModel");
@@ -94,6 +123,17 @@ int main(int argc, char* argv[])
     "OpenStore", 1, 0, "SnapPackageItem", "SnapPackageItem is only available through LocalAppModel, DiscoverModel, or SearchModel.");
   qmlRegisterUncreatableType<QSnapdClient>("OpenStore", 1, 0, "SnapInstaller", "Access SnapInstall from the PlatformIntegration singleton");
   qmlRegisterUncreatableType<QSnapdRemoveRequest>("OpenStore", 1, 0, "SnapdRemoveRequest", "Created by snapInstaller");
+  qmlRegisterUncreatableType<PackageSource>("OpenStore", 1, 0, "PackageSource", "PackageSource is created by PackageBackendManager.");
+#ifdef ENABLE_DEB_SUPPORT
+  qmlRegisterUncreatableType<PackageKitSource>(
+    "OpenStore", 1, 0, "PackageKitSource", "PackageKitSource is created by PackageBackendManager.");
+  qmlRegisterSingletonType<PackageIndex>("OpenStore", 1, 0, "PackageIndex", registerPackageIndexSingleton);
+  qmlRegisterUncreatableType<IndexStatus>("OpenStore", 1, 0, "IndexStatus", "Access IndexStatus from PackageIndex.status");
+  qmlRegisterUncreatableType<PackageKitInstaller>(
+    "OpenStore", 1, 0, "PackageKitInstaller", "Access PackageKitInstaller from the PlatformIntegration singleton");
+  qmlRegisterUncreatableType<PackageKitPackageItem>(
+    "OpenStore", 1, 0, "PackageKitPackageItem", "PackageKitPackageItem is only available through the PackageKitSource catalog.");
+#endif
 
   qmlRegisterType<Ratings>("OpenStore", 1, 0, "Ratings");
   qRegisterMetaType<Ratings::Rating>("Rating");

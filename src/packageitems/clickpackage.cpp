@@ -17,8 +17,8 @@
 
 #include "clickpackage.h"
 
-#include "clickinstaller.h"
-#include "platformintegration.h"
+#include "../installers/clickinstaller.h"
+#include "../platformintegration.h"
 
 ClickPackageItem::ClickPackageItem(const QVariantMap& json, QObject* parent)
   : PackageItem(json, parent)

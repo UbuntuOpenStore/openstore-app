@@ -18,23 +18,10 @@
 #ifndef LOCALPACKAGESMODEL_H
 #define LOCALPACKAGESMODEL_H
 
+#include "../packageSource.h"
 #include <QAbstractListModel>
-#include <QJsonObject>
 
 class PackageItem;
-
-struct LocalPackageItem
-{
-  QString name;
-  QString appId;
-  QString version;
-  QString icon;
-  bool updateAvailable;
-  QString updateStatus;
-  QString packageUrl;
-  QString appLaunchUrl;
-  QString packageType;
-};
 
 class LocalPackagesModel : public QAbstractListModel
 {
@@ -88,6 +75,7 @@ Q_SIGNALS:
 
 private:
   QList<LocalPackageItem> m_list;
+  PackageSource* m_source;
   QString m_appStoreAppId;
   bool m_ready;
   bool m_appStoreUpdateAvailable;

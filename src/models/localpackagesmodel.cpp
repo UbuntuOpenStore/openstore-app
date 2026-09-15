@@ -17,20 +17,11 @@
 
 #include "localpackagesmodel.h"
 #include "../openstorenetworkmanager.h"
-#include "../package.h"
+#include "../packagebackendmanager.h"
 #include "../packagescache.h"
 #include "../platformintegration.h"
 
-#include <QJsonArray>
-#include <QJsonDocument>
 #include <algorithm>
-
-#include <Snapd/Client>
-
-// For desktop file parsing
-#include <QDir>
-#include <QFileInfo>
-#include <QSettings>
 
 #define MODEL_START_REFRESH()                                                                                                              \
   m_ready = false;                                                                                                                         \
@@ -56,9 +47,12 @@ LocalPackagesModel::LocalPackagesModel(QAbstractListModel* parent)
   , m_ready(false)
   , m_appStoreUpdateAvailable(false)
 {
+  m_source = PackageBackendManager::instance()->activeSource();
+
   connect(PlatformIntegration::instance(), &PlatformIntegration::updated, this, &LocalPackagesModel::refresh);
   connect(PackagesCache::instance(), &PackagesCache::updatingCacheChanged, this, &LocalPackagesModel::refresh);
   connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::snapSupportChanged, this, &LocalPackagesModel::refresh);
+  connect(m_source, &PackageSource::installedChanged, this, &LocalPackagesModel::refresh);
 
   refresh();
 }
@@ -159,123 +153,21 @@ int LocalPackagesModel::snapsCount() const
 
 void LocalPackagesModel::refresh()
 {
-  // qDebug() << Q_FUNC_INFO << "refresh called";
-
   MODEL_START_REFRESH();
 
   beginResetModel();
-  m_list.clear();
-
-  const QVariantList& clickDb = PlatformIntegration::instance()->clickDb();
-
-  beginInsertRows(QModelIndex(), m_list.count(), m_list.count() + PackagesCache::instance()->numberOfInstalledAppsInStore() - 1);
-  Q_FOREACH (const QVariant& pkg, clickDb) {
-    QVariantMap map = pkg.toMap();
-    QString appId = map.value("name").toString();
-    QString version = map.value("version").toString();
-
-    QVariantMap hookMap = map.value("hooks").toMap();
-    QString appLaunchUrl;
-    Q_FOREACH (const QString& key, hookMap.keys()) {
-      QVariantMap hook = hookMap.value(key).toMap();
-      if (hook.keys().contains("desktop")) {
-        appLaunchUrl = QString("appid://%1/%2/current-user-version").arg(appId).arg(key);
-      }
-    }
-
-    LocalPackageItem pkgItem;
-    pkgItem.appId = appId;
-    pkgItem.name = map.value("title").toString();
-    pkgItem.version = version;
-    pkgItem.packageUrl = PackagesCache::instance()->getPackageUrl(pkgItem.appId);
-    pkgItem.appLaunchUrl = appLaunchUrl;
-    pkgItem.packageType = QStringLiteral("click");
-
-    int remoteRevision = PackagesCache::instance()->getRemoteAppRevision(pkgItem.appId);
-    int localRevision = PackagesCache::instance()->getLocalAppRevision(pkgItem.appId);
-    pkgItem.updateAvailable = bool(remoteRevision > localRevision);
-
-    if (localRevision == 0) {
-      pkgItem.updateStatus = QStringLiteral("downgrade");
-    } else if (pkgItem.updateAvailable) {
-      pkgItem.updateStatus = QStringLiteral("available");
-    } else {
-      pkgItem.updateStatus = QStringLiteral("none");
-    }
-
-    // pkgItem.icon = map.value("icon").toString();
-    if (pkgItem.icon.isEmpty()) {
-      const QString& directory = map.value("_directory").toString();
-
-      const QVariantMap& hooks = map.value("hooks").toMap();
-      Q_FOREACH (const QString& hook, hooks.keys()) {
-        const QVariantMap& h = hooks.value(hook).toMap();
-
-        const QString& desktop = h.value("desktop").toString();
-        if (!desktop.isEmpty()) {
-          //        qDebug() << "Getting icon from .desktop file.";
-          const QString& desktopFile = directory + QDir::separator() + desktop;
-          QSettings appInfo(desktopFile, QSettings::IniFormat);
-          pkgItem.icon = directory + QDir::separator() + appInfo.value("Desktop Entry/Icon").toString();
-          //        qDebug() << pkgItem.icon;
-          break;
-        }
-      }
-
-      if (!pkgItem.icon.isEmpty()) {
-        pkgItem.icon = pkgItem.icon.prepend("file://");
-      }
-
-      m_list.append(pkgItem);
-
-      // Check if there's an update for OpenStore
-      if (pkgItem.appId == m_appStoreAppId && localRevision != 0) {
-        m_appStoreUpdateAvailable = pkgItem.updateAvailable;
-        Q_EMIT appStoreUpdateAvailableChanged();
-      }
-    }
-  }
-
-  QSnapdClient* installer = PlatformIntegration::instance()->snapInstaller();
-  if (installer && OpenStoreNetworkManager::instance()->snapSupport()) {
-    auto request = installer->getSnaps();
-    request->runSync();
-    for (int i = 0; i < request->snapCount(); i++) {
-      QSnapdSnap* snap = request->snap(i);
-      LocalPackageItem pkgItem;
-      pkgItem.appId = QStringLiteral("snap.") + snap->name();
-      pkgItem.packageType = QStringLiteral("snap");
-      pkgItem.name = snap->title().isEmpty() ? snap->name() : snap->title();
-      pkgItem.version = snap->version();
-      // pkgItem.packageUrl = PackagesCache::instance()->getPackageUrl(pkgItem.appId);
-      // pkgItem.appLaunchUrl = appLaunchUrl;
-      const QString iconPath = snap->icon();
-      if (iconPath.startsWith(QStringLiteral("http://")) || iconPath.startsWith(QStringLiteral("https://"))) {
-        pkgItem.icon = iconPath;
-      } else {
-        // icon() returns a snapd API path when not a URL, not a filesystem path.
-        // Look for the icon on the filesystem at the standard snap location.
-        // This is a bit simpler than pulling it from snapd
-        const QString base = QStringLiteral("/snap/") + snap->name() + QStringLiteral("/current/meta/gui/icon");
-        if (QFileInfo::exists(base + QStringLiteral(".svg"))) {
-          pkgItem.icon = QStringLiteral("file://") + base + QStringLiteral(".svg");
-        } else if (QFileInfo::exists(base + QStringLiteral(".png"))) {
-          pkgItem.icon = QStringLiteral("file://") + base + QStringLiteral(".png");
-        } else {
-          pkgItem.icon = QStringLiteral("qrc:/Assets/fallback.svg");
-        }
-      }
-      pkgItem.updateStatus = QStringLiteral("snap");
-
-      m_list.append(pkgItem);
-    }
-  }
-
-  //        qDebug() << "Finished refresh.";
-
+  m_list = m_source->requestInstalled();
   std::sort(m_list.begin(), m_list.end(), sortPackage);
 
-  endInsertRows();
+  m_appStoreUpdateAvailable = false;
+  Q_FOREACH (const LocalPackageItem& pkg, m_list) {
+    if (pkg.packageType == QStringLiteral("click") && pkg.appId == m_appStoreAppId && pkg.updateStatus == QStringLiteral("available")) {
+      m_appStoreUpdateAvailable = true;
+      break;
+    }
+  }
+  Q_EMIT appStoreUpdateAvailableChanged();
+
   endResetModel();
 
   Q_EMIT updated();

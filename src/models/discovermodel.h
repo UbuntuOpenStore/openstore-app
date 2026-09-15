@@ -20,18 +20,7 @@
 
 #include <QAbstractListModel>
 
-#include "../openstorenetworkmanager.h"
-
-class QNetworkReply;
-class PackageItem;
-
-struct DiscoverCategoryItem
-{
-  QString name;
-  QString tagline;
-  QString queryUrl;
-  QStringList appIds;
-};
+#include "../packageSource.h"
 
 class DiscoverModel : public QAbstractListModel
 {
@@ -67,10 +56,10 @@ Q_SIGNALS:
   void updated();
 
 private Q_SLOTS:
-  void parseReply(OpenStoreReply reply);
+  void parseReply(const DiscoverReply& reply);
 
 private:
-  QString m_requestSignature;
+  PackageSource* m_source;
 
   QList<DiscoverCategoryItem> m_list;
 

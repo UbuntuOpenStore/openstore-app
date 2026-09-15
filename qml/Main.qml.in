@@ -162,7 +162,16 @@ MainView {
     }
 
     Component.onCompleted: {
-        pageStack.push(Qt.resolvedUrl("DiscoverPage.qml"))
+        if (PlatformIntegration.debSupport && BackendInstaller.indexStatus.state !== "ready") {
+            pageStack.push(Qt.resolvedUrl("IndexSetupPage.qml"))
+        } else {
+            pageStack.push(Qt.resolvedUrl("DiscoverPage.qml"))
+        }
+
+        if (PlatformIntegration.debSupport && BackendInstaller.indexStatus.state === "ready") {
+            PackageBackendManager.refreshCatalog()
+        }
+
         PlatformIntegration.update()
 
         if (OpenStoreNetworkManager.isDifferentDomain) {
@@ -196,14 +205,16 @@ MainView {
         target: ContentHub
 
         onImportRequested: {
-            var filePath = String(transfer.items[0].url).replace('file://', '')
-            print("Should import file", filePath)
-            var fileName = filePath.split("/").pop();
-            var popup = PopupUtils.open(installWarningDialog, root, {fileName: fileName});
-            popup.accepted.connect(function() {
-                contentHubInstallInProgress = true;
-                PlatformIntegration.clickInstaller.installPackage(filePath, true)
-            })
+            if (PlatformIntegration.clickSupport) {
+                var filePath = String(transfer.items[0].url).replace('file://', '')
+                print("Should import file", filePath)
+                var fileName = filePath.split("/").pop();
+                var popup = PopupUtils.open(installWarningDialog, root, {fileName: fileName});
+                popup.accepted.connect(function() {
+                    contentHubInstallInProgress = true;
+                    PlatformIntegration.clickInstaller.installPackage(filePath, true)
+                })
+            }
         }
     }
 
@@ -222,7 +233,7 @@ MainView {
     }
 
     Connections {
-        target: PlatformIntegration.clickInstaller
+        target: BackendInstaller.installer
 
         onPackageInstalled: {
             print("******* package installed")

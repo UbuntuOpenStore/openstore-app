@@ -21,22 +21,9 @@
 #include <QAbstractListModel>
 #include <QUrl>
 
-#include "../openstorenetworkmanager.h"
-#include "../package.h"
+#include "../packageSource.h"
+#include "../packageitems/package.h"
 #include "../review.h"
-
-struct SearchPackageItem
-{
-  QString name;
-  QString appId;
-  QString icon;
-  QPointer<Ratings> ratings;
-  QString tagline;
-  bool installed;
-  bool updateAvailable;
-  QStringList types;
-  QString packageType;
-};
 
 class SearchModel : public QAbstractListModel
 {
@@ -88,9 +75,7 @@ protected:
 
 private Q_SLOTS:
   void update();
-  void sendRequest(int skip = 0);
-  void parseReply(OpenStoreReply reply);
-  void refreshInstalledInfo();
+  void searchReplied(const SearchReply& reply);
 
 private:
   QString m_filterString;
@@ -103,7 +88,7 @@ private:
   bool m_fetchedAll;
 
   QList<SearchPackageItem> m_list;
-  QString m_requestSignature;
+  PackageSource* m_source;
 };
 
 #endif // SEARCHMODEL_H

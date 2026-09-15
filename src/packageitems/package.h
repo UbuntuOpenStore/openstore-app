@@ -25,8 +25,8 @@
 #include <QPointer>
 #include <QVariantMap>
 
-#include "models/reviewsmodel.h"
-#include "platformintegration.h"
+#include "../models/reviewsmodel.h"
+#include "../platformintegration.h"
 
 class PackageItem : public QObject
 {

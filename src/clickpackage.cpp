@@ -45,7 +45,7 @@ bool ClickPackageItem::install() const
     return false;
   }
 
-  connect(installer, &ClickInstaller::busyChanged, this, [this, installer](){
+  connect(installer, &ClickInstaller::busyChanged, this, [this, installer]() {
     if (installer->busy())
       return;
 
@@ -55,7 +55,7 @@ bool ClickPackageItem::install() const
     Q_EMIT updated();
   });
 
-  connect(installer, &ClickInstaller::downloadProgressChanged, this, [this, installer](){
+  connect(installer, &ClickInstaller::downloadProgressChanged, this, [this, installer]() {
     m_downloadProgress = installer->downloadProgress();
     Q_EMIT downloadProgressChanged();
   });
@@ -81,16 +81,15 @@ bool ClickPackageItem::remove() const
     return false;
   }
 
-  connect(installer, &ClickInstaller::packageInstallationFailed, this, [this, installer](){
+  connect(installer, &ClickInstaller::packageInstallationFailed, this, [this, installer]() {
     m_isBusy = false;
     Q_EMIT updated();
   });
 
-  connect(installer, &ClickInstaller::packageInstalled, this, [this, installer](){
+  connect(installer, &ClickInstaller::packageInstalled, this, [this, installer]() {
     m_isBusy = false;
     Q_EMIT updated();
   });
-
 
   m_isBusy = true;
   Q_EMIT updated();
@@ -227,8 +226,7 @@ void ClickPackageItem::fillData(const QVariantMap& json)
   hookStruct.hooks = PackageItem::HookDesktop; // Since we no longer have scopes, everything has a desktop hook
 
   // Infer content-hub from permissions (heuristic)
-  if (permissions.contains("content_exchange") ||
-      permissions.contains("content_exchange_source")) {
+  if (permissions.contains("content_exchange") || permissions.contains("content_exchange_source")) {
     hookStruct.hooks |= PackageItem::HookContentHub;
   }
 

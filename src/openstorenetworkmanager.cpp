@@ -19,6 +19,7 @@
 #include "apiconstants.h"
 #include "platformintegration.h"
 
+#include <QCoreApplication>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QJsonValue>
@@ -27,7 +28,6 @@
 #include <QStandardPaths>
 #include <QUrlQuery>
 #include <QUuid>
-#include <QCoreApplication>
 
 #include <QDebug>
 
@@ -38,7 +38,8 @@ OpenStoreNetworkManager::OpenStoreNetworkManager()
   m_manager = new QNetworkAccessManager(this);
 #if QT_VERSION_MAJOR >= 6
   if (QNetworkInformation::instance()) {
-    connect(QNetworkInformation::instance(), &QNetworkInformation::reachabilityChanged, this, &OpenStoreNetworkManager::networkAccessibleChanged);
+    connect(
+      QNetworkInformation::instance(), &QNetworkInformation::reachabilityChanged, this, &OpenStoreNetworkManager::networkAccessibleChanged);
   }
 #else
   connect(m_manager, &QNetworkAccessManager::networkAccessibleChanged, this, &OpenStoreNetworkManager::networkAccessibleChanged);
@@ -47,7 +48,8 @@ OpenStoreNetworkManager::OpenStoreNetworkManager()
   connect(this, &OpenStoreNetworkManager::snapSupportChanged, this, &OpenStoreNetworkManager::deleteCache);
   connect(this, &OpenStoreNetworkManager::lomiriCompatibleOnlyChanged, this, &OpenStoreNetworkManager::deleteCache);
 
-  m_userAgent = "openstore-app/" + QCoreApplication::applicationVersion() + " (" + PlatformIntegration::instance()->systemCodename() + "; " + PlatformIntegration::instance()->supportedArchitecture() + ")";
+  m_userAgent = "openstore-app/" + QCoreApplication::applicationVersion() + " (" + PlatformIntegration::instance()->systemCodename() +
+                "; " + PlatformIntegration::instance()->supportedArchitecture() + ")";
 
   // Default value
   m_showNsfw = false;

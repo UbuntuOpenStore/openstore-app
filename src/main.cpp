@@ -32,6 +32,7 @@
 #include "apiconstants.h"
 #include "cachingnetworkmanagerfactory.h"
 #include "clickinstaller.h"
+#include "clickpackage.h"
 #include "models/categoriesmodel.h"
 #include "models/discovermodel.h"
 #include "models/localpackagesmodel.h"
@@ -40,7 +41,6 @@
 #include "packagescache.h"
 #include "platformintegration.h"
 #include "review.h"
-#include "clickpackage.h"
 #include "snappackage.h"
 
 static QObject* registerNetworkManagerSingleton(QQmlEngine* /*engine*/, QJSEngine* /*scriptEngine*/)
@@ -92,10 +92,8 @@ int main(int argc, char* argv[])
     "OpenStore", 1, 0, "ClickPackageItem", "ClickPackageItem is only available through LocalAppModel, DiscoverModel, or SearchModel.");
   qmlRegisterUncreatableType<SnapPackageItem>(
     "OpenStore", 1, 0, "SnapPackageItem", "SnapPackageItem is only available through LocalAppModel, DiscoverModel, or SearchModel.");
-  qmlRegisterUncreatableType<QSnapdClient>(
-    "OpenStore", 1, 0, "SnapInstaller", "Access SnapInstall from the PlatformIntegration singleton");
-  qmlRegisterUncreatableType<QSnapdRemoveRequest>(
-    "OpenStore", 1, 0, "SnapdRemoveRequest", "Created by snapInstaller");
+  qmlRegisterUncreatableType<QSnapdClient>("OpenStore", 1, 0, "SnapInstaller", "Access SnapInstall from the PlatformIntegration singleton");
+  qmlRegisterUncreatableType<QSnapdRemoveRequest>("OpenStore", 1, 0, "SnapdRemoveRequest", "Created by snapInstaller");
 
   qmlRegisterType<Ratings>("OpenStore", 1, 0, "Ratings");
   qRegisterMetaType<Ratings::Rating>("Rating");

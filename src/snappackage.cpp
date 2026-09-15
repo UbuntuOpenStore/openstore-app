@@ -19,11 +19,12 @@
 
 #include "platformintegration.h"
 
-#include <Snapd/Client>
 #include <Snapd/App>
+#include <Snapd/Client>
 
 SnapPackageItem::SnapPackageItem(const QVariantMap& json, QObject* parent)
-  : PackageItem(json, parent), m_containsApp(false)
+  : PackageItem(json, parent)
+  , m_containsApp(false)
 {
   fillData(json);
 }
@@ -43,16 +44,16 @@ bool SnapPackageItem::install() const
     return false;
 
   auto request = installer->install(QSnapdClient::InstallFlag::Classic, snapName);
-  QObject::connect(request, &QSnapdRequest::progress, this, [=](){
+  QObject::connect(request, &QSnapdRequest::progress, this, [=]() {
     const auto change = request->change();
     qint64 totalProgressDone = 0, progressTotal = 0;
 
     for (int i = 0, c = change->taskCount(); i < c; ++i) {
-        auto task = change->task(i);
-        if (!task->progressLabel().isEmpty()) {
-            totalProgressDone += task->progressDone();
-            progressTotal += task->progressTotal();
-        }
+      auto task = change->task(i);
+      if (!task->progressLabel().isEmpty()) {
+        totalProgressDone += task->progressDone();
+        progressTotal += task->progressTotal();
+      }
     }
 
     if (progressTotal > 0 && m_downloadSize != progressTotal) {
@@ -183,8 +184,7 @@ void SnapPackageItem::fillData(const QVariantMap& json)
   m_translationUrl = json.value("translation_url").toString();
   m_license = json.value("license").toString();
   m_latestDownloads = json.value("latestDownloads").toString();
-  m_totalDownloads = (json.value("totalDownloads").toInt() == 0) ? "none, unknown" :
-                       json.value("totalDownloads").toString();
+  m_totalDownloads = (json.value("totalDownloads").toInt() == 0) ? "none, unknown" : json.value("totalDownloads").toString();
   m_maintainer = json.value("maintainer_name").toString();
   m_tagline = json.value("tagline").toString();
   m_description = json.value("description").toString();
@@ -247,8 +247,7 @@ void SnapPackageItem::fillData(const QVariantMap& json)
   hookStruct.hooks = PackageItem::HookDesktop; // Since we no longer have scopes, everything has a desktop hook
 
   // Infer content-hub from permissions (heuristic)
-  if (permissions.contains("content_exchange") ||
-      permissions.contains("content_exchange_source")) {
+  if (permissions.contains("content_exchange") || permissions.contains("content_exchange_source")) {
     hookStruct.hooks |= PackageItem::HookContentHub;
   }
 
@@ -286,8 +285,8 @@ void SnapPackageItem::fillData(const QVariantMap& json)
       m_installedRevision = 0;
     else
       m_installedRevision = rev.toInt();
-      // qDebug() << m_installedVersion << m_installedRevision
-      //          << isLocalVersionSideloaded() << frameworkSupported();
+    // qDebug() << m_installedVersion << m_installedRevision
+    //          << isLocalVersionSideloaded() << frameworkSupported();
   } else {
     // Silence UI advertising reverts to stable from the store
     m_installedRevision = 1;

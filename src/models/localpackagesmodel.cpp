@@ -247,8 +247,8 @@ void LocalPackagesModel::refresh()
       pkgItem.packageType = QStringLiteral("snap");
       pkgItem.name = snap->title().isEmpty() ? snap->name() : snap->title();
       pkgItem.version = snap->version();
-      //pkgItem.packageUrl = PackagesCache::instance()->getPackageUrl(pkgItem.appId);
-      //pkgItem.appLaunchUrl = appLaunchUrl;
+      // pkgItem.packageUrl = PackagesCache::instance()->getPackageUrl(pkgItem.appId);
+      // pkgItem.appLaunchUrl = appLaunchUrl;
       const QString iconPath = snap->icon();
       if (iconPath.startsWith(QStringLiteral("http://")) || iconPath.startsWith(QStringLiteral("https://"))) {
         pkgItem.icon = iconPath;

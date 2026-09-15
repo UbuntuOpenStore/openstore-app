@@ -33,12 +33,13 @@
 
 inline bool systemdUnitRuns(const QString& name)
 {
-    QProcess systemCtlProcess;
-    systemCtlProcess.setProgram("/usr/bin/systemctl");
-    systemCtlProcess.setArguments(QStringList() << "--user" << "is-active" << name);
-    systemCtlProcess.start();
-    systemCtlProcess.waitForFinished();
-    return systemCtlProcess.exitCode() == 0;
+  QProcess systemCtlProcess;
+  systemCtlProcess.setProgram("/usr/bin/systemctl");
+  systemCtlProcess.setArguments(QStringList() << "--user"
+                                              << "is-active" << name);
+  systemCtlProcess.start();
+  systemCtlProcess.waitForFinished();
+  return systemCtlProcess.exitCode() == 0;
 }
 
 PlatformIntegration* PlatformIntegration::m_instance = nullptr;

@@ -13,7 +13,7 @@ case "$COMMAND" in
     check-cpp)
         echo "Checking C++ format..."
         FAILED=0
-        find /code -type f \( -name "*.cpp" -o -name "*.h" \) -not -path "*/build/*" -not -path "*/\.*/*" | while read -r file; do
+        while read -r file; do
             if ! clang-format -style=file --dry-run -Werror "$file" &>/dev/null; then
                 echo "❌ $file is not properly formatted"
                 clang-format -style=file "$file" | diff -u --color=always "$file" - || true
@@ -21,7 +21,7 @@ case "$COMMAND" in
             else
                 echo "✅ $file is properly formatted"
             fi
-        done
+        done < <(find /code -type f \( -name "*.cpp" -o -name "*.h" \) -not -path "*/build/*" -not -path "*/\.*/*")
         exit $FAILED
         ;;
 
@@ -53,7 +53,7 @@ case "$COMMAND" in
     lint-qml)
         echo "Linting QML files..."
         FAILED=0
-        find /code -type f -name "*.qml" -not -path "*/build/*" -not -path "*/\.*/*" | while read -r file; do
+        while read -r file; do
             if ! qmllint "$file" &>/dev/null; then
                 echo "❌ $file has QML lint errors:"
                 qmllint "$file"
@@ -61,7 +61,7 @@ case "$COMMAND" in
             else
                 echo "✅ $file passed QML lint"
             fi
-        done
+        done < <(find /code -type f -name "*.qml" -not -path "*/build/*" -not -path "*/\.*/*")
         exit $FAILED
         ;;
 
@@ -80,7 +80,7 @@ case "$COMMAND" in
 
         # Check C++ files
         echo "Checking C++ files..."
-        find /code -type f \( -name "*.cpp" -o -name "*.h" \) -not -path "*/build/*" -not -path "*/\.*/*" | while read -r file; do
+        while read -r file; do
             if ! clang-format -style=file --dry-run -Werror "$file" &>/dev/null; then
                 echo "❌ $file is not properly formatted"
                 clang-format -style=file "$file" | diff -u --color=always "$file" - || true
@@ -88,7 +88,7 @@ case "$COMMAND" in
             else
                 echo "✅ $file is properly formatted"
             fi
-        done
+        done < <(find /code -type f \( -name "*.cpp" -o -name "*.h" \) -not -path "*/build/*" -not -path "*/\.*/*")
 
         # Check QML files
         # echo "Checking QML files..."

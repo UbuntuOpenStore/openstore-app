@@ -67,10 +67,28 @@ public:
     return m_manager->networkAccessible() != QNetworkAccessManager::NotAccessible;
 #endif
   }
-  bool snapSupport() const { return m_snapSupport; }
-  void setSnapSupport(bool value) { if (m_snapSupport != value) { m_snapSupport = value; Q_EMIT snapSupportChanged(); } }
-  bool lomiriCompatibleOnly() const { return m_lomiriCompatibleOnly; }
-  void setLomiriCompatibleOnly(bool value) { if (m_lomiriCompatibleOnly != value) { m_lomiriCompatibleOnly = value; Q_EMIT lomiriCompatibleOnlyChanged(); } }
+  bool snapSupport() const
+  {
+    return m_snapSupport;
+  }
+  void setSnapSupport(bool value)
+  {
+    if (m_snapSupport != value) {
+      m_snapSupport = value;
+      Q_EMIT snapSupportChanged();
+    }
+  }
+  bool lomiriCompatibleOnly() const
+  {
+    return m_lomiriCompatibleOnly;
+  }
+  void setLomiriCompatibleOnly(bool value)
+  {
+    if (m_lomiriCompatibleOnly != value) {
+      m_lomiriCompatibleOnly = value;
+      Q_EMIT lomiriCompatibleOnlyChanged();
+    }
+  }
   bool isDifferentDomain() const;
   QString getUrl() const;
   QString getUrl(QString route) const;

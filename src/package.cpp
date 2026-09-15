@@ -18,7 +18,8 @@
 #include "package.h"
 
 PackageItem::PackageItem(const QVariantMap& json, QObject* parent)
-  : QObject(parent), m_downloadProgress(0)
+  : QObject(parent)
+  , m_downloadProgress(0)
 {
 }
 

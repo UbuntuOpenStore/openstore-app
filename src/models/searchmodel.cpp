@@ -137,7 +137,8 @@ void SearchModel::sendRequest(int skip)
         sortMode = m_sortMode;
       }
 
-      OpenStoreNetworkManager::instance()->getSearch(m_requestSignature, skip, REQUEST_LIMIT, QString(), QString(), sortMode, m_filterType, m_filterPackageType);
+      OpenStoreNetworkManager::instance()->getSearch(
+        m_requestSignature, skip, REQUEST_LIMIT, QString(), QString(), sortMode, m_filterType, m_filterPackageType);
     } else {
       OpenStoreNetworkManager::instance()->getSearch(
         m_requestSignature, skip, REQUEST_LIMIT, m_filterString, m_category, m_sortMode, m_filterType, m_filterPackageType);

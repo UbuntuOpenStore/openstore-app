@@ -80,9 +80,29 @@ Page {
         anchors.fill: parent
         anchors.topMargin: searchPage.header.height
 
+        function slot_packageFetchError(appId) {
+            PackageBackendManager.packageDetailsReady.disconnect(slot_packageDetailsReady)
+            PackageBackendManager.packageDetailsError.disconnect(slot_packageFetchError)
+
+            var app = localAppModel.getByAppId(appId);
+            if (app.appId) {
+                bottomEdgeStack.clear();
+                bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
+            }
+        }
+
+        function slot_packageDetailsReady(pkg) {
+            PackageBackendManager.packageDetailsReady.disconnect(slot_packageDetailsReady)
+            PackageBackendManager.packageDetailsError.disconnect(slot_packageFetchError)
+
+            bottomEdgeStack.clear();
+            bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg });
+        }
+
         onAppDetailsRequired: {
-            PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady)
-            PackagesCache.getPackageDetails(appId)
+            PackageBackendManager.packageDetailsReady.connect(slot_packageDetailsReady)
+            PackageBackendManager.packageDetailsError.connect(slot_packageFetchError)
+            PackageBackendManager.getPackageDetails(appId)
         }
 
         Timer {

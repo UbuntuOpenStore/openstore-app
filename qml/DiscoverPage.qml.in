@@ -29,8 +29,21 @@ Page {
     property DiscoverModel discoverModel: root.discoverModel
     anchors.fill: parent
 
+    function slot_packageFetchError(appId) {
+        PackageBackendManager.packageDetailsReady.disconnect(slot_packageDetailsReady)
+        PackageBackendManager.packageDetailsError.disconnect(slot_packageFetchError)
+
+        var app = localAppModel.getByAppId(appId);
+        if (app.appId) {
+            bottomEdgeStack.clear();
+            bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
+        }
+    }
+
     function slot_packageDetailsReady(pkg) {
-        PackagesCache.packageDetailsReady.disconnect(slot_packageDetailsReady)
+        PackageBackendManager.packageDetailsReady.disconnect(slot_packageDetailsReady)
+        PackageBackendManager.packageDetailsError.disconnect(slot_packageFetchError)
+
         bottomEdgeStack.clear()
         bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
     }
@@ -103,13 +116,14 @@ Page {
                         if (appStatus == 2) {
                             Qt.openUrlExternally(highlightAppControl.appItem.appLaunchUrl());
                         } else {
-                            PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady)
-                            PackagesCache.getPackageDetails(highlightAppControl.appItem.appId)
+                            PackageBackendManager.packageDetailsReady.connect(slot_packageDetailsReady)
+                            PackageBackendManager.packageDetailsError.connect(slot_packageFetchError)
+                            PackageBackendManager.getPackageDetails(highlightAppControl.appItem.appId)
                         }
                     }
 
                     Item {
-                        visible: !Connectivity.online && !highlightAppControl.ready
+                        visible: !Connectivity.online && !PlatformIntegration.debSupport && !highlightAppControl.ready
                         anchors.fill: parent
 
                         Icon {
@@ -149,8 +163,9 @@ Page {
                     }
 
                     onClicked: {
-                        PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady)
-                        PackagesCache.getPackageDetails(localAppModel.appStoreAppId)
+                        PackageBackendManager.packageDetailsReady.connect(slot_packageDetailsReady)
+                        PackageBackendManager.packageDetailsError.connect(slot_packageFetchError)
+                        PackageBackendManager.getPackageDetails(localAppModel.appStoreAppId)
                     }
 
                     // WORKAROUND: appStoreUpdateAlert visibility is toggled after the whole page is layouted.
@@ -224,8 +239,9 @@ Page {
 
                 onTitleClicked: if (model.queryUrl) { root.showSearchQuery(model.queryUrl) }
                 onAppTileClicked: {
-                    PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady)
-                    PackagesCache.getPackageDetails(appItem.appId)
+                    PackageBackendManager.packageDetailsReady.connect(slot_packageDetailsReady)
+                    PackageBackendManager.packageDetailsError.connect(slot_packageFetchError)
+                    PackageBackendManager.getPackageDetails(appItem.appId)
                 }
 
                 viewModel: model.appIds

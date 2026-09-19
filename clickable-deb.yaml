@@ -17,6 +17,8 @@ install_lib:
   - /usr/lib/${ARCH_TRIPLET}/libsnapd-qt*.so*
   - /usr/lib/${ARCH_TRIPLET}/libsnapd-glib*.so*
   - /usr/lib/${ARCH_TRIPLET}/libsoup-*.so*
+  - /usr/lib/${ARCH_TRIPLET}/libpackagekitqt*.so*
+  - /usr/lib/${ARCH_TRIPLET}/libAppStreamQt*.so*
 scripts:
   format: ./scripts/format.sh
   check: ./scripts/check.sh

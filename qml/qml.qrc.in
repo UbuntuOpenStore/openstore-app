@@ -32,6 +32,7 @@
         <file>Dialogs/UnconfinedWarningDialog.qml</file>
         <file>Dialogs/SnapWarningDialog.qml</file>
         <file>Dialogs/NegativeReviewDialog.qml</file>
+        <file>Dialogs/IndexSetupDialog.qml</file>
         <file>Dialogs/FilterDialog.qml</file>
         <file>DiscoverPage.qml</file>
         <file>FilteredAppList.qml</file>
@@ -39,7 +40,6 @@
         <file>SearchPage.qml</file>
         <file>SettingsPage.qml</file>
         <file>SignInPage.qml</file>
-        <file>IndexSetupPage.qml</file>
         <file alias="Assets/buggy-full.svg">@QML_SOURCE_DIR_RELATIVE@/Assets/buggy-full.svg</file>
         <file alias="Assets/buggy.svg">@QML_SOURCE_DIR_RELATIVE@/Assets/buggy.svg</file>
         <file alias="Assets/happy-full.svg">@QML_SOURCE_DIR_RELATIVE@/Assets/happy-full.svg</file>

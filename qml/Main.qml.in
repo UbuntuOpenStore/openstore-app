@@ -47,8 +47,8 @@ MainView {
     property alias apiKey: settings.apiKey
 
     function slot_packageFetchError(appId) {
-        PackagesCache.packageDetailsReady.disconnect(slot_packageDetailsReady);
-        PackagesCache.packageFetchError.disconnect(slot_packageFetchError);
+        PackageBackendManager.packageDetailsReady.disconnect(slot_packageDetailsReady);
+        PackageBackendManager.packageDetailsError.disconnect(slot_packageFetchError);
 
         var app = localAppModel.getByAppId(appId);
         if (app.appId) {
@@ -58,18 +58,18 @@ MainView {
     }
 
     function slot_packageDetailsReady(pkg) {
-        PackagesCache.packageDetailsReady.disconnect(slot_packageDetailsReady);
-        PackagesCache.packageFetchError.disconnect(slot_packageFetchError);
+        PackageBackendManager.packageDetailsReady.disconnect(slot_packageDetailsReady);
+        PackageBackendManager.packageDetailsError.disconnect(slot_packageFetchError);
 
         bottomEdgeStack.clear();
         bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg });
     }
 
     function openApp(appId) {
-        if (Connectivity.online) {
-            PackagesCache.packageDetailsReady.connect(slot_packageDetailsReady);
-            PackagesCache.packageFetchError.connect(slot_packageFetchError);
-            PackagesCache.getPackageDetails(appId);
+        if (Connectivity.online || PlatformIntegration.debSupport) {
+            PackageBackendManager.packageDetailsReady.connect(slot_packageDetailsReady);
+            PackageBackendManager.packageDetailsError.connect(slot_packageFetchError);
+            PackageBackendManager.getPackageDetails(appId);
         }
         else {
             var app = localAppModel.getByAppId(appId);
@@ -162,13 +162,11 @@ MainView {
     }
 
     Component.onCompleted: {
-        if (PlatformIntegration.debSupport && BackendInstaller.indexStatus.state !== "ready") {
-            pageStack.push(Qt.resolvedUrl("IndexSetupPage.qml"))
-        } else {
-            pageStack.push(Qt.resolvedUrl("DiscoverPage.qml"))
-        }
+        pageStack.push(Qt.resolvedUrl("DiscoverPage.qml"))
 
-        if (PlatformIntegration.debSupport && BackendInstaller.indexStatus.state === "ready") {
+        if (PlatformIntegration.debSupport && BackendInstaller.indexStatus.state !== "ready") {
+            PopupUtils.open(indexSetupDialog, root)
+        } else if (PlatformIntegration.debSupport && BackendInstaller.indexStatus.state === "ready") {
             PackageBackendManager.refreshCatalog()
         }
 
@@ -389,6 +387,10 @@ MainView {
 
     Dialogs.InstallWarningDialog {
         id: installWarningDialog
+    }
+
+    Dialogs.IndexSetupDialog {
+        id: indexSetupDialog
     }
 
     Component {

@@ -112,6 +112,14 @@ Page {
     }
 
     function reload() {
+        if (app.packageType === "packagekit") {
+            var pkg = PackageBackendManager.activeSource.requestPackageDetails(app.appId);
+            if (pkg) {
+                app = pkg;
+            }
+            return;
+        }
+
         PackagesCache.packageDetailsReady.connect(appReloaded);
         PackagesCache.getPackageDetails(app.appId, true);
     }

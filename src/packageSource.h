@@ -110,7 +110,7 @@ public:
   virtual void requestSearch(const SearchRequest& request) = 0;
   virtual void requestDiscover() = 0;
   virtual void requestCategories() = 0;
-  virtual PackageItem* requestPackageDetails(const QString& id) = 0;
+  virtual Q_INVOKABLE PackageItem* requestPackageDetails(const QString& id) = 0;
   virtual QList<LocalPackageItem> requestInstalled() = 0;
   virtual void refreshInstalledState() = 0;
   virtual void refresh() {}

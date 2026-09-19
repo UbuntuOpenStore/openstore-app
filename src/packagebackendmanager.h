@@ -39,6 +39,7 @@ public:
   bool busy() const { return m_busy; }
 
   Q_INVOKABLE void refreshCatalog();
+  Q_INVOKABLE void getPackageDetails(const QString& appId);
   Q_INVOKABLE QStringList sources() const;
 
 Q_SIGNALS:

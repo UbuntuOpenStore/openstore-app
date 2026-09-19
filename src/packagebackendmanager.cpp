@@ -53,6 +53,14 @@ void PackageBackendManager::refreshCatalog()
   m_source->refresh();
 }
 
+void PackageBackendManager::getPackageDetails(const QString& appId)
+{
+  PackageItem* pkg = m_source->requestPackageDetails(appId);
+  if (pkg) {
+    Q_EMIT packageDetailsReady(pkg);
+  }
+}
+
 QStringList PackageBackendManager::sources() const
 {
   return m_source->sourceDescriptions();

@@ -70,6 +70,10 @@ bool XapianIndex::build(const QList<AppStream::Component>& components)
 
     Xapian::WritableDatabase db(m_databasePath.toUtf8().constData(), Xapian::DB_CREATE_OR_OVERWRITE);
 
+    Xapian::TermGenerator termGen;
+    termGen.set_stemmer(Xapian::Stem("en"));
+    termGen.set_stemming_strategy(Xapian::TermGenerator::STEM_SOME);
+
     int count = 0;
     Q_FOREACH (const AppStream::Component& component, components) {
       Xapian::Document doc;
@@ -84,9 +88,20 @@ bool XapianIndex::build(const QList<AppStream::Component>& components)
       const QString name = component.name();
       const QString summary = component.summary();
       const QString description = component.description();
+      // Whole-name term so "name:foo" (the S prefix) still matches.
       doc.add_posting((QStringLiteral("S") + sanitizeTerm(name)).toStdString(), 1);
-      doc.add_posting((QStringLiteral("XSUM") + sanitizeTerm(summary)).toStdString(), 1);
-      doc.add_posting((QStringLiteral("XD") + sanitizeTerm(description)).toStdString(), 1);
+
+      // Free-text terms for name/summary/description. A whole summary or
+      // description as a single term exceeds Xapian's 245-byte term limit, so
+      // the term generator indexes one short term per word (capped at 64 bytes)
+      // and adds stemmed "Z"-prefixed forms matching the QueryParser's STEM_SOME
+      // queries.
+      termGen.set_document(doc);
+      termGen.index_text(name.toStdString());
+      termGen.increase_termpos();
+      termGen.index_text(summary.toStdString());
+      termGen.increase_termpos();
+      termGen.index_text(description.toStdString());
 
       Q_FOREACH (const QString& cat, component.categories()) {
         doc.add_boolean_term((QStringLiteral("XCAT") + sanitizeTerm(cat)).toStdString());

@@ -21,7 +21,7 @@ import OpenStore 1.0
 
 LomiriShape {
     // TODO explicity pass this info in
-    readonly property int ratingCount: appItem.ratings.totalCount
+    readonly property int ratingCount:appItem.ratings ? appItem.ratings.totalCount : 0
 
     property alias mostVotedIcon: icon.source
     property alias mostRatedVisible: icon.visible

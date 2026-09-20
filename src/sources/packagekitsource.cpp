@@ -55,6 +55,9 @@ PackageKitSource::PackageKitSource(QObject* parent)
     m_indexBuilt = true;
     refreshInstalledInfo();
     Q_EMIT updated();
+    // Fulfill any search that was requested before the index was ready.
+    if (m_searchPending)
+      requestSearch(m_lastRequest);
   });
   connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::parsedReply, this, &PackageKitSource::onStoreDiscoverReply);
 }
@@ -78,12 +81,15 @@ void PackageKitSource::requestSearch(const SearchRequest& request)
 {
   m_lastRequest = request;
   if (!PackageIndex::instance()->xapian()->isAvailable()) {
-    SearchReply empty;
-    empty.fetchedAll = true;
-    Q_EMIT searchReplied(empty);
+    // The index is not built yet. Do not emit an empty reply: the model
+    // would treat it as "no results", and a later refresh reply only
+    // merges installed-state flags into existing rows, so the list would
+    // stay empty. Remember the request and emit it once the index is ready.
+    m_searchPending = true;
     return;
   }
 
+  m_searchPending = false;
   emitSearchReply();
 }
 
@@ -121,8 +127,8 @@ QList<SearchPackageItem> PackageKitSource::enrichList(const QList<SearchPackageI
     if (!component.id().isEmpty()) {
       item.name = component.name();
       item.tagline = component.summary();
-      if (!component.icons().isEmpty())
-        item.icon = component.icons().first().url().toString();
+      const bool hasIcon = !component.icons().isEmpty() && !component.icons().first().url().isEmpty();
+      item.icon = hasIcon ? component.icons().first().url().toString() : QStringLiteral("qrc:/Assets/fallback.svg");
       item.packageType = QStringLiteral("packagekit");
     }
     // Installed sets are keyed by the binary package name; the appId is the
@@ -220,7 +226,8 @@ QList<LocalPackageItem> PackageKitSource::requestInstalled()
     LocalPackageItem item;
     item.appId = componentId;
     item.name = component.name();
-    item.icon = component.icons().isEmpty() ? QString() : component.icons().first().url().toString();
+    const bool hasIcon = !component.icons().isEmpty() && !component.icons().first().url().isEmpty();
+    item.icon = hasIcon ? component.icons().first().url().toString() : QStringLiteral("qrc:/Assets/fallback.svg");
     item.version = it.value();
     item.packageType = QStringLiteral("packagekit");
     item.appLaunchUrl = QString();

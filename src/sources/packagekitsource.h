@@ -72,6 +72,7 @@ private:
 
   SearchRequest m_lastRequest;
   QList<SearchPackageItem> m_lastSearchList;
+  bool m_searchPending = false; // search requested before the index was built
 
   QString m_storeDiscoverSignature;
   bool m_storeDiscoverPending = false;

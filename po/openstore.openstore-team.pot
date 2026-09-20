@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-19 03:35+0000\n"
+"POT-Creation-Date: 2026-09-20 02:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -958,11 +958,11 @@ msgstr ""
 msgid "Setting up the app catalog"
 msgstr ""
 
-#: ../qml/Dialogs/IndexSetupDialog.qml.in:60
+#: ../qml/Dialogs/IndexSetupDialog.qml.in:69
 msgid "Building app index…"
 msgstr ""
 
-#: ../qml/Dialogs/IndexSetupDialog.qml.in:68
+#: ../qml/Dialogs/IndexSetupDialog.qml.in:77
 msgid "Retry"
 msgstr ""
 
@@ -1124,32 +1124,32 @@ msgstr ""
 msgid "No app has been installed from OpenStore yet."
 msgstr ""
 
-#: ../qml/Main.qml.in:347 ../qml/SearchPage.qml.in:55
+#: ../qml/Main.qml.in:345 ../qml/SearchPage.qml.in:55
 msgid "Filters"
 msgstr ""
 
-#: ../qml/Main.qml.in:400
+#: ../qml/Main.qml.in:398
 msgid "App installed"
 msgstr ""
 
-#: ../qml/Main.qml.in:401
+#: ../qml/Main.qml.in:399
 msgid "The app has been installed successfully."
 msgstr ""
 
-#: ../qml/Main.qml.in:404 ../qml/Main.qml.in:417 ../qml/Main.qml.in:432
+#: ../qml/Main.qml.in:402 ../qml/Main.qml.in:415 ../qml/Main.qml.in:430
 msgid "OK"
 msgstr ""
 
-#: ../qml/Main.qml.in:413
+#: ../qml/Main.qml.in:411
 msgid "Installation failed"
 msgstr ""
 
-#: ../qml/Main.qml.in:414
+#: ../qml/Main.qml.in:412
 msgid ""
 "The package could not be installed. Make sure it is a valid click package."
 msgstr ""
 
-#: ../qml/Main.qml.in:428
+#: ../qml/Main.qml.in:426
 msgid "Installation failed (Error %1)"
 msgstr ""
 
@@ -1217,6 +1217,5 @@ msgid "Additional Icons by"
 msgstr ""
 
 #: openstore.desktop.in.h:1
-msgid ""
-"software;apps;applications;programs;store;market;play;click;discover;install;"
+msgid "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr ""

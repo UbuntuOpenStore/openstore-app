@@ -43,7 +43,7 @@ PackageKitPackageItem::PackageKitPackageItem(const AppStream::Component& compone
   m_types = QStringList() << QStringLiteral("packagekit");
 
   if (!component.icons().isEmpty()) {
-    const AppStream::Icon& icon = component.icons().first();
+    const AppStream::Icon icon = component.icons().first();
     m_icon = !icon.isEmpty() && !icon.url().isEmpty() ? icon.url().toString() : QString();
   }
   if (m_icon.isEmpty())

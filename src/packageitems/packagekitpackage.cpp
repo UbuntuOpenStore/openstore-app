@@ -19,6 +19,7 @@
 #include "../installers/packagekitinstaller.h"
 #include "../platformintegration.h"
 
+#include <AppStreamQt/contentrating.h>
 #include <AppStreamQt/developer.h>
 #include <AppStreamQt/icon.h>
 #include <AppStreamQt/image.h>
@@ -35,12 +36,47 @@ PackageKitPackageItem::PackageKitPackageItem(const AppStream::Component& compone
   m_description = component.description();
   const QList<AppStream::Release> releases = component.releasesPlain().entries();
   m_version = releases.isEmpty() ? QString() : releases.first().version();
+  m_changelog = releases.isEmpty() ? QString() : releases.first().description();
   m_publisher = component.developer().name();
+  m_maintainer = component.developer().name();
   m_license = component.projectLicense();
+
+  m_source = component.url(AppStream::Component::UrlKindVcsBrowser).toString();
+  m_donateUrl = component.url(AppStream::Component::UrlKindDonation).toString();
+  m_translationUrl = component.url(AppStream::Component::UrlKindTranslate).toString();
+
+  QString supportUrl = component.url(AppStream::Component::UrlKindHelp).toString();
+  if (supportUrl.isEmpty()) {
+    supportUrl = component.url(AppStream::Component::UrlKindBugtracker).toString();
+  }
+  m_supportUrl = supportUrl;
+
+  QDateTime updatedDate;
+  Q_FOREACH (const AppStream::Release& release, releases) {
+    const QDateTime ts = release.timestamp();
+    if (!ts.isValid())
+      continue;
+    if (updatedDate.isNull() || ts > updatedDate)
+      updatedDate = ts;
+  }
+  m_updatedDate = updatedDate;
+
+  const AppStream::ContentRating rating = component.contentRating(QStringLiteral("oars-1.1"));
+  if (!rating.kind().isEmpty()) {
+    QVariantList attributes;
+    Q_FOREACH (const QString& id, rating.ratingIds()) {
+      QVariantMap attribute;
+      attribute.insert(QStringLiteral("id"), id);
+      attribute.insert(QStringLiteral("value"), AppStream::ContentRating::ratingValueToString(rating.value(id)));
+      attributes.append(attribute);
+    }
+
+    m_contentRating = QVariantMap{ { QStringLiteral("type"), rating.kind() }, { QStringLiteral("content_attributes"), attributes } };
+  }
+
   const QStringList categories = component.categories();
   m_category = categories.isEmpty() ? QString() : categories.first();
   m_packageType = QStringLiteral("packagekit");
-  m_types = QStringList() << QStringLiteral("packagekit");
 
   if (!component.icons().isEmpty()) {
     const AppStream::Icon icon = component.icons().first();

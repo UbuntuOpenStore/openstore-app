@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-20 03:39+0000\n"
+"POT-Creation-Date: 2026-09-20 03:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -117,206 +117,206 @@ msgstr ""
 msgid "Latest available version"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:594
+#: ../qml/AppDetailsPage.qml.in:596
 msgid "First released"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:605
+#: ../qml/AppDetailsPage.qml.in:607
 msgid "Downloads of the latest version"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:614
+#: ../qml/AppDetailsPage.qml.in:617
 msgid "Total downloads"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:623
+#: ../qml/AppDetailsPage.qml.in:626
 msgid "License"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:624
+#: ../qml/AppDetailsPage.qml.in:627
 msgid "N/A"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:636 ../qml/SettingsPage.qml.in:277
+#: ../qml/AppDetailsPage.qml.in:639 ../qml/SettingsPage.qml.in:277
 msgid "Source Code"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:649
+#: ../qml/AppDetailsPage.qml.in:652
 msgid "Get support for this app"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:662
+#: ../qml/AppDetailsPage.qml.in:665
 msgid "Donate to support this app"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:675
+#: ../qml/AppDetailsPage.qml.in:678
 msgid "Help translate this app"
 msgstr ""
 
 #. TRANSLATORS: This is the button that shows a list of all the packages from the same publisher. %1 is the name of the publisher.
-#: ../qml/AppDetailsPage.qml.in:692
+#: ../qml/AppDetailsPage.qml.in:695
 msgid "More from %1"
 msgstr ""
 
 #. TRANSLATORS: This is the button that shows a list of all the other packages in the same category. %1 is the name of the category.
-#: ../qml/AppDetailsPage.qml.in:707
+#: ../qml/AppDetailsPage.qml.in:710
 msgid "Other apps in %1"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:718
+#: ../qml/AppDetailsPage.qml.in:721
 msgid "Package contents"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:806
+#: ../qml/AppDetailsPage.qml.in:809
 msgid "Permissions"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:811
+#: ../qml/AppDetailsPage.qml.in:814
 msgid "Accounts"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:812
+#: ../qml/AppDetailsPage.qml.in:815
 msgid "Audio"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:813
+#: ../qml/AppDetailsPage.qml.in:816
 msgid "Bluetooth"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:814
+#: ../qml/AppDetailsPage.qml.in:817
 msgid "Calendar"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:815
+#: ../qml/AppDetailsPage.qml.in:818
 msgid "Camera"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:816
+#: ../qml/AppDetailsPage.qml.in:819
 msgid "Connectivity"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:817
+#: ../qml/AppDetailsPage.qml.in:820
 msgid "Contacts"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:818
+#: ../qml/AppDetailsPage.qml.in:821
 msgid "Content Exchange Source"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:819
+#: ../qml/AppDetailsPage.qml.in:822
 msgid "Content Exchange"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:820
+#: ../qml/AppDetailsPage.qml.in:823
 msgid "Debug"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:821
+#: ../qml/AppDetailsPage.qml.in:824
 msgid "History"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:822
+#: ../qml/AppDetailsPage.qml.in:825
 msgid "In App Purchases"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:823
+#: ../qml/AppDetailsPage.qml.in:826
 msgid "Keep Display On"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:824
+#: ../qml/AppDetailsPage.qml.in:827
 msgid "Location"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:825
+#: ../qml/AppDetailsPage.qml.in:828
 msgid "Microphone"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:826
+#: ../qml/AppDetailsPage.qml.in:829
 msgid "Read Music Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:827
+#: ../qml/AppDetailsPage.qml.in:830
 msgid "Music Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:828
+#: ../qml/AppDetailsPage.qml.in:831
 msgid "Networking"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:829
+#: ../qml/AppDetailsPage.qml.in:832
 msgid "Read Picture Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:830
+#: ../qml/AppDetailsPage.qml.in:833
 msgid "Picture Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:831
+#: ../qml/AppDetailsPage.qml.in:834
 msgid "Push Notifications"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:832
+#: ../qml/AppDetailsPage.qml.in:835
 msgid "Sensors"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:833
+#: ../qml/AppDetailsPage.qml.in:836
 msgid "User Metrics"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:834
+#: ../qml/AppDetailsPage.qml.in:837
 msgid "Read Video Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:835
+#: ../qml/AppDetailsPage.qml.in:838
 msgid "Video Files"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:836
+#: ../qml/AppDetailsPage.qml.in:839
 msgid "Video"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:837
+#: ../qml/AppDetailsPage.qml.in:840
 msgid "Webview"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:838 ../qml/AppDetailsPage.qml.in:846
+#: ../qml/AppDetailsPage.qml.in:841 ../qml/AppDetailsPage.qml.in:849
 msgid "Unknown"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:842
+#: ../qml/AppDetailsPage.qml.in:845
 msgid "Full System Access"
 msgstr ""
 
 #. TRANSLATORS: this will show when an app doesn't need any special permissions
-#: ../qml/AppDetailsPage.qml.in:851
+#: ../qml/AppDetailsPage.qml.in:854
 msgid "none required"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:887
+#: ../qml/AppDetailsPage.qml.in:890
 msgid "Read paths"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:904
+#: ../qml/AppDetailsPage.qml.in:907
 msgid "Write paths"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: ../qml/AppDetailsPage.qml.in:979
+#: ../qml/AppDetailsPage.qml.in:982
 msgid "%1 GB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: ../qml/AppDetailsPage.qml.in:984
+#: ../qml/AppDetailsPage.qml.in:987
 msgid "%1 MB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: ../qml/AppDetailsPage.qml.in:989
+#: ../qml/AppDetailsPage.qml.in:992
 msgid "%1 kB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: ../qml/AppDetailsPage.qml.in:992
+#: ../qml/AppDetailsPage.qml.in:995
 msgid "%1 bytes"
 msgstr ""
 
@@ -810,29 +810,30 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: ../qml/Components/ReviewPreview.qml.in:246
+#: ../qml/Components/ReviewPreview.qml.in:247
+#: ../qml/Components/ReviewPreview.qml.in:294
 msgid "%1 review. "
 msgid_plural "%1 reviews. "
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../qml/Components/ReviewPreview.qml.in:254
+#: ../qml/Components/ReviewPreview.qml.in:255
 msgid "Edit Review"
 msgstr ""
 
-#: ../qml/Components/ReviewPreview.qml.in:257
+#: ../qml/Components/ReviewPreview.qml.in:258
 msgid "Review app"
 msgstr ""
 
-#: ../qml/Components/ReviewPreview.qml.in:260
+#: ../qml/Components/ReviewPreview.qml.in:261
 msgid "Sign in to review this app"
 msgstr ""
 
-#: ../qml/Components/ReviewPreview.qml.in:263
+#: ../qml/Components/ReviewPreview.qml.in:264
 msgid "Install this app to review it"
 msgstr ""
 
-#: ../qml/Components/ReviewPreview.qml.in:289
+#: ../qml/Components/ReviewPreview.qml.in:298
 msgid "No reviews yet"
 msgstr ""
 

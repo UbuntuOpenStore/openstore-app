@@ -588,6 +588,8 @@ Page {
             }
 
             ListItem {
+                visible: !!app.publishedDate && !!app.publishedDate.toLocaleDateString()
+
                 divider.visible: false
                 ListItemLayout {
                     anchors.centerIn: parent
@@ -597,7 +599,7 @@ Page {
             }
 
             ListItem {
-        id: latestVersionDownloads
+                id: latestVersionDownloads
                 divider.visible: false
                 visible: (app.latestDownloads > 0)
                 ListItemLayout {
@@ -608,11 +610,12 @@ Page {
             }
 
             ListItem {
+                visible: (app.totalDownloads > 0)
                 divider.visible: false
                 ListItemLayout {
                     anchors.centerIn: parent
                     title.text: i18n.tr("Total downloads")
-                    subtitle.text: app.totalDownloads || "<i>0</i>"
+                    subtitle.text: app.totalDownloads
                 }
             }
 
@@ -710,12 +713,13 @@ Page {
             }
 
             Components.ContentRating {
-                visible: app.contentRating && app.packageType === "click"
+                visible: app.contentRating
                 contentRatingData: app.contentRating
             }
 
             Components.SectionDivider {
                 text: i18n.tr("Package contents")
+                visible: app.hooksCount > 0
             }
 
             Repeater {

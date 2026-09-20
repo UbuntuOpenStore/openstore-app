@@ -229,7 +229,7 @@ ListItem {
         width: parent.width
         height: count > 0
             ? units.gu(32)
-            : addReviewButton.height
+            : (addReviewButton.visible ? addReviewButton.height : 0) + emptyLabel.height
         anchors.top: parent.top
         anchors.left: parent.left
 
@@ -238,6 +238,9 @@ ListItem {
             anchors.horizontalCenter: parent.horizontalCenter
             width: parent.width
             divider.visible: false
+
+            // TODO: enable packagekit reviews once the API accepts them.
+            visible: app.packageType !== "packagekit"
 
             ListItemLayout {
                 property string reviewCountTxt: count > 0
@@ -276,6 +279,25 @@ ListItem {
                 } else {
                     console.log("App is not installed")
                 }
+            }
+        }
+
+        ListItem {
+            id: emptyLabel
+            visible: count === 0
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: parent.width
+            divider.visible: false
+
+            ListItemLayout {
+                property string reviewCountTxt: count > 0
+                    ? i18n.tr("%1 review. ","%1 reviews. ", count).arg(getNumberShortForm(count))
+                    : ""
+
+                anchors.fill: parent
+                title.text: i18n.tr("No reviews yet")
+
+                title.color: theme.palette.normal.backgroundText
             }
         }
 

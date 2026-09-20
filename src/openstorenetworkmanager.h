@@ -127,7 +127,7 @@ Q_SIGNALS:
   void snapSupportChanged();
   void lomiriCompatibleOnlyChanged();
   void reloaded();
-  void error(const QString& signature, const QString& error);
+  void error(const QString& signature, const QString& error, int httpStatusCode = 0);
 
 private Q_SLOTS:
   void deleteCache();

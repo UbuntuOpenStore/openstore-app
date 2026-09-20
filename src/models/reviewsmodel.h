@@ -65,7 +65,7 @@ Q_SIGNALS:
 
 private Q_SLOTS:
   void parseReply(OpenStoreReply reply);
-  void parseError(const QString& signature, const QString& error);
+  void parseError(const QString& signature, const QString& error, int httpStatusCode);
   void onRefresh();
 
 private:

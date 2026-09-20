@@ -130,16 +130,18 @@ void OpenStoreNetworkManager::parseReply(QNetworkReply* reply, const QString& si
   if (reply->isFinished()) {
     disconnect(reply);
 
+    const int httpStatusCode = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+
     QJsonParseError jsonError;
     QByteArray body = reply->readAll();
     QJsonDocument jsonDoc = QJsonDocument::fromJson(body, &jsonError);
     if (jsonError.error != QJsonParseError::NoError) {
       if (reply->error() != QNetworkReply::NoError) {
         qWarning() << "network request failed with" << reply->errorString() << reply->error();
-        Q_EMIT error(signature, reply->errorString());
+        Q_EMIT error(signature, reply->errorString(), httpStatusCode);
       } else {
         qWarning() << Q_FUNC_INFO << "Error parsing json" << jsonError.errorString();
-        Q_EMIT error(signature, jsonError.errorString());
+        Q_EMIT error(signature, jsonError.errorString(), httpStatusCode);
       }
 
       reply->deleteLater();
@@ -149,7 +151,7 @@ void OpenStoreNetworkManager::parseReply(QNetworkReply* reply, const QString& si
     QVariantMap replyMap = jsonDoc.toVariant().toMap();
     if (!replyMap.value("success").toBool() && !replyMap.value("message").toString().isEmpty()) {
       qWarning() << Q_FUNC_INFO << "Error from api" << replyMap.value("message").toString() << reply->url();
-      Q_EMIT error(signature, replyMap.value("message").toString());
+      Q_EMIT error(signature, replyMap.value("message").toString(), httpStatusCode);
       reply->deleteLater();
       return;
     }

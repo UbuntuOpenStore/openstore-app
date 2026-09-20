@@ -142,9 +142,14 @@ void ReviewsModel::parseReply(OpenStoreReply reply)
   }
 }
 
-void ReviewsModel::parseError(const QString& signature, const QString& error)
+void ReviewsModel::parseError(const QString& signature, const QString& error, int httpStatusCode)
 {
   if (signature == m_appendSignature || signature == m_postedSignature || signature == m_resetSignature || signature == m_ownSignature) {
+    // If the api doesn't know about the app yet (as with PackageKit apps), we just want to ignore the 404.
+    if (httpStatusCode == 404) {
+      return;
+    }
+
     Q_EMIT ReviewsModel::error(error);
   }
 }

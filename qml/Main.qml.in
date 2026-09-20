@@ -143,8 +143,6 @@ MainView {
             "appName" : appName
         }
 
-        console.log("Result", JSON.stringify(result))
-
         return result;
     }
 
@@ -165,7 +163,7 @@ MainView {
         pageStack.push(Qt.resolvedUrl("DiscoverPage.qml"))
 
         if (PlatformIntegration.debSupport && BackendInstaller.indexStatus.state !== "ready") {
-            PopupUtils.open(indexSetupDialog, root)
+            PopupUtils.open(indexSetupDialog)
         } else if (PlatformIntegration.debSupport && BackendInstaller.indexStatus.state === "ready") {
             PackageBackendManager.refreshCatalog()
         }

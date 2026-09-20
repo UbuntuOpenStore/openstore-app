@@ -28,18 +28,27 @@ Component {
 
         property var debIndex: PlatformIntegration.debSupport ? BackendInstaller.indexStatus : null
 
-        Component.onCompleted: {
-            if (debIndex && debIndex.state === "uninitialized") {
-                debIndex.initialize();
+        Timer {
+            id: startTimer
+            interval: 100
+            onTriggered: {
+                if (debIndex && debIndex.state === "uninitialized") {
+                    debIndex.initialize();
+                }
             }
+        }
+
+        Component.onCompleted: {
+            startTimer.start(); // Delay starting the timer so the UI has a chance to render
         }
 
         Connections {
             target: debIndex
             onReady: PopupUtils.close(indexSetupDialog)
             onStateChanged: {
-                if (debIndex.state === "ready")
+                if (debIndex.state === "ready") {
                     PopupUtils.close(indexSetupDialog);
+                }
             }
         }
 

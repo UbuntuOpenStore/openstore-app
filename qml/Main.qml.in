@@ -66,7 +66,7 @@ MainView {
     }
 
     function openApp(appId) {
-        if (Connectivity.online || PlatformIntegration.debSupport) {
+        if (Connectivity.online || PlatformIntegration.packageKit) {
             PackageBackendManager.packageDetailsReady.connect(slot_packageDetailsReady);
             PackageBackendManager.packageDetailsError.connect(slot_packageFetchError);
             PackageBackendManager.getPackageDetails(appId);
@@ -162,9 +162,9 @@ MainView {
     Component.onCompleted: {
         pageStack.push(Qt.resolvedUrl("DiscoverPage.qml"))
 
-        if (PlatformIntegration.debSupport && BackendInstaller.indexStatus.state !== "ready") {
+        if (PlatformIntegration.packageKit && BackendInstaller.indexStatus.state !== "ready") {
             PopupUtils.open(indexSetupDialog)
-        } else if (PlatformIntegration.debSupport && BackendInstaller.indexStatus.state === "ready") {
+        } else if (PlatformIntegration.packageKit && BackendInstaller.indexStatus.state === "ready") {
             PackageBackendManager.refreshCatalog()
         }
 

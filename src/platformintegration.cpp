@@ -37,7 +37,7 @@
 #include <Snapd/Client>
 #endif
 
-#ifdef ENABLE_DEB_SUPPORT
+#ifdef ENABLE_PACKAGEKIT_SUPPORT
 #include "installers/packagekitinstaller.h"
 #endif
 
@@ -78,7 +78,7 @@ PlatformIntegration::PlatformIntegration()
   }
 #endif
 
-#ifdef ENABLE_DEB_SUPPORT
+#ifdef ENABLE_PACKAGEKIT_SUPPORT
   m_packageKitInstaller = new PackageKitInstaller();
 #endif
 
@@ -93,7 +93,7 @@ PlatformIntegration::~PlatformIntegration()
 #ifdef ENABLE_SNAP_SUPPORT
   delete m_snapInstaller;
 #endif
-#ifdef ENABLE_DEB_SUPPORT
+#ifdef ENABLE_PACKAGEKIT_SUPPORT
   delete m_packageKitInstaller;
 #endif
 }

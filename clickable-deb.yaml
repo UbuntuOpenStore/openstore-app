@@ -20,5 +20,5 @@ scripts:
   lint-qml: ./scripts/lint-qml.sh
 skip_review: true
 framework: ubuntu-touch-26.04-1.x
-build_args: "-DENABLE_DEB_SUPPORT=ON -DENABLE_CLICK_SUPPORT=OFF -DENABLE_SNAP_SUPPORT=OFF"
+build_args: "-DENABLE_PACKAGEKIT_SUPPORT=ON -DENABLE_CLICK_SUPPORT=OFF -DENABLE_SNAP_SUPPORT=OFF"
 build_dir: "./build/deb/${ARCH_TRIPLET}"

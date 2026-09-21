@@ -22,7 +22,7 @@
 
 class PackageItem;
 class PackageSource;
-#ifdef ENABLE_DEB_SUPPORT
+#ifdef ENABLE_PACKAGEKIT_SUPPORT
 class PackageKitSource;
 #endif
 

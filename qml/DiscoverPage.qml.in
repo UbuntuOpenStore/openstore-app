@@ -123,7 +123,7 @@ Page {
                     }
 
                     Item {
-                        visible: !Connectivity.online && !PlatformIntegration.debSupport && !highlightAppControl.ready
+                        visible: !Connectivity.online && !PlatformIntegration.packageKit && !highlightAppControl.ready
                         anchors.fill: parent
 
                         Icon {

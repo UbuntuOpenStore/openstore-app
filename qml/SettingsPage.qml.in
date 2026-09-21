@@ -226,12 +226,12 @@ Page {
                 }
 
                 Components.SectionDivider {
-                    visible: PlatformIntegration.debSupport
+                    visible: PlatformIntegration.packageKit
                     text: i18n.tr("Sources")
                 }
 
                 ListItem {
-                    visible: PlatformIntegration.debSupport
+                    visible: PlatformIntegration.packageKit
                     ListItemLayout {
                         anchors.centerIn: parent
                         title.text: i18n.tr("Repositories (read-only)")
@@ -242,7 +242,7 @@ Page {
                 }
 
                 ListItem {
-                    visible: PlatformIntegration.debSupport
+                    visible: PlatformIntegration.packageKit
                     onClicked: PackageBackendManager.refreshCatalog()
                     ListItemLayout {
                         anchors.centerIn: parent

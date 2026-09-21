@@ -30,7 +30,7 @@
 #include <Snapd/Client>
 #endif
 
-#ifdef ENABLE_DEB_SUPPORT
+#ifdef ENABLE_PACKAGEKIT_SUPPORT
 class PackageKitInstaller;
 #endif
 
@@ -39,14 +39,14 @@ class PlatformIntegration : public QObject
   Q_OBJECT
   Q_PROPERTY(bool clickSupport READ clickSupport CONSTANT)
   Q_PROPERTY(bool snapSupport READ snapSupport CONSTANT)
-  Q_PROPERTY(bool debSupport READ debSupport CONSTANT)
+  Q_PROPERTY(bool packageKit READ packageKit CONSTANT)
 #ifdef ENABLE_CLICK_SUPPORT
   Q_PROPERTY(ClickInstaller* clickInstaller READ clickInstaller CONSTANT)
 #endif
 #ifdef ENABLE_SNAP_SUPPORT
   Q_PROPERTY(QSnapdClient* snapInstaller READ snapInstaller CONSTANT)
 #endif
-#ifdef ENABLE_DEB_SUPPORT
+#ifdef ENABLE_PACKAGEKIT_SUPPORT
   Q_PROPERTY(PackageKitInstaller* packageKitInstaller READ packageKitInstaller CONSTANT)
 #endif
 
@@ -94,16 +94,16 @@ public:
 #endif
   }
 
-  bool debSupport() const
+  bool packageKit() const
   {
-#ifdef ENABLE_DEB_SUPPORT
+#ifdef ENABLE_PACKAGEKIT_SUPPORT
     return true;
 #else
     return false;
 #endif
   }
 
-#ifdef ENABLE_DEB_SUPPORT
+#ifdef ENABLE_PACKAGEKIT_SUPPORT
   PackageKitInstaller* packageKitInstaller() const
   {
     return m_packageKitInstaller;
@@ -174,7 +174,7 @@ private:
 #ifdef ENABLE_SNAP_SUPPORT
   QSnapdClient* m_snapInstaller;
 #endif
-#ifdef ENABLE_DEB_SUPPORT
+#ifdef ENABLE_PACKAGEKIT_SUPPORT
   PackageKitInstaller* m_packageKitInstaller;
 #endif
 

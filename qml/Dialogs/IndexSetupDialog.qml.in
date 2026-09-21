@@ -26,14 +26,14 @@ Component {
         id: indexSetupDialog
         title: i18n.tr("Setting up the app catalog")
 
-        property var debIndex: PlatformIntegration.debSupport ? BackendInstaller.indexStatus : null
+        property var searchIndex: PlatformIntegration.packageKit ? BackendInstaller.indexStatus : null
 
         Timer {
             id: startTimer
             interval: 100
             onTriggered: {
-                if (debIndex && debIndex.state === "uninitialized") {
-                    debIndex.initialize();
+                if (searchIndex && searchIndex.state === "uninitialized") {
+                    searchIndex.initialize();
                 }
             }
         }
@@ -43,10 +43,10 @@ Component {
         }
 
         Connections {
-            target: debIndex
+            target: searchIndex
             onReady: PopupUtils.close(indexSetupDialog)
             onStateChanged: {
-                if (debIndex.state === "ready") {
+                if (searchIndex.state === "ready") {
                     PopupUtils.close(indexSetupDialog);
                 }
             }
@@ -54,7 +54,7 @@ Component {
 
         ActivityIndicator {
             anchors.horizontalCenter: parent.horizontalCenter
-            running: debIndex ? debIndex.state === "initializing" : false
+            running: searchIndex ? searchIndex.state === "initializing" : false
             visible: running
         }
 
@@ -64,8 +64,8 @@ Component {
                 right: parent.right
             }
             horizontalAlignment: Text.AlignHCenter
-            text: debIndex && debIndex.state === "error"
-                ? debIndex.errorMessage
+            text: searchIndex && searchIndex.state === "error"
+                ? searchIndex.errorMessage
                 : i18n.tr("Building app index…")
             wrapMode: Text.WordWrap
             maximumLineCount: Number.MAX_VALUE
@@ -73,9 +73,9 @@ Component {
 
         Button {
             anchors.horizontalCenter: parent.horizontalCenter
-            visible: debIndex && debIndex.state === "error"
+            visible: searchIndex && searchIndex.state === "error"
             text: i18n.tr("Retry")
-            onClicked: debIndex.retry()
+            onClicked: searchIndex.retry()
         }
     }
 }

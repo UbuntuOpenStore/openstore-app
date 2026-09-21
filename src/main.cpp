@@ -46,7 +46,7 @@
 #ifdef ENABLE_CLICK_SUPPORT
 #include "packageitems/clickpackage.h"
 #endif
-#ifdef ENABLE_DEB_SUPPORT
+#ifdef ENABLE_PACKAGEKIT_SUPPORT
 #include "indexstatus.h"
 #include "installers/packagekitinstaller.h"
 #include "packageindex.h"
@@ -86,7 +86,7 @@ static QObject* registerBackendInstallerSingleton(QQmlEngine* /*engine*/, QJSEng
   return BackendInstaller::instance();
 }
 
-#ifdef ENABLE_DEB_SUPPORT
+#ifdef ENABLE_PACKAGEKIT_SUPPORT
 static QObject* registerPackageIndexSingleton(QQmlEngine* /*engine*/, QJSEngine* /*scriptEngine*/)
 {
   return PackageIndex::instance();
@@ -138,7 +138,7 @@ int main(int argc, char* argv[])
   qmlRegisterUncreatableType<QSnapdRemoveRequest>("OpenStore", 1, 0, "SnapdRemoveRequest", "Created by snapInstaller");
 #endif
   qmlRegisterUncreatableType<PackageSource>("OpenStore", 1, 0, "PackageSource", "PackageSource is created by PackageBackendManager.");
-#ifdef ENABLE_DEB_SUPPORT
+#ifdef ENABLE_PACKAGEKIT_SUPPORT
   qmlRegisterUncreatableType<PackageKitSource>(
     "OpenStore", 1, 0, "PackageKitSource", "PackageKitSource is created by PackageBackendManager.");
   qmlRegisterSingletonType<PackageIndex>("OpenStore", 1, 0, "PackageIndex", registerPackageIndexSingleton);

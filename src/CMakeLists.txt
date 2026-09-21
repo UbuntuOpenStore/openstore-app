@@ -52,8 +52,8 @@ if(ENABLE_SNAP_SUPPORT)
     )
 endif()
 
-if(ENABLE_DEB_SUPPORT)
-    add_definitions(-DENABLE_DEB_SUPPORT)
+if(ENABLE_PACKAGEKIT_SUPPORT)
+    add_definitions(-DENABLE_PACKAGEKIT_SUPPORT)
     include_directories(${PACKAGEKIT_INCLUDE_DIRS})
     # packagekitqt6 headers include <packagekitqt_global.h> without a
     # PackageKit/ prefix; that header lives in this sibling subdir, so the
@@ -61,7 +61,7 @@ if(ENABLE_DEB_SUPPORT)
     include_directories("/usr/include/PackageKitQt/PackageKit")
     include_directories(${XAPIAN_INCLUDE_DIRS})
     set(
-        DEB_SRC
+        PACKAGEKIT_SRC
         installers/packagekitinstaller.cpp
         appstreampool.cpp
         indexstatus.cpp
@@ -83,8 +83,8 @@ if(QT_VERSION_MAJOR EQUAL 6)
 else()
     qt5_add_resources(QT_RESOURCES ${CMAKE_BINARY_DIR}/qml/qml.qrc)
 endif()
-if(ENABLE_DEB_SUPPORT)
-    add_executable(${PROJECT_NAME} ${SRC} ${DEB_SRC} ${QT_RESOURCES})
+if(ENABLE_PACKAGEKIT_SUPPORT)
+    add_executable(${PROJECT_NAME} ${SRC} ${PACKAGEKIT_SRC} ${QT_RESOURCES})
 else()
     add_executable(${PROJECT_NAME} ${SRC} ${CLICK_SRC} ${SNAP_SRC} ${QT_RESOURCES})
 endif()
@@ -104,7 +104,7 @@ endif()
 if(QT_VERSION_MAJOR EQUAL 6)
     target_link_libraries(${PROJECT_NAME} Qt6::WebEngineQuick)
 endif()
-if(ENABLE_DEB_SUPPORT)
+if(ENABLE_PACKAGEKIT_SUPPORT)
     target_link_libraries(${PROJECT_NAME} ${PACKAGEKIT_QT_LIBRARIES} ${XAPIAN_LDFLAGS} AppStreamQt)
 endif()
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX})

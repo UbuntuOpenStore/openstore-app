@@ -182,7 +182,7 @@ Page {
                     if (updating && currentApp == model.appId) {
                         BackendInstaller.installer.abortInstallation()
                     } else {
-                        if (Connectivity.online || PlatformIntegration.debSupport) {
+                        if (Connectivity.online || PlatformIntegration.packageKit) {
                             PackageBackendManager.packageDetailsReady.connect(slot_installedPackageDetailsReady);
                             PackageBackendManager.packageDetailsError.connect(slot_packageFetchError);
                             PackageBackendManager.getPackageDetails(model.appId);

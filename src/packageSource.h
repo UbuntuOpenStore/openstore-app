@@ -95,7 +95,7 @@ struct LocalPackageItem
   QString icon;
   bool updateAvailable = false;
   QString updateStatus; // "none" | "available" | "downgrade" | "snap"
-  QString packageUrl;   // click: download URL; deb: PackageKit package id passed to installer
+  QString packageUrl;   // click: download URL; packagekit: PackageKit package id passed to installer
   QString appLaunchUrl;
   QString packageType;
 };

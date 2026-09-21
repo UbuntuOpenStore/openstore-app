@@ -19,7 +19,7 @@
 
 #include "packageitems/package.h"
 #include "sources/remoteapisource.h"
-#ifdef ENABLE_DEB_SUPPORT
+#ifdef ENABLE_PACKAGEKIT_SUPPORT
 #include "sources/packagekitsource.h"
 #endif
 
@@ -28,7 +28,7 @@ PackageBackendManager* PackageBackendManager::m_instance = 0;
 PackageBackendManager::PackageBackendManager()
   : m_busy(false)
 {
-#ifdef ENABLE_DEB_SUPPORT
+#ifdef ENABLE_PACKAGEKIT_SUPPORT
   m_source = new PackageKitSource(this);
 #else
   m_source = new RemoteApiSource(this);

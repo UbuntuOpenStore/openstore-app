@@ -17,10 +17,28 @@ if(NOT DEFINED ENABLE_QT6)
 endif()
 
 option(ENABLE_QT6 "Enable building with Qt6" ${ENABLE_QT6_DEFAULT})
+option(ENABLE_CLICK_SUPPORT "Build with click package support" ON)
+option(ENABLE_SNAP_SUPPORT "Build with snap package support" ON)
 option(ENABLE_DEB_SUPPORT "Build with deb/apt catalog support" OFF)
 
 if(ENABLE_DEB_SUPPORT AND NOT ENABLE_QT6)
     message(FATAL_ERROR "ENABLE_DEB_SUPPORT requires ENABLE_QT6 (deb dependencies are the Qt6 bindings)")
+endif()
+
+if(ENABLE_DEB_SUPPORT AND (ENABLE_CLICK_SUPPORT OR ENABLE_SNAP_SUPPORT))
+    message(FATAL_ERROR "ENABLE_DEB_SUPPORT cannot be combined with ENABLE_CLICK_SUPPORT or ENABLE_SNAP_SUPPORT")
+endif()
+
+if(ENABLE_CLICK_SUPPORT)
+    message(STATUS "Enabled click support")
+else()
+    message(STATUS "Click support disabled")
+endif()
+
+if(ENABLE_SNAP_SUPPORT)
+    message(STATUS "Enabled snap support")
+else()
+    message(STATUS "Snap support disabled")
 endif()
 
 if(ENABLE_DEB_SUPPORT)
@@ -55,8 +73,12 @@ include(FindPkgConfig)
 pkg_search_module(GOBJECT REQUIRED gobject-2.0)
 pkg_search_module(GLIB REQUIRED glib-2.0)
 pkg_check_modules(GIO REQUIRED gio-2.0 gio-unix-2.0)
-pkg_search_module(CLICK REQUIRED click-0.4)
-pkg_search_module(SNAPD_QT REQUIRED snapd-qt snapd-qt-2)
+if(ENABLE_CLICK_SUPPORT)
+    pkg_search_module(CLICK REQUIRED click-0.4)
+endif()
+if(ENABLE_SNAP_SUPPORT)
+    pkg_search_module(SNAPD_QT REQUIRED snapd-qt snapd-qt-2)
+endif()
 
 # Automatically create moc files
 set(CMAKE_AUTOMOC ON)

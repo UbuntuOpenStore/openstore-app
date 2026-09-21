@@ -27,19 +27,25 @@
 #include <QtWebEngineQuick/qtwebenginequickglobal.h>
 #endif
 
+#ifdef ENABLE_SNAP_SUPPORT
 #include <Snapd/Client>
+#endif
 
 #include "apiconstants.h"
 #include "backendinstaller.h"
 #include "cachingnetworkmanagerfactory.h"
+#ifdef ENABLE_CLICK_SUPPORT
 #include "installers/clickinstaller.h"
+#endif
 #include "models/categoriesmodel.h"
 #include "models/discovermodel.h"
 #include "models/localpackagesmodel.h"
 #include "models/searchmodel.h"
 #include "openstorenetworkmanager.h"
 #include "packagebackendmanager.h"
+#ifdef ENABLE_CLICK_SUPPORT
 #include "packageitems/clickpackage.h"
+#endif
 #ifdef ENABLE_DEB_SUPPORT
 #include "indexstatus.h"
 #include "installers/packagekitinstaller.h"
@@ -47,7 +53,9 @@
 #include "packageitems/packagekitpackage.h"
 #include "sources/packagekitsource.h"
 #endif
+#ifdef ENABLE_SNAP_SUPPORT
 #include "packageitems/snappackage.h"
+#endif
 #include "packagescache.h"
 #include "platformintegration.h"
 #include "review.h"
@@ -109,20 +117,26 @@ int main(int argc, char* argv[])
   qmlRegisterSingletonType<PackagesCache>("OpenStore", 1, 0, "PackagesCache", registerPackagesCacheSingleton);
   qmlRegisterSingletonType<PackageBackendManager>("OpenStore", 1, 0, "PackageBackendManager", registerBackendManagerSingleton);
   qmlRegisterSingletonType<BackendInstaller>("OpenStore", 1, 0, "BackendInstaller", registerBackendInstallerSingleton);
+#ifdef ENABLE_CLICK_SUPPORT
   qmlRegisterUncreatableType<ClickInstaller>(
     "OpenStore", 1, 0, "ClickInstaller", "Access ClickInstall from the PlatformIntegration singleton");
+#endif
   qmlRegisterType<LocalPackagesModel>("OpenStore", 1, 0, "LocalAppModel");
   qmlRegisterType<DiscoverModel>("OpenStore", 1, 0, "DiscoverModel");
   qmlRegisterType<SearchModel>("OpenStore", 1, 0, "SearchModel");
   qmlRegisterType<CategoriesModel>("OpenStore", 1, 0, "CategoriesModel");
   qmlRegisterUncreatableType<PackageItem>(
     "OpenStore", 1, 0, "PackageItem", "PackageItem is only available through LocalAppModel, DiscoverModel, or SearchModel.");
+#ifdef ENABLE_CLICK_SUPPORT
   qmlRegisterUncreatableType<ClickPackageItem>(
     "OpenStore", 1, 0, "ClickPackageItem", "ClickPackageItem is only available through LocalAppModel, DiscoverModel, or SearchModel.");
+#endif
+#ifdef ENABLE_SNAP_SUPPORT
   qmlRegisterUncreatableType<SnapPackageItem>(
     "OpenStore", 1, 0, "SnapPackageItem", "SnapPackageItem is only available through LocalAppModel, DiscoverModel, or SearchModel.");
   qmlRegisterUncreatableType<QSnapdClient>("OpenStore", 1, 0, "SnapInstaller", "Access SnapInstall from the PlatformIntegration singleton");
   qmlRegisterUncreatableType<QSnapdRemoveRequest>("OpenStore", 1, 0, "SnapdRemoveRequest", "Created by snapInstaller");
+#endif
   qmlRegisterUncreatableType<PackageSource>("OpenStore", 1, 0, "PackageSource", "PackageSource is created by PackageBackendManager.");
 #ifdef ENABLE_DEB_SUPPORT
   qmlRegisterUncreatableType<PackageKitSource>(

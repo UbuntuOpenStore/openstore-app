@@ -16,13 +16,20 @@
  */
 
 #include "packagescache.h"
+#include "packageitems/package.h"
+#ifdef ENABLE_CLICK_SUPPORT
 #include "packageitems/clickpackage.h"
+#endif
+#ifdef ENABLE_SNAP_SUPPORT
 #include "packageitems/snappackage.h"
+#endif
 
 #include "openstorenetworkmanager.h"
 #include "platformintegration.h"
 
+#ifdef ENABLE_SNAP_SUPPORT
 #include <Snapd/Client>
+#endif
 
 PackagesCache* PackagesCache::m_instance = nullptr;
 
@@ -40,10 +47,18 @@ bool PackagesCache::contains(const QString& appId) const
 PackageItem* PackagesCache::insert(const QString& appId, const QVariantMap& jsonMap)
 {
   PackageItem* pkg = nullptr;
+#ifdef ENABLE_SNAP_SUPPORT
   if (appId.startsWith("snap."))
     pkg = new SnapPackageItem(jsonMap, this);
-  else
+#endif
+#ifdef ENABLE_CLICK_SUPPORT
+  if (!pkg)
     pkg = new ClickPackageItem(jsonMap, this);
+#endif
+
+  if (!pkg) {
+    return nullptr;
+  }
 
   pkg->updateLocalInfo(m_localAppRevision.value(pkg->appId()), PlatformIntegration::instance()->appVersion(pkg->appId()));
 
@@ -107,6 +122,7 @@ void PackagesCache::updateCacheRevisions()
     Q_FOREACH (QVariant d, data) {
       QVariantMap map = d.toMap();
       const QString& appId = map.value("id").toString();
+#ifdef ENABLE_SNAP_SUPPORT
       if (appId.startsWith("snap.")) {
         auto snapClient = PlatformIntegration::instance()->snapInstaller();
         const auto snapName = appId.mid(5);
@@ -114,7 +130,9 @@ void PackagesCache::updateCacheRevisions()
         request->runSync();
         const auto revision = request->snap()->revision().replace("x", "");
         m_localAppRevision.insert(appId, revision.toInt());
-      } else {
+      } else
+#endif
+      {
         m_localAppRevision.insert(appId, map.value("revision").toInt());
       }
       m_remoteAppRevision.insert(appId, map.value("latest_revision").toInt());

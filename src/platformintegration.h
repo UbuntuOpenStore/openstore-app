@@ -18,13 +18,17 @@
 #ifndef PLATFORMINTEGRATION_H
 #define PLATFORMINTEGRATION_H
 
+#ifdef ENABLE_CLICK_SUPPORT
 #include "installers/clickinstaller.h"
+#endif
 
 #include <QHash>
 #include <QObject>
 #include <QVariantList>
 
+#ifdef ENABLE_SNAP_SUPPORT
 #include <Snapd/Client>
+#endif
 
 #ifdef ENABLE_DEB_SUPPORT
 class PackageKitInstaller;
@@ -36,8 +40,12 @@ class PlatformIntegration : public QObject
   Q_PROPERTY(bool clickSupport READ clickSupport CONSTANT)
   Q_PROPERTY(bool snapSupport READ snapSupport CONSTANT)
   Q_PROPERTY(bool debSupport READ debSupport CONSTANT)
+#ifdef ENABLE_CLICK_SUPPORT
   Q_PROPERTY(ClickInstaller* clickInstaller READ clickInstaller CONSTANT)
+#endif
+#ifdef ENABLE_SNAP_SUPPORT
   Q_PROPERTY(QSnapdClient* snapInstaller READ snapInstaller CONSTANT)
+#endif
 #ifdef ENABLE_DEB_SUPPORT
   Q_PROPERTY(PackageKitInstaller* packageKitInstaller READ packageKitInstaller CONSTANT)
 #endif
@@ -54,28 +62,36 @@ public:
     return m_instance;
   }
 
+#ifdef ENABLE_CLICK_SUPPORT
   ClickInstaller* clickInstaller() const
   {
     return m_installer;
   }
+#endif
 
+#ifdef ENABLE_SNAP_SUPPORT
   QSnapdClient* snapInstaller() const
   {
     return m_snapInstaller;
   }
+#endif
 
   bool clickSupport() const
   {
-#ifdef ENABLE_DEB_SUPPORT
-    return false;
-#else
+#ifdef ENABLE_CLICK_SUPPORT
     return true;
+#else
+    return false;
 #endif
   }
 
   bool snapSupport() const
   {
+#ifdef ENABLE_SNAP_SUPPORT
     return m_snapInstaller != nullptr;
+#else
+    return false;
+#endif
   }
 
   bool debSupport() const
@@ -124,10 +140,12 @@ public:
     return m_installedAppIds.keys();
   }
 
+#ifdef ENABLE_CLICK_SUPPORT
   QVariantList clickDb() const
   {
     return m_clickDb;
   }
+#endif
 
 Q_SIGNALS:
   void updated();
@@ -148,10 +166,14 @@ private:
   QString m_systemCodename;
 
   QHash<QString, QString> m_installedAppIds; // appid, version
+#ifdef ENABLE_CLICK_SUPPORT
   QVariantList m_clickDb;
 
   ClickInstaller* m_installer;
+#endif
+#ifdef ENABLE_SNAP_SUPPORT
   QSnapdClient* m_snapInstaller;
+#endif
 #ifdef ENABLE_DEB_SUPPORT
   PackageKitInstaller* m_packageKitInstaller;
 #endif

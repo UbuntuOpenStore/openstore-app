@@ -167,7 +167,7 @@ Page {
                 }
 
                 ListItem {
-                    visible: PlatformIntegration.clickSupport
+                    visible: PlatformIntegration.clickSupport && PlatformIntegration.snapSupport
                     ListItemLayout {
                         anchors.centerIn: parent
                         title.text: i18n.tr("Enable snap support")
@@ -185,7 +185,7 @@ Page {
                 }
 
                 ListItem {
-                    visible: settings.snapSupport && PlatformIntegration.clickSupport
+                    visible: settings.snapSupport && PlatformIntegration.clickSupport && PlatformIntegration.snapSupport
                     ListItemLayout {
                         anchors.centerIn: parent
                         title.text: i18n.tr("Only show Lomiri-compatible snaps")

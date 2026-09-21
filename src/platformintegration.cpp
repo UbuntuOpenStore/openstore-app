@@ -16,7 +16,9 @@
  */
 
 #include "platformintegration.h"
+#ifdef ENABLE_CLICK_SUPPORT
 #include "installers/clickinstaller.h"
+#endif
 
 #include <QDebug>
 #include <QFile>
@@ -25,11 +27,15 @@
 #include <QNetworkRequest>
 #include <QProcess>
 
+#ifdef ENABLE_CLICK_SUPPORT
 #include <click.h>
+#endif
 #include <gio/gio.h>
 #include <glib.h>
 
+#ifdef ENABLE_SNAP_SUPPORT
 #include <Snapd/Client>
+#endif
 
 #ifdef ENABLE_DEB_SUPPORT
 #include "installers/packagekitinstaller.h"
@@ -54,7 +60,7 @@ PlatformIntegration::PlatformIntegration()
   m_supportedArchitecture = getSupportedArchitecture();
   m_systemLocale = getSystemLocale();
   m_systemCodename = getSystemCodename();
-
+#ifdef ENABLE_CLICK_SUPPORT
   m_installer = new ClickInstaller();
 
   connect(m_installer, &ClickInstaller::busyChanged, [=]() {
@@ -62,12 +68,15 @@ PlatformIntegration::PlatformIntegration()
       this->update();
     }
   });
+#endif
 
+#ifdef ENABLE_SNAP_SUPPORT
   m_snapInstaller = nullptr;
   if (QFile::exists("/run/snapd.socket") && systemdUnitRuns("lomiri-polkit-agent.service")) {
     qInfo() << "Instantiating snapInstaller...";
     m_snapInstaller = new QSnapdClient();
   }
+#endif
 
 #ifdef ENABLE_DEB_SUPPORT
   m_packageKitInstaller = new PackageKitInstaller();
@@ -78,7 +87,12 @@ PlatformIntegration::PlatformIntegration()
 
 PlatformIntegration::~PlatformIntegration()
 {
+#ifdef ENABLE_CLICK_SUPPORT
   delete m_installer;
+#endif
+#ifdef ENABLE_SNAP_SUPPORT
+  delete m_snapInstaller;
+#endif
 #ifdef ENABLE_DEB_SUPPORT
   delete m_packageKitInstaller;
 #endif
@@ -88,6 +102,7 @@ void PlatformIntegration::update()
 {
   m_installedAppIds.clear();
 
+#ifdef ENABLE_CLICK_SUPPORT
   ClickDB* clickdb;
   GError* err = nullptr;
   gchar* clickmanifest = nullptr;
@@ -156,7 +171,9 @@ void PlatformIntegration::update()
       m_installedAppIds[appId] = version;
     }
   }
+#endif
 
+#ifdef ENABLE_SNAP_SUPPORT
   if (m_snapInstaller) {
     auto request = m_snapInstaller->getSnaps();
     request->runSync();
@@ -169,6 +186,7 @@ void PlatformIntegration::update()
       }
     }
   }
+#endif
 
   Q_EMIT updated();
 }
@@ -177,6 +195,7 @@ QStringList PlatformIntegration::getSupportedFrameworks()
 {
   QStringList result;
 
+#ifdef ENABLE_CLICK_SUPPORT
   GList* gframeworks = click_framework_get_frameworks();
 
   while (gframeworks) {
@@ -185,6 +204,7 @@ QStringList PlatformIntegration::getSupportedFrameworks()
     result << frameworkName;
     gframeworks = gframeworks->next;
   }
+#endif
 
   return result;
 }

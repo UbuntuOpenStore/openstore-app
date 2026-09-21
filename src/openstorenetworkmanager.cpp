@@ -186,6 +186,7 @@ void OpenStoreNetworkManager::getAppDetails(const QString& signature, const QStr
 
   QUrl url(getUrl(API_APPDETAILS_ENDPOINT.arg(appId)));
 
+#ifdef ENABLE_SNAP_SUPPORT
   if (m_snapSupport && PlatformIntegration::instance()->snapInstaller()) {
     QUrlQuery q(url);
     q.addQueryItem("package_type", "snap,click");
@@ -194,6 +195,7 @@ void OpenStoreNetworkManager::getAppDetails(const QString& signature, const QStr
     }
     url.setQuery(q);
   }
+#endif
 
   QNetworkReply* reply = sendRequest(QNetworkRequest(url));
   parseReply(reply, signature);
@@ -216,6 +218,7 @@ void OpenStoreNetworkManager::getSearch(const QString& signature,
   q.addQueryItem("sort", sort);
   q.addQueryItem("category", category);
   q.addQueryItem("type", filterType);
+#ifdef ENABLE_SNAP_SUPPORT
   if (m_snapSupport && PlatformIntegration::instance()->snapInstaller()) {
     if (filterPackageType.isEmpty()) {
       q.addQueryItem("package_types", "snap,click");
@@ -226,6 +229,7 @@ void OpenStoreNetworkManager::getSearch(const QString& signature,
       q.addQueryItem("lomiri_compatible", "true");
     }
   }
+#endif
 
   if (filterString.startsWith("publisher:")) {
     q.addQueryItem("publisher", filterString.right(filterString.size() - 10));
@@ -243,6 +247,7 @@ void OpenStoreNetworkManager::getCategories(const QString& signature)
 {
   QUrl url(getUrl(API_CATEGORIES_ENDPOINT));
 
+#ifdef ENABLE_SNAP_SUPPORT
   if (m_snapSupport && PlatformIntegration::instance()->snapInstaller()) {
     QUrlQuery q(url);
     q.addQueryItem("package_type", "snap,click");
@@ -251,6 +256,7 @@ void OpenStoreNetworkManager::getCategories(const QString& signature)
     }
     url.setQuery(q);
   }
+#endif
 
   QNetworkReply* reply = sendRequest(QNetworkRequest(url));
   parseReply(reply, signature);

@@ -18,8 +18,12 @@
 #include "backendinstaller.h"
 
 #include "platformintegration.h"
+#ifdef ENABLE_CLICK_SUPPORT
+#include "installers/clickinstaller.h"
+#endif
 #ifdef ENABLE_DEB_SUPPORT
 #include "indexstatus.h"
+#include "installers/packagekitinstaller.h"
 #include "packageindex.h"
 #endif
 
@@ -29,9 +33,12 @@ BackendInstaller::BackendInstaller()
   : m_installer(0)
   , m_indexStatus(0)
 {
+#ifdef ENABLE_CLICK_SUPPORT
   m_installer = PlatformIntegration::instance()->clickInstaller();
+#endif
 #ifdef ENABLE_DEB_SUPPORT
   m_indexStatus = PackageIndex::instance()->status();
+  m_installer = PlatformIntegration::instance()->packageKitInstaller();
 #endif
 }
 

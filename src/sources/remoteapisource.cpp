@@ -29,7 +29,9 @@
 #include <QSettings>
 #include <algorithm>
 
+#ifdef ENABLE_SNAP_SUPPORT
 #include <Snapd/Client>
+#endif
 
 #define REQUEST_LIMIT 30
 
@@ -200,6 +202,7 @@ QList<LocalPackageItem> RemoteApiSource::requestInstalled()
 {
   QList<LocalPackageItem> result;
 
+#ifdef ENABLE_CLICK_SUPPORT
   const QVariantList& clickDb = PlatformIntegration::instance()->clickDb();
   Q_FOREACH (const QVariant& pkg, clickDb) {
     QVariantMap map = pkg.toMap();
@@ -255,7 +258,9 @@ QList<LocalPackageItem> RemoteApiSource::requestInstalled()
 
     result.append(pkgItem);
   }
+#endif
 
+#ifdef ENABLE_SNAP_SUPPORT
   QSnapdClient* installer = PlatformIntegration::instance()->snapInstaller();
   if (installer && OpenStoreNetworkManager::instance()->snapSupport()) {
     auto request = installer->getSnaps();
@@ -284,6 +289,7 @@ QList<LocalPackageItem> RemoteApiSource::requestInstalled()
       result.append(pkgItem);
     }
   }
+#endif
 
   return result;
 }

@@ -20,6 +20,7 @@ option(ENABLE_QT6 "Enable building with Qt6" ${ENABLE_QT6_DEFAULT})
 option(ENABLE_CLICK_SUPPORT "Build with click package support" ON)
 option(ENABLE_SNAP_SUPPORT "Build with snap package support" ON)
 option(ENABLE_PACKAGEKIT_SUPPORT "Build with deb/apt catalog support" OFF)
+option(CLICK_MODE "Build OpenStore as a click package" ON)
 
 if(ENABLE_PACKAGEKIT_SUPPORT AND NOT ENABLE_QT6)
     message(FATAL_ERROR "ENABLE_PACKAGEKIT_SUPPORT requires ENABLE_QT6 (deb dependencies are the Qt6 bindings)")
@@ -83,6 +84,12 @@ endif()
 # Automatically create moc files
 set(CMAKE_AUTOMOC ON)
 
+# Standard install paths
+if(NOT CLICK_MODE)
+    include(GNUInstallDirs)
+    message(STATUS "Using standard install directories")
+endif()
+
 # Components PATH
 execute_process(
     COMMAND dpkg-architecture -qDEB_HOST_MULTIARCH
@@ -93,8 +100,20 @@ execute_process(
 set(QT_IMPORTS_DIR "lib/${ARCH_TRIPLET}")
 set(PROJECT_NAME "openstore")
 set(FULL_PROJECT_NAME "openstore.openstore-team")
-set(CMAKE_INSTALL_PREFIX /)
-set(DATA_DIR /)
+
+if (CLICK_MODE)
+    set(CMAKE_INSTALL_PREFIX /)
+    set(DATA_DIR /)
+    set(OPENSTORE_BIN_DIR /)
+    set(OPENSTORE_DESKTOP_DIR /)
+    set(OPENSTORE_ICON_DIR /)
+else()
+    set(DATA_DIR ${CMAKE_INSTALL_DATADIR}/openstore)
+    set(OPENSTORE_BIN_DIR ${CMAKE_INSTALL_BINDIR})
+    set(OPENSTORE_DESKTOP_DIR ${CMAKE_INSTALL_DATADIR}/applications)
+    set(OPENSTORE_ICON_DIR ${CMAKE_INSTALL_DATADIR}/icons/hicolor/scalable/apps)
+endif()
+
 set(DESKTOP_FILE_NAME ${PROJECT_NAME}.desktop)
 
 # This command figures out the target architecture for use in the manifest file
@@ -195,12 +214,14 @@ endforeach()
 configure_file(qml/qml.qrc.in ${CMAKE_BINARY_DIR}/qml/qml.qrc @ONLY)
 
 # Config files & the logo
-configure_file(manifest.json.in ${CMAKE_CURRENT_BINARY_DIR}/manifest.json)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/manifest.json DESTINATION ${CMAKE_INSTALL_PREFIX})
-install(FILES ${PROJECT_NAME}.apparmor DESTINATION ${DATA_DIR})
-install(FILES ${PROJECT_NAME}.url-dispatcher DESTINATION ${DATA_DIR})
-install(FILES ${PROJECT_NAME}-contenthub.json DESTINATION ${DATA_DIR})
-install(FILES qml/Assets/${PROJECT_NAME}.svg DESTINATION ${DATA_DIR})
+if(CLICK_MODE)
+    configure_file(manifest.json.in ${CMAKE_CURRENT_BINARY_DIR}/manifest.json)
+    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/manifest.json DESTINATION ${CMAKE_INSTALL_PREFIX})
+    install(FILES ${PROJECT_NAME}.apparmor DESTINATION ${DATA_DIR})
+    install(FILES ${PROJECT_NAME}.url-dispatcher DESTINATION ${DATA_DIR})
+    install(FILES ${PROJECT_NAME}-contenthub.json DESTINATION ${DATA_DIR})
+endif()
+install(FILES qml/Assets/${PROJECT_NAME}.svg DESTINATION ${OPENSTORE_ICON_DIR})
 install(FILES qml/Assets/${PROJECT_NAME}splash.svg DESTINATION ${DATA_DIR})
 
 # Translations
@@ -222,7 +243,7 @@ add_custom_target(${DESKTOP_FILE_NAME} ALL
     COMMAND sed -i 's/${PROJECT_NAME}-//g' ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE_NAME}
 )
 
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE_NAME} DESTINATION ${DATA_DIR})
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE_NAME} DESTINATION ${OPENSTORE_DESKTOP_DIR})
 
 # Make source files visible in qtcreator
 file(GLOB_RECURSE PROJECT_SRC_FILES

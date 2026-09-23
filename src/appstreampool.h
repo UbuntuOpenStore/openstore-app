@@ -27,7 +27,9 @@ class AppStreamPool : public QObject
 public:
   explicit AppStreamPool(QObject* parent = 0);
 
-  bool load();
+  static QList<AppStream::Component> loadFromDisk();
+
+  void setComponents(const QList<AppStream::Component>& components);
   AppStream::Component componentById(const QString& id) const;
   QStringList componentCategories() const;
   QList<AppStream::Component> componentsInCategory(const QString& categoryId) const;

@@ -20,11 +20,14 @@
 
 #include <QList>
 #include <QObject>
+#include <QThread>
 
 namespace AppStream {
 class Component;
 }
 
+class AppStreamPool;
+class IndexBuilder;
 class IndexStatus;
 class XapianIndex;
 
@@ -47,11 +50,25 @@ public:
   XapianIndex* xapian() const { return m_xapian; }
 
   Q_INVOKABLE void initialize();
-  bool build(const QList<AppStream::Component>& components);
+
+  AppStreamPool* pool() const { return m_pool; }
+  void startBuild();
+
+Q_SIGNALS:
+  void buildCompleted();
+
+private Q_SLOTS:
+  void onBuildSucceeded(const QList<AppStream::Component>& components);
+  void onBuildFailed(const QString& message);
+  void onProgress(int percent);
 
 private:
   IndexStatus* m_indexStatus;
   XapianIndex* m_xapian;
+  AppStreamPool* m_pool;
+  IndexBuilder* m_builder;
+  QThread m_workerThread;
+  bool m_buildInFlight = false;
 
   static PackageIndex* m_instance;
 };

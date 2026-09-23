@@ -36,22 +36,12 @@
 
 PackageKitSource::PackageKitSource(QObject* parent)
   : PackageSource(parent)
-  , m_pool(new AppStreamPool(this))
   , m_installer(PlatformIntegration::instance()->packageKitInstaller())
 {
   PackageIndex* index = PackageIndex::instance();
+  m_pool = index->pool();
   connect(m_installer, &PackageKitInstaller::transactionFinished, this, &PackageKitSource::onInstallFinished);
-  connect(index->status(), &IndexStatus::stateChanged, this, [this, index]() {
-    // Use stateChanged, not ready(); ready() emits only after a build
-    // succeeds and re-wiring it can re-enter the build.
-    if (index->status()->state() != QStringLiteral("initializing"))
-      return;
-    if (!m_pool->load()) {
-      index->status()->setError(QStringLiteral("Failed to read AppStream metadata."), true);
-      return;
-    }
-    if (!index->build(m_pool->allComponents()))
-      return; // build() already set the error state
+  connect(index, &PackageIndex::buildCompleted, this, [this, index]() {
     m_indexBuilt = true;
     refreshInstalledInfo();
     Q_EMIT updated();
@@ -283,13 +273,10 @@ void PackageKitSource::refresh()
 void PackageKitSource::onInstallFinished()
 {
   if (m_installer->lastRole() == PackageKit::Transaction::RoleRefreshCache) {
-    // A refresh-cache transaction finished: re-read AppStream and rebuild.
-    if (m_pool->load()) {
-      PackageIndex::instance()->build(m_pool->allComponents());
-    }
-    refreshInstalledInfo();
-    Q_EMIT updated();
-    Q_EMIT installedChanged();
+    // A refresh-cache transaction finished: rebuild the catalog/index on the
+    // worker thread. The pool and availability are updated by PackageIndex
+    // when the build completes.
+    PackageIndex::instance()->startBuild();
   } else {
     refreshInstalledInfo();
     refreshInstalledState(); // install/remove changed flags: re-emit with refresh=true

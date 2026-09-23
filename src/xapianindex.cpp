@@ -63,24 +63,27 @@ QString XapianIndex::errorMessage() const
   return m_errorMessage;
 }
 
-bool XapianIndex::build(const QList<AppStream::Component>& components)
+int XapianIndex::buildToFile(const QString& dbPath,
+                             const QList<AppStream::Component>& components,
+                             QString* errorMessage,
+                             std::function<void(int)> progress)
 {
   try {
-    QDir().mkpath(QFileInfo(m_databasePath).path());
+    QDir().mkpath(QFileInfo(dbPath).path());
 
-    Xapian::WritableDatabase db(m_databasePath.toUtf8().constData(), Xapian::DB_CREATE_OR_OVERWRITE);
+    Xapian::WritableDatabase db(dbPath.toUtf8().constData(), Xapian::DB_CREATE_OR_OVERWRITE);
 
     Xapian::TermGenerator termGen;
     termGen.set_stemmer(Xapian::Stem("en"));
     termGen.set_stemming_strategy(Xapian::TermGenerator::STEM_SOME);
 
     int count = 0;
+    int lastPercent = -1;
     Q_FOREACH (const AppStream::Component& component, components) {
       Xapian::Document doc;
       doc.set_data(component.id().toStdString());
       doc.add_boolean_term((QStringLiteral("XID") + sanitizeTerm(component.id())).toStdString());
 
-      // One boolean term per package name; the query matches the exact term.
       Q_FOREACH (const QString& pkgName, component.packageNames()) {
         doc.add_boolean_term((QStringLiteral("XPACK") + sanitizeTerm(pkgName)).toStdString());
       }
@@ -88,14 +91,8 @@ bool XapianIndex::build(const QList<AppStream::Component>& components)
       const QString name = component.name();
       const QString summary = component.summary();
       const QString description = component.description();
-      // Whole-name term so "name:foo" (the S prefix) still matches.
       doc.add_posting((QStringLiteral("S") + sanitizeTerm(name)).toStdString(), 1);
 
-      // Free-text terms for name/summary/description. A whole summary or
-      // description as a single term exceeds Xapian's 245-byte term limit, so
-      // the term generator indexes one short term per word (capped at 64 bytes)
-      // and adds stemmed "Z"-prefixed forms matching the QueryParser's STEM_SOME
-      // queries.
       termGen.set_document(doc);
       termGen.index_text(name.toStdString());
       termGen.increase_termpos();
@@ -111,30 +108,41 @@ bool XapianIndex::build(const QList<AppStream::Component>& components)
       doc.add_value(VALUE_NAME, name.toStdString());
       doc.add_value(VALUE_SUMMARY, summary.toStdString());
       doc.add_value(VALUE_CATEGORY, component.categories().join(QLatin1Char(';')).toStdString());
-      // AppStream exposes icons(); use the first one if present.
       const AppStream::Icon icon = component.icons().isEmpty() ? AppStream::Icon() : component.icons().first();
       doc.add_value(VALUE_ICON, (!icon.isEmpty() ? icon.url().toString() : QString()).toStdString());
 
       db.add_document(doc);
       ++count;
+
+      if (progress) {
+        const int percent = qMin(99, int(count * 100 / qMax(1, components.size())));
+        if (percent != lastPercent) {
+          progress(percent);
+          lastPercent = percent;
+        }
+      }
     }
 
-    // Flush to make term frequencies queryable.
     db.commit();
-    m_available = true;
-    m_errorMessage.clear();
-    m_lastBuilt = QDateTime::currentDateTime();
-    qDebug() << "XapianIndex: indexed" << count << "components at" << m_databasePath;
-    Q_EMIT indexBuilt();
+    if (progress)
+      progress(100);
 
-    return true;
+    qDebug() << "XapianIndex: indexed" << count << "components at" << dbPath;
+    return count;
   } catch (const Xapian::Error& e) {
-    m_available = false;
-    m_errorMessage = QString::fromUtf8(e.get_msg().c_str());
-    qWarning() << "XapianIndex: build failed:" << m_errorMessage;
-    Q_EMIT indexError(m_errorMessage);
-    return false;
+    const QString message = QString::fromUtf8(e.get_msg().c_str());
+    if (errorMessage)
+      *errorMessage = message;
+    qWarning() << "XapianIndex: build failed:" << message;
+    return -1;
   }
+}
+
+void XapianIndex::setAvailable()
+{
+  m_available = true;
+  m_errorMessage.clear();
+  m_lastBuilt = QDateTime::currentDateTime();
 }
 
 QList<SearchPackageItem> XapianIndex::search(const QString& queryText, int offset, int limit)

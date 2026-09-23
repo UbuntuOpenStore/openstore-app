@@ -52,6 +52,7 @@
 #include "packageindex.h"
 #include "packageitems/packagekitpackage.h"
 #include "sources/packagekitsource.h"
+#include <AppStreamQt/component.h>
 #endif
 #ifdef ENABLE_SNAP_SUPPORT
 #include "packageitems/snappackage.h"
@@ -107,6 +108,11 @@ int main(int argc, char* argv[])
 #endif
 
   QGuiApplication app(argc, argv);
+
+#ifdef ENABLE_PACKAGEKIT_SUPPORT
+  qRegisterMetaType<AppStream::Component>("AppStream::Component");
+  qRegisterMetaType<QList<AppStream::Component>>("QList<AppStream::Component>");
+#endif
 
 #if QT_VERSION_MAJOR >= 6
   QNetworkInformation::loadDefaultBackend();

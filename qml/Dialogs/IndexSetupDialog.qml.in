@@ -30,7 +30,7 @@ Component {
 
         Timer {
             id: startTimer
-            interval: 100
+            interval: 10
             onTriggered: {
                 if (searchIndex && searchIndex.state === "uninitialized") {
                     searchIndex.initialize();
@@ -52,10 +52,13 @@ Component {
             }
         }
 
-        ActivityIndicator {
+        ProgressBar {
             anchors.horizontalCenter: parent.horizontalCenter
-            running: searchIndex ? searchIndex.state === "initializing" : false
-            visible: running
+            visible: searchIndex && searchIndex.state === "initializing"
+            indeterminate: searchIndex && searchIndex.progress <= 0
+            minimumValue: 0
+            maximumValue: 100
+            value: searchIndex ? searchIndex.progress : 0
         }
 
         Label {
@@ -66,7 +69,7 @@ Component {
             horizontalAlignment: Text.AlignHCenter
             text: searchIndex && searchIndex.state === "error"
                 ? searchIndex.errorMessage
-                : i18n.tr("Building app index…")
+                : i18n.tr("Updating the app catalog...")
             wrapMode: Text.WordWrap
             maximumLineCount: Number.MAX_VALUE
         }

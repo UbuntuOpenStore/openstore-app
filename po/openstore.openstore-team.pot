@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-20 03:46+0000\n"
+"POT-Creation-Date: 2026-09-23 03:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -963,11 +963,11 @@ msgstr ""
 msgid "Setting up the app catalog"
 msgstr ""
 
-#: ../qml/Dialogs/IndexSetupDialog.qml.in:69
-msgid "Building app index…"
+#: ../qml/Dialogs/IndexSetupDialog.qml.in:72
+msgid "Updating the app catalog..."
 msgstr ""
 
-#: ../qml/Dialogs/IndexSetupDialog.qml.in:77
+#: ../qml/Dialogs/IndexSetupDialog.qml.in:80
 msgid "Retry"
 msgstr ""
 

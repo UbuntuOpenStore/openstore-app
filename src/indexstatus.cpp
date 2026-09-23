@@ -57,6 +57,19 @@ void IndexStatus::setError(const QString& message, bool retryable)
 void IndexStatus::setReady()
 {
   m_lastUpdated = QDateTime::currentDateTime();
+  if (m_progress != 0) {
+    m_progress = 0;
+    Q_EMIT progressChanged();
+  }
   setState(QStringLiteral("ready"));
   Q_EMIT ready();
+}
+
+void IndexStatus::setProgress(int percent)
+{
+  percent = qBound(0, percent, 100);
+  if (m_progress == percent)
+    return;
+  m_progress = percent;
+  Q_EMIT progressChanged();
 }

@@ -66,6 +66,7 @@ if(ENABLE_PACKAGEKIT_SUPPORT)
         appstreampool.cpp
         indexstatus.cpp
         packageindex.cpp
+        indexbuilder.cpp
         xapianindex.cpp
         packageitems/packagekitpackage.cpp
         sources/packagekitsource.cpp

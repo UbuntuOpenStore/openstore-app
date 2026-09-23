@@ -17,6 +17,8 @@
 
 #include "packageindex.h"
 
+#include "appstreampool.h"
+#include "indexbuilder.h"
 #include "indexstatus.h"
 #include "xapianindex.h"
 
@@ -27,21 +29,57 @@ PackageIndex::PackageIndex(QObject* parent)
 {
   m_indexStatus = new IndexStatus(this);
   m_xapian = new XapianIndex(this);
+  m_pool = new AppStreamPool(this);
+
+  m_builder = new IndexBuilder();
+  m_builder->moveToThread(&m_workerThread);
+  connect(m_builder, &IndexBuilder::buildSucceeded, this, &PackageIndex::onBuildSucceeded);
+  connect(m_builder, &IndexBuilder::buildFailed, this, &PackageIndex::onBuildFailed);
+  connect(m_builder, &IndexBuilder::progressChanged, this, &PackageIndex::onProgress);
+  m_workerThread.start();
+
+  connect(m_indexStatus, &IndexStatus::stateChanged, this, [this]() {
+    if (m_indexStatus->state() == QStringLiteral("initializing"))
+      startBuild();
+  });
 }
 
-PackageIndex::~PackageIndex() {}
+PackageIndex::~PackageIndex()
+{
+  m_workerThread.quit();
+  m_workerThread.wait();
+  delete m_builder;
+}
 
 void PackageIndex::initialize()
 {
   m_indexStatus->initialize();
 }
 
-bool PackageIndex::build(const QList<AppStream::Component>& components)
+void PackageIndex::startBuild()
 {
-  if (!m_xapian->build(components)) {
-    m_indexStatus->setError(m_xapian->errorMessage(), true);
-    return false;
-  }
+  if (m_buildInFlight)
+    return;
+  m_buildInFlight = true;
+  QMetaObject::invokeMethod(m_builder, "build", Qt::QueuedConnection, Q_ARG(QString, m_xapian->databasePath()));
+}
+
+void PackageIndex::onBuildSucceeded(const QList<AppStream::Component>& components)
+{
+  m_pool->setComponents(components);
+  m_xapian->setAvailable();
+  m_buildInFlight = false;
   m_indexStatus->setReady();
-  return true;
+  Q_EMIT buildCompleted();
+}
+
+void PackageIndex::onBuildFailed(const QString& message)
+{
+  m_buildInFlight = false;
+  m_indexStatus->setError(message, true);
+}
+
+void PackageIndex::onProgress(int percent)
+{
+  m_indexStatus->setProgress(percent);
 }

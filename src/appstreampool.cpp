@@ -27,25 +27,32 @@ AppStreamPool::AppStreamPool(QObject* parent)
 {
 }
 
-bool AppStreamPool::load()
+QList<AppStream::Component> AppStreamPool::loadFromDisk()
 {
-  m_loaded = m_pool.load();
-  if (!m_loaded) {
+  QList<AppStream::Component> components;
+  AppStream::Pool pool;
+  if (!pool.load()) {
     qWarning() << "AppStreamPool: failed to load AppStream metadata";
-    return false;
+    return components;
   }
 
-  m_components = m_pool.components().toList();
-  m_components.erase(std::remove_if(m_components.begin(),
-                                    m_components.end(),
-                                    [](const AppStream::Component& c) {
-                                      const AppStream::Component::Kind kind = c.kind();
-                                      return kind != AppStream::Component::KindDesktopApp && kind != AppStream::Component::KindConsoleApp &&
-                                             kind != AppStream::Component::KindWebApp;
-                                    }),
-                     m_components.end());
-  qDebug() << "AppStreamPool: loaded" << m_components.size() << "application components";
-  return true;
+  components = pool.components().toList();
+  components.erase(std::remove_if(components.begin(),
+                                  components.end(),
+                                  [](const AppStream::Component& c) {
+                                    const AppStream::Component::Kind kind = c.kind();
+                                    return kind != AppStream::Component::KindDesktopApp && kind != AppStream::Component::KindConsoleApp &&
+                                           kind != AppStream::Component::KindWebApp;
+                                  }),
+                   components.end());
+  qDebug() << "AppStreamPool: loaded" << components.size() << "application components";
+  return components;
+}
+
+void AppStreamPool::setComponents(const QList<AppStream::Component>& components)
+{
+  m_components = components;
+  m_loaded = true;
 }
 
 AppStream::Component AppStreamPool::componentById(const QString& id) const

@@ -21,6 +21,8 @@
 #include "packageSource.h"
 #include <QDateTime>
 
+#include <functional>
+
 namespace AppStream {
 class Component;
 }
@@ -35,7 +37,13 @@ public:
   bool isAvailable() const;
   QString errorMessage() const;
 
-  bool build(const QList<AppStream::Component>& components);
+  static int buildToFile(const QString& dbPath,
+                         const QList<AppStream::Component>& components,
+                         QString* errorMessage,
+                         std::function<void(int)> progress = std::function<void(int)>());
+
+  // Marks the index usable after a successful buildToFile()
+  void setAvailable();
 
   QList<SearchPackageItem> search(const QString& queryText, int offset, int limit);
   QList<SearchPackageItem> allInCategory(const QString& categoryId, int offset, int limit);
@@ -44,14 +52,9 @@ public:
   QString componentIdForPkgName(const QString& packageName) const;
 
   QDateTime lastBuilt() const;
-
-Q_SIGNALS:
-  void indexBuilt();
-  void indexError(const QString& message);
+  QString databasePath() const;
 
 private:
-  QString databasePath() const;
-  void rebuildDatabase(const QList<AppStream::Component>& components);
   // Xapian terms allow only [a-z0-9_]; normalize on both write and query
   // sides because component ids and package names contain '.', '-' and '+'.
   static QString sanitizeTerm(const QString& text);

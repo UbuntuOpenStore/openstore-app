@@ -83,7 +83,7 @@ PackageKitPackageItem::PackageKitPackageItem(const AppStream::Component& compone
     m_icon = !icon.isEmpty() && !icon.url().isEmpty() ? icon.url().toString() : QString();
   }
   if (m_icon.isEmpty())
-    m_icon = QStringLiteral("qrc:/Assets/fallback.svg");
+    m_icon = PlatformIntegration::instance()->fallbackIcon();
 
   Q_FOREACH (const AppStream::Screenshot& shot, component.screenshotsAll()) {
     Q_FOREACH (const AppStream::Image& image, shot.images()) {

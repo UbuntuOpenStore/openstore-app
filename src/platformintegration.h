@@ -103,6 +103,17 @@ public:
 #endif
   }
 
+  QString fallbackIcon() const
+  {
+    if (clickSupport()) {
+      // Click support means we are likely on Ubuntu Touch, so use the themed fallback icon
+
+      return QStringLiteral("qrc:/Assets/fallback.svg");
+    }
+
+    return QStringLiteral("image://theme/application-x-executable");
+  }
+
 #ifdef ENABLE_PACKAGEKIT_SUPPORT
   PackageKitInstaller* packageKitInstaller() const
   {

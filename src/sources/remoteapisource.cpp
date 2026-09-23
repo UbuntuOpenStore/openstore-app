@@ -282,7 +282,7 @@ QList<LocalPackageItem> RemoteApiSource::requestInstalled()
         } else if (QFileInfo::exists(base + QStringLiteral(".png"))) {
           pkgItem.icon = QStringLiteral("file://") + base + QStringLiteral(".png");
         } else {
-          pkgItem.icon = QStringLiteral("qrc:/Assets/fallback.svg");
+          pkgItem.icon = PlatformIntegration::instance()->fallbackIcon();
         }
       }
       pkgItem.updateStatus = QStringLiteral("snap");

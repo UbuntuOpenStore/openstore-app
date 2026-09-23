@@ -183,6 +183,18 @@ void PackageKitPackageItem::setInstalledState(bool installed, const QString& ver
   Q_EMIT installedChanged();
 }
 
+void PackageKitPackageItem::setinstalledSize(int installedSize)
+{
+  PackageItem::setinstalledSize(installedSize);
+  Q_EMIT updated();
+}
+
+void PackageKitPackageItem::setDownloadSize(int downloadSize)
+{
+  PackageItem::setDownloadSize(downloadSize);
+  Q_EMIT updated();
+}
+
 void PackageKitPackageItem::fillData(const QVariantMap& json)
 {
   Q_UNUSED(json)

@@ -33,6 +33,7 @@
 #include <QDebug>
 
 #include <PackageKit/daemon.h>
+#include <PackageKit/details.h>
 
 PackageKitSource::PackageKitSource(QObject* parent)
   : PackageSource(parent)
@@ -252,6 +253,11 @@ PackageItem* PackageKitSource::requestPackageDetails(const QString& id)
                          installedVersionForPkgName(packageName),
                          isPackageUpdateAvailable(packageName));
 
+  // Fetch the sizes asynchronously; repeat views hit the cache and skip the
+  // query. The daemon requires a full package id, so resolve the name first
+  // when needed. Both sizes come back in bytes.
+  requestPackageSize(pkg, packageName);
+
   // Return synchronously without emitting packageDetailsReady; emitting
   // pushes an unwanted detail page.
   return pkg;
@@ -292,6 +298,7 @@ void PackageKitSource::refreshInstalledInfo()
     return;
 
   m_installedVersions.clear();
+  m_installedPackageIds.clear();
   m_updatePackageIds.clear();
 
   // When the last transaction finishes, mark the set fresh and re-emit.
@@ -316,8 +323,10 @@ void PackageKitSource::refreshInstalledInfo()
           [this](PackageKit::Transaction::Info /*info*/, const QString& packageID, const QString& /*summary*/) {
             const QString name = PackageKit::Transaction::packageName(packageID);
             const QString version = PackageKit::Transaction::packageVersion(packageID);
-            if (!name.isEmpty())
+            if (!name.isEmpty()) {
               m_installedVersions.insert(name, version);
+              m_installedPackageIds.insert(name, packageID);
+            }
           });
   connect(installedTx, &PackageKit::Transaction::finished, this, finalize);
 
@@ -349,4 +358,54 @@ bool PackageKitSource::isPackageUpdateAvailable(const QString& packageName) cons
       return true;
   }
   return false;
+}
+
+void PackageKitSource::requestPackageSize(PackageKitPackageItem* pkg, const QString& packageName)
+{
+  if (m_detailsFetched.contains(packageName))
+    return;
+  m_detailsFetched.insert(packageName);
+
+  // Installed packages have a full id from the getPackages query; use it
+  // directly. Others need a Resolve first (the daemon rejects bare names).
+  const QString installedId = m_installedPackageIds.value(packageName);
+  if (!installedId.isEmpty()) {
+    startGetDetails(installedId, pkg, packageName);
+    return;
+  }
+
+  PackageKit::Transaction* resolveTx = PackageKit::Daemon::resolve(packageName);
+  if (!resolveTx)
+    return;
+  connect(
+    resolveTx,
+    &PackageKit::Transaction::package,
+    this,
+    [this, resolveTx, pkg, packageName](PackageKit::Transaction::Info /*info*/, const QString& packageID, const QString& /*summary*/) {
+      if (PackageKit::Transaction::packageName(packageID) != packageName)
+        return;
+      disconnect(resolveTx, nullptr, this, nullptr);
+      startGetDetails(packageID, pkg, packageName);
+    });
+}
+
+void PackageKitSource::startGetDetails(const QString& packageId, PackageKitPackageItem* pkg, const QString& packageName)
+{
+  PackageKit::Transaction* detailsTx = PackageKit::Daemon::getDetails(packageId);
+  if (!detailsTx)
+    return;
+  connect(detailsTx, &PackageKit::Transaction::details, this, [this, pkg, packageName](const PackageKit::Details& details) {
+    if (PackageKit::Transaction::packageName(details.packageId()) != packageName)
+      return;
+
+    const qulonglong size = details.size();
+    if (size != 0)
+      pkg->setinstalledSize(int(size));
+
+    // No named getter for this in the 1.1.4 binding; read the raw key. The
+    // daemon omits it when there is nothing to download.
+    const qulonglong downloadSize = details.value(QStringLiteral("download-size")).toULongLong();
+    if (downloadSize != 0)
+      pkg->setDownloadSize(int(downloadSize));
+  });
 }

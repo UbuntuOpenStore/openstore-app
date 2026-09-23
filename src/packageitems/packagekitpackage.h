@@ -35,6 +35,8 @@ public:
   QString packageName() const { return m_packageName; }
 
   void setInstalledState(bool installed, const QString& version, bool updateAvailable);
+  void setinstalledSize(int installedSize) override;
+  void setDownloadSize(int downloadSize) override;
 
 protected:
   void fillData(const QVariantMap& json) override;

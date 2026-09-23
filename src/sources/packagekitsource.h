@@ -21,6 +21,7 @@
 #include "../packageSource.h"
 
 #include <QHash>
+#include <QSet>
 #include <QStringList>
 
 struct OpenStoreReply;
@@ -53,6 +54,8 @@ private:
   QList<SearchPackageItem> enrichList(const QList<SearchPackageItem>& items) const;
   QString installedVersionForPkgName(const QString& packageName) const;
   bool isPackageUpdateAvailable(const QString& packageName) const;
+  void requestPackageSize(PackageKitPackageItem* pkg, const QString& packageName);
+  void startGetDetails(const QString& packageId, PackageKitPackageItem* pkg, const QString& packageName);
 
 private Q_SLOTS:
   void onInstallFinished();
@@ -64,11 +67,13 @@ private:
 
   QHash<QString, PackageKitPackageItem*> m_pkgCache; // componentId -> item
   QHash<QString, QString> m_installedVersions;       // packageName -> version
+  QHash<QString, QString> m_installedPackageIds;     // packageName -> full package id
   QStringList m_updatePackageIds;                    // PackageKit "name;version;arch;data"
 
   QList<DiscoverCategoryItem> m_lastDiscoverCategories; // last emitted categories for highlight re-emit
   bool m_installedFresh = false;                        // installed/update sets populated at least once
   int m_installedTxsPending = 0;                        // outstanding getPackages/getUpdates transactions
+  QSet<QString> m_detailsFetched;                       // package names with a GetDetails query already issued
 
   SearchRequest m_lastRequest;
   QList<SearchPackageItem> m_lastSearchList;

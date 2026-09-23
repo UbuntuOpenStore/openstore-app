@@ -123,9 +123,9 @@ public:
   QString totalDownloads() const { return m_totalDownloads; }
   QString maintainer() const { return m_maintainer; }
   int installedSize() const { return m_installedSize; }
-  void setinstalledSize(int installedSize) { m_installedSize = installedSize; }
+  virtual void setinstalledSize(int installedSize) { m_installedSize = installedSize; }
   int downloadSize() const { return m_downloadSize; }
-  void setDownloadSize(int downloadSize) { m_downloadSize = downloadSize; }
+  virtual void setDownloadSize(int downloadSize) { m_downloadSize = downloadSize; }
   bool installed() const { return !m_installedVersion.isNull(); }
   QDateTime publishedDate() const { return m_publishedDate; }
   QDateTime updatedDate() const { return m_updatedDate; }

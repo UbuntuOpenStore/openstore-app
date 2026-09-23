@@ -19,6 +19,8 @@
 
 PackageItem::PackageItem(const QVariantMap& json, QObject* parent)
   : QObject(parent)
+  , m_installedSize(0)
+  , m_downloadSize(0)
   , m_downloadProgress(0)
 {
 }

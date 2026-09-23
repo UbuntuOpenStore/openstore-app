@@ -37,6 +37,7 @@ public:
   void setInstalledState(bool installed, const QString& version, bool updateAvailable);
   void setinstalledSize(int installedSize) override;
   void setDownloadSize(int downloadSize) override;
+  void setDependencyCount(int dependencyCount) override;
 
 protected:
   void fillData(const QVariantMap& json) override;

@@ -32,6 +32,9 @@
 
 #include <QDebug>
 
+#include <QSet>
+#include <QSharedPointer>
+
 #include <PackageKit/daemon.h>
 #include <PackageKit/details.h>
 
@@ -402,10 +405,24 @@ void PackageKitSource::startGetDetails(const QString& packageId, PackageKitPacka
     if (size != 0)
       pkg->setinstalledSize(int(size));
 
-    // No named getter for this in the 1.1.4 binding; read the raw key. The
-    // daemon omits it when there is nothing to download.
+    // No named getter for this in the 1.1.4 binding; read the raw key
     const qulonglong downloadSize = details.value(QStringLiteral("download-size")).toULongLong();
     if (downloadSize != 0)
       pkg->setDownloadSize(int(downloadSize));
   });
+
+  // Count direct Depends-only dependencies (non-recursive), deduped by name.
+  PackageKit::Transaction* depsTx = PackageKit::Daemon::dependsOn(packageId, PackageKit::Transaction::FilterNone, false);
+  if (!depsTx)
+    return;
+  const QSharedPointer<QSet<QString>> deps(new QSet<QString>);
+  connect(depsTx,
+          &PackageKit::Transaction::package,
+          this,
+          [deps](PackageKit::Transaction::Info /*info*/, const QString& packageID, const QString& /*summary*/) {
+            const QString name = PackageKit::Transaction::packageName(packageID);
+            if (!name.isEmpty())
+              deps->insert(name);
+          });
+  connect(depsTx, &PackageKit::Transaction::finished, this, [this, pkg, deps]() { pkg->setDependencyCount(deps->count()); });
 }

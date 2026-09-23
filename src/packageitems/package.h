@@ -56,6 +56,7 @@ class PackageItem : public QObject
   Q_PROPERTY(QString maintainer READ maintainer NOTIFY updated)
   Q_PROPERTY(int installedSize READ installedSize NOTIFY updated)
   Q_PROPERTY(int downloadSize READ downloadSize NOTIFY updated)
+  Q_PROPERTY(int dependencyCount READ dependencyCount NOTIFY updated)
   Q_PROPERTY(bool installed READ installed NOTIFY updated)
   Q_PROPERTY(int hooksCount READ hooksCount NOTIFY updated)
   Q_PROPERTY(bool containsApp READ containsApp NOTIFY updated)
@@ -126,6 +127,8 @@ public:
   virtual void setinstalledSize(int installedSize) { m_installedSize = installedSize; }
   int downloadSize() const { return m_downloadSize; }
   virtual void setDownloadSize(int downloadSize) { m_downloadSize = downloadSize; }
+  int dependencyCount() const { return m_dependencyCount; }
+  virtual void setDependencyCount(int dependencyCount) { m_dependencyCount = dependencyCount; }
   bool installed() const { return !m_installedVersion.isNull(); }
   QDateTime publishedDate() const { return m_publishedDate; }
   QDateTime updatedDate() const { return m_updatedDate; }
@@ -195,6 +198,7 @@ protected:
   QString m_maintainer;
   int m_installedSize;
   mutable int m_downloadSize;
+  int m_dependencyCount;
   mutable int m_installedRevision;
   mutable QString m_installedVersion;
   QList<HookStruct> m_hooks;

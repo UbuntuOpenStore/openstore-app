@@ -187,7 +187,15 @@ Page {
                             }
                         }
 
-                        var installedSize = app.installedSize ? '\n' + i18n.tr('Install Size: ') + printSize(app.installedSize) : '';
+                        var installedSize = app.installedSize
+                                ? '\n' + i18n.tr('Install Size: ') + printSize(app.installedSize)
+                                    + (app.packageType === "snap"
+                                        ? ' (' + i18n.tr('plus dependencies') + ')'
+                                        : app.dependencyCount
+                                            ? ' (' + i18n.tr('plus %1 dependency', 'plus %1 dependencies',
+                                                             app.dependencyCount).arg(app.dependencyCount) + ')'
+                                            : '')
+                                : '';
                         var downloadSize = app.downloadSize ? '\n' + i18n.tr('Download Size: ') + printSize(app.downloadSize) : '';
                         return types.join(', ') + installedSize + downloadSize;
                     }

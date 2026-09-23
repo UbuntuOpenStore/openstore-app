@@ -195,6 +195,12 @@ void PackageKitPackageItem::setDownloadSize(int downloadSize)
   Q_EMIT updated();
 }
 
+void PackageKitPackageItem::setDependencyCount(int dependencyCount)
+{
+  PackageItem::setDependencyCount(dependencyCount);
+  Q_EMIT updated();
+}
+
 void PackageKitPackageItem::fillData(const QVariantMap& json)
 {
   Q_UNUSED(json)

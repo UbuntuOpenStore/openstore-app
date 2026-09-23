@@ -67,11 +67,10 @@ Component {
                 right: parent.right
             }
             horizontalAlignment: Text.AlignHCenter
-            text: searchIndex && searchIndex.state === "error"
-                ? searchIndex.errorMessage
-                : i18n.tr("Updating the app catalog...")
+            visible: searchIndex && searchIndex.state === "error"
+            text: searchIndex ? searchIndex.errorMessage : ""
             wrapMode: Text.WordWrap
-            maximumLineCount: Number.MAX_VALUE
+            maximumLineCount: 3
         }
 
         Button {

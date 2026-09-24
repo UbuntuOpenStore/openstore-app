@@ -1,0 +1,136 @@
+{
+  "categories": [
+    {
+      "slug": "accessibility",
+      "name": "Accessibility",
+      "icon": "accessibility.svg",
+      "packagekitCategories": ["Accessibility"]
+    },
+    {
+      "slug": "books-comics",
+      "name": "Books & Comics",
+      "icon": "books_and_comics.svg",
+      "packagekitCategories": ["Dictionary", "Literature", "Books", "Comics", "Biography"]
+    },
+    {
+      "slug": "business-finance",
+      "name": "Business & Finance",
+      "icon": "business_and_finance.svg",
+      "packagekitCategories": ["Finance", "Money", "Charts", "Economy", "Accounting", "Banking", "Investment", "Stocks", "Spreadsheet"]
+    },
+    {
+      "slug": "communication-social",
+      "name": "Communication & Social",
+      "icon": "communication_and_social.svg",
+      "packagekitCategories": ["Network", "InstantMessaging", "IRCClient", "Email", "FileTransfer", "WebBrowser", "Chat", "Telephony", "VideoConference", "RemoteAccess", "Internet", "Client", "Telecommunications"]
+    },
+    {
+      "slug": "developer-tools",
+      "name": "Developer Tools",
+      "icon": "developer_tools.svg",
+      "packagekitCategories": ["Development", "Debugger", "GUIDesigner", "IDE", "Profiling", "WebDevelopment", "Translation", "SoftwareDevelopment", "RevisionControl", "TerminalEmulator", "Database", "ComputerScience", "Programming", "Compiler"]
+    },
+    {
+      "slug": "education-reference",
+      "name": "Education & Reference",
+      "icon": "education_and_reference.svg",
+      "packagekitCategories": ["Education", "History", "Languages", "Reference", "Knowledge", "Dictionary", "Geography", "KidsEducation", "Learning", "Study", "School", "Reading", "Math"]
+    },
+    {
+      "slug": "entertainment",
+      "name": "Entertainment",
+      "icon": "entertainment.svg",
+      "packagekitCategories": ["AudioVideo", "TV", "Video", "Player", "Recorder", "Streaming", "Movies", "Radio"]
+    },
+    {
+      "slug": "food-drink",
+      "name": "Food & Drink",
+      "icon": "food_and_drink.svg",
+      "packagekitCategories": ["Cooking", "Food", "Recipe", "Restaurant", "Beverage"]
+    },
+    {
+      "slug": "games",
+      "name": "Games",
+      "icon": "games.svg",
+      "packagekitCategories": ["Game", "ActionGame", "AdventureGame", "ArcadeGame", "BoardGame", "BlocksGame", "CardGame", "KidsGame", "LogicGame", "RolePlaying", "Simulation", "SportsGame", "StrategyGame", "Emulator", "LauncherStore", "GameTool", "PuzzleGame"]
+    },
+    {
+      "slug": "graphics",
+      "name": "Graphics",
+      "icon": "graphics.svg",
+      "packagekitCategories": ["Graphics", "2DGraphics", "3DGraphics", "VectorGraphics", "RasterGraphics", "Photography", "Publishing", "Scanning", "OCR", "Viewer", "Drawing", "ImageScanning", "IconDesigner", "Camera"]
+    },
+    {
+      "slug": "health-fitness",
+      "name": "Health & Fitness",
+      "icon": "health_and_fitness.svg",
+      "packagekitCategories": ["Health", "Medical", "Fitness", "Nutrition", "Exercise", "Disease", "Patient"]
+    },
+    {
+      "slug": "lifestyle",
+      "name": "Lifestyle",
+      "icon": "lifestyle.svg",
+      "packagekitCategories": ["Lifestyle", "Hobbies", "Fashion", "Home", "Pets", "Garden", "Family", "Beauty", "Crafts", "Astrology", "Religion", "Spirituality", "Wedding"]
+    },
+    {
+      "slug": "media-video",
+      "name": "Media & Video",
+      "icon": "media_and_video.svg",
+      "packagekitCategories": ["Video", "TV", "Player", "Recorder", "DiscBurning", "AudioVideoEditing", "Screencast", "Slideshow", "AudioVideo", "VideoConference"]
+    },
+    {
+      "slug": "music-audio",
+      "name": "Music & Audio",
+      "icon": "music_and_audio.svg",
+      "packagekitCategories": ["Audio", "Music", "Midi", "Mixer", "Sequencer", "DiscBurning", "AudioVideoEditing", "Player", "Recorder", "Radio", "Podcast", "AudioVideo"]
+    },
+    {
+      "slug": "news-magazines",
+      "name": "News & Magazines",
+      "icon": "news_and_magazines.svg",
+      "packagekitCategories": ["News", "NewsReader", "RSS", "Newspaper", "Journalism", "Magazine"]
+    },
+    {
+      "slug": "personalisation",
+      "name": "Personalisation",
+      "icon": "personalisation.svg",
+      "packagekitCategories": ["Personalization", "Settings", "DesktopSettings", "Appearance", "Wallpaper", "Customization", "Configuration", "Screensaver", "Fonts"]
+    },
+    {
+      "slug": "productivity",
+      "name": "Productivity",
+      "icon": "productivity.svg",
+      "packagekitCategories": ["Office", "WordProcessor", "Spreadsheet", "Presentation", "PIM", "Calendar", "ContactManagement", "ProjectManagement", "Database", "TextEditor", "Notes", "Accounting", "Organizer", "Calculator", "Charts", "PDF", "DocumentViewer"]
+    },
+    {
+      "slug": "science-engineering",
+      "name": "Science & Engineering",
+      "icon": "science_and_engineering.svg",
+      "packagekitCategories": ["Science", "Engineering", "Astronomy", "Biology", "Chemistry", "Physics", "Geology", "Geoscience", "Electronics", "Robotics", "ArtificialIntelligence", "NumericalAnalysis", "DataVisualization", "ComputerScience", "Math", "HamRadio", "Meteorology"]
+    },
+    {
+      "slug": "shopping",
+      "name": "Shopping",
+      "icon": "shopping.svg",
+      "packagekitCategories": ["Shopping", "PriceComparison", "Auctions", "ECommerce", "Deals"]
+    },
+    {
+      "slug": "sports",
+      "name": "Sports",
+      "icon": "sports.svg",
+      "packagekitCategories": ["Sports", "Football", "Soccer", "Athletics", "Basketball", "Tennis", "Golf", "Cycling", "Hiking", "Racing"]
+    },
+    {
+      "slug": "travel-weather",
+      "name": "Travel & Weather",
+      "icon": "travel_and_weather.svg",
+      "packagekitCategories": ["Travel", "Weather", "Maps", "Navigation", "GPS", "Flight", "Transit", "Geography", "Timezone", "Atlas"]
+    },
+    {
+      "slug": "utilities",
+      "name": "Utilities",
+      "icon": "utilities.svg",
+      "packagekitCategories": ["Utility", "System", "Settings", "FileTools", "FileManager", "Archiving", "Compression", "Security", "SystemSecurity", "Monitor", "Clock", "Backup", "Calculator", "HardwareSettings", "Core", "Accessories", "Fonts", "Drivers", "TerminalEmulator", "TextTools", "PowerManagement", "Battery"]
+    }
+  ]
+}

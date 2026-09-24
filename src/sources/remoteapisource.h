@@ -43,6 +43,7 @@ private Q_SLOTS:
 
 private:
   QString m_searchSignature;
+  bool m_searchRequestPending = false; // a search/fetchMore request is in flight; duplicate fetchMore requests are dropped
   QString m_discoverSignature;
   QString m_categoriesSignature;
   QString m_pendingDetailsAppId; // non-empty while an async getPackageDetails() is in flight

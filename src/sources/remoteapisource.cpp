@@ -39,6 +39,18 @@ RemoteApiSource::RemoteApiSource(QObject* parent)
   : PackageSource(parent)
 {
   connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::parsedReply, this, &RemoteApiSource::parseReply);
+
+  // A failed request must not leave a search "in flight", or the view could
+  // never trigger another page load. The flag is cleared here and on a
+  // successful parseReply().
+  connect(OpenStoreNetworkManager::instance(),
+          &OpenStoreNetworkManager::error,
+          this,
+          [this](const QString& signature, const QString& /*error*/, int /*statusCode*/) {
+            if (signature == m_searchSignature)
+              m_searchRequestPending = false;
+          });
+
   // Forward cache-miss detail fetches; the guards route the reply
   // to the pending request only.
   connect(PackagesCache::instance(), &PackagesCache::packageDetailsReady, this, [this](PackageItem* pkg) {
@@ -57,7 +69,18 @@ RemoteApiSource::RemoteApiSource(QObject* parent)
 
 void RemoteApiSource::requestSearch(const SearchRequest& request)
 {
+  // Qt Quick's list views can ask for more rows again before the previous
+  // reply has landed (the request is async, so no rows were appended and the
+  // offset is unchanged).
+  if (m_searchRequestPending && request.offset != 0 && request.offset == m_lastRequest.offset &&
+      request.filterString == m_lastRequest.filterString && request.category == m_lastRequest.category &&
+      request.sortMode == m_lastRequest.sortMode && request.filterType == m_lastRequest.filterType &&
+      request.filterPackageType == m_lastRequest.filterPackageType && request.queryUrl == m_lastRequest.queryUrl) {
+    return;
+  }
+
   m_lastRequest = request;
+  m_searchRequestPending = true;
   if (request.offset == 0) {
     // Fresh search; start a new accumulation.
     m_searchList.clear();
@@ -120,6 +143,8 @@ void RemoteApiSource::requestCategories()
 void RemoteApiSource::parseReply(const OpenStoreReply& reply)
 {
   if (reply.signature == m_searchSignature) {
+    m_searchRequestPending = false;
+
     QVariantMap data = reply.data.toMap();
     QVariantList pkgList = data.value("packages").toList();
 

@@ -18,6 +18,7 @@
 #ifndef PACKAGEKITSOURCE_H
 #define PACKAGEKITSOURCE_H
 
+#include "../categories/categoryparser.h"
 #include "../packageSource.h"
 
 #include <QHash>
@@ -30,6 +31,10 @@ class AppStreamPool;
 class PackageKitPackageItem;
 class PackageIndex;
 class PackageKitInstaller;
+
+namespace AppStream {
+class Component;
+}
 
 class PackageKitSource : public PackageSource
 {
@@ -57,6 +62,8 @@ private:
   void requestPackageSize(PackageKitPackageItem* pkg, const QString& packageName);
   void startGetDetails(const QString& packageId, PackageKitPackageItem* pkg, const QString& packageName);
 
+  QList<AppStream::Component> componentsInCategory(const QString& categoryId);
+
 private Q_SLOTS:
   void onInstallFinished();
   void onStoreDiscoverReply(const OpenStoreReply& reply);
@@ -77,7 +84,8 @@ private:
 
   SearchRequest m_lastRequest;
   QList<SearchPackageItem> m_lastSearchList;
-  bool m_searchPending = false; // search requested before the index was built
+  bool m_searchPending = false;     // search requested before the index was built
+  bool m_categoriesPending = false; // categories requested before the index was built
 
   QString m_storeDiscoverSignature;
   bool m_storeDiscoverPending = false;

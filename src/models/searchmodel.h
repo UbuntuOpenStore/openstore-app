@@ -85,7 +85,7 @@ private:
   QString m_filterPackageType;
   QUrl m_queryUrl;
 
-  bool m_fetchedAll;
+  bool m_fetchedAll = true; // nothing to fetch until the first search reply arrives
 
   QList<SearchPackageItem> m_list;
   PackageSource* m_source;

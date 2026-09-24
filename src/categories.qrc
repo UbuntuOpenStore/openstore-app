@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/categories">
+        <file alias="categories.json">categories/categories.json</file>
+        <file alias="icons/accessibility.svg">categories/icons/accessibility.svg</file>
+        <file alias="icons/books_and_comics.svg">categories/icons/books_and_comics.svg</file>
+        <file alias="icons/business_and_finance.svg">categories/icons/business_and_finance.svg</file>
+        <file alias="icons/communication_and_social.svg">categories/icons/communication_and_social.svg</file>
+        <file alias="icons/developer_tools.svg">categories/icons/developer_tools.svg</file>
+        <file alias="icons/education_and_reference.svg">categories/icons/education_and_reference.svg</file>
+        <file alias="icons/entertainment.svg">categories/icons/entertainment.svg</file>
+        <file alias="icons/food_and_drink.svg">categories/icons/food_and_drink.svg</file>
+        <file alias="icons/games.svg">categories/icons/games.svg</file>
+        <file alias="icons/graphics.svg">categories/icons/graphics.svg</file>
+        <file alias="icons/health_and_fitness.svg">categories/icons/health_and_fitness.svg</file>
+        <file alias="icons/lifestyle.svg">categories/icons/lifestyle.svg</file>
+        <file alias="icons/media_and_video.svg">categories/icons/media_and_video.svg</file>
+        <file alias="icons/music_and_audio.svg">categories/icons/music_and_audio.svg</file>
+        <file alias="icons/news_and_magazines.svg">categories/icons/news_and_magazines.svg</file>
+        <file alias="icons/personalisation.svg">categories/icons/personalisation.svg</file>
+        <file alias="icons/productivity.svg">categories/icons/productivity.svg</file>
+        <file alias="icons/science_and_engineering.svg">categories/icons/science_and_engineering.svg</file>
+        <file alias="icons/shopping.svg">categories/icons/shopping.svg</file>
+        <file alias="icons/sports.svg">categories/icons/sports.svg</file>
+        <file alias="icons/travel_and_weather.svg">categories/icons/travel_and_weather.svg</file>
+        <file alias="icons/utilities.svg">categories/icons/utilities.svg</file>
+    </qresource>
+</RCC>

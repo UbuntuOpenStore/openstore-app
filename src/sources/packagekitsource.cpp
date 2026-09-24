@@ -50,8 +50,12 @@ PackageKitSource::PackageKitSource(QObject* parent)
     refreshInstalledInfo();
     Q_EMIT updated();
     // Fulfill any search that was requested before the index was ready.
-    if (m_searchPending)
+    if (m_searchPending) {
       requestSearch(m_lastRequest);
+    }
+    // Fulfill any categories request that was made before the index was ready.
+    if (m_categoriesPending)
+      requestCategories();
   });
   connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::parsedReply, this, &PackageKitSource::onStoreDiscoverReply);
 }
@@ -75,10 +79,7 @@ void PackageKitSource::requestSearch(const SearchRequest& request)
 {
   m_lastRequest = request;
   if (!PackageIndex::instance()->xapian()->isAvailable()) {
-    // The index is not built yet. Do not emit an empty reply: the model
-    // would treat it as "no results", and a later refresh reply only
-    // merges installed-state flags into existing rows, so the list would
-    // stay empty. Remember the request and emit it once the index is ready.
+    // The index is not built yet. Do not emit an empty reply
     m_searchPending = true;
     return;
   }
@@ -96,8 +97,25 @@ void PackageKitSource::emitSearchReply(bool refresh)
   const bool hasCategory = !m_lastRequest.category.isEmpty();
 
   if (hasCategory) {
-    reply.packages = m_lastSearchList =
-      enrichList(xapian->allInCategory(m_lastRequest.category, m_lastRequest.offset, m_lastRequest.limit));
+    const QList<AppStream::Component> components = componentsInCategory(m_lastRequest.category);
+
+    const int offset = qMax(0, m_lastRequest.offset);
+    const int limit = qMax(0, m_lastRequest.limit);
+    const int end = qMin(components.count(), offset + limit);
+
+    QList<SearchPackageItem> items;
+    for (int i = offset; i < end; ++i) {
+      SearchPackageItem item;
+      item.appId = components.at(i).id();
+      item.packageType = QStringLiteral("packagekit");
+      items.append(item);
+    }
+    reply.packages = m_lastSearchList = enrichList(items);
+    reply.totalCount = components.count();
+    reply.fetchedAll = end >= components.count();
+    reply.refresh = refresh;
+    Q_EMIT searchReplied(reply);
+    return;
   } else if (hasFilter) {
     reply.packages = m_lastSearchList = enrichList(xapian->search(m_lastRequest.filterString, m_lastRequest.offset, m_lastRequest.limit));
   } else {
@@ -137,12 +155,36 @@ QList<SearchPackageItem> PackageKitSource::enrichList(const QList<SearchPackageI
 
 void PackageKitSource::requestCategories()
 {
+  if (!PackageIndex::instance()->xapian()->isAvailable()) {
+    // The index is not built yet. Do not emit an empty reply.
+    m_categoriesPending = true;
+    return;
+  }
+
+  m_categoriesPending = false;
+
+  const QList<CategoryParser::Category>& parsed = CategoryParser::categories();
+  const QList<AppStream::Component> components = m_pool->allComponents();
+
   QList<CategoryItem> categories;
-  XapianIndex* xapian = PackageIndex::instance()->xapian();
-  if (xapian->isAvailable()) {
-    categories = xapian->categories();
+  Q_FOREACH (const CategoryParser::Category& category, parsed) {
+    CategoryItem item;
+    item.id = category.id;
+    item.name = category.name;
+    item.count = CategoryParser::countMatches(category, components);
+    item.iconUrl = QUrl(category.icon);
+    categories.append(item);
   }
   Q_EMIT categoriesReplied(categories);
+}
+
+QList<AppStream::Component> PackageKitSource::componentsInCategory(const QString& categoryId)
+{
+  Q_FOREACH (const CategoryParser::Category& category, CategoryParser::categories()) {
+    if (category.id == categoryId)
+      return CategoryParser::matchingComponents(category, m_pool->allComponents());
+  }
+  return QList<AppStream::Component>();
 }
 
 void PackageKitSource::requestDiscover()

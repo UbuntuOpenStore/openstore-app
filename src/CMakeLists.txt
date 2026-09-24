@@ -55,11 +55,15 @@ endif()
 if(ENABLE_PACKAGEKIT_SUPPORT)
     add_definitions(-DENABLE_PACKAGEKIT_SUPPORT)
     include_directories(${PACKAGEKIT_INCLUDE_DIRS})
+
     # packagekitqt6 headers include <packagekitqt_global.h> without a
     # PackageKit/ prefix; that header lives in this sibling subdir, so the
     # pkg-config include path alone does not resolve it.
     include_directories("/usr/include/PackageKitQt/PackageKit")
     include_directories(${XAPIAN_INCLUDE_DIRS})
+
+    qt6_add_resources(PACKAGEKIT_RESOURCES ${CMAKE_CURRENT_SOURCE_DIR}/categories.qrc)
+
     set(
         PACKAGEKIT_SRC
         installers/packagekitinstaller.cpp
@@ -68,6 +72,7 @@ if(ENABLE_PACKAGEKIT_SUPPORT)
         packageindex.cpp
         indexbuilder.cpp
         xapianindex.cpp
+        categories/categoryparser.cpp
         packageitems/packagekitpackage.cpp
         sources/packagekitsource.cpp
     )
@@ -85,7 +90,7 @@ else()
     qt5_add_resources(QT_RESOURCES ${CMAKE_BINARY_DIR}/qml/qml.qrc)
 endif()
 if(ENABLE_PACKAGEKIT_SUPPORT)
-    add_executable(${PROJECT_NAME} ${SRC} ${PACKAGEKIT_SRC} ${QT_RESOURCES})
+    add_executable(${PROJECT_NAME} ${SRC} ${PACKAGEKIT_SRC} ${QT_RESOURCES} ${PACKAGEKIT_RESOURCES})
 else()
     add_executable(${PROJECT_NAME} ${SRC} ${CLICK_SRC} ${SNAP_SRC} ${QT_RESOURCES})
 endif()

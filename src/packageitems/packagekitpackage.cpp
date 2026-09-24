@@ -16,6 +16,7 @@
  */
 
 #include "packagekitpackage.h"
+#include "../categories/categoryparser.h"
 #include "../installers/packagekitinstaller.h"
 #include "../platformintegration.h"
 
@@ -74,8 +75,7 @@ PackageKitPackageItem::PackageKitPackageItem(const AppStream::Component& compone
     m_contentRating = QVariantMap{ { QStringLiteral("type"), rating.kind() }, { QStringLiteral("content_attributes"), attributes } };
   }
 
-  const QStringList categories = component.categories();
-  m_category = categories.isEmpty() ? QString() : categories.first();
+  m_category = CategoryParser::matchCategory(component.categories());
   m_packageType = QStringLiteral("packagekit");
 
   if (!component.icons().isEmpty()) {

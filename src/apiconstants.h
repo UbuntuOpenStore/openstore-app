@@ -25,6 +25,9 @@
 #define API_APPDETAILS_ENDPOINT QStringLiteral("api/v4/apps/%1")
 #define API_SEARCH_ENDPOINT QStringLiteral("api/v4/apps")
 #define API_CATEGORIES_ENDPOINT QStringLiteral("api/v4/categories")
+#define API_DISCOVER_V5_ENDPOINT QStringLiteral("api/v5/discover")
+#define API_PACKAGEKIT_PACKAGE_TYPE QStringLiteral("packagekit")
+#define API_PACKAGEKIT_ID_PREFIX QStringLiteral("packagekit.")
 #define API_REVISION_ENDPOINT QStringLiteral("api/v4/revisions")
 
 #define API_REVIEW_LIST_ENDPOINT QStringLiteral("api/v4/apps/%1/reviews")

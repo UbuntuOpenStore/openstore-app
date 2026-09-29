@@ -97,6 +97,7 @@ public:
 
 public Q_SLOTS:
   void getDiscover(const QString& signature);
+  void getDiscoverV5(const QString& signature, const QString& packageType);
   void getAppDetails(const QString& signature, const QString& appId);
   void getSearch(const QString& signature,
                  int skip,

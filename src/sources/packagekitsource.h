@@ -62,6 +62,10 @@ private:
   void requestPackageSize(PackageKitPackageItem* pkg, const QString& packageName);
   void startGetDetails(const QString& packageId, PackageKitPackageItem* pkg, const QString& packageName);
 
+  void parseDiscoverPayload();
+  void stashRatings(const QString& appId, const QVariantMap& app);
+  QString queryUrlForReferral(const QString& referral) const;
+
   QList<AppStream::Component> componentsInCategory(const QString& categoryId);
 
 private Q_SLOTS:
@@ -77,10 +81,13 @@ private:
   QHash<QString, QString> m_installedPackageIds;     // packageName -> full package id
   QStringList m_updatePackageIds;                    // PackageKit "name;version;arch;data"
 
-  QList<DiscoverCategoryItem> m_lastDiscoverCategories; // last emitted categories for highlight re-emit
-  bool m_installedFresh = false;                        // installed/update sets populated at least once
-  int m_installedTxsPending = 0;                        // outstanding getPackages/getUpdates transactions
-  QSet<QString> m_detailsFetched;                       // package names with a GetDetails query already issued
+  QVariantMap m_discoverPayload;
+  QList<DiscoverHighlightItem> m_lastHighlights;
+  QHash<QString, QVariantMap> m_storeRatings; // appId -> ratings map from the payload
+  bool m_hasDiscoverContent = false;          // true once a non-empty reply was emitted
+  bool m_installedFresh = false;              // installed/update sets populated at least once
+  int m_installedTxsPending = 0;              // outstanding getPackages/getUpdates transactions
+  QSet<QString> m_detailsFetched;             // package names with a GetDetails query already issued
 
   SearchRequest m_lastRequest;
   QList<SearchPackageItem> m_lastSearchList;
@@ -88,10 +95,7 @@ private:
   bool m_categoriesPending = false; // categories requested before the index was built
 
   QString m_storeDiscoverSignature;
-  bool m_storeDiscoverPending = false;
   bool m_indexBuilt = false; // pool+xapian built at least once; gates quiet refresh()
-  QString m_highlightAppId;  // store-highlight component id, re-emitted with discover
-  QUrl m_highlightBannerUrl;
 };
 
 #endif // PACKAGEKITSOURCE_H

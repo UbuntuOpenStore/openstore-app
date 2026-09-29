@@ -82,8 +82,15 @@ void DiscoverModel::refresh()
 
 void DiscoverModel::parseReply(const DiscoverReply& reply)
 {
-  m_highlightBannerUrl = reply.highlightBannerUrl;
-  m_highlightAppId = reply.highlightAppId;
+  m_highlights.clear();
+  Q_FOREACH (const DiscoverHighlightItem& highlight, reply.highlights) {
+    m_highlights.append(QVariantMap{ { QStringLiteral("appId"), highlight.appId },
+                                     { QStringLiteral("imageUrl"), highlight.imageUrl },
+                                     { QStringLiteral("description"), highlight.description } });
+  }
+
+  m_highlightAppId = reply.highlights.isEmpty() ? reply.highlightAppId : reply.highlights.first().appId;
+  m_highlightBannerUrl = reply.highlights.isEmpty() ? reply.highlightBannerUrl : reply.highlights.first().imageUrl;
 
   // Replace the rows; the source re-emits the full discover state.
   beginResetModel();

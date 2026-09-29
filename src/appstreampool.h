@@ -30,6 +30,9 @@ public:
   static QList<AppStream::Component> loadFromDisk();
 
   void setComponents(const QList<AppStream::Component>& components);
+  // True once setComponents() has run; componentById() can only resolve ids
+  // after that.
+  bool isLoaded() const { return m_loaded; }
   AppStream::Component componentById(const QString& id) const;
   QStringList componentCategories() const;
   QList<AppStream::Component> componentsInCategory(const QString& categoryId) const;

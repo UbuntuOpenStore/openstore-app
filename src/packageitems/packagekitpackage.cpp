@@ -201,6 +201,15 @@ void PackageKitPackageItem::setDependencyCount(int dependencyCount)
   Q_EMIT updated();
 }
 
+void PackageKitPackageItem::setStoreMetadata(const QVariantMap& ratingsMap)
+{
+  if (!m_ratings.isNull() && m_ratings->totalCount() > 0)
+    return;
+
+  m_ratings = new Ratings(ratingsMap, this);
+  Q_EMIT updated();
+}
+
 void PackageKitPackageItem::fillData(const QVariantMap& json)
 {
   Q_UNUSED(json)

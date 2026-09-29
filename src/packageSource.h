@@ -57,6 +57,13 @@ struct DiscoverCategoryItem
   QStringList appIds;
 };
 
+struct DiscoverHighlightItem
+{
+  QString appId;
+  QUrl imageUrl;
+  QString description;
+};
+
 struct SearchRequest
 {
   QString filterString;
@@ -82,9 +89,12 @@ struct SearchReply
 
 struct DiscoverReply
 {
+  QList<DiscoverHighlightItem> highlights;
+  QList<DiscoverCategoryItem> categories;
+
+  // v4 api fields
   QString highlightAppId;
   QUrl highlightBannerUrl;
-  QList<DiscoverCategoryItem> categories;
 };
 
 struct LocalPackageItem

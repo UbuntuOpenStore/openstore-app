@@ -189,57 +189,6 @@ QList<SearchPackageItem> XapianIndex::search(const QString& queryText, int offse
   return result;
 }
 
-QList<SearchPackageItem> XapianIndex::allInCategory(const QString& categoryId, int offset, int limit)
-{
-  QList<SearchPackageItem> result;
-  if (!m_available)
-    return result;
-
-  try {
-    Xapian::Database db(m_databasePath.toUtf8().constData());
-    Xapian::Query query(("XCAT" + sanitizeTerm(categoryId)).toUtf8().constData());
-    Xapian::Enquire enquire(db);
-    enquire.set_query(query);
-    Xapian::MSet mset = enquire.get_mset(offset, limit);
-    m_totalMatches = int(mset.get_matches_estimated());
-    for (Xapian::MSetIterator it = mset.begin(); it != mset.end(); ++it) {
-      Xapian::Document doc = it.get_document();
-      result.append(packageItemFromDocument(QByteArray::fromStdString(doc.get_data())));
-    }
-  } catch (const Xapian::Error& e) {
-    qWarning() << "XapianIndex: category query failed:" << QString::fromUtf8(e.get_msg().c_str());
-  }
-  return result;
-}
-
-QList<CategoryItem> XapianIndex::categories() const
-{
-  QList<CategoryItem> result;
-  if (!m_available)
-    return result;
-
-  try {
-    Xapian::Database db(m_databasePath.toUtf8().constData());
-    Xapian::TermIterator it = db.allterms_begin();
-    while (it != db.allterms_end()) {
-      const QString term = QString::fromUtf8((*it).c_str());
-      if (term.startsWith(QLatin1String("XCAT"))) {
-        const QString id = term.mid(4);
-        CategoryItem item;
-        item.id = id;
-        item.name = id;
-        item.count = int(db.get_termfreq(term.toUtf8().constData()));
-        item.iconUrl = QUrl();
-        result.append(item);
-      }
-      ++it;
-    }
-  } catch (const Xapian::Error& e) {
-    qWarning() << "XapianIndex: categories failed:" << QString::fromUtf8(e.get_msg().c_str());
-  }
-  return result;
-}
-
 int XapianIndex::totalMatches() const
 {
   return m_totalMatches;

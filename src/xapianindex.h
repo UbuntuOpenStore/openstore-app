@@ -46,8 +46,6 @@ public:
   void setAvailable();
 
   QList<SearchPackageItem> search(const QString& queryText, int offset, int limit);
-  QList<SearchPackageItem> allInCategory(const QString& categoryId, int offset, int limit);
-  QList<CategoryItem> categories() const;
   int totalMatches() const;
   QString componentIdForPkgName(const QString& packageName) const;
 

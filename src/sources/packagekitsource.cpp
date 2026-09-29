@@ -17,6 +17,7 @@
 
 #include "packagekitsource.h"
 
+#include "../apiconstants.h"
 #include "../appstreampool.h"
 #include "../indexstatus.h"
 #include "../installers/packagekitinstaller.h"
@@ -49,15 +50,37 @@ PackageKitSource::PackageKitSource(QObject* parent)
     m_indexBuilt = true;
     refreshInstalledInfo();
     Q_EMIT updated();
-    // Fulfill any search that was requested before the index was ready.
+
     if (m_searchPending) {
       requestSearch(m_lastRequest);
     }
-    // Fulfill any categories request that was made before the index was ready.
-    if (m_categoriesPending)
+
+    if (m_categoriesPending) {
       requestCategories();
+    }
+
+    if (!m_discoverPayload.isEmpty()) {
+      parseDiscoverPayload();
+    }
   });
+
   connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::parsedReply, this, &PackageKitSource::onStoreDiscoverReply);
+
+  connect(OpenStoreNetworkManager::instance(),
+          &OpenStoreNetworkManager::error,
+          this,
+          [this](const QString& signature, const QString& /*error*/, int /*statusCode*/) {
+            if (signature != m_storeDiscoverSignature)
+              return;
+
+            if (m_hasDiscoverContent) {
+              return;
+            }
+
+            // In the event of an error, prefer an empty discover reply over nothing at all.
+            DiscoverReply empty;
+            Q_EMIT discoverReplied(empty);
+          });
 }
 
 PackageKitSource::~PackageKitSource()
@@ -78,6 +101,13 @@ QStringList PackageKitSource::sourceDescriptions() const
 void PackageKitSource::requestSearch(const SearchRequest& request)
 {
   m_lastRequest = request;
+
+  // Discover carousels link here as "category:<slug>". Normalize into
+  // m_lastRequest so both the initial reply and any refreshInstalledState()
+  // re-emit the same filtered set.
+  if (m_lastRequest.queryUrl.isValid() && m_lastRequest.queryUrl.scheme() == QStringLiteral("category"))
+    m_lastRequest.category = m_lastRequest.queryUrl.path();
+
   if (!PackageIndex::instance()->xapian()->isAvailable()) {
     // The index is not built yet. Do not emit an empty reply
     m_searchPending = true;
@@ -189,57 +219,105 @@ QList<AppStream::Component> PackageKitSource::componentsInCategory(const QString
 
 void PackageKitSource::requestDiscover()
 {
-  DiscoverReply reply;
-
-  XapianIndex* xapian = PackageIndex::instance()->xapian();
-  if (xapian->isAvailable()) {
-    for (int i = 0; i < xapian->categories().count() && reply.categories.count() < 6; ++i) {
-      const CategoryItem& cat = xapian->categories().at(i);
-      DiscoverCategoryItem item;
-      item.name = cat.name;
-      item.queryUrl = QStringLiteral("category:%1").arg(cat.id);
-      Q_FOREACH (const SearchPackageItem& pkg, xapian->allInCategory(cat.id, 0, 8)) {
-        item.appIds << pkg.appId;
-      }
-      reply.categories.append(item);
-    }
-  }
-
-  m_lastDiscoverCategories = reply.categories;
-  Q_EMIT discoverReplied(reply);
-
-  // Ask the store for the discover highlight; use it only if a
-  // local component matches (onStoreDiscoverReply).
-  if (!m_storeDiscoverPending) {
-    m_storeDiscoverPending = true;
-    m_storeDiscoverSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
-    OpenStoreNetworkManager::instance()->getDiscover(m_storeDiscoverSignature);
-  }
+  m_storeDiscoverSignature = OpenStoreNetworkManager::instance()->generateNewSignature();
+  OpenStoreNetworkManager::instance()->getDiscoverV5(m_storeDiscoverSignature, API_PACKAGEKIT_PACKAGE_TYPE);
 }
 
 void PackageKitSource::onStoreDiscoverReply(const OpenStoreReply& reply)
 {
   if (reply.signature != m_storeDiscoverSignature)
     return;
-  m_storeDiscoverPending = false;
 
-  const QVariantMap highlight = reply.data.toMap().value("highlight").toMap();
-  const QString storeId = highlight.value("id").toString();
-  if (storeId.isEmpty())
-    return;
+  m_discoverPayload = reply.data.toMap();
+  if (!m_pool->isLoaded())
+    return; // the pool is not ready yet; applied on buildCompleted
 
-  // Re-emit discover with the highlight if the component id matches.
-  const AppStream::Component component = m_pool->componentById(storeId);
-  if (!component.id().isEmpty()) {
-    m_highlightAppId = component.id();
-    m_highlightBannerUrl = highlight.value("image").toUrl();
+  parseDiscoverPayload();
+}
 
-    DiscoverReply replyStruct;
-    replyStruct.highlightAppId = m_highlightAppId;
-    replyStruct.highlightBannerUrl = m_highlightBannerUrl;
-    replyStruct.categories = m_lastDiscoverCategories;
-    Q_EMIT discoverReplied(replyStruct);
+static QString localComponentId(const QString& storeId)
+{
+  return storeId.startsWith(API_PACKAGEKIT_ID_PREFIX) ? storeId.mid(API_PACKAGEKIT_ID_PREFIX.size()) : storeId;
+}
+
+void PackageKitSource::parseDiscoverPayload()
+{
+  m_storeRatings.clear();
+  m_lastHighlights.clear();
+
+  // Highlights: keep every entry whose app resolves locally, in server order.
+  const QVariantList highlights = m_discoverPayload.value("highlights").toList();
+  Q_FOREACH (const QVariant& entry, highlights) {
+    const QVariantMap highlight = entry.toMap();
+    const QString appId = localComponentId(highlight.value("id").toString());
+    qDebug() << "Discover highlight" << appId << highlight.value("image").toUrl();
+    if (appId.isEmpty() || m_pool->componentById(appId).id().isEmpty())
+      continue;
+
+    qDebug() << "discover highlight exists";
+
+    DiscoverHighlightItem item;
+    item.appId = appId;
+    item.imageUrl = highlight.value("image").toUrl();
+    item.description = highlight.value("description").toString();
+    m_lastHighlights.append(item);
+    stashRatings(appId, highlight.value("app").toMap());
   }
+
+  // Categories: server order, deduped, installable only.
+  QList<DiscoverCategoryItem> categories;
+  const QVariantList rawCategories = m_discoverPayload.value("categories").toList();
+  Q_FOREACH (const QVariant& entry, rawCategories) {
+    const QVariantMap category = entry.toMap();
+    DiscoverCategoryItem item;
+    item.name = category.value("name").toString();
+    item.tagline = category.value("tagline").toString();
+    item.queryUrl = queryUrlForReferral(category.value("referral").toString());
+
+    const QVariantList apps = category.value("apps").toList();
+    Q_FOREACH (const QVariant& appEntry, apps) {
+      const QVariantMap app = appEntry.toMap();
+      // Same strip as the highlights loop: the dedupe set and the ratings key
+      // must be the bare id that requestPackageDetails() looks up later.
+      const QString appId = localComponentId(app.value("id").toString());
+      if (appId.isEmpty() || m_pool->componentById(appId).id().isEmpty())
+        continue;
+
+      item.appIds << appId;
+      stashRatings(appId, app);
+    }
+
+    if (!item.appIds.isEmpty())
+      categories.append(item);
+  }
+
+  DiscoverReply reply;
+  reply.highlights = m_lastHighlights;
+  reply.categories = categories;
+  m_hasDiscoverContent = !reply.categories.isEmpty() || !reply.highlights.isEmpty();
+  Q_EMIT discoverReplied(reply);
+}
+
+void PackageKitSource::stashRatings(const QString& appId, const QVariantMap& app)
+{
+  const QVariantMap ratings = app.value("ratings").toMap();
+  if (!ratings.isEmpty())
+    m_storeRatings.insert(appId, ratings);
+}
+
+QString PackageKitSource::queryUrlForReferral(const QString& referral) const
+{
+  const QString value = referral.trimmed();
+  if (value.isEmpty())
+    return QString();
+
+  Q_FOREACH (const CategoryParser::Category& category, CategoryParser::categories()) {
+    if (category.name.compare(value, Qt::CaseInsensitive) == 0 || category.id.compare(value, Qt::CaseInsensitive) == 0) {
+      return QStringLiteral("category:%1").arg(category.id);
+    }
+  }
+
+  return QString();
 }
 
 QList<LocalPackageItem> PackageKitSource::requestInstalled()
@@ -277,34 +355,41 @@ QList<LocalPackageItem> PackageKitSource::requestInstalled()
 
 PackageItem* PackageKitSource::requestPackageDetails(const QString& id)
 {
-  if (m_pkgCache.contains(id))
-    return m_pkgCache.value(id);
-
-  const AppStream::Component component = m_pool->componentById(id);
-  if (component.id().isEmpty()) {
-    Q_EMIT packageDetailsError(id);
+  if (id.trimmed().isEmpty())
     return 0;
+
+  PackageKitPackageItem* pkg = 0;
+  if (m_pkgCache.contains(id)) {
+    pkg = m_pkgCache.value(id);
+  } else {
+    const AppStream::Component component = m_pool->componentById(id);
+    if (component.id().isEmpty()) {
+      Q_EMIT packageDetailsError(id);
+      return 0;
+    }
+
+    pkg = new PackageKitPackageItem(component, this);
+    m_pkgCache.insert(id, pkg);
+
+    // Same fresh-gate as requestInstalled(); show cached state first.
+    if (!m_installedFresh)
+      refreshInstalledInfo();
+
+    const QString packageName = pkg->packageName();
+    pkg->setInstalledState(installedVersionForPkgName(packageName).isEmpty() == false,
+                           installedVersionForPkgName(packageName),
+                           isPackageUpdateAvailable(packageName));
+
+    // Fetch the sizes asynchronously; repeat views hit the cache and skip the
+    // query. The daemon requires a full package id, so resolve the name first
+    // when needed. Both sizes come back in bytes.
+    requestPackageSize(pkg, packageName);
   }
 
-  PackageKitPackageItem* pkg = new PackageKitPackageItem(component, this);
-  m_pkgCache.insert(id, pkg);
+  const QVariantMap ratings = m_storeRatings.value(id);
+  if (!ratings.isEmpty())
+    pkg->setStoreMetadata(ratings);
 
-  // Same fresh-gate as requestInstalled(); show cached state first.
-  if (!m_installedFresh)
-    refreshInstalledInfo();
-
-  const QString packageName = pkg->packageName();
-  pkg->setInstalledState(installedVersionForPkgName(packageName).isEmpty() == false,
-                         installedVersionForPkgName(packageName),
-                         isPackageUpdateAvailable(packageName));
-
-  // Fetch the sizes asynchronously; repeat views hit the cache and skip the
-  // query. The daemon requires a full package id, so resolve the name first
-  // when needed. Both sizes come back in bytes.
-  requestPackageSize(pkg, packageName);
-
-  // Return synchronously without emitting packageDetailsReady; emitting
-  // pushes an unwanted detail page.
   return pkg;
 }
 

@@ -27,6 +27,7 @@ class DiscoverModel : public QAbstractListModel
   Q_OBJECT
   Q_PROPERTY(QUrl highlightBannerUrl READ highlightBannerUrl NOTIFY updated)
   Q_PROPERTY(QString highlightAppId READ highlightAppId NOTIFY updated)
+  Q_PROPERTY(QVariantList highlights READ highlights NOTIFY updated)
   Q_PROPERTY(bool ready READ ready NOTIFY updated)
 
 public:
@@ -42,6 +43,7 @@ public:
 
   QUrl highlightBannerUrl() const { return m_highlightBannerUrl; }
   QString highlightAppId() const { return m_highlightAppId; }
+  QVariantList highlights() const { return m_highlights; }
   bool ready() const { return m_ready; }
 
   int rowCount(const QModelIndex& parent = QModelIndex()) const Q_DECL_OVERRIDE;
@@ -62,6 +64,7 @@ private:
   PackageSource* m_source;
 
   QList<DiscoverCategoryItem> m_list;
+  QVariantList m_highlights;
 
   QUrl m_highlightBannerUrl;
   QString m_highlightAppId;

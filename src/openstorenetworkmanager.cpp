@@ -177,6 +177,19 @@ void OpenStoreNetworkManager::getDiscover(const QString& signature)
   parseReply(reply, signature);
 }
 
+void OpenStoreNetworkManager::getDiscoverV5(const QString& signature, const QString& packageType)
+{
+  QUrl url(getUrl(API_DISCOVER_V5_ENDPOINT));
+  if (!packageType.isEmpty()) {
+    QUrlQuery q(url);
+    q.addQueryItem("package_type", packageType);
+    url.setQuery(q);
+  }
+
+  QNetworkReply* reply = sendRequest(QNetworkRequest(url));
+  parseReply(reply, signature);
+}
+
 void OpenStoreNetworkManager::getAppDetails(const QString& signature, const QString& appId)
 {
   if (appId.trimmed().isEmpty()) {

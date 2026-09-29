@@ -38,6 +38,7 @@ public:
   void setinstalledSize(int installedSize) override;
   void setDownloadSize(int downloadSize) override;
   void setDependencyCount(int dependencyCount) override;
+  void setStoreMetadata(const QVariantMap& ratingsMap);
 
 protected:
   void fillData(const QVariantMap& json) override;

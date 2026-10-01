@@ -409,7 +409,7 @@ MainView {
         Dialog {
             id: installationErrorDialog
             title: i18n.tr("Installation failed")
-            text: i18n.tr("The package could not be installed. Make sure it is a valid click package.")
+            text: i18n.tr("The package could not be installed.") + " " + (BackendInstaller.installer.lastError || "")
             Button {
                 color: theme.palette.normal.positive
                 text: i18n.tr("OK")

@@ -58,7 +58,7 @@ Page {
                             });
                             request.runAsync();
                         } else if (app.packageType === "packagekit") {
-                            PlatformIntegration.packageKitInstaller.removePackage(app.packageUrl, app.version);
+                            PlatformIntegration.packageKitInstaller.removePackage(app.packageUrl);
                         }
                         bottomEdgeStack.pop();
                     })

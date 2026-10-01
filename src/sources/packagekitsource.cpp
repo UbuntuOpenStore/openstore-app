@@ -347,7 +347,8 @@ QList<LocalPackageItem> PackageKitSource::requestInstalled()
     item.appLaunchUrl = QString();
     item.updateAvailable = isPackageUpdateAvailable(packageName);
     item.updateStatus = item.updateAvailable ? QStringLiteral("available") : QStringLiteral("none");
-    item.packageUrl = QStringLiteral("%1").arg(packageName); // install target passed to PackageKitInstaller
+    // Fully qualified id from getPackages, which the daemon's API requires.
+    item.packageUrl = m_installedPackageIds.value(packageName, packageName);
     result.append(item);
   }
   return result;
@@ -421,6 +422,33 @@ void PackageKitSource::onInstallFinished()
   }
 }
 
+void PackageKitSource::syncCachedItemState()
+{
+  // Cached detail items never had their installed/update state recomputed after a transaction.
+  for (auto it = m_pkgCache.constBegin(); it != m_pkgCache.constEnd(); ++it) {
+    PackageKitPackageItem* pkg = it.value();
+    if (!pkg) {
+      continue;
+    }
+
+    const QString packageName = pkg->packageName();
+    if (packageName.isEmpty()) {
+      continue;
+    }
+
+    const QString installedVersion = installedVersionForPkgName(packageName);
+    const bool updateAvailable = isPackageUpdateAvailable(packageName);
+    const bool installed = !installedVersion.isEmpty();
+
+    // setInstalledState() emits unconditionally; skip when nothing changed.
+    if (pkg->installed() == installed && pkg->updateAvailable() == updateAvailable) {
+      continue;
+    }
+
+    pkg->setInstalledState(installed, installedVersion, updateAvailable);
+  }
+}
+
 void PackageKitSource::refreshInstalledInfo()
 {
   // Skip if a query is already in flight; never stack transactions.
@@ -431,11 +459,11 @@ void PackageKitSource::refreshInstalledInfo()
   m_installedPackageIds.clear();
   m_updatePackageIds.clear();
 
-  // When the last transaction finishes, mark the set fresh and re-emit.
   auto finalize = [this]() {
     if (--m_installedTxsPending > 0)
       return;
     m_installedFresh = true;
+    syncCachedItemState();
     Q_EMIT installedChanged();
     refreshInstalledState();
   };
@@ -496,10 +524,10 @@ void PackageKitSource::requestPackageSize(PackageKitPackageItem* pkg, const QStr
     return;
   m_detailsFetched.insert(packageName);
 
-  // Installed packages have a full id from the getPackages query; use it
-  // directly. Others need a Resolve first (the daemon rejects bare names).
+  // Use the installed id when available; otherwise Resolve the name first (the daemon rejects bare names).
   const QString installedId = m_installedPackageIds.value(packageName);
   if (!installedId.isEmpty()) {
+    pkg->setPackageId(installedId);
     startGetDetails(installedId, pkg, packageName);
     return;
   }
@@ -515,6 +543,7 @@ void PackageKitSource::requestPackageSize(PackageKitPackageItem* pkg, const QStr
       if (PackageKit::Transaction::packageName(packageID) != packageName)
         return;
       disconnect(resolveTx, nullptr, this, nullptr);
+      pkg->setPackageId(packageID);
       startGetDetails(packageID, pkg, packageName);
     });
 }

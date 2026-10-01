@@ -33,6 +33,9 @@ public:
   QString appLaunchUrl() const override;
 
   QString packageName() const { return m_packageName; }
+  // PackageKit wants a full id ("name;version;arch;data"); fall back to the name until the id is resolved.
+  QString installTarget() const { return m_packageId.isEmpty() ? m_packageName : m_packageId; }
+  void setPackageId(const QString& packageId) { m_packageId = packageId; }
 
   void setInstalledState(bool installed, const QString& version, bool updateAvailable);
   void setinstalledSize(int installedSize) override;
@@ -46,6 +49,7 @@ protected:
 private:
   QString m_componentId;
   QString m_packageName;
+  QString m_packageId;
   QString m_desktopEntry;
 };
 

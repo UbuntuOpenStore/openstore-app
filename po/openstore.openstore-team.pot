@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-29 04:19+0000\n"
+"POT-Creation-Date: 2026-10-01 03:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1156,8 +1156,7 @@ msgid "Installation failed"
 msgstr ""
 
 #: ../qml/Main.qml.in:412
-msgid ""
-"The package could not be installed. Make sure it is a valid click package."
+msgid "The package could not be installed."
 msgstr ""
 
 #: ../qml/Main.qml.in:426

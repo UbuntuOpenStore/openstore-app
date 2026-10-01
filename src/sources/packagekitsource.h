@@ -61,6 +61,8 @@ private:
   bool isPackageUpdateAvailable(const QString& packageName) const;
   void requestPackageSize(PackageKitPackageItem* pkg, const QString& packageName);
   void startGetDetails(const QString& packageId, PackageKitPackageItem* pkg, const QString& packageName);
+  // Refresh cached items' installed/update state once the installed sets are fresh.
+  void syncCachedItemState();
 
   void parseDiscoverPayload();
   void stashRatings(const QString& appId, const QVariantMap& app);

@@ -29,6 +29,7 @@ class PackageKitInstaller : public QObject
   Q_PROPERTY(bool busy READ busy NOTIFY busyChanged)
   Q_PROPERTY(int downloadProgress READ downloadProgress NOTIFY downloadProgressChanged)
   Q_PROPERTY(QString lastError READ lastError NOTIFY packageInstallationFailed)
+  Q_PROPERTY(QString lastErrorName READ lastErrorName NOTIFY packageInstallationFailed)
 
 public:
   explicit PackageKitInstaller(QObject* parent = 0);
@@ -36,6 +37,7 @@ public:
   bool busy() const { return m_busy; }
   int downloadProgress() const { return m_downloadProgress; }
   QString lastError() const { return m_lastError; }
+  QString lastErrorName() const { return m_lastErrorName; }
   PackageKit::Transaction::Role lastRole() const { return m_lastRole; }
 
 Q_SIGNALS:
@@ -56,6 +58,12 @@ public Q_SLOTS:
 private:
   void setupTransaction(PackageKit::Transaction* transaction);
 
+  // Labels the in-flight operation so failImmediately() can separate install/remove failures from background refreshes.
+  void beginOperation(const QString& operation, const QString& packageId);
+
+  // Reports failure for an operation that never produced a transaction.
+  void failImmediately(const QString& reason);
+
 private Q_SLOTS:
   void slotPercentageChanged();
   void slotStatusChanged();
@@ -67,10 +75,13 @@ private:
   bool m_busy = false;
   int m_downloadProgress = 0;
   QString m_lastError;
+  QString m_lastErrorName;
   PackageKit::Transaction::Role m_lastRole = PackageKit::Transaction::RoleUnknown;
   QPointer<PackageKit::Transaction> m_transaction;
   QString m_checkPackageId;
   bool m_checkFound = false; // set by slotPackage when the checked pkg is listed as installed
+  QString m_operation;       // "install" / "remove" / ... label of the operation owning m_transaction
+  QString m_requestedPackageId;
 };
 
 #endif // PACKAGEKITINSTALLER_H

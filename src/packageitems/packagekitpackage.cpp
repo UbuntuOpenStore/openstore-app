@@ -110,6 +110,7 @@ PackageKitPackageItem::PackageKitPackageItem(const AppStream::Component& compone
 bool PackageKitPackageItem::install() const
 {
   PackageKitInstaller* installer = PlatformIntegration::instance()->packageKitInstaller();
+  // An empty package name means the AppStream metadata has no <provides><binary>.
   if (!installer || installer->busy() || m_packageName.isEmpty())
     return false;
 
@@ -128,9 +129,11 @@ bool PackageKitPackageItem::install() const
     Q_EMIT downloadProgressChanged();
   });
 
-  installer->installPackage(m_packageName);
+  // Mark busy before dispatching; a synchronous failure is unwound by the busyChanged handler above.
   m_isBusy = true;
   Q_EMIT updated();
+
+  installer->installPackage(installTarget());
   return true;
 }
 
@@ -155,7 +158,7 @@ bool PackageKitPackageItem::remove() const
   m_isBusy = true;
   Q_EMIT updated();
 
-  installer->removePackage(m_packageName);
+  installer->removePackage(installTarget());
   return true;
 }
 

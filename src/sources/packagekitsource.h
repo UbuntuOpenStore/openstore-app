@@ -32,10 +32,6 @@ class PackageKitPackageItem;
 class PackageIndex;
 class PackageKitInstaller;
 
-namespace AppStream {
-class Component;
-}
-
 class PackageKitSource : public PackageSource
 {
   Q_OBJECT
@@ -68,7 +64,10 @@ private:
   void stashRatings(const QString& appId, const QVariantMap& app);
   QString queryUrlForReferral(const QString& referral) const;
 
-  QList<AppStream::Component> componentsInCategory(const QString& categoryId);
+  // The AppStream category terms backing an OpenStore category slug; empty
+  // when the slug is unknown. XapianIndex::searchCategories() matches any of
+  // them (exact boolean OR).
+  QStringList categoriesForSlug(const QString& categoryId) const;
 
 private Q_SLOTS:
   void onInstallFinished();

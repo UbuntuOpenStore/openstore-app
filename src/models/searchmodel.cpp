@@ -33,6 +33,8 @@ SearchModel::SearchModel(QObject* parent)
   connect(this, &SearchModel::queryUrlChanged, this, &SearchModel::update);
   connect(this, &SearchModel::filterTypeChanged, this, &SearchModel::update);
   connect(this, &SearchModel::filterPackageTypeChanged, this, &SearchModel::update);
+
+  update();
 }
 
 int SearchModel::rowCount(const QModelIndex& parent) const

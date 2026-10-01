@@ -42,10 +42,10 @@ public:
                          QString* errorMessage,
                          std::function<void(int)> progress = std::function<void(int)>());
 
-  // Marks the index usable after a successful buildToFile()
   void setAvailable();
 
-  QList<SearchPackageItem> search(const QString& queryText, int offset, int limit);
+  QList<SearchPackageItem> search(const QString& queryText, int offset, int limit, const QString& sortMode = QString());
+  QList<SearchPackageItem> searchCategories(const QStringList& appstreamCategories, int offset, int limit, const QString& sortMode);
   int totalMatches() const;
   QString componentIdForPkgName(const QString& packageName) const;
 

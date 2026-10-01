@@ -20,6 +20,7 @@
 
 #include <AppStreamQt/component.h>
 #include <AppStreamQt/icon.h>
+#include <AppStreamQt/release.h>
 
 #include <QDebug>
 #include <QDir>
@@ -30,6 +31,9 @@
 #include <QRegularExpression>
 #include <QStandardPaths>
 
+#include <string>
+#include <vector>
+
 #include <xapian.h>
 
 namespace {
@@ -38,6 +42,16 @@ const int VALUE_NAME = 1;
 const int VALUE_SUMMARY = 2;
 const int VALUE_CATEGORY = 3;
 const int VALUE_ICON = 4;
+const int VALUE_NAME_SORT = 5; // case-folded name; byte-order sorts "name"/"-name"
+const int VALUE_DATE_SORT = 6; // newest release timestamp via sortable_serialise()
+
+void applyRequestedSort(Xapian::Enquire& enquire, const QString& sortMode)
+{
+  if (sortMode == QStringLiteral("name") || sortMode == QStringLiteral("-name"))
+    enquire.set_sort_by_value_then_relevance(VALUE_NAME_SORT, sortMode == QStringLiteral("-name"));
+  else if (sortMode == QStringLiteral("updated_date") || sortMode == QStringLiteral("-updated_date"))
+    enquire.set_sort_by_value_then_relevance(VALUE_DATE_SORT, sortMode == QStringLiteral("-updated_date"));
+}
 }
 
 XapianIndex::XapianIndex(QObject* parent)
@@ -111,6 +125,17 @@ int XapianIndex::buildToFile(const QString& dbPath,
       const AppStream::Icon icon = component.icons().isEmpty() ? AppStream::Icon() : component.icons().first();
       doc.add_value(VALUE_ICON, (!icon.isEmpty() ? icon.url().toString() : QString()).toStdString());
 
+      doc.add_value(VALUE_NAME_SORT, name.toLower().toStdString());
+
+      QDateTime latestRelease;
+      Q_FOREACH (const AppStream::Release& release, component.releasesPlain().entries()) {
+        const QDateTime timestamp = release.timestamp();
+        if (timestamp.isValid() && (latestRelease.isNull() || timestamp > latestRelease))
+          latestRelease = timestamp;
+      }
+      if (latestRelease.isValid())
+        doc.add_value(VALUE_DATE_SORT, Xapian::sortable_serialise(double(latestRelease.toMSecsSinceEpoch())));
+
       db.add_document(doc);
       ++count;
 
@@ -145,7 +170,7 @@ void XapianIndex::setAvailable()
   m_lastBuilt = QDateTime::currentDateTime();
 }
 
-QList<SearchPackageItem> XapianIndex::search(const QString& queryText, int offset, int limit)
+QList<SearchPackageItem> XapianIndex::search(const QString& queryText, int offset, int limit, const QString& sortMode)
 {
   QList<SearchPackageItem> result;
   if (!m_available)
@@ -176,6 +201,9 @@ QList<SearchPackageItem> XapianIndex::search(const QString& queryText, int offse
 
     Xapian::Enquire enquire(db);
     enquire.set_query(query);
+    // Sorting is done by Xapian against the sort values written at index time.
+    applyRequestedSort(enquire, sortMode);
+
     Xapian::MSet mset = enquire.get_mset(offset, limit);
     m_totalMatches = int(mset.get_matches_estimated());
 
@@ -185,6 +213,45 @@ QList<SearchPackageItem> XapianIndex::search(const QString& queryText, int offse
     }
   } catch (const Xapian::Error& e) {
     qWarning() << "XapianIndex: search failed:" << QString::fromUtf8(e.get_msg().c_str());
+  }
+  return result;
+}
+
+QList<SearchPackageItem> XapianIndex::searchCategories(const QStringList& appstreamCategories,
+                                                       int offset,
+                                                       int limit,
+                                                       const QString& sortMode)
+{
+  QList<SearchPackageItem> result;
+  if (!m_available || appstreamCategories.isEmpty())
+    return result;
+
+  try {
+    Xapian::Database db(m_databasePath.toUtf8().constData());
+
+    std::vector<std::string> terms;
+    Q_FOREACH (const QString& category, appstreamCategories) {
+      const QString term = QStringLiteral("XCAT") + sanitizeTerm(category);
+      if (!term.isEmpty())
+        terms.push_back(term.toStdString());
+    }
+    if (terms.empty())
+      return result;
+    Xapian::Query query(Xapian::Query::OP_OR, terms.begin(), terms.end());
+
+    Xapian::Enquire enquire(db);
+    enquire.set_query(query);
+    applyRequestedSort(enquire, sortMode);
+
+    Xapian::MSet mset = enquire.get_mset(offset, limit);
+    m_totalMatches = int(mset.get_matches_estimated());
+
+    for (Xapian::MSetIterator it = mset.begin(); it != mset.end(); ++it) {
+      Xapian::Document doc = it.get_document();
+      result.append(packageItemFromDocument(QByteArray::fromStdString(doc.get_data())));
+    }
+  } catch (const Xapian::Error& e) {
+    qWarning() << "XapianIndex: searchCategories failed:" << QString::fromUtf8(e.get_msg().c_str());
   }
   return result;
 }

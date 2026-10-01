@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-01 03:17+0000\n"
+"POT-Creation-Date: 2026-10-01 03:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -763,7 +763,7 @@ msgstr ""
 
 #: ../qml/Components/PackageListItem.qml.in:48
 #: ../qml/Components/PackageTile.qml.in:93
-#: ../qml/Dialogs/FilterDialog.qml.in:155
+#: ../qml/Dialogs/FilterDialog.qml.in:164
 msgid "Snap"
 msgstr ""
 
@@ -812,7 +812,7 @@ msgid "Submit"
 msgstr ""
 
 #: ../qml/Components/ReviewPreview.qml.in:220
-#: ../qml/Dialogs/FilterDialog.qml.in:201
+#: ../qml/Dialogs/FilterDialog.qml.in:210
 #: ../qml/Dialogs/InstallWarningDialog.qml.in:61
 #: ../qml/Dialogs/SnapWarningDialog.qml.in:55
 #: ../qml/Dialogs/UnconfinedWarningDialog.qml.in:46
@@ -895,77 +895,77 @@ msgstr ""
 msgid "Sort By"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:47 ../qml/Dialogs/FilterDialog.qml.in:67
+#: ../qml/Dialogs/FilterDialog.qml.in:47 ../qml/Dialogs/FilterDialog.qml.in:75
 msgid "Relevance"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:48
+#: ../qml/Dialogs/FilterDialog.qml.in:50
 msgid "Most Popular"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:49
+#: ../qml/Dialogs/FilterDialog.qml.in:51
 msgid "Least Popular"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:50
+#: ../qml/Dialogs/FilterDialog.qml.in:54
 msgid "Title (A-Z)"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:51
+#: ../qml/Dialogs/FilterDialog.qml.in:55
 msgid "Title (Z-A)"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:52
+#: ../qml/Dialogs/FilterDialog.qml.in:58
 msgid "Newest"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:53
+#: ../qml/Dialogs/FilterDialog.qml.in:59
 msgid "Oldest"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:54
+#: ../qml/Dialogs/FilterDialog.qml.in:62
 msgid "Latest Update"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:55
+#: ../qml/Dialogs/FilterDialog.qml.in:63
 msgid "Oldest Update"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:95
+#: ../qml/Dialogs/FilterDialog.qml.in:103
 msgid "Type"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:102
-#: ../qml/Dialogs/FilterDialog.qml.in:117
+#: ../qml/Dialogs/FilterDialog.qml.in:110
+#: ../qml/Dialogs/FilterDialog.qml.in:125
 msgid "All Types"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:103
+#: ../qml/Dialogs/FilterDialog.qml.in:111
 msgid "Apps"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:104
+#: ../qml/Dialogs/FilterDialog.qml.in:112
 msgid "Bookmarks"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:105
+#: ../qml/Dialogs/FilterDialog.qml.in:113
 msgid "Web Apps"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:145
+#: ../qml/Dialogs/FilterDialog.qml.in:154
 msgid "Package Type"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:153
-#: ../qml/Dialogs/FilterDialog.qml.in:167
+#: ../qml/Dialogs/FilterDialog.qml.in:162
+#: ../qml/Dialogs/FilterDialog.qml.in:176
 msgid "All"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:154
+#: ../qml/Dialogs/FilterDialog.qml.in:163
 msgid "Click"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:193
+#: ../qml/Dialogs/FilterDialog.qml.in:202
 msgid "Apply"
 msgstr ""
 

@@ -39,6 +39,13 @@
 #include <PackageKit/daemon.h>
 #include <PackageKit/details.h>
 
+namespace {
+// Category browse needs an exact match count to page correctly; Xapian's
+// estimate is not exact for OR queries, so fetch the full (sorted) match set
+// once and slice in C++. Cap the fetch to bound the memory cost.
+const int MAX_FETCH_FOR_SORT = 100000;
+} // namespace
+
 PackageKitSource::PackageKitSource(QObject* parent)
   : PackageSource(parent)
   , m_installer(PlatformIntegration::instance()->packageKitInstaller())
@@ -123,41 +130,54 @@ void PackageKitSource::emitSearchReply(bool refresh)
   SearchReply reply;
 
   XapianIndex* xapian = PackageIndex::instance()->xapian();
-  const bool hasFilter = !m_lastRequest.filterString.isEmpty();
-  const bool hasCategory = !m_lastRequest.category.isEmpty();
+  const int offset = qMax(0, m_lastRequest.offset);
+  const int limit = qMax(0, m_lastRequest.limit);
 
-  if (hasCategory) {
-    const QList<AppStream::Component> components = componentsInCategory(m_lastRequest.category);
-
-    const int offset = qMax(0, m_lastRequest.offset);
-    const int limit = qMax(0, m_lastRequest.limit);
-    const int end = qMin(components.count(), offset + limit);
-
-    QList<SearchPackageItem> items;
-    for (int i = offset; i < end; ++i) {
-      SearchPackageItem item;
-      item.appId = components.at(i).id();
-      item.packageType = QStringLiteral("packagekit");
-      items.append(item);
+  if (!m_lastRequest.category.isEmpty()) {
+    // Category browse matches any of the slug's AppStream categories; Xapian
+    // produces the same set the category parser would and sorts it.
+    const QStringList categories = categoriesForSlug(m_lastRequest.category);
+    if (categories.isEmpty()) {
+      // Unknown category (no AppStream terms): nothing to show, ever.
+      reply.totalCount = 0;
+      reply.fetchedAll = true;
+      reply.refresh = refresh;
+      Q_EMIT searchReplied(reply);
+      return;
     }
-    reply.packages = m_lastSearchList = enrichList(items);
-    reply.totalCount = components.count();
-    reply.fetchedAll = end >= components.count();
+
+    // Xapian's get_matches_estimated() is not exact for OR queries, and
+    // paging against a wrong total would truncate the category. Fetch the
+    // whole (already sorted by Xapian) match set once and slice in C++.
+    const QList<SearchPackageItem> all = xapian->searchCategories(categories, 0, MAX_FETCH_FOR_SORT, m_lastRequest.sortMode);
+    reply.totalCount = all.count();
+    const int end = qMin(reply.totalCount, offset + limit);
+    QList<SearchPackageItem> page;
+    for (int i = offset; i < end; ++i)
+      page.append(all.at(i));
+    reply.packages = m_lastSearchList = enrichList(page);
+    reply.fetchedAll = end >= reply.totalCount;
     reply.refresh = refresh;
     Q_EMIT searchReplied(reply);
     return;
-  } else if (hasFilter) {
-    reply.packages = m_lastSearchList = enrichList(xapian->search(m_lastRequest.filterString, m_lastRequest.offset, m_lastRequest.limit));
-  } else {
-    // Browse-all: empty query. Passing QString() (not "*") selects MatchAll
-    // in XapianIndex::search, giving docid order.
-    reply.packages = m_lastSearchList = enrichList(xapian->search(QString(), m_lastRequest.offset, m_lastRequest.limit));
   }
 
+  // Search or browse-all: Xapian applies the requested sort before paging.
+  // An empty query selects MatchAll (all components, docid order).
+  reply.packages = m_lastSearchList = enrichList(xapian->search(m_lastRequest.filterString, offset, limit, m_lastRequest.sortMode));
   reply.totalCount = xapian->totalMatches();
-  reply.fetchedAll = (m_lastRequest.offset + reply.packages.count()) >= reply.totalCount;
+  reply.fetchedAll = (offset + reply.packages.count()) >= reply.totalCount;
   reply.refresh = refresh;
   Q_EMIT searchReplied(reply);
+}
+
+QStringList PackageKitSource::categoriesForSlug(const QString& categoryId) const
+{
+  Q_FOREACH (const CategoryParser::Category& category, CategoryParser::categories()) {
+    if (category.id == categoryId)
+      return category.appstreamCategories;
+  }
+  return QStringList();
 }
 
 QList<SearchPackageItem> PackageKitSource::enrichList(const QList<SearchPackageItem>& items) const
@@ -206,15 +226,6 @@ void PackageKitSource::requestCategories()
     categories.append(item);
   }
   Q_EMIT categoriesReplied(categories);
-}
-
-QList<AppStream::Component> PackageKitSource::componentsInCategory(const QString& categoryId)
-{
-  Q_FOREACH (const CategoryParser::Category& category, CategoryParser::categories()) {
-    if (category.id == categoryId)
-      return CategoryParser::matchingComponents(category, m_pool->allComponents());
-  }
-  return QList<AppStream::Component>();
 }
 
 void PackageKitSource::requestDiscover()

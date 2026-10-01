@@ -45,12 +45,20 @@ Component {
 
             Component.onCompleted: {
                 sortModel.append({ label: i18n.tr('Relevance'), value: 'relevance' });
-                sortModel.append({ label: i18n.tr('Most Popular'), value: '-calculated_rating' });
-                sortModel.append({ label: i18n.tr('Least Popular'), value: 'calculated_rating' });
+
+                if (PlatformIntegration.clickSupport) {
+                    sortModel.append({ label: i18n.tr('Most Popular'), value: '-calculated_rating' });
+                    sortModel.append({ label: i18n.tr('Least Popular'), value: 'calculated_rating' });
+                }
+
                 sortModel.append({ label: i18n.tr('Title (A-Z)'), value: 'name' });
                 sortModel.append({ label: i18n.tr('Title (Z-A)'), value: '-name' });
-                sortModel.append({ label: i18n.tr('Newest'), value: '-published_date' });
-                sortModel.append({ label: i18n.tr('Oldest'), value: 'published_date' });
+
+                if (PlatformIntegration.clickSupport) {
+                    sortModel.append({ label: i18n.tr('Newest'), value: '-published_date' });
+                    sortModel.append({ label: i18n.tr('Oldest'), value: 'published_date' });
+                }
+
                 sortModel.append({ label: i18n.tr('Latest Update'), value: '-updated_date' });
                 sortModel.append({ label: i18n.tr('Oldest Update'), value: 'updated_date' });
 
@@ -93,6 +101,7 @@ Component {
             wrapMode: Text.WordWrap
             maximumLineCount: Number.MAX_VALUE
             text: i18n.tr('Type')
+            visible: PlatformIntegration.clickSupport
         }
 
         ListModel {
@@ -115,6 +124,7 @@ Component {
         ComboButton {
             id: type
             text: i18n.tr('All Types')
+            visible: PlatformIntegration.clickSupport
 
             onClicked: type.expanded = !type.expanded
 

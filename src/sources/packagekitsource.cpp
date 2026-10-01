@@ -39,13 +39,6 @@
 #include <PackageKit/daemon.h>
 #include <PackageKit/details.h>
 
-namespace {
-// Category browse needs an exact match count to page correctly; Xapian's
-// estimate is not exact for OR queries, so fetch the full (sorted) match set
-// once and slice in C++. Cap the fetch to bound the memory cost.
-const int MAX_FETCH_FOR_SORT = 100000;
-} // namespace
-
 PackageKitSource::PackageKitSource(QObject* parent)
   : PackageSource(parent)
   , m_installer(PlatformIntegration::instance()->packageKitInstaller())
@@ -130,43 +123,20 @@ void PackageKitSource::emitSearchReply(bool refresh)
   SearchReply reply;
 
   XapianIndex* xapian = PackageIndex::instance()->xapian();
-  const int offset = qMax(0, m_lastRequest.offset);
-  const int limit = qMax(0, m_lastRequest.limit);
+  const int fetchAll = m_pool->componentCount();
 
+  QList<SearchPackageItem> items;
   if (!m_lastRequest.category.isEmpty()) {
-    // Category browse matches any of the slug's AppStream categories; Xapian
-    // produces the same set the category parser would and sorts it.
     const QStringList categories = categoriesForSlug(m_lastRequest.category);
-    if (categories.isEmpty()) {
-      // Unknown category (no AppStream terms): nothing to show, ever.
-      reply.totalCount = 0;
-      reply.fetchedAll = true;
-      reply.refresh = refresh;
-      Q_EMIT searchReplied(reply);
-      return;
-    }
-
-    // Xapian's get_matches_estimated() is not exact for OR queries, and
-    // paging against a wrong total would truncate the category. Fetch the
-    // whole (already sorted by Xapian) match set once and slice in C++.
-    const QList<SearchPackageItem> all = xapian->searchCategories(categories, 0, MAX_FETCH_FOR_SORT, m_lastRequest.sortMode);
-    reply.totalCount = all.count();
-    const int end = qMin(reply.totalCount, offset + limit);
-    QList<SearchPackageItem> page;
-    for (int i = offset; i < end; ++i)
-      page.append(all.at(i));
-    reply.packages = m_lastSearchList = enrichList(page);
-    reply.fetchedAll = end >= reply.totalCount;
-    reply.refresh = refresh;
-    Q_EMIT searchReplied(reply);
-    return;
+    if (!categories.isEmpty())
+      items = xapian->searchCategories(categories, 0, fetchAll, m_lastRequest.sortMode);
+  } else {
+    items = xapian->search(m_lastRequest.filterString, 0, fetchAll, m_lastRequest.sortMode);
   }
 
-  // Search or browse-all: Xapian applies the requested sort before paging.
-  // An empty query selects MatchAll (all components, docid order).
-  reply.packages = m_lastSearchList = enrichList(xapian->search(m_lastRequest.filterString, offset, limit, m_lastRequest.sortMode));
-  reply.totalCount = xapian->totalMatches();
-  reply.fetchedAll = (offset + reply.packages.count()) >= reply.totalCount;
+  reply.packages = m_lastSearchList = enrichList(items);
+  reply.totalCount = reply.packages.count();
+  reply.fetchedAll = true;
   reply.refresh = refresh;
   Q_EMIT searchReplied(reply);
 }

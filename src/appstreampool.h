@@ -37,6 +37,8 @@ public:
   QStringList componentCategories() const;
   QList<AppStream::Component> componentsInCategory(const QString& categoryId) const;
   QList<AppStream::Component> allComponents() const;
+  // Number of components; an upper bound on any Xapian match set.
+  int componentCount() const { return m_components.count(); }
   QStringList repoDescriptions() const;
 
 private:

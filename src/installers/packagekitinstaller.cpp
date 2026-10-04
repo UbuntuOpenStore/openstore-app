@@ -126,7 +126,7 @@ void PackageKitInstaller::failImmediately(const QString& reason)
   m_busy = false;
   Q_EMIT busyChanged();
 
-  if (m_operation == QStringLiteral("install") || m_operation == QStringLiteral("remove")) {
+  if (m_operation == QStringLiteral("install") || m_operation == QStringLiteral("remove") || m_operation == QStringLiteral("upgrade")) {
     Q_EMIT packageInstallationFailed();
   }
 
@@ -186,6 +186,19 @@ void PackageKitInstaller::removePackage(const QString& packageId)
   setupTransaction(transaction);
 }
 
+void PackageKitInstaller::updatePackages(const QStringList& packageIds)
+{
+  if (busy() || packageIds.isEmpty())
+    return;
+
+  beginOperation(QStringLiteral("upgrade"),
+                 packageIds.size() == 1 ? packageIds.first() : QStringLiteral("%1 packages").arg(packageIds.size()));
+
+  PackageKit::Transaction* transaction =
+    PackageKit::Daemon::updatePackages(packageIds, PackageKit::Transaction::TransactionFlagOnlyTrusted);
+  setupTransaction(transaction);
+}
+
 void PackageKitInstaller::updateCache()
 {
   if (busy())
@@ -223,14 +236,20 @@ void PackageKitInstaller::slotPercentageChanged()
 {
   if (!m_transaction)
     return;
-  m_downloadProgress = int(m_transaction->percentage());
-  Q_EMIT downloadProgressChanged();
+
+  if (m_transaction->status() == PackageKit::Transaction::StatusInstall ||
+      m_transaction->status() == PackageKit::Transaction::StatusRemove ||
+      m_transaction->status() == PackageKit::Transaction::StatusUpdate) {
+    m_downloadProgress = int(m_transaction->percentage());
+    Q_EMIT downloadProgressChanged();
+  }
 }
 
 void PackageKitInstaller::slotStatusChanged()
 {
   if (!m_transaction)
     return;
+
   Q_EMIT busyChanged(); // keep pages' busy binding live while status changes
 }
 
@@ -238,8 +257,7 @@ void PackageKitInstaller::slotFinished(PackageKit::Transaction::Exit status, uin
 {
   Q_UNUSED(runtime)
 
-  // finished() fires twice on failure; the follow-up arrives with no transaction.
-  if (m_transaction.isNull())
+  if (!m_transaction || m_transaction.isNull())
     return;
 
   if (m_lastRole == PackageKit::Transaction::RoleGetPackages) {

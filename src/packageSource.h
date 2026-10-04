@@ -106,6 +106,7 @@ struct LocalPackageItem
   bool updateAvailable = false;
   QString updateStatus; // "none" | "available" | "downgrade" | "snap"
   QString packageUrl;   // click: download URL; packagekit: PackageKit package id passed to installer
+  QString updatePackageId;
   QString appLaunchUrl;
   QString packageType;
 };

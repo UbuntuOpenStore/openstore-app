@@ -45,6 +45,7 @@ public:
     RoleUpdateAvailable,
     RoleUpdateStatus,
     RolePackageUrl,
+    RoleUpdatePackageId,
     RoleAppLaunchUrl,
     RolePackageType,
   };

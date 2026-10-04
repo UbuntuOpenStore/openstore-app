@@ -231,11 +231,8 @@ void PackageKitSource::parseDiscoverPayload()
   Q_FOREACH (const QVariant& entry, highlights) {
     const QVariantMap highlight = entry.toMap();
     const QString appId = localComponentId(highlight.value("id").toString());
-    qDebug() << "Discover highlight" << appId << highlight.value("image").toUrl();
     if (appId.isEmpty() || m_pool->componentById(appId).id().isEmpty())
       continue;
-
-    qDebug() << "discover highlight exists";
 
     DiscoverHighlightItem item;
     item.appId = appId;
@@ -330,6 +327,7 @@ QList<LocalPackageItem> PackageKitSource::requestInstalled()
     item.updateStatus = item.updateAvailable ? QStringLiteral("available") : QStringLiteral("none");
     // Fully qualified id from getPackages, which the daemon's API requires.
     item.packageUrl = m_installedPackageIds.value(packageName, packageName);
+    item.updatePackageId = updatePackageIdForPkgName(packageName);
     result.append(item);
   }
   return result;
@@ -492,11 +490,16 @@ QString PackageKitSource::installedVersionForPkgName(const QString& packageName)
 
 bool PackageKitSource::isPackageUpdateAvailable(const QString& packageName) const
 {
+  return !updatePackageIdForPkgName(packageName).isEmpty();
+}
+
+QString PackageKitSource::updatePackageIdForPkgName(const QString& packageName) const
+{
   Q_FOREACH (const QString& packageID, m_updatePackageIds) {
     if (PackageKit::Transaction::packageName(packageID) == packageName)
-      return true;
+      return packageID;
   }
-  return false;
+  return QString();
 }
 
 void PackageKitSource::requestPackageSize(PackageKitPackageItem* pkg, const QString& packageName)

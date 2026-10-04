@@ -28,11 +28,19 @@ Page {
 
     property var currentApp: null
     property var appsUpdating: []
+    property var batchUpdating: []
+    property bool batchRunning: false
 
     property bool updating: BackendInstaller.installer.busy || PackagesCache.updatingCache
 
     function updateNextPackage() {
         //console.log('updateNextPackage', JSON.stringify(appsUpdating));
+
+        if (batchRunning) {
+            batchRunning = false;
+            batchUpdating = [];
+            return;
+        }
 
         if (appsUpdating.length > 0) {
             var nextApp = appsUpdating.shift();
@@ -40,6 +48,10 @@ Page {
 
             BackendInstaller.installer.installPackage(nextApp.packageUrl);
         }
+    }
+
+    function isUpdating(appId) {
+        return updating && (currentApp == appId || batchUpdating.indexOf(appId) >= 0);
     }
 
     Connections {
@@ -106,6 +118,26 @@ Page {
                         }
                     }
 
+                    if (PlatformIntegration.packageKit && updates.length > 0) {
+                        var packageIds = [];
+                        var appIds = [];
+                        for (var j = 0; j < updates.length; j++) {
+                            if (!updates[j].updatePackageId)
+                                continue;
+
+                            packageIds.push(updates[j].updatePackageId);
+                            appIds.push(updates[j].appId);
+                        }
+
+                        if (packageIds.length == 0)
+                            return;
+
+                        batchUpdating = appIds;
+                        batchRunning = true;
+                        BackendInstaller.installer.updatePackages(packageIds);
+                        return;
+                    }
+
                     appsUpdating = updates;
                     updateNextPackage();
                 }
@@ -146,13 +178,13 @@ Page {
                             width: parent.width - units.gu(1)
                             height: width
                             anchors.centerIn: parent
-                            visible: updating && currentApp == model.appId
+                            visible: isUpdating(model.appId)
                             running: visible
                         }
                     }
 
                     ProgressionSlot {
-                        name: updating && currentApp == model.appId ? "close" : "next"
+                        name: isUpdating(model.appId) ? "close" : "next"
                     }
                 }
 
@@ -179,7 +211,7 @@ Page {
                 }
 
                 onClicked: {
-                    if (updating && currentApp == model.appId) {
+                    if (isUpdating(model.appId)) {
                         BackendInstaller.installer.abortInstallation()
                     } else {
                         if (Connectivity.online || PlatformIntegration.packageKit) {

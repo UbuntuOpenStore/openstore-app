@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-01 04:14+0000\n"
+"POT-Creation-Date: 2026-10-04 03:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1073,7 +1073,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: ../qml/DiscoverPage.qml.in:191 ../qml/DiscoverPage.qml.in:192
-#: ../qml/InstalledAppsPage.qml.in:52
+#: ../qml/InstalledAppsPage.qml.in:64
 msgid "Installed Apps"
 msgstr ""
 
@@ -1098,40 +1098,40 @@ msgid "Try with a different search."
 msgstr ""
 
 #. TRANSLATORS: %1 is the number of installed click apps
-#: ../qml/InstalledAppsPage.qml.in:80
+#: ../qml/InstalledAppsPage.qml.in:92
 msgid "Installed apps (%1)"
 msgstr ""
 
 #. TRANSLATORS: %1 is the number of available app updates
-#: ../qml/InstalledAppsPage.qml.in:84
+#: ../qml/InstalledAppsPage.qml.in:96
 msgid "Available updates (%1)"
 msgstr ""
 
 #. TRANSLATORS: %1 is the number of installed snap apps
-#: ../qml/InstalledAppsPage.qml.in:88
+#: ../qml/InstalledAppsPage.qml.in:100
 msgid "Installed Snap apps (%1)"
 msgstr ""
 
 #. TRANSLATORS: %1 is the number of apps that can be downgraded
-#: ../qml/InstalledAppsPage.qml.in:92
+#: ../qml/InstalledAppsPage.qml.in:104
 msgid "Stable version available (%1)"
 msgstr ""
 
-#: ../qml/InstalledAppsPage.qml.in:95
+#: ../qml/InstalledAppsPage.qml.in:107
 msgid ""
 "The installed versions of these apps did not come from the OpenStore but a "
 "stable version is available."
 msgstr ""
 
-#: ../qml/InstalledAppsPage.qml.in:96
+#: ../qml/InstalledAppsPage.qml.in:108
 msgid "Update all"
 msgstr ""
 
-#: ../qml/InstalledAppsPage.qml.in:207
+#: ../qml/InstalledAppsPage.qml.in:243
 msgid "No apps found"
 msgstr ""
 
-#: ../qml/InstalledAppsPage.qml.in:208
+#: ../qml/InstalledAppsPage.qml.in:244
 msgid "No app has been installed from OpenStore yet."
 msgstr ""
 

@@ -55,6 +55,8 @@ private:
   QList<SearchPackageItem> enrichList(const QList<SearchPackageItem>& items) const;
   QString installedVersionForPkgName(const QString& packageName) const;
   bool isPackageUpdateAvailable(const QString& packageName) const;
+  // The getUpdates() id for the newer version, or empty when there is none.
+  QString updatePackageIdForPkgName(const QString& packageName) const;
   void requestPackageSize(PackageKitPackageItem* pkg, const QString& packageName);
   void startGetDetails(const QString& packageId, PackageKitPackageItem* pkg, const QString& packageName);
   // Refresh cached items' installed/update state once the installed sets are fresh.

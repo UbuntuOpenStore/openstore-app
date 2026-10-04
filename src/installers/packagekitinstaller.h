@@ -51,6 +51,7 @@ Q_SIGNALS:
 public Q_SLOTS:
   Q_INVOKABLE void installPackage(const QString& packageId);
   Q_INVOKABLE void removePackage(const QString& packageId);
+  Q_INVOKABLE void updatePackages(const QStringList& packageIds);
   void updateCache();
   void checkInstalled(const QString& packageId);
   Q_INVOKABLE bool abortInstallation() const;

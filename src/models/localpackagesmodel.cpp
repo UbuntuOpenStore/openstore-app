@@ -68,6 +68,7 @@ QHash<int, QByteArray> LocalPackagesModel::roleNames() const
   roles.insert(RoleUpdateAvailable, "updateAvailable");
   roles.insert(RoleUpdateStatus, "updateStatus");
   roles.insert(RolePackageUrl, "packageUrl");
+  roles.insert(RoleUpdatePackageId, "updatePackageId");
   roles.insert(RoleAppLaunchUrl, "appLaunchUrl");
   roles.insert(RolePackageType, "packageType");
 
@@ -102,6 +103,8 @@ QVariant LocalPackagesModel::data(const QModelIndex& index, int role) const
       return pkg.updateStatus;
     case RolePackageUrl:
       return pkg.packageUrl;
+    case RoleUpdatePackageId:
+      return pkg.updatePackageId;
     case RoleAppLaunchUrl:
       return pkg.appLaunchUrl;
     case RolePackageType:

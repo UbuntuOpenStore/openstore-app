@@ -46,8 +46,9 @@ PackageKitSource::PackageKitSource(QObject* parent)
   PackageIndex* index = PackageIndex::instance();
   m_pool = index->pool();
   connect(m_installer, &PackageKitInstaller::transactionFinished, this, &PackageKitSource::onInstallFinished);
+  connect(m_installer, &PackageKitInstaller::refreshFinished, this, &PackageKitSource::onRefreshFinished);
+  connect(index, &PackageIndex::refreshRequested, this, &PackageKitSource::onRefreshRequested);
   connect(index, &PackageIndex::buildCompleted, this, [this, index]() {
-    m_indexBuilt = true;
     refreshInstalledInfo();
     Q_EMIT updated();
 
@@ -380,25 +381,31 @@ void PackageKitSource::refreshInstalledState()
 
 void PackageKitSource::refresh()
 {
-  if (!m_indexBuilt)
-    return;
-  // Quiet background refresh: apt update then rebuild the pool/index if changed.
   m_installer->updateCache();
+}
+
+void PackageKitSource::onRefreshRequested()
+{
+  if (m_installer->busy()) {
+    PackageIndex::instance()->startBuild();
+    return;
+  }
+
+  refresh();
+}
+
+void PackageKitSource::onRefreshFinished()
+{
+  // A failed apt still leaves the previous metadata to index.
+  PackageIndex::instance()->startBuild();
 }
 
 void PackageKitSource::onInstallFinished()
 {
-  if (m_installer->lastRole() == PackageKit::Transaction::RoleRefreshCache) {
-    // A refresh-cache transaction finished: rebuild the catalog/index on the
-    // worker thread. The pool and availability are updated by PackageIndex
-    // when the build completes.
-    PackageIndex::instance()->startBuild();
-  } else {
-    refreshInstalledInfo();
-    refreshInstalledState(); // install/remove changed flags: re-emit with refresh=true
-    Q_EMIT installedChanged();
-    Q_EMIT updated();
-  }
+  refreshInstalledInfo();
+  refreshInstalledState(); // install/remove changed flags: re-emit with refresh=true
+  Q_EMIT installedChanged();
+  Q_EMIT updated();
 }
 
 void PackageKitSource::syncCachedItemState()

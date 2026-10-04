@@ -46,6 +46,7 @@ Q_SIGNALS:
   void packageInstalled();
   void packageInstallationFailed();
   void transactionFinished();
+  void refreshFinished();
   void installCheckResult(const QString& packageId, bool installed, const QString& version);
 
 public Q_SLOTS:

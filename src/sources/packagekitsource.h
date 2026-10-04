@@ -73,6 +73,8 @@ private:
 
 private Q_SLOTS:
   void onInstallFinished();
+  void onRefreshRequested();
+  void onRefreshFinished();
   void onStoreDiscoverReply(const OpenStoreReply& reply);
 
 private:
@@ -98,7 +100,6 @@ private:
   bool m_categoriesPending = false; // categories requested before the index was built
 
   QString m_storeDiscoverSignature;
-  bool m_indexBuilt = false; // pool+xapian built at least once; gates quiet refresh()
 };
 
 #endif // PACKAGEKITSOURCE_H

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-04 03:11+0000\n"
+"POT-Creation-Date: 2026-10-04 03:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1127,11 +1127,11 @@ msgstr ""
 msgid "Update all"
 msgstr ""
 
-#: ../qml/InstalledAppsPage.qml.in:243
+#: ../qml/InstalledAppsPage.qml.in:239
 msgid "No apps found"
 msgstr ""
 
-#: ../qml/InstalledAppsPage.qml.in:244
+#: ../qml/InstalledAppsPage.qml.in:240
 msgid "No app has been installed from OpenStore yet."
 msgstr ""
 

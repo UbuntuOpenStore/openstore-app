@@ -55,6 +55,7 @@ public:
   void startBuild();
 
 Q_SIGNALS:
+  void refreshRequested();
   void buildCompleted();
 
 private Q_SLOTS:
@@ -69,6 +70,7 @@ private:
   IndexBuilder* m_builder;
   QThread m_workerThread;
   bool m_buildInFlight = false;
+  bool m_refreshRequested = false;
 
   static PackageIndex* m_instance;
 };

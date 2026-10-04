@@ -60,6 +60,13 @@ void PackageIndex::startBuild()
 {
   if (m_buildInFlight)
     return;
+
+  if (!m_refreshRequested) {
+    m_refreshRequested = true;
+    Q_EMIT refreshRequested();
+    return;
+  }
+
   m_buildInFlight = true;
   QMetaObject::invokeMethod(m_builder, "build", Qt::QueuedConnection, Q_ARG(QString, m_xapian->databasePath()));
 }
@@ -76,6 +83,7 @@ void PackageIndex::onBuildSucceeded(const QList<AppStream::Component>& component
 void PackageIndex::onBuildFailed(const QString& message)
 {
   m_buildInFlight = false;
+  m_refreshRequested = false;
   m_indexStatus->setError(message, true);
 }
 

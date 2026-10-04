@@ -128,6 +128,9 @@ void PackageKitInstaller::failImmediately(const QString& reason)
 
   if (m_operation == QStringLiteral("install") || m_operation == QStringLiteral("remove") || m_operation == QStringLiteral("upgrade")) {
     Q_EMIT packageInstallationFailed();
+  } else if (m_operation == QStringLiteral("refresh-cache")) {
+    Q_EMIT refreshFinished();
+    return;
   }
 
   Q_EMIT transactionFinished();
@@ -275,6 +278,11 @@ void PackageKitInstaller::slotFinished(PackageKit::Transaction::Exit status, uin
   // Clear busy before the result signals so queued operations can start the next transaction.
   m_busy = false;
   Q_EMIT busyChanged();
+
+  if (m_lastRole == PackageKit::Transaction::RoleRefreshCache) {
+    Q_EMIT refreshFinished();
+    return;
+  }
 
   if (status == PackageKit::Transaction::ExitSuccess) {
     Q_EMIT packageInstalled();

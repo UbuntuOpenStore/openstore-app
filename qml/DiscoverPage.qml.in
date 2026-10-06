@@ -114,7 +114,12 @@ Page {
                     onButtonClicked: {
                         //If we hide the whole Component we don't need to check if it's ready
                         if (appStatus == 2) {
-                            Qt.openUrlExternally(highlightAppControl.appItem.appLaunchUrl());
+                            const item = highlightAppControl.appItem;
+                            if (item && item.launch) {
+                                item.launch();
+                            } else if (item && item.appLaunchUrl()) {
+                                Qt.openUrlExternally(item.appLaunchUrl());
+                            }
                         } else {
                             PackageBackendManager.packageDetailsReady.connect(slot_packageDetailsReady)
                             PackageBackendManager.packageDetailsError.connect(slot_packageFetchError)

@@ -19,6 +19,9 @@
 
 #include "../platformintegration.h"
 
+#include <QDesktopServices>
+#include <QUrl>
+
 #include <Snapd/App>
 #include <Snapd/Client>
 
@@ -148,6 +151,15 @@ QString SnapPackageItem::appLaunchUrl() const
   }
 
   return QString();
+}
+
+bool SnapPackageItem::launch() const
+{
+  const QString url = appLaunchUrl();
+  if (url.isEmpty())
+    return false;
+
+  return QDesktopServices::openUrl(QUrl(url));
 }
 
 void SnapPackageItem::fillData(const QVariantMap& json)

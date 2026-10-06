@@ -329,7 +329,14 @@ Page {
                                 : LomiriColors.ash
                             : theme.palette.normal.positive
 
-                        onClicked: Qt.openUrlExternally(app.appLaunchUrl())
+                        onClicked: {
+                            if (app && app.launch) {
+                                app.launch();
+                            } else {
+                                const url = app.appLaunchUrl();
+                                if (url) Qt.openUrlExternally(url);
+                            }
+                        }
                     }
 
                     Label {

@@ -108,6 +108,7 @@ struct LocalPackageItem
   QString packageUrl;   // click: download URL; packagekit: PackageKit package id passed to installer
   QString updatePackageId;
   QString appLaunchUrl;
+  Q_INVOKABLE bool launch() const { return false; }
   QString packageType;
 };
 

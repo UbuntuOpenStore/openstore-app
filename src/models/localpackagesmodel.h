@@ -47,6 +47,7 @@ public:
     RolePackageUrl,
     RoleUpdatePackageId,
     RoleAppLaunchUrl,
+    RoleLaunch,
     RolePackageType,
   };
 

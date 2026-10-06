@@ -323,7 +323,12 @@ QList<LocalPackageItem> PackageKitSource::requestInstalled()
     item.icon = hasIcon ? component.icons().first().url().toString() : PlatformIntegration::instance()->fallbackIcon();
     item.version = it.value();
     item.packageType = QStringLiteral("packagekit");
-    item.appLaunchUrl = QString();
+    const AppStream::Launchable launchable = component.launchable(AppStream::Launchable::KindDesktopId);
+    if (launchable.kind() == AppStream::Launchable::KindDesktopId && !launchable.entries().isEmpty()) {
+      item.appLaunchUrl = QStringLiteral("application:///") + launchable.entries().first();
+    } else {
+      item.appLaunchUrl = QString();
+    }
     item.updateAvailable = isPackageUpdateAvailable(packageName);
     item.updateStatus = item.updateAvailable ? QStringLiteral("available") : QStringLiteral("none");
     // Fully qualified id from getPackages, which the daemon's API requires.

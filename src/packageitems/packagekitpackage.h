@@ -30,7 +30,7 @@ public:
 
   bool install() const override;
   bool remove() const override;
-  QString appLaunchUrl() const override;
+  bool launch() const override;
 
   QString packageName() const { return m_packageName; }
   // PackageKit wants a full id ("name;version;arch;data"); fall back to the name until the id is resolved.

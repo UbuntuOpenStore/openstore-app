@@ -26,6 +26,8 @@
 #include <AppStreamQt/image.h>
 #include <AppStreamQt/screenshot.h>
 
+#include <lomiri-app-launch.h>
+
 PackageKitPackageItem::PackageKitPackageItem(const AppStream::Component& component, QObject* parent)
   : PackageItem(QVariantMap(), parent)
 {
@@ -162,13 +164,15 @@ bool PackageKitPackageItem::remove() const
   return true;
 }
 
-QString PackageKitPackageItem::appLaunchUrl() const
+bool PackageKitPackageItem::launch() const
 {
-  if (m_desktopEntry.isEmpty())
-    return QString();
+  if (m_appId.isEmpty())
+    return false;
 
-  // TODO verify if this works
-  return QStringLiteral("exec://") + m_desktopEntry;
+  const QByteArray appIdBytes = m_appId.toUtf8();
+  const gchar* appIdPtr = appIdBytes.constData();
+
+  return lomiri_app_launch_start_application(appIdPtr, nullptr) == TRUE;
 }
 
 void PackageKitPackageItem::setInstalledState(bool installed, const QString& version, bool updateAvailable)

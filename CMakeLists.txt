@@ -51,6 +51,8 @@ if(ENABLE_PACKAGEKIT_SUPPORT)
 
     find_package(AppStreamQt REQUIRED)
     pkg_check_modules(XAPIAN REQUIRED xapian-core)
+
+    pkg_check_modules(LOMIRI_APP_LAUNCH REQUIRED lomiri-app-launch-0)
 endif()
 
 if(ENABLE_QT6)

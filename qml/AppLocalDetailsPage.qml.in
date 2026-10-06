@@ -118,7 +118,13 @@ Page {
                         text: i18n.tr("Open")
                         color: theme.palette.normal.positive
 
-                        onClicked: Qt.openUrlExternally(app.appLaunchUrl)
+                        onClicked: {
+                            if (app && app.launch) {
+                                app.launch();
+                            } else if (app && app.appLaunchUrl) {
+                                Qt.openUrlExternally(app.appLaunchUrl);
+                            }
+                        }
                     }
                 }
             }

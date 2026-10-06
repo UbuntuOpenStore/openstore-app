@@ -70,6 +70,7 @@ QHash<int, QByteArray> LocalPackagesModel::roleNames() const
   roles.insert(RolePackageUrl, "packageUrl");
   roles.insert(RoleUpdatePackageId, "updatePackageId");
   roles.insert(RoleAppLaunchUrl, "appLaunchUrl");
+  roles.insert(RoleLaunch, "launch");
   roles.insert(RolePackageType, "packageType");
 
   return roles;
@@ -107,6 +108,8 @@ QVariant LocalPackagesModel::data(const QModelIndex& index, int role) const
       return pkg.updatePackageId;
     case RoleAppLaunchUrl:
       return pkg.appLaunchUrl;
+    case RoleLaunch:
+      return QVariant::fromValue<QObject*>(nullptr); // can't use a function pointer here in this model
     case RolePackageType:
       return pkg.packageType;
 

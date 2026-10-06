@@ -20,6 +20,9 @@
 #include "../installers/clickinstaller.h"
 #include "../platformintegration.h"
 
+#include <QDesktopServices>
+#include <QUrl>
+
 ClickPackageItem::ClickPackageItem(const QVariantMap& json, QObject* parent)
   : PackageItem(json, parent)
 {
@@ -110,6 +113,15 @@ QString ClickPackageItem::appLaunchUrl() const
   }
 
   return QString();
+}
+
+bool ClickPackageItem::launch() const
+{
+  const QString url = appLaunchUrl();
+  if (url.isEmpty())
+    return false;
+
+  return QDesktopServices::openUrl(QUrl(url));
 }
 
 void ClickPackageItem::fillData(const QVariantMap& json)

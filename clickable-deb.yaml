@@ -10,6 +10,7 @@ dependencies_target:
   - libpackagekitqt6-dev
   - libappstreamqt-dev
   - libxapian-dev
+  - liblomiri-app-launch-dev
 install_lib:
   - /usr/lib/${ARCH_TRIPLET}/libpackagekitqt*.so*
   - /usr/lib/${ARCH_TRIPLET}/libAppStreamQt*.so*

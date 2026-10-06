@@ -31,6 +31,7 @@ public:
   Q_INVOKABLE bool install() const override;
   Q_INVOKABLE bool remove() const override;
   Q_INVOKABLE QString appLaunchUrl() const override;
+  Q_INVOKABLE bool launch() const override;
 
 private Q_SLOTS:
   virtual void fillData(const QVariantMap& json) override;

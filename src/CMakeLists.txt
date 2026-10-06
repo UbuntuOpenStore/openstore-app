@@ -61,6 +61,7 @@ if(ENABLE_PACKAGEKIT_SUPPORT)
     # pkg-config include path alone does not resolve it.
     include_directories("/usr/include/PackageKitQt/PackageKit")
     include_directories(${XAPIAN_INCLUDE_DIRS})
+    include_directories(${LOMIRI_APP_LAUNCH_INCLUDE_DIRS})
 
     qt6_add_resources(PACKAGEKIT_RESOURCES ${CMAKE_CURRENT_SOURCE_DIR}/categories.qrc)
 
@@ -111,7 +112,7 @@ if(QT_VERSION_MAJOR EQUAL 6)
     target_link_libraries(${PROJECT_NAME} Qt6::WebEngineQuick)
 endif()
 if(ENABLE_PACKAGEKIT_SUPPORT)
-    target_link_libraries(${PROJECT_NAME} ${PACKAGEKIT_QT_LIBRARIES} ${XAPIAN_LDFLAGS} AppStreamQt)
+    target_link_libraries(${PROJECT_NAME} ${PACKAGEKIT_QT_LIBRARIES} ${XAPIAN_LDFLAGS} ${LOMIRI_APP_LAUNCH_LDFLAGS} AppStreamQt)
 endif()
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${OPENSTORE_BIN_DIR})
 

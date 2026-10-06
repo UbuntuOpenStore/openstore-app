@@ -160,7 +160,7 @@ public:
 
   Q_INVOKABLE virtual bool install() const = 0;
   Q_INVOKABLE virtual bool remove() const = 0;
-  Q_INVOKABLE virtual QString appLaunchUrl() const = 0;
+  Q_INVOKABLE virtual bool launch() const = 0;
   Q_INVOKABLE bool review(const QString& text, Rating rating, const QString& apiKey) const;
   Q_INVOKABLE bool editReview(const QString& text, Rating rating, const QString& apiKey) const;
 

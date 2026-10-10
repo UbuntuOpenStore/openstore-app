@@ -701,7 +701,6 @@ Page {
                 visible: app.packageType === "click"
                 enabled: !BackendInstaller.installer.busy
                 onClicked: {
-                    bottomEdgeStack.clear()
                     root.showSearch('publisher:' + app.publisher)
                 }
                 ListItemLayout {
@@ -715,7 +714,6 @@ Page {
             ListItem {
                 enabled: !BackendInstaller.installer.busy
                 onClicked: {
-                    bottomEdgeStack.clear()
                     root.showCategory(localCat(app.category), app.category)
                 }
                 ListItemLayout {

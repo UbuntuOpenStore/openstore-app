@@ -60,7 +60,7 @@ Page {
                         } else if (app.packageType === "packagekit") {
                             PlatformIntegration.packageKitInstaller.removePackage(app.packageUrl);
                         }
-                        bottomEdgeStack.pop();
+                        pageStack.pop();
                     })
                 }
             }

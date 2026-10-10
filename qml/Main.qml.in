@@ -41,8 +41,21 @@ MainView {
     property bool isBigScreen: width > units.gu(70)
     property string mainStackPage
 
-    readonly property string appColorText: LomiriColors.porcelain
-    readonly property string    appColor: "#292929"
+    readonly property color appColorText: LomiriColors.porcelain
+    readonly property color    appColor: "#292929"
+
+    readonly property string selectedSidebarSection: {
+        if (!isBigScreen) return ""
+        if (mainStackPage === "discoverPage") return ""
+        if (pageStack.depth >= 2) {
+            var page = pageStack.currentPage
+            if (page && page.section !== undefined && String(page.section).indexOf("category:") === 0) {
+                return page.section
+            }
+        }
+        if (mainStackPage === "installedAppsPage") return "installed"
+        return ""
+    }
 
     property alias apiKey: settings.apiKey
 
@@ -52,8 +65,10 @@ MainView {
 
         var app = localAppModel.getByAppId(appId);
         if (app.appId) {
-            bottomEdgeStack.clear();
-            bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
+            if (root.mainStackPage !== "discoverPage") {
+                pageStack.pop()
+            }
+            pageStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
         }
     }
 
@@ -61,8 +76,10 @@ MainView {
         PackageBackendManager.packageDetailsReady.disconnect(slot_packageDetailsReady);
         PackageBackendManager.packageDetailsError.disconnect(slot_packageFetchError);
 
-        bottomEdgeStack.clear();
-        bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg });
+        if (root.mainStackPage !== "discoverPage") {
+            pageStack.pop()
+        }
+        pageStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg });
     }
 
     function openApp(appId) {
@@ -74,8 +91,10 @@ MainView {
         else {
             var app = localAppModel.getByAppId(appId);
             if (app.appId) {
-                bottomEdgeStack.clear();
-                bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
+                if (root.mainStackPage !== "discoverPage") {
+                    pageStack.pop()
+                }
+                pageStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
             }
         }
     }
@@ -150,7 +169,6 @@ MainView {
         if (appId == 'my-apps' || appId == 'updates') {
             console.log('Opening "My Apps" from URL request');
 
-            bottomEdgeStack.clear();
             mainPage.openMyApps();
         }
         else {
@@ -291,37 +309,37 @@ MainView {
     PageStack {
         id: pageStack
 
-        width: isBigScreen && bottomEdgeStack.isStackVisible
-            ? parent.width - bottomEdgeStack.width
-            : 0 //Hack. Width must be inferior to the parent.width
+        // Width must be inferior to parent.width for the PageStacks to resize
+        // correctly on Lomiri MainView (pre-existing constraint). When the
+        // sidebar is visible, we anchor to its right edge so page content
+        // isn't covered.
+        width: isBigScreen ? parent.width - desktopSidebar.width : 0
         anchors {
-            fill: isBigScreen && bottomEdgeStack.isStackVisible
-                ? undefined
-                : parent
+            fill: isBigScreen ? undefined : parent
+            left: isBigScreen ? desktopSidebar.right : parent.left
+            top: parent.top
+            bottom: parent.bottom
+        }
+
+        onCurrentPageChanged: mainStackPage = currentPage.objectName
+    }
+
+    Components.DesktopSidebar {
+        id: desktopSidebar
+        visible: isBigScreen
+        width: units.gu(30)
+        anchors {
             left: parent.left
             top: parent.top
             bottom: parent.bottom
         }
 
-        onDepthChanged: bottomEdgeStack.clear();
-        onCurrentPageChanged: mainStackPage = currentPage.objectName
-    }
+        appColor      : root.appColor
+        appColorText  : root.appColorText
+        selectedSection: root.selectedSidebarSection
 
-    Components.BottomEdgePageStack {
-        id: bottomEdgeStack
-        showDivider: isBigScreen && bottomEdgeStack.isStackVisible
-
-        width: isBigScreen && bottomEdgeStack.isStackVisible
-            ? units.gu(47)
-            : 0 //Hack. Width must be inferior to the parent.width
-        anchors {
-            fill: isBigScreen && bottomEdgeStack.isStackVisible
-                ? undefined
-                : parent
-            right: parent.right
-            top: parent.top
-            bottom: parent.bottom
-        }
+        onInstalledAppsClicked: root.showInstalledApps()
+        onCategoryClicked: function(name, id) { root.showCategory(name, id) }
     }
 
     Component {
@@ -439,15 +457,20 @@ MainView {
         if (root.mainStackPage !== "discoverPage") {
             pageStack.pop()
         }
-        pageStack.push(Qt.resolvedUrl("CategoriesPage.qml"));
-        bottomEdgeStack.push(filteredAppPageComponent, {"title": name, "category": id});
-        //CategoriesPage.categoryClicked(name, id)
+        pageStack.push(filteredAppPageComponent, { title: name, section: "category:" + id, category: id });
     }
     function showSearch(text) {
         if (root.mainStackPage !== "discoverPage") {
             pageStack.pop()
         }
         pageStack.push(Qt.resolvedUrl("../SearchPage.qml"), {"searchText": text || ''});
+    }
+
+    function showInstalledApps() {
+        if (root.mainStackPage !== "discoverPage") {
+            pageStack.pop()
+        }
+        pageStack.push(Qt.resolvedUrl("InstalledAppsPage.qml"));
     }
 
     function showSearchQuery(url) {

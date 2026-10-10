@@ -47,8 +47,10 @@ Page {
             id: categoryView
             anchors.fill: parent
 
-            property int __currentTmpIndex: 0
-            currentIndex: __currentTmpIndex
+            // Disabled: the default currentIndex: 0 paints the first delegate
+            // with a light/highlighted background. Selection is not used on
+            // this page; nothing else needs currentItem tracking.
+            currentIndex: -1
 
             // WORKAROUND: Fix for wrong grid unit size
             Component.onCompleted: root.flickable_responsive_scroll_fix(categoryView);
@@ -57,8 +59,6 @@ Page {
             delegate: ListItem {
                 divider.anchors.leftMargin: units.gu(6.5)
                 onClicked: {
-                    categoryView.__currentTmpIndex = model.index;
-                    //bottomEdgeStack.clear();
                     categoryClicked(name, id)
                 }
                 ListItemLayout {

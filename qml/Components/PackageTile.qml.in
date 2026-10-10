@@ -17,6 +17,7 @@
 
 import QtQuick 2.4
 import Lomiri.Components @LOMIRI_COMPONENTS_VERSION@
+import OpenStore 1.0
 
 AbstractButton {
     id: rootItem
@@ -28,15 +29,29 @@ AbstractButton {
         anchors.fill: parent
 
         LomiriShape {
+            id: tileShape
             width: parent.width
             height: width
             aspect: LomiriShape.Flat
             sourceFillMode: LomiriShape.PreserveAspectFit
 
-            source: Image {
+            // Keeps the fallback icon in the shape until the real one has finished loading
+            source: appIcon.status === Image.Ready ? appIcon : fallbackIcon
+
+            Image {
+                id: fallbackIcon
+                source: PlatformIntegration.fallbackIcon
+                sourceSize.width: tileShape.width
+                sourceSize.height: tileShape.height
+
+                visible: false
+            }
+
+            Image {
+                id: appIcon
                 source: rootItem.appItem.icon
-                sourceSize.width: parent.width
-                sourceSize.height: parent.height
+                sourceSize.width: tileShape.width
+                sourceSize.height: tileShape.height
 
                 visible: false
 

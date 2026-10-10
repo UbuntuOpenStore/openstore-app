@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-06 03:39+0000\n"
+"POT-Creation-Date: 2026-10-10 18:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,18 +28,18 @@ msgstr ""
 msgid "Remove"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:178 ../qml/Components/PackageListItem.qml.in:34
-#: ../qml/Components/PackageTile.qml.in:79
+#: ../qml/AppDetailsPage.qml.in:178 ../qml/Components/PackageListItem.qml.in:35
+#: ../qml/Components/PackageTile.qml.in:94
 msgid "App"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:179 ../qml/Components/PackageListItem.qml.in:35
-#: ../qml/Components/PackageTile.qml.in:80
+#: ../qml/AppDetailsPage.qml.in:179 ../qml/Components/PackageListItem.qml.in:36
+#: ../qml/Components/PackageTile.qml.in:95
 msgid "Bookmark"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:180 ../qml/Components/PackageListItem.qml.in:36
-#: ../qml/Components/PackageTile.qml.in:81
+#: ../qml/AppDetailsPage.qml.in:180 ../qml/Components/PackageListItem.qml.in:37
+#: ../qml/Components/PackageTile.qml.in:96
 msgid "Web App"
 msgstr ""
 
@@ -761,17 +761,17 @@ msgstr ""
 msgid "Accounts provider"
 msgstr ""
 
-#: ../qml/Components/PackageListItem.qml.in:48
-#: ../qml/Components/PackageTile.qml.in:93
+#: ../qml/Components/PackageListItem.qml.in:49
+#: ../qml/Components/PackageTile.qml.in:108
 #: ../qml/Dialogs/FilterDialog.qml.in:165
 msgid "Snap"
 msgstr ""
 
-#: ../qml/Components/PackageTile.qml.in:105
+#: ../qml/Components/PackageTile.qml.in:120
 msgid "Update available"
 msgstr ""
 
-#: ../qml/Components/PackageTile.qml.in:107
+#: ../qml/Components/PackageTile.qml.in:122
 msgid "✓ Installed"
 msgstr ""
 
@@ -1227,5 +1227,6 @@ msgid "Additional Icons by"
 msgstr ""
 
 #: openstore.desktop.in.h:1
-msgid "software;apps;applications;programs;store;market;play;click;discover;install;"
+msgid ""
+"software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr ""

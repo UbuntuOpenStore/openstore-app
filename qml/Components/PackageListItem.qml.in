@@ -17,6 +17,7 @@
 
 import QtQuick 2.4
 import Lomiri.Components @LOMIRI_COMPONENTS_VERSION@
+import OpenStore 1.0
 
 ListItem {
     id: rootItem
@@ -57,12 +58,29 @@ ListItem {
             aspect: LomiriShape.Flat
             SlotsLayout.position: SlotsLayout.Leading
 
-            image: Image {
+            // Keeps the fallback icon in the shape until the real one has finished loading
+            source: appIcon.status === Image.Ready ? appIcon : fallbackIcon
+
+            Image {
+                id: fallbackIcon
+                source: PlatformIntegration.fallbackIcon
+                sourceSize.width: appIconShape.width
+                sourceSize.height: appIconShape.height
+                height: appIconShape.height
+                width: appIconShape.width
+
+                visible: false
+            }
+
+            Image {
+                id: appIcon
                 source: rootItem.appItem.icon
-                sourceSize.width: parent.width
-                sourceSize.height: parent.height
-                height: parent.height
-                width: parent.width
+                sourceSize.width: appIconShape.width
+                sourceSize.height: appIconShape.height
+                height: appIconShape.height
+                width: appIconShape.width
+
+                visible: false
             }
 
             MostRated {}

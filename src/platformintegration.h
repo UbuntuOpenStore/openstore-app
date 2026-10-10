@@ -40,6 +40,7 @@ class PlatformIntegration : public QObject
   Q_PROPERTY(bool clickSupport READ clickSupport CONSTANT)
   Q_PROPERTY(bool snapSupport READ snapSupport CONSTANT)
   Q_PROPERTY(bool packageKit READ packageKit CONSTANT)
+  Q_PROPERTY(QString fallbackIcon READ fallbackIcon CONSTANT)
 #ifdef ENABLE_CLICK_SUPPORT
   Q_PROPERTY(ClickInstaller* clickInstaller READ clickInstaller CONSTANT)
 #endif

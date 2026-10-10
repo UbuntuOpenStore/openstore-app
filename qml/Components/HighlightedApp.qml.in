@@ -58,7 +58,7 @@ Item {
         anchors.top: highlightedAppImg.bottom
 
         Row {
-            width: parent.width - units.gu(4)
+            width: parent.width > units.gu(120) ? units.gu(120) : parent.width - units.gu(4)
             spacing: units.gu(2)
 
             anchors {

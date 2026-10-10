@@ -58,7 +58,7 @@ Page {
             var checkUrl = baseUrl + 'logged-in?apiKey=';
             if (strUrl.indexOf(checkUrl) == 0) {
                 root.apiKey = strUrl.replace(checkUrl, '');
-                bottomEdgeStack.pop();
+                pageStack.pop();
             }
         }
 

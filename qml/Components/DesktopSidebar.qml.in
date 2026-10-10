@@ -1,0 +1,145 @@
+/*
+ * Copyright (C) 2026 Brian Douglass
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; version 3.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+import QtQuick 2.4
+import Lomiri.Components @LOMIRI_COMPONENTS_VERSION@
+
+Rectangle {
+    id: sidebar
+
+    color: appColor
+
+    signal installedAppsClicked()
+    signal categoryClicked(var name, var id)
+
+    // Theme colors are inputs so Main.qml.in can override them. Defaults match Main.qml.in.
+    property color appColor: "#292929"
+    property color appColorText: LomiriColors.porcelain
+
+    // Height of the brand row. Main.qml.in binds this to the current page
+    // header height so the divider under the brand lines up with the header.
+    // Default matches the Lomiri PageHeaderStyle height: content + divider.
+    property real headerHeight: units.gu(6) + units.dp(1)
+
+    Column {
+        id: headerColumn
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        height: sidebar.headerHeight
+
+        Item {
+            width: parent.width
+            height: parent.height
+
+            Image {
+                anchors.left: parent.left
+                anchors.leftMargin: units.gu(2)
+                anchors.verticalCenter: parent.verticalCenter
+                source: Qt.resolvedUrl("../Assets/openstore.svg")
+                sourceSize.width: units.gu(4)
+                sourceSize.height: units.gu(4)
+                width: units.gu(4)
+                height: units.gu(4)
+                fillMode: Image.PreserveAspectFit
+            }
+
+            Label {
+                anchors.left: parent.left
+                anchors.leftMargin: units.gu(8)
+                anchors.verticalCenter: parent.verticalCenter
+                text: "OpenStore"
+                color: appColorText
+                font.pixelSize: units.gu(2.2)
+            }
+        }
+
+        Rectangle {
+            anchors.bottom: parent.bottom
+            width: parent.width
+            height: units.dp(1)
+            color: theme.palette.normal.base
+        }
+    }
+
+    ListItem {
+        id: installedAppsItem
+        anchors.top: headerColumn.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        height: units.gu(6)
+        divider.visible: true
+
+        ListItemLayout {
+            anchors.fill: parent
+
+            title.text: i18n.tr("Installed Apps")
+            title.color: appColorText
+            ProgressionSlot {}
+        }
+
+        onClicked: sidebar.installedAppsClicked()
+    }
+
+    ScrollView {
+        anchors.top: installedAppsItem.bottom
+        anchors.topMargin: units.gu(1)
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: units.gu(1)
+
+        LomiriListView {
+            id: categoryList
+            anchors.fill: parent
+            model: categoriesModel
+            // No selection highlighting; keep `currentIndex` off the default 0
+            // so the first category is not highlighted.
+            currentIndex: -1
+
+            Component.onCompleted: root.flickable_responsive_scroll_fix(categoryList)
+
+            ActivityIndicator {
+                anchors.centerIn: parent
+                visible: !categoriesModel.ready || categoriesModel.rowCount() === 0
+                running: visible
+            }
+
+            delegate: ListItem {
+                width: ListView.view.width
+                height: units.gu(4.5)
+                divider.visible: false
+
+                ListItemLayout {
+                    anchors.fill: parent
+
+                    Image {
+                        SlotsLayout.position: SlotsLayout.Leading
+                        source: model.iconUrl
+                        width: units.gu(2.5)
+                        height: width
+                        sourceSize: Qt.size(width, height)
+                    }
+
+                    title.text: model.name
+                    title.color: appColorText
+                }
+
+                onClicked: sidebar.categoryClicked(model.name, model.id)
+            }
+        }
+    }
+}

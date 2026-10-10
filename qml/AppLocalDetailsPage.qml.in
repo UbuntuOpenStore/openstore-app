@@ -60,7 +60,7 @@ Page {
                         } else if (app.packageType === "packagekit") {
                             PlatformIntegration.packageKitInstaller.removePackage(app.packageUrl);
                         }
-                        bottomEdgeStack.pop();
+                        pageStack.pop();
                     })
                 }
             }
@@ -72,12 +72,17 @@ Page {
         anchors.fill: parent
         anchors.topMargin: parent.header.height
 
-        // WORKAROUND: Fix for wrong grid unit size
-        Component.onCompleted: root.flickable_responsive_scroll_fix(scrollView.flickableItem)
+        Component.onCompleted: {
+            root.flickable_responsive_scroll_fix(scrollView.flickableItem)
+            scrollView.flickableItem.flickableDirection = Flickable.VerticalFlick
+        }
 
         Column {
             id: mainColumn
-            width: scrollView.width
+            // On wide/desktop screens keep the content readable by capping its
+            // width and centering it in the viewport.
+            width: Math.min(scrollView.width, units.gu(120))
+            x: (scrollView.width - width) / 2
 
             ListItem {
                 height: units.gu(16)

@@ -35,8 +35,8 @@ Page {
 
         var app = localAppModel.getByAppId(appId);
         if (app.appId) {
-            bottomEdgeStack.clear();
-            bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
+            if (root.mainStackPage !== "discoverPage") { pageStack.pop() }
+            pageStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
         }
     }
 
@@ -44,13 +44,14 @@ Page {
         PackageBackendManager.packageDetailsReady.disconnect(slot_packageDetailsReady)
         PackageBackendManager.packageDetailsError.disconnect(slot_packageFetchError)
 
-        bottomEdgeStack.clear()
-        bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
+        if (root.mainStackPage !== "discoverPage") { pageStack.pop() }
+        pageStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg })
     }
 
     header: Components.HeaderMain {
         id: mainHeader
-        title: i18n.tr('OpenStore')
+        // The sidebar already shows the OpenStore brand, so the page header names the section instead.
+        title: root.isBigScreen ? i18n.tr('Discover') : i18n.tr('OpenStore')
         flickable: view
     }
 
@@ -185,10 +186,12 @@ Page {
                 }
 
                 ListItem {
+                    // Collapses the layout slot on desktop, where the sidebar already exposes "Installed Apps".
+                    visible: !root.isBigScreen
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: parent.width
                     //Used opacity to hide this until the model is ready. If visible is used, the ListView moves up on start
-                    opacity: highlightAppControl.ready || (discoverModel.ready && highlightAppControl.appItem === null) || !Connectivity.online ? 1 : 0
+                    opacity: (highlightAppControl.ready || (discoverModel.ready && highlightAppControl.appItem === null) || !Connectivity.online) && !root.isBigScreen ? 1 : 0
 
                     ListItemLayout {
                         anchors.fill: parent
@@ -211,10 +214,12 @@ Page {
 
                 ListItem {
                     id: footerItem
+                    // Collapses the layout slot on desktop, where the sidebar already exposes category navigation.
+                    visible: !root.isBigScreen
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: parent.width
                     //Used opacity to hide this until the model is ready. If visible is used, the ListView moves up on start
-                    opacity: highlightAppControl.ready || (discoverModel.ready && highlightAppControl.appItem === null) ? 1 : 0
+                    opacity: (highlightAppControl.ready || (discoverModel.ready && highlightAppControl.appItem === null)) && !root.isBigScreen ? 1 : 0
 
                     ListItemLayout {
                         anchors.fill: parent

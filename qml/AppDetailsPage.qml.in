@@ -156,13 +156,17 @@ Page {
         anchors.fill: parent
         anchors.topMargin: parent.header.height
 
-        // WORKAROUND: Fix for wrong grid unit size
-        Component.onCompleted: root.flickable_responsive_scroll_fix(scrollView.flickableItem)
+        Component.onCompleted: {
+            root.flickable_responsive_scroll_fix(scrollView.flickableItem)
+            scrollView.flickableItem.flickableDirection = Flickable.VerticalFlick
+        }
 
         Column {
             id: mainColumn
-            width: scrollView.width
-            //spacing: units.gu(1)
+            // On wide/desktop screens keep the content readable by capping its
+            // width and centering it in the viewport.
+            width: Math.min(scrollView.width, units.gu(120))
+            x: (scrollView.width - width) / 2
 
             ListItem {
                 height: units.gu(16)
@@ -701,7 +705,6 @@ Page {
                 visible: app.packageType === "click"
                 enabled: !BackendInstaller.installer.busy
                 onClicked: {
-                    bottomEdgeStack.clear()
                     root.showSearch('publisher:' + app.publisher)
                 }
                 ListItemLayout {
@@ -715,7 +718,6 @@ Page {
             ListItem {
                 enabled: !BackendInstaller.installer.busy
                 onClicked: {
-                    bottomEdgeStack.clear()
                     root.showCategory(localCat(app.category), app.category)
                 }
                 ListItemLayout {

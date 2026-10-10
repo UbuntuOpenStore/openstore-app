@@ -86,8 +86,8 @@ Page {
 
             var app = localAppModel.getByAppId(appId);
             if (app.appId) {
-                bottomEdgeStack.clear();
-                bottomEdgeStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
+                if (root.mainStackPage !== "discoverPage") { pageStack.pop() }
+                pageStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
             }
         }
 
@@ -95,8 +95,8 @@ Page {
             PackageBackendManager.packageDetailsReady.disconnect(slot_packageDetailsReady)
             PackageBackendManager.packageDetailsError.disconnect(slot_packageFetchError)
 
-            bottomEdgeStack.clear();
-            bottomEdgeStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg });
+            if (root.mainStackPage !== "discoverPage") { pageStack.pop() }
+            pageStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg });
         }
 
         onAppDetailsRequired: {

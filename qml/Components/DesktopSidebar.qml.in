@@ -32,6 +32,11 @@ Rectangle {
     property color appColor: "#292929"
     property color appColorText: LomiriColors.porcelain
 
+    // Height of the brand row. Main.qml.in binds this to the current page
+    // header height so the divider under the brand lines up with the header.
+    // Default matches the Lomiri PageHeaderStyle height: content + divider.
+    property real headerHeight: units.gu(6) + units.dp(1)
+
     function _isInstalledSelected() { return root.selectedSection === "installed"; }
     function _isCategorySelected(id) { return root.selectedSection === "category:" + id; }
 
@@ -40,7 +45,7 @@ Rectangle {
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
-        height: units.gu(7)
+        height: root.headerHeight
 
         Item {
             width: parent.width

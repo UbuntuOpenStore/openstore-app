@@ -50,7 +50,8 @@ Page {
 
     header: Components.HeaderMain {
         id: mainHeader
-        title: i18n.tr('OpenStore')
+        // The sidebar already shows the OpenStore brand, so the page header names the section instead.
+        title: root.isBigScreen ? i18n.tr('Discover') : i18n.tr('OpenStore')
         flickable: view
     }
 

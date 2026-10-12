@@ -338,6 +338,13 @@ MainView {
         appColorText  : root.appColorText
         selectedSection: root.selectedSidebarSection
 
+        // Keep the brand divider aligned with the current page header; falls
+        // back to the Lomiri header height before a page header is measured.
+        headerHeight: {
+            var page = pageStack.currentPage
+            return (page && page.header) ? page.header.height : units.gu(6) + units.dp(1)
+        }
+
         onInstalledAppsClicked: root.showInstalledApps()
         onCategoryClicked: function(name, id) { root.showCategory(name, id) }
     }

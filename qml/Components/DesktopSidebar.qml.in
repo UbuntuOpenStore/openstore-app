@@ -87,19 +87,12 @@ Rectangle {
         anchors.left: parent.left
         anchors.right: parent.right
         height: units.gu(7)
-        divider.visible: false
+        divider.visible: true
 
         selected: root._isInstalledSelected()
 
         ListItemLayout {
             anchors.fill: parent
-
-            Icon {
-                name: "ubuntu-store-symbolic"
-                SlotsLayout.position: SlotsLayout.Leading
-                width: units.gu(3)
-                height: width
-            }
 
             title.text: i18n.tr("Installed Apps")
             title.color: appColorText
@@ -109,29 +102,13 @@ Rectangle {
         onClicked: root.installedAppsClicked()
     }
 
-    ListItem {
-        id: categoriesHeader
-        anchors.top: installedAppsItem.bottom
-        anchors.left: parent.left
-        anchors.right: parent.right
-        height: units.gu(5)
-        divider.visible: false
-        opacity: categoriesModel.ready ? 1 : 0.5
-
-        ListItemLayout {
-            anchors.fill: parent
-            anchors.leftMargin: units.gu(2)
-
-            title.text: i18n.tr("Categories")
-            title.color: appColorText
-        }
-    }
-
     ScrollView {
-        anchors.top: categoriesHeader.bottom
+        anchors.top: installedAppsItem.bottom
+        anchors.topMargin: units.gu(1)
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.bottom: parent.bottom
+        anchors.bottomMargin: units.gu(1)
 
         LomiriListView {
             id: categoryList
@@ -158,8 +135,8 @@ Rectangle {
 
             delegate: ListItem {
                 width: ListView.view.width
-                height: units.gu(6)
-                divider.anchors.leftMargin: units.gu(2)
+                height: units.gu(4.5)
+                divider.visible: false
                 selected: root._isCategorySelected(model.id)
 
                 ListItemLayout {

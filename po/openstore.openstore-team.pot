@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-12 03:56+0000\n"
+"POT-Creation-Date: 2026-10-12 04:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -340,7 +340,7 @@ msgid ""
 "OpenStore"
 msgstr ""
 
-#: ../qml/CategoriesPage.qml.in:39 ../qml/Components/DesktopSidebar.qml.in:125
+#: ../qml/CategoriesPage.qml.in:39
 msgid "Categories"
 msgstr ""
 
@@ -710,12 +710,12 @@ msgid ""
 "Age Rating Service</a>"
 msgstr ""
 
-#: ../qml/Components/DesktopSidebar.qml.in:104 ../qml/DiscoverPage.qml.in:199
+#: ../qml/Components/DesktopSidebar.qml.in:97 ../qml/DiscoverPage.qml.in:199
 #: ../qml/DiscoverPage.qml.in:200 ../qml/InstalledAppsPage.qml.in:65
 msgid "Installed Apps"
 msgstr ""
 
-#: ../qml/Components/DesktopSidebar.qml.in:155
+#: ../qml/Components/DesktopSidebar.qml.in:132
 msgid "Loading categories..."
 msgstr ""
 

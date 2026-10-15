@@ -166,13 +166,17 @@ bool PackageKitPackageItem::remove() const
 
 bool PackageKitPackageItem::launch() const
 {
-  if (m_appId.isEmpty())
+  if (m_desktopEntry.isEmpty())
     return false;
 
-  const QByteArray appIdBytes = m_appId.toUtf8();
-  const gchar* appIdPtr = appIdBytes.constData();
+  // AppStream desktop launchables carry the ".desktop" suffix; Lomiri app ids do not.
+  QString appId = m_desktopEntry;
+  if (appId.endsWith(QStringLiteral(".desktop")))
+    appId.chop(8);
 
-  return lomiri_app_launch_start_application(appIdPtr, nullptr) == TRUE;
+  const QByteArray appIdBytes = appId.toUtf8();
+
+  return lomiri_app_launch_start_application(appIdBytes.constData(), nullptr) == TRUE;
 }
 
 void PackageKitPackageItem::setInstalledState(bool installed, const QString& version, bool updateAvailable)

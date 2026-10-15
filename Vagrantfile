@@ -38,7 +38,8 @@ Vagrant.configure("2") do |config|
       libxapian-dev \
       intltool \
       qml6-module-lomiri-content \
-      qml6-module-lomiri-connectivity
+      qml6-module-lomiri-connectivity \
+      morph-browser-qt6
 
     usermod -s /bin/bash vagrant
     usermod -aG sudo vagrant

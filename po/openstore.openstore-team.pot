@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-15 03:23+0000\n"
+"POT-Creation-Date: 2026-10-15 04:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -147,7 +147,7 @@ msgstr ""
 msgid "N/A"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:658 ../qml/SettingsPage.qml.in:277
+#: ../qml/AppDetailsPage.qml.in:658 ../qml/SettingsPage.qml.in:171
 msgid "Source Code"
 msgstr ""
 
@@ -1162,66 +1162,62 @@ msgstr ""
 msgid "Installation failed (Error %1)"
 msgstr ""
 
-#: ../qml/SearchPage.qml.in:48
-msgid "Search in OpenStore..."
-msgstr ""
-
-#: ../qml/SettingsPage.qml.in:113
-msgid "OpenStore Account"
-msgstr ""
-
-#: ../qml/SettingsPage.qml.in:121 ../qml/SignInPage.qt5.qml.in:31
-#: ../qml/SignInPage.qt6.qml.in:31
-msgid "Sign in"
-msgstr ""
-
-#: ../qml/SettingsPage.qml.in:138
-msgid "Sign out"
-msgstr ""
-
-#: ../qml/SettingsPage.qml.in:166
-msgid "General"
-msgstr ""
-
-#: ../qml/SettingsPage.qml.in:173
-msgid "Enable snap support"
-msgstr ""
-
-#: ../qml/SettingsPage.qml.in:191
-msgid "Only show Lomiri-compatible snaps"
-msgstr ""
-
-#: ../qml/SettingsPage.qml.in:209
+#: ../qml/NsfwSetting.qml.in:28
 msgid "Hide adult-oriented content"
 msgstr ""
 
-#: ../qml/SettingsPage.qml.in:219
+#: ../qml/NsfwSetting.qml.in:38
 msgid ""
 "By typing your password you take full responsibility for showing NSFW "
 "content."
 msgstr ""
 
-#: ../qml/SettingsPage.qml.in:230
+#: ../qml/SearchPage.qml.in:48
+msgid "Search in OpenStore..."
+msgstr ""
+
+#: ../qml/SettingsPage.qml.in:70
+msgid "OpenStore Account (optional, for leaving reviews)"
+msgstr ""
+
+#: ../qml/SettingsPage.qml.in:78 ../qml/SignInPage.qt5.qml.in:31
+#: ../qml/SignInPage.qt6.qml.in:31
+msgid "Sign in"
+msgstr ""
+
+#: ../qml/SettingsPage.qml.in:95
+msgid "Sign out"
+msgstr ""
+
+#: ../qml/SettingsPage.qml.in:108
+msgid "General"
+msgstr ""
+
+#: ../qml/SettingsPage.qml.in:115
+msgid "Enable snap support"
+msgstr ""
+
+#: ../qml/SettingsPage.qml.in:133
+msgid "Only show Lomiri-compatible snaps"
+msgstr ""
+
+#: ../qml/SettingsPage.qml.in:151
 msgid "Sources"
 msgstr ""
 
-#: ../qml/SettingsPage.qml.in:237
-msgid "Repositories (read-only)"
-msgstr ""
-
-#: ../qml/SettingsPage.qml.in:249
+#: ../qml/SettingsPage.qml.in:159
 msgid "Refresh catalog"
 msgstr ""
 
-#: ../qml/SettingsPage.qml.in:270
+#: ../qml/SettingsPage.qml.in:164
 msgid "About OpenStore"
 msgstr ""
 
-#: ../qml/SettingsPage.qml.in:286
+#: ../qml/SettingsPage.qml.in:180
 msgid "Report an issue"
 msgstr ""
 
-#: ../qml/SettingsPage.qml.in:295
+#: ../qml/SettingsPage.qml.in:189
 msgid "Additional Icons by"
 msgstr ""
 

@@ -164,6 +164,16 @@ else()
     set(LOMIRI_CONNECTIVITY_VERSION 1.0)
 endif()
 
+# The NSFW toggle authenticates the user with their system password via the
+# PamAuthentication QML plugin, which is only meaningful with click support.
+if(ENABLE_CLICK_SUPPORT)
+    set(SETTINGS_NSFW_ITEM "NsfwSetting { serviceName: root.applicationName }")
+    set(SETTINGS_NSFW_ITEM_QRC "<file>NsfwSetting.qml</file>")
+else()
+    set(SETTINGS_NSFW_ITEM "")
+    set(SETTINGS_NSFW_ITEM_QRC "")
+endif()
+
 # Generate the QML sources and the resource file from their *.in templates.
 # The generated files keep the same relative layout inside the build tree,
 file(RELATIVE_PATH QML_SOURCE_DIR_RELATIVE ${CMAKE_BINARY_DIR}/qml ${CMAKE_CURRENT_SOURCE_DIR}/qml)

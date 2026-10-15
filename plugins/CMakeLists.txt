@@ -1,1 +1,3 @@
-add_subdirectory(PamAuthentication)
+if(ENABLE_CLICK_SUPPORT)
+    add_subdirectory(PamAuthentication)
+endif()

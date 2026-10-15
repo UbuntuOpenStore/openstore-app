@@ -18,7 +18,7 @@
 import QtQuick 2.4
 import Lomiri.Components @LOMIRI_COMPONENTS_VERSION@
 import Morph.Web 0.1
-import PamAuthentication 0.1
+import OpenStore 1.0
 
 import "Components" as Components
 
@@ -29,243 +29,137 @@ Page {
         title: i18n.tr("Settings")
     }
 
-    AuthenticationHandler {
-        id: authHandler
-        serviceName: root.applicationName
-
-        onAuthenticationSucceeded: {
-            settings.hideNsfw = nsfwSwitch.checked
-        }
-
-        onAuthenticationAborted: {
-            nsfwSwitch.checked = !nsfwSwitch.checked
-        }
-    }
-
-    Column {
-        id: secondaryCol
-        width: units.gu(50)
-        visible: isBigScreen
-
-        anchors {
-            top: parent.top
-            topMargin: parent.header.height + units.gu(2)
-            right: parent.right
-        }
-
-        Loader {
-            active: isBigScreen
-            visible: active
-            width: parent.width
-            sourceComponent: textAboutComponent
-        }
-    }
-
     ScrollView {
         id: scrollView
-        height: parent.height
-        width: isBigScreen
-            ? parent.width - secondaryCol.width
-            : parent.width
+        anchors.fill: parent
+        anchors.topMargin: parent.header.height
 
-        anchors {
-            top: parent.top
-            topMargin: parent.header.height
-            left: parent.left
+        Component.onCompleted: {
+            root.flickable_responsive_scroll_fix(scrollView.flickableItem)
+            scrollView.flickableItem.flickableDirection = Flickable.VerticalFlick
         }
-
-        Item {
-            width: scrollView.width
-            height: layout.height + units.gu(8)
-
-            Column {
-                id: layout
-                width: parent.width
-
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                    top: parent.top
-                    topMargin: units.gu(2)
-                }
-
-                Column {
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    height: units.gu(18)
-
-                    LomiriShape {
-                        width: units.gu(16)
-                        height: width
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        radius: "medium"
-
-                        source: Image {
-                            source: Qt.resolvedUrl("Assets/openstore.svg")
-                        }
-                    }
-
-                    Label {
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        text: "OpenStore v" + Qt.application.version
-                    }
-                }
-
-                Components.SectionDivider {
-                    text: i18n.tr("OpenStore Account")
-                }
-
-                ListItem {
-                    visible: root.apiKey === ""
-                    onClicked: pageStack.push(Qt.resolvedUrl("./SignInPage.qml"))
-                    ListItemLayout {
-                        anchors.centerIn: parent
-                        title.text: i18n.tr("Sign in")
-
-                        Icon {
-                            name: "account"
-                            width: units.gu(2)
-                            height: width
-                        }
-
-                        ProgressionSlot {}
-                    }
-                }
-
-                ListItem {
-                    visible: root.apiKey !== ""
-                    onClicked: root.apiKey = ""
-                    ListItemLayout {
-                        anchors.centerIn: parent
-                        title.text: i18n.tr("Sign out")
-
-                        Icon {
-                            name: "edit-clear"
-                            width: units.gu(2)
-                            height: width
-                        }
-
-                        ProgressionSlot {}
-                    }
-                }
-
-                /*
-                Components.SectionDivider {
-                    text: i18n.tr("Development")
-                }
-
-                ListItem {
-                    onClicked: Qt.openUrlExternally("https://open-store.io/manage")
-                    ListItemLayout {
-                        anchors.centerIn: parent
-                        title.text: i18n.tr("Manage your apps on OpenStore")
-                        ProgressionSlot {}
-                    }
-                }
-                */
-
-                Components.SectionDivider {
-                    text: i18n.tr("General")
-                }
-
-                ListItem {
-                    visible: PlatformIntegration.clickSupport && PlatformIntegration.snapSupport
-                    ListItemLayout {
-                        anchors.centerIn: parent
-                        title.text: i18n.tr("Enable snap support")
-
-                        Switch {
-                            id: snapSupportSwitch
-                            SlotsLayout.position: SlotsLayout.Last
-                            checked: settings.snapSupport
-
-                            onClicked: {
-                                settings.snapSupport = checked
-                            }
-                        }
-                    }
-                }
-
-                ListItem {
-                    visible: settings.snapSupport && PlatformIntegration.clickSupport && PlatformIntegration.snapSupport
-                    ListItemLayout {
-                        anchors.centerIn: parent
-                        title.text: i18n.tr("Only show Lomiri-compatible snaps")
-
-                        Switch {
-                            id: lomiriCompatibleSwitch
-                            SlotsLayout.position: SlotsLayout.Last
-                            checked: settings.lomiriCompatibleOnly
-
-                            onClicked: {
-                                settings.lomiriCompatibleOnly = checked
-                            }
-                        }
-                    }
-                }
-
-                ListItem {
-                    visible: PlatformIntegration.clickSupport
-                    ListItemLayout {
-                        anchors.centerIn: parent
-                        title.text: i18n.tr("Hide adult-oriented content")
-
-                        Switch {
-                            id: nsfwSwitch
-                            SlotsLayout.position: SlotsLayout.Last
-                            checked: settings.hideNsfw
-
-                            onClicked: {
-                                if (!checked) {
-                                    // Ask authentication only if user is trying to enable NSFW
-                                    authHandler.authenticate(i18n.tr("By typing your password you take full responsibility for showing NSFW content."))
-                                } else {
-                                    settings.hideNsfw = checked
-                                }
-                            }
-                        }
-                    }
-                }
-
-                Components.SectionDivider {
-                    visible: PlatformIntegration.packageKit
-                    text: i18n.tr("Sources")
-                }
-
-                ListItem {
-                    visible: PlatformIntegration.packageKit
-                    ListItemLayout {
-                        anchors.centerIn: parent
-                        title.text: i18n.tr("Repositories (read-only)")
-                        subtitle.text: PackageBackendManager.sources().join("\n")
-                        subtitle.maximumLineCount: Number.MAX_VALUE
-                        subtitle.wrapMode: Text.WordWrap
-                    }
-                }
-
-                ListItem {
-                    visible: PlatformIntegration.packageKit
-                    onClicked: PackageBackendManager.refreshCatalog()
-                    ListItemLayout {
-                        anchors.centerIn: parent
-                        title.text: i18n.tr("Refresh catalog")
-                        iconName: "view-refresh"
-                    }
-                }
-
-                Loader {
-                    id: textAbout
-                    active: !isBigScreen
-                    visible: active
-                    width: parent.width
-                    sourceComponent: textAboutComponent
-                }
-            }
-        }
-    } //ScrollView
-
-    Component {
-        id: textAboutComponent
 
         Column {
+            id: layout
+            width: Math.min(scrollView.width, units.gu(120))
+            x: (scrollView.width - width) / 2
+            anchors.topMargin: units.gu(1)
+
+            Column {
+                anchors.horizontalCenter: parent.horizontalCenter
+                height: units.gu(18)
+
+                LomiriShape {
+                    width: units.gu(16)
+                    height: width
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    radius: "medium"
+
+                    source: Image {
+                        source: Qt.resolvedUrl("Assets/openstore.svg")
+                    }
+                }
+
+                Label {
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    text: "OpenStore v" + Qt.application.version
+                }
+            }
+
+            Components.SectionDivider {
+                text: i18n.tr("OpenStore Account (optional, for leaving reviews)")
+            }
+
+            ListItem {
+                visible: root.apiKey === ""
+                onClicked: pageStack.push(Qt.resolvedUrl("./SignInPage.qml"))
+                ListItemLayout {
+                    anchors.centerIn: parent
+                    title.text: i18n.tr("Sign in")
+
+                    Icon {
+                        name: "account"
+                        width: units.gu(2)
+                        height: width
+                    }
+
+                    ProgressionSlot {}
+                }
+            }
+
+            ListItem {
+                visible: root.apiKey !== ""
+                onClicked: root.apiKey = ""
+                ListItemLayout {
+                    anchors.centerIn: parent
+                    title.text: i18n.tr("Sign out")
+
+                    Icon {
+                        name: "edit-clear"
+                        width: units.gu(2)
+                        height: width
+                    }
+
+                    ProgressionSlot {}
+                }
+            }
+
+            Components.SectionDivider {
+                text: i18n.tr("General")
+            }
+
+            ListItem {
+                visible: PlatformIntegration.clickSupport && PlatformIntegration.snapSupport
+                ListItemLayout {
+                    anchors.centerIn: parent
+                    title.text: i18n.tr("Enable snap support")
+
+                    Switch {
+                        id: snapSupportSwitch
+                        SlotsLayout.position: SlotsLayout.Last
+                        checked: settings.snapSupport
+
+                        onClicked: {
+                            settings.snapSupport = checked
+                        }
+                    }
+                }
+            }
+
+            ListItem {
+                visible: settings.snapSupport && PlatformIntegration.clickSupport && PlatformIntegration.snapSupport
+                ListItemLayout {
+                    anchors.centerIn: parent
+                    title.text: i18n.tr("Only show Lomiri-compatible snaps")
+
+                    Switch {
+                        id: lomiriCompatibleSwitch
+                        SlotsLayout.position: SlotsLayout.Last
+                        checked: settings.lomiriCompatibleOnly
+
+                        onClicked: {
+                            settings.lomiriCompatibleOnly = checked
+                        }
+                    }
+                }
+            }
+
+            @SETTINGS_NSFW_ITEM@
+
+            Components.SectionDivider {
+                visible: PlatformIntegration.packageKit
+                text: i18n.tr("Sources")
+            }
+
+            ListItem {
+                visible: PlatformIntegration.packageKit
+                onClicked: PackageBackendManager.refreshCatalog()
+                ListItemLayout {
+                    anchors.centerIn: parent
+                    title.text: i18n.tr("Refresh catalog")
+                }
+            }
+
             Components.SectionDivider {
                 text: i18n.tr("About OpenStore")
             }

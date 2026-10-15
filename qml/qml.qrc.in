@@ -39,6 +39,7 @@
         <file>InstalledAppsPage.qml</file>
         <file>SearchPage.qml</file>
         <file>SettingsPage.qml</file>
+        @SETTINGS_NSFW_ITEM_QRC@
         <file>SignInPage.qml</file>
         <file alias="Assets/buggy-full.svg">@QML_SOURCE_DIR_RELATIVE@/Assets/buggy-full.svg</file>
         <file alias="Assets/buggy.svg">@QML_SOURCE_DIR_RELATIVE@/Assets/buggy.svg</file>

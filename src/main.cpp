@@ -108,6 +108,7 @@ int main(int argc, char* argv[])
 #endif
 
   QGuiApplication app(argc, argv);
+  app.setApplicationDisplayName(QStringLiteral("OpenStore"));
 
 #ifdef ENABLE_PACKAGEKIT_SUPPORT
   qRegisterMetaType<AppStream::Component>("AppStream::Component");

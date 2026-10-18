@@ -16,6 +16,7 @@
  */
 
 #include "packagekitpackage.h"
+#include "../apiconstants.h"
 #include "../categories/categoryparser.h"
 #include "../installers/packagekitinstaller.h"
 #include "../platformintegration.h"
@@ -33,7 +34,13 @@ PackageKitPackageItem::PackageKitPackageItem(const AppStream::Component& compone
 {
   m_componentId = component.id();
   m_packageName = component.packageNames().isEmpty() ? component.id() : component.packageNames().first();
-  m_appId = m_componentId;
+
+  // Used for OpenStore api requests
+  QString apiComponentId = m_componentId;
+  if (apiComponentId.endsWith(QStringLiteral(".desktop")))
+    apiComponentId.chop(8);
+  m_appId = API_PACKAGEKIT_ID_PREFIX + apiComponentId;
+
   m_name = component.name();
   m_tagline = component.summary();
   m_description = component.description();
@@ -97,6 +104,8 @@ PackageKitPackageItem::PackageKitPackageItem(const AppStream::Component& compone
   const AppStream::Launchable launchable = component.launchable(AppStream::Launchable::KindDesktopId);
   if (launchable.kind() == AppStream::Launchable::KindDesktopId && !launchable.entries().isEmpty()) {
     m_desktopEntry = launchable.entries().first();
+    if (m_desktopEntry.endsWith(QStringLiteral(".desktop")))
+      m_desktopEntry.chop(8);
   }
 
   m_hooks = QList<PackageItem::HookStruct>();
@@ -169,12 +178,7 @@ bool PackageKitPackageItem::launch() const
   if (m_desktopEntry.isEmpty())
     return false;
 
-  // AppStream desktop launchables carry the ".desktop" suffix; Lomiri app ids do not.
-  QString appId = m_desktopEntry;
-  if (appId.endsWith(QStringLiteral(".desktop")))
-    appId.chop(8);
-
-  const QByteArray appIdBytes = appId.toUtf8();
+  const QByteArray appIdBytes = m_desktopEntry.toUtf8();
 
   return lomiri_app_launch_start_application(appIdBytes.constData(), nullptr) == TRUE;
 }

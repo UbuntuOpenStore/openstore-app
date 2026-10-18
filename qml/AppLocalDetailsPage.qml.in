@@ -53,7 +53,12 @@ Page {
                             console.log("Removing: " + packageId);
                             const request = PlatformIntegration.snapInstaller.remove(packageId);
                             const model = appLocalDetailsPage.localAppModel;
+                            // This page is popped immediately, so report through the persistent MainView.
+                            const mainView = root;
                             request.complete.connect(function() {
+                                if (request.error) {
+                                    mainView.showInstallationError(request.errorString);
+                                }
                                 model.refresh();
                             });
                             request.runAsync();

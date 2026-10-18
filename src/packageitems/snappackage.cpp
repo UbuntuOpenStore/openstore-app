@@ -73,6 +73,14 @@ bool SnapPackageItem::install() const
   });
 
   connect(request, &QSnapdRequest::complete, this, [=]() mutable {
+    if (request->error() != QSnapdRequest::NoError) {
+      qWarning() << "Snap installation failed:" << request->errorString();
+      m_isBusy = false;
+      Q_EMIT updated();
+      Q_EMIT installationFailed(request->errorString());
+      return;
+    }
+
     qInfo() << "Snap installation transaction complete!";
 
     auto getRequest = installer->getSnap(snapName);
@@ -115,6 +123,14 @@ bool SnapPackageItem::remove() const
   auto request = installer->remove(QSnapdClient::RemoveFlag::Purge, snapName);
 
   connect(request, &QSnapdRequest::complete, this, [=]() mutable {
+    if (request->error() != QSnapdRequest::NoError) {
+      qWarning() << "Snap removal failed:" << request->errorString();
+      m_isBusy = false;
+      Q_EMIT updated();
+      Q_EMIT installationFailed(request->errorString());
+      return;
+    }
+
     qInfo() << "Snap removal transaction complete!";
 
     m_installedVersion = QString();

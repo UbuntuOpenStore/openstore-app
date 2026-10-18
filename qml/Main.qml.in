@@ -257,10 +257,8 @@ MainView {
             }
         }
         onPackageInstallationFailed: {
-            if (contentHubInstallInProgress) {
-                PopupUtils.open(installationError, root)
-                contentHubInstallInProgress = false;
-            }
+            contentHubInstallInProgress = false;
+            showInstallationError(BackendInstaller.installer.lastError)
         }
     }
 
@@ -411,6 +409,10 @@ MainView {
         id: installWarningDialog
     }
 
+    Dialogs.InstallationErrorDialog {
+        id: installationError
+    }
+
     Dialogs.IndexSetupDialog {
         id: indexSetupDialog
     }
@@ -425,19 +427,6 @@ MainView {
                 color: theme.palette.normal.positive
                 text: i18n.tr("OK")
                 onClicked: PopupUtils.close(installedConfirmationDialog)
-            }
-        }
-    }
-    Component {
-        id: installationError
-        Dialog {
-            id: installationErrorDialog
-            title: i18n.tr("Installation failed")
-            text: i18n.tr("The package could not be installed.") + " " + (BackendInstaller.installer.lastError || "")
-            Button {
-                color: theme.palette.normal.positive
-                text: i18n.tr("OK")
-                onClicked: PopupUtils.close(installationErrorDialog)
             }
         }
     }
@@ -481,6 +470,12 @@ MainView {
 
     function showSearchQuery(url) {
         pageStack.push(Qt.resolvedUrl("../SearchPage.qml"), {"queryUrl": url || ''});
+    }
+
+    // Shown for any install/remove/update failure. Kept on the persistent
+    // MainView so pages that close before a result arrives can still report it.
+    function showInstallationError(message) {
+        PopupUtils.open(installationError, root, { message: message || "" })
     }
 
     // *** WORKAROUNDS ***

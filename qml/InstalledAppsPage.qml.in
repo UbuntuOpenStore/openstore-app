@@ -58,7 +58,13 @@ Page {
     Connections {
         target: BackendInstaller.installer
         onPackageInstalled: updateNextPackage()
-        onPackageInstallationFailed: updateNextPackage()
+        onPackageInstallationFailed: {
+            // Stop the batch so the failure dialog isn't followed by more updates.
+            appsUpdating = [];
+            batchUpdating = [];
+            batchRunning = false;
+            currentApp = null;
+        }
     }
 
     header: Components.HeaderMain {

@@ -990,6 +990,13 @@ Page {
         id: removeQuestion
     }
 
+    // Snaps report failures directly on the package item; click/packagekit
+    // failures are surfaced globally in Main.qml.
+    Connections {
+        target: app
+        onInstallationFailed: root.showInstallationError(message)
+    }
+
     function printSize(size) {
         var s
 

@@ -168,6 +168,7 @@ Q_SIGNALS:
   void updated() const;
   void installedChanged() const;
   void downloadProgressChanged() const;
+  void installationFailed(const QString& message) const;
 
 public Q_SLOTS:
   void updateLocalInfo(int localRevision, const QString& localVersion) const;

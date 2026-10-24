@@ -20,6 +20,7 @@
 
 #include "../packageSource.h"
 #include <QAbstractListModel>
+#include <QSortFilterProxyModel>
 
 class PackageItem;
 
@@ -32,6 +33,11 @@ class LocalPackagesModel : public QAbstractListModel
   Q_PROPERTY(int updatesAvailableCount READ updatesAvailableCount NOTIFY updated)
   Q_PROPERTY(int downgradesAvailableCount READ downgradesAvailableCount NOTIFY updated)
   Q_PROPERTY(int snapsCount READ snapsCount NOTIFY updated)
+  Q_PROPERTY(int systemUpdatesCount READ systemUpdatesCount NOTIFY updated)
+  Q_PROPERTY(QAbstractItemModel* availableUpdatesModel READ availableUpdatesModel CONSTANT)
+  Q_PROPERTY(QAbstractItemModel* downgradeAppsModel READ downgradeAppsModel CONSTANT)
+  Q_PROPERTY(QAbstractItemModel* installedAppsModel READ installedAppsModel CONSTANT)
+  Q_PROPERTY(QAbstractItemModel* snapAppsModel READ snapAppsModel CONSTANT)
   Q_PROPERTY(QString appStoreAppId MEMBER m_appStoreAppId NOTIFY appStoreAppIdChanged)
   Q_PROPERTY(bool appStoreUpdateAvailable READ appStoreUpdateAvailable NOTIFY appStoreUpdateAvailableChanged)
 
@@ -61,12 +67,19 @@ public:
   int updatesAvailableCount() const;
   int downgradesAvailableCount() const;
   int snapsCount() const;
+  int systemUpdatesCount() const;
+
+  QAbstractItemModel* availableUpdatesModel() const { return m_availableUpdatesModel; }
+  QAbstractItemModel* downgradeAppsModel() const { return m_downgradeAppsModel; }
+  QAbstractItemModel* installedAppsModel() const { return m_installedAppsModel; }
+  QAbstractItemModel* snapAppsModel() const { return m_snapAppsModel; }
 
   bool appStoreUpdateAvailable() const { return m_appStoreUpdateAvailable; }
 
   Q_INVOKABLE void refresh();
   Q_INVOKABLE QVariantMap get(int row);
   Q_INVOKABLE QVariantMap getByAppId(const QString& appId);
+  Q_INVOKABLE QVariantList systemUpdates();
 
 Q_SIGNALS:
   void countChanged();
@@ -76,11 +89,17 @@ Q_SIGNALS:
   void appStoreUpdateAvailableChanged();
 
 private:
+  QSortFilterProxyModel* createFilteredModel(const QString& updateStatus);
+
   QList<LocalPackageItem> m_list;
   PackageSource* m_source;
   QString m_appStoreAppId;
   bool m_ready;
   bool m_appStoreUpdateAvailable;
+  QSortFilterProxyModel* m_availableUpdatesModel;
+  QSortFilterProxyModel* m_downgradeAppsModel;
+  QSortFilterProxyModel* m_installedAppsModel;
+  QSortFilterProxyModel* m_snapAppsModel;
 };
 
 #endif // LOCALPACKAGESMODEL_H

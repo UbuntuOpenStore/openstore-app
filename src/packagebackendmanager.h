@@ -40,6 +40,7 @@ public:
 
   Q_INVOKABLE void refreshCatalog();
   Q_INVOKABLE void getPackageDetails(const QString& appId);
+  Q_INVOKABLE void updateAll();
   Q_INVOKABLE QStringList sources() const;
 
 Q_SIGNALS:

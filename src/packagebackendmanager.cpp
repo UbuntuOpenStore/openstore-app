@@ -65,3 +65,8 @@ QStringList PackageBackendManager::sources() const
 {
   return m_source->sourceDescriptions();
 }
+
+void PackageBackendManager::updateAll()
+{
+  m_source->updateAll();
+}

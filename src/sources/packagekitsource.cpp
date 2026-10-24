@@ -33,6 +33,8 @@
 
 #include <QDebug>
 
+#include <algorithm>
+
 #include <QSet>
 #include <QSharedPointer>
 
@@ -339,6 +341,32 @@ QList<LocalPackageItem> PackageKitSource::requestInstalled()
   return result;
 }
 
+// Returns pending updates for packages that requestInstalled() skips for lacking AppStream metadata.
+QList<SystemUpdateItem> PackageKitSource::systemUpdates() const
+{
+  QList<SystemUpdateItem> result;
+  Q_FOREACH (const QString& packageId, m_updatePackageIds) {
+    const QString name = PackageKit::Transaction::packageName(packageId);
+    if (name.isEmpty() || !PackageIndex::instance()->xapian()->componentIdForPkgName(name).isEmpty())
+      continue;
+
+    SystemUpdateItem item;
+    item.name = name;
+    item.version = PackageKit::Transaction::packageVersion(packageId);
+    result.append(item);
+  }
+
+  std::sort(result.begin(), result.end(), [](const SystemUpdateItem& a, const SystemUpdateItem& b) {
+    return a.name.compare(b.name, Qt::CaseInsensitive) < 0;
+  });
+  return result;
+}
+
+void PackageKitSource::updateAll()
+{
+  m_installer->updatePackages(m_updatePackageIds);
+}
+
 PackageItem* PackageKitSource::requestPackageDetails(const QString& id)
 {
   if (id.trimmed().isEmpty())
@@ -489,8 +517,10 @@ void PackageKitSource::refreshInstalledInfo()
   connect(updatesTx,
           &PackageKit::Transaction::package,
           this,
-          [this](PackageKit::Transaction::Info /*info*/, const QString& packageID, const QString& /*summary*/) {
-            m_updatePackageIds << packageID;
+          [this](PackageKit::Transaction::Info info, const QString& packageID, const QString& /*summary*/) {
+            if (info != PackageKit::Transaction::InfoBlocked) {
+              m_updatePackageIds << packageID;
+            }
           });
   connect(updatesTx, &PackageKit::Transaction::finished, this, finalize);
 }

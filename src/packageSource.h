@@ -112,6 +112,12 @@ struct LocalPackageItem
   QString packageType;
 };
 
+struct SystemUpdateItem
+{
+  QString name;
+  QString version; // the new version
+};
+
 class PackageSource : public QObject
 {
   Q_OBJECT
@@ -128,6 +134,8 @@ public:
   virtual void refresh() {}
   virtual bool busy() const { return false; }
   virtual QStringList sourceDescriptions() const { return QStringList(); }
+  virtual QList<SystemUpdateItem> systemUpdates() const { return QList<SystemUpdateItem>(); }
+  virtual void updateAll() {}
 
 Q_SIGNALS:
   void searchReplied(const SearchReply& reply);

@@ -22,6 +22,8 @@ import OpenStore 1.0
 import QtQuick.Layouts 1.1
 
 import "Components" as Components
+import Lomiri.Components.Popups @LOMIRI_COMPONENTS_VERSION@
+import "Dialogs" as Dialogs
 
 Page {
     id: rootItem
@@ -33,6 +35,8 @@ Page {
     property bool batchRunning: false
 
     property bool updating: BackendInstaller.installer.busy || PackagesCache.updatingCache
+    property int updatesCount: localAppModel.updatesAvailableCount + localAppModel.systemUpdatesCount
+    property int installedAppsCount: localAppModel.count - localAppModel.updatesAvailableCount - localAppModel.downgradesAvailableCount - localAppModel.snapsCount
 
     function updateNextPackage() {
         //console.log('updateNextPackage', JSON.stringify(appsUpdating));
@@ -55,6 +59,35 @@ Page {
         return updating && (currentApp == appId || batchUpdating.indexOf(appId) >= 0);
     }
 
+    function updateAll() {
+        var updates = [];
+        for (var i = 0; i < localAppModel.count; i++) {
+            var app = localAppModel.get(i);
+
+            if (app && app.updateStatus == 'available' && app.packageUrl) {
+                updates.push(app);
+            }
+        }
+
+        if (PlatformIntegration.packageKit) {
+            var appIds = [];
+            for (var j = 0; j < updates.length; j++) {
+                appIds.push(updates[j].appId);
+            }
+
+            if (appIds.length == 0 && localAppModel.systemUpdatesCount == 0)
+                return;
+
+            batchUpdating = appIds;
+            batchRunning = true;
+            PackageBackendManager.updateAll();
+            return;
+        }
+
+        appsUpdating = updates;
+        updateNextPackage();
+    }
+
     Connections {
         target: BackendInstaller.installer
         onPackageInstalled: updateNextPackage()
@@ -69,7 +102,7 @@ Page {
 
     header: Components.HeaderMain {
         title: i18n.tr("Installed Apps")
-        flickable: view
+        flickable: scrollView.flickableItem
     }
 
     ScrollView {
@@ -80,159 +113,180 @@ Page {
             bottom: parent.bottom
         }
 
-        ListView {
-            id: view
-            anchors.fill: parent
+        Component.onCompleted: root.flickable_responsive_scroll_fix(scrollView.flickableItem)
 
-            model: localAppModel
+        Column {
+            width: scrollView.width
 
-            // WORKAROUND: Fix for wrong grid unit size
-            Component.onCompleted: root.flickable_responsive_scroll_fix(view)
-
-            section.property: 'updateStatus'
-            section.delegate: Components.SectionDivider {
-                height: (section == 'downgrade') ? units.gu(9) : units.gu(6)
-
-                text: {
-                    if (section == 'none') {
-                        // TRANSLATORS: %1 is the number of installed click apps
-                        return i18n.tr("Installed apps (%1)").arg(localAppModel.count - localAppModel.updatesAvailableCount - localAppModel.downgradesAvailableCount - localAppModel.snapsCount);
-                    }
-                    else if (section == 'available') {
-                        // TRANSLATORS: %1 is the number of available app updates
-                        return i18n.tr("Available updates (%1)").arg(localAppModel.updatesAvailableCount);
-                    }
-                    else if (section == 'snap') {
-                        // TRANSLATORS: %1 is the number of installed snap apps
-                        return i18n.tr("Installed Snap apps (%1)").arg(localAppModel.snapsCount);
-                    }
-
-                    // TRANSLATORS: %1 is the number of apps that can be downgraded
-                    return i18n.tr("Stable version available (%1)".arg(localAppModel.downgradesAvailableCount));
-                }
-
-                subtext: (section == 'downgrade') ? i18n.tr("The installed versions of these apps did not come from the OpenStore but a stable version is available.") : '';
-                buttonText: (section == 'available') ? i18n.tr("Update all") : ''
+            Components.SectionDivider {
+                visible: rootItem.updatesCount > 0
+                height: units.gu(6)
+                // TRANSLATORS: %1 is the number of available updates
+                text: i18n.tr("Available updates (%1)").arg(rootItem.updatesCount)
+                buttonText: i18n.tr("Update all")
                 buttonEnabled: !BackendInstaller.installer.busy
 
-                onButtonClicked: {
-                    var updates = [];
-                    for (var i = 0; i < localAppModel.count; i++) {
-                        var app = localAppModel.get(i);
+                onButtonClicked: rootItem.updateAll()
+            }
 
-                        if (app && app.updateStatus == 'available' && app.packageUrl) {
-                            updates.push(app);
-                        }
+            ListView {
+                width: parent.width
+                height: contentHeight
+                interactive: false
+                model: localAppModel.availableUpdatesModel
+                delegate: appDelegate
+            }
+
+            ListItem {
+                visible: localAppModel.systemUpdatesCount > 0
+                width: parent.width
+                height: units.gu(7)
+                onClicked: PopupUtils.open(systemUpdatesDialog, rootItem, {updates: localAppModel.systemUpdates()})
+
+                ListItemLayout {
+                    anchors.centerIn: parent
+                    // TRANSLATORS: %1 is the number of library and tool updates
+                    title.text: i18n.tr("%1 library and tool update", "%1 library and tool updates", localAppModel.systemUpdatesCount).arg(localAppModel.systemUpdatesCount)
+
+                    ProgressionSlot {
+                        name: "next"
                     }
-
-                    if (PlatformIntegration.packageKit && updates.length > 0) {
-                        var packageIds = [];
-                        var appIds = [];
-                        for (var j = 0; j < updates.length; j++) {
-                            if (!updates[j].updatePackageId)
-                                continue;
-
-                            packageIds.push(updates[j].updatePackageId);
-                            appIds.push(updates[j].appId);
-                        }
-
-                        if (packageIds.length == 0)
-                            return;
-
-                        batchUpdating = appIds;
-                        batchRunning = true;
-                        BackendInstaller.installer.updatePackages(packageIds);
-                        return;
-                    }
-
-                    appsUpdating = updates;
-                    updateNextPackage();
                 }
             }
 
-            delegate: ListItem {
-                height: units.gu(7)
-                divider.anchors.leftMargin: units.gu(8)
+            Components.SectionDivider {
+                visible: localAppModel.downgradesAvailableCount > 0
+                height: units.gu(9)
+                // TRANSLATORS: %1 is the number of apps that can be downgraded
+                text: i18n.tr("Stable version available (%1)".arg(localAppModel.downgradesAvailableCount))
+                subtext: i18n.tr("The installed versions of these apps did not come from the OpenStore but a stable version is available.")
+            }
 
-                ListItemLayout {
-                    id: layout
+            ListView {
+                width: parent.width
+                height: contentHeight
+                interactive: false
+                model: localAppModel.downgradeAppsModel
+                delegate: appDelegate
+            }
 
-                    anchors {
-                        horizontalCenter: parent.horizontalCenter
-                        top: parent.top
+            Components.SectionDivider {
+                visible: rootItem.installedAppsCount > 0
+                height: units.gu(6)
+                // TRANSLATORS: %1 is the number of installed click apps
+                text: i18n.tr("Installed apps (%1)").arg(rootItem.installedAppsCount)
+            }
+
+            ListView {
+                width: parent.width
+                height: contentHeight
+                interactive: false
+                model: localAppModel.installedAppsModel
+                delegate: appDelegate
+            }
+
+            Components.SectionDivider {
+                visible: localAppModel.snapsCount > 0
+                height: units.gu(6)
+                // TRANSLATORS: %1 is the number of installed snap apps
+                text: i18n.tr("Installed Snap apps (%1)").arg(localAppModel.snapsCount)
+            }
+
+            ListView {
+                width: parent.width
+                height: contentHeight
+                interactive: false
+                model: localAppModel.snapAppsModel
+                delegate: appDelegate
+            }
+        }
+    }
+
+    Component {
+        id: appDelegate
+
+        ListItem {
+            height: units.gu(7)
+            divider.anchors.leftMargin: units.gu(8)
+
+            ListItemLayout {
+                id: layout
+
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                    top: parent.top
+                }
+
+                title.text: model.name
+
+                Item {
+                    SlotsLayout.position: SlotsLayout.Leading
+                    width: units.gu(4); height: width
+
+                    LomiriShape {
+                        id: appIcon
+                        anchors.fill: parent
+                        opacity: updateSpinner.visible ? .2 : 1
+                        aspect: LomiriShape.Flat
+                        image: Image {
+                            sourceSize.width: parent.width
+                            sourceSize.height: parent.height
+                            source: model.icon
+                        }
                     }
 
-                    title.text: model.name
-
-                    Item {
-                        SlotsLayout.position: SlotsLayout.Leading
-                        width: units.gu(4); height: width
-
-                        LomiriShape {
-                            id: appIcon
-                            anchors.fill: parent
-                            opacity: updateSpinner.visible ? .2 : 1
-                            aspect: LomiriShape.Flat
-                            image: Image {
-                                sourceSize.width: parent.width
-                                sourceSize.height: parent.height
-                                source: model.icon
-                            }
-                        }
-
-                        ActivityIndicator {
-                            id: updateSpinner
-                            width: parent.width - units.gu(1)
-                            height: width
-                            anchors.centerIn: parent
-                            visible: isUpdating(model.appId)
-                            running: visible
-                        }
-                    }
-
-                    ProgressionSlot {
-                        name: isUpdating(model.appId) ? "close" : "next"
+                    ActivityIndicator {
+                        id: updateSpinner
+                        width: parent.width - units.gu(1)
+                        height: width
+                        anchors.centerIn: parent
+                        visible: isUpdating(model.appId)
+                        running: visible
                     }
                 }
 
-                function slot_packageFetchError(appId) {
-                    PackageBackendManager.packageDetailsReady.disconnect(slot_installedPackageDetailsReady);
-                    PackageBackendManager.packageDetailsError.disconnect(slot_packageFetchError);
-
-                    if (root.mainStackPage !== "discoverPage") { pageStack.pop() }
-                    pageStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), {
-                        app: localAppModel.getByAppId(appId),
-                        localAppModel: localAppModel
-                    });
+                ProgressionSlot {
+                    name: isUpdating(model.appId) ? "close" : "next"
                 }
+            }
 
-                function slot_installedPackageDetailsReady(pkg) {
-                    PackageBackendManager.packageDetailsReady.disconnect(slot_installedPackageDetailsReady);
-                    PackageBackendManager.packageDetailsError.disconnect(slot_packageFetchError);
+            function slot_packageFetchError(appId) {
+                PackageBackendManager.packageDetailsReady.disconnect(slot_installedPackageDetailsReady);
+                PackageBackendManager.packageDetailsError.disconnect(slot_packageFetchError);
 
-                    if (root.mainStackPage !== "discoverPage") { pageStack.pop() }
-                    pageStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), {
-                        app: pkg,
-                        localAppModel: localAppModel
-                    });
-                }
+                if (root.mainStackPage !== "discoverPage") { pageStack.pop() }
+                pageStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), {
+                    app: localAppModel.getByAppId(appId),
+                    localAppModel: localAppModel
+                });
+            }
 
-                onClicked: {
-                    if (isUpdating(model.appId)) {
-                        BackendInstaller.installer.abortInstallation()
-                    } else {
-                        if (Connectivity.online || PlatformIntegration.packageKit) {
-                            PackageBackendManager.packageDetailsReady.connect(slot_installedPackageDetailsReady);
-                            PackageBackendManager.packageDetailsError.connect(slot_packageFetchError);
-                            PackageBackendManager.getPackageDetails(model.appId);
-                        }
-                        else {
-                            if (root.mainStackPage !== "discoverPage") { pageStack.pop() }
-                            pageStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), {
-                                app: localAppModel.getByAppId(model.appId),
-                                localAppModel: localAppModel
-                            });
-                        }
+            function slot_installedPackageDetailsReady(pkg) {
+                PackageBackendManager.packageDetailsReady.disconnect(slot_installedPackageDetailsReady);
+                PackageBackendManager.packageDetailsError.disconnect(slot_packageFetchError);
+
+                if (root.mainStackPage !== "discoverPage") { pageStack.pop() }
+                pageStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), {
+                    app: pkg,
+                    localAppModel: localAppModel
+                });
+            }
+
+            onClicked: {
+                if (isUpdating(model.appId)) {
+                    BackendInstaller.installer.abortInstallation()
+                } else {
+                    if (Connectivity.online || PlatformIntegration.packageKit) {
+                        PackageBackendManager.packageDetailsReady.connect(slot_installedPackageDetailsReady);
+                        PackageBackendManager.packageDetailsError.connect(slot_packageFetchError);
+                        PackageBackendManager.getPackageDetails(model.appId);
+                    }
+                    else {
+                        if (root.mainStackPage !== "discoverPage") { pageStack.pop() }
+                        pageStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), {
+                            app: localAppModel.getByAppId(model.appId),
+                            localAppModel: localAppModel
+                        });
                     }
                 }
             }
@@ -248,5 +302,9 @@ Page {
             iconName: "ubuntu-store-symbolic"
             anchors.centerIn: parent
         }
+    }
+
+    Dialogs.SystemUpdatesDialog {
+        id: systemUpdatesDialog
     }
 }

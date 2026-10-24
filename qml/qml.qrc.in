@@ -26,6 +26,7 @@
         <file>Components/ScreenshotsCarousel.qml</file>
         <file>Components/SectionDivider.qml</file>
         <file>Dialogs/UninstallDialog.qml</file>
+        <file>Dialogs/SystemUpdatesDialog.qml</file>
         <file>Dialogs/DomainWarningDialog.qml</file>
         <file>Dialogs/InstallWarningDialog.qml</file>
         <file>Dialogs/InstallationErrorDialog.qml</file>

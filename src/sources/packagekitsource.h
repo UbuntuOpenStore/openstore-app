@@ -48,6 +48,8 @@ public:
   void refresh() override;
   bool busy() const override;
   QStringList sourceDescriptions() const override;
+  QList<SystemUpdateItem> systemUpdates() const override;
+  void updateAll() override;
 
 private:
   void refreshInstalledInfo();

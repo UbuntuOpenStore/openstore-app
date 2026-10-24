@@ -21,6 +21,7 @@
 #include "../packagescache.h"
 #include "../platformintegration.h"
 
+#include <QSortFilterProxyModel>
 #include <algorithm>
 
 #define MODEL_START_REFRESH()                                                                                                              \
@@ -46,6 +47,10 @@ LocalPackagesModel::LocalPackagesModel(QAbstractListModel* parent)
   : QAbstractListModel(parent)
   , m_ready(false)
   , m_appStoreUpdateAvailable(false)
+  , m_availableUpdatesModel(nullptr)
+  , m_downgradeAppsModel(nullptr)
+  , m_installedAppsModel(nullptr)
+  , m_snapAppsModel(nullptr)
 {
   m_source = PackageBackendManager::instance()->activeSource();
 
@@ -54,7 +59,22 @@ LocalPackagesModel::LocalPackagesModel(QAbstractListModel* parent)
   connect(OpenStoreNetworkManager::instance(), &OpenStoreNetworkManager::snapSupportChanged, this, &LocalPackagesModel::refresh);
   connect(m_source, &PackageSource::installedChanged, this, &LocalPackagesModel::refresh);
 
+  // The Installed Apps page renders one list per update status.
+  m_availableUpdatesModel = createFilteredModel(QStringLiteral("available"));
+  m_downgradeAppsModel = createFilteredModel(QStringLiteral("downgrade"));
+  m_installedAppsModel = createFilteredModel(QStringLiteral("none"));
+  m_snapAppsModel = createFilteredModel(QStringLiteral("snap"));
+
   refresh();
+}
+
+QSortFilterProxyModel* LocalPackagesModel::createFilteredModel(const QString& updateStatus)
+{
+  QSortFilterProxyModel* proxy = new QSortFilterProxyModel(this);
+  proxy->setSourceModel(this);
+  proxy->setFilterRole(RoleUpdateStatus);
+  proxy->setFilterFixedString(updateStatus);
+  return proxy;
 }
 
 QHash<int, QByteArray> LocalPackagesModel::roleNames() const
@@ -157,6 +177,11 @@ int LocalPackagesModel::snapsCount() const
   return result;
 }
 
+int LocalPackagesModel::systemUpdatesCount() const
+{
+  return m_source->systemUpdates().count();
+}
+
 void LocalPackagesModel::refresh()
 {
   MODEL_START_REFRESH();
@@ -205,4 +230,17 @@ QVariantMap LocalPackagesModel::getByAppId(const QString& appId)
   }
 
   return QVariantMap();
+}
+
+QVariantList LocalPackagesModel::systemUpdates()
+{
+  QVariantList result;
+  Q_FOREACH (const SystemUpdateItem& item, m_source->systemUpdates()) {
+    QVariantMap map;
+    map[QStringLiteral("name")] = item.name;
+    map[QStringLiteral("version")] = item.version;
+    result.append(map);
+  }
+
+  return result;
 }

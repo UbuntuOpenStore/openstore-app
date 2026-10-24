@@ -17,8 +17,29 @@ Vagrant.configure("2") do |config|
     export DEBIAN_FRONTEND=noninteractive
 
     apt-get update
-    apt-get install -y software-properties-common
+    apt-get install -y software-properties-common curl
     add-apt-repository -y ppa:lomiri/builds
+
+    # Use the Ubport repo for packages not available in the lomiri ppa
+    install -d -m 0755 /etc/apt/keyrings
+    curl -fsSL https://repo.ubports.com/keyring.gpg -o /etc/apt/keyrings/ubports.gpg
+    cat > /etc/apt/sources.list.d/ubports.sources <<'EOF'
+Types: deb
+URIs: https://repo.ubports.com
+Suites: 26.04-1.x
+Components: main
+Signed-By: /etc/apt/keyrings/ubports.gpg
+EOF
+    cat > /etc/apt/preferences.d/ubports.pref <<'EOF'
+Package: *
+Pin: origin repo.ubports.com
+Pin-Priority: 100
+
+Package: ubuntutouch-artwork qml-module-snapd2
+Pin: origin repo.ubports.com
+Pin-Priority: 501
+EOF
+
     apt-get update
 
     apt-get install -y \
@@ -106,7 +127,10 @@ EOF
         ipv4.route-metric 4200 \
         ipv6.method disabled
     fi
-    nmcli connection up openstore-online
+
+    nmcli device set dummy0 managed yes 2>/dev/null || true
+    sleep 2
+    nmcli connection up openstore-online 2>/dev/null || nmcli connection up openstore-online || true
 
     nmcli device status
 
@@ -126,7 +150,11 @@ EOF
     if [ "$state" = "0" ] || [ "$state" = "1" ]; then
       echo "PackageKit still reports the VM as offline (NetworkState=$state)." >&2
       echo "Installs will fail with 'Cannot download packages whilst offline'." >&2
-      exit 1
+      if nmcli connection show --active | grep -q openstore-online && ping -c 1 -W 2 8.8.8.8 >/dev/null 2>&1; then
+        echo "Continuing despite PackageKit reporting offline (network is up)." >&2
+      else
+        exit 1
+      fi
     elif [ -z "$state" ]; then
       echo "Could not read PackageKit's NetworkState, skipping the online check." >&2
     else

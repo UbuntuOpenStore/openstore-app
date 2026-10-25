@@ -137,16 +137,49 @@ Page {
                 delegate: appDelegate
             }
 
+            // ListItem hides the divider of the last delegate, so the boundary before the system updates row needs an explicit line.
+            Components.LineDivider {
+                x: units.gu(8)
+                width: parent.width - units.gu(8)
+                visible: localAppModel.systemUpdatesCount > 0 && localAppModel.updatesAvailableCount > 0
+            }
+
             ListItem {
                 visible: localAppModel.systemUpdatesCount > 0
                 width: parent.width
                 height: units.gu(7)
-                onClicked: PopupUtils.open(systemUpdatesDialog, rootItem, {updates: localAppModel.systemUpdates()})
+                onClicked: PopupUtils.open(systemUpdatesDialog, rootItem, { updates: localAppModel.systemUpdates() })
+                divider.visible: false
 
                 ListItemLayout {
                     anchors.centerIn: parent
                     // TRANSLATORS: %1 is the number of library and tool updates
                     title.text: i18n.tr("%1 library and tool update", "%1 library and tool updates", localAppModel.systemUpdatesCount).arg(localAppModel.systemUpdatesCount)
+
+                    Item {
+                        SlotsLayout.position: SlotsLayout.Leading
+                        width: units.gu(4); height: width
+
+                        LomiriShape {
+                            id: appIcon
+                            anchors.fill: parent
+                            opacity: batchRunning ? .2 : 1
+                            aspect: LomiriShape.Flat
+                            image: Image {
+                                sourceSize.width: parent.width
+                                sourceSize.height: parent.height
+                                source: PlatformIntegration.fallbackIcon
+                            }
+                        }
+
+                        ActivityIndicator {
+                            width: parent.width - units.gu(1)
+                            height: width
+                            anchors.centerIn: parent
+                            visible: batchRunning
+                            running: visible
+                        }
+                    }
 
                     ProgressionSlot {
                         name: "next"

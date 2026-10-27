@@ -59,16 +59,31 @@ MainView {
 
     property alias apiKey: settings.apiKey
 
+    // Pops every page above the Discover root so the next push starts from a clean history.
+    function resetToDiscover() {
+        while (pageStack.depth > 1) {
+            pageStack.pop()
+        }
+    }
+
+    // Pushes a page on top of the current history, keeping the back stack intact.
+    function pushPage(page, properties) {
+        return pageStack.push(page, properties || {})
+    }
+
+    // Replaces the current history with the Discover root plus the given page.
+    function resetAndPush(page, properties) {
+        resetToDiscover()
+        return pushPage(page, properties)
+    }
+
     function slot_packageFetchError(appId) {
         PackageBackendManager.packageDetailsReady.disconnect(slot_packageDetailsReady);
         PackageBackendManager.packageDetailsError.disconnect(slot_packageFetchError);
 
         var app = localAppModel.getByAppId(appId);
         if (app.appId) {
-            if (root.mainStackPage !== "discoverPage") {
-                pageStack.pop()
-            }
-            pageStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
+            pushPage(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
         }
     }
 
@@ -76,10 +91,7 @@ MainView {
         PackageBackendManager.packageDetailsReady.disconnect(slot_packageDetailsReady);
         PackageBackendManager.packageDetailsError.disconnect(slot_packageFetchError);
 
-        if (root.mainStackPage !== "discoverPage") {
-            pageStack.pop()
-        }
-        pageStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg });
+        pushPage(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg });
     }
 
     function openApp(appId) {
@@ -91,10 +103,7 @@ MainView {
         else {
             var app = localAppModel.getByAppId(appId);
             if (app.appId) {
-                if (root.mainStackPage !== "discoverPage") {
-                    pageStack.pop()
-                }
-                pageStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
+                pushPage(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
             }
         }
     }
@@ -344,6 +353,7 @@ MainView {
 
         onInstalledAppsClicked: root.showInstalledApps()
         onCategoryClicked: function(name, id) { root.showCategory(name, id) }
+        onDiscoverClicked: root.resetToDiscover()
     }
 
     Component {
@@ -446,30 +456,28 @@ MainView {
         }
     }
 
-    //Function from mainPage
-
     function showCategory(name, id) {
-        if (root.mainStackPage !== "discoverPage") {
-            pageStack.pop()
-        }
-        pageStack.push(filteredAppPageComponent, { title: name, section: "category:" + id, category: id });
+        resetAndPush(filteredAppPageComponent, { title: name, section: "category:" + id, category: id });
     }
+
     function showSearch(text) {
-        if (root.mainStackPage !== "discoverPage") {
-            pageStack.pop()
-        }
-        pageStack.push(Qt.resolvedUrl("../SearchPage.qml"), {"searchText": text || ''});
+        resetAndPush(Qt.resolvedUrl("SearchPage.qml"), { searchText: text || '' });
     }
 
     function showInstalledApps() {
-        if (root.mainStackPage !== "discoverPage") {
-            pageStack.pop()
-        }
-        pageStack.push(Qt.resolvedUrl("InstalledAppsPage.qml"));
+        resetAndPush(Qt.resolvedUrl("InstalledAppsPage.qml"));
     }
 
     function showSearchQuery(url) {
-        pageStack.push(Qt.resolvedUrl("../SearchPage.qml"), {"queryUrl": url || ''});
+        resetAndPush(Qt.resolvedUrl("SearchPage.qml"), { queryUrl: url || '' });
+    }
+
+    function showSettings() {
+        pushPage(Qt.resolvedUrl("SettingsPage.qml"));
+    }
+
+    function showSearchPage() {
+        pushPage(Qt.resolvedUrl("SearchPage.qml"));
     }
 
     // Shown for any install/remove/update failure. Kept on the persistent

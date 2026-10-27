@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-25 03:50+0000\n"
+"POT-Creation-Date: 2026-10-27 00:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -710,8 +710,8 @@ msgid ""
 "Age Rating Service</a>"
 msgstr ""
 
-#: ../qml/Components/DesktopSidebar.qml.in:89 ../qml/DiscoverPage.qml.in:199
-#: ../qml/DiscoverPage.qml.in:200 ../qml/InstalledAppsPage.qml.in:104
+#: ../qml/Components/DesktopSidebar.qml.in:94 ../qml/DiscoverPage.qml.in:197
+#: ../qml/DiscoverPage.qml.in:198 ../qml/InstalledAppsPage.qml.in:104
 msgid "Installed Apps"
 msgstr ""
 
@@ -719,7 +719,7 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: ../qml/Components/HeaderMain.qml.in:40 ../qml/SearchPage.qml.in:35
+#: ../qml/Components/HeaderMain.qml.in:37 ../qml/SearchPage.qml.in:35
 msgid "Search"
 msgstr ""
 
@@ -1002,8 +1002,8 @@ msgstr ""
 msgid "The package could not be installed."
 msgstr ""
 
-#: ../qml/Dialogs/InstallationErrorDialog.qml.in:33 ../qml/Main.qml.in:428
-#: ../qml/Main.qml.in:443
+#: ../qml/Dialogs/InstallationErrorDialog.qml.in:33 ../qml/Main.qml.in:438
+#: ../qml/Main.qml.in:453
 msgid "OK"
 msgstr ""
 
@@ -1073,33 +1073,33 @@ msgstr ""
 msgid "Do you want to remove %1?"
 msgstr ""
 
-#: ../qml/DiscoverPage.qml.in:54
+#: ../qml/DiscoverPage.qml.in:52
 msgid "Discover"
 msgstr ""
 
-#: ../qml/DiscoverPage.qml.in:54
+#: ../qml/DiscoverPage.qml.in:52
 msgid "OpenStore"
 msgstr ""
 
-#: ../qml/DiscoverPage.qml.in:90
+#: ../qml/DiscoverPage.qml.in:88
 msgid "by %1"
 msgstr ""
 
-#: ../qml/DiscoverPage.qml.in:150
+#: ../qml/DiscoverPage.qml.in:148
 msgid "You are currently offline"
 msgstr ""
 
-#: ../qml/DiscoverPage.qml.in:166
+#: ../qml/DiscoverPage.qml.in:164
 msgid "OpenStore update available"
 msgstr ""
 
-#: ../qml/DiscoverPage.qml.in:199
+#: ../qml/DiscoverPage.qml.in:197
 msgid " (%1 update available)"
 msgid_plural " (%1 updates available)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../qml/DiscoverPage.qml.in:226
+#: ../qml/DiscoverPage.qml.in:224
 msgid "Browse Apps by Category"
 msgstr ""
 
@@ -1156,27 +1156,27 @@ msgstr ""
 msgid "Installed Snap apps (%1)"
 msgstr ""
 
-#: ../qml/InstalledAppsPage.qml.in:333
+#: ../qml/InstalledAppsPage.qml.in:330
 msgid "No apps found"
 msgstr ""
 
-#: ../qml/InstalledAppsPage.qml.in:334
+#: ../qml/InstalledAppsPage.qml.in:331
 msgid "No app has been installed from OpenStore yet."
 msgstr ""
 
-#: ../qml/Main.qml.in:367 ../qml/SearchPage.qml.in:55
+#: ../qml/Main.qml.in:377 ../qml/SearchPage.qml.in:55
 msgid "Filters"
 msgstr ""
 
-#: ../qml/Main.qml.in:424
+#: ../qml/Main.qml.in:434
 msgid "App installed"
 msgstr ""
 
-#: ../qml/Main.qml.in:425
+#: ../qml/Main.qml.in:435
 msgid "The app has been installed successfully."
 msgstr ""
 
-#: ../qml/Main.qml.in:439
+#: ../qml/Main.qml.in:449
 msgid "Installation failed (Error %1)"
 msgstr ""
 

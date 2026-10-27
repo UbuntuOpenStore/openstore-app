@@ -24,6 +24,7 @@ Rectangle {
 
     signal installedAppsClicked()
     signal categoryClicked(var name, var id)
+    signal discoverClicked()
 
     // Theme colors are inputs so Main.qml.in can override them. Defaults match Main.qml.in.
     property color appColor: "#292929"
@@ -41,9 +42,13 @@ Rectangle {
         anchors.right: parent.right
         height: sidebar.headerHeight
 
-        Item {
+        ListItem {
+            id: brandItem
             width: parent.width
             height: parent.height
+            divider.visible: false
+
+            onClicked: sidebar.discoverClicked()
 
             Image {
                 anchors.left: parent.left

@@ -86,7 +86,6 @@ Page {
 
             var app = localAppModel.getByAppId(appId);
             if (app.appId) {
-                if (root.mainStackPage !== "discoverPage") { pageStack.pop() }
                 pageStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), { app: app });
             }
         }
@@ -95,7 +94,6 @@ Page {
             PackageBackendManager.packageDetailsReady.disconnect(slot_packageDetailsReady)
             PackageBackendManager.packageDetailsError.disconnect(slot_packageFetchError)
 
-            if (root.mainStackPage !== "discoverPage") { pageStack.pop() }
             pageStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg });
         }
 

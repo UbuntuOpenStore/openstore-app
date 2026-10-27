@@ -287,7 +287,6 @@ Page {
                 PackageBackendManager.packageDetailsReady.disconnect(slot_installedPackageDetailsReady);
                 PackageBackendManager.packageDetailsError.disconnect(slot_packageFetchError);
 
-                if (root.mainStackPage !== "discoverPage") { pageStack.pop() }
                 pageStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), {
                     app: localAppModel.getByAppId(appId),
                     localAppModel: localAppModel
@@ -298,7 +297,6 @@ Page {
                 PackageBackendManager.packageDetailsReady.disconnect(slot_installedPackageDetailsReady);
                 PackageBackendManager.packageDetailsError.disconnect(slot_packageFetchError);
 
-                if (root.mainStackPage !== "discoverPage") { pageStack.pop() }
                 pageStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), {
                     app: pkg,
                     localAppModel: localAppModel
@@ -315,7 +313,6 @@ Page {
                         PackageBackendManager.getPackageDetails(model.appId);
                     }
                     else {
-                        if (root.mainStackPage !== "discoverPage") { pageStack.pop() }
                         pageStack.push(Qt.resolvedUrl("AppLocalDetailsPage.qml"), {
                             app: localAppModel.getByAppId(model.appId),
                             localAppModel: localAppModel

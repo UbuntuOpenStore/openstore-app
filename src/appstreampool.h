@@ -18,8 +18,10 @@
 #ifndef APPSTREAMPOOL_H
 #define APPSTREAMPOOL_H
 
+#include <AppStreamQt/component.h>
 #include <AppStreamQt/pool.h>
 #include <QObject>
+#include <QString>
 
 class AppStreamPool : public QObject
 {
@@ -28,6 +30,8 @@ public:
   explicit AppStreamPool(QObject* parent = 0);
 
   static QList<AppStream::Component> loadFromDisk();
+
+  static QString iconSource(const AppStream::Component& component);
 
   void setComponents(const QList<AppStream::Component>& components);
   // True once setComponents() has run; componentById() can only resolve ids

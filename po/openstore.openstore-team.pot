@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-27 00:11+0000\n"
+"POT-Creation-Date: 2026-10-27 01:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,17 +29,17 @@ msgid "Remove"
 msgstr ""
 
 #: ../qml/AppDetailsPage.qml.in:182 ../qml/Components/PackageListItem.qml.in:35
-#: ../qml/Components/PackageTile.qml.in:94
+#: ../qml/Components/PackageTile.qml.in:98
 msgid "App"
 msgstr ""
 
 #: ../qml/AppDetailsPage.qml.in:183 ../qml/Components/PackageListItem.qml.in:36
-#: ../qml/Components/PackageTile.qml.in:95
+#: ../qml/Components/PackageTile.qml.in:99
 msgid "Bookmark"
 msgstr ""
 
 #: ../qml/AppDetailsPage.qml.in:184 ../qml/Components/PackageListItem.qml.in:37
-#: ../qml/Components/PackageTile.qml.in:96
+#: ../qml/Components/PackageTile.qml.in:100
 msgid "Web App"
 msgstr ""
 
@@ -757,16 +757,16 @@ msgid "Accounts provider"
 msgstr ""
 
 #: ../qml/Components/PackageListItem.qml.in:49
-#: ../qml/Components/PackageTile.qml.in:108
+#: ../qml/Components/PackageTile.qml.in:112
 #: ../qml/Dialogs/FilterDialog.qml.in:165
 msgid "Snap"
 msgstr ""
 
-#: ../qml/Components/PackageTile.qml.in:120
+#: ../qml/Components/PackageTile.qml.in:124
 msgid "Update available"
 msgstr ""
 
-#: ../qml/Components/PackageTile.qml.in:122
+#: ../qml/Components/PackageTile.qml.in:126
 msgid "✓ Installed"
 msgstr ""
 

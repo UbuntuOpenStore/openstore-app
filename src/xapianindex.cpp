@@ -19,7 +19,6 @@
 #include "appstreampool.h"
 
 #include <AppStreamQt/component.h>
-#include <AppStreamQt/icon.h>
 #include <AppStreamQt/release.h>
 
 #include <QDebug>
@@ -122,8 +121,7 @@ int XapianIndex::buildToFile(const QString& dbPath,
       doc.add_value(VALUE_NAME, name.toStdString());
       doc.add_value(VALUE_SUMMARY, summary.toStdString());
       doc.add_value(VALUE_CATEGORY, component.categories().join(QLatin1Char(';')).toStdString());
-      const AppStream::Icon icon = component.icons().isEmpty() ? AppStream::Icon() : component.icons().first();
-      doc.add_value(VALUE_ICON, (!icon.isEmpty() ? icon.url().toString() : QString()).toStdString());
+      doc.add_value(VALUE_ICON, AppStreamPool::iconSource(component).toStdString());
 
       doc.add_value(VALUE_NAME_SORT, name.toLower().toStdString());
 

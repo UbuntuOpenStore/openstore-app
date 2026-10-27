@@ -29,7 +29,6 @@
 #include "../xapianindex.h"
 
 #include <AppStreamQt/component.h>
-#include <AppStreamQt/icon.h>
 
 #include <QDebug>
 
@@ -162,8 +161,7 @@ QList<SearchPackageItem> PackageKitSource::enrichList(const QList<SearchPackageI
     if (!component.id().isEmpty()) {
       item.name = component.name();
       item.tagline = component.summary();
-      const bool hasIcon = !component.icons().isEmpty() && !component.icons().first().url().isEmpty();
-      item.icon = hasIcon ? component.icons().first().url().toString() : PlatformIntegration::instance()->fallbackIcon();
+      item.icon = AppStreamPool::iconSource(component);
       item.packageType = QStringLiteral("packagekit");
     }
     // Installed sets are keyed by the binary package name; the appId is the
@@ -321,8 +319,7 @@ QList<LocalPackageItem> PackageKitSource::requestInstalled()
     LocalPackageItem item;
     item.appId = componentId;
     item.name = component.name();
-    const bool hasIcon = !component.icons().isEmpty() && !component.icons().first().url().isEmpty();
-    item.icon = hasIcon ? component.icons().first().url().toString() : PlatformIntegration::instance()->fallbackIcon();
+    item.icon = AppStreamPool::iconSource(component);
     item.version = it.value();
     item.packageType = QStringLiteral("packagekit");
     const AppStream::Launchable launchable = component.launchable(AppStream::Launchable::KindDesktopId);

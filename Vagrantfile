@@ -60,7 +60,11 @@ EOF
       intltool \
       qml6-module-lomiri-content \
       qml6-module-lomiri-connectivity \
-      morph-browser-qt6
+      morph-browser-qt6 \
+      apt-config-icons \
+      apt-config-icons-hidpi \
+      apt-config-icons-large \
+      apt-config-icons-large-hidpi
 
     usermod -s /bin/bash vagrant
     usermod -aG sudo vagrant

@@ -17,13 +17,13 @@
 
 #include "packagekitpackage.h"
 #include "../apiconstants.h"
+#include "../appstreampool.h"
 #include "../categories/categoryparser.h"
 #include "../installers/packagekitinstaller.h"
 #include "../platformintegration.h"
 
 #include <AppStreamQt/contentrating.h>
 #include <AppStreamQt/developer.h>
-#include <AppStreamQt/icon.h>
 #include <AppStreamQt/image.h>
 #include <AppStreamQt/screenshot.h>
 
@@ -87,12 +87,7 @@ PackageKitPackageItem::PackageKitPackageItem(const AppStream::Component& compone
   m_category = CategoryParser::matchCategory(component.categories());
   m_packageType = QStringLiteral("packagekit");
 
-  if (!component.icons().isEmpty()) {
-    const AppStream::Icon icon = component.icons().first();
-    m_icon = !icon.isEmpty() && !icon.url().isEmpty() ? icon.url().toString() : QString();
-  }
-  if (m_icon.isEmpty())
-    m_icon = PlatformIntegration::instance()->fallbackIcon();
+  m_icon = AppStreamPool::iconSource(component);
 
   Q_FOREACH (const AppStream::Screenshot& shot, component.screenshotsAll()) {
     Q_FOREACH (const AppStream::Image& image, shot.images()) {

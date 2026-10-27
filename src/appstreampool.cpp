@@ -17,8 +17,14 @@
 
 #include "appstreampool.h"
 
+#include "platformintegration.h"
+
 #include <QDebug>
+#include <QIcon>
 #include <QSet>
+#include <QUrl>
+
+#include <AppStreamQt/icon.h>
 
 #include <algorithm>
 
@@ -97,4 +103,61 @@ QList<AppStream::Component> AppStreamPool::allComponents() const
 QStringList AppStreamPool::repoDescriptions() const
 {
   return QStringList() << QStringLiteral("/var/cache/swcatalog/xmls");
+}
+
+QString AppStreamPool::iconSource(const AppStream::Component& component)
+{
+  QString localPath;
+  int localSize = 0;
+  QString stockName;
+  QString remoteUrl;
+
+  const QList<AppStream::Icon> icons = component.icons();
+  Q_FOREACH (const AppStream::Icon& icon, icons) {
+    switch (icon.kind()) {
+      case AppStream::Icon::KindCached:
+      case AppStream::Icon::KindLocal: {
+        // libappstream resolves these to an absolute path in the AppStream icon
+        // cache. The cache holds several sizes per app, so keep the largest one.
+        const QString path = icon.url().toLocalFile();
+        if (path.isEmpty())
+          break;
+
+        const int size = qMax(icon.width(), icon.height());
+        if (size > localSize) {
+          localSize = size;
+          localPath = path;
+        }
+
+        break;
+      }
+      case AppStream::Icon::KindStock:
+        if (stockName.isEmpty())
+          stockName = icon.name();
+        break;
+      case AppStream::Icon::KindRemote:
+        if (remoteUrl.isEmpty())
+          remoteUrl = icon.url().toString();
+        break;
+      default:
+        break;
+    }
+  }
+
+  if (!localPath.isEmpty())
+    return QUrl::fromLocalFile(localPath).toString();
+
+  if (!stockName.isEmpty()) {
+    QString name = stockName;
+    if (name.endsWith(QStringLiteral(".desktop")))
+      name.chop(8);
+
+    if (!name.isEmpty() && !QIcon::fromTheme(name).isNull())
+      return QStringLiteral("image://theme/") + name;
+  }
+
+  if (!remoteUrl.isEmpty())
+    return remoteUrl;
+
+  return PlatformIntegration::instance()->fallbackIcon();
 }

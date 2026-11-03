@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="io.open-store.lomiri-openstore-app" path="/io/open-store/lomiri-openstore-app/">
+    <key type="s" name="api-base-url">
+      <default>'https://open-store.io/'</default>
+      <summary>OpenStore API base URL</summary>
+      <description>Base URL of the OpenStore API to use. Leave empty to use the default API.</description>
+    </key>
+  </schema>
+</schemalist>

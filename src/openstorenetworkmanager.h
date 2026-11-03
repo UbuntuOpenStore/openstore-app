@@ -44,8 +44,7 @@ class OpenStoreNetworkManager : public QObject
   Q_PROPERTY(bool showNsfw MEMBER m_showNsfw NOTIFY showNsfwChanged)
   Q_PROPERTY(bool snapSupport READ snapSupport WRITE setSnapSupport NOTIFY snapSupportChanged)
   Q_PROPERTY(bool lomiriCompatibleOnly READ lomiriCompatibleOnly WRITE setLomiriCompatibleOnly NOTIFY lomiriCompatibleOnlyChanged)
-  Q_PROPERTY(bool isDifferentDomain READ isDifferentDomain CONSTANT)
-  Q_PROPERTY(QString domain READ getUrl CONSTANT)
+  Q_PROPERTY(QString baseUrl READ getUrl CONSTANT)
 
 public:
   explicit OpenStoreNetworkManager();
@@ -89,7 +88,6 @@ public:
       Q_EMIT lomiriCompatibleOnlyChanged();
     }
   }
-  bool isDifferentDomain() const;
   QString getUrl() const;
   QString getUrl(QString route) const;
 

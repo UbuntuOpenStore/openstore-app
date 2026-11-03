@@ -165,6 +165,16 @@ Page {
             }
 
             ListItem {
+                onClicked: Qt.openUrlExternally(OpenStoreNetworkManager.baseUrl)
+                ListItemLayout {
+                    anchors.centerIn: parent
+                    title.text: i18n.tr("API server")
+                    subtitle.text: OpenStoreNetworkManager.baseUrl
+                    ProgressionSlot {}
+                }
+            }
+
+            ListItem {
                 onClicked: Qt.openUrlExternally("https://gitlab.com/theopenstore/openstore-app")
                 ListItemLayout {
                     anchors.centerIn: parent

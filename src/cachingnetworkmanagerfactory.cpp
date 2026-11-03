@@ -19,10 +19,12 @@
 
 #include "cachingnetworkmanagerfactory.h"
 #include "apiconstants.h"
+#include "apidomainsettings.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkDiskCache>
 #include <QStandardPaths>
+#include <QUrl>
 
 CachingNetworkAccessManager::CachingNetworkAccessManager(QObject* parent)
   : QNetworkAccessManager(parent)
@@ -50,11 +52,7 @@ QNetworkAccessManager* CachingNetworkManagerFactory::create(QObject* parent)
 {
   QNetworkAccessManager* manager = new CachingNetworkAccessManager(parent);
 
-  QString domain = qgetenv("OPENSTORE_DOMAIN");
-  if (domain.isEmpty()) {
-    domain = STORE_DOMAIN;
-  }
-
+  QString domain = QUrl(ApiDomainSettings::getBaseUrl()).host();
   for (int i = 0; i < 6; ++i) {
     manager->connectToHostEncrypted(domain);
   }

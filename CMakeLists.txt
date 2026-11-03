@@ -22,6 +22,14 @@ option(ENABLE_SNAP_SUPPORT "Build with snap package support" ON)
 option(ENABLE_PACKAGEKIT_SUPPORT "Build with deb/apt catalog support" OFF)
 option(CLICK_MODE "Build OpenStore as a click package" ON)
 
+# Read the GSettings schema from the copy bundled with the app instead of the sytem
+if(CLICK_MODE)
+    set(BUNDLED_GSETTINGS_DEFAULT ON)
+else()
+    set(BUNDLED_GSETTINGS_DEFAULT OFF)
+endif()
+option(BUNDLED_GSETTINGS "Read the GSettings schema bundled with the app" ${BUNDLED_GSETTINGS_DEFAULT})
+
 if(ENABLE_PACKAGEKIT_SUPPORT AND NOT ENABLE_QT6)
     message(FATAL_ERROR "ENABLE_PACKAGEKIT_SUPPORT requires ENABLE_QT6 (deb dependencies are the Qt6 bindings)")
 endif()
@@ -235,6 +243,40 @@ if(CLICK_MODE)
 endif()
 install(FILES qml/Assets/${PROJECT_NAME}.svg DESTINATION ${OPENSTORE_ICON_DIR})
 install(FILES qml/Assets/${PROJECT_NAME}splash.svg DESTINATION ${DATA_DIR})
+
+# GSettings schema
+set(GSETTINGS_SCHEMA_NAME io.open-store.lomiri-openstore-app.gschema.xml)
+set(GSETTINGS_SCHEMA_FILE ${CMAKE_CURRENT_BINARY_DIR}/share/glib-2.0/schemas/${GSETTINGS_SCHEMA_NAME})
+
+find_program(GLIB_COMPILE_SCHEMAS glib-compile-schemas)
+if(NOT GLIB_COMPILE_SCHEMAS)
+    message(FATAL_ERROR "Could not find glib-compile-schemas, please install the libglib2.0-bin package")
+endif()
+
+configure_file(
+    data/schemas/io.open-store.lomiri-openstore-app.gschema.xml.in
+    ${GSETTINGS_SCHEMA_FILE}
+    @ONLY
+)
+
+if(BUNDLED_GSETTINGS)
+    set(GSETTINGS_SCHEMA_DIR "share/glib-2.0/schemas")
+    set(GSETTINGS_COMPILED_FILE ${CMAKE_CURRENT_BINARY_DIR}/share/glib-2.0/schemas/gschemas.compiled)
+
+    add_custom_command(
+        OUTPUT ${GSETTINGS_COMPILED_FILE}
+        COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_CURRENT_BINARY_DIR}/share/glib-2.0/schemas
+        COMMAND ${GLIB_COMPILE_SCHEMAS} --strict ${CMAKE_CURRENT_BINARY_DIR}/share/glib-2.0/schemas
+        DEPENDS ${GSETTINGS_SCHEMA_FILE}
+        COMMENT "Compiling GSettings schema..."
+    )
+
+    add_custom_target(openstore-gsettings ALL DEPENDS ${GSETTINGS_COMPILED_FILE})
+
+    install(FILES ${GSETTINGS_SCHEMA_FILE} ${GSETTINGS_COMPILED_FILE} DESTINATION ${GSETTINGS_SCHEMA_DIR})
+else()
+    install(FILES ${GSETTINGS_SCHEMA_FILE} DESTINATION ${CMAKE_INSTALL_FULL_DATADIR}/glib-2.0/schemas)
+endif()
 
 # Translations
 file(GLOB_RECURSE I18N_SRC_FILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/po qml/*.qml.in qml/*.js)

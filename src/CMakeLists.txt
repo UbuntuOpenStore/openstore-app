@@ -16,6 +16,7 @@ add_definitions(-DQT_NO_KEYWORDS)
 set(
     SRC
     main.cpp
+    apidomainsettings.cpp
     models/categoriesmodel.cpp
     packageSource.cpp
     packagebackendmanager.cpp
@@ -34,6 +35,10 @@ set(
 )
 
 add_definitions(-DBUILD_VERSION="${BUILD_VERSION}")
+
+if(BUNDLED_GSETTINGS)
+    add_definitions(-DBUNDLED_GSETTINGS)
+endif()
 
 if(ENABLE_CLICK_SUPPORT)
     add_definitions(-DENABLE_CLICK_SUPPORT)

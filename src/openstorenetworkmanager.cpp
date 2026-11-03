@@ -17,6 +17,7 @@
 
 #include "openstorenetworkmanager.h"
 #include "apiconstants.h"
+#include "apidomainsettings.h"
 #include "platformintegration.h"
 
 #include <QCoreApplication>
@@ -76,17 +77,7 @@ QString OpenStoreNetworkManager::getUrl() const
 
 QString OpenStoreNetworkManager::getUrl(QString route) const
 {
-  QString base = qgetenv("OPENSTORE_API");
-  if (base.isEmpty()) {
-    base = API_BASEURL;
-  }
-
-  return base + route;
-}
-
-bool OpenStoreNetworkManager::isDifferentDomain() const
-{
-  return (getUrl() != API_BASEURL);
+  return ApiDomainSettings::getBaseUrl() + route;
 }
 
 QNetworkReply* OpenStoreNetworkManager::sendRequest(QNetworkRequest request)
@@ -307,7 +298,7 @@ void OpenStoreNetworkManager::postReview(const QString& signature,
   QJsonObject createReview{ { "body", review }, { "version", version }, { "rating", Ratings::ratingToString(rating) } };
   QJsonDocument jsonDocument(createReview);
 
-  QUrl url(API_BASEURL + API_REVIEW_LIST_ENDPOINT.arg(appId));
+  QUrl url(getUrl(API_REVIEW_LIST_ENDPOINT.arg(appId)));
 
   QUrlQuery q(url);
   q.addQueryItem("apikey", apikey);
@@ -335,7 +326,7 @@ void OpenStoreNetworkManager::getReviews(const QString& signature, const QString
     return;
   }
 
-  QUrl url(API_BASEURL + API_REVIEW_LIST_ENDPOINT.arg(appId));
+  QUrl url(getUrl(API_REVIEW_LIST_ENDPOINT.arg(appId)));
 
   QUrlQuery q(url);
   q.addQueryItem("limit", "10");
@@ -350,7 +341,7 @@ void OpenStoreNetworkManager::getReviews(const QString& signature, const QString
     return;
   }
 
-  QUrl url(API_BASEURL + API_REVIEW_LIST_ENDPOINT.arg(appId));
+  QUrl url(getUrl(API_REVIEW_LIST_ENDPOINT.arg(appId)));
 
   QUrlQuery q(url);
   q.addQueryItem("filter", "apikey");
@@ -366,7 +357,7 @@ void OpenStoreNetworkManager::getReviews(const QString& signature, const QString
     return;
   }
 
-  QUrl url(API_BASEURL + API_REVIEW_LIST_ENDPOINT.arg(appId));
+  QUrl url(getUrl(API_REVIEW_LIST_ENDPOINT.arg(appId)));
 
   QUrlQuery q(url);
   q.addQueryItem("limit", QString::number(limit));

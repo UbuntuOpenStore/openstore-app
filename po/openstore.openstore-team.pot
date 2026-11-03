@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-27 01:06+0000\n"
+"POT-Creation-Date: 2026-11-03 15:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,17 +29,17 @@ msgid "Remove"
 msgstr ""
 
 #: ../qml/AppDetailsPage.qml.in:182 ../qml/Components/PackageListItem.qml.in:35
-#: ../qml/Components/PackageTile.qml.in:98
+#: ../qml/Components/PackageTile.qml.in:94
 msgid "App"
 msgstr ""
 
 #: ../qml/AppDetailsPage.qml.in:183 ../qml/Components/PackageListItem.qml.in:36
-#: ../qml/Components/PackageTile.qml.in:99
+#: ../qml/Components/PackageTile.qml.in:95
 msgid "Bookmark"
 msgstr ""
 
 #: ../qml/AppDetailsPage.qml.in:184 ../qml/Components/PackageListItem.qml.in:37
-#: ../qml/Components/PackageTile.qml.in:100
+#: ../qml/Components/PackageTile.qml.in:96
 msgid "Web App"
 msgstr ""
 
@@ -147,7 +147,7 @@ msgstr ""
 msgid "N/A"
 msgstr ""
 
-#: ../qml/AppDetailsPage.qml.in:658 ../qml/SettingsPage.qml.in:171
+#: ../qml/AppDetailsPage.qml.in:658 ../qml/SettingsPage.qml.in:181
 msgid "Source Code"
 msgstr ""
 
@@ -757,16 +757,16 @@ msgid "Accounts provider"
 msgstr ""
 
 #: ../qml/Components/PackageListItem.qml.in:49
-#: ../qml/Components/PackageTile.qml.in:112
+#: ../qml/Components/PackageTile.qml.in:108
 #: ../qml/Dialogs/FilterDialog.qml.in:165
 msgid "Snap"
 msgstr ""
 
-#: ../qml/Components/PackageTile.qml.in:124
+#: ../qml/Components/PackageTile.qml.in:120
 msgid "Update available"
 msgstr ""
 
-#: ../qml/Components/PackageTile.qml.in:126
+#: ../qml/Components/PackageTile.qml.in:122
 msgid "✓ Installed"
 msgstr ""
 
@@ -846,30 +846,6 @@ msgstr ""
 
 #: ../qml/Components/ReviewPreview.qml.in:298
 msgid "No reviews yet"
-msgstr ""
-
-#: ../qml/Dialogs/DomainWarningDialog.qml.in:26
-#: ../qml/Dialogs/SnapWarningDialog.qml.in:26
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml.in:25
-msgid "Warning"
-msgstr ""
-
-#: ../qml/Dialogs/DomainWarningDialog.qml.in:35
-msgid ""
-"You are currently using a non-standard domain for the OpenStore. This is a "
-"development feature. The domain you are using is:"
-msgstr ""
-
-#: ../qml/Dialogs/DomainWarningDialog.qml.in:49
-msgid "Are you sure you want to continue?"
-msgstr ""
-
-#: ../qml/Dialogs/DomainWarningDialog.qml.in:53
-msgid "Yes, I know what I'm doing"
-msgstr ""
-
-#: ../qml/Dialogs/DomainWarningDialog.qml.in:61
-msgid "Get me out of here!"
 msgstr ""
 
 #: ../qml/Dialogs/DonationDialog.qml.in:25
@@ -1002,8 +978,8 @@ msgstr ""
 msgid "The package could not be installed."
 msgstr ""
 
-#: ../qml/Dialogs/InstallationErrorDialog.qml.in:33 ../qml/Main.qml.in:438
-#: ../qml/Main.qml.in:453
+#: ../qml/Dialogs/InstallationErrorDialog.qml.in:33 ../qml/Main.qml.in:424
+#: ../qml/Main.qml.in:439
 msgid "OK"
 msgstr ""
 
@@ -1023,6 +999,11 @@ msgstr ""
 
 #: ../qml/Dialogs/NegativeReviewDialog.qml.in:47
 msgid "Post my review"
+msgstr ""
+
+#: ../qml/Dialogs/SnapWarningDialog.qml.in:26
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml.in:25
+msgid "Warning"
 msgstr ""
 
 #: ../qml/Dialogs/SnapWarningDialog.qml.in:27
@@ -1164,19 +1145,19 @@ msgstr ""
 msgid "No app has been installed from OpenStore yet."
 msgstr ""
 
-#: ../qml/Main.qml.in:377 ../qml/SearchPage.qml.in:55
+#: ../qml/Main.qml.in:367 ../qml/SearchPage.qml.in:55
 msgid "Filters"
 msgstr ""
 
-#: ../qml/Main.qml.in:434
+#: ../qml/Main.qml.in:420
 msgid "App installed"
 msgstr ""
 
-#: ../qml/Main.qml.in:435
+#: ../qml/Main.qml.in:421
 msgid "The app has been installed successfully."
 msgstr ""
 
-#: ../qml/Main.qml.in:449
+#: ../qml/Main.qml.in:435
 msgid "Installation failed (Error %1)"
 msgstr ""
 
@@ -1231,14 +1212,19 @@ msgstr ""
 msgid "About OpenStore"
 msgstr ""
 
-#: ../qml/SettingsPage.qml.in:180
+#: ../qml/SettingsPage.qml.in:171
+msgid "API server"
+msgstr ""
+
+#: ../qml/SettingsPage.qml.in:190
 msgid "Report an issue"
 msgstr ""
 
-#: ../qml/SettingsPage.qml.in:189
+#: ../qml/SettingsPage.qml.in:199
 msgid "Additional Icons by"
 msgstr ""
 
 #: openstore.desktop.in.h:1
-msgid "software;apps;applications;programs;store;market;play;click;discover;install;"
+msgid ""
+"software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr ""

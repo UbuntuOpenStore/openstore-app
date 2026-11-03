@@ -197,16 +197,6 @@ MainView {
 
         PlatformIntegration.update()
 
-        if (OpenStoreNetworkManager.isDifferentDomain) {
-            var popup = PopupUtils.open(domainWarningDialog)
-            popup.accepted.connect(function() {
-                PopupUtils.close(popup)
-            })
-            popup.rejected.connect(function() {
-                Qt.quit();
-            })
-        }
-
         var appIdToOpen = "";
         var appArgs = Qt.application.arguments;
         for (var i = 0; i < appArgs.length; i++) {
@@ -409,10 +399,6 @@ MainView {
                 id: filterDialog
             }
         }
-    }
-
-    Dialogs.DomainWarningDialog {
-        id: domainWarningDialog
     }
 
     Dialogs.InstallWarningDialog {

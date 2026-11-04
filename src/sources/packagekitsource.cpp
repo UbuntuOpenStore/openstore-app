@@ -369,18 +369,24 @@ PackageItem* PackageKitSource::requestPackageDetails(const QString& id)
   if (id.trimmed().isEmpty())
     return 0;
 
+  // Callers reach this with either the bare AppStream component id (the
+  // installed-apps list, the discover categories) or the store id
+  // ("packagekit." + component id) that PackageItem::appId exposes. Both must
+  // resolve to the same item.
+  const QString componentId = localComponentId(id);
+
   PackageKitPackageItem* pkg = 0;
-  if (m_pkgCache.contains(id)) {
-    pkg = m_pkgCache.value(id);
+  if (m_pkgCache.contains(componentId)) {
+    pkg = m_pkgCache.value(componentId);
   } else {
-    const AppStream::Component component = m_pool->componentById(id);
+    const AppStream::Component component = m_pool->componentById(componentId);
     if (component.id().isEmpty()) {
       Q_EMIT packageDetailsError(id);
       return 0;
     }
 
     pkg = new PackageKitPackageItem(component, this);
-    m_pkgCache.insert(id, pkg);
+    m_pkgCache.insert(componentId, pkg);
 
     // Same fresh-gate as requestInstalled(); show cached state first.
     if (!m_installedFresh)
@@ -397,7 +403,7 @@ PackageItem* PackageKitSource::requestPackageDetails(const QString& id)
     requestPackageSize(pkg, packageName);
   }
 
-  const QVariantMap ratings = m_storeRatings.value(id);
+  const QVariantMap ratings = m_storeRatings.value(componentId);
   if (!ratings.isEmpty())
     pkg->setStoreMetadata(ratings);
 

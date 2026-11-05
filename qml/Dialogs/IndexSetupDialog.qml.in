@@ -19,65 +19,61 @@ import Lomiri.Components @LOMIRI_COMPONENTS_VERSION@
 import Lomiri.Components.Popups @LOMIRI_COMPONENTS_VERSION@
 import OpenStore 1.0
 
-Component {
-    id: indexSetupComponent
+Dialog {
+    id: indexSetupDialog
+    title: i18n.tr("Setting up the app catalog")
 
-    Dialog {
-        id: indexSetupDialog
-        title: i18n.tr("Setting up the app catalog")
+    property var searchIndex: PlatformIntegration.packageKit ? BackendInstaller.indexStatus : null
 
-        property var searchIndex: PlatformIntegration.packageKit ? BackendInstaller.indexStatus : null
-
-        Timer {
-            id: startTimer
-            interval: 10
-            onTriggered: {
-                if (searchIndex && searchIndex.state === "uninitialized") {
-                    searchIndex.initialize();
-                }
+    Timer {
+        id: startTimer
+        interval: 10
+        onTriggered: {
+            if (searchIndex && searchIndex.state === "uninitialized") {
+                searchIndex.initialize();
             }
         }
+    }
 
-        Component.onCompleted: {
-            startTimer.start(); // Delay starting the timer so the UI has a chance to render
-        }
+    Component.onCompleted: {
+        startTimer.start(); // Delay starting the timer so the UI has a chance to render
+    }
 
-        Connections {
-            target: searchIndex
-            function onReady() { PopupUtils.close(indexSetupDialog) }
-            function onStateChanged() {
-                if (searchIndex.state === "ready") {
-                    PopupUtils.close(indexSetupDialog);
-                }
+    Connections {
+        target: searchIndex
+        function onReady() { PopupUtils.close(indexSetupDialog) }
+        function onStateChanged() {
+            if (searchIndex.state === "ready") {
+                PopupUtils.close(indexSetupDialog);
             }
         }
+    }
 
-        ProgressBar {
-            anchors.horizontalCenter: parent.horizontalCenter
-            visible: searchIndex && searchIndex.state === "initializing"
-            indeterminate: searchIndex && searchIndex.progress <= 0
-            minimumValue: 0
-            maximumValue: 100
-            value: searchIndex ? searchIndex.progress : 0
-        }
+    ProgressBar {
+        anchors.horizontalCenter: parent.horizontalCenter
+        visible: searchIndex && searchIndex.state === "initializing"
+        indeterminate: searchIndex && searchIndex.progress <= 0
+        minimumValue: 0
+        maximumValue: 100
+        value: searchIndex ? searchIndex.progress : 0
+    }
 
-        Label {
-            anchors {
-                left: parent.left
-                right: parent.right
-            }
-            horizontalAlignment: Text.AlignHCenter
-            visible: searchIndex && searchIndex.state === "error"
-            text: searchIndex ? searchIndex.errorMessage : ""
-            wrapMode: Text.WordWrap
-            maximumLineCount: 3
+    Label {
+        anchors {
+            left: parent.left
+            right: parent.right
         }
+        horizontalAlignment: Text.AlignHCenter
+        visible: searchIndex && searchIndex.state === "error"
+        text: searchIndex ? searchIndex.errorMessage : ""
+        wrapMode: Text.WordWrap
+        maximumLineCount: 3
+    }
 
-        Button {
-            anchors.horizontalCenter: parent.horizontalCenter
-            visible: searchIndex && searchIndex.state === "error"
-            text: i18n.tr("Retry")
-            onClicked: searchIndex.retry()
-        }
+    Button {
+        anchors.horizontalCenter: parent.horizontalCenter
+        visible: searchIndex && searchIndex.state === "error"
+        text: i18n.tr("Retry")
+        onClicked: searchIndex.retry()
     }
 }

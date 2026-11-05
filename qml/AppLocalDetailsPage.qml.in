@@ -172,7 +172,8 @@ Page {
         }
     }
 
-    Dialogs.UninstallDialog {
+    Component {
         id: removeQuestion
+        Dialogs.UninstallDialog {}
     }
 }

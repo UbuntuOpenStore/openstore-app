@@ -18,36 +18,33 @@ import QtQuick 2.4
 import Lomiri.Components @LOMIRI_COMPONENTS_VERSION@
 import Lomiri.Components.Popups @LOMIRI_COMPONENTS_VERSION@
 
-Component {
-    id: unconfinedWarningPopup
-    Dialog {
-        id: unconfinedWarningDialog
-        title: i18n.tr("Warning")
+Dialog {
+    id: unconfinedWarningDialog
+    title: i18n.tr("Warning")
 
-        property string packageType: ""
+    property string packageType: ""
 
-        text: packageType === "snap"
-            ? i18n.tr("This app has access to restricted parts of the system and all of your data. It has the potential to break your system. The OpenStore maintainers have not reviewed the code for this app and they are not responsible for anything bad that might happen to your device or data from installing this app.")
-            : i18n.tr("This app has access to restricted parts of the system and all of your data. It has the potential to break your system. While the OpenStore maintainers have reviewed the code for this app for safety, they are not responsible for anything bad that might happen to your device or data from installing this app.")
+    text: packageType === "snap"
+        ? i18n.tr("This app has access to restricted parts of the system and all of your data. It has the potential to break your system. The OpenStore maintainers have not reviewed the code for this app and they are not responsible for anything bad that might happen to your device or data from installing this app.")
+        : i18n.tr("This app has access to restricted parts of the system and all of your data. It has the potential to break your system. While the OpenStore maintainers have reviewed the code for this app for safety, they are not responsible for anything bad that might happen to your device or data from installing this app.")
 
-        signal accepted()
-        signal rejected()
+    signal accepted()
+    signal rejected()
 
-        Button {
-            text: i18n.tr("I understand the risks")
-            color: theme.palette.normal.negative
-            onClicked: {
-                unconfinedWarningDialog.accepted()
-                PopupUtils.close(unconfinedWarningDialog)
-            }
+    Button {
+        text: i18n.tr("I understand the risks")
+        color: theme.palette.normal.negative
+        onClicked: {
+            unconfinedWarningDialog.accepted()
+            PopupUtils.close(unconfinedWarningDialog)
         }
+    }
 
-        Button {
-            text: i18n.tr("Cancel")
-            onClicked: {
-                unconfinedWarningDialog.rejected();
-                PopupUtils.close(unconfinedWarningDialog)
-            }
+    Button {
+        text: i18n.tr("Cancel")
+        onClicked: {
+            unconfinedWarningDialog.rejected();
+            PopupUtils.close(unconfinedWarningDialog)
         }
     }
 }

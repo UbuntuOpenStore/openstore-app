@@ -334,7 +334,8 @@ Page {
         }
     }
 
-    Dialogs.SystemUpdatesDialog {
+    Component {
         id: systemUpdatesDialog
+        Dialogs.SystemUpdatesDialog {}
     }
 }

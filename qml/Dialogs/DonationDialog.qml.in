@@ -18,30 +18,27 @@ import QtQuick 2.4
 import Lomiri.Components @LOMIRI_COMPONENTS_VERSION@
 import Lomiri.Components.Popups @LOMIRI_COMPONENTS_VERSION@
 
-Component {
-    id: donatingPopup
-    Dialog {
-        id: donatingDialog
-        title: i18n.tr("Donating")
-        text: i18n.tr("Would you like to support this app with a donation to the developer?")
+Dialog {
+    id: donatingDialog
+    title: i18n.tr("Donating")
+    text: i18n.tr("Would you like to support this app with a donation to the developer?")
 
-        signal accepted()
-        signal rejected()
+    signal accepted()
+    signal rejected()
 
-        Button {
-            text: i18n.tr("Donate now")
-            color: theme.palette.normal.positive
-            onClicked: {
-                donatingDialog.accepted()
-                PopupUtils.close(donatingDialog)
-            }
+    Button {
+        text: i18n.tr("Donate now")
+        color: theme.palette.normal.positive
+        onClicked: {
+            donatingDialog.accepted()
+            PopupUtils.close(donatingDialog)
         }
-        Button {
-            text: i18n.tr("Maybe later")
-            onClicked: {
-                donatingDialog.rejected();
-                PopupUtils.close(donatingDialog)
-            }
+    }
+    Button {
+        text: i18n.tr("Maybe later")
+        onClicked: {
+            donatingDialog.rejected();
+            PopupUtils.close(donatingDialog)
         }
     }
 }

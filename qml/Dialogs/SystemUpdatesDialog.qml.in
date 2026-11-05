@@ -18,39 +18,36 @@ import QtQuick 2.4
 import Lomiri.Components @LOMIRI_COMPONENTS_VERSION@
 import Lomiri.Components.Popups @LOMIRI_COMPONENTS_VERSION@
 
-Component {
-    id: systemUpdatesComponent
-    Dialog {
-        id: systemUpdatesDialog
-        // TRANSLATORS: %1 is the number of library and tool updates
-        title: i18n.tr("Library and tool updates (%1)").arg(updates.length)
-        text: i18n.tr("These will be updated along with your apps when you choose Update all.")
+Dialog {
+    id: systemUpdatesDialog
+    // TRANSLATORS: %1 is the number of library and tool updates
+    title: i18n.tr("Library and tool updates (%1)").arg(updates.length)
+    text: i18n.tr("These will be updated along with your apps when you choose Update all.")
 
-        property var updates: []
+    property var updates: []
 
-        // The default width is too narrow for package names; clamp so it still fits small screens
-        contentWidth: Math.min(units.gu(76), width - units.gu(4))
+    // The default width is too narrow for package names; clamp so it still fits small screens
+    contentWidth: Math.min(units.gu(76), width - units.gu(4))
 
-        ListView {
-            width: parent.width
-            height: Math.min(contentHeight, units.gu(30))
-            clip: true
-            model: systemUpdatesDialog.updates
+    ListView {
+        width: parent.width
+        height: Math.min(contentHeight, units.gu(30))
+        clip: true
+        model: systemUpdatesDialog.updates
 
-            delegate: ListItem {
-                height: units.gu(3)
-                divider.visible: false
+        delegate: ListItem {
+            height: units.gu(3)
+            divider.visible: false
 
-                ListItemLayout {
-                    anchors.centerIn: parent
-                    title.text: modelData.name
-                }
+            ListItemLayout {
+                anchors.centerIn: parent
+                title.text: modelData.name
             }
         }
+    }
 
-        Button {
-            text: i18n.tr("Close")
-            onClicked: PopupUtils.close(systemUpdatesDialog)
-        }
+    Button {
+        text: i18n.tr("Close")
+        onClicked: PopupUtils.close(systemUpdatesDialog)
     }
 }

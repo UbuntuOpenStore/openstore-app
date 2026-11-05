@@ -399,22 +399,26 @@ MainView {
                 onAppDetailsRequired: function(appId) { openApp(appId) }
             }
 
-            Dialogs.FilterDialog {
+            Component {
                 id: filterDialog
+                Dialogs.FilterDialog {}
             }
         }
     }
 
-    Dialogs.InstallWarningDialog {
+    Component {
         id: installWarningDialog
+        Dialogs.InstallWarningDialog {}
     }
 
-    Dialogs.InstallationErrorDialog {
+    Component {
         id: installationError
+        Dialogs.InstallationErrorDialog {}
     }
 
-    Dialogs.IndexSetupDialog {
+    Component {
         id: indexSetupDialog
+        Dialogs.IndexSetupDialog {}
     }
 
     Component {

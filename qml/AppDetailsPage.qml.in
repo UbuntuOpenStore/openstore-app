@@ -974,20 +974,24 @@ Page {
 
 
 
-    Dialogs.DonationDialog {
+    Component {
         id: donationDialog
+        Dialogs.DonationDialog {}
     }
 
-    Dialogs.UnconfinedWarningDialog {
+    Component {
         id: unconfinedWarningDialog
+        Dialogs.UnconfinedWarningDialog {}
     }
 
-    Dialogs.SnapWarningDialog {
+    Component {
         id: snapWarningDialog
+        Dialogs.SnapWarningDialog {}
     }
 
-    Dialogs.UninstallDialog {
+    Component {
         id: removeQuestion
+        Dialogs.UninstallDialog {}
     }
 
     // Snaps report failures directly on the package item; click/packagekit

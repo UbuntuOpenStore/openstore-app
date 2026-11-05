@@ -127,7 +127,8 @@ Page {
         }
     }
 
-    Dialogs.FilterDialog {
+    Component {
         id: filterDialog
+        Dialogs.FilterDialog {}
     }
 }

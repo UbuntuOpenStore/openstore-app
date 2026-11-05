@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-05 04:48+0000\n"
+"POT-Creation-Date: 2026-11-05 05:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,7 +24,7 @@ msgstr ""
 
 #: ../qml/AppDetailsPage.qml.in:135 ../qml/AppDetailsPage.qml.in:475
 #: ../qml/AppLocalDetailsPage.qml.in:42
-#: ../qml/Dialogs/UninstallDialog.qml.in:33
+#: ../qml/Dialogs/UninstallDialog.qml.in:31
 msgid "Remove"
 msgstr ""
 
@@ -311,22 +311,22 @@ msgid "Write paths"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: ../qml/AppDetailsPage.qml.in:1006
+#: ../qml/AppDetailsPage.qml.in:1010
 msgid "%1 GB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: ../qml/AppDetailsPage.qml.in:1011
+#: ../qml/AppDetailsPage.qml.in:1015
 msgid "%1 MB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: ../qml/AppDetailsPage.qml.in:1016
+#: ../qml/AppDetailsPage.qml.in:1020
 msgid "%1 kB"
 msgstr ""
 
 #. TRANSLATORS: %1 is the size of a file, expressed in bytes
-#: ../qml/AppDetailsPage.qml.in:1019
+#: ../qml/AppDetailsPage.qml.in:1023
 msgid "%1 bytes"
 msgstr ""
 
@@ -758,7 +758,7 @@ msgstr ""
 
 #: ../qml/Components/PackageListItem.qml.in:49
 #: ../qml/Components/PackageTile.qml.in:108
-#: ../qml/Dialogs/FilterDialog.qml.in:165
+#: ../qml/Dialogs/FilterDialog.qml.in:162
 msgid "Snap"
 msgstr ""
 
@@ -780,7 +780,7 @@ msgstr ""
 
 #: ../qml/Components/ReviewPreview.qml.in:103
 #: ../qml/Components/ReviewPreview.qml.in:117
-#: ../qml/Dialogs/SystemUpdatesDialog.qml.in:52
+#: ../qml/Dialogs/SystemUpdatesDialog.qml.in:50
 msgid "Close"
 msgstr ""
 
@@ -813,11 +813,11 @@ msgid "Submit"
 msgstr ""
 
 #: ../qml/Components/ReviewPreview.qml.in:220
-#: ../qml/Dialogs/FilterDialog.qml.in:211
-#: ../qml/Dialogs/InstallWarningDialog.qml.in:61
-#: ../qml/Dialogs/SnapWarningDialog.qml.in:55
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml.in:46
-#: ../qml/Dialogs/UninstallDialog.qml.in:42
+#: ../qml/Dialogs/FilterDialog.qml.in:208
+#: ../qml/Dialogs/InstallWarningDialog.qml.in:58
+#: ../qml/Dialogs/SnapWarningDialog.qml.in:53
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml.in:44
+#: ../qml/Dialogs/UninstallDialog.qml.in:40
 msgid "Cancel"
 msgstr ""
 
@@ -848,188 +848,188 @@ msgstr ""
 msgid "No reviews yet"
 msgstr ""
 
-#: ../qml/Dialogs/DonationDialog.qml.in:25
+#: ../qml/Dialogs/DonationDialog.qml.in:23
 msgid "Donating"
 msgstr ""
 
-#: ../qml/Dialogs/DonationDialog.qml.in:26
+#: ../qml/Dialogs/DonationDialog.qml.in:24
 msgid "Would you like to support this app with a donation to the developer?"
 msgstr ""
 
-#: ../qml/Dialogs/DonationDialog.qml.in:32
+#: ../qml/Dialogs/DonationDialog.qml.in:30
 msgid "Donate now"
 msgstr ""
 
-#: ../qml/Dialogs/DonationDialog.qml.in:40
+#: ../qml/Dialogs/DonationDialog.qml.in:38
 msgid "Maybe later"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:27
+#: ../qml/Dialogs/FilterDialog.qml.in:24
 msgid "Filters and Sorting"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:40
+#: ../qml/Dialogs/FilterDialog.qml.in:37
 msgid "Sort By"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:47 ../qml/Dialogs/FilterDialog.qml.in:75
+#: ../qml/Dialogs/FilterDialog.qml.in:44 ../qml/Dialogs/FilterDialog.qml.in:72
 msgid "Relevance"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:50
+#: ../qml/Dialogs/FilterDialog.qml.in:47
 msgid "Most Popular"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:51
+#: ../qml/Dialogs/FilterDialog.qml.in:48
 msgid "Least Popular"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:54
+#: ../qml/Dialogs/FilterDialog.qml.in:51
 msgid "Title (A-Z)"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:55
+#: ../qml/Dialogs/FilterDialog.qml.in:52
 msgid "Title (Z-A)"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:58
+#: ../qml/Dialogs/FilterDialog.qml.in:55
 msgid "Newest"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:59
+#: ../qml/Dialogs/FilterDialog.qml.in:56
 msgid "Oldest"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:62
+#: ../qml/Dialogs/FilterDialog.qml.in:59
 msgid "Latest Update"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:63
+#: ../qml/Dialogs/FilterDialog.qml.in:60
 msgid "Oldest Update"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:103
+#: ../qml/Dialogs/FilterDialog.qml.in:100
 msgid "Type"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:111
-#: ../qml/Dialogs/FilterDialog.qml.in:126
+#: ../qml/Dialogs/FilterDialog.qml.in:108
+#: ../qml/Dialogs/FilterDialog.qml.in:123
 msgid "All Types"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:112
+#: ../qml/Dialogs/FilterDialog.qml.in:109
 msgid "Apps"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:113
+#: ../qml/Dialogs/FilterDialog.qml.in:110
 msgid "Bookmarks"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:114
+#: ../qml/Dialogs/FilterDialog.qml.in:111
 msgid "Web Apps"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:155
+#: ../qml/Dialogs/FilterDialog.qml.in:152
 msgid "Package Type"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:163
-#: ../qml/Dialogs/FilterDialog.qml.in:177
+#: ../qml/Dialogs/FilterDialog.qml.in:160
+#: ../qml/Dialogs/FilterDialog.qml.in:174
 msgid "All"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:164
+#: ../qml/Dialogs/FilterDialog.qml.in:161
 msgid "Click"
 msgstr ""
 
-#: ../qml/Dialogs/FilterDialog.qml.in:203
+#: ../qml/Dialogs/FilterDialog.qml.in:200
 msgid "Apply"
 msgstr ""
 
-#: ../qml/Dialogs/IndexSetupDialog.qml.in:27
+#: ../qml/Dialogs/IndexSetupDialog.qml.in:24
 msgid "Setting up the app catalog"
 msgstr ""
 
-#: ../qml/Dialogs/IndexSetupDialog.qml.in:79
+#: ../qml/Dialogs/IndexSetupDialog.qml.in:76
 msgid "Retry"
 msgstr ""
 
-#: ../qml/Dialogs/InstallWarningDialog.qml.in:27
+#: ../qml/Dialogs/InstallWarningDialog.qml.in:24
 msgid "Install unknown app?"
 msgstr ""
 
-#: ../qml/Dialogs/InstallWarningDialog.qml.in:28
+#: ../qml/Dialogs/InstallWarningDialog.qml.in:25
 msgid ""
 "Do you want to install the unknown app %1? Installing apps from outside the "
 "OpenStore is not recommended and can potentially harm your system. Only "
 "install this app if you got it from a trusted source."
 msgstr ""
 
-#: ../qml/Dialogs/InstallWarningDialog.qml.in:51
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml.in:37
+#: ../qml/Dialogs/InstallWarningDialog.qml.in:48
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml.in:35
 msgid "I understand the risks"
 msgstr ""
 
-#: ../qml/Dialogs/InstallationErrorDialog.qml.in:29
+#: ../qml/Dialogs/InstallationErrorDialog.qml.in:26
 msgid "Installation failed"
 msgstr ""
 
-#: ../qml/Dialogs/InstallationErrorDialog.qml.in:30
+#: ../qml/Dialogs/InstallationErrorDialog.qml.in:27
 msgid "The package could not be installed."
 msgstr ""
 
-#: ../qml/Dialogs/InstallationErrorDialog.qml.in:33 ../qml/Main.qml.in:428
-#: ../qml/Main.qml.in:443
+#: ../qml/Dialogs/InstallationErrorDialog.qml.in:30 ../qml/Main.qml.in:432
+#: ../qml/Main.qml.in:447
 msgid "OK"
 msgstr ""
 
-#: ../qml/Dialogs/NegativeReviewDialog.qml.in:26
+#: ../qml/Dialogs/NegativeReviewDialog.qml.in:23
 msgid "Review confirmation"
 msgstr ""
 
-#: ../qml/Dialogs/NegativeReviewDialog.qml.in:27
+#: ../qml/Dialogs/NegativeReviewDialog.qml.in:24
 msgid ""
 "Would you like to contact the publisher or file a bug instead? By opening a "
 "discussion with the developer(s) you could be helping to improve this app."
 msgstr ""
 
-#: ../qml/Dialogs/NegativeReviewDialog.qml.in:37
+#: ../qml/Dialogs/NegativeReviewDialog.qml.in:34
 msgid "Get support"
 msgstr ""
 
-#: ../qml/Dialogs/NegativeReviewDialog.qml.in:47
+#: ../qml/Dialogs/NegativeReviewDialog.qml.in:44
 msgid "Post my review"
 msgstr ""
 
-#: ../qml/Dialogs/SnapWarningDialog.qml.in:26
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml.in:25
+#: ../qml/Dialogs/SnapWarningDialog.qml.in:24
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml.in:23
 msgid "Warning"
 msgstr ""
 
-#: ../qml/Dialogs/SnapWarningDialog.qml.in:27
+#: ../qml/Dialogs/SnapWarningDialog.qml.in:25
 msgid ""
 "Not all snaps were designed with Ubuntu Touch in mind and might not work "
 "well."
 msgstr ""
 
-#: ../qml/Dialogs/SnapWarningDialog.qml.in:39
+#: ../qml/Dialogs/SnapWarningDialog.qml.in:37
 msgid "Don't show this warning again"
 msgstr ""
 
-#: ../qml/Dialogs/SnapWarningDialog.qml.in:43
+#: ../qml/Dialogs/SnapWarningDialog.qml.in:41
 msgid "I understand"
 msgstr ""
 
 #. TRANSLATORS: %1 is the number of library and tool updates
-#: ../qml/Dialogs/SystemUpdatesDialog.qml.in:26
+#: ../qml/Dialogs/SystemUpdatesDialog.qml.in:24
 msgid "Library and tool updates (%1)"
 msgstr ""
 
-#: ../qml/Dialogs/SystemUpdatesDialog.qml.in:27
+#: ../qml/Dialogs/SystemUpdatesDialog.qml.in:25
 msgid "These will be updated along with your apps when you choose Update all."
 msgstr ""
 
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml.in:30
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml.in:28
 msgid ""
 "This app has access to restricted parts of the system and all of your data. "
 "It has the potential to break your system. The OpenStore maintainers have "
@@ -1037,7 +1037,7 @@ msgid ""
 "bad that might happen to your device or data from installing this app."
 msgstr ""
 
-#: ../qml/Dialogs/UnconfinedWarningDialog.qml.in:31
+#: ../qml/Dialogs/UnconfinedWarningDialog.qml.in:29
 msgid ""
 "This app has access to restricted parts of the system and all of your data. "
 "It has the potential to break your system. While the OpenStore maintainers "
@@ -1046,11 +1046,11 @@ msgid ""
 "app."
 msgstr ""
 
-#: ../qml/Dialogs/UninstallDialog.qml.in:25
+#: ../qml/Dialogs/UninstallDialog.qml.in:23
 msgid "Remove package"
 msgstr ""
 
-#: ../qml/Dialogs/UninstallDialog.qml.in:26
+#: ../qml/Dialogs/UninstallDialog.qml.in:24
 msgid "Do you want to remove %1?"
 msgstr ""
 
@@ -1149,15 +1149,15 @@ msgstr ""
 msgid "Filters"
 msgstr ""
 
-#: ../qml/Main.qml.in:424
+#: ../qml/Main.qml.in:428
 msgid "App installed"
 msgstr ""
 
-#: ../qml/Main.qml.in:425
+#: ../qml/Main.qml.in:429
 msgid "The app has been installed successfully."
 msgstr ""
 
-#: ../qml/Main.qml.in:439
+#: ../qml/Main.qml.in:443
 msgid "Installation failed (Error %1)"
 msgstr ""
 
@@ -1225,5 +1225,6 @@ msgid "Additional Icons by"
 msgstr ""
 
 #: openstore.desktop.in.h:1
-msgid "software;apps;applications;programs;store;market;play;click;discover;install;"
+msgid ""
+"software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr ""

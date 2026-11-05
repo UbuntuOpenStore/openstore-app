@@ -362,7 +362,8 @@ ListItem {
         }
     }
 
-    Dialogs.NegativeReviewDialog {
+    Component {
         id: negativeReviewDialog
+        Dialogs.NegativeReviewDialog {}
     }
 }

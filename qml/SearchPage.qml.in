@@ -33,19 +33,23 @@ Page {
 
     header: Components.HeaderBase {
         title: i18n.tr("Search")
-        contents: TextField {
-            id: searchField
-            anchors.centerIn: parent
-            width: Math.min(parent.width, units.gu(36))
+        contents: Item {
+            anchors.fill: parent
 
-            // Disable predictive text
-            inputMethodHints: Qt.ImhNoPredictiveText
+            TextField {
+                id: searchField
+                anchors.centerIn: parent
+                width: Math.min(parent.width, units.gu(36))
 
-            primaryItem: Icon {
-                width: units.gu(2); height: width
-                name: "find"
+                // Disable predictive text
+                inputMethodHints: Qt.ImhNoPredictiveText
+
+                primaryItem: Icon {
+                    width: units.gu(2); height: width
+                    name: "find"
+                }
+                placeholderText: i18n.tr("Search in OpenStore...")
             }
-            placeholderText: i18n.tr("Search in OpenStore...")
         }
 
         trailingActionBar {

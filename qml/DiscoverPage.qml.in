@@ -262,7 +262,7 @@ Page {
             Connections {
                 target: OpenStoreNetworkManager
 
-                onNetworkAccessibleChanged: {
+                function onNetworkAccessibleChanged() {
                     if (OpenStoreNetworkManager.networkAccessible && discoverModel.rowCount() == 0) {
                         console.log("Reconnected and App Model is empty. Try populate model again")
                         discoverModel.refresh();

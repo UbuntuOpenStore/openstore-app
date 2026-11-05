@@ -68,8 +68,8 @@ Component {
 
         Connections {
             target: PlatformIntegration.clickInstaller
-            onPackageInstalled: PopupUtils.close(installQuestionDialog)
-            onPackageInstallationFailed: PopupUtils.close(installQuestionDialog)
+            function onPackageInstalled() { PopupUtils.close(installQuestionDialog) }
+            function onPackageInstallationFailed() { PopupUtils.close(installQuestionDialog) }
         }
     }
 }

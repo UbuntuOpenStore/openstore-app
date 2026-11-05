@@ -115,7 +115,7 @@ Page {
 
         Connections {
             target: searchField
-            onTextChanged: searchTimer.restart()
+            function onTextChanged() { searchTimer.restart() }
         }
     }
 

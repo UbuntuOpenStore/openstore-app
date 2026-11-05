@@ -90,8 +90,8 @@ Page {
 
     Connections {
         target: BackendInstaller.installer
-        onPackageInstalled: updateNextPackage()
-        onPackageInstallationFailed: {
+        function onPackageInstalled() { updateNextPackage() }
+        function onPackageInstallationFailed() {
             // Stop the batch so the failure dialog isn't followed by more updates.
             appsUpdating = [];
             batchUpdating = [];

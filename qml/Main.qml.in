@@ -217,7 +217,7 @@ MainView {
     Connections {
         target: ContentHub
 
-        onImportRequested: {
+        function onImportRequested(transfer) {
             if (PlatformIntegration.clickSupport) {
                 var filePath = String(transfer.items[0].url).replace('file://', '')
                 print("Should import file", filePath)
@@ -233,7 +233,7 @@ MainView {
 
     Connections {
         target: UriHandler
-        onOpened: {
+        function onOpened(uris) {
             var appIdToOpen = parseUrl(uris[0]);
             if (appIdToOpen && !!appIdToOpen.appName) {
                 loadAppId(appIdToOpen.appName);
@@ -248,14 +248,14 @@ MainView {
     Connections {
         target: BackendInstaller.installer
 
-        onPackageInstalled: {
+        function onPackageInstalled() {
             print("******* package installed")
             if (contentHubInstallInProgress) {
                 PopupUtils.open(installedConfirmation, root)
                 contentHubInstallInProgress = false;
             }
         }
-        onPackageInstallationFailed: {
+        function onPackageInstallationFailed() {
             contentHubInstallInProgress = false;
             showInstallationError(BackendInstaller.installer.lastError)
         }
@@ -263,7 +263,9 @@ MainView {
 
     Connections {
         target: OpenStoreNetworkManager
-        onNetworkAccessibleChanged: console.log("[OpenStoreNetworkManager] Is network accessible?", OpenStoreNetworkManager.networkAccessible)
+        function onNetworkAccessibleChanged() {
+            console.log("[OpenStoreNetworkManager] Is network accessible?", OpenStoreNetworkManager.networkAccessible)
+        }
     }
 
     Binding {

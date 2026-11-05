@@ -44,8 +44,8 @@ Component {
 
         Connections {
             target: searchIndex
-            onReady: PopupUtils.close(indexSetupDialog)
-            onStateChanged: {
+            function onReady() { PopupUtils.close(indexSetupDialog) }
+            function onStateChanged() {
                 if (searchIndex.state === "ready") {
                     PopupUtils.close(indexSetupDialog);
                 }

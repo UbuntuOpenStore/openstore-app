@@ -994,7 +994,7 @@ Page {
     // failures are surfaced globally in Main.qml.
     Connections {
         target: app
-        onInstallationFailed: root.showInstallationError(message)
+        function onInstallationFailed(message) { root.showInstallationError(message) }
     }
 
     function printSize(size) {

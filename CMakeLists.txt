@@ -172,6 +172,13 @@ else()
     set(LOMIRI_CONNECTIVITY_VERSION 1.0)
 endif()
 
+# Qt 6 moved the Settings type from Qt.labs.settings to QtCore.
+if(QT_VERSION_MAJOR EQUAL 6)
+    set(SETTINGS_IMPORT "import QtCore")
+else()
+    set(SETTINGS_IMPORT "import Qt.labs.settings 1.0")
+endif()
+
 # The NSFW toggle authenticates the user with their system password via the
 # PamAuthentication QML plugin, which is only meaningful with click support.
 if(ENABLE_CLICK_SUPPORT)

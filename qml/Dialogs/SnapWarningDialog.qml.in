@@ -17,7 +17,7 @@
 import QtQuick 2.4
 import Lomiri.Components @LOMIRI_COMPONENTS_VERSION@
 import Lomiri.Components.Popups @LOMIRI_COMPONENTS_VERSION@
-import Qt.labs.settings 1.0
+@SETTINGS_IMPORT@
 
 Component {
     id: snapWarningPopup

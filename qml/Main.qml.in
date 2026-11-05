@@ -20,7 +20,7 @@ import Lomiri.Components @LOMIRI_COMPONENTS_VERSION@
 import Lomiri.Components.Popups @LOMIRI_COMPONENTS_VERSION@
 import OpenStore 1.0
 import QtQuick.Layouts 1.1
-import Qt.labs.settings 1.0
+@SETTINGS_IMPORT@
 import Lomiri.Content @LOMIRI_CONTENT_VERSION@
 import Lomiri.Connectivity @LOMIRI_CONNECTIVITY_VERSION@
 

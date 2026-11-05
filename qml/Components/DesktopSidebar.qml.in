@@ -35,7 +35,7 @@ Rectangle {
     // Default matches the Lomiri PageHeaderStyle height: content + divider.
     property real headerHeight: units.gu(6) + units.dp(1)
 
-    Column {
+    Item {
         id: headerColumn
         anchors.top: parent.top
         anchors.left: parent.left
@@ -74,7 +74,8 @@ Rectangle {
 
         Rectangle {
             anchors.bottom: parent.bottom
-            width: parent.width
+            anchors.left: parent.left
+            anchors.right: parent.right
             height: units.dp(1)
             color: theme.palette.normal.base
         }

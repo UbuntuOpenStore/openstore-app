@@ -101,7 +101,7 @@ Page {
             pageStack.push(Qt.resolvedUrl("AppDetailsPage.qml"), { app: pkg });
         }
 
-        onAppDetailsRequired: {
+        onAppDetailsRequired: function(appId) {
             PackageBackendManager.packageDetailsReady.connect(slot_packageDetailsReady)
             PackageBackendManager.packageDetailsError.connect(slot_packageFetchError)
             PackageBackendManager.getPackageDetails(appId)

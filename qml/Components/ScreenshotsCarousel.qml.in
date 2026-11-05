@@ -37,17 +37,22 @@ ListItem {
         spacing: units.gu(1)
         orientation: ListView.Horizontal
         delegate: LomiriShape {
-            height: parent.height
-            // sh : lv.h = sw : x
-            width: screenshot.sourceSize.width * height / screenshot.sourceSize.height
+            height: screenshotsView.height
+            width: screenshot.sourceSize.height > 0
+                ? screenshot.sourceSize.width * height / screenshot.sourceSize.height
+                : height
             aspect: LomiriShape.Flat
             sourceFillMode: LomiriShape.PreserveAspectFit
-            source: Image {
+
+            Image {
                 id: screenshot
                 source: modelData
                 smooth: true
                 antialiasing: true
+                visible: false
             }
+
+            source: screenshot
 
             AbstractButton {
                 id: screenShotButton

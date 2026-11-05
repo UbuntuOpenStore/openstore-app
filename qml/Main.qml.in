@@ -49,8 +49,8 @@ MainView {
         if (mainStackPage === "discoverPage") return ""
         if (pageStack.depth >= 2) {
             var page = pageStack.currentPage
-            if (page && page.section !== undefined && String(page.section).indexOf("category:") === 0) {
-                return page.section
+            if (page && page.categorySection !== undefined && String(page.categorySection).indexOf("category:") === 0) {
+                return page.categorySection
             }
         }
         if (mainStackPage === "installedAppsPage") return "installed"
@@ -352,6 +352,8 @@ MainView {
         Page {
             id: filteredAppPage
 
+            property string categorySection
+
             property alias filterString: filteredAppList.filterString
             property alias sortMode: filteredAppList.sortMode
             property alias category: filteredAppList.category
@@ -443,7 +445,7 @@ MainView {
     }
 
     function showCategory(name, id) {
-        resetAndPush(filteredAppPageComponent, { title: name, section: "category:" + id, category: id });
+        resetAndPush(filteredAppPageComponent, { title: name, categorySection: "category:" + id, category: id });
     }
 
     function showSearch(text) {

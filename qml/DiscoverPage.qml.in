@@ -246,7 +246,7 @@ Page {
                 showProgression: model.queryUrl
 
                 onTitleClicked: if (model.queryUrl) { root.showSearchQuery(model.queryUrl) }
-                onAppTileClicked: {
+                onAppTileClicked: function(appItem) {
                     PackageBackendManager.packageDetailsReady.connect(slot_packageDetailsReady)
                     PackageBackendManager.packageDetailsError.connect(slot_packageFetchError)
                     PackageBackendManager.getPackageDetails(appItem.appId)

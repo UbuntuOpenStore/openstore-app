@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openstore.openstore-team\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-03 15:33+0000\n"
+"POT-Creation-Date: 2026-11-05 04:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -710,7 +710,7 @@ msgid ""
 "Age Rating Service</a>"
 msgstr ""
 
-#: ../qml/Components/DesktopSidebar.qml.in:94 ../qml/DiscoverPage.qml.in:197
+#: ../qml/Components/DesktopSidebar.qml.in:95 ../qml/DiscoverPage.qml.in:197
 #: ../qml/DiscoverPage.qml.in:198 ../qml/InstalledAppsPage.qml.in:104
 msgid "Installed Apps"
 msgstr ""
@@ -978,8 +978,8 @@ msgstr ""
 msgid "The package could not be installed."
 msgstr ""
 
-#: ../qml/Dialogs/InstallationErrorDialog.qml.in:33 ../qml/Main.qml.in:424
-#: ../qml/Main.qml.in:439
+#: ../qml/Dialogs/InstallationErrorDialog.qml.in:33 ../qml/Main.qml.in:428
+#: ../qml/Main.qml.in:443
 msgid "OK"
 msgstr ""
 
@@ -1145,19 +1145,19 @@ msgstr ""
 msgid "No app has been installed from OpenStore yet."
 msgstr ""
 
-#: ../qml/Main.qml.in:367 ../qml/SearchPage.qml.in:55
+#: ../qml/Main.qml.in:371 ../qml/SearchPage.qml.in:59
 msgid "Filters"
 msgstr ""
 
-#: ../qml/Main.qml.in:420
+#: ../qml/Main.qml.in:424
 msgid "App installed"
 msgstr ""
 
-#: ../qml/Main.qml.in:421
+#: ../qml/Main.qml.in:425
 msgid "The app has been installed successfully."
 msgstr ""
 
-#: ../qml/Main.qml.in:435
+#: ../qml/Main.qml.in:439
 msgid "Installation failed (Error %1)"
 msgstr ""
 
@@ -1171,7 +1171,7 @@ msgid ""
 "content."
 msgstr ""
 
-#: ../qml/SearchPage.qml.in:48
+#: ../qml/SearchPage.qml.in:51
 msgid "Search in OpenStore..."
 msgstr ""
 
@@ -1225,6 +1225,5 @@ msgid "Additional Icons by"
 msgstr ""
 
 #: openstore.desktop.in.h:1
-msgid ""
-"software;apps;applications;programs;store;market;play;click;discover;install;"
+msgid "software;apps;applications;programs;store;market;play;click;discover;install;"
 msgstr ""
